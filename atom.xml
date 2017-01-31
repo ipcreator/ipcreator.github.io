@@ -763,104 +763,6 @@
   </entry>
   
   <entry>
-    <title>Echarts Demo</title>
-    <link href="http://ipcreator.me/2017/01/30/echarts-demo/"/>
-    <id>http://ipcreator.me/2017/01/30/echarts-demo/</id>
-    <published>2017-01-30T12:51:44.000Z</published>
-    <updated>2017-01-31T07:50:06.940Z</updated>
-    
-    <content type="html"><![CDATA[<p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行</p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">echarts</span> 400 '85%' %&#125;</span><span class="xml"></span></div><div class="line">\\TODO option goes here</div><div class="line"><span class="template-tag">&#123;% <span class="name">endecharts</span> %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
-<div id="echarts283" style="width: 85%;height: 400px;margin: 0 auto"></div>
-<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
-
-<script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts283'));
-        // 指定图表的配置项和数据
-        var option = {
-
-    tooltip : {
-        trigger: 'axis',
-        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-        }
-    },
-    legend: {
-        data:['利润', '支出', '收入']
-    },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    xAxis : [
-        {
-            type : 'value'
-        }
-    ],
-    yAxis : [
-        {
-            type : 'category',
-            axisTick : {show: false},
-            data : ['周一','周二','周三','周四','周五','周六','周日']
-        }
-    ],
-    series : [
-        {
-            name:'利润',
-            type:'bar',
-            itemStyle : {
-                normal: {
-                    label: {show: true, position: 'inside'}
-                }
-            },
-            data:[200, 170, 240, 244, 200, 220, 210]
-        },
-        {
-            name:'收入',
-            type:'bar',
-            stack: '总量',
-            itemStyle: {
-                normal: {
-                    label : {show: true}
-                }
-            },
-            data:[320, 302, 341, 374, 390, 450, 420]
-        },
-        {
-            name:'支出',
-            type:'bar',
-            stack: '总量',
-            itemStyle: {normal: {
-                label : {show: true, position: 'left'}
-            }},
-            data:[-120, -132, -101, -134, -190, -230, -210]
-        }
-    ]
-      
-};
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-</script>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;通过&lt;a href=&quot;http://kchen.cc/2016/11/05/echarts-in-hexo/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ECharts 插件&lt;/a&gt;直接运行&lt;/p&gt;
-&lt;figure class=&quot;highlight dj
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="echarts" scheme="http://ipcreator.me/tags/echarts/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Echarts Demo2</title>
     <link href="http://ipcreator.me/2017/01/30/echarts-demo2/"/>
     <id>http://ipcreator.me/2017/01/30/echarts-demo2/</id>
@@ -868,12 +770,12 @@
     <updated>2017-01-31T10:31:20.681Z</updated>
     
     <content type="html"><![CDATA[<p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行<br>增加标题信息</p>
-<div id="echarts7043" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts5704" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts7043'));
+        var myChart = echarts.init(document.getElementById('echarts5704'));
         // 指定图表的配置项和数据
         var option = {
 
@@ -955,12 +857,12 @@
     <summary type="html">
     
       &lt;p&gt;通过&lt;a href=&quot;http://kchen.cc/2016/11/05/echarts-in-hexo/&quot;&gt;ECharts 插件&lt;/a&gt;直接运行&lt;br&gt;增加标题信息&lt;/p&gt;
-&lt;div id=&quot;echarts7043&quot; style=&quot;width: 85%;height: 400px;margin: 0 auto&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;echarts5704&quot; style=&quot;width: 85%;height: 400px;margin: 0 auto&quot;&gt;&lt;/div&gt;
 &lt;script src=&quot;http://echarts.baidu.com/dist/echarts.common.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script type=&quot;text/javascript&quot;&gt;
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById(&#39;echarts7043&#39;));
+        var myChart = echarts.init(document.getElementById(&#39;echarts5704&#39;));
         // 指定图表的配置项和数据
         var option = {
 
@@ -1035,6 +937,104 @@
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
 &lt;/script&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="echarts" scheme="http://ipcreator.me/tags/echarts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Echarts Demo</title>
+    <link href="http://ipcreator.me/2017/01/30/echarts-demo/"/>
+    <id>http://ipcreator.me/2017/01/30/echarts-demo/</id>
+    <published>2017-01-30T12:51:44.000Z</published>
+    <updated>2017-01-31T07:50:06.940Z</updated>
+    
+    <content type="html"><![CDATA[<p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">echarts</span> 400 '85%' %&#125;</span><span class="xml"></span></div><div class="line">\\TODO option goes here</div><div class="line"><span class="template-tag">&#123;% <span class="name">endecharts</span> %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
+<div id="echarts4444" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts4444'));
+        // 指定图表的配置项和数据
+        var option = {
+
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    legend: {
+        data:['利润', '支出', '收入']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            axisTick : {show: false},
+            data : ['周一','周二','周三','周四','周五','周六','周日']
+        }
+    ],
+    series : [
+        {
+            name:'利润',
+            type:'bar',
+            itemStyle : {
+                normal: {
+                    label: {show: true, position: 'inside'}
+                }
+            },
+            data:[200, 170, 240, 244, 200, 220, 210]
+        },
+        {
+            name:'收入',
+            type:'bar',
+            stack: '总量',
+            itemStyle: {
+                normal: {
+                    label : {show: true}
+                }
+            },
+            data:[320, 302, 341, 374, 390, 450, 420]
+        },
+        {
+            name:'支出',
+            type:'bar',
+            stack: '总量',
+            itemStyle: {normal: {
+                label : {show: true, position: 'left'}
+            }},
+            data:[-120, -132, -101, -134, -190, -230, -210]
+        }
+    ]
+      
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通过&lt;a href=&quot;http://kchen.cc/2016/11/05/echarts-in-hexo/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ECharts 插件&lt;/a&gt;直接运行&lt;/p&gt;
+&lt;figure class=&quot;highlight dj
     
     </summary>
     
@@ -1244,13 +1244,14 @@ for (var i = 0; i &lt; 100; i++) {
     <link href="http://ipcreator.me/2017/01/29/hello-world/"/>
     <id>http://ipcreator.me/2017/01/29/hello-world/</id>
     <published>2017-01-29T11:37:06.000Z</published>
-    <updated>2017-01-31T09:58:44.862Z</updated>
+    <updated>2017-01-31T11:23:55.437Z</updated>
     
     <content type="html"><![CDATA[<p><strong>“欢迎访问我的个人博客”</strong></p>
 <div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/personalphoto.jpg" width="500" height="500" alt="personal photo"><br> </div>
 
 
 <p>More info: <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" rel="external"><em>my chinese blog</em></a><br>（中文博客<a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" rel="external"><em>网易</em></a>）</p>
+<a id="more"></a>
 <blockquote>
 <p>正整数：1、2、3、4、5、6、7 ，<br>对应和弦：C、D、E、F、G、A、B，<br>对应音符：Do、Re、Me、Fa、So、La、Ti</p>
 </blockquote>
@@ -1301,7 +1302,10 @@ for (var i = 0; i &lt; 100; i++) {
     <summary type="html">
     
       &lt;p&gt;&lt;strong&gt;“欢迎访问我的个人博客”&lt;/strong&gt;&lt;/p&gt;
-&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/personalphoto.jpg&quot; width=&quot;500&quot; heigh
+&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/personalphoto.jpg&quot; width = &quot;500&quot; height = &quot;500&quot; alt=&quot;personal photo&quot;&gt;&lt;br&gt; &lt;/div&gt;
+
+
+&lt;p&gt;More info: &lt;a href=&quot;http://blog.163.com/zhuxuanlv@126/&quot;&gt;&lt;em&gt;my chinese blog&lt;/em&gt;&lt;/a&gt;&lt;br&gt;（中文博客&lt;a href=&quot;http://blog.163.com/zhuxuanlv@126/&quot;&gt;&lt;em&gt;网易&lt;/em&gt;&lt;/a&gt;）&lt;/p&gt;
     
     </summary>
     
