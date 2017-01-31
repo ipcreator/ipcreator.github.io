@@ -6,21 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ipcreator.me">
-  <title>photos | For life</title>
+  <title>Echarts Demo4 | For life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="For life, growth is the only password.">
+  <meta name="description" content="var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i &amp;lt; 100; i++) {
+    xAxisData.push(i);
+    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
+    data2.push((Math.cos(i / 5)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="photos">
-<meta property="og:url" content="http://ipcreator.me/2017/01/30/photos/index.html">
+<meta property="og:title" content="Echarts Demo4">
+<meta property="og:url" content="http://ipcreator.me/2017/01/30/echarts-demo4/index.html">
 <meta property="og:site_name" content="For life">
-<meta property="og:description" content="For life, growth is the only password.">
-<meta property="og:image" content="http://ipcreator.me/img/personalphoto.jpg">
-<meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/personalphoto.jpg">
-<meta property="og:updated_time" content="2017-01-30T13:11:44.092Z">
+<meta property="og:description" content="var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i &amp;lt; 100; i++) {
+    xAxisData.push(i);
+    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
+    data2.push((Math.cos(i / 5)">
+<meta property="og:updated_time" content="2017-01-31T04:16:54.628Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="photos">
-<meta name="twitter:description" content="For life, growth is the only password.">
-<meta name="twitter:image" content="http://ipcreator.me/img/personalphoto.jpg">
+<meta name="twitter:title" content="Echarts Demo4">
+<meta name="twitter:description" content="var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i &amp;lt; 100; i++) {
+    xAxisData.push(i);
+    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
+    data2.push((Math.cos(i / 5)">
   
     <link rel="alternative" href="/atom.xml" title="For life" type="application/atom+xml">
   
@@ -178,19 +193,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-photos" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-echarts-demo4" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      photos
+      Echarts Demo4
     </h1>
   
 
         
-        <a href="/2017/01/30/photos/" class="archive-article-date">
+        <a href="/2017/01/30/echarts-demo4/" class="archive-article-date">
   	<time datetime="2017-01-30T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
 </a>
         
@@ -198,7 +213,78 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <script type="text/javascript">
+var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i < 100; i++) {
+    xAxisData.push(i);
+    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
+    data2.push((Math.cos(i / 5) * (i / 5 -10) + i / 6) * 5);
+}
+</script>
+
+<p><div id="echarts9202" style="width: 100%;height: 250px;margin: 0 auto"></div></p>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts9202'));
+        // 指定图表的配置项和数据
+        var option = option = {
+    title: {
+        text: ''
+    },
+    legend: {
+        data: ['input', 'output'],
+        align: 'left'
+    },
+    toolbox: {
+        // y: 'bottom',
+        feature: {
+            magicType: {
+                type: ['stack', 'tiled']
+            }
+        }
+    },
+    tooltip: {},
+    xAxis: {
+        data: xAxisData,
+        silent: false,
+        splitLine: {
+            show: false
+        }
+    },
+    yAxis: {
+    },
+    series: [{
+        name: 'input',
+        type: 'bar',
+        data: data1,
+        animationDelay: function (idx) {
+            return idx * 10;
+        }
+    }, {
+        name: 'output',
+        type: 'bar',
+        data: data2,
+        animationDelay: function (idx) {
+            return idx * 10 + 1000;
+        }
+    }],
+    animationEasing: 'elasticOut',
+    animationDelayUpdate: function (idx) {
+        return idx * 5;
+    }
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+
+
+
+
+
       
 
       
@@ -237,17 +323,24 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">personal</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">picture</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Echarts</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IPCreator/" class="article-tag-list-link color5">IPCreator</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -297,7 +390,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABwklEQVR42u3aQW4DIQwF0N7/0lOpq0rtkG8MZCI9VlEyGh5ZWMb211e8rp919831a+W//n3nsoWLi9vmXsN1t/1447tvkvfcGXBxcc9zx8FrLhiND3NHf2HDxcV9GLea7iRP4uLifjo3Z1UvVLi4uM/kJpeffmDKD7/groaLi9vgdoLOqs8b67u4uLhF7lVcc32NZbvj4uIe4SZljmSD8TP9Nm2h34uLi9vmrtpyrsWSBzhcXNyT3PwSMpe4VMcsomEOXFzczdy141NJUMsDXOHag4uLu5TbT0qqrZdqMaWQl+Hi4i7l5iWSvMwx16opt1dxcXG3cfOhqLmySL9QgouL+y7uXNpRTVA6B8bFxT3DTS4nebqTHwwXF/dTuElhtFrczMuv0d+Ei4t7hNtvqPQbrtXLFS4u7m7uqtQkb4HkLRZcXNz3cvvl0fLGUy0WXFzck9y5cau5Fun4irWgiYKLi9vmVgNK3pTtPJ+/ARcXdx+3GrzyADT3nhdhERcX9yC3k45UBzKqQRMXF/fJ3CqxP6r1jw0XF/fB3P4A1tzYBy4u7kluEpLyq9GOY+Di4p7kVgumOTEpf3RKrri4uBu4380Y3UTpWagPAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACOUlEQVR42u3aQW7DMAxE0dz/0i7QVYCg1h/SLSrqexUUSuznxVQk9Xrh6/q+3j+/X3zl5/rP796vaV0yZMjYlnHdXnzNPSZ9hvi+MmTIOIDBQ5Y8LglWchfybDJkyJBB1vAI5mtkyJAho88gmznyFx7iMmTIkEGK2LQpRn6HbxYfq8VlyJCxIaM2GPibz78+35AhQ8a/Z1zhVfu19OHip5IhQ8ZoBilH+ZGI2maxgwymoDJkyBjESIeXpCXXH4KippsMGTJGM9KmPA/KftuON+xkyJAxlcHHAGkzjpTBHBBPNmTIkDGIwWO0c2CLj0jT7aYMGTLOYaTHtkgo84gkTb14MCBDhoxBjNrN0hYbeVm8SRcUsTJkyBjEIIVoWnym7TNyl0XgypAh4wAGL0efavrXwn0RuDJkyBjH4GVk2hRbRGSjMbc4MyJDhozRDB6RcZEZHq0ojldlyJAxlJGWjrUY7Qw40b1kyJBxAINHYYohG7vaiyj+x5AhQ8aGjNqBsHS02RlepsMDGTJkzGOQuCThGFTM+NXwTaoMGTLOYfCtGx8AdEaY/OXKkCFjNiMtWfkhjNoBjg5ShgwZUxm1djx/oGB7V2rDyZAh4wRGGnP9SH2qAJYhQ8ZpDH6sga9JA5SPPxczDRkyZIxm1EKWDyM7h8lQLS5DhgwZIC5rg4H0Lj9mrAwZMmSURpIcn97lscCVIUPGVoy0QK1t7/pBvNgaypAhYyijMxiIm2LtIUTnwJkMGTI2ZHwBFxZvhYOFlKMAAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -312,8 +405,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2017/01/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Welcome to my blog.</div>
+    <a href="/2017/01/30/echarts-demo2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Echarts Demo2</div>
       <i class="icon-circle-right"></i>
     </a>
   

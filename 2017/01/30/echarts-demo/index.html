@@ -6,17 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ipcreator.me">
-  <title>Archives: 2016/9 | For life</title>
+  <title>Echarts Demo | For life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="For life, growth is the only password.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="For life">
-<meta property="og:url" content="http://ipcreator.me/archives/2016/09/index.html">
+  <meta name="description" content="// 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById(&apos;echarts1467&apos;));
+        // 指定图表的配置项和数据
+        var option = {
+
+    tooltip : {
+        trigger: &apos;axis&apos;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Echarts Demo">
+<meta property="og:url" content="http://ipcreator.me/2017/01/30/echarts-demo/index.html">
 <meta property="og:site_name" content="For life">
-<meta property="og:description" content="For life, growth is the only password.">
+<meta property="og:description" content="// 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById(&apos;echarts1467&apos;));
+        // 指定图表的配置项和数据
+        var option = {
+
+    tooltip : {
+        trigger: &apos;axis&apos;">
+<meta property="og:updated_time" content="2017-01-31T04:17:34.016Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="For life">
-<meta name="twitter:description" content="For life, growth is the only password.">
+<meta name="twitter:title" content="Echarts Demo">
+<meta name="twitter:description" content="// 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById(&apos;echarts1467&apos;));
+        // 指定图表的配置项和数据
+        var option = {
+
+    tooltip : {
+        trigger: &apos;axis&apos;">
   
     <link rel="alternative" href="/atom.xml" title="For life" type="application/atom+xml">
   
@@ -174,102 +193,246 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-echarts-demo" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/09/25/diary-2016-0911-0924/" class="archive-article-date">
-  	<time datetime="2016-09-25T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/09/25/diary-2016-0911-0924/">旧事 凯里 9.11-9.24</a>
+    <h1 class="article-title" itemprop="name">
+      Echarts Demo
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/01/30/echarts-demo/" class="archive-article-date">
+  	<time datetime="2017-01-30T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div id="echarts1467" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts1467'));
+        // 指定图表的配置项和数据
+        var option = {
+
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    legend: {
+        data:['利润', '支出', '收入']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            axisTick : {show: false},
+            data : ['周一','周二','周三','周四','周五','周六','周日']
+        }
+    ],
+    series : [
+        {
+            name:'利润',
+            type:'bar',
+            itemStyle : {
+                normal: {
+                    label: {show: true, position: 'inside'}
+                }
+            },
+            data:[200, 170, 240, 244, 200, 220, 210]
+        },
+        {
+            name:'收入',
+            type:'bar',
+            stack: '总量',
+            itemStyle: {
+                normal: {
+                    label : {show: true}
+                }
+            },
+            data:[320, 302, 341, 374, 390, 450, 420]
+        },
+        {
+            name:'支出',
+            type:'bar',
+            stack: '总量',
+            itemStyle: {normal: {
+                label : {show: true, position: 'left'}
+            }},
+            data:[-120, -132, -101, -134, -190, -230, -210]
+        }
+    ]
+      
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您的打赏！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://okkntqe2h.bkt.clouddn.com/alipay_cr.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">旧事</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">旅行</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Echarts</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/09/11/diary-2016-0904-0910/" class="archive-article-date">
-  	<time datetime="2016-09-11T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/09/11/diary-2016-0904-0910/">旧事 imweb-conf 9.4-9.10</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">旧事</a>
+        			<a href="/categories/IPCreator/" class="article-tag-list-link color5">IPCreator</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3a22rDQAyE4bz/S7u3gbLLzGjdIu3vq+IsjT8HhE6fj3w9vy79/Ped1af7+8cuGDBgtGU820s/k33L/jUZ3wsDBowLGKsvXp1Rgun+P+8fXX82GDBgwHATuyythAEDBow3Aq5euGZ3YMCAASMrYvdpohKI3aD8Si0OAwaMhgy9Wfb3f78y34ABA0YrxmNelXGCO9o0ngoGDBijGVmBuj+vf2oUqELBDAMGjNmMrFx0Q7CeFFaGEDBgwLiNoQQ4PYl8o1UnBVwYMGA0Z7iFotK415cz3PHngXYbDBgw2jLqYdFNLivJ37JrCAMGjKEMvSitzEiVoOyWx1LwhQEDxgiG2xTTS9xT50tFLAwYMEYzsoeol6NZqgoDBozZjGxhQl+qUArRLFW123AwYMBoy8hKykryV2mxLe/AgAFjNMNN1Nwk0oW5zb5wwAkDBoyGjCxoKncqw0s7fYQBA8ZoRlbpZiezsaX+mmDAgDGVoQwU9yPGypBAP2/8DjBgwBjKyAaK9SJWf1lShgsDBozRjAyjl6lKyK4sfMCAAeMGRiXguisa9vaHMtOAAQPGUMZjXu648ez6l9RogwEDxjiGG+bcxzo7BA13RmDAgDGC4QZZd9xYGY4aQRYGDBgXME412iotuX+oxWHAgDGUka2IuWliuNcGAwYMGCbJXf/SG3CHR5gwYMBowshWInTA/mW5JSsMGDBuY5RKx2jykI02DwwyYcCA0Y/xA6YBapi8jgkvAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/01/30/echarts-demo2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Echarts Demo2
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/01/30/echarts-demo3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Echarts Demo3</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -292,8 +455,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

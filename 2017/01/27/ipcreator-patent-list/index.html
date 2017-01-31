@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ipcreator.me">
-  <title>For life</title>
+  <title>IPCreator Patent List | For life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="For life, growth is the only password.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="For life">
-<meta property="og:url" content="http://ipcreator.me/index.html">
+  <meta name="description" content="检索方法：1、打开专利检索网址(http://www.innojoy.com)；2、以“汪智勇”为关键字进行检索；3、在检索结果中，再以申请（权利人）为“宇龙/Yulong” or “酷派/Coolpad”进行二次筛选便可得出结果。
+备注：以下清单，基于2017.1.27日以前公开的中国专利库进行检索，未纳入尚未公开的中国专利申请/处于PCT国际阶段专利申请/已进入欧美印国家阶段专利申请。
+申请号">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IPCreator Patent List">
+<meta property="og:url" content="http://ipcreator.me/2017/01/27/ipcreator-patent-list/index.html">
 <meta property="og:site_name" content="For life">
-<meta property="og:description" content="For life, growth is the only password.">
+<meta property="og:description" content="检索方法：1、打开专利检索网址(http://www.innojoy.com)；2、以“汪智勇”为关键字进行检索；3、在检索结果中，再以申请（权利人）为“宇龙/Yulong” or “酷派/Coolpad”进行二次筛选便可得出结果。
+备注：以下清单，基于2017.1.27日以前公开的中国专利库进行检索，未纳入尚未公开的中国专利申请/处于PCT国际阶段专利申请/已进入欧美印国家阶段专利申请。
+申请号">
+<meta property="og:updated_time" content="2017-01-31T04:20:55.571Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="For life">
-<meta name="twitter:description" content="For life, growth is the only password.">
+<meta name="twitter:title" content="IPCreator Patent List">
+<meta name="twitter:description" content="检索方法：1、打开专利检索网址(http://www.innojoy.com)；2、以“汪智勇”为关键字进行检索；3、在检索结果中，再以申请（权利人）为“宇龙/Yulong” or “酷派/Coolpad”进行二次筛选便可得出结果。
+备注：以下清单，基于2017.1.27日以前公开的中国专利库进行检索，未纳入尚未公开的中国专利申请/处于PCT国际阶段专利申请/已进入欧美印国家阶段专利申请。
+申请号">
   
     <link rel="alternative" href="/atom.xml" title="For life" type="application/atom+xml">
   
@@ -174,863 +181,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-echarts-demo4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-ipcreator-patent-list" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/echarts-demo4/">Echarts Demo4</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/30/echarts-demo4/" class="archive-article-date">
-  	<time datetime="2017-01-30T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script type="text/javascript">
-var xAxisData = [];
-var data1 = [];
-var data2 = [];
-for (var i = 0; i < 100; i++) {
-    xAxisData.push(i);
-    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
-    data2.push((Math.cos(i / 5) * (i / 5 -10) + i / 6) * 5);
-}
-</script>
-
-<p><div id="echarts9202" style="width: 100%;height: 250px;margin: 0 auto"></div></p>
-<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
-
-<script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts9202'));
-        // 指定图表的配置项和数据
-        var option = option = {
-    title: {
-        text: ''
-    },
-    legend: {
-        data: ['input', 'output'],
-        align: 'left'
-    },
-    toolbox: {
-        // y: 'bottom',
-        feature: {
-            magicType: {
-                type: ['stack', 'tiled']
-            }
-        }
-    },
-    tooltip: {},
-    xAxis: {
-        data: xAxisData,
-        silent: false,
-        splitLine: {
-            show: false
-        }
-    },
-    yAxis: {
-    },
-    series: [{
-        name: 'input',
-        type: 'bar',
-        data: data1,
-        animationDelay: function (idx) {
-            return idx * 10;
-        }
-    }, {
-        name: 'output',
-        type: 'bar',
-        data: data2,
-        animationDelay: function (idx) {
-            return idx * 10 + 1000;
-        }
-    }],
-    animationEasing: 'elasticOut',
-    animationDelayUpdate: function (idx) {
-        return idx * 5;
-    }
-};
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-</script>
-
-
-
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Echarts</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/IPCreator/" class="article-tag-list-link color5">IPCreator</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/echarts-demo4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-echarts-demo2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/echarts-demo2/">Echarts Demo2</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/30/echarts-demo2/" class="archive-article-date">
-  	<time datetime="2017-01-30T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <div id="echarts965" style="width: 85%;height: 400px;margin: 0 auto"></div>
-<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
-
-<script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts965'));
-        // 指定图表的配置项和数据
-        var option = {
-
-    title: {
-        text: '男性女性身高体重分布',
-        subtext: 'data from PM25.in',
-        sublink: 'http://www.pm25.in',
-        x:'center',
-        textStyle: {
-            color: '#f0f'
-        }
-    },
-
-
-    tooltip: {
-        trigger: "axis",
-        showDelay: 0,
-        axisPointer: {
-            type: "cross",
-            lineStyle: {
-                type: "dashed",
-                width: 1
-            }
-        }
-    },
-    legend: {
-        bottom: 5,
-        data: ["女性", "男性"]
-    },
-    toolbox: {
-        show: true,
-        feature: {
-            mark: {
-                show: true
-            },
-            dataZoom: {
-                show: true
-            }
-        }
-    },
-    xAxis: [
-        {
-            type: "value",
-            power: 1,
-            precision: 2,
-            scale: true
-        }
-    ],
-    yAxis: [
-        {
-            type: "value",
-            power: 1,
-            precision: 2,
-            scale: true
-        }
-    ],
-    series: [
-        {
-            name: "女性",
-            type: "scatter",
-            data: [[161.2, 51.6], [172.9, 62.5], [153.4, 42], [160, 50], [147.2, 49.8], [168.2, 49.2], [175, 73.2], [157, 47.8], [167.6, 68.8], [159.5, 50.6], [175, 82.5], [166.8, 57.2], [176.5, 87.8], [170.2, 72.8], [174, 54.5], [173, 59.8], [179.9, 67.3], [170.5, 67.8], [162.6, 61.4]]
-        },
-        {
-            name: "男性",
-            type: "scatter",
-            data: [[174, 65.6], [164.1, 55.2], [163, 57], [171.5, 61.4], [184.2, 76.8], [174, 86.8], [182, 72], [167, 64.6], [177.8, 74.8], [180.3, 93.2], [180.3, 82.7], [177.8, 58], [177.8, 79.5], [177.8, 78.6], [177.8, 71.8], [177.8, 72], [177.8, 81.8], [180.3, 83.2]]
-        }
-    ]
-    
-    
-};
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-</script>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Echarts</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/IPCreator/" class="article-tag-list-link color5">IPCreator</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/echarts-demo2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-echarts-demo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/echarts-demo/">Echarts Demo</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/30/echarts-demo/" class="archive-article-date">
-  	<time datetime="2017-01-30T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <div id="echarts1467" style="width: 85%;height: 400px;margin: 0 auto"></div>
-<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
-
-<script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts1467'));
-        // 指定图表的配置项和数据
-        var option = {
-
-    tooltip : {
-        trigger: 'axis',
-        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-        }
-    },
-    legend: {
-        data:['利润', '支出', '收入']
-    },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    xAxis : [
-        {
-            type : 'value'
-        }
-    ],
-    yAxis : [
-        {
-            type : 'category',
-            axisTick : {show: false},
-            data : ['周一','周二','周三','周四','周五','周六','周日']
-        }
-    ],
-    series : [
-        {
-            name:'利润',
-            type:'bar',
-            itemStyle : {
-                normal: {
-                    label: {show: true, position: 'inside'}
-                }
-            },
-            data:[200, 170, 240, 244, 200, 220, 210]
-        },
-        {
-            name:'收入',
-            type:'bar',
-            stack: '总量',
-            itemStyle: {
-                normal: {
-                    label : {show: true}
-                }
-            },
-            data:[320, 302, 341, 374, 390, 450, 420]
-        },
-        {
-            name:'支出',
-            type:'bar',
-            stack: '总量',
-            itemStyle: {normal: {
-                label : {show: true, position: 'left'}
-            }},
-            data:[-120, -132, -101, -134, -190, -230, -210]
-        }
-    ]
-      
-};
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-</script>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Echarts</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/IPCreator/" class="article-tag-list-link color5">IPCreator</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/echarts-demo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-echarts-demo3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/echarts-demo3/">Echarts Demo3</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/30/echarts-demo3/" class="archive-article-date">
-  	<time datetime="2017-01-30T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <div id="echarts8838" style="width: 85%;height: 400px;margin: 0 auto"></div>
-<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
-
-<script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts8838'));
-        // 指定图表的配置项和数据
-        var option = {
-    tooltip: {
-        trigger: 'item',
-        formatter: function (params) {
-            return params.name + ' : ' + params.value[2];
-        }
-    },
-    legend: {
-        orient: 'vertical',
-        y: 'bottom',
-        x:'right',
-        data:['pm2.5'],
-        textStyle: {
-            color: '#fff'
-        }
-    },
-    visualMap: {
-        min: 0,
-        max: 200,
-        calculable: true,
-        inRange: {
-            color: ['#50a3ba', '#eac736', '#d94e5d']
-        },
-        textStyle: {
-            color: '#fff'
-        }
-    },
-    geo: {
-        map: 'china',
-        label: {
-            emphasis: {
-                show: false
-            }
-        },
-        itemStyle: {
-            normal: {
-                areaColor: '#323c48',
-                borderColor: '#111'
-            },
-            emphasis: {
-                areaColor: '#2a333d'
-            }
-        }
-    },
-    series: [
-        {
-            name: 'pm2.5',
-            type: 'scatter',
-            coordinateSystem: 'geo',
-            data: convertData([
-                {name: "海门", value: 9},
-                {name: "鄂尔多斯", value: 12},
-                {name: "招远", value: 12},
-                {name: "舟山", value: 12},
-                {name: "齐齐哈尔", value: 14},
-                {name: "盐城", value: 15},
-                {name: "赤峰", value: 16},
-                {name: "青岛", value: 18},
-                {name: "乳山", value: 18},
-                {name: "金昌", value: 19},
-                {name: "泉州", value: 21},
-                {name: "莱西", value: 21},
-                {name: "日照", value: 21},
-                {name: "胶南", value: 22},
-                {name: "南通", value: 23},
-                {name: "拉萨", value: 24},
-                {name: "云浮", value: 24},
-                {name: "梅州", value: 25},
-                {name: "文登", value: 25},
-                {name: "上海", value: 25},
-                {name: "攀枝花", value: 25},
-                {name: "威海", value: 25},
-                {name: "承德", value: 25},
-                {name: "厦门", value: 26},
-                {name: "汕尾", value: 26},
-                {name: "潮州", value: 26},
-                {name: "丹东", value: 27},
-                {name: "太仓", value: 27},
-                {name: "曲靖", value: 27},
-                {name: "烟台", value: 28},
-                {name: "福州", value: 29},
-                {name: "瓦房店", value: 30},
-                {name: "即墨", value: 30},
-                {name: "抚顺", value: 31},
-                {name: "玉溪", value: 31},
-                {name: "张家口", value: 31},
-                {name: "阳泉", value: 31},
-                {name: "莱州", value: 32},
-                {name: "湖州", value: 32},
-                {name: "汕头", value: 32},
-                {name: "昆山", value: 33},
-                {name: "宁波", value: 33},
-                {name: "湛江", value: 33},
-                {name: "揭阳", value: 34},
-                {name: "荣成", value: 34},
-                {name: "连云港", value: 35},
-                {name: "葫芦岛", value: 35},
-                {name: "常熟", value: 36},
-                {name: "东莞", value: 36},
-                {name: "河源", value: 36},
-                {name: "淮安", value: 36},
-                {name: "泰州", value: 36},
-                {name: "南宁", value: 37},
-                {name: "营口", value: 37},
-                {name: "惠州", value: 37},
-                {name: "江阴", value: 37},
-                {name: "蓬莱", value: 37},
-                {name: "韶关", value: 38},
-                {name: "嘉峪关", value: 38},
-                {name: "广州", value: 38},
-                {name: "延安", value: 38},
-                {name: "太原", value: 39},
-                {name: "清远", value: 39},
-                {name: "中山", value: 39},
-                {name: "昆明", value: 39},
-                {name: "寿光", value: 40},
-                {name: "盘锦", value: 40},
-                {name: "长治", value: 41},
-                {name: "深圳", value: 41},
-                {name: "珠海", value: 42},
-                {name: "宿迁", value: 43},
-                {name: "咸阳", value: 43},
-                {name: "铜川", value: 44},
-                {name: "平度", value: 44},
-                {name: "佛山", value: 44},
-                {name: "海口", value: 44},
-                {name: "江门", value: 45},
-                {name: "章丘", value: 45},
-                {name: "肇庆", value: 46},
-                {name: "大连", value: 47},
-                {name: "临汾", value: 47},
-                {name: "吴江", value: 47},
-                {name: "石嘴山", value: 49},
-                {name: "沈阳", value: 50},
-                {name: "苏州", value: 50},
-                {name: "茂名", value: 50},
-                {name: "嘉兴", value: 51},
-                {name: "长春", value: 51},
-                {name: "胶州", value: 52},
-                {name: "银川", value: 52},
-                {name: "张家港", value: 52},
-                {name: "三门峡", value: 53},
-                {name: "锦州", value: 54},
-                {name: "南昌", value: 54},
-                {name: "柳州", value: 54},
-                {name: "三亚", value: 54},
-                {name: "自贡", value: 56},
-                {name: "吉林", value: 56},
-                {name: "阳江", value: 57},
-                {name: "泸州", value: 57},
-                {name: "西宁", value: 57},
-                {name: "宜宾", value: 58},
-                {name: "呼和浩特", value: 58},
-                {name: "成都", value: 58},
-                {name: "大同", value: 58},
-                {name: "镇江", value: 59},
-                {name: "桂林", value: 59},
-                {name: "张家界", value: 59},
-                {name: "宜兴", value: 59},
-                {name: "北海", value: 60},
-                {name: "西安", value: 61},
-                {name: "金坛", value: 62},
-                {name: "东营", value: 62},
-                {name: "牡丹江", value: 63},
-                {name: "遵义", value: 63},
-                {name: "绍兴", value: 63},
-                {name: "扬州", value: 64},
-                {name: "常州", value: 64},
-                {name: "潍坊", value: 65},
-                {name: "重庆", value: 66},
-                {name: "台州", value: 67},
-                {name: "南京", value: 67},
-                {name: "滨州", value: 70},
-                {name: "贵阳", value: 71},
-                {name: "无锡", value: 71},
-                {name: "本溪", value: 71},
-                {name: "克拉玛依", value: 72},
-                {name: "渭南", value: 72},
-                {name: "马鞍山", value: 72},
-                {name: "宝鸡", value: 72},
-                {name: "焦作", value: 75},
-                {name: "句容", value: 75},
-                {name: "北京", value: 79},
-                {name: "徐州", value: 79},
-                {name: "衡水", value: 80},
-                {name: "包头", value: 80},
-                {name: "绵阳", value: 80},
-                {name: "乌鲁木齐", value: 84},
-                {name: "枣庄", value: 84},
-                {name: "杭州", value: 84},
-                {name: "淄博", value: 85},
-                {name: "鞍山", value: 86},
-                {name: "溧阳", value: 86},
-                {name: "库尔勒", value: 86},
-                {name: "安阳", value: 90},
-                {name: "开封", value: 90},
-                {name: "济南", value: 92},
-                {name: "德阳", value: 93},
-                {name: "温州", value: 95},
-                {name: "九江", value: 96},
-                {name: "邯郸", value: 98},
-                {name: "临安", value: 99},
-                {name: "兰州", value: 99},
-                {name: "沧州", value: 100},
-                {name: "临沂", value: 103},
-                {name: "南充", value: 104},
-                {name: "天津", value: 105},
-                {name: "富阳", value: 106},
-                {name: "泰安", value: 112},
-                {name: "诸暨", value: 112},
-                {name: "郑州", value: 113},
-                {name: "哈尔滨", value: 114},
-                {name: "聊城", value: 116},
-                {name: "芜湖", value: 117},
-                {name: "唐山", value: 119},
-                {name: "平顶山", value: 119},
-                {name: "邢台", value: 119},
-                {name: "德州", value: 120},
-                {name: "济宁", value: 120},
-                {name: "荆州", value: 127},
-                {name: "宜昌", value: 130},
-                {name: "义乌", value: 132},
-                {name: "丽水", value: 133},
-                {name: "洛阳", value: 134},
-                {name: "秦皇岛", value: 136},
-                {name: "株洲", value: 143},
-                {name: "石家庄", value: 147},
-                {name: "莱芜", value: 148},
-                {name: "常德", value: 152},
-                {name: "保定", value: 153},
-                {name: "湘潭", value: 154},
-                {name: "金华", value: 157},
-                {name: "岳阳", value: 169},
-                {name: "长沙", value: 175},
-                {name: "衢州", value: 177},
-                {name: "廊坊", value: 193},
-                {name: "菏泽", value: 194},
-                {name: "合肥", value: 229},
-                {name: "武汉", value: 273},
-                {name: "大庆", value: 279}
-            ]),
-            symbolSize: 12,
-            label: {
-                normal: {
-                    show: false
-                },
-                emphasis: {
-                    show: false
-                }
-            },
-            itemStyle: {
-                emphasis: {
-                    borderColor: '#fff',
-                    borderWidth: 1
-                }
-            }
-        }
-    ]
-    
-};
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-</script>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Echarts</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/IPCreator/" class="article-tag-list-link color5">IPCreator</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/echarts-demo3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/hello-world/">Welcome to my blog.</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/30/hello-world/" class="archive-article-date">
-  	<time datetime="2017-01-30T11:37:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Thanks for your visiting.</p>
-<div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/personalphoto.jpg" width="500" height="500" alt="personal photo"><br> </div>
-
-<p>More info: <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" rel="external">my chinese blog</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Welcome</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-ipcreator-patent-list" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/27/ipcreator-patent-list/">IPCreator Patent List</a>
+    <h1 class="article-title" itemprop="name">
+      IPCreator Patent List
     </h1>
   
 
@@ -1049,6 +207,32 @@ for (var i = 0; i < 100; i++) {
 <table><br>   <tr><br>      <td>申请号</td><br>      <td>名称</td><br>      <td>发明人</td><br>   </tr><br>   <tr><br>      <td>CN201510344976.5</td><br>      <td>一种图像处理方法、装置及终端</td><br>      <td>吕楠;汪智勇;蒋罗</td><br>   </tr><br>   <tr><br>      <td>CN201510306351.X</td><br>      <td>一种用于降低移动终端功耗的方法和系统、以及移动终端</td><br>      <td>吴科标;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201610567614.7</td><br>      <td>一种消息处理的方法及装置</td><br>      <td>吴殿清;汪智勇;闫娟;唐冬兰</td><br>   </tr><br>   <tr><br>      <td>CN201610565644.4</td><br>      <td>一种消息处理的方法及装置</td><br>      <td>吴殿清;汪智勇;闫娟;唐冬兰</td><br>   </tr><br>   <tr><br>      <td>CN2015082964</td><br>      <td>METHOD AND SYSTEM FOR REDUCING POWER CONSUMPTION OF MOBILE TERMINAL, AND MOBILE TERMINAL</td><br>      <td>WU KEBIAO;WANG ZHIYONG</td><br>   </tr><br>   <tr><br>      <td>CN201610200631.7</td><br>      <td>一种指纹操作方法及终端设备</td><br>      <td>吴殿清;汪智勇;张娜;雷武</td><br>   </tr><br>   <tr><br>      <td>CN201610567587.3</td><br>      <td>一种消息处理的方法及装置</td><br>      <td>吴殿清;汪智勇;闫娟;唐冬兰</td><br>   </tr><br>   <tr><br>      <td>CN201610178390.0</td><br>      <td>基于智能水杯的信息调整方法、信息调整装置及智能水杯</td><br>      <td>吴殿清;汪智勇;闫娟;张娜</td><br>   </tr><br>   <tr><br>      <td>CN201610200353.5</td><br>      <td>一种多指纹混合登记的预警处理方法及移动终端</td><br>      <td>吴殿清;郭德英;汪智勇;张娜</td><br>   </tr><br>   <tr><br>      <td>CN201510236129.7</td><br>      <td>一种红外遥控方法及系统</td><br>      <td>吕楠;汪智勇;蒋罗</td><br>   </tr><br>   <tr><br>      <td>CN201510992251.7</td><br>      <td>一种应用程序下载安装方法及终端设备</td><br>      <td>刘东海;党乐;吴殿清;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201610179140.9</td><br>      <td>用于智能水杯的控制方法、控制装置及智能水杯</td><br>      <td>吴殿清;汪智勇;闫娟;潘露杰</td><br>   </tr><br>   <tr><br>      <td>CN201610177989.2</td><br>      <td>用于智能水杯的控制方法、控制装置及智能水杯</td><br>      <td>涂欣;汪智勇;闫娟</td><br>   </tr><br>   <tr><br>      <td>CN201610184737.2</td><br>      <td>电梯控制方法、电梯控制装置和终端</td><br>      <td>梅各各;吴殿清;汪智勇;闫娟</td><br>   </tr><br>   <tr><br>      <td>CN201511019709.7</td><br>      <td>指纹识别的安全管理方法及装置、终端</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201610184821.4</td><br>      <td>通信处理方法及通信处理装置</td><br>      <td>潘晓;吴殿清;汪智勇;潘露杰</td><br>   </tr><br>   <tr><br>      <td>CN201610177915.9</td><br>      <td>基于智能水杯的信息调整方法、信息调整装置及智能水杯</td><br>      <td>吴殿清;汪智勇;闫娟;唐冬兰</td><br>   </tr><br>   <tr><br>      <td>CN201510369387.2</td><br>      <td>指纹密码的验证方法、系统和终端</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510288979.1</td><br>      <td>虹膜信息采集方法、虹膜信息采集装置及终端</td><br>      <td>吕楠;蒋罗;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201511018264.0</td><br>      <td>数据访问方法、数据访问系统和终端</td><br>      <td>刘东海;吴殿清;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510290387.3</td><br>      <td>水印嵌入方法、水印嵌入装置和终端</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510458375.7</td><br>      <td>一种基于用户信息识别的设备控制方法及移动终端</td><br>      <td>刘东海;郭建军;李沙;吴殿清;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510460556.3</td><br>      <td>密码信息的验证方法、密码信息的验证系统和终端</td><br>      <td>刘东海;郭建军;吴殿清;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510615614.5</td><br>      <td>鉴权方法和终端</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510374951.X</td><br>      <td>一种信息处理方法、装置以及终端</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510374233.2</td><br>      <td>一种基于指纹识别的操作方法及终端</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510282913.1</td><br>      <td>一种酒驾检测方法及终端、服务器</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510456437.0</td><br>      <td>一种环境监控方法及用户终端</td><br>      <td>吴殿清;汪智勇;闫娟</td><br>   </tr><br>   <tr><br>      <td>CN201510734361.3</td><br>      <td>移动支付的监控方法、系统及智能终端</td><br>      <td>陈历伟;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510466796.4</td><br>      <td>指纹校验方法及装置</td><br>      <td>刘东海;郭建军;吴殿清;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510386218.X</td><br>      <td>一种数据处理方法及设备</td><br>      <td>刘东海;李仕伦;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510454769.5</td><br>      <td>一种室内环境监控方法及物联网终端</td><br>      <td>吴殿清;汪智勇;闫娟</td><br>   </tr><br>   <tr><br>      <td>CN201510854609.X</td><br>      <td>一种支付方法及其装置</td><br>      <td>陈历伟;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201410464798.5</td><br>      <td>一种终端运行方法和装置</td><br>      <td>詹谷;黄焕荣;袁刚;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510848857.3</td><br>      <td>远程控制方法、远程控制装置、终端和远程控制系统</td><br>      <td>蒋罗;吕楠;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510623457.2</td><br>      <td>一种登录信息的配置方法、装置和移动终端</td><br>      <td>吴殿清;汪智勇;闫娟</td><br>   </tr><br>   <tr><br>      <td>CN201510618247.4</td><br>      <td>一种多系统间的应用安全保护方法及终端</td><br>      <td>刘东海;张碧君;汪智勇;吴殿清</td><br>   </tr><br>   <tr><br>      <td>CN201410303207.6</td><br>      <td>跨平台关联设备间的应用的安装方法及其系统</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510615266.1</td><br>      <td>一种用户数据的保护方法及终端</td><br>      <td>刘东海;许奕波;吴殿清;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201410195732.0</td><br>      <td>一种超级用户权限控制方法及装置</td><br>      <td>李仕伦;汪智勇;阳得常</td><br>   </tr><br>   <tr><br>      <td>CN201510611610.X</td><br>      <td>虹膜认证方法、虹膜认证装置及终端</td><br>      <td>梁文栋;黄习昌;闫娟;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201410165760.8</td><br>      <td>一种安全驾驶的预警方法及系统</td><br>      <td>李仕伦;汪智勇;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201410066559.4</td><br>      <td>消息通知方法、消息通知装置、移动设备和消息通知系统</td><br>      <td>汪智勇;郭德英;郭建军;吴殿清;王文清</td><br>   </tr><br>   <tr><br>      <td>CN201510288853.4</td><br>      <td>一种数据处理方法和装置</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510209238.X</td><br>      <td>一种系统切换方法和装置</td><br>      <td>刘东海;吴殿清;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510209832.9</td><br>      <td>数据信息处理方法、数据信息处理装置和终端</td><br>      <td>周威;汪智勇;庞敏</td><br>   </tr><br>   <tr><br>      <td>CN201510201478.5</td><br>      <td>系统切换方法、系统切换装置和终端</td><br>      <td>胡军杰;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201410856593.1</td><br>      <td>多系统终端的系统切换方法、装置和终端</td><br>      <td>石爱民;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510054797.8</td><br>      <td>数据获取方法、数据获取装置和终端</td><br>      <td>许行;刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201510044131.4</td><br>      <td>应用程序的运行控制方法、运行控制系统和终端</td><br>      <td>胡军杰;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201410843159.X</td><br>      <td>基于联系人的系统切换方法及装置</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201410579593.1</td><br>      <td>丢失终端的管理方法及系统</td><br>      <td>刘东海;汪智勇;冯玉慧;叶必清;李仕伦</td><br>   </tr><br>   <tr><br>      <td>CN201510026623.0</td><br>      <td>一种终端系统的控制方法、装置和终端</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201410719656.9</td><br>      <td>一种汽车监控方法及系统</td><br>      <td>刘东海;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201410453522.7</td><br>      <td>一种低电量提示方法、装置及终端设备</td><br>      <td>詹谷;黄焕荣;卓优;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201410301262.1</td><br>      <td>一种基于虚拟键盘的文字输入方法及装置</td><br>      <td>林荣辉;汪智勇;陈运哲;战磊</td><br>   </tr><br>   <tr><br>      <td>CN201410204656.5</td><br>      <td>信息同步系统和信息同步方法</td><br>      <td>叶必清;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201410056902.7</td><br>      <td>数据保护系统及方法</td><br>      <td>汪智勇;王正泽;王旭;郭德英;邓小英</td><br>   </tr><br>   <tr><br>      <td>CN201410099365.4</td><br>      <td>一种智能输入法切换方法及装置</td><br>      <td>叶必清;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201410042322.2</td><br>      <td>一种终端及防止敏感信息泄露的方法</td><br>      <td>陈祥;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201310625749.0</td><br>      <td>一种文件的传输方法及装置</td><br>      <td>李仕伦;汪智勇;叶必清</td><br>   </tr><br>   <tr><br>      <td>CN201310530882.8</td><br>      <td>商品信息的处理方法及装置</td><br>      <td>汪智勇;李俊;邓小英</td><br>   </tr><br>   <tr><br>      <td>CN201110451257.5</td><br>      <td>一种图片下载的方法、移动终端及服务器</td><br>      <td>冯玉慧;汪智勇;叶必清</td><br>   </tr><br>   <tr><br>      <td>CN201210527902.1</td><br>      <td>一种应用协同方法及移动终端</td><br>      <td>汪智勇;王文清;王正泽</td><br>   </tr><br>   <tr><br>      <td>CN2011076513</td><br>      <td>PASTING METHOD AND TERMINAL THEREOF</td><br>      <td>WANG ZHIYONG;YE BIQING;FENG YUHUI;LIU DONGHAI</td><br>   </tr><br>   <tr><br>      <td>CN201110384354.7</td><br>      <td>一种应用程序安全预判装置及方法</td><br>      <td>汪智勇;朱宗伟;王新颖;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201110291506.9</td><br>      <td>终端和数据处理方法</td><br>      <td>罗彪;汪智勇;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201110283313.9</td><br>      <td>一种通信信息提醒方法、系统及移动终端</td><br>      <td>叶必清;廖迴敏;冯玉慧;汪智勇;刘东海;王新颖</td><br>   </tr><br>   <tr><br>      <td>CN201110301688.3</td><br>      <td>一种对数据进行操作的方法及移动终端</td><br>      <td>汪智勇;叶必清;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201110304416.9</td><br>      <td>一种应用程序的显示及分类方法、系统及移动终端</td><br>      <td>汪智勇;李自来;廖迴敏;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201110295666.0</td><br>      <td>好友搜索方法、设备和系统</td><br>      <td>冯玉慧;廖迴敏;王新颖;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201110204888.7</td><br>      <td>应用程序管理方法和终端</td><br>      <td>汪智勇;叶必清;冯玉慧;刘东海;王新颖;张开营;廖迴敏</td><br>   </tr><br>   <tr><br>      <td>CN201110215246.7</td><br>      <td>终端和文件保存方法</td><br>      <td>汪智勇;冯玉慧;王新颖;廖迴敏</td><br>   </tr><br>   <tr><br>      <td>CN201110174335.1</td><br>      <td>应用程序管理装置和应用程序管理方法</td><br>      <td>汪智勇;叶必清;冯玉慧;刘东海</td><br>   </tr><br>   <tr><br>      <td>CN201110090127.3</td><br>      <td>一种应用程序访问权限设置方法、系统及移动终端</td><br>      <td>汪智勇;冯玉慧;李仕伦</td><br>   </tr><br>   <tr><br>      <td>CN201110084844.5</td><br>      <td>应用程序安装方法和终端</td><br>      <td>汪智勇;刘东海;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201110086742.7</td><br>      <td>手机应用分类管理方法及装置</td><br>      <td>冯玉慧;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN201110037376.6</td><br>      <td>一种应用程序监控方法及装置</td><br>      <td>汪智勇;叶必清;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201010624198.2</td><br>      <td>智能呈现联系人相关信息的方法、系统及移动终端</td><br>      <td>汪智勇;叶必清;冯玉慧;王志标;王玮;刘东海;李仕伦</td><br>   </tr><br>   <tr><br>      <td>CN201110044252.0</td><br>      <td>一种移动终端内应用程序的升级方法、移动终端及服务器</td><br>      <td>汪智勇;刘东海;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201110031882.4</td><br>      <td>一种基于android平台应用安装控制方法及系统</td><br>      <td>汪智勇;叶必清;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201010589186.0</td><br>      <td>信息处理方法及装置</td><br>      <td>叶必清;汪智勇;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201010596846.8</td><br>      <td>基于Android的应用程序升级方法、系统及应用开发平台</td><br>      <td>汪智勇;冯玉慧;刘东海;李仕伦;王玮;叶必清</td><br>   </tr><br>   <tr><br>      <td>CN201010598458.3</td><br>      <td>移动终端中应用运行条件的评估方法及装置、移动终端</td><br>      <td>汪智勇;冯玉慧;叶必清</td><br>   </tr><br>   <tr><br>      <td>CN201010523146.6</td><br>      <td>一种应用协同的操作方法、系统及移动终端</td><br>      <td>汪智勇;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201010578230.8</td><br>      <td>应用程序管理方法、装置以及终端</td><br>      <td>汪智勇;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201010508288.5</td><br>      <td>一种联系人菜单智能生成的方法、系统及移动终端</td><br>      <td>汪智勇;冯玉慧;孟宪衡;邱圣华</td><br>   </tr><br>   <tr><br>      <td>CN201020532495.X</td><br>      <td>一种触摸式移动终端</td><br>      <td>王灿;汪智勇;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201010531736.3</td><br>      <td>控制应用程序并行运行的方法、装置及具有该装置的终端</td><br>      <td>汪智勇;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN201010286512.0</td><br>      <td>实现移动终端的一号多卡的方法和系统</td><br>      <td>邱圣华;张碧君;汪智勇;冯玉慧;孟宪衡;张毓华</td><br>   </tr><br>   <tr><br>      <td>CN201010282444.0</td><br>      <td>联系人分组方法及终端</td><br>      <td>汪智勇;冯玉慧;邱圣华;孟宪衡</td><br>   </tr><br>   <tr><br>      <td>CN201010270503.2</td><br>      <td>一种应用程序使用状态的提醒方法、系统及移动终端</td><br>      <td>汪智勇;冯玉慧</td><br>   </tr><br>   <tr><br>      <td>CN200910041406.3</td><br>      <td>一种终端功能协同方法及对应的终端</td><br>      <td>郭和平;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN200910040535.0</td><br>      <td>一种数据排序的方法及移动通信终端</td><br>      <td>汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN200910038390.0</td><br>      <td>数据协同的方法、终端及系统</td><br>      <td>汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN200810198086.8</td><br>      <td>一种终端监控方法、装置及系统</td><br>      <td>杨鹏辉;汪智勇</td><br>   </tr><br>   <tr><br>      <td>CN200810026989.8</td><br>      <td>一种信息显示方法、主机端及子机端</td><br>      <td>杨鹏辉;汪智勇</td><br>   </tr><br>   <tr><br>      <td></td><br>   </tr><br></table>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您的打赏！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://okkntqe2h.bkt.clouddn.com/alipay_cr.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -1083,18 +267,83 @@ for (var i = 0; i < 100; i++) {
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/27/ipcreator-patent-list/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHUlEQVR42u3a0W7jMAwEwP7/T7uvB7Rxdin3gEijpyJxLY0KsBSpr694XP+M+0/yb5NZHh4YGBgfy7hux/0zr769h/1caDvvL1QMDIwDGK8i2OyZhJ2/535eDAwMjPtn8nDZhmYMDAyMv2MkU86OvhgYGBh5MvfmMFmG4FmKiYGBcRojr7r//5//pL+BgYHxUYyrHM/yZmv4ZVUYGBhbM/IA18KeYhfHZgwMjE0ZTzUg8+PrSiPhZbkNAwNja8b6gXZ20kxaAnlaiYGBsTdjJQjeT5ZTk4utdWqIgYGxHaNN5tr0MQ+m+TULDAyMkxnt5bCV4Ju/7U0Qx8DAOIaRF/ef2oj8qtmbN2BgYGzNaFPA2ZTtMTifBQMD4wTGUpGrDYjLsDd/BwwMjE0Z6w3LZ69rtJ9jYGCcwEgK+jlgdmHigYQSAwPjAMas0J+kaMnzMzYGBsY5jDa/ajPN/J1t+C7amRgYGFswkl/Ir3m1+zdrQmBgYGDMSv9PtUKvYLy8bIGBgXEMo21bJnEvD9/DRgIGBsYBjFk7M08c2zJceyTGwMDYlXGVY3bNIl9WfnB9+R8DAwNjO8asxN8utG0t5EuvMRgYGB/LaAtbOWa2f0UzoN1pDAyMD2esBL62hVkvMdkIDAwMjPUWY1kFHGavGBgYGMtvm5XSoqtmGBgYBzBWrkTMlr6+WRgYGOcw2jC6kg62FzLyVBIDA2NTxjcsjkupgbHwqAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+    <a href="/2017/01/30/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Welcome to my blog.
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/20/diary-2016-1112-1119/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">旧事 回以沉默 11.12-11.19</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -1102,146 +351,10 @@ for (var i = 0; i < 100; i++) {
 
 
   
-    <article id="post-diary-2016-1112-1119" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/20/diary-2016-1112-1119/">旧事 回以沉默 11.12-11.19</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        
-        <a href="/2016/11/20/diary-2016-1112-1119/" class="archive-article-date">
-  	<time datetime="2016-11-20T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/assets/blogImg/diary-16.jpg" alt=""></p>
-<p>17号，回华科。<br>和上一次不一样，这次多了点儿使命感：做一次前端技术演讲。</p>
-<p>学生时代，我听过无数场分享。<br>总觉得台上高谈阔论嘉宾，离我实在太远。<br>一次分享，一别两端，然后各自回到自己的生活轨道，再无交集。<br>或者是我没有入心。</p>
-<p>但想不到，这么快台上的这个人就该是我了。<br>仿佛晚会还在继续，帷幔也没收起。<br>魔术师说，天色还早呀，我再给你们变个魔术吧<br>烟雾腾空，灯光明灭，时间掠影而过<br>我本来是台下端坐的观众，一下子就站到了台上<br>主持人把话筒一递，说，该你了。</p>
-        
-          <a class="article-more-a" href="/2016/11/20/diary-2016-1112-1119/#more">more >></a>
-        
-      
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">旧事</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/20/diary-2016-1112-1119/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-diary-2016-1030-1105" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/06/diary-2016-1030-1105/">旧事 哪天才能歌唱的话 10.30-11.05</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/06/diary-2016-1030-1105/" class="archive-article-date">
-  	<time datetime="2016-11-06T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=694286&auto=0&height=66"></iframe>
-
-<p>想起网易账户密码泄露，就发生在10月底。<br>去年的这个时候，我是受害者之一。</p>
-<p>但我没有着急改密码。<br>一是因为那个时候，我过着一种近乎抑郁灰白的生活。<br>所有的社交工具都停掉了，也不与人交流。<br>很多事情我不愿碰。<br>像燃尽的烟柱，自己伸手一掸，搞不好满世界尘埃<br>还不如让风来悄悄瘗埋。</p>
-<p>二是因为一位神秘的朋友闯进了生活。<br>我很喜欢冲绳民谣，在云音乐里上传了BEGIN的《三线の花》与《笑颜不变》。<br>这位朋友搞到我的账号密码后，貌似没做什么坏事，光给我推荐歌曲了…<br>TA先上传了没有版权的《岛人ぬ宝》，再后来是夏川和中孝介的一些歌。<br>那时，这些音乐，居然成了我跟外界连通的唯一绳索。</p>
-        
-          <a class="article-more-a" href="/2016/11/06/diary-2016-1030-1105/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">旧事</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/06/diary-2016-1030-1105/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -1263,8 +376,8 @@ for (var i = 0; i < 100; i++) {
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
