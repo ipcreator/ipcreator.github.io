@@ -6,17 +6,48 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ipcreator.me">
-  <title>Tag: 专利 | For life</title>
+  <title>Echarts Demo2 | For life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="For life, growth is the only password.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="For life">
-<meta property="og:url" content="http://ipcreator.me/tags/专利/index.html">
+  <meta name="description" content="通过ECharts 插件直接运行增加标题信息
+
+
+
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById(&apos;echarts4885&apos;));
+        // 指定图表的配置项和数据
+        var option = {
+
+    title: {">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Echarts Demo2">
+<meta property="og:url" content="http://ipcreator.me/2016/12/30/echarts-demo2/index.html">
 <meta property="og:site_name" content="For life">
-<meta property="og:description" content="For life, growth is the only password.">
+<meta property="og:description" content="通过ECharts 插件直接运行增加标题信息
+
+
+
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById(&apos;echarts4885&apos;));
+        // 指定图表的配置项和数据
+        var option = {
+
+    title: {">
+<meta property="og:updated_time" content="2017-02-01T15:10:54.554Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="For life">
-<meta name="twitter:description" content="For life, growth is the only password.">
+<meta name="twitter:title" content="Echarts Demo2">
+<meta name="twitter:description" content="通过ECharts 插件直接运行增加标题信息
+
+
+
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById(&apos;echarts4885&apos;));
+        // 指定图表的配置项和数据
+        var option = {
+
+    title: {">
   
   
     <link rel="icon" href="/img/personalphoto.jpg">
@@ -154,32 +185,110 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-my-article-for-newspaper" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-echarts-demo2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/31/my-article-for-newspaper/">酷派集团：“五位一体”高效管理7000件专利申请</a>
+    <h1 class="article-title" itemprop="name">
+      Echarts Demo2
     </h1>
   
 
         
-        <a href="/2017/01/31/my-article-for-newspaper/" class="archive-article-date">
-  	<time datetime="2017-01-31T09:22:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-31</time>
+        <a href="/2016/12/30/echarts-demo2/" class="archive-article-date">
+  	<time datetime="2016-12-30T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/my-article.JPG" width = "640" height = "360" alt="personal photo"><br> </div><br>                                                       <a href="http://www.cipnews.com.cn/zgzscqb/images/2016-03/30/11/zgzscqb2016033011.pdf">文章下载</a></p>
-        
-          <a class="article-more-a" href="/2017/01/31/my-article-for-newspaper/#more">more >></a>
-        
+        <p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行<br>增加标题信息</p>
+<div id="echarts4885" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts4885'));
+        // 指定图表的配置项和数据
+        var option = {
+
+    title: {
+        text: '男性女性身高体重分布',
+        subtext: 'data from PM25.in',
+        sublink: 'http://www.pm25.in',
+        x:'center',
+        textStyle: {
+            color: '#fff'
+        }
+    },
+
+
+    tooltip: {
+        trigger: "axis",
+        showDelay: 0,
+        axisPointer: {
+            type: "cross",
+            lineStyle: {
+                type: "dashed",
+                width: 1
+            }
+        }
+    },
+    legend: {
+        bottom: 5,
+        data: ["女性", "男性"]
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            mark: {
+                show: true
+            },
+            dataZoom: {
+                show: true
+            }
+        }
+    },
+    xAxis: [
+        {
+            type: "value",
+            power: 1,
+            precision: 2,
+            scale: true
+        }
+    ],
+    yAxis: [
+        {
+            type: "value",
+            power: 1,
+            precision: 2,
+            scale: true
+        }
+    ],
+    series: [
+        {
+            name: "女性",
+            type: "scatter",
+            data: [[161.2, 51.6], [172.9, 62.5], [153.4, 42], [160, 50], [147.2, 49.8], [168.2, 49.2], [175, 73.2], [157, 47.8], [167.6, 68.8], [159.5, 50.6], [175, 82.5], [166.8, 57.2], [176.5, 87.8], [170.2, 72.8], [174, 54.5], [173, 59.8], [179.9, 67.3], [170.5, 67.8], [162.6, 61.4]]
+        },
+        {
+            name: "男性",
+            type: "scatter",
+            data: [[174, 65.6], [164.1, 55.2], [163, 57], [171.5, 61.4], [184.2, 76.8], [174, 86.8], [182, 72], [167, 64.6], [177.8, 74.8], [180.3, 93.2], [180.3, 82.7], [177.8, 58], [177.8, 79.5], [177.8, 78.6], [177.8, 71.8], [177.8, 72], [177.8, 81.8], [180.3, 83.2]]
+        }
+    ]
+    
+    
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+<a id="more"></a>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line">&#123;% echarts <span class="number">400</span> '85%' %&#125;</div><div class="line">&#123;</div><div class="line"></div><div class="line">    title: &#123;</div><div class="line">        text: '男性女性身高体重分布',</div><div class="line">        subtext: 'data from PM25.in',</div><div class="line">        sublink: 'http://www.pm25.in',</div><div class="line">        x:'center',</div><div class="line">        textStyle: &#123;</div><div class="line">            color: '#fff'</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line"></div><div class="line"></div><div class="line">    tooltip: &#123;</div><div class="line">        trigger: <span class="string">"axis"</span>,</div><div class="line">        showDelay: <span class="number">0</span>,</div><div class="line">        axisPointer: &#123;</div><div class="line">            type: <span class="string">"cross"</span>,</div><div class="line">            lineStyle: &#123;</div><div class="line">                type: <span class="string">"dashed"</span>,</div><div class="line">                width: <span class="number">1</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    legend: &#123;</div><div class="line">        bottom: <span class="number">5</span>,</div><div class="line">        data: [<span class="string">"女性"</span>, <span class="string">"男性"</span>]</div><div class="line">    &#125;,</div><div class="line">    toolbox: &#123;</div><div class="line">        show: <span class="literal">true</span>,</div><div class="line">        feature: &#123;</div><div class="line">            mark: &#123;</div><div class="line">                show: <span class="literal">true</span></div><div class="line">            &#125;,</div><div class="line">            dataZoom: &#123;</div><div class="line">                show: <span class="literal">true</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    xAxis: [</div><div class="line">        &#123;</div><div class="line">            type: <span class="string">"value"</span>,</div><div class="line">            power: <span class="number">1</span>,</div><div class="line">            precision: <span class="number">2</span>,</div><div class="line">            scale: <span class="literal">true</span></div><div class="line">        &#125;</div><div class="line">    ],</div><div class="line">    yAxis: [</div><div class="line">        &#123;</div><div class="line">            type: <span class="string">"value"</span>,</div><div class="line">            power: <span class="number">1</span>,</div><div class="line">            precision: <span class="number">2</span>,</div><div class="line">            scale: <span class="literal">true</span></div><div class="line">        &#125;</div><div class="line">    ],</div><div class="line">    series: [</div><div class="line">        &#123;</div><div class="line">            name: <span class="string">"女性"</span>,</div><div class="line">            type: <span class="string">"scatter"</span>,</div><div class="line">            data: [[<span class="number">161.2</span>, <span class="number">51.6</span>], [<span class="number">172.9</span>, <span class="number">62.5</span>], [<span class="number">153.4</span>, <span class="number">42</span>], [<span class="number">160</span>, <span class="number">50</span>], [<span class="number">147.2</span>, <span class="number">49.8</span>], [<span class="number">168.2</span>, <span class="number">49.2</span>], [<span class="number">175</span>, <span class="number">73.2</span>], [<span class="number">157</span>, <span class="number">47.8</span>], [<span class="number">167.6</span>, <span class="number">68.8</span>], [<span class="number">159.5</span>, <span class="number">50.6</span>], [<span class="number">175</span>, <span class="number">82.5</span>], [<span class="number">166.8</span>, <span class="number">57.2</span>], [<span class="number">176.5</span>, <span class="number">87.8</span>], [<span class="number">170.2</span>, <span class="number">72.8</span>], [<span class="number">174</span>, <span class="number">54.5</span>], [<span class="number">173</span>, <span class="number">59.8</span>], [<span class="number">179.9</span>, <span class="number">67.3</span>], [<span class="number">170.5</span>, <span class="number">67.8</span>], [<span class="number">162.6</span>, <span class="number">61.4</span>]]</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            name: <span class="string">"男性"</span>,</div><div class="line">            type: <span class="string">"scatter"</span>,</div><div class="line">            data: [[<span class="number">174</span>, <span class="number">65.6</span>], [<span class="number">164.1</span>, <span class="number">55.2</span>], [<span class="number">163</span>, <span class="number">57</span>], [<span class="number">171.5</span>, <span class="number">61.4</span>], [<span class="number">184.2</span>, <span class="number">76.8</span>], [<span class="number">174</span>, <span class="number">86.8</span>], [<span class="number">182</span>, <span class="number">72</span>], [<span class="number">167</span>, <span class="number">64.6</span>], [<span class="number">177.8</span>, <span class="number">74.8</span>], [<span class="number">180.3</span>, <span class="number">93.2</span>], [<span class="number">180.3</span>, <span class="number">82.7</span>], [<span class="number">177.8</span>, <span class="number">58</span>], [<span class="number">177.8</span>, <span class="number">79.5</span>], [<span class="number">177.8</span>, <span class="number">78.6</span>], [<span class="number">177.8</span>, <span class="number">71.8</span>], [<span class="number">177.8</span>, <span class="number">72</span>], [<span class="number">177.8</span>, <span class="number">81.8</span>], [<span class="number">180.3</span>, <span class="number">83.2</span>]]</div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line">    </div><div class="line">    </div><div class="line">&#125;<span class="comment">;</span></div><div class="line">&#123;% endecharts %&#125;</div></pre></td></tr></table></figure>
+
       
 
       
@@ -192,7 +301,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">专利</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">echarts</a>
         		</li>
       		
 		</ul>
@@ -204,7 +313,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/专利/" class="article-tag-list-link color3">专利</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -212,18 +321,83 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/31/my-article-for-newspaper/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACI0lEQVR42u3awa6CQAwFUP//p32JW4PetvAiM4eVQcA5LGo77eMRH8/X8f756Nuja46ufD8eVxwYGBi3ZSSPO3p0cj5Z1uffjagYGBgbMCZBNrk3WWj+CjAwMDB6CV+ylMlnDAwMjHnA/VyC3uZ/AwMD44cZeQKXLLRXsuZpJQYGxm6MSWPgP9PBC/sbGBgYP8x4Do4rtt56q8LAwFibUU3pJnMOCSkZzogWgYGBsRDjrGCXF66T4vYQiYGBsTSjFy4nDYNeOL4k6mNgYNyEUQ5qg5J1vqlXSA0xMDAWYkwaA9VmZz5Alg+fYWBg7MCY6PMF5QG6V05jYGDswEjGHRJSNaXrtTO/7BpiYGAsx8hD2ySM5kvJC+YvCSIGBsZCjMnoQ7WKTEJzr42BgYGxNqOaFOYNy96GXdLU/PK/gYGBsRyjurhemthrnRZWiIGBsQ2jWmRWR7vOHZ7AwMDYk5EXlr1SNj9T3vLDwMBYmlFtK1ZDc2FgolgwY2Bg7MaY9D+T7blq26DalsDAwNiNUW1D9q68pAmBgYGxNKM3TlFNB+fDFkkQx8DAWI8xKTWTQNkL39WnYWBgrM3otQzzIvPcu05ogmJgYNyW0UvpeqEweYvNgIuBgbEBoxdk80StWrKWt/MwMDAwguA7yUwngxcYGBgYyUOrdyVPq57HwMDYgXHWaGneNe01IcodTgwMjCUY1cbApBmQv5RqMoqBgbEo4w+Xh/oIzYHR0QAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+    <a href="/2017/01/10/echarts-demo3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Echarts Demo3
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/29/echarts-demo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Echarts Demo</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -231,85 +405,11 @@
 
 
   
-    <article id="post-my-patent-list" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/my-patent-list/">IPCreator专利清单</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        
-        <a href="/2017/01/30/my-patent-list/" class="archive-article-date">
-  	<time datetime="2017-01-30T12:53:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="检索方法"><a href="#检索方法" class="headerlink" title="检索方法"></a>检索方法</h3><p>1、打开专利检索网址<a href="http://www.innojoy.com">大为</a>；<br>2、以“汪智勇”为关键字进行检索；<br>3、在检索结果中，以申请（权利人）为“宇龙/Yulong” or “酷派/Coolpad”进行二次筛选便可得出结果。</p>
-<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><blockquote>
-<p>以下清单，基于2017.1.27日以前公开的专利库进行检索，未纳入未公开的相关专利申请（中国/PCT）。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/01/30/my-patent-list/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">专利</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/专利/" class="article-tag-list-link color3">专利</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/my-patent-list/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
 
           </div>
         </div>
@@ -331,9 +431,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

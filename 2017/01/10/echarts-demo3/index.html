@@ -6,17 +6,42 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ipcreator.me">
-  <title>Tag: 专利 | For life</title>
+  <title>Echarts Demo3 | For life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="For life, growth is the only password.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="For life">
-<meta property="og:url" content="http://ipcreator.me/tags/专利/index.html">
+  <meta name="description" content="直接通过调用js脚本实现
+
+var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i &amp;lt; 100; i++) {
+    xAxisData.push(i);
+    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
+    data2.push((Ma">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Echarts Demo3">
+<meta property="og:url" content="http://ipcreator.me/2017/01/10/echarts-demo3/index.html">
 <meta property="og:site_name" content="For life">
-<meta property="og:description" content="For life, growth is the only password.">
+<meta property="og:description" content="直接通过调用js脚本实现
+
+var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i &amp;lt; 100; i++) {
+    xAxisData.push(i);
+    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
+    data2.push((Ma">
+<meta property="og:updated_time" content="2017-02-01T15:27:50.323Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="For life">
-<meta name="twitter:description" content="For life, growth is the only password.">
+<meta name="twitter:title" content="Echarts Demo3">
+<meta name="twitter:description" content="直接通过调用js脚本实现
+
+var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i &amp;lt; 100; i++) {
+    xAxisData.push(i);
+    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
+    data2.push((Ma">
   
   
     <link rel="icon" href="/img/personalphoto.jpg">
@@ -154,32 +179,98 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-my-article-for-newspaper" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-echarts-demo3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/31/my-article-for-newspaper/">酷派集团：“五位一体”高效管理7000件专利申请</a>
+    <h1 class="article-title" itemprop="name">
+      Echarts Demo3
     </h1>
   
 
         
-        <a href="/2017/01/31/my-article-for-newspaper/" class="archive-article-date">
-  	<time datetime="2017-01-31T09:22:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-31</time>
+        <a href="/2017/01/10/echarts-demo3/" class="archive-article-date">
+  	<time datetime="2017-01-10T00:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/my-article.JPG" width = "640" height = "360" alt="personal photo"><br> </div><br>                                                       <a href="http://www.cipnews.com.cn/zgzscqb/images/2016-03/30/11/zgzscqb2016033011.pdf">文章下载</a></p>
-        
-          <a class="article-more-a" href="/2017/01/31/my-article-for-newspaper/#more">more >></a>
-        
+        <p>直接通过调用js脚本实现</p>
+<script type="text/javascript">
+var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i < 100; i++) {
+    xAxisData.push(i);
+    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
+    data2.push((Math.cos(i / 5) * (i / 5 -10) + i / 6) * 5);
+}
+</script>
+
+<p><div id="echarts9202" style="width: 100%;height: 250px;margin: 0 auto"></div></p>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts9202'));
+        // 指定图表的配置项和数据
+        var option = option = {
+    title: {
+        text: ''
+    },
+    legend: {
+        data: ['input', 'output'],
+        align: 'left'
+    },
+    toolbox: {
+        // y: 'bottom',
+        feature: {
+            magicType: {
+                type: ['stack', 'tiled']
+            }
+        }
+    },
+    tooltip: {},
+    xAxis: {
+        data: xAxisData,
+        silent: false,
+        splitLine: {
+            show: false
+        }
+    },
+    yAxis: {
+    },
+    series: [{
+        name: 'input',
+        type: 'bar',
+        data: data1,
+        animationDelay: function (idx) {
+            return idx * 10;
+        }
+    }, {
+        name: 'output',
+        type: 'bar',
+        data: data2,
+        animationDelay: function (idx) {
+            return idx * 10 + 1000;
+        }
+    }],
+    animationEasing: 'elasticOut',
+    animationDelayUpdate: function (idx) {
+        return idx * 5;
+    }
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+
+<a id="more"></a>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> xAxisData = [];</div><div class="line"><span class="keyword">var</span> data1 = [];</div><div class="line"><span class="keyword">var</span> data2 = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</div><div class="line">    xAxisData.push(i);</div><div class="line">    data1.push((<span class="built_in">Math</span>.sin(i / <span class="number">5</span>) * (i / <span class="number">5</span> <span class="number">-10</span>) + i / <span class="number">6</span>) * <span class="number">5</span>);</div><div class="line">    data2.push((<span class="built_in">Math</span>.cos(i / <span class="number">5</span>) * (i / <span class="number">5</span> <span class="number">-10</span>) + i / <span class="number">6</span>) * <span class="number">5</span>);</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"echarts9202"</span> <span class="attr">style</span>=<span class="string">"width: 100%;height: 250px;margin: 0 auto"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://echarts.baidu.com/dist/echarts.common.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">        <span class="comment">// 基于准备好的dom，初始化echarts实例</span></div><div class="line">        <span class="keyword">var</span> myChart = echarts.init(<span class="built_in">document</span>.getElementById(<span class="string">'echarts9202'</span>));</div><div class="line">        <span class="comment">// 指定图表的配置项和数据</span></div><div class="line">        <span class="keyword">var</span> option = option = &#123;</div><div class="line">    <span class="attr">title</span>: &#123;</div><div class="line">        <span class="attr">text</span>: <span class="string">''</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">legend</span>: &#123;</div><div class="line">        <span class="attr">data</span>: [<span class="string">'input'</span>, <span class="string">'output'</span>],</div><div class="line">        <span class="attr">align</span>: <span class="string">'left'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">toolbox</span>: &#123;</div><div class="line">        <span class="comment">// y: 'bottom',</span></div><div class="line">        feature: &#123;</div><div class="line">            <span class="attr">magicType</span>: &#123;</div><div class="line">                <span class="attr">type</span>: [<span class="string">'stack'</span>, <span class="string">'tiled'</span>]</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">tooltip</span>: &#123;&#125;,</div><div class="line">    <span class="attr">xAxis</span>: &#123;</div><div class="line">        <span class="attr">data</span>: xAxisData,</div><div class="line">        <span class="attr">silent</span>: <span class="literal">false</span>,</div><div class="line">        <span class="attr">splitLine</span>: &#123;</div><div class="line">            <span class="attr">show</span>: <span class="literal">false</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">yAxis</span>: &#123;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">series</span>: [&#123;</div><div class="line">        <span class="attr">name</span>: <span class="string">'input'</span>,</div><div class="line">        <span class="attr">type</span>: <span class="string">'bar'</span>,</div><div class="line">        <span class="attr">data</span>: data1,</div><div class="line">        <span class="attr">animationDelay</span>: <span class="function"><span class="keyword">function</span> (<span class="params">idx</span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> idx * <span class="number">10</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;, &#123;</div><div class="line">        <span class="attr">name</span>: <span class="string">'output'</span>,</div><div class="line">        <span class="attr">type</span>: <span class="string">'bar'</span>,</div><div class="line">        <span class="attr">data</span>: data2,</div><div class="line">        <span class="attr">animationDelay</span>: <span class="function"><span class="keyword">function</span> (<span class="params">idx</span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> idx * <span class="number">10</span> + <span class="number">1000</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;],</div><div class="line">    <span class="attr">animationEasing</span>: <span class="string">'elasticOut'</span>,</div><div class="line">    <span class="attr">animationDelayUpdate</span>: <span class="function"><span class="keyword">function</span> (<span class="params">idx</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> idx * <span class="number">5</span>;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">        <span class="comment">// 使用刚指定的配置项和数据显示图表。</span></div><div class="line">        myChart.setOption(option);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+
       
 
       
@@ -192,7 +283,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">专利</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">echarts</a>
         		</li>
       		
 		</ul>
@@ -204,7 +295,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/专利/" class="article-tag-list-link color3">专利</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -212,18 +303,83 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/31/my-article-for-newspaper/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNElEQVR42u3ay27bMBAF0Pz/T6dAVy0Kyfdy5KAmj1ZGYFM8XEw4j6+v+Pn+/fz5+d+n/ebVW+6/M3owMDA+lvF9+1y94P6VV7B8D/neMDAwzmG0Qfb+7234vj+s+xUwMDAw8gtfEoLz72BgYGA8xci3kodpDAwMjEkS2yao7To/lItjYGB8IGOedr7v89v7GxgYGP8947t8nmptznfy1/oYGBhbM5JrWfviPDYmiXQxkIGBgXEMY62RebWVpEg3uSxeBlwMDIyNGJOhh/w1aw2GomCHgYFxAKNNPvPA2gbotl2x2NnAwMDYgjEftlg7rLVDxMDAOIGRD2+1l8X88jdpFWBgYJzDaAteeXkuOaY2fl7m4hgYGFsz8sCXD5Dl5bM8VY7+b2BgYGzEyEv8yabbov98TQwMjHMYawEuD5ptGpwPnGFgYJzAaH/QtjzXRivyVgEGBsYJjLWF8gR13uBsQzYGBsY5jLz41YbjpJDXFuwwMDBOYMxDXpvi5s3L4nAxMDA2ZbQ1ufzyl5fV2qD/IhfHwMA4gNGG1yQpXWthJmEaAwPjBEY72vXUFvMxstEeMDAwtmDME9e2cLY2cvHiCDAwMLZmTALl2m/n4xTF1RADA2MjxrMNgLVWZT7kEQ1YYGBgbMpoA2UyeNEe0ygXx8DAwCgHvPKSXF76j2ZGMDAwMMrQ+dS4WDSQgYGBcQDjfUnsi9eXgfjF1RADA2NTxlNDEqPOQ7zOZNQDAwPjAxm/AJPOPOKnTgtCAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+    <a href="/2017/01/29/my-resume/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          IPCreator简历
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/30/echarts-demo2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Echarts Demo2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -231,85 +387,11 @@
 
 
   
-    <article id="post-my-patent-list" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/my-patent-list/">IPCreator专利清单</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        
-        <a href="/2017/01/30/my-patent-list/" class="archive-article-date">
-  	<time datetime="2017-01-30T12:53:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="检索方法"><a href="#检索方法" class="headerlink" title="检索方法"></a>检索方法</h3><p>1、打开专利检索网址<a href="http://www.innojoy.com">大为</a>；<br>2、以“汪智勇”为关键字进行检索；<br>3、在检索结果中，以申请（权利人）为“宇龙/Yulong” or “酷派/Coolpad”进行二次筛选便可得出结果。</p>
-<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><blockquote>
-<p>以下清单，基于2017.1.27日以前公开的专利库进行检索，未纳入未公开的相关专利申请（中国/PCT）。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/01/30/my-patent-list/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">专利</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/专利/" class="article-tag-list-link color3">专利</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/my-patent-list/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
 
           </div>
         </div>
@@ -331,9 +413,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

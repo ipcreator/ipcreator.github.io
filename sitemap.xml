@@ -2,51 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ipcreator.me/2017/01/30/view-of-shenzhen/</loc>
+    <loc>http://ipcreator.me/2017/01/10/echarts-demo3/</loc>
     
-    <lastmod>2017-01-31T13:19:38.223Z</lastmod>
+    <lastmod>2017-02-01T15:27:50.323Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/30/my-patent-list/</loc>
+    
+    <lastmod>2017-02-01T15:26:50.412Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2014/10/05/zh-history-of-browser-useragent2/</loc>
+    
+    <lastmod>2017-02-01T15:25:42.486Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/29/my-resume/</loc>
+    
+    <lastmod>2017-02-01T15:24:49.179Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ipcreator.me/2017/01/29/hello-world/</loc>
     
-    <lastmod>2017-01-31T11:23:55.437Z</lastmod>
+    <lastmod>2017-02-01T15:24:10.889Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2016/12/29/echarts-demo/</loc>
+    
+    <lastmod>2017-02-01T15:23:35.951Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ipcreator.me/2017/01/31/my-article-for-newspaper/</loc>
     
-    <lastmod>2017-01-31T10:32:59.290Z</lastmod>
+    <lastmod>2017-02-01T15:13:55.970Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/30/echarts-demo2/</loc>
+    <loc>http://ipcreator.me/2016/12/30/echarts-demo2/</loc>
     
-    <lastmod>2017-01-31T10:31:20.681Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/30/echarts-demo3/</loc>
-    
-    <lastmod>2017-01-31T10:30:45.005Z</lastmod>
+    <lastmod>2017-02-01T15:10:54.554Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/30/ipcreator-patent-list/</loc>
+    <loc>http://ipcreator.me/2017/01/30/view-of-shenzhen/</loc>
     
-    <lastmod>2017-01-31T10:28:48.055Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/30/echarts-demo/</loc>
-    
-    <lastmod>2017-01-31T07:50:06.940Z</lastmod>
+    <lastmod>2017-01-31T13:19:38.223Z</lastmod>
     
   </url>
   
@@ -58,20 +72,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2013/05/03/zh-my-news-reader-box/</loc>
-    
-    <lastmod>2017-01-31T06:40:31.925Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2013/01/02/zh-mediator-model/</loc>
-    
-    <lastmod>2017-01-31T06:39:52.780Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2014/09/26/zh-history-of-browser-useragent/</loc>
     
     <lastmod>2017-01-31T06:36:55.236Z</lastmod>
@@ -79,51 +79,9 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2014/10/05/zh-history-of-browser-useragent2/</loc>
-    
-    <lastmod>2017-01-31T06:36:00.461Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2015/04/28/zh-img-lazy-load/</loc>
-    
-    <lastmod>2017-01-31T06:34:42.538Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2014/08/14/zh-reduce-http-requests/</loc>
-    
-    <lastmod>2017-01-31T06:28:07.483Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2014/05/27/zh-safety-point-of-view-from-front-end/</loc>
-    
-    <lastmod>2017-01-31T06:27:47.503Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2014/03/03/zh-instagram-api-ex/</loc>
-    
-    <lastmod>2017-01-31T06:27:30.143Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2013/08/11/zh-brief-oauth/</loc>
     
     <lastmod>2017-01-31T06:26:48.046Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2012/12/24/zh-coffee-pc/</loc>
-    
-    <lastmod>2017-01-31T06:26:23.468Z</lastmod>
     
   </url>
   

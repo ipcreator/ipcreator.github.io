@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ipcreator.me">
-  <title>Tag: 专利 | For life</title>
+  <title>Archives: 2016/12 | For life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="For life, growth is the only password.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="For life">
-<meta property="og:url" content="http://ipcreator.me/tags/专利/index.html">
+<meta property="og:url" content="http://ipcreator.me/archives/2016/12/index.html">
 <meta property="og:site_name" content="For life">
 <meta property="og:description" content="For life, growth is the only password.">
 <meta name="twitter:card" content="summary">
@@ -156,29 +156,109 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-my-article-for-newspaper" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-echarts-demo2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/31/my-article-for-newspaper/">酷派集团：“五位一体”高效管理7000件专利申请</a>
+      <a class="article-title" href="/2016/12/30/echarts-demo2/">Echarts Demo2</a>
     </h1>
   
 
         
-        <a href="/2017/01/31/my-article-for-newspaper/" class="archive-article-date">
-  	<time datetime="2017-01-31T09:22:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-31</time>
+        <a href="/2016/12/30/echarts-demo2/" class="archive-article-date">
+  	<time datetime="2016-12-30T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/my-article.JPG" width = "640" height = "360" alt="personal photo"><br> </div><br>                                                       <a href="http://www.cipnews.com.cn/zgzscqb/images/2016-03/30/11/zgzscqb2016033011.pdf">文章下载</a></p>
+        <p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/">ECharts 插件</a>直接运行<br>增加标题信息</p>
+<div id="echarts4885" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts4885'));
+        // 指定图表的配置项和数据
+        var option = {
+
+    title: {
+        text: '男性女性身高体重分布',
+        subtext: 'data from PM25.in',
+        sublink: 'http://www.pm25.in',
+        x:'center',
+        textStyle: {
+            color: '#fff'
+        }
+    },
+
+
+    tooltip: {
+        trigger: "axis",
+        showDelay: 0,
+        axisPointer: {
+            type: "cross",
+            lineStyle: {
+                type: "dashed",
+                width: 1
+            }
+        }
+    },
+    legend: {
+        bottom: 5,
+        data: ["女性", "男性"]
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            mark: {
+                show: true
+            },
+            dataZoom: {
+                show: true
+            }
+        }
+    },
+    xAxis: [
+        {
+            type: "value",
+            power: 1,
+            precision: 2,
+            scale: true
+        }
+    ],
+    yAxis: [
+        {
+            type: "value",
+            power: 1,
+            precision: 2,
+            scale: true
+        }
+    ],
+    series: [
+        {
+            name: "女性",
+            type: "scatter",
+            data: [[161.2, 51.6], [172.9, 62.5], [153.4, 42], [160, 50], [147.2, 49.8], [168.2, 49.2], [175, 73.2], [157, 47.8], [167.6, 68.8], [159.5, 50.6], [175, 82.5], [166.8, 57.2], [176.5, 87.8], [170.2, 72.8], [174, 54.5], [173, 59.8], [179.9, 67.3], [170.5, 67.8], [162.6, 61.4]]
+        },
+        {
+            name: "男性",
+            type: "scatter",
+            data: [[174, 65.6], [164.1, 55.2], [163, 57], [171.5, 61.4], [184.2, 76.8], [174, 86.8], [182, 72], [167, 64.6], [177.8, 74.8], [180.3, 93.2], [180.3, 82.7], [177.8, 58], [177.8, 79.5], [177.8, 78.6], [177.8, 71.8], [177.8, 72], [177.8, 81.8], [180.3, 83.2]]
+        }
+    ]
+    
+    
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
         
-          <a class="article-more-a" href="/2017/01/31/my-article-for-newspaper/#more">more >></a>
+          <a class="article-more-a" href="/2016/12/30/echarts-demo2/#more">more >></a>
         
       
 
@@ -192,7 +272,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">专利</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">echarts</a>
         		</li>
       		
 		</ul>
@@ -204,7 +284,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/专利/" class="article-tag-list-link color3">专利</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -213,7 +293,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/31/my-article-for-newspaper/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/12/30/echarts-demo2/">展开全文 >></a>
         </p>
       
 
@@ -231,33 +311,102 @@
 
 
   
-    <article id="post-my-patent-list" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-echarts-demo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/my-patent-list/">IPCreator专利清单</a>
+      <a class="article-title" href="/2016/12/29/echarts-demo/">Echarts Demo</a>
     </h1>
   
 
         
-        <a href="/2017/01/30/my-patent-list/" class="archive-article-date">
-  	<time datetime="2017-01-30T12:53:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
+        <a href="/2016/12/29/echarts-demo/" class="archive-article-date">
+  	<time datetime="2016-12-29T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="检索方法"><a href="#检索方法" class="headerlink" title="检索方法"></a>检索方法</h3><p>1、打开专利检索网址<a href="http://www.innojoy.com">大为</a>；<br>2、以“汪智勇”为关键字进行检索；<br>3、在检索结果中，以申请（权利人）为“宇龙/Yulong” or “酷派/Coolpad”进行二次筛选便可得出结果。</p>
-<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><blockquote>
-<p>以下清单，基于2017.1.27日以前公开的专利库进行检索，未纳入未公开的相关专利申请（中国/PCT）。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/01/30/my-patent-list/#more">more >></a>
-        
+        <p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">echarts</span> 400 '85%' %&#125;</span><span class="xml"></span></div><div class="line">\\TODO option goes here</div><div class="line"><span class="template-tag">&#123;% <span class="name">endecharts</span> %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
+<div id="echarts6822" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts6822'));
+        // 指定图表的配置项和数据
+        var option = {
+
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    legend: {
+        data:['利润', '支出', '收入']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            axisTick : {show: false},
+            data : ['周一','周二','周三','周四','周五','周六','周日']
+        }
+    ],
+    series : [
+        {
+            name:'利润',
+            type:'bar',
+            itemStyle : {
+                normal: {
+                    label: {show: true, position: 'inside'}
+                }
+            },
+            data:[200, 170, 240, 244, 200, 220, 210]
+        },
+        {
+            name:'收入',
+            type:'bar',
+            stack: '总量',
+            itemStyle: {
+                normal: {
+                    label : {show: true}
+                }
+            },
+            data:[320, 302, 341, 374, 390, 450, 420]
+        },
+        {
+            name:'支出',
+            type:'bar',
+            stack: '总量',
+            itemStyle: {normal: {
+                label : {show: true, position: 'left'}
+            }},
+            data:[-120, -132, -101, -134, -190, -230, -210]
+        }
+    ]
+      
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+
       
 
       
@@ -270,7 +419,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">专利</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">echarts</a>
         		</li>
       		
 		</ul>
@@ -282,7 +431,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/专利/" class="article-tag-list-link color3">专利</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -291,7 +440,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/my-patent-list/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/12/29/echarts-demo/">展开全文 >></a>
         </p>
       
 
@@ -332,8 +481,8 @@
 		mathjax: false,
 		isHome: false,
 		isPost: false,
-		isArchive: false,
-		isTag: true,
+		isArchive: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

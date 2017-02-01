@@ -156,6 +156,148 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-echarts-demo3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/10/echarts-demo3/">Echarts Demo3</a>
+    </h1>
+  
+
+        
+        <a href="/2017/01/10/echarts-demo3/" class="archive-article-date">
+  	<time datetime="2017-01-10T00:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>直接通过调用js脚本实现</p>
+<script type="text/javascript">
+var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i < 100; i++) {
+    xAxisData.push(i);
+    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
+    data2.push((Math.cos(i / 5) * (i / 5 -10) + i / 6) * 5);
+}
+</script>
+
+<p><div id="echarts9202" style="width: 100%;height: 250px;margin: 0 auto"></div></p>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts9202'));
+        // 指定图表的配置项和数据
+        var option = option = {
+    title: {
+        text: ''
+    },
+    legend: {
+        data: ['input', 'output'],
+        align: 'left'
+    },
+    toolbox: {
+        // y: 'bottom',
+        feature: {
+            magicType: {
+                type: ['stack', 'tiled']
+            }
+        }
+    },
+    tooltip: {},
+    xAxis: {
+        data: xAxisData,
+        silent: false,
+        splitLine: {
+            show: false
+        }
+    },
+    yAxis: {
+    },
+    series: [{
+        name: 'input',
+        type: 'bar',
+        data: data1,
+        animationDelay: function (idx) {
+            return idx * 10;
+        }
+    }, {
+        name: 'output',
+        type: 'bar',
+        data: data2,
+        animationDelay: function (idx) {
+            return idx * 10 + 1000;
+        }
+    }],
+    animationEasing: 'elasticOut',
+    animationDelayUpdate: function (idx) {
+        return idx * 5;
+    }
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+        
+          <a class="article-more-a" href="/2017/01/10/echarts-demo3/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">echarts</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/10/echarts-demo3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-echarts-demo2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -163,13 +305,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/echarts-demo2/">Echarts Demo2</a>
+      <a class="article-title" href="/2016/12/30/echarts-demo2/">Echarts Demo2</a>
     </h1>
   
 
         
-        <a href="/2017/01/30/echarts-demo2/" class="archive-article-date">
-  	<time datetime="2017-01-30T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
+        <a href="/2016/12/30/echarts-demo2/" class="archive-article-date">
+  	<time datetime="2016-12-30T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
 </a>
         
       </header>
@@ -177,12 +319,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/">ECharts 插件</a>直接运行<br>增加标题信息</p>
-<div id="echarts1814" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts4885" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts1814'));
+        var myChart = echarts.init(document.getElementById('echarts4885'));
         // 指定图表的配置项和数据
         var option = {
 
@@ -258,7 +400,7 @@
         myChart.setOption(option);
 </script>
         
-          <a class="article-more-a" href="/2017/01/30/echarts-demo2/#more">more >></a>
+          <a class="article-more-a" href="/2016/12/30/echarts-demo2/#more">more >></a>
         
       
 
@@ -293,7 +435,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/echarts-demo2/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/12/30/echarts-demo2/">展开全文 >></a>
         </p>
       
 
@@ -318,13 +460,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/echarts-demo/">Echarts Demo</a>
+      <a class="article-title" href="/2016/12/29/echarts-demo/">Echarts Demo</a>
     </h1>
   
 
         
-        <a href="/2017/01/30/echarts-demo/" class="archive-article-date">
-  	<time datetime="2017-01-30T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
+        <a href="/2016/12/29/echarts-demo/" class="archive-article-date">
+  	<time datetime="2016-12-29T12:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-29</time>
 </a>
         
       </header>
@@ -333,12 +475,12 @@
       
         <p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行</p>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">echarts</span> 400 '85%' %&#125;</span><span class="xml"></span></div><div class="line">\\TODO option goes here</div><div class="line"><span class="template-tag">&#123;% <span class="name">endecharts</span> %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
-<div id="echarts8050" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts6822" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts8050'));
+        var myChart = echarts.init(document.getElementById('echarts6822'));
         // 指定图表的配置项和数据
         var option = {
 
@@ -440,227 +582,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/echarts-demo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-echarts-demo3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/echarts-demo3/">Echarts Demo3</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/30/echarts-demo3/" class="archive-article-date">
-  	<time datetime="2017-01-30T00:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>直接通过调用js脚本实现</p>
-<script type="text/javascript">
-var xAxisData = [];
-var data1 = [];
-var data2 = [];
-for (var i = 0; i < 100; i++) {
-    xAxisData.push(i);
-    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
-    data2.push((Math.cos(i / 5) * (i / 5 -10) + i / 6) * 5);
-}
-</script>
-
-<p><div id="echarts9202" style="width: 100%;height: 250px;margin: 0 auto"></div></p>
-<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
-
-<script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts9202'));
-        // 指定图表的配置项和数据
-        var option = option = {
-    title: {
-        text: ''
-    },
-    legend: {
-        data: ['input', 'output'],
-        align: 'left'
-    },
-    toolbox: {
-        // y: 'bottom',
-        feature: {
-            magicType: {
-                type: ['stack', 'tiled']
-            }
-        }
-    },
-    tooltip: {},
-    xAxis: {
-        data: xAxisData,
-        silent: false,
-        splitLine: {
-            show: false
-        }
-    },
-    yAxis: {
-    },
-    series: [{
-        name: 'input',
-        type: 'bar',
-        data: data1,
-        animationDelay: function (idx) {
-            return idx * 10;
-        }
-    }, {
-        name: 'output',
-        type: 'bar',
-        data: data2,
-        animationDelay: function (idx) {
-            return idx * 10 + 1000;
-        }
-    }],
-    animationEasing: 'elasticOut',
-    animationDelayUpdate: function (idx) {
-        return idx * 5;
-    }
-};
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-</script>
-        
-          <a class="article-more-a" href="/2017/01/30/echarts-demo3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">echarts</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/echarts-demo3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-zh-img-lazy-load" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/28/zh-img-lazy-load/">转：&quot;说到加载图片，我们可以谈些什么&quot;</a>
-    </h1>
-  
-
-        
-        <a href="/2015/04/28/zh-img-lazy-load/" class="archive-article-date">
-  	<time datetime="2015-04-28T15:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/img/lazyload.jpg" alt="原图 by Denis Perepelenko">    </p>
-<p>其实，一开始让我在网页中加载一张图片，我是，是拒绝的…因为实在太简单了。</p>
-<p><code>&lt;img src=&quot;xx.jpg&quot; /&gt;</code>是每个前端开发都会的技能。然而，如果你想做到极致，事情还没有这么简单。</p>
-<p>最近实现了个图片加载器，用于大型web前端项目中，关于加载图片这一话题，仔细想来可以加许多的特技。</p>
-        
-          <a class="article-more-a" href="/2015/04/28/zh-img-lazy-load/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/04/28/zh-img-lazy-load/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/12/29/echarts-demo/">展开全文 >></a>
         </p>
       
 
@@ -699,7 +621,7 @@ for (var i = 0; i < 100; i++) {
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="/img/browser-history2.jpg" alt="其实应该叫做浏览器约架史">    </p>
-<p>前篇<a href="/2014/09/26/history-of-browser-useragent/">《浏览器野史 UserAgent列传（上）》</a></p>
+<p>前篇<a href="/2014/09/26/zh-history-of-browser-useragent/">《浏览器野史 UserAgent列传（上）》</a></p>
 <h3 id="六、师夷长技"><a href="#六、师夷长技" class="headerlink" title="六、师夷长技"></a>六、师夷长技</h3><p>前面说到，微软靠Windows系统捆绑IE销售。而Windows自然也有它的对手，Linux。一个技术快速发展的时代，系统的世界里也是战火纷飞。Linux系统自从有了可视化界面，也需要浏览器呀。桌面系统KDE的缔造者们就发明了一个。</p>
         
           <a class="article-more-a" href="/2014/10/05/zh-history-of-browser-useragent2/#more">more >></a>
@@ -842,119 +764,34 @@ for (var i = 0; i < 100; i++) {
 
 
   
-    <article id="post-zh-reduce-http-requests" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-zh-oauth-rabbit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/08/14/zh-reduce-http-requests/">转：&quot;再议减少HTTP请求&quot;</a>
+      <a class="article-title" href="/2013/08/20/zh-oauth-rabbit/">转：&quot;兔子，胡萝卜与OAuth的故事&quot;</a>
     </h1>
   
 
         
-        <a href="/2014/08/14/zh-reduce-http-requests/" class="archive-article-date">
-  	<time datetime="2014-08-14T05:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-08-14</time>
+        <a href="/2013/08/20/zh-oauth-rabbit/" class="archive-article-date">
+  	<time datetime="2013-08-20T04:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-08-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/assets/blogImg/reduce-http.jpg" alt="沙龙分享">       </p>
+        <p><img src="/img/rabbit.jpg" alt="来搞一记Oauth吧"> </p>
 <blockquote>
-<p>最近参加了IMWEB前端技术沙龙活动，有幸能站到讲台上，将性能方面的经验与大家分享。现将“再议减少HTTP请求”部分简单摘剪成文。</p>
+<p>那些简单的故事，就别用复杂的方式传诵</p>
 </blockquote>
+<p>##<strong>【让我来讲几个故事吧】</strong>     </p>
+<p>从前，有只老兔子，在仓库里存了一万根胡萝卜，作为给小兔子的遗产。而后他就去周游世界了。小兔子有天想去把萝卜拿出来，却被仓库外的一只兔子拦住了。一问才知道，这是老兔子安排的仓库守卫。和所有故事中的守护者一样，他正直而古板，八字眉下面有着睡眠不足的熊猫眼，世人一般称他为兔门神。兔子想要拿到萝卜，就得说服兔门神呀，于是他走了上前…<br>
         
-          <a class="article-more-a" href="/2014/08/14/zh-reduce-http-requests/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">html5</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">性能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2014/08/14/zh-reduce-http-requests/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-zh-safety-point-of-view-from-front-end" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/05/27/zh-safety-point-of-view-from-front-end/">转：&quot;前端安全冷门知识杂谈&quot;</a>
-    </h1>
-  
-
-        
-        <a href="/2014/05/27/zh-safety-point-of-view-from-front-end/" class="archive-article-date">
-  	<time datetime="2014-05-27T15:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-05-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###零、概述<br>提起web前端安全，大家都会想到两个名词：<code>xss</code>和<code>csrf</code>。<br>抛去这最常见，最被广泛应用的两者，我想谈谈一些难以觉察的，比较偏门的安全关注点。<br>大概分为以下章节：</p>
-<blockquote>
-<p>盗取无法用js读写的Cookie<br>删不掉的本地存储<br>函数覆写监听上报<br>内存Cookie与硬盘Cookie<br>CSS带来的点击量泄露<br>JSONP回调函数与UTF-7编码<br>过滤与代码混淆<br>心理学与社会工程学                  </p>
-</blockquote>
-<p>资料略多，文章较长，请自备瓜子…<br>
-        
-          <a class="article-more-a" href="/2014/05/27/zh-safety-point-of-view-from-front-end/#more">more >></a>
+          <a class="article-more-a" href="/2013/08/20/zh-oauth-rabbit/#more">more >></a>
         
       
 
@@ -989,7 +826,7 @@ for (var i = 0; i < 100; i++) {
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2014/05/27/zh-safety-point-of-view-from-front-end/">展开全文 >></a>
+          <a class="article-more-a" href="/2013/08/20/zh-oauth-rabbit/">展开全文 >></a>
         </p>
       
 
@@ -1007,10 +844,85 @@ for (var i = 0; i < 100; i++) {
 
 
   
+    <article id="post-zh-brief-oauth" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/categories/技术/page/2/">2</a><a class="extend next" rel="next" href="/categories/技术/page/2/">Next &raquo;</a>
-    </nav>
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/08/11/zh-brief-oauth/">转：&quot;谈谈OAuth1,OAuth2异同&quot;</a>
+    </h1>
+  
+
+        
+        <a href="/2013/08/11/zh-brief-oauth/" class="archive-article-date">
+  	<time datetime="2013-08-11T02:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-08-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##<strong>一、写在前面</strong><br>在收集资料时，我查询和学习了许多介绍OAuth的文章，这些文章有好有坏，但大多是从个例出发。因此我想从官方文档出发，结合在stackoverflow上的一些讨论，一并整理一下。整理的内容分为OAuth1.0a和OAuth2两部分。</p>
+<blockquote>
+<p>OAuth 1.0a：One Leg -&gt;Two Leg -&gt; Three Legged<br>OAuth 2:Two Leg -&gt;Three Legged (附：Refresh Token的方式)</p>
+</blockquote>
+<p>这两种模式都是按箭头从左往右安全性递增，其实现也会相对复杂。关于官方的这种leg（腿？）的说法，在中文翻译中比较少有文章提及。下面分别来介绍OAuth的这5种授权流程。</p>
+        
+          <a class="article-more-a" href="/2013/08/11/zh-brief-oauth/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2013/08/11/zh-brief-oauth/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
   
 
           </div>
