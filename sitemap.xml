@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/01/29/my-resume/</loc>
+    
+    <lastmod>2017-02-02T00:47:50.601Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/29/hello-world/</loc>
+    
+    <lastmod>2017-02-02T00:45:51.421Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/30/view-of-huizhou/</loc>
+    
+    <lastmod>2017-02-02T00:45:21.660Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/30/view-of-shenzhen/</loc>
+    
+    <lastmod>2017-02-02T00:33:35.910Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/01/10/echarts-demo3/</loc>
     
     <lastmod>2017-02-01T15:27:50.323Z</lastmod>
@@ -23,20 +51,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/29/my-resume/</loc>
-    
-    <lastmod>2017-02-01T15:24:49.179Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/29/hello-world/</loc>
-    
-    <lastmod>2017-02-01T15:24:10.889Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2016/12/29/echarts-demo/</loc>
     
     <lastmod>2017-02-01T15:23:35.951Z</lastmod>
@@ -54,13 +68,6 @@
     <loc>http://ipcreator.me/2016/12/30/echarts-demo2/</loc>
     
     <lastmod>2017-02-01T15:10:54.554Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/30/view-of-shenzhen/</loc>
-    
-    <lastmod>2017-01-31T13:19:38.223Z</lastmod>
     
   </url>
   
