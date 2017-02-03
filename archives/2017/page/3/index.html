@@ -11,7 +11,7 @@
   <meta name="description" content="For life, growth is the only password.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="For life">
-<meta property="og:url" content="http://ipcreator.me/archives/2017/page/2/index.html">
+<meta property="og:url" content="http://ipcreator.me/archives/2017/page/3/index.html">
 <meta property="og:site_name" content="For life">
 <meta property="og:description" content="For life, growth is the only password.">
 <meta name="twitter:card" content="summary">
@@ -160,29 +160,96 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-How To Become A Hacker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-echarts-demo3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/How To Become A Hacker/">如何成为一名黑客</a>
+      <a class="article-title" href="/2017/01/10/echarts-demo3/">Echarts Demo3</a>
     </h1>
   
 
         
-        <a href="/2017/02/02/How To Become A Hacker/" class="archive-article-date">
-  	<time datetime="2017-02-02T13:49:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-02</time>
+        <a href="/2017/01/10/echarts-demo3/" class="archive-article-date">
+  	<time datetime="2017-01-10T00:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Eric Steven Raymond<br><a class="reference external" href="http://catb.org/~esr/">Thyrsus Enterprises</a><br>Copyright © 2001 Eric S. Raymond &lt;<a class="reference external" href="mailto:esr&#37;&#52;&#48;thyrsus&#46;com">esr<span>&#64;</span>thyrsus<span>&#46;</span>com</a>&gt;<br>Wang Dingwei &lt;<a class="reference external" href="mailto:wangdingwei82&#37;&#52;&#48;gmail&#46;com">wangdingwei82<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt; 基于 Barret 的翻译更正而成。转载请注明出处。</p>
+        <p>直接通过调用js脚本实现</p>
+<script type="text/javascript">
+var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i < 100; i++) {
+    xAxisData.push(i);
+    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
+    data2.push((Math.cos(i / 5) * (i / 5 -10) + i / 6) * 5);
+}
+</script>
+
+<p><div id="echarts9202" style="width: 100%;height: 250px;margin: 0 auto"></div></p>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts9202'));
+        // 指定图表的配置项和数据
+        var option = option = {
+    title: {
+        text: ''
+    },
+    legend: {
+        data: ['input', 'output'],
+        align: 'left'
+    },
+    toolbox: {
+        // y: 'bottom',
+        feature: {
+            magicType: {
+                type: ['stack', 'tiled']
+            }
+        }
+    },
+    tooltip: {},
+    xAxis: {
+        data: xAxisData,
+        silent: false,
+        splitLine: {
+            show: false
+        }
+    },
+    yAxis: {
+    },
+    series: [{
+        name: 'input',
+        type: 'bar',
+        data: data1,
+        animationDelay: function (idx) {
+            return idx * 10;
+        }
+    }, {
+        name: 'output',
+        type: 'bar',
+        data: data2,
+        animationDelay: function (idx) {
+            return idx * 10 + 1000;
+        }
+    }],
+    animationEasing: 'elasticOut',
+    animationDelayUpdate: function (idx) {
+        return idx * 5;
+    }
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
         
-          <a class="article-more-a" href="/2017/02/02/How To Become A Hacker/#more">more >></a>
+          <a class="article-more-a" href="/2017/01/10/echarts-demo3/#more">more >></a>
         
       
 
@@ -196,7 +263,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">echarts</a>
         		</li>
       		
 		</ul>
@@ -217,557 +284,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/02/How To Become A Hacker/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-How-To-Ask-Questions-The-Smart-Way" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/How-To-Ask-Questions-The-Smart-Way/">提问的智慧</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/02/How-To-Ask-Questions-The-Smart-Way/" class="archive-article-date">
-  	<time datetime="2017-02-02T13:32:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>How To Ask Questions The Smart Way</strong><br>Copyright © 2001,2006,2014 Eric S. Raymond, Rick Moen<br>本指南英文版版权为 <a href="http://www.catb.org/%7Eesr/faqs/smart-questions.html">Eric S. Raymond, Rick Moen</a> 所有。<br>本中文指南是基于原文 3.10 版以及 2010 年由 <a href="https://github.com/gasolin">Gasolin</a> 所翻译版本的最新翻译；<br>本文另有<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README.md">繁體中文版</a>。</p>
-        
-          <a class="article-more-a" href="/2017/02/02/How-To-Ask-Questions-The-Smart-Way/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/02/How-To-Ask-Questions-The-Smart-Way/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-my-article-for-newspaper" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/31/my-article-for-newspaper/">酷派集团：“五位一体”高效管理7000件专利申请</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/31/my-article-for-newspaper/" class="archive-article-date">
-  	<time datetime="2017-01-31T09:22:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/my-article.JPG" width = "640" height = "360" alt="personal photo"><br> </div><br>                                                       <a href="http://www.cipnews.com.cn/zgzscqb/images/2016-03/30/11/zgzscqb2016033011.pdf">文章下载</a></p>
-        
-          <a class="article-more-a" href="/2017/01/31/my-article-for-newspaper/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">专利</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/专利/" class="article-tag-list-link color3">专利</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/31/my-article-for-newspaper/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-my-patent-list" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/my-patent-list/">IPCreator专利清单</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/30/my-patent-list/" class="archive-article-date">
-  	<time datetime="2017-01-30T12:53:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="检索方法"><a href="#检索方法" class="headerlink" title="检索方法"></a>检索方法</h3><p>1、打开专利检索网址<a href="http://www.innojoy.com">大为</a>；<br>2、以“汪智勇”为关键字进行检索；<br>3、在检索结果中，以申请（权利人）为“宇龙/Yulong” or “酷派/Coolpad”进行二次筛选便可得出结果。</p>
-<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><blockquote>
-<p>以下清单，基于2017.1.27日以前公开的专利库进行检索，未纳入未公开的相关专利申请（中国/PCT）。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/01/30/my-patent-list/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">专利</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/专利/" class="article-tag-list-link color3">专利</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/my-patent-list/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-view-of-huizhou" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/view-of-huizhou/">惠州风采</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/30/view-of-huizhou/" class="archive-article-date">
-  	<time datetime="2017-01-30T07:10:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>“美好的事物值得付出、等待和分享”</strong></p>
-<p><a href="http://baike.baidu.com/link?url=YpJIrF8gmEpUpPcJHSJuGOrcqouOXc0G82ofqrXuBKAPgLZvX_nT7wqjnzdxPSuh7Tfw0Xzz3gxnsDl4p99jIpQLSMluLZItPeDyh1DXVybOnfimIMOwrxNCUVrWIHdLVv9CnKsnL06g_Fjybr0BKq">巽寮湾（xùn liáo wān）简介</a></p>
-<blockquote>
-<p>地点：<a href="http://j.map.baidu.com/UIOxj">惠东县的大亚湾畔</a><br>特色：石奇美、水奇清、沙奇白<br>推荐指数：★★★★★</p>
-</blockquote>
- <div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/20170201_155605.jpg" width = "640" height = "360" alt="personal photo"><br> </div>
-        
-          <a class="article-more-a" href="/2017/01/30/view-of-huizhou/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">旅游</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/view-of-huizhou/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-view-of-shenzhen" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/30/view-of-shenzhen/">深圳风采</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/30/view-of-shenzhen/" class="archive-article-date">
-  	<time datetime="2017-01-30T07:08:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>“美好的事物值得付出、等待和分享”</strong></p>
-<p><a href="http://baike.baidu.com/link?url=ccPvU0-zjmjSHdJQJsvoHonmUMw1C7AF-zOU1A7VHBRE_eHU-s4SMmt9D680ZIk0Kdr-EWfNFD_JlXzJXVZuGZrIdAfh-5k2XX6W9r33pt7JBZO_G7x0qtG0SqQj7aKUu-cnphGdokXZTVfWipyBFa">仙湖植物园简介</a></p>
-<blockquote>
-<p>地点：<a href="http://j.map.baidu.com/AJQ6F">罗湖区莲塘仙湖路</a><br>特色：弘法寺、植物<br>推荐指数：★★★★★</p>
-</blockquote>
-<div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/20170202_141051.jpg" width = "640" height = "360" alt="personal photo"><br> </div>
-        
-          <a class="article-more-a" href="/2017/01/30/view-of-shenzhen/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">旅游</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/30/view-of-shenzhen/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-my-resume" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/29/my-resume/">IPCreator简历</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/29/my-resume/" class="archive-article-date">
-  	<time datetime="2017-01-29T11:37:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>“合适的才是最好的”</strong></p>
-<hr>
-<h1 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
-<li>手机：13652311447</li>
-<li>Email：ipcreator@yeah.net</li>
-<li>QQ/微信号：11327152</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/01/29/my-resume/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/29/my-resume/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/29/hello-world/">Welcome to my blog.</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/29/hello-world/" class="archive-article-date">
-  	<time datetime="2017-01-29T11:37:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>“欢迎访问我的个人博客”</strong></p>
-<script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script>
-
-<p>IPCreator = IP + Creator</p>
-<blockquote>
-<p>创新不难<br>专利有趣<br>学以致用<br>知行合一</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/01/29/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/29/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/01/10/echarts-demo3/">展开全文 >></a>
         </p>
       
 
@@ -787,7 +304,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2017/page/3/">3</a><a class="extend next" rel="next" href="/archives/2017/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/archives/2017/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><a class="page-number" href="/archives/2017/page/2/">2</a><span class="page-number current">3</span>
     </nav>
   
 
