@@ -160,148 +160,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-echarts-demo3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/10/echarts-demo3/">Echarts Demo3</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/10/echarts-demo3/" class="archive-article-date">
-  	<time datetime="2017-01-10T00:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>直接通过调用js脚本实现</p>
-<script type="text/javascript">
-var xAxisData = [];
-var data1 = [];
-var data2 = [];
-for (var i = 0; i < 100; i++) {
-    xAxisData.push(i);
-    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
-    data2.push((Math.cos(i / 5) * (i / 5 -10) + i / 6) * 5);
-}
-</script>
-
-<p><div id="echarts9202" style="width: 100%;height: 250px;margin: 0 auto"></div></p>
-<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
-
-<script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts9202'));
-        // 指定图表的配置项和数据
-        var option = option = {
-    title: {
-        text: ''
-    },
-    legend: {
-        data: ['input', 'output'],
-        align: 'left'
-    },
-    toolbox: {
-        // y: 'bottom',
-        feature: {
-            magicType: {
-                type: ['stack', 'tiled']
-            }
-        }
-    },
-    tooltip: {},
-    xAxis: {
-        data: xAxisData,
-        silent: false,
-        splitLine: {
-            show: false
-        }
-    },
-    yAxis: {
-    },
-    series: [{
-        name: 'input',
-        type: 'bar',
-        data: data1,
-        animationDelay: function (idx) {
-            return idx * 10;
-        }
-    }, {
-        name: 'output',
-        type: 'bar',
-        data: data2,
-        animationDelay: function (idx) {
-            return idx * 10 + 1000;
-        }
-    }],
-    animationEasing: 'elasticOut',
-    animationDelayUpdate: function (idx) {
-        return idx * 5;
-    }
-};
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-</script>
-        
-          <a class="article-more-a" href="/2017/01/10/echarts-demo3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">echarts</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/10/echarts-demo3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-echarts-demo2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -323,12 +181,12 @@ for (var i = 0; i < 100; i++) {
     <div class="article-entry" itemprop="articleBody">
       
         <p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/">ECharts 插件</a>直接运行<br>增加标题信息</p>
-<div id="echarts297" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts4613" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts297'));
+        var myChart = echarts.init(document.getElementById('echarts4613'));
         // 指定图表的配置项和数据
         var option = {
 
@@ -479,12 +337,12 @@ for (var i = 0; i < 100; i++) {
       
         <p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行</p>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">echarts</span> 400 '85%' %&#125;</span><span class="xml"></span></div><div class="line">\\TODO option goes here</div><div class="line"><span class="template-tag">&#123;% <span class="name">endecharts</span> %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
-<div id="echarts5187" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts4557" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts5187'));
+        var myChart = echarts.init(document.getElementById('echarts4557'));
         // 指定图表的配置项和数据
         var option = {
 
@@ -1048,7 +906,7 @@ var _hmt = _hmt || [];
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">自知者明&lt;br&gt;自胜者强</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">自知者明&lt;br&gt;自胜者强&lt;br&gt;不忘初心&lt;br&gt;方得始终</div>
   	  	
     	</section>
     
