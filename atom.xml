@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-02-02T14:26:56.866Z</updated>
+  <updated>2017-02-03T03:36:19.011Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://ipcreator.me/2017/02/02/The%20Unix%20and%20Internet%20Fundamentals%20HOWTO/"/>
     <id>http://ipcreator.me/2017/02/02/The Unix and Internet Fundamentals HOWTO/</id>
     <published>2017-02-02T14:19:06.000Z</published>
-    <updated>2017-02-02T14:26:56.866Z</updated>
+    <updated>2017-02-03T03:36:19.011Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.faqs.org/docs/Linux-HOWTO/Unix-and-Internet-Fundamentals-HOWTO.html" target="_blank" rel="external">Eric Raymond</a><br><img src="/img/eric-raymond.jpg" alt="Eric Raymond"><br>This document describes the working basics of PC-class computers, Unix-like operating systems, and the Internet in non-technical language.</p>
 <a id="more"></a> 
@@ -303,7 +303,7 @@
     <link href="http://ipcreator.me/2017/02/02/How%20To%20Become%20A%20Hacker/"/>
     <id>http://ipcreator.me/2017/02/02/How To Become A Hacker/</id>
     <published>2017-02-02T13:49:06.000Z</published>
-    <updated>2017-02-02T14:11:17.385Z</updated>
+    <updated>2017-02-03T03:36:39.497Z</updated>
     
     <content type="html"><![CDATA[<p>Eric Steven Raymond<br><a class="reference external" href="http://catb.org/~esr/" target="_blank" rel="external">Thyrsus Enterprises</a><br>Copyright © 2001 Eric S. Raymond &lt;<a class="reference external" href="mailto:esr&#37;&#52;&#48;thyrsus&#46;com" target="_blank" rel="external">esr<span>&#64;</span>thyrsus<span>&#46;</span>com</a>&gt;<br>Wang Dingwei &lt;<a class="reference external" href="mailto:wangdingwei82&#37;&#52;&#48;gmail&#46;com" target="_blank" rel="external">wangdingwei82<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt; 基于 Barret 的翻译更正而成。转载请注明出处。</p>
 <a id="more"></a> 
@@ -605,7 +605,7 @@ If you want to change it, more info is available in our docs:
     <link href="http://ipcreator.me/2017/02/02/How-To-Ask-Questions-The-Smart-Way/"/>
     <id>http://ipcreator.me/2017/02/02/How-To-Ask-Questions-The-Smart-Way/</id>
     <published>2017-02-02T13:32:06.000Z</published>
-    <updated>2017-02-02T14:13:49.625Z</updated>
+    <updated>2017-02-03T03:36:30.869Z</updated>
     
     <content type="html"><![CDATA[<p><strong>How To Ask Questions The Smart Way</strong><br>Copyright © 2001,2006,2014 Eric S. Raymond, Rick Moen<br>本指南英文版版权为 <a href="http://www.catb.org/%7Eesr/faqs/smart-questions.html" target="_blank" rel="external">Eric S. Raymond, Rick Moen</a> 所有。<br>本中文指南是基于原文 3.10 版以及 2010 年由 <a href="https://github.com/gasolin" target="_blank" rel="external">Gasolin</a> 所翻译版本的最新翻译；<br>本文另有<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README.md" target="_blank" rel="external">繁體中文版</a>。</p>
 <a id="more"></a> 
@@ -1268,7 +1268,7 @@ If you want to change it, more info is available in our docs:
     <link href="http://ipcreator.me/2017/01/30/my-patent-list/"/>
     <id>http://ipcreator.me/2017/01/30/my-patent-list/</id>
     <published>2017-01-30T12:53:06.000Z</published>
-    <updated>2017-02-01T15:26:50.412Z</updated>
+    <updated>2017-02-03T03:37:22.495Z</updated>
     
     <content type="html"><![CDATA[<h3 id="检索方法"><a href="#检索方法" class="headerlink" title="检索方法"></a>检索方法</h3><p>1、打开专利检索网址<a href="http://www.innojoy.com" target="_blank" rel="external">大为</a>；<br>2、以“汪智勇”为关键字进行检索；<br>3、在检索结果中，以申请（权利人）为“宇龙/Yulong” or “酷派/Coolpad”进行二次筛选便可得出结果。</p>
 <h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><blockquote>
@@ -1970,7 +1970,7 @@ If you want to change it, more info is available in our docs:
     <link href="http://ipcreator.me/2017/01/30/view-of-huizhou/"/>
     <id>http://ipcreator.me/2017/01/30/view-of-huizhou/</id>
     <published>2017-01-30T07:10:06.000Z</published>
-    <updated>2017-02-02T13:01:22.518Z</updated>
+    <updated>2017-02-03T03:36:47.634Z</updated>
     
     <content type="html"><![CDATA[<p><strong>“美好的事物值得付出、等待和分享”</strong></p>
 <p><a href="http://baike.baidu.com/link?url=YpJIrF8gmEpUpPcJHSJuGOrcqouOXc0G82ofqrXuBKAPgLZvX_nT7wqjnzdxPSuh7Tfw0Xzz3gxnsDl4p99jIpQLSMluLZItPeDyh1DXVybOnfimIMOwrxNCUVrWIHdLVv9CnKsnL06g_Fjybr0BKq" target="_blank" rel="external">巽寮湾（xùn liáo wān）简介</a></p>
@@ -2005,7 +2005,7 @@ If you want to change it, more info is available in our docs:
     <link href="http://ipcreator.me/2017/01/30/view-of-shenzhen/"/>
     <id>http://ipcreator.me/2017/01/30/view-of-shenzhen/</id>
     <published>2017-01-30T07:08:06.000Z</published>
-    <updated>2017-02-02T12:59:34.785Z</updated>
+    <updated>2017-02-03T03:36:56.051Z</updated>
     
     <content type="html"><![CDATA[<p><strong>“美好的事物值得付出、等待和分享”</strong></p>
 <p><a href="http://baike.baidu.com/link?url=ccPvU0-zjmjSHdJQJsvoHonmUMw1C7AF-zOU1A7VHBRE_eHU-s4SMmt9D680ZIk0Kdr-EWfNFD_JlXzJXVZuGZrIdAfh-5k2XX6W9r33pt7JBZO_G7x0qtG0SqQj7aKUu-cnphGdokXZTVfWipyBFa" target="_blank" rel="external">仙湖植物园简介</a></p>
@@ -2046,44 +2046,11 @@ If you want to change it, more info is available in our docs:
   </entry>
   
   <entry>
-    <title>Welcome to my blog.</title>
-    <link href="http://ipcreator.me/2017/01/29/hello-world/"/>
-    <id>http://ipcreator.me/2017/01/29/hello-world/</id>
-    <published>2017-01-29T11:37:06.000Z</published>
-    <updated>2017-02-02T00:45:51.421Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>“欢迎访问我的个人博客”</strong></p>
-<p>IPCreator = IP + Creator</p>
-<blockquote>
-<p>创新不难<br>专利有趣<br>学以致用<br>知行合一</p>
-</blockquote>
-<a id="more"></a>
-<p>More info: <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" rel="external">my chinese blog</a><br>（中文博客<a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" rel="external">网易</a>）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;“欢迎访问我的个人博客”&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;IPCreator = IP + Creator&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;创新不难&lt;br&gt;专利有趣&lt;br&gt;学以致用&lt;br&gt;知行合一&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-    
-    
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
-    
-  </entry>
-  
-  <entry>
     <title>IPCreator简历</title>
     <link href="http://ipcreator.me/2017/01/29/my-resume/"/>
     <id>http://ipcreator.me/2017/01/29/my-resume/</id>
     <published>2017-01-29T11:37:06.000Z</published>
-    <updated>2017-02-02T00:47:50.601Z</updated>
+    <updated>2017-02-03T03:37:09.320Z</updated>
     
     <content type="html"><![CDATA[<p><strong>“合适的才是最好的”</strong></p>
 <hr>
@@ -2129,6 +2096,43 @@ If you want to change it, more info is available in our docs:
 &lt;li&gt;Email：ipcreator@yeah.net&lt;/li&gt;
 &lt;li&gt;QQ/微信号：11327152&lt;/li&gt;
 &lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Welcome to my blog.</title>
+    <link href="http://ipcreator.me/2017/01/29/hello-world/"/>
+    <id>http://ipcreator.me/2017/01/29/hello-world/</id>
+    <published>2017-01-29T11:37:06.000Z</published>
+    <updated>2017-02-03T03:34:28.284Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>“欢迎访问我的个人博客”</strong></p>
+<script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script>
+
+<p>IPCreator = IP + Creator</p>
+<blockquote>
+<p>创新不难<br>专利有趣<br>学以致用<br>知行合一</p>
+</blockquote>
+<a id="more"></a>
+<p>More info: <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" rel="external">my chinese blog</a><br>（中文博客<a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" rel="external">网易</a>）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;“欢迎访问我的个人博客”&lt;/strong&gt;&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://ip.chinaz.com/getip.aspx&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;IPCreator = IP + Creator&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;创新不难&lt;br&gt;专利有趣&lt;br&gt;学以致用&lt;br&gt;知行合一&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -2307,12 +2311,12 @@ for (var i = 0; i &lt; 100; i++) {
     <updated>2017-02-01T15:10:54.554Z</updated>
     
     <content type="html"><![CDATA[<p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行<br>增加标题信息</p>
-<div id="echarts3048" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts6085" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts3048'));
+        var myChart = echarts.init(document.getElementById('echarts6085'));
         // 指定图表的配置项和数据
         var option = {
 
@@ -2394,12 +2398,12 @@ for (var i = 0; i &lt; 100; i++) {
     <summary type="html">
     
       &lt;p&gt;通过&lt;a href=&quot;http://kchen.cc/2016/11/05/echarts-in-hexo/&quot;&gt;ECharts 插件&lt;/a&gt;直接运行&lt;br&gt;增加标题信息&lt;/p&gt;
-&lt;div id=&quot;echarts3048&quot; style=&quot;width: 85%;height: 400px;margin: 0 auto&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;echarts6085&quot; style=&quot;width: 85%;height: 400px;margin: 0 auto&quot;&gt;&lt;/div&gt;
 &lt;script src=&quot;http://echarts.baidu.com/dist/echarts.common.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script type=&quot;text/javascript&quot;&gt;
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById(&#39;echarts3048&#39;));
+        var myChart = echarts.init(document.getElementById(&#39;echarts6085&#39;));
         // 指定图表的配置项和数据
         var option = {
 
@@ -2493,12 +2497,12 @@ for (var i = 0; i &lt; 100; i++) {
     
     <content type="html"><![CDATA[<p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行</p>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">echarts</span> 400 '85%' %&#125;</span><span class="xml"></span></div><div class="line">\\TODO option goes here</div><div class="line"><span class="template-tag">&#123;% <span class="name">endecharts</span> %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
-<div id="echarts8349" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts8513" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts8349'));
+        var myChart = echarts.init(document.getElementById('echarts8513'));
         // 指定图表的配置项和数据
         var option = {
 
