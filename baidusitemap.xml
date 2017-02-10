@@ -4,6 +4,66 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/09/reborn-every-7-years/</loc>
+    <lastmod>2017-02-10T14:05:11.912Z</lastmod>
+    <data>
+        <display>
+        <title>新生 —— 七年就是一辈子</title>
+        <pubTime>2017-02-09T10:00:18.000Z</pubTime>
+        
+        <tag>个人</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/03/my-view-of-management/</loc>
+    <lastmod>2017-02-10T07:28:53.421Z</lastmod>
+    <data>
+        <display>
+        <title>管理之我见</title>
+        <pubTime>2017-02-03T06:30:18.000Z</pubTime>
+        
+        <tag>管理</tag>
+         
+         
+           
+             
+              <breadCrumb title="管理" url="http://ipcreator.me/categories/%E7%AE%A1%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/09/golden-age-of-artificial-intelligence/</loc>
+    <lastmod>2017-02-10T07:26:44.006Z</lastmod>
+    <data>
+        <display>
+        <title>人工智能的黄金时代</title>
+        <pubTime>2017-02-09T10:06:18.000Z</pubTime>
+        
+        <tag>个人</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/01/29/hello-world/</loc>
     <lastmod>2017-02-09T01:30:40.873Z</lastmod>
     <data>
@@ -117,26 +177,6 @@
            
              
               <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/03/my-view-of-management/</loc>
-    <lastmod>2017-02-04T08:57:22.602Z</lastmod>
-    <data>
-        <display>
-        <title>管理之我见</title>
-        <pubTime>2017-02-03T06:30:18.000Z</pubTime>
-        
-        <tag>管理</tag>
-         
-         
-           
-             
-              <breadCrumb title="管理" url="http://ipcreator.me/categories/%E7%AE%A1%E7%90%86/"/>
           
         </display>
     </data>
