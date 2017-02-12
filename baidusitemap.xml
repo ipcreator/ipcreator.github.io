@@ -4,6 +4,202 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/12/zh-scikit-learn/</loc>
+    <lastmod>2017-02-12T04:46:54.645Z</lastmod>
+    <data>
+        <display>
+        <title>scikit-learn machine learning in Python</title>
+        <pubTime>2017-02-12T04:40:06.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/12/zh-good-python-articles/</loc>
+    <lastmod>2017-02-12T04:31:55.413Z</lastmod>
+    <data>
+        <display>
+        <title>一些Python相关好文</title>
+        <pubTime>2017-02-12T04:29:06.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/12/zh-big-data-resources/</loc>
+    <lastmod>2017-02-12T04:26:00.302Z</lastmod>
+    <data>
+        <display>
+        <title>大数据/数据挖掘/推荐系统/机器学习相关资源</title>
+        <pubTime>2017-02-12T04:23:06.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>Data Digging</tag>
+         
+        <tag>Recommend System</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/12/zh-google-styleguide/</loc>
+    <lastmod>2017-02-12T04:16:04.056Z</lastmod>
+    <data>
+        <display>
+        <title>Google 开源项目风格指南 (中文版)</title>
+        <pubTime>2017-02-12T04:10:06.000Z</pubTime>
+        
+        <tag>Google</tag>
+         
+        <tag>Open Source</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/12/zh-awesome-deep-learning/</loc>
+    <lastmod>2017-02-12T04:08:02.364Z</lastmod>
+    <data>
+        <display>
+        <title>Awesome Deep Learning</title>
+        <pubTime>2017-02-12T03:26:06.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/12/zh-question-answering-system/</loc>
+    <lastmod>2017-02-12T03:56:39.651Z</lastmod>
+    <data>
+        <display>
+        <title>Question Answering System</title>
+        <pubTime>2017-02-12T01:02:06.000Z</pubTime>
+        
+        <tag>问答系统</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>Watson</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/12/zh-android-green-antivirus/</loc>
+    <lastmod>2017-02-12T03:56:27.448Z</lastmod>
+    <data>
+        <display>
+        <title>Android-Green-Antivirus</title>
+        <pubTime>2017-02-12T01:02:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Django</tag>
+         
+        <tag>ClamAV</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/12/zh-android-training-course-in-chinese/</loc>
+    <lastmod>2017-02-12T03:56:17.178Z</lastmod>
+    <data>
+        <display>
+        <title>Android官方培训课程中文版</title>
+        <pubTime>2017-02-12T03:26:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/12/zh-awesome-machine-learning/</loc>
+    <lastmod>2017-02-12T03:55:56.868Z</lastmod>
+    <data>
+        <display>
+        <title>Awesome Machine Learning</title>
+        <pubTime>2017-02-12T03:26:06.000Z</pubTime>
+        
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2013/08/11/zh-brief-oauth/</loc>
     <lastmod>2017-02-12T01:41:46.949Z</lastmod>
     <data>
