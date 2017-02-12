@@ -1,26 +1,1135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>For life</title>
-  <subtitle>Growth is the only password.</subtitle>
+  <title>IPCreator</title>
+  <subtitle>Growing up is the only password.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-02-11T12:56:38.273Z</updated>
+  <updated>2017-02-12T01:03:41.615Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
-    <name>IPCreator</name>
+    <name>For life</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python 资源大全中文版</title>
+    <link href="http://ipcreator.me/2017/02/12/zh-tools-of-python/"/>
+    <id>http://ipcreator.me/2017/02/12/zh-tools-of-python/</id>
+    <published>2017-02-12T01:02:06.000Z</published>
+    <updated>2017-02-12T01:03:41.615Z</updated>
+    
+    <content type="html"><![CDATA[<p>作者：<a href="https://github.com/wangaicc/awesome-python-cn" target="_blank" rel="external">litai wong/wangaicc</a></p>
+<p>我想很多程序员应该记得 GitHub 上有一个 Awesome - XXX 系列的资源整理。<a href="https://github.com/vinta/awesome-python" target="_blank" rel="external">awesome-python</a> 是 vinta 发起维护的 Python 资源列表，内容包括：Web框架、网络爬虫、网络内容提取、模板引擎、数据库、数据可视化、图片处理、文本处理、自然语言处理、机器学习、日志、代码分析等。由伯乐在线持续更新。</p>
+<p>Awesome 系列虽然挺全，但基本只对收录的资源做了极为简要的介绍，如果有更详细的中文介绍，对相应开发者的帮助会更大。这也是我们发起这个开源项目的初衷。</p>
+<a id="more"></a>
+<hr>
+<h3 id="我们要做什么？"><a href="#我们要做什么？" class="headerlink" title="我们要做什么？"></a>我们要做什么？</h3><ul>
+<li>基于 awesome-python 列表，我们将对其中的各个资源项进行编译整理。此外还将从其他来源补充好资源。</li>
+<li>整理后的内容，将收录在<a href="http://hao.jobbole.com/" target="_blank" rel="external">伯乐在线资源频道</a>。可参考已整理的内容：<ul>
+<li>《<a href="http://hao.jobbole.com/python-scrapy/" target="_blank" rel="external">Scrapy：Python的爬虫框架</a>》</li>
+<li>《<a href="http://hao.jobbole.com/flask/" target="_blank" rel="external">Flask：一个使用Python编写的轻量级Web应用框架</a>》</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="如何参与本项目？"><a href="#如何参与本项目？" class="headerlink" title="如何参与本项目？"></a>如何参与本项目？</h3><p>从下面的目录来看，本项目的工作量小不了，所以非常期待能有更多程序员一起来参与。</p>
+<p>不过加入前，有几个小要求：</p>
+<ul>
+<li>英文还不错，能读懂英文并用自己的话复述；</li>
+<li>在用 Python；</li>
+</ul>
+<p>如有兴趣，请加 QQ：50872495。加 Q 时请注明「Python大全」</p>
+<hr>
+<h3 id="本项目的参与者"><a href="#本项目的参与者" class="headerlink" title="本项目的参与者"></a>本项目的参与者</h3><ul>
+<li>维护者：</li>
+<li>贡献者：<a href="https://github.com/hanxiaomax" target="_blank" rel="external">艾凌风</a>、Namco、<a href="https://github.com/Daetalus" target="_blank" rel="external">Daetalus</a>、<a href="http://www.jobbole.com/members/huanglimin/" target="_blank" rel="external">黄利民</a>、<a href="http://www.jobbole.com/members/atupal/" target="_blank" rel="external">atupal</a>、<a href="http://www.jobbole.com/members/rainbow/" target="_blank" rel="external">rainbow</a>、<a href="https://github.com/mutoulbj" target="_blank" rel="external">木头lbj</a></li>
+</ul>
+<p>注：名单不分排名，不定期补充更新</p>
+<hr>
+<h3 id="奖励计划"><a href="#奖励计划" class="headerlink" title="奖励计划"></a>奖励计划</h3><p>虽然奖励可能并不是你加入的主要原因，但还是有必要提一下：</p>
+<ul>
+<li>整理超过 20 个资源后，可在伯乐在线上开通打赏；</li>
+<li>每整理 20 个资源，有机会获得技术书籍或各种有意思的创意、极客产品；</li>
+<li><a href="http://hao.jobbole.com/rewards/" target="_blank" rel="external">奖励详情</a></li>
+</ul>
+<hr>
+<h3 id="环境管理"><a href="#环境管理" class="headerlink" title="环境管理"></a>环境管理</h3><p>管理 Python 版本和环境的工具</p>
+<ul>
+<li>p：非常简单的交互式 python 版本管理工具。<a href="https://github.com/qw3rtman/p" target="_blank" rel="external">官网</a></li>
+<li>pyenv：简单的 Python 版本管理工具。<a href="https://github.com/yyuu/pyenv" target="_blank" rel="external">官网</a></li>
+<li>Vex：可以在虚拟环境中执行命令。<a href="https://github.com/sashahart/vex" target="_blank" rel="external">官网</a></li>
+<li>virtualenv：创建独立 Python 环境的工具。<a href="https://pypi.python.org/pypi/virtualenv" target="_blank" rel="external">官网</a></li>
+<li>virtualenvwrapper：virtualenv 的一组扩展。<a href="https://pypi.python.org/pypi/virtualenvwrapper" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="包管理"><a href="#包管理" class="headerlink" title="包管理"></a>包管理</h3><p>管理包和依赖的工具。</p>
+<ul>
+<li>pip：Python 包和依赖关系管理工具。<a href="https://pip.pypa.io/" target="_blank" rel="external">官网</a></li>
+<li>pip-tools：保证 Python 包依赖关系更新的一组工具。<a href="https://github.com/nvie/pip-tools" target="_blank" rel="external">官网</a></li>
+<li>conda：跨平台，Python 二进制包管理工具。<a href="https://github.com/conda/conda/" target="_blank" rel="external">官网</a></li>
+<li>Curdling：管理 Python 包的命令行工具。<a href="http://clarete.li/curdling/" target="_blank" rel="external">官网</a></li>
+<li>wheel：Python 分发的新标准，意在取代 eggs。<a href="http://pythonwheels.com/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="包仓库"><a href="#包仓库" class="headerlink" title="包仓库"></a>包仓库</h3><p>本地 PyPI 仓库服务和代理。</p>
+<ul>
+<li>warehouse：下一代 PyPI。<a href="https://github.com/pypa/warehouse" target="_blank" rel="external">官网</a><ul>
+<li>Warehouse：PyPA 提供的 PyPI 镜像工具。<a href="https://warehouse.python.org/" target="_blank" rel="external">官网</a> <a href="https://bitbucket.org/pypa/bandersnatch" target="_blank" rel="external">bandersnatch</a></li>
+</ul>
+</li>
+<li>devpi：PyPI 服务和打包/测试/分发工具。<a href="http://doc.devpi.net/" target="_blank" rel="external">官网</a></li>
+<li>localshop：本地 PyPI 服务（自定义包并且自动对 PyPI 镜像）。<a href="https://github.com/mvantellingen/localshop" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="分发"><a href="#分发" class="headerlink" title="分发"></a>分发</h3><p>打包为可执行文件以便分发。</p>
+<ul>
+<li>PyInstaller：将 Python 程序转换成独立的执行文件（跨平台）。<a href="https://github.com/pyinstaller/pyinstaller" target="_blank" rel="external">官网</a></li>
+<li>dh-virtualenv：构建并将 virtualenv 虚拟环境作为一个 Debian 包来发布。<a href="http://dh-virtualenv.readthedocs.org/" target="_blank" rel="external">官网</a></li>
+<li>Nuitka：将脚本、模块、包编译成可执行文件或扩展模块。<a href="http://nuitka.net/" target="_blank" rel="external">官网</a></li>
+<li>py2app：将 Python 脚本变为独立软件包（Mac OS X）。<a href="http://pythonhosted.org/py2app/" target="_blank" rel="external">官网</a></li>
+<li>py2exe：将 Python 脚本变为独立软件包（Windows）。<a href="http://www.py2exe.org/" target="_blank" rel="external">官网</a></li>
+<li>pynsist：一个用来创建 Windows 安装程序的工具，可以在安装程序中打包 Python本身。<a href="http://pynsist.readthedocs.org/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="构建工具"><a href="#构建工具" class="headerlink" title="构建工具"></a>构建工具</h3><p>将源码编译成软件。</p>
+<ul>
+<li>buildout：一个构建系统，从多个组件来创建，组装和部署应用。<a href="http://www.buildout.org/" target="_blank" rel="external">官网</a></li>
+<li>BitBake：针对嵌入式 Linux 的类似 make 的构建工具。<a href="http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html" target="_blank" rel="external">官网</a></li>
+<li>fabricate：对任何语言自动找到依赖关系的构建工具。<a href="https://code.google.com/p/fabricate/" target="_blank" rel="external">官网</a></li>
+<li>PlatformIO：多平台命令行构建工具。<a href="https://github.com/ivankravets/platformio" target="_blank" rel="external">官网</a></li>
+<li>PyBuilder：纯 Python 实现的持续化构建工具。<a href="https://github.com/pybuilder/pybuilder" target="_blank" rel="external">官网</a></li>
+<li>SCons：软件构建工具。<a href="http://www.scons.org/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="交互式解析器"><a href="#交互式解析器" class="headerlink" title="交互式解析器"></a>交互式解析器</h3><p>交互式 Python 解析器。</p>
+<ul>
+<li>IPython：功能丰富的工具，非常有效的使用交互式 Python。<a href="https://github.com/ipython/ipython" target="_blank" rel="external">官网</a></li>
+<li>bpython：界面丰富的 Python 解析器。<a href="http://bpython-interpreter.org/" target="_blank" rel="external">官网</a></li>
+<li>ptpython：高级交互式Python解析器， 构建于<a href="https://github.com/jonathanslenders/python-prompt-toolkit" target="_blank" rel="external">python-prompt-toolkit</a> 之上。<a href="https://github.com/jonathanslenders/ptpython" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><p>文件管理和 MIME（多用途的网际邮件扩充协议）类型检测。</p>
+<ul>
+<li>imghdr：（Python 标准库）检测图片类型。<a href="https://docs.python.org/2/library/imghdr.html" target="_blank" rel="external">官网</a></li>
+<li>mimetypes：（Python 标准库）将文件名映射为 MIME 类型。<a href="https://docs.python.org/2/library/mimetypes.html" target="_blank" rel="external">官网</a></li>
+<li>path.py：对 os.path 进行封装的模块。<a href="https://github.com/jaraco/path.py" target="_blank" rel="external">官网</a></li>
+<li>pathlib：（Python3.4+ 标准库）跨平台的、面向对象的路径操作库。<a href="https://pathlib.readthedocs.org/en/pep428/" target="_blank" rel="external">官网</a></li>
+<li>python-magic：文件类型检测的第三方库 libmagic 的 Python 接口。<a href="https://github.com/ahupp/python-magic" target="_blank" rel="external">官网</a></li>
+<li>Unipath：用面向对象的方式操作文件和目录。<a href="https://github.com/mikeorr/Unipath" target="_blank" rel="external">官网</a></li>
+<li>watchdog：管理文件系统事件的 API 和 shell 工具<a href="https://github.com/gorakhargosh/watchdog" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="日期和时间"><a href="#日期和时间" class="headerlink" title="日期和时间"></a>日期和时间</h3><p>操作日期和时间的类库。</p>
+<ul>
+<li>arrow：更好的 Python 日期时间操作类库。<a href="https://github.com/crsmithdev/arrow" target="_blank" rel="external">官网</a></li>
+<li>Chronyk：Python 3 的类库，用于解析手写格式的时间和日期。<a href="https://github.com/KoffeinFlummi/Chronyk" target="_blank" rel="external">官网</a></li>
+<li>dateutil：Python datetime 模块的扩展。<a href="https://pypi.python.org/pypi/python-dateutil" target="_blank" rel="external">官网</a></li>
+<li>delorean：解决 Python 中有关日期处理的棘手问题的库。<a href="https://github.com/myusuf3/delorean/" target="_blank" rel="external">官网</a></li>
+<li>moment：一个用来处理时间和日期的Python库。灵感来自于Moment.js。<a href="https://github.com/zachwill/moment" target="_blank" rel="external">官网</a></li>
+<li>PyTime：一个简单易用的Python模块，用于通过字符串来操作日期/时间。<a href="https://github.com/shnode/PyTime" target="_blank" rel="external">官网</a></li>
+<li>pytz：现代以及历史版本的世界时区定义。将时区数据库引入Python。<a href="https://launchpad.net/pytz" target="_blank" rel="external">官网</a></li>
+<li>when.py：提供用户友好的函数来帮助用户进行常用的日期和时间操作。<a href="https://github.com/dirn/When.py" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h3><p>用于解析和操作文本的库。</p>
+<ul>
+<li>通用<ul>
+<li>chardet：字符编码检测器，兼容 Python2 和 Python3。<a href="https://github.com/chardet/chardet" target="_blank" rel="external">官网</a></li>
+<li>difflib：(Python 标准库)帮助我们进行差异化比较。<a href="https://docs.python.org/2/library/difflib.html" target="_blank" rel="external">官网</a></li>
+<li>ftfy：让Unicode文本更完整更连贯。<a href="https://github.com/LuminosoInsight/python-ftfy" target="_blank" rel="external">官网</a></li>
+<li>fuzzywuzzy：模糊字符串匹配。<a href="https://github.com/seatgeek/fuzzywuzzy" target="_blank" rel="external">官网</a></li>
+<li>Levenshtein：快速计算编辑距离以及字符串的相似度。<a href="https://github.com/ztane/python-Levenshtein/" target="_blank" rel="external">官网</a></li>
+<li>pangu.py：在中日韩语字符和数字字母之间添加空格。<a href="https://github.com/vinta/pangu.py" target="_blank" rel="external">官网</a></li>
+<li>yfiglet-figlet：<a href="https://github.com/pwaller/pyfiglet" target="_blank" rel="external">pyfiglet -figlet</a> 的 Python实现。</li>
+<li>shortuuid：一个生成器库，用以生成简洁的，明白的，URL 安全的 UUID。<a href="https://github.com/stochastic-technologies/shortuuid" target="_blank" rel="external">官网</a></li>
+<li>unidecode：Unicode 文本的 ASCII 转换形式 。<a href="https://pypi.python.org/pypi/Unidecode" target="_blank" rel="external">官网</a></li>
+<li>uniout：打印可读的字符，而不是转义的字符串。<a href="https://github.com/moskytw/uniout" target="_blank" rel="external">官网</a></li>
+<li>xpinyin：一个用于把汉字转换为拼音的库。<a href="https://github.com/lxneng/xpinyin" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Slug化<ul>
+<li>awesome-slugify：一个 Python slug 化库，可以保持 Unicode。<a href="https://github.com/dimka665/awesome-slugify" target="_blank" rel="external">官网</a></li>
+<li>python-slugify：Python slug 化库，可以把 unicode 转化为 ASCII。<a href="https://github.com/un33k/python-slugify" target="_blank" rel="external">官网</a></li>
+<li>unicode-slugify：一个 slug 工具，可以生成 unicode slugs ,需要依赖 Django 。<a href="https://github.com/mozilla/unicode-slugify" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>解析器<ul>
+<li>phonenumbers：解析，格式化，储存，验证电话号码。<a href="https://github.com/daviddrysdale/python-phonenumbers" target="_blank" rel="external">官网</a></li>
+<li>PLY：lex 和 yacc 解析工具的 Python 实现。<a href="http://www.dabeaz.com/ply/" target="_blank" rel="external">官网</a></li>
+<li>Pygments：通用语法高亮工具。<a href="http://pygments.org/" target="_blank" rel="external">官网</a></li>
+<li>pyparsing：生成通用解析器的框架。<a href="http://pyparsing.wikispaces.com/" target="_blank" rel="external">官网</a></li>
+<li>python-nameparser：把一个人名分解为几个独立的部分。<a href="https://github.com/derek73/python-nameparser" target="_blank" rel="external">官网</a></li>
+<li>python-user-agents：浏览器 user agent 解析器。<a href="https://github.com/selwin/python-user-agents" target="_blank" rel="external">官网</a></li>
+<li>sqlparse：一个无验证的 SQL 解析器。<a href="https://sqlparse.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="特殊文本格式处理"><a href="#特殊文本格式处理" class="headerlink" title="特殊文本格式处理"></a>特殊文本格式处理</h3><p>一些用来解析和操作特殊文本格式的库。</p>
+<ul>
+<li>通用<ul>
+<li>tablib：一个用来处理中表格数据的模块。<a href="https://github.com/kennethreitz/tablib" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Office<ul>
+<li>Marmir：把输入的Python 数据结构转换为电子表单。<a href="https://github.com/brianray/mm" target="_blank" rel="external">官网</a></li>
+<li>openpyxl：一个用来读写 Excel 2010 xlsx/xlsm/xltx/xltm 文件的库。<a href="https://openpyxl.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>python-docx：读取，查询以及修改 Microsoft Word 2007/2008 docx 文件。<a href="https://github.com/python-openxml/python-docx" target="_blank" rel="external">官网</a></li>
+<li>unoconv：在 LibreOffice/OpenOffice 支持的任意文件格式之间进行转换。<a href="https://github.com/dagwieers/unoconv" target="_blank" rel="external">官网</a></li>
+<li>XlsxWriter：一个用于创建 Excel .xlsx 文件的 Python 模块。<a href="https://xlsxwriter.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>xlwings：一个使得在 Excel 中方便调用 Python 的库（反之亦然），基于 BSD 协议。<a href="http://xlwings.org/" target="_blank" rel="external">官网</a></li>
+<li>xlwt：读写 Excel 文件的数据和格式信息。<a href="https://github.com/python-excel/xlwt" target="_blank" rel="external">官网</a> / <a href="https://github.com/python-excel/xlrd" target="_blank" rel="external">xlrd</a></li>
+<li>relatorio：模板化OpenDocument 文件。<a href="http://relatorio.tryton.org/" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>PDF<ul>
+<li>PDFMiner：一个用于从PDF文档中抽取信息的工具。<a href="https://github.com/euske/pdfminer" target="_blank" rel="external">官网</a></li>
+<li>PyPDF2：一个可以分割，合并和转换 PDF 页面的库。<a href="https://github.com/mstamy2/PyPDF2" target="_blank" rel="external">官网</a></li>
+<li>ReportLab：快速创建富文本 PDF 文档。<a href="http://www.reportlab.com/opensource/" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Markdown<ul>
+<li>Mistune：快速并且功能齐全的纯 Python 实现的 Markdown 解析器。<a href="https://github.com/lepture/mistune" target="_blank" rel="external">官网</a></li>
+<li>Python-Markdown：John Gruber’s Markdown 的 Python 版实现。<a href="https://github.com/waylan/Python-Markdown" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>YAML<ul>
+<li>PyYAML：Python 版本的 YAML 解析器。<a href="http://pyyaml.org/" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>CSV<ul>
+<li>csvkit：用于转换和操作 CSV 的工具。<a href="https://github.com/onyxfish/csvkit" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Archive<ul>
+<li>unp：一个用来方便解包归档文件的命令行工具。<a href="https://github.com/mitsuhiko/unp" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="自然语言处理"><a href="#自然语言处理" class="headerlink" title="自然语言处理"></a>自然语言处理</h3><p>用来处理人类语言的库。</p>
+<ul>
+<li>NLTK：一个先进的平台，用以构建处理人类语言数据的 Python 程序。<a href="http://www.nltk.org/" target="_blank" rel="external">官网</a></li>
+<li>jieba：中文分词工具。<a href="https://github.com/fxsjy/jieba" target="_blank" rel="external">官网</a></li>
+<li>langid.py：独立的语言识别系统。<a href="https://github.com/saffsd/langid.py" target="_blank" rel="external">官网</a></li>
+<li>Pattern：Python 网络信息挖掘模块。<a href="http://www.clips.ua.ac.be/pattern" target="_blank" rel="external">官网</a></li>
+<li>SnowNLP：一个用来处理中文文本的库。<a href="https://github.com/isnowfy/snownlp" target="_blank" rel="external">官网</a></li>
+<li>TextBlob：为进行普通自然语言处理任务提供一致的 API。<a href="http://textblob.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>TextGrocery：一简单高效的短文本分类工具，基于 LibLinear 和 Jieba。<a href="https://github.com/2shou/TextGrocery" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><p>用以生成项目文档的库。</p>
+<ul>
+<li>Sphinx：Python 文档生成器。<a href="http://www.sphinx-doc.org/en/latest/" target="_blank" rel="external">官网</a><ul>
+<li>awesome-sphinxdoc：<a href="https://github.com/yoloseem/awesome-sphinxdoc" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>MkDocs：对 Markdown 友好的文档生成器。<a href="http://www.mkdocs.org/" target="_blank" rel="external">官网</a></li>
+<li>pdoc：一个可以替换Epydoc 的库，可以自动生成 Python 库的 API 文档。<a href="https://github.com/BurntSushi/pdoc" target="_blank" rel="external">官网</a></li>
+<li>Pycco：文学编程（literate-programming）风格的文档生成器。<a href="https://github.com/pycco-docs/pycco" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>用来保存和解析配置的库。</p>
+<ul>
+<li>config：<a href="https://docs.python.org/2/library/logging.html" target="_blank" rel="external">logging</a> 模块作者写的分级配置模块。<a href="https://www.red-dove.com/config-doc/" target="_blank" rel="external">官网</a></li>
+<li>ConfigObj：INI 文件解析器，带验证功能。<a href="http://www.voidspace.org.uk/python/configobj.html" target="_blank" rel="external">官网</a></li>
+<li>ConfigParser：(Python 标准库) INI 文件解析器。<a href="https://docs.python.org/2/library/configparser.html" target="_blank" rel="external">官网</a></li>
+<li>profig：通过多种格式进行配置，具有数值转换功能。<a href="http://profig.readthedocs.org/en/default/" target="_blank" rel="external">官网</a></li>
+<li>python-decouple：将设置和代码完全隔离。<a href="https://github.com/henriquebastos/python-decouple" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h3><p>用于创建命令行程序的库。</p>
+<ul>
+<li>命令行程序开发<ul>
+<li>cement：Python 的命令行程序框架。<a href="http://builtoncement.com/" target="_blank" rel="external">官网</a></li>
+<li>click：一个通过组合的方式来创建精美命令行界面的包。<a href="http://click.pocoo.org/dev/" target="_blank" rel="external">官网</a></li>
+<li>cliff：一个用于创建命令行程序的框架，可以创建具有多层命令的命令行程序。<a href="http://docs.openstack.org/developer/cliff/" target="_blank" rel="external">官网</a></li>
+<li>clint：Python 命令行程序工具。<a href="https://github.com/kennethreitz/clint" target="_blank" rel="external">官网</a></li>
+<li>colorama：跨平台彩色终端文本。<a href="https://pypi.python.org/pypi/colorama" target="_blank" rel="external">官网</a></li>
+<li>docopt：Python 风格的命令行参数解析器。<a href="http://docopt.org/" target="_blank" rel="external">官网</a></li>
+<li>Gooey：一条命令，将命令行程序变成一个 GUI 程序。<a href="https://github.com/chriskiehl/Gooey" target="_blank" rel="external">官网</a></li>
+<li>python-prompt-toolkit：一个用于构建强大的交互式命令行程序的库。<a href="https://github.com/jonathanslenders/python-prompt-toolkit" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/pythonpy/" target="_blank" rel="external">Pythonpy</a>：在命令行中直接执行任何Python指令。<a href="http://github.com/Russell91/pythonpy/wiki" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>生产力工具<ul>
+<li>aws-cli：Amazon Web Services 的通用命令行界面。<a href="https://github.com/aws/aws-cli" target="_blank" rel="external">官网</a></li>
+<li>bashplotlib：在终端中进行基本绘图。<a href="https://github.com/glamp/bashplotlib" target="_blank" rel="external">官网</a></li>
+<li>caniusepython3：判断是哪个项目妨碍你你移植到 Python 3。<a href="https://github.com/brettcannon/caniusepython3" target="_blank" rel="external">官网</a></li>
+<li>cookiecutter：从 cookiecutters（项目模板）创建项目的一个命令行工具。<a href="https://github.com/audreyr/cookiecutter" target="_blank" rel="external">官网</a></li>
+<li>doitlive：一个用来在终端中进行现场演示的工具。<a href="https://github.com/sloria/doitlive" target="_blank" rel="external">官网</a></li>
+<li>howdoi：通过命令行获取即时的编程问题解答。<a href="https://github.com/gleitz/howdoi" target="_blank" rel="external">官网</a></li>
+<li>httpie：一个命令行HTTP 客户端，cURL 的替代品，易用性更好。<a href="https://github.com/jkbrzt/httpie" target="_blank" rel="external">官网</a></li>
+<li>PathPicker：从bash输出中选出文件。<a href="https://github.com/facebook/PathPicker" target="_blank" rel="external">官网</a></li>
+<li>percol：向UNIX shell 传统管道概念中加入交互式选择功能。<a href="https://github.com/mooz/percol" target="_blank" rel="external">官网</a></li>
+<li>SAWS：一个加强版的 AWS 命令行。<a href="https://github.com/donnemartin/saws" target="_blank" rel="external">官网</a></li>
+<li>thefuck：修正你之前的命令行指令。<a href="https://github.com/nvbn/thefuck" target="_blank" rel="external">官网</a></li>
+<li>mycli：一个 MySQL 命令行客户端，具有自动补全和语法高亮功能。<a href="https://github.com/dbcli/mycli" target="_blank" rel="external">官网</a></li>
+<li>pgcli：Postgres 命令行工具，具有自动补全和语法高亮功能。<a href="https://github.com/dbcli/pgcli" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="下载器"><a href="#下载器" class="headerlink" title="下载器"></a>下载器</h3><p>用来进行下载的库.</p>
+<ul>
+<li>s3cmd：一个用来管理Amazon S3 和 CloudFront 的命令行工具。<a href="https://github.com/s3tools/s3cmd" target="_blank" rel="external">官网</a></li>
+<li>s4cmd：超级 S3 命令行工具，性能更加强劲。<a href="https://github.com/bloomreach/s4cmd" target="_blank" rel="external">官网</a></li>
+<li>you-get：一个 YouTube/Youku/Niconico 视频下载器，使用 Python3 编写。<a href="https://www.soimort.org/you-get/" target="_blank" rel="external">官网</a></li>
+<li>youtube-dl：一个小巧的命令行程序，用来下载 YouTube 视频。<a href="http://rg3.github.io/youtube-dl/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="图像处理"><a href="#图像处理" class="headerlink" title="图像处理"></a>图像处理</h3><p>用来操作图像的库.</p>
+<ul>
+<li>pillow：Pillow 是一个更加易用版的 <a href="http://www.pythonware.com/products/pil/" target="_blank" rel="external">PIL</a>。<a href="http://pillow.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>hmap：图像直方图映射。<a href="https://github.com/rossgoodwin/hmap" target="_blank" rel="external">官网</a></li>
+<li>imgSeek：一个使用视觉相似性搜索一组图片集合的项目。<a href="http://sourceforge.net/projects/imgseek/" target="_blank" rel="external">官网</a></li>
+<li>nude.py：裸体检测。<a href="https://github.com/hhatto/nude.py" target="_blank" rel="external">官网</a></li>
+<li>pyBarcode：不借助 PIL 库在 Python 程序中生成条形码。<a href="https://pythonhosted.org/pyBarcode/" target="_blank" rel="external">官网</a></li>
+<li>pygram：类似 Instagram 的图像滤镜。<a href="https://github.com/ajkumar25/pygram" target="_blank" rel="external">官网</a></li>
+<li>python-qrcode：一个纯 Python 实现的二维码生成器。<a href="https://github.com/lincolnloop/python-qrcode" target="_blank" rel="external">官网</a></li>
+<li>Quads：基于四叉树的计算机艺术。<a href="https://github.com/fogleman/Quads" target="_blank" rel="external">官网</a></li>
+<li>scikit-image：一个用于（科学）图像处理的 Python 库。<a href="http://scikit-image.org/" target="_blank" rel="external">官网</a></li>
+<li>thumbor：一个小型图像服务，具有剪裁，尺寸重设和翻转功能。<a href="https://github.com/thumbor/thumbor" target="_blank" rel="external">官网</a></li>
+<li>wand：<a href="http://www.imagemagick.org/script/magick-wand.php" target="_blank" rel="external">MagickWand</a>的Python 绑定。MagickWand 是 ImageMagick的 C API 。<a href="https://github.com/dahlia/wand" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="OCR"><a href="#OCR" class="headerlink" title="OCR"></a>OCR</h3><p>光学字符识别库。</p>
+<ul>
+<li>pyocr：Tesseract 和 Cuneiform 的一个封装(wrapper)。<a href="https://github.com/jflesch/pyocr" target="_blank" rel="external">官网</a></li>
+<li>pytesseract：<a href="https://github.com/tesseract-ocr" target="_blank" rel="external">Google Tesseract OCR</a> 的另一个封装(wrapper)。<a href="https://github.com/madmaze/pytesseract" target="_blank" rel="external">官网</a></li>
+<li>python-tesseract - <a href="https://github.com/tesseract-ocr" target="_blank" rel="external">Google Tesseract OCR</a> 的一个包装类。</li>
+</ul>
+<h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>用来操作音频的库</p>
+<ul>
+<li>audiolazy：Python 的数字信号处理包。<a href="https://github.com/danilobellini/audiolazy" target="_blank" rel="external">官网</a> </li>
+<li>audioread：交叉库 (GStreamer + Core Audio + MAD + FFmpeg) 音频解码。<a href="https://github.com/beetbox/audioread" target="_blank" rel="external">官网</a></li>
+<li>beets：一个音乐库管理工具及 <a href="https://musicbrainz.org/" target="_blank" rel="external">MusicBrainz</a> 标签添加工具<a href="http://beets.io/" target="_blank" rel="external">官网</a></li>
+<li>dejavu：音频指纹提取和识别<a href="https://github.com/worldveil/dejavu" target="_blank" rel="external">官网</a></li>
+<li>django-elastic-transcoder：Django + <a href="http://aws.amazon.com/elastictranscoder/" target="_blank" rel="external">Amazon Elastic Transcoder</a>。<a href="https://github.com/StreetVoice/django-elastic-transcoder" target="_blank" rel="external">官网</a></li>
+<li>eyeD3：一个用来操作音频文件的工具，具体来讲就是包含 ID3 元信息的 MP3 文件。<a href="http://eyed3.nicfit.net/" target="_blank" rel="external">官网</a></li>
+<li>id3reader：一个用来读取 MP3 元数据的 Python 模块。<a href="http://nedbatchelder.com/code/modules/id3reader.py" target="_blank" rel="external">官网</a></li>
+<li>m3u8：一个用来解析 m3u8 文件的模块。<a href="https://github.com/globocom/m3u8" target="_blank" rel="external">官网</a></li>
+<li>mutagen：一个用来处理音频元数据的 Python 模块。<a href="https://bitbucket.org/lazka/mutagen" target="_blank" rel="external">官网</a></li>
+<li>pydub：通过简单、简洁的高层接口来操作音频文件。<a href="https://github.com/jiaaro/pydub" target="_blank" rel="external">官网</a></li>
+<li>pyechonest：<a href="http://developer.echonest.com/" target="_blank" rel="external">Echo Nest</a> API 的 Python 客户端<a href="https://github.com/echonest/pyechonest" target="_blank" rel="external">官网</a></li>
+<li>talkbox：一个用来处理演讲/信号的 Python 库<a href="http://scikits.appspot.com/talkbox" target="_blank" rel="external">官网</a></li>
+<li>TimeSide：开源 web 音频处理框架。<a href="https://github.com/Parisson/TimeSide" target="_blank" rel="external">官网</a></li>
+<li>tinytag：一个用来读取MP3, OGG, FLAC 以及 Wave 文件音乐元数据的库。<a href="https://github.com/devsnd/tinytag" target="_blank" rel="external">官网</a></li>
+<li>mingus：一个高级音乐理论和曲谱包，支持 MIDI 文件和回放功能。<a href="http://bspaans.github.io/python-mingus/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="Video"><a href="#Video" class="headerlink" title="Video"></a>Video</h3><p>用来操作视频和GIF的库。</p>
+<ul>
+<li>moviepy：一个用来进行基于脚本的视频编辑模块，适用于多种格式，包括动图 GIFs。<a href="http://zulko.github.io/moviepy/" target="_blank" rel="external">官网</a></li>
+<li>scikit-video：SciPy 视频处理常用程序。<a href="https://github.com/aizvorski/scikit-video" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="地理位置"><a href="#地理位置" class="headerlink" title="地理位置"></a>地理位置</h3><p>地理编码地址以及用来处理经纬度的库。</p>
+<ul>
+<li>GeoDjango：世界级地理图形 web 框架。<a href="https://docs.djangoproject.com/en/dev/ref/contrib/gis/" target="_blank" rel="external">官网</a></li>
+<li>GeoIP：MaxMind GeoIP Legacy 数据库的 Python API。<a href="https://github.com/maxmind/geoip-api-python" target="_blank" rel="external">官网</a></li>
+<li>geojson：GeoJSON 的 Python 绑定及工具。<a href="https://github.com/frewsxcv/python-geojson" target="_blank" rel="external">官网</a></li>
+<li>geopy：Python 地址编码工具箱。<a href="https://github.com/geopy/geopy" target="_blank" rel="external">官网</a></li>
+<li>pygeoip：纯 Python GeoIP API。<a href="https://github.com/appliedsec/pygeoip" target="_blank" rel="external">官网</a></li>
+<li>django-countries：一个 Django 应用程序，提供用于表格的国家选择功能，国旗图标静态文件以及模型中的国家字段。<a href="https://github.com/SmileyChris/django-countries" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p>使用HTTP的库。</p>
+<ul>
+<li>requests：人性化的HTTP请求库。<a href="http://docs.python-requests.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>grequests：requests 库 + gevent ，用于异步 HTTP 请求.<a href="https://github.com/kennethreitz/grequests" target="_blank" rel="external">官网</a></li>
+<li>httplib2：全面的 HTTP 客户端库。<a href="https://github.com/jcgregorio/httplib2" target="_blank" rel="external">官网</a></li>
+<li>treq：类似 requests 的Python API 构建于 Twisted HTTP 客户端之上。<a href="https://github.com/twisted/treq" target="_blank" rel="external">官网</a></li>
+<li>urllib3：一个具有线程安全连接池，支持文件 post，清晰友好的 HTTP 库。<a href="https://github.com/shazow/urllib3" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>Python实现的数据库。</p>
+<ul>
+<li>pickleDB：一个简单，轻量级键值储存数据库。<a href="https://pythonhosted.org/pickleDB/" target="_blank" rel="external">官网</a></li>
+<li>PipelineDB：流式 SQL 数据库。<a href="https://www.pipelinedb.com/" target="_blank" rel="external">官网</a></li>
+<li>TinyDB：一个微型的，面向文档型数据库。<a href="https://github.com/msiemens/tinydb" target="_blank" rel="external">官网</a></li>
+<li>ZODB：一个 Python 原生对象数据库。一个键值和对象图数据库。<a href="http://www.zodb.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="数据库驱动"><a href="#数据库驱动" class="headerlink" title="数据库驱动"></a>数据库驱动</h3><p>用来连接和操作数据库的库。</p>
+<ul>
+<li>ySQL：<a href="http://shlomi-noach.github.io/awesome-mysql/" target="_blank" rel="external">awesome-mysql</a>系列<ul>
+<li>mysql-python：Python 的 MySQL 数据库连接器。<a href="http://sourceforge.net/projects/mysql-python/" target="_blank" rel="external">官网</a></li>
+<li>ysqlclient：<a href="https://github.com/PyMySQL/mysqlclient-python" target="_blank" rel="external">mysql-python</a> 分支，支持 Python 3。</li>
+<li>oursql：一个更好的 MySQL 连接器，支持原生预编译指令和 BLOBs.<a href="https://pythonhosted.org/oursql/" target="_blank" rel="external">官网</a></li>
+<li>PyMySQL：纯 Python MySQL 驱动，兼容 mysql-python。<a href="https://github.com/PyMySQL/PyMySQL" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>PostgreSQL<ul>
+<li>psycopg2：Python 中最流行的 PostgreSQL 适配器。<a href="http://initd.org/psycopg/" target="_blank" rel="external">官网</a></li>
+<li>queries：psycopg2 库的封装，用来和 PostgreSQL 进行交互。<a href="https://github.com/gmr/queries" target="_blank" rel="external">官网</a></li>
+<li>txpostgres：基于 Twisted 的异步 PostgreSQL 驱动。<a href="http://txpostgres.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>其他关系型数据库<ul>
+<li>apsw：另一个 Python SQLite封装。<a href="http://rogerbinns.github.io/apsw/" target="_blank" rel="external">官网</a></li>
+<li>dataset：在数据库中存储Python字典</li>
+<li>pymssql：一个简单的Microsoft SQL Server数据库接口。<a href="http://www.pymssql.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>NoSQL 数据库<ul>
+<li>cassandra-python-driver：Cassandra 的 Python 驱动。<a href="https://github.com/datastax/python-driver" target="_blank" rel="external">官网</a></li>
+<li>HappyBase：一个为 Apache HBase 设计的，对开发者友好的库。<a href="http://happybase.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>Plyvel：一个快速且功能丰富的 LevelDB 的 Python 接口。<a href="https://plyvel.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>py2neo：Neo4j restful 接口的Python 封装客户端。<a href="http://py2neo.org/2.0/" target="_blank" rel="external">官网</a></li>
+<li>pycassa：Cassandra 的 Python Thrift 驱动。<a href="https://github.com/pycassa/pycassa" target="_blank" rel="external">官网</a></li>
+<li>PyMongo：MongoDB 的官方 Python 客户端。<a href="https://docs.mongodb.org/ecosystem/drivers/python/" target="_blank" rel="external">官网</a></li>
+<li>redis-py：Redis 的 Python 客户端。<a href="https://github.com/andymccurdy/redis-py" target="_blank" rel="external">官网</a></li>
+<li>telephus：基于 Twisted 的 Cassandra 客户端。<a href="https://github.com/driftx/Telephus" target="_blank" rel="external">官网</a></li>
+<li>txRedis：基于 Twisted 的 Redis 客户端。<a href="https://github.com/deldotdr/txRedis" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="ORM"><a href="#ORM" class="headerlink" title="ORM"></a>ORM</h3><p>实现对象关系映射或数据映射技术的库。</p>
+<ul>
+<li>关系型数据库<ul>
+<li>Django Models：Django 的一部分。<a href="https://docs.djangoproject.com/en/dev/topics/db/models/" target="_blank" rel="external">官网</a></li>
+<li>SQLAlchemy：Python SQL 工具以及对象关系映射工具。<a href="http://www.sqlalchemy.org/" target="_blank" rel="external">官网</a><ul>
+<li><a href="https://github.com/dahlia/awesome-sqlalchemy" target="_blank" rel="external">awesome-sqlalchemy</a>系列</li>
+</ul>
+</li>
+<li>Peewee：一个小巧，富有表达力的 ORM。<a href="https://github.com/coleifer/peewee" target="_blank" rel="external">官网</a></li>
+<li>PonyORM：提供面向生成器的 SQL 接口的 ORM。<a href="https://ponyorm.com/" target="_blank" rel="external">官网</a></li>
+<li>python-sql：编写 Python 风格的 SQL 查询。<a href="https://pypi.python.org/pypi/python-sql" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>NoSQL 数据库<ul>
+<li>django-mongodb-engine：Django MongoDB 后端。<a href="https://github.com/django-nonrel/mongodb-engine" target="_blank" rel="external">官网</a></li>
+<li>PynamoDB：<a href="https://aws.amazon.com/dynamodb/" target="_blank" rel="external">Amazon DynamoDB</a> 的一个 Python 风格接口。<a href="https://github.com/jlafon/PynamoDB" target="_blank" rel="external">官网</a></li>
+<li>flywheel：Amazon DynamoDB 的对象映射工具。<a href="https://github.com/mathcamp/flywheel" target="_blank" rel="external">官网</a></li>
+<li>MongoEngine：一个Python 对象文档映射工具，用于 MongoDB。<a href="http://mongoengine.org/" target="_blank" rel="external">官网</a></li>
+<li>hot-redis：为 Redis 提供 Python 丰富的数据类型。<a href="https://github.com/stephenmcd/hot-redis" target="_blank" rel="external">官网</a></li>
+<li>redisco：一个 Python 库，提供可以持续存在在 Redis 中的简单模型和容器。<a href="https://github.com/kiddouk/redisco" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>其他<ul>
+<li>butterdb：Google Drive 电子表格的 Python ORM。<a href="https://github.com/Widdershin/butterdb" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Web-框架"><a href="#Web-框架" class="headerlink" title="Web 框架"></a>Web 框架</h3><p>全栈 Web 框架。</p>
+<ul>
+<li><a href="http://hao.jobbole.com/django/" target="_blank" rel="external">Django</a>：Python 界最流行的 web 框架。<a href="https://www.djangoproject.com/" target="_blank" rel="external">官网</a><ul>
+<li><a href="https://github.com/rosarior/awesome-django" target="_blank" rel="external">awesome-django</a>系列</li>
+</ul>
+</li>
+<li><a href="http://hao.jobbole.com/flask/" target="_blank" rel="external">Flask</a>：一个 Python 微型框架。<a href="http://flask.pocoo.org/" target="_blank" rel="external">官网</a><ul>
+<li><a href="https://github.com/rosarior/awesome-django" target="_blank" rel="external">awesome-flask</a>系列</li>
+</ul>
+</li>
+<li>yramid：一个小巧，快速，接地气的开源Python web 框架。<ul>
+<li><a href="https://github.com/uralbash/awesome-pyramid" target="_blank" rel="external">awesome-pyramid</a>系列</li>
+</ul>
+</li>
+<li><a href="http://hao.jobbole.com/bottle/" target="_blank" rel="external">Bottle</a>：一个快速小巧，轻量级的 WSGI 微型 web 框架。<a href="http://bottlepy.org/docs/dev/index.html" target="_blank" rel="external">官网</a></li>
+<li>CherryPy：一个极简的 Python web 框架，服从 HTTP/1.1 协议且具有WSGI 线程池。<a href="http://www.cherrypy.org/" target="_blank" rel="external">官网</a></li>
+<li>TurboGears：一个可以扩展为全栈解决方案的微型框架。<a href="http://www.turbogears.org/" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/python-webpy/" target="_blank" rel="external">web.py</a>：一个 Python 的 web 框架，既简单，又强大。<a href="http://webpy.org/" target="_blank" rel="external">官网</a></li>
+<li>web2py：一个全栈 web 框架和平台，专注于简单易用。<a href="http://www.web2py.com/" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/tornado/" target="_blank" rel="external">Tornado</a>：一个web 框架和异步网络库。<a href="http://www.tornadoweb.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h3><p>允许或拒绝用户访问数据或功能的库。</p>
+<ul>
+<li>Carteblanche：Module to align code with thoughts of users and designers. Also magically handles navigation and permissions.<a href="https://github.com/neuman/python-carteblanche/" target="_blank" rel="external">官网</a></li>
+<li>django-guardian：Django 1.2+ 实现了单个对象权限。<a href="https://github.com/django-guardian/django-guardian" target="_blank" rel="external">官网</a></li>
+<li>django-rules：一个小巧但是强大的应用，提供对象级别的权限管理，且不需要使用数据库。<a href="https://github.com/dfunckt/django-rules" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="CMS"><a href="#CMS" class="headerlink" title="CMS"></a>CMS</h3><p>内容管理系统</p>
+<ul>
+<li>django-cms：一个开源的，企业级 CMS，基于 Django。<a href="http://www.django-cms.org/en/" target="_blank" rel="external">官网</a></li>
+<li>djedi-cms：一个轻量级但却非常强大的 Django CMS ，考虑到了插件，内联编辑以及性能。<a href="http://djedi-cms.org/" target="_blank" rel="external">官网</a></li>
+<li>FeinCMS：基于 Django 构建的最先进的内容管理系统之一。<a href="http://www.feincms.org/" target="_blank" rel="external">官网</a></li>
+<li>Kotti：一个高级的，Python 范的 web 应用框架，基于 Pyramid 构建。<a href="http://kotti.pylonsproject.org/" target="_blank" rel="external">官网</a></li>
+<li>Mezzanine：一个强大的，持续的，灵活的内容管理平台。<a href="http://mezzanine.jupo.org/" target="_blank" rel="external">官网</a></li>
+<li>Opps：一个为杂志，报纸网站以及大流量门户网站设计的 CMS 平台，基于 Django。<a href="http://opps.github.io/opps/" target="_blank" rel="external">官网</a></li>
+<li>Plone：一个构建于开源应用服务器 Zope 之上的 CMS。<a href="https://plone.org/" target="_blank" rel="external">官网</a></li>
+<li>Quokka：灵活，可扩展的小型 CMS，基于 Flask 和 MongoDB。<a href="http://quokkaproject.org/" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/wagtail/" target="_blank" rel="external">Wagtail</a>：一个 Django 内容管理系统。<a href="https://wagtail.io/" target="_blank" rel="external">官网</a></li>
+<li>Widgy：最新的 CMS 框架，基于 Django。<a href="https://wid.gy/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="电子商务"><a href="#电子商务" class="headerlink" title="电子商务"></a>电子商务</h3><p>用于电子商务以及支付的框架和库。</p>
+<ul>
+<li>django-oscar：一个用于 Django 的开源的电子商务框架。<a href="http://oscarcommerce.com/" target="_blank" rel="external">官网</a></li>
+<li>django-shop：一个基于 Django 的店铺系统。<a href="https://github.com/awesto/django-shop" target="_blank" rel="external">官网</a></li>
+<li>Cartridge：一个基于 Mezzanine 构建的购物车应用。<a href="https://github.com/stephenmcd/cartridge" target="_blank" rel="external">官网</a></li>
+<li>shoop：一个基于 Django 的开源电子商务平台。<a href="https://www.shoop.io/en/" target="_blank" rel="external">官网</a></li>
+<li>alipay：非官方的 Python 支付宝 API。<a href="https://github.com/lxneng/alipay" target="_blank" rel="external">官网</a></li>
+<li>merchant：一个可以接收来自多种支付平台支付的 Django 应用。<a href="https://github.com/agiliq/merchant" target="_blank" rel="external">官网</a></li>
+<li>money：货币类库with optional CLDR-backed locale-aware formatting and an extensible currency exchange solution.<a href="https://github.com/carlospalol/money" target="_blank" rel="external">官网</a></li>
+<li>python-currencies：显示货币格式以及它的数值。<a href="https://github.com/Alir3z4/python-currencies" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="RESTful-API"><a href="#RESTful-API" class="headerlink" title="RESTful API"></a>RESTful API</h3><p>用来开发RESTful APIs的库</p>
+<ul>
+<li>Django<ul>
+<li>django-rest-framework：一个强大灵活的工具，用来构建 web API。<a href="http://www.django-rest-framework.org/" target="_blank" rel="external">官网</a></li>
+<li>django-tastypie：为Django 应用开发API。<a href="http://tastypieapi.org/" target="_blank" rel="external">官网</a></li>
+<li>django-formapi：为 Django 的表单验证，创建 JSON APIs 。<a href="https://github.com/5monkeys/django-formapi" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Flask<ul>
+<li>flask-api：为 flask 开发的，可浏览 Web APIs 。<a href="http://www.flaskapi.org/" target="_blank" rel="external">官网</a></li>
+<li>flask-restful：为 flask 快速创建REST APIs 。<a href="http://flask-restful.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>flask-restless：为 SQLAlchemy 定义的数据库模型创建 RESTful APIs 。<a href="https://flask-restless.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>flask-api-utils：为 Flask 处理 API 表示和验证。<a href="https://github.com/marselester/flask-api-utils" target="_blank" rel="external">官网</a></li>
+<li>eve：REST API 框架，由 Flask, MongoDB 等驱动。<a href="https://github.com/nicolaiarocci/eve" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Pyramid<ul>
+<li>cornice：一个Pyramid 的 REST 框架 。<a href="https://cornice.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>与框架无关的<ul>
+<li>falcon：一个用来建立云 API 和 web app 后端的噶性能框架。<a href="http://falconframework.org/" target="_blank" rel="external">官网</a></li>
+<li>sandman：为现存的数据库驱动系统自动创建 REST APIs 。<a href="https://github.com/jeffknupp/sandman" target="_blank" rel="external">官网</a></li>
+<li>restless：框架无关的 REST 框架 ，基于从 Tastypie 学到的知识。<a href="http://restless.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>ripozo：快速创建 REST/HATEOAS/Hypermedia APIs。<a href="https://github.com/vertical-knowledge/ripozo" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>实现验证方案的库。</p>
+<ul>
+<li>OAuth<ul>
+<li>Authomatic：简单但是强大的框架，身份验证/授权客户端。<a href="http://peterhudec.github.io/authomatic/" target="_blank" rel="external">官网</a></li>
+<li>django-allauth：Django 的验证应用。<a href="https://github.com/pennersr/django-allauth" target="_blank" rel="external">官网</a></li>
+<li>django-oauth-toolkit：为 Django 用户准备的 OAuth2。<a href="https://github.com/evonove/django-oauth-toolkit" target="_blank" rel="external">官网</a></li>
+<li>django-oauth2-provider：为 Django 应用提供 OAuth2 接入。<a href="https://github.com/caffeinehit/django-oauth2-provider" target="_blank" rel="external">官网</a></li>
+<li>Flask-OAuthlib：OAuth 1.0/a, 2.0 客户端实现，供 Flask 使用。<a href="https://github.com/lepture/flask-oauthlib" target="_blank" rel="external">官网</a></li>
+<li>OAuthLib：一个 OAuth 请求-签名逻辑通用、 完整的实现。<a href="https://github.com/idan/oauthlib" target="_blank" rel="external">官网</a></li>
+<li>python-oauth2：一个完全测试的抽象接口。用来创建 OAuth 客户端和服务端。<a href="https://github.com/joestump/python-oauth2" target="_blank" rel="external">官网</a></li>
+<li>python-social-auth：一个设置简单的社会化验证方式。<a href="https://github.com/omab/python-social-auth" target="_blank" rel="external">官网</a></li>
+<li>rauth：OAuth 1.0/a, 2.0, 和 Ofly 的 Python 库。<a href="https://github.com/litl/rauth" target="_blank" rel="external">官网</a></li>
+<li>sanction：一个超级简单的OAuth2 客户端实现。<a href="https://github.com/demianbrecht/sanction" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>其他<ul>
+<li>jose：JavaScript 对象签名和加密草案的实现。<a href="https://github.com/demonware/jose" target="_blank" rel="external">官网</a></li>
+<li>PyJWT：JSON Web 令牌草案 01。<a href="https://github.com/jpadilla/pyjwt" target="_blank" rel="external">官网</a></li>
+<li>python-jws：JSON Web 签名草案 02 的实现。<a href="https://github.com/brianloveswords/python-jws" target="_blank" rel="external">官网</a></li>
+<li>python-jwt：一个用来生成和验证 JSON Web 令牌的模块。<a href="https://github.com/davedoesdev/python-jwt" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h3><p>模板生成和词法解析的库和工具。</p>
+<ul>
+<li>Jinja2：一个现代的，对设计师友好的模板引擎。<a href="https://github.com/mitsuhiko/jinja2" target="_blank" rel="external">官网</a></li>
+<li>Chameleon：一个 HTML/XML 模板引擎。 模仿了 ZPT（Zope Page Templates）, 进行了速度上的优化。<a href="https://chameleon.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>Genshi：Python 模板工具，用以生成 web 感知的结果。<a href="http://genshi.edgewall.org/" target="_blank" rel="external">官网</a></li>
+<li>Mako：Python 平台的超高速轻量级模板。<a href="http://www.makotemplates.org/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><p>处理事件以及任务队列的库。</p>
+<ul>
+<li>celery：一个异步任务队列/作业队列，基于分布式消息传递。<a href="http://www.celeryproject.org/" target="_blank" rel="external">官网</a></li>
+<li>huey：小型多线程任务队列。<a href="https://github.com/coleifer/huey" target="_blank" rel="external">官网</a></li>
+<li>mrq：Mr. Queue -一个 Python 的分布式 worker 任务队列， 使用 Redis 和 gevent。<a href="https://github.com/pricingassistant/mrq" target="_blank" rel="external">官网</a></li>
+<li>rq：简单的 Python 作业队列。<a href="http://python-rq.org/" target="_blank" rel="external">官网</a></li>
+<li>simpleq：一个简单的，可无限扩张的，基于亚马逊 SQS 的队列。<a href="https://github.com/rdegges/simpleq" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>对数据进行索引和执行搜索查询的库和软件。</p>
+<ul>
+<li>django-haystack：Django 模块化搜索。<a href="https://github.com/django-haystack/django-haystack" target="_blank" rel="external">官网</a></li>
+<li>elasticsearch-py：Elasticsearch 的官方底层 Python 客户端。<a href="https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/index.html" target="_blank" rel="external">官网</a></li>
+<li>elasticsearch-dsl-py：Elasticsearch 的官方高级 Python 客户端。<a href="https://github.com/elastic/elasticsearch-dsl-py" target="_blank" rel="external">官网</a> </li>
+<li>solrpy：<a href="http://lucene.apache.org/solr/" target="_blank" rel="external">solr</a>的 Python 客户端。<a href="https://github.com/edsu/solrpy" target="_blank" rel="external">官网</a></li>
+<li>Whoosh：一个快速的纯 Python 搜索引擎库。<a href="http://whoosh.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="动态消息"><a href="#动态消息" class="headerlink" title="动态消息"></a>动态消息</h3><p>用来创建用户活动的库。</p>
+<ul>
+<li>django-activity-stream：从你的站点行为中生成通用活动信息流。<a href="https://github.com/justquick/django-activity-stream" target="_blank" rel="external">官网</a></li>
+<li>Stream-Framework：使用 Cassandra 和 Redis 创建动态消息和通知系统。<a href="https://github.com/tschellenbach/Stream-Framework" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="资源管理"><a href="#资源管理" class="headerlink" title="资源管理"></a>资源管理</h3><p>管理、压缩、缩小网站资源的工具。</p>
+<ul>
+<li>django-compressor：将链接和内联的 JavaScript 或 CSS 压缩到一个单独的缓存文件中。<a href="https://github.com/django-compressor/django-compressor" target="_blank" rel="external">官网</a></li>
+<li>django-storages：一个针对 Django 的自定义存储后端的工具集合。<a href="http://django-storages.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>fanstatic：打包、优化，并且把静态文件依赖作为 Python 的包来提供。<a href="http://www.fanstatic.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>File Conveyor：一个后台驻留的程序，用来发现和同步文件到 CDNs, S3 和 FTP。<a href="http://fileconveyor.org/" target="_blank" rel="external">官网</a></li>
+<li>Flask-Assets：帮你将 web 资源整合到你的 Flask app 中。<a href="http://flask-assets.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>jinja-assets-compressor：一个 Jinja 扩展，用来编译和压缩你的资源。<a href="https://github.com/jaysonsantos/jinja-assets-compressor" target="_blank" rel="external">官网</a></li>
+<li>webassets：为你的静态资源打包、优化和管理生成独一无二的缓存 URL。<a href="http://webassets.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>缓存数据的库。</p>
+<ul>
+<li>Beaker：一个缓存和会话库，可以用在 web 应用和独立 Python脚本和应用上。<a href="http://beaker.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>django-cache-machine：Django 模型的自动缓存和失效。<a href="https://github.com/django-cache-machine/django-cache-machine" target="_blank" rel="external">官网</a></li>
+<li>django-cacheops：具有自动颗粒化事件驱动失效功能的 ORM。<a href="https://github.com/Suor/django-cacheops" target="_blank" rel="external">官网</a></li>
+<li>django-viewlet：渲染模板，同时具有额外的缓存控制功能。<a href="https://github.com/5monkeys/django-viewlet" target="_blank" rel="external">官网</a></li>
+<li>dogpile.cache：dogpile.cache 是 Beaker 的下一代替代品，由同一作者开发。<a href="http://dogpilecache.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>HermesCache：Python 缓存库，具有基于标签的失效和 dogpile effect 保护功能。<a href="https://pypi.python.org/pypi/HermesCache" target="_blank" rel="external">官网</a></li>
+<li>johnny-cache：django应用缓存框架。<a href="https://github.com/jmoiron/johnny-cache" target="_blank" rel="external">官网</a></li>
+<li>pylibmc：<a href="http://libmemcached.org/libMemcached.html" target="_blank" rel="external">libmemcached</a> 接口的 Python 封装。<a href="https://github.com/lericson/pylibmc" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h3><p>用来发送和解析电子邮件的库。</p>
+<ul>
+<li>django-celery-ses：带有 AWS SES 和 Celery 的 Django email 后端。<a href="https://github.com/StreetVoice/django-celery-ses" target="_blank" rel="external">官网</a></li>
+<li>envelopes：供人类使用的电子邮件库。<a href="http://tomekwojcik.github.io/envelopes/" target="_blank" rel="external">官网</a></li>
+<li>flanker：一个 email 地址和 Mime 解析库。<a href="https://github.com/mailgun/flanker" target="_blank" rel="external">官网</a></li>
+<li>imbox：Python IMAP 库<a href="https://github.com/martinrusev/imbox" target="_blank" rel="external">官网</a></li>
+<li>inbox.py：Python SMTP 服务器。<a href="https://github.com/kennethreitz/inbox.py" target="_blank" rel="external">官网</a></li>
+<li>inbox：一个开源电子邮件工具箱。<a href="https://github.com/nylas/sync-engine" target="_blank" rel="external">官网</a></li>
+<li>lamson：Python 风格的 SMTP 应用服务器。<a href="https://github.com/zedshaw/lamson" target="_blank" rel="external">官网</a></li>
+<li>mailjet：Mailjet API 实现，用来提供批量发送邮件，统计等功能。<a href="https://github.com/WoLpH/mailjet" target="_blank" rel="external">官网</a></li>
+<li>marrow.mailer：高性能可扩展邮件分发框架。<a href="https://github.com/marrow/marrow.mailer" target="_blank" rel="external">官网</a></li>
+<li>modoboa：一个邮件托管和管理平台，具有现代的、简约的 Web UI。<a href="https://github.com/tonioo/modoboa" target="_blank" rel="external">官网</a></li>
+<li>pyzmail：创建，发送和解析电子邮件。<a href="http://www.magiksys.net/pyzmail/" target="_blank" rel="external">官网</a></li>
+<li>Talon：Mailgun 库，用来抽取信息和签名。<a href="https://github.com/mailgun/talon" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="国际化"><a href="#国际化" class="headerlink" title="国际化"></a>国际化</h3><p>用来进行国际化的库。</p>
+<ul>
+<li>Babel：一个Python 的国际化库。<a href="http://babel.pocoo.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>Korean：一个韩语词态库。<a href="https://korean.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="URL处理"><a href="#URL处理" class="headerlink" title="URL处理"></a>URL处理</h3><p>解析URLs的库</p>
+<ul>
+<li>furl：一个让处理 URL 更简单小型 Python 库。<a href="https://github.com/gruns/furl" target="_blank" rel="external">官网</a></li>
+<li>purl：一个简单的，不可变的URL类，具有简洁的 API 来进行询问和处理。<a href="https://github.com/codeinthehole/purl" target="_blank" rel="external">官网</a></li>
+<li>pyshorteners：一个纯 Python URL 缩短库。<a href="https://github.com/ellisonleao/pyshorteners" target="_blank" rel="external">官网</a></li>
+<li>shorturl：生成短小 URL 和类似 bit.ly 短链的Python 实现。<a href="https://github.com/Alir3z4/python-shorturl" target="_blank" rel="external">官网</a></li>
+<li>webargs：一个解析 HTTP 请求参数的库，内置对流行 web 框架的支持，包括 Flask, Django, Bottle, Tornado和 Pyramid。<a href="https://github.com/sloria/webargs" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="HTML处理"><a href="#HTML处理" class="headerlink" title="HTML处理"></a>HTML处理</h3><p>处理 HTML和XML的库。</p>
+<ul>
+<li>BeautifulSoup：以 Python 风格的方式来对 HTML 或 XML 进行迭代，搜索和修改。<a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank" rel="external">官网</a></li>
+<li>bleach：一个基于白名单的 HTML 清理和文本链接库。<a href="http://bleach.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>cssutils：一个 Python 的 CSS 库。<a href="https://pypi.python.org/pypi/cssutils/" target="_blank" rel="external">官网</a></li>
+<li>html5lib：一个兼容标准的 HTML 文档和片段解析及序列化库。<a href="https://github.com/html5lib/html5lib-python" target="_blank" rel="external">官网</a></li>
+<li>lxml：一个非常快速，简单易用，功能齐全的库，用来处理 HTML 和 XML。<a href="http://lxml.de/" target="_blank" rel="external">官网</a></li>
+<li>MarkupSafe：为Python 实现 XML/HTML/XHTML 标记安全字符串。<a href="https://github.com/mitsuhiko/markupsafe" target="_blank" rel="external">官网</a></li>
+<li>pyquery：一个解析 HTML 的库，类似 jQuery。<a href="https://github.com/gawel/pyquery" target="_blank" rel="external">官网</a></li>
+<li>untangle：将XML文档转换为Python对象，使其可以方便的访问。<a href="https://github.com/stchris/untangle" target="_blank" rel="external">官网</a></li>
+<li>xhtml2pdf：HTML/CSS 转 PDF 工具。<a href="https://github.com/xhtml2pdf/xhtml2pdf" target="_blank" rel="external">官网</a></li>
+<li>xmltodict：像处理 JSON 一样处理 XML。<a href="https://github.com/martinblech/xmltodict" target="_blank" rel="external">官网</a></li>
+</ul>
+<p>爬取网络站点的库</p>
+<ul>
+<li>Scrapy：一个快速高级的屏幕爬取及网页采集框架。<a href="http://scrapy.org/" target="_blank" rel="external">官网</a></li>
+<li>cola：一个分布式爬虫框架。<a href="https://github.com/chineking/cola" target="_blank" rel="external">官网</a></li>
+<li>Demiurge：基于PyQuery 的爬虫微型框架。<a href="https://github.com/matiasb/demiurge" target="_blank" rel="external">官网</a></li>
+<li>feedparser：通用 feed 解析器。<a href="http://pythonhosted.org/feedparser/" target="_blank" rel="external">官网</a></li>
+<li>Grab：站点爬取框架。<a href="http://grablib.org/" target="_blank" rel="external">官网</a></li>
+<li>MechanicalSoup：用于自动和网络站点交互的 Python 库。<a href="https://github.com/hickford/MechanicalSoup" target="_blank" rel="external">官网</a></li>
+<li>portia：Scrapy 可视化爬取。<a href="https://github.com/scrapinghub/portia" target="_blank" rel="external">官网</a></li>
+<li>pyspider：一个强大的爬虫系统。<a href="https://github.com/binux/pyspider" target="_blank" rel="external">官网</a></li>
+<li>RoboBrowser：一个简单的，Python 风格的库，用来浏览网站，而不需要一个独立安装的浏览器。<a href="https://github.com/jmcarp/robobrowser" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="网页内容提取"><a href="#网页内容提取" class="headerlink" title="网页内容提取"></a>网页内容提取</h3><p>用于进行网页内容提取的库。</p>
+<ul>
+<li>Haul：一个可以扩展的图像爬取工具。<a href="https://github.com/vinta/Haul" target="_blank" rel="external">官网</a></li>
+<li>html2text：将 HTML 转换为 Markdown 格式文本<a href="https://github.com/Alir3z4/html2text" target="_blank" rel="external">官网</a></li>
+<li>lassie：人性化的网页内容检索库。<a href="https://github.com/michaelhelmick/lassie" target="_blank" rel="external">官网</a></li>
+<li>micawber：一个小型网页内容提取库，用来从 URLs 提取富内容。<a href="https://github.com/coleifer/micawber" target="_blank" rel="external">官网</a> </li>
+<li><a href="http://hao.jobbole.com/python-newspaper/" target="_blank" rel="external">newspaper</a>：使用 Python 进行新闻提取，文章提取以及内容策展。<a href="https://github.com/codelucas/newspaper" target="_blank" rel="external">官网</a></li>
+<li>opengraph：一个用来解析开放内容协议(Open Graph Protocol)的 Python模块。<a href="https://github.com/erikriver/opengraph" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/python-goose/" target="_blank" rel="external">python-goose</a>：HTML内容/文章提取器。<a href="https://github.com/grangier/python-goose" target="_blank" rel="external">官网</a></li>
+<li>python-readability：arc90 公司 readability 工具的 Python 高速端口。<a href="https://github.com/buriy/python-readability" target="_blank" rel="external">官网</a></li>
+<li>sanitize：为杂乱的数据世界带来调理性。<a href="https://github.com/Alir3z4/python-sanitize" target="_blank" rel="external">官网</a></li>
+<li>sumy：一个为文本文件和 HTML 页面进行自动摘要的模块。<a href="https://github.com/miso-belica/sumy" target="_blank" rel="external">官网</a></li>
+<li>textract：从任何格式的文档中提取文本，Word，PowerPoint，PDFs 等等。<a href="https://github.com/deanmalmgren/textract" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><p>进行表单操作的库。</p>
+<ul>
+<li>Deform：Python HTML 表单生成库，受到了 formish 表单生成库的启发。<a href="http://deform.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>django-bootstrap3：集成了 Bootstrap 3 的 Django。<a href="https://github.com/dyve/django-bootstrap3" target="_blank" rel="external">官网</a></li>
+<li>django-crispy-forms：一个 Django 应用，他可以让你以一种非常优雅且 DRY（Don’t repeat yourself） 的方式来创建美观的表单。<a href="http://django-crispy-forms.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>django-remote-forms：一个平台独立的 Django 表单序列化工具。<a href="https://github.com/WiserTogether/django-remote-forms" target="_blank" rel="external">官网</a></li>
+<li>WTForms：一个灵活的表单验证和呈现库。<a href="http://wtforms.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>WTForms-JSON：一个 WTForms 扩展，用来处理 JSON 数据。<a href="http://wtforms-json.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="数据验证"><a href="#数据验证" class="headerlink" title="数据验证"></a>数据验证</h3><p>数据验证库。多用于表单验证。</p>
+<ul>
+<li>Cerberus：A mappings-validator with a variety of rules, normalization-features and simple customization that uses a pythonic schema-definition.<a href="http://docs.python-cerberus.org/en/stable/" target="_blank" rel="external">官网</a></li>
+<li>colander：一个用于对从 XML, JSON，HTML 表单获取的数据或其他同样简单的序列化数据进行验证和反序列化的系统。<a href="http://docs.pylonsproject.org/projects/colander/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>kmatch：一种用于匹配/验证/筛选 Python 字典的语言。<a href="https://github.com/ambitioninc/kmatch" target="_blank" rel="external">官网</a></li>
+<li>schema：一个用于对 Python 数据结构进行验证的库。<a href="https://github.com/keleshev/schema" target="_blank" rel="external">官网</a> </li>
+<li>Schematics：数据结构验证。<a href="https://github.com/schematics/schematics" target="_blank" rel="external">官网</a></li>
+<li>valideer：轻量级可扩展的数据验证和适配库。<a href="https://github.com/podio/valideer" target="_blank" rel="external">官网</a></li>
+<li>voluptuous：一个 Python 数据验证库。主要是为了验证传入 Python的 JSON，YAML 等数据。<a href="https://github.com/alecthomas/voluptuous" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="反垃圾技术"><a href="#反垃圾技术" class="headerlink" title="反垃圾技术"></a>反垃圾技术</h3><p>帮助你和电子垃圾进行战斗的库。</p>
+<ul>
+<li>django-simple-captcha：一个简单、高度可定制的Django 应用，可以为任何Django表单添加验证码。<a href="https://github.com/mbi/django-simple-captcha" target="_blank" rel="external">官网</a></li>
+<li>django-simple-spam-blocker：一个用于Django的简单的电子垃圾屏蔽工具。<a href="https://github.com/moqada/django-simple-spam-blocker" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="标记"><a href="#标记" class="headerlink" title="标记"></a>标记</h3><p>用来进行标记的库。</p>
+<ul>
+<li>django-taggit：简单的 Django 标记工具。<a href="https://github.com/alex/django-taggit" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="管理面板"><a href="#管理面板" class="headerlink" title="管理面板"></a>管理面板</h3><p>管理界面库。</p>
+<ul>
+<li>Ajenti：一个你的服务器值得拥有的管理面板。<a href="https://github.com/Eugeny/ajenti" target="_blank" rel="external">官网</a></li>
+<li>django-suit：Django 管理界面的一个替代品 (仅对于非商业用途是免费的)。<a href="http://djangosuit.com/" target="_blank" rel="external">官网</a></li>
+<li>django-xadmin：Django admin 的一个替代品，具有很多不错的功能。<a href="https://github.com/sshwsfc/django-xadmin" target="_blank" rel="external">官网</a></li>
+<li>flask-admin：一个用于 Flask 的简单可扩展的管理界面框架。<a href="https://github.com/flask-admin/flask-admin" target="_blank" rel="external">官网</a></li>
+<li>flower：一个对 Celery 集群进行实时监控和提供 web 管理界面的工具。<a href="https://github.com/mher/flower" target="_blank" rel="external">官网</a></li>
+<li>Grappelli：Django 管理界面的一个漂亮的皮肤。<a href="http://grappelliproject.com/" target="_blank" rel="external">官网</a> </li>
+<li>Wooey：一个 Django 应用，可以为 Python 脚本创建 web 用户界面。<a href="https://github.com/wooey/wooey" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="静态站点生成器"><a href="#静态站点生成器" class="headerlink" title="静态站点生成器"></a>静态站点生成器</h3><p>静态站点生成器是一个软件，它把文本和模板作为输入，然后输出HTML文件。</p>
+<ul>
+<li>Pelican：使用 Markdown 或 ReST 来处理内容， Jinja 2 来制作主题。支持 DVCS, Disqus.。AGPL 许可。<a href="http://blog.getpelican.com/" target="_blank" rel="external">官网</a></li>
+<li>Cactus：为设计师设计的静态站点生成器。<a href="https://github.com/koenbok/Cactus/" target="_blank" rel="external">官网</a> </li>
+<li>Hyde：基于 Jinja2 的静态站点生成器。<a href="http://hyde.github.io/" target="_blank" rel="external">官网</a></li>
+<li>Nikola：一个静态网站和博客生成器。<a href="https://www.getnikola.com/" target="_blank" rel="external">官网</a></li>
+<li>Tinkerer：Tinkerer 是一个博客引擎/静态站点生成器，由Sphinx驱动。<a href="http://tinkerer.me/" target="_blank" rel="external">官网</a></li>
+<li>Lektor：一个简单易用的静态 CMS 和博客引擎。<a href="https://www.getlektor.com/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>操作系统进程启动及通信库。</p>
+<ul>
+<li>envoy：比 Python <a href="https://docs.python.org/2/library/subprocess.html" target="_blank" rel="external">subprocess</a> 模块更人性化。<a href="https://github.com/kennethreitz/envoy" target="_blank" rel="external">官网</a></li>
+<li>sarge：另一 种 subprocess 模块的封装。<a href="http://sarge.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>sh：一个完备的 subprocess 替代库。<a href="https://github.com/amoffat/sh" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="并发和并行"><a href="#并发和并行" class="headerlink" title="并发和并行"></a>并发和并行</h3><p>用以进行并发和并行操作的库。</p>
+<ul>
+<li>multiprocessing：(Python 标准库) 基于进程的“线程”接口。<a href="https://docs.python.org/2/library/multiprocessing.html" target="_blank" rel="external">官网</a></li>
+<li>threading：(Python 标准库)更高层的线程接口。<a href="https://docs.python.org/2/library/threading.html" target="_blank" rel="external">官网</a></li>
+<li>eventlet：支持 WSGI 的异步框架。<a href="http://eventlet.net/" target="_blank" rel="external">官网</a></li>
+<li>gevent：一个基于协程的 Python 网络库，使用<a href="https://github.com/python-greenlet/greenlet" target="_blank" rel="external">greenlet</a>。<a href="http://www.gevent.org/" target="_blank" rel="external">官网</a></li>
+<li>Tomorrow：用于产生异步代码的神奇的装饰器语法实现。<a href="https://github.com/madisonmay/Tomorrow" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><p>用于网络编程的库。</p>
+<ul>
+<li>asyncio：(Python 标准库) 异步 I/O, 事件循环, 协程以及任务。<a href="https://docs.python.org/3/library/asyncio.html" target="_blank" rel="external">官网</a></li>
+<li>Twisted：一个事件驱动的网络引擎。<a href="https://twistedmatrix.com/trac/" target="_blank" rel="external">官网</a></li>
+<li>pulsar：事件驱动的并发框架。<a href="https://github.com/quantmind/pulsar" target="_blank" rel="external">官网</a></li>
+<li>diesel：基于Greenlet 的事件 I/O 框架。<a href="https://github.com/dieseldev/diesel" target="_blank" rel="external">官网</a></li>
+<li>pyzmq：一个 ZeroMQ 消息库的 Python 封装。<a href="http://zeromq.github.io/pyzmq/" target="_blank" rel="external">官网</a></li>
+<li>txZMQ：基于 Twisted 的 ZeroMQ 消息库的 Python 封装。<a href="https://github.com/smira/txZMQ" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h3><p>帮助使用WebSocket的库。</p>
+<ul>
+<li>AutobahnPython：给 Python 、使用的 WebSocket &amp; WAMP 基于 Twisted 和 <a href="https://docs.python.org/3/library/asyncio.html" target="_blank" rel="external">asyncio</a>。<a href="https://github.com/crossbario/autobahn-python" target="_blank" rel="external">官网</a></li>
+<li>Crossbar：开源统一应用路由(Websocket &amp; WAMP for Python on Autobahn).<a href="https://github.com/crossbario/crossbar/" target="_blank" rel="external">官网</a></li>
+<li>django-socketio：给 Django 用的 WebSockets。<a href="https://github.com/stephenmcd/django-socketio" target="_blank" rel="external">官网</a></li>
+<li>WebSocket-for-Python：为Python2/3 以及 PyPy 编写的 WebSocket 客户端和服务器库。<a href="https://github.com/Lawouach/WebSocket-for-Python" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="WSGI-服务器"><a href="#WSGI-服务器" class="headerlink" title="WSGI 服务器"></a>WSGI 服务器</h3><p>兼容 WSGI 的 web 服务器</p>
+<ul>
+<li>gunicorn：Pre-forked, 部分是由 C 语言编写的。<a href="https://pypi.python.org/pypi/gunicorn" target="_blank" rel="external">官网</a></li>
+<li>uwsgi：uwsgi 项目的目的是开发一组全栈工具，用来建立托管服务， 由 C 语言编写。<a href="https://uwsgi-docs.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>bjoern：异步，非常快速，由 C 语言编写。<a href="https://pypi.python.org/pypi/bjoern" target="_blank" rel="external">官网</a></li>
+<li>fapws3：异步 (仅对于网络端)，由 C 语言编写。<a href="http://www.fapws.org/" target="_blank" rel="external">官网</a></li>
+<li>meinheld：异步，部分是由 C 语言编写的。<a href="https://pypi.python.org/pypi/meinheld" target="_blank" rel="external">官网</a></li>
+<li>netius：异步，非常快速。<a href="https://github.com/hivesolutions/netius" target="_blank" rel="external">官网</a></li>
+<li>paste：多线程，稳定，久经考验。<a href="http://pythonpaste.org/" target="_blank" rel="external">官网</a></li>
+<li>rocket：多线程。<a href="https://pypi.python.org/pypi/rocket" target="_blank" rel="external">官网</a></li>
+<li>waitress：多线程, 是它驱动着 Pyramid 框架。<a href="https://waitress.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>Werkzeug：一个 WSGI 工具库，驱动着 Flask ，而且可以很方便大嵌入到你的项目中去。<a href="http://werkzeug.pocoo.org/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="RPC-服务器"><a href="#RPC-服务器" class="headerlink" title="RPC 服务器"></a>RPC 服务器</h3><p>兼容 RPC 的服务器。</p>
+<ul>
+<li>SimpleJSONRPCServer：这个库是 JSON-RPC 规范的一个实现。<a href="https://github.com/joshmarshall/jsonrpclib/" target="_blank" rel="external">官网</a></li>
+<li>SimpleXMLRPCServer：(Python 标准库) 简单的 XML-RPC 服务器实现，单线程。<a href="https://docs.python.org/2/library/simplexmlrpcserver.html" target="_blank" rel="external">官网</a></li>
+<li>zeroRPC：zerorpc 是一个灵活的 RPC 实现，基于 ZeroMQ 和 MessagePack。<a href="https://github.com/0rpc/zerorpc-python" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="密码学"><a href="#密码学" class="headerlink" title="密码学"></a>密码学</h3><ul>
+<li>cryptography：这个软件包意在提供密码学基本内容和方法提供给 Python 开发者。<a href="https://cryptography.io/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>hashids：在 Python 中实现 <a href="http://hashids.org/" target="_blank" rel="external">hashids</a> 。<a href="https://github.com/davidaurelio/hashids-python" target="_blank" rel="external">官网</a></li>
+<li>Paramiko：SSHv2 协议的 Python (2.6+, 3.3+) ，提供客户端和服务端的功能。<a href="http://www.paramiko.org/" target="_blank" rel="external">官网</a></li>
+<li>Passlib：安全密码存储／哈希库，<a href="https://pythonhosted.org/passlib/" target="_blank" rel="external">官网</a></li>
+<li>PyCrypto：Python 密码学工具箱。<a href="https://www.dlitz.net/software/pycrypto/" target="_blank" rel="external">官网</a></li>
+<li>PyNacl：网络和密码学(NaCl) 库的 Python 绑定。<a href="https://github.com/pyca/pynacl" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="图形用户界面"><a href="#图形用户界面" class="headerlink" title="图形用户界面"></a>图形用户界面</h3><p>用来创建图形用户界面程序的库。</p>
+<ul>
+<li>curses：内建的 <a href="http://www.gnu.org/software/ncurses/" target="_blank" rel="external">ncurses</a> 封装，用来创建终端图形用户界面。<a href="https://docs.python.org/2/library/curses.html#module-curses" target="_blank" rel="external">官网</a></li>
+<li>enaml：使用类似 QML 的Declaratic语法来创建美观的用户界面。<a href="https://github.com/nucleic/enaml" target="_blank" rel="external">官网</a></li>
+<li>kivy：一个用来创建自然用户交互（NUI）应用程序的库，可以运行在 Windows, Linux, Mac OS X, Android 以及 iOS平台上。<a href="https://kivy.org/" target="_blank" rel="external">官网</a></li>
+<li>pyglet：一个Python 的跨平台窗口及多媒体库。<a href="https://bitbucket.org/pyglet/pyglet/wiki/Home" target="_blank" rel="external">官网</a></li>
+<li>PyQt：跨平台用户界面框架 <a href="http://www.qt.io/" target="_blank" rel="external">Qt</a> 的 Python 绑定 ，支持Qt v4 和 Qt v5。<a href="https://riverbankcomputing.com/software/pyqt/intro" target="_blank" rel="external">官网</a></li>
+<li>PySide：P跨平台用户界面框架 <a href="http://www.qt.io/" target="_blank" rel="external">Qt</a> 的 Python 绑定 ，支持Qt v4。<a href="https://wiki.qt.io/PySide" target="_blank" rel="external">官网</a></li>
+<li>Tkinter：Tkinter 是 Python GUI 的一个事实标准库。<a href="https://wiki.python.org/moin/TkInter" target="_blank" rel="external">官网</a></li>
+<li>Toga：一个 Python 原生的, 操作系统原生的 GUI 工具包。<a href="https://github.com/pybee/toga" target="_blank" rel="external">官网</a></li>
+<li>urwid：一个用来创建终端 GUI 应用的库，支持组件，事件和丰富的色彩等。<a href="http://urwid.org/" target="_blank" rel="external">官网</a></li>
+<li>wxPython：wxPython 是 wxWidgets C++ 类库和 Python 语言混合的产物。<a href="http://wxpython.org/" target="_blank" rel="external">官网</a></li>
+<li>PyGObject：GLib/GObject/GIO/GTK+ (GTK+3) 的 Python 绑定<a href="https://wiki.gnome.org/Projects/PyGObject" target="_blank" rel="external">官网</a></li>
+<li>Flexx：Flexx 是一个纯 Python 语言编写的用来创建 GUI 程序的工具集，它使用 web 技术进行界面的展示。<a href="https://github.com/zoofIO/flexx" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="游戏开发"><a href="#游戏开发" class="headerlink" title="游戏开发"></a>游戏开发</h3><p>超赞的游戏开发库。</p>
+<ul>
+<li>Cocos2d：cocos2d 是一个用来开发 2D 游戏， 示例和其他图形/交互应用的框架。基于 pyglet。<a href="http://cocos2d.org/" target="_blank" rel="external">官网</a></li>
+<li>Panda3D：由迪士尼开发的 3D 游戏引擎，并由卡内基梅陇娱乐技术中心负责维护。使用C++编写, 针对 Python 进行了完全的封装。<a href="https://www.panda3d.org/" target="_blank" rel="external">官网</a></li>
+<li>Pygame：Pygame 是一组 Python 模块，用来编写游戏。<a href="http://www.pygame.org/news.html" target="_blank" rel="external">官网</a></li>
+<li>PyOgre：Ogre 3D 渲染引擎的 Python 绑定，可以用来开发游戏和仿真程序等任何 3D 应用。<a href="http://www.ogre3d.org/tikiwiki/PyOgre" target="_blank" rel="external">官网</a></li>
+<li>PyOpenGL：OpenGL 的 Python 绑定及其相关 APIs。<a href="http://pyopengl.sourceforge.net/" target="_blank" rel="external">官网</a></li>
+<li>PySDL2：SDL2 库的封装，基于 ctypes。<a href="http://pysdl2.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>RenPy：一个视觉小说（visual novel）引擎。<a href="http://www.renpy.org/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><p>用来生成和操作日志的库。</p>
+<ul>
+<li>logging：(Python 标准库) 为 Python 提供日志功能。<a href="https://docs.python.org/2/library/logging.html" target="_blank" rel="external">官网</a></li>
+<li>logbook：Logging 库的替代品。<a href="http://pythonhosted.org/Logbook/" target="_blank" rel="external">官网</a></li>
+<li>Eliot：为复杂的和分布式系统创建日志。<a href="https://eliot.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>Raven：Sentry的 Python 客户端。<a href="http://raven.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>Sentry：实时记录和收集日志的服务器。<a href="https://pypi.python.org/pypi/sentry" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h3><p>进行代码库测试和生成测试数据的库。</p>
+<ul>
+<li>测试框架<ul>
+<li>unittest：(Python 标准库) 单元测试框架。<a href="https://docs.python.org/2/library/unittest.html" target="_blank" rel="external">官网</a></li>
+<li>nose：nose 扩展了 unittest 的功能。<a href="https://nose.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>contexts：一个 Python 3.3+ 的 BDD 框架。受到C#</li>
+<li>hypothesis：Hypothesis 是一个基于先进的 Quickcheck 风格特性的测试库。<a href="https://github.com/DRMacIver/hypothesis" target="_blank" rel="external">官网</a></li>
+<li>mamba：Python 的终极测试工具， 拥护BDD。<a href="http://nestorsalceda.github.io/mamba/" target="_blank" rel="external">官网</a></li>
+<li>PyAutoGUI：PyAutoGUI 是一个人性化的跨平台 GUI 自动测试模块。<a href="https://github.com/asweigart/pyautogui" target="_blank" rel="external">官网</a></li>
+<li>pyshould：Should 风格的断言，基于 <a href="https://github.com/hamcrest/PyHamcrest" target="_blank" rel="external">PyHamcrest</a>。<a href="https://github.com/drslump/pyshould" target="_blank" rel="external">官网</a></li>
+<li>pytest：一个成熟的全功能 Python 测试工具。<a href="http://pytest.org/latest/" target="_blank" rel="external">官网</a></li>
+<li>green：干净，多彩的测试工具。<a href="https://github.com/CleanCut/green" target="_blank" rel="external">官网</a></li>
+<li>pyvows：BDD 风格的测试工具，受Vows.js的启发。<a href="http://heynemann.github.io/pyvows/" target="_blank" rel="external">官网</a>-</li>
+<li>Robot Framework：一个通用的自动化测试框架。<a href="https://github.com/robotframework/robotframework" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Web 测试<ul>
+<li>Selenium：<a href="http://www.seleniumhq.org/" target="_blank" rel="external">Selenium</a> WebDriver 的 Python 绑定。<a href="https://pypi.python.org/pypi/selenium" target="_blank" rel="external">官网</a></li>
+<li>locust：使用 Python 编写的，可扩展的用户加载测试工具。<a href="https://github.com/locustio/locust" target="_blank" rel="external">官网</a></li>
+<li>sixpack：一个和语言无关的 A/B 测试框架。<a href="https://github.com/seatgeek/sixpack" target="_blank" rel="external">官网</a></li>
+<li>splinter：开源的 web 应用测试工具。<a href="https://splinter.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Mock测试<ul>
+<li>mock：(Python 标准库) 一个用于伪造测试的库。<a href="https://docs.python.org/3/library/unittest.mock.html" target="_blank" rel="external">官网</a></li>
+<li>doublex：Python 的一个功能强大的 doubles  测试框架。<a href="https://pypi.python.org/pypi/doublex" target="_blank" rel="external">官网</a></li>
+<li>freezegun：通过伪造日期模块来生成不同的时间。<a href="https://github.com/spulec/freezegun" target="_blank" rel="external">官网</a></li>
+<li>httmock：针对 Python 2.6+ 和 3.2+ 生成 伪造请求的库。<a href="https://github.com/patrys/httmock" target="_blank" rel="external">官网</a></li>
+<li>httpretty：Python 的 HTTP 请求 mock 工具。<a href="http://falcao.it/HTTPretty/" target="_blank" rel="external">官网</a></li>
+<li>responses：伪造 Python 中的 requests 库的一个通用库。<a href="https://github.com/getsentry/responses" target="_blank" rel="external">官网</a></li>
+<li>VCR.py：在你的测试中记录和重放 HTTP 交互。<a href="https://github.com/kevin1024/vcrpy" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>对象工厂<ul>
+<li>factoryboy：一个 Python 用的测试固件 (test fixtures) 替代库。<a href="https://github.com/rbarrois/factoryboy" target="_blank" rel="external">官网</a></li>
+<li>mixer：另外一个测试固件 (test fixtures) 替代库，支持 Django, Flask, SQLAlchemy, Peewee 等。<a href="https://github.com/klen/mixer" target="_blank" rel="external">官网</a></li>
+<li>modelmommy：为 Django 测试创建随机固件<a href="https://github.com/vandersonmota/modelmommy" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>代码覆盖率<ul>
+<li>coverage：代码覆盖率测量。<a href="https://pypi.python.org/pypi/coverage" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>伪数据<ul>
+<li>faker：一个 Python 库，用来生成伪数据。<a href="http://www.joke2k.net/faker/" target="_blank" rel="external">官网</a></li>
+<li>fake2db：伪数据库生成器。<a href="https://github.com/emirozer/fake2db" target="_blank" rel="external">官网</a></li>
+<li>radar：生成随机的日期/时间。<a href="https://pypi.python.org/pypi/radar" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>错误处理<ul>
+<li>FuckIt.py：FuckIt.py 使用最先进的技术来保证你的 Python 代码无论对错都能继续运行。<a href="https://github.com/ajalt/fuckitpy" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="代码分析和Lint工具"><a href="#代码分析和Lint工具" class="headerlink" title="代码分析和Lint工具"></a>代码分析和Lint工具</h3><p>进行代码分析，解析和操作代码库的库和工具。</p>
+<ul>
+<li>代码分析<ul>
+<li>code2flow：把你的 Python 和 JavaScript 代码转换为流程图。<a href="https://github.com/scottrogowski/code2flow" target="_blank" rel="external">官网</a></li>
+<li>pycallgraph：这个库可以把你的Python 应用的流程(调用图)进行可视化。<a href="https://github.com/gak/pycallgraph" target="_blank" rel="external">官网</a></li>
+<li>pysonar2：Python 类型推断和检索工具。<a href="https://github.com/yinwang0/pysonar2" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Lint工具<ul>
+<li>Flake8：模块化源码检查工具: pep8, pyflakes 以及 co。<a href="https://pypi.python.org/pypi/flake8" target="_blank" rel="external">官网</a></li>
+<li>Pylint：一个完全可定制的源码分析器。<a href="http://www.pylint.org/" target="_blank" rel="external">官网</a></li>
+<li>pylama：Python 和 JavaScript 的代码审查工具。<a href="https://pylama.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Debugging-Tools"><a href="#Debugging-Tools" class="headerlink" title="Debugging Tools"></a>Debugging Tools</h3><p>用来进行代码调试的库。</p>
+<ul>
+<li>调试器<ul>
+<li>ipdb：IPython 启用的 <a href="https://docs.python.org/2/library/pdb.html" target="_blank" rel="external">pdb</a>。<a href="https://pypi.python.org/pypi/ipdb" target="_blank" rel="external">官网</a></li>
+<li>pudb：全屏，基于控制台的 Python 调试器。<a href="https://pypi.python.org/pypi/pudb" target="_blank" rel="external">官网</a></li>
+<li>pyringe：可以在 Python 进程中附加和注入代码的调试器。<a href="https://github.com/google/pyringe" target="_blank" rel="external">官网</a></li>
+<li>wdb：一个奇异的 web 调试器，通过 WebSockets 工作。<a href="https://github.com/Kozea/wdb" target="_blank" rel="external">官网</a></li>
+<li>winpdb：一个具有图形用户界面的 Python 调试器，可以进行远程调试，基于 rpdb2。<a href="http://winpdb.org/" target="_blank" rel="external">官网</a></li>
+<li>django-debug-toolbar：为 Django 显示各种调试信息。<a href="https://github.com/django-debug-toolbar/django-debug-toolbar" target="_blank" rel="external">官网</a></li>
+<li>django-devserver：一个 Django 运行服务器的替代品。<a href="https://github.com/dcramer/django-devserver" target="_blank" rel="external">官网</a></li>
+<li>flask-debugtoolbar：django-debug-toolbar 的 flask 版。<a href="https://github.com/mgood/flask-debugtoolbar" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>性能分析器<ul>
+<li>lineprofiler：逐行性能分析。<a href="https://github.com/rkern/lineprofiler" target="_blank" rel="external">官网</a></li>
+<li>memoryprofiler：监控 Python 代码的内存使用。<a href="https://github.com/fabianp/memoryprofiler" target="_blank" rel="external">官网</a></li>
+<li>profiling：一个交互式 Python 性能分析工具。<a href="https://github.com/what-studio/profiling" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>其他<ul>
+<li>pyelftools：解析和分析 ELF 文件以及 DWARF 调试信息。<a href="https://github.com/eliben/pyelftools" target="_blank" rel="external">官网</a></li>
+<li>python-statsd：<a href="https://github.com/etsy/statsd/" target="_blank" rel="external">statsd</a> 服务器的 Python 客户端。<a href="https://github.com/WoLpH/python-statsd" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Science-and-Data-Analysis"><a href="#Science-and-Data-Analysis" class="headerlink" title="Science and Data Analysis"></a>Science and Data Analysis</h3><p>用来进行科学计算和数据分析的库。</p>
+<ul>
+<li>astropy：一个天文学 Python 库。<a href="http://www.astropy.org/" target="_blank" rel="external">官网</a></li>
+<li>bcbio-nextgen：这个工具箱为全自动高通量测序分析提供符合最佳实践的处理流程。<a href="https://github.com/chapmanb/bcbio-nextgen" target="_blank" rel="external">官网</a></li>
+<li>bccb：生物分析相关代码集合<a href="https://github.com/chapmanb/bcbb" target="_blank" rel="external">官网</a></li>
+<li>Biopython：Biopython 是一组可以免费使用的用来进行生物计算的工具。<a href="http://biopython.org/wiki/MainPage" target="_blank" rel="external">官网</a></li>
+<li>blaze：NumPy 和 Pandas 的大数据接口。<a href="http://blaze.readthedocs.org/en/latest/index.html" target="_blank" rel="external">官网</a></li>
+<li>cclib：一个用来解析和解释计算化学软件包输出结果的库。<a href="http://cclib.github.io/" target="_blank" rel="external">官网</a></li>
+<li>NetworkX：一个为复杂网络设计的高性能软件。<a href="https://networkx.github.io/" target="_blank" rel="external">官网</a></li>
+<li>Neupy：执行和测试各种不同的人工神经网络算法。<a href="http://neupy.com/pages/home.html" target="_blank" rel="external">官网</a></li>
+<li>Numba：Python JIT (just in time) 编译器，针对科学用的 Python ，由Cython 和 NumPy 的开发者开发。<a href="http://numba.pydata.org/" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/numpy/" target="_blank" rel="external">NumPy</a>：使用 Python 进行科学计算的基础包。<a href="http://www.numpy.org/" target="_blank" rel="external">官网</a></li>
+<li>Open Babel：一个化学工具箱，用来描述多种化学数据。<a href="http://openbabel.org/wiki/MainPage" target="_blank" rel="external">官网</a></li>
+<li>Open Mining：使用 Python 挖掘商业情报 (BI) (Pandas web 接口)。<a href="https://github.com/avelino/mining" target="_blank" rel="external">官网</a></li>
+<li>orange：通过可视化编程或 Python 脚本进行数据挖掘，数据可视化，分析和机器学习。<a href="http://orange.biolab.si/" target="_blank" rel="external">官网</a></li>
+<li>Pandas：提供高性能，易用的数据结构和数据分析工具。<a href="http://pandas.pydata.org/" target="_blank" rel="external">官网</a></li>
+<li>PyDy：PyDy 是 Python Dynamics 的缩写，用来为动力学运动建模工作流程提供帮助， 基于 NumPy, SciPy, IPython 和 matplotlib。<a href="http://www.pydy.org/" target="_blank" rel="external">官网</a></li>
+<li>PyMC：马尔科夫链蒙特卡洛采样工具。<a href="https://github.com/pymc-devs/pymc3" target="_blank" rel="external">官网</a></li>
+<li>RDKit：化学信息学和机器学习软件。<a href="http://www.rdkit.org/" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/scipy/" target="_blank" rel="external">SciPy</a>：由一些基于 Python ，用于数学，科学和工程的开源软件构成的生态系统。<a href="http://www.scipy.org/" target="_blank" rel="external">官网</a></li>
+<li>statsmodels：统计建模和计量经济学。<a href="https://github.com/statsmodels/statsmodels" target="_blank" rel="external">官网</a></li>
+<li>SymPy：一个用于符号数学的 Python 库。<a href="https://github.com/sympy/sympy" target="_blank" rel="external">官网</a></li>
+<li>zipline：一个 Python 算法交易库。<a href="https://github.com/quantopian/zipline" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h3><p>进行数据可视化的库。 参见: <a href="https://github.com/sorrycc/awesome-javascript#data-visualization" target="_blank" rel="external">awesome-javascript</a>。</p>
+<ul>
+<li>matplotlib：一个 Python 2D 绘图库。<a href="http://matplotlib.org/" target="_blank" rel="external">官网</a></li>
+<li>bokeh：用 Python 进行交互式 web 绘图。<a href="https://github.com/bokeh/bokeh" target="_blank" rel="external">官网</a></li>
+<li>ggplot：ggplot2 给 R 提供的 API 的 Python 版本。<a href="https://github.com/yhat/ggplot" target="_blank" rel="external">官网</a></li>
+<li>plotly：协同 Python 和 matplotlib 工作的 web 绘图库。<a href="https://plot.ly/python/" target="_blank" rel="external">官网</a></li>
+<li>pygal：一个 Python SVG 图表创建工具。<a href="http://www.pygal.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>pygraphviz：Graphviz 的 Python 接口。<a href="https://pypi.python.org/pypi/pygraphviz" target="_blank" rel="external">官网</a></li>
+<li>PyQtGraph：交互式实时2D/3D/图像绘制及科学/工程学组件。<a href="http://www.pyqtgraph.org/" target="_blank" rel="external">官网</a></li>
+<li>SnakeViz：一个基于浏览器的 Python’s cProfile 模块输出结果查看工具。<a href="http://jiffyclub.github.io/snakeviz/" target="_blank" rel="external">官网</a></li>
+<li>vincent：把 Python 转换为 Vega 语法的转换工具。<a href="https://github.com/wrobstory/vincent" target="_blank" rel="external">官网</a></li>
+<li>VisPy：基于 OpenGL 的高性能科学可视化工具。<a href="http://vispy.org/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="计算机视觉"><a href="#计算机视觉" class="headerlink" title="计算机视觉"></a>计算机视觉</h3><p>计算机视觉库。</p>
+<ul>
+<li>OpenCV：开源计算机视觉库。<a href="http://opencv.org/" target="_blank" rel="external">官网</a></li>
+<li>SimpleCV：一个用来创建计算机视觉应用的开源框架。<a href="http://simplecv.org/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h3><p>机器学习库。 参见: <a href="https://github.com/josephmisiti/awesome-machine-learning#python" target="_blank" rel="external">awesome-machine-learning</a>.</p>
+<ul>
+<li>Crab：灵活、快速的推荐引擎。<a href="https://github.com/muricoca/crab" target="_blank" rel="external">官网</a></li>
+<li>gensim：人性化的话题建模库。<a href="https://github.com/piskvorky/gensim" target="_blank" rel="external">官网</a></li>
+<li>hebel：GPU 加速的深度学习库。<a href="https://github.com/hannes-brt/hebel" target="_blank" rel="external">官网</a></li>
+<li>NuPIC：智能计算 Numenta 平台。<a href="https://github.com/numenta/nupic" target="_blank" rel="external">官网</a></li>
+<li>pattern：Python 网络挖掘模块。<a href="https://github.com/clips/pattern" target="_blank" rel="external">官网</a></li>
+<li>PyBrain：另一个 Python 机器学习库。<a href="https://github.com/pybrain/pybrain" target="_blank" rel="external">官网</a></li>
+<li>Pylearn2：一个基于 <a href="https://github.com/Theano/Theano" target="_blank" rel="external">Theano</a> 的机器学习库。<a href="https://github.com/lisa-lab/pylearn2" target="_blank" rel="external">官网</a></li>
+<li>python-recsys：一个用来实现推荐系统的 Python 库。<a href="https://github.com/ocelma/python-recsys" target="_blank" rel="external">官网</a></li>
+<li>scikit-learn：基于 SciPy 构建的机器学习 Python 模块。<a href="http://scikit-learn.org/" target="_blank" rel="external">官网</a></li>
+<li>pydeep：Python 深度学习库。<a href="https://github.com/andersbll/deeppy" target="_blank" rel="external">官网</a></li>
+<li>vowpalporpoise：轻量级 <a href="https://github.com/JohnLangford/vowpalwabbit/" target="_blank" rel="external">Vowpal Wabbit</a> 的 Python 封装。<a href="https://github.com/josephreisinger/vowpalporpoise" target="_blank" rel="external">官网</a></li>
+<li>skflow：一个 <a href="https://github.com/tensorflow/tensorflow" target="_blank" rel="external">TensorFlow</a> 的简化接口(模仿 scikit-learn)。<a href="https://github.com/tensorflow/skflow" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h3><p>MapReduce 框架和库。</p>
+<ul>
+<li>dpark：Spark 的 Python 克隆版，一个类似 MapReduce 的框架。<a href="https://github.com/douban/dpark" target="_blank" rel="external">官网</a></li>
+<li>dumbo：这个 Python 模块可以让人轻松的编写和运行 Hadoop 程序。<a href="https://github.com/klbostee/dumbo" target="_blank" rel="external">官网</a></li>
+<li>luigi：这个模块帮你构建批处理作业的复杂流水线。<a href="https://github.com/spotify/luigi" target="_blank" rel="external">官网</a></li>
+<li>mrjob：在 Hadoop 或 Amazon Web Services 上运行 MapReduce 任务。<a href="https://github.com/Yelp/mrjob" target="_blank" rel="external">官网</a></li>
+<li>PySpark：Spark 的 Python API 。<a href="http://spark.apache.org/docs/latest/programming-guide.html" target="_blank" rel="external">官网</a></li>
+<li>streamparse：运行针对事实数据流的 Python 代码。集成了<a href="http://storm.apache.org/" target="_blank" rel="external">Apache Storm</a>。<a href="https://github.com/Parsely/streamparse" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h3><p>使用 Python 进行函数式编程。</p>
+<ul>
+<li>CyToolz：Toolz 的 Cython 实现 : 高性能函数式工具。<a href="https://github.com/pytoolz/cytoolz/" target="_blank" rel="external">官网</a></li>
+<li>fn.py：在 Python 中进行函数式编程 : 实现了一些享受函数式编程缺失的功能。<a href="https://github.com/kachayev/fn.py" target="_blank" rel="external">官网</a></li>
+<li>funcy：炫酷又实用的函数式工具。<a href="https://github.com/Suor/funcy" target="_blank" rel="external">官网</a></li>
+<li>Toolz：一组用于迭代器，函数和字典的函数式编程工具。<a href="https://github.com/pytoolz/toolz" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="第三方-API"><a href="#第三方-API" class="headerlink" title="第三方 API"></a>第三方 API</h3><p>用来访问第三方 API的库。 参见： <a href="https://github.com/realpython/list-of-python-api-wrappers" target="_blank" rel="external">List of Python API Wrappers and Libraries</a>。</p>
+<ul>
+<li>apache-libcloud：一个为各种云设计的 Python 库。<a href="https://libcloud.apache.org/" target="_blank" rel="external">官网</a></li>
+<li>boto：Amazon Web Services 的 Python 接口。<a href="https://github.com/boto/boto" target="_blank" rel="external">官网</a></li>
+<li>django-wordpress：WordPress models and views for Django.<a href="https://github.com/sunlightlabs/django-wordpress/" target="_blank" rel="external">官网</a></li>
+<li>facebook-sdk：Facebook 平台的 Python SDK.<a href="https://github.com/pythonforfacebook/facebook-sdk" target="_blank" rel="external">官网</a></li>
+<li>facepy：Facepy 让和 Facebook’s Graph API 的交互变得更容易。<a href="https://github.com/jgorset/facepy" target="_blank" rel="external">官网</a></li>
+<li>gmail：Gmail 的 Python 接口。<a href="https://github.com/charlierguo/gmail" target="_blank" rel="external">官网</a></li>
+<li>google-api-python-client：Python 用的 Google APIs 客户端库。<a href="https://github.com/google/google-api-python-client" target="_blank" rel="external">官网</a></li>
+<li>gspread：Google 电子表格的 Python API.<a href="https://github.com/burnash/gspread" target="_blank" rel="external">官网</a></li>
+<li>twython：Twitter API 的封装。<a href="https://github.com/ryanmcgrath/twython" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="DevOps-工具"><a href="#DevOps-工具" class="headerlink" title="DevOps 工具"></a>DevOps 工具</h3><p>用于 DevOps 的软件和库。</p>
+<ul>
+<li>Ansible：一个非常简单的 IT 自动化平台。<a href="https://github.com/ansible/ansible" target="_blank" rel="external">官网</a></li>
+<li>SaltStack：基础设施自动化和管理系统。<a href="https://github.com/saltstack/salt" target="_blank" rel="external">官网</a></li>
+<li>OpenStack：用于构建私有和公有云的开源软件。<a href="http://www.openstack.org/" target="_blank" rel="external">官网</a></li>
+<li>Docker Compose：快速，分离的开发环境，使用 Docker。<a href="https://docs.docker.com/compose/" target="_blank" rel="external">官网</a></li>
+<li>Fabric：一个简单的，Python 风格的工具，用来进行远程执行和部署。<a href="http://www.fabfile.org/" target="_blank" rel="external">官网</a></li>
+<li>cuisine：为 Fabric 提供一系列高级函数。<a href="https://github.com/sebastien/cuisine" target="_blank" rel="external">官网</a></li>
+<li>Fabtools：一个用来编写超赞的 Fabric 文件的工具。<a href="https://github.com/ronnix/fabtools" target="_blank" rel="external">官网</a></li>
+<li>gitapi：Git 的纯 Python API。<a href="https://bitbucket.org/haard/gitapi" target="_blank" rel="external">官网</a></li>
+<li>hgapi：Mercurial 的纯 Python API。<a href="https://bitbucket.org/haard/hgapi" target="_blank" rel="external">官网</a></li>
+<li>honcho：<a href="https://github.com/ddollar/foreman" target="_blank" rel="external">Foreman</a>的 Python 克隆版，用来管理基于<a href="https://devcenter.heroku.com/articles/procfile" target="_blank" rel="external">Procfile</a>的应用。<a href="https://github.com/nickstenning/honcho" target="_blank" rel="external">官网</a></li>
+<li>pexpect：Controlling interactive programs in a pseudo-terminal like 在一个伪终端中控制交互程序，就像 GNU expect 一样。<a href="https://github.com/pexpect/pexpect" target="_blank" rel="external">官网</a></li>
+<li>psutil：一个跨平台进程和系统工具模块。<a href="https://github.com/giampaolo/psutil" target="_blank" rel="external">官网</a></li>
+<li>supervisor：UNIX 的进程控制系统。<a href="https://github.com/Supervisor/supervisor" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="任务调度"><a href="#任务调度" class="headerlink" title="任务调度"></a>任务调度</h3><p>任务调度库。</p>
+<ul>
+<li>APScheduler：轻巧但强大的进程内任务调度，使你可以调度函数。<a href="http://apscheduler.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>django-schedule：一个 Django 排程应用。<a href="https://github.com/thauber/django-schedule" target="_blank" rel="external">官网</a></li>
+<li>doit：一个任务执行和构建工具。<a href="http://pydoit.org/" target="_blank" rel="external">官网</a></li>
+<li>gunnery：分布式系统使用的多用途任务执行工具 ，具有 web 交互界面。<a href="https://github.com/gunnery/gunnery" target="_blank" rel="external">官网</a></li>
+<li>Joblib：一组为 Python 提供轻量级作业流水线的工具。<a href="http://pythonhosted.org/joblib/index.html" target="_blank" rel="external">官网</a></li>
+<li>Plan：如有神助地编写 crontab 文件。<a href="https://github.com/fengsp/plan" target="_blank" rel="external">官网</a></li>
+<li>schedule：人性化的 Python 任务调度库。<a href="https://github.com/dbader/schedule" target="_blank" rel="external">官网</a></li>
+<li>Spiff：使用纯 Python 实现的强大的工作流引擎。<a href="https://github.com/knipknap/SpiffWorkflow" target="_blank" rel="external">官网</a></li>
+<li>TaskFlow：一个可以让你方便执行任务的 Python 库，一致并且可靠。<a href="http://docs.openstack.org/developer/taskflow/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="外来函数接口"><a href="#外来函数接口" class="headerlink" title="外来函数接口"></a>外来函数接口</h3><p>使用外来函数接口的库。</p>
+<ul>
+<li>cffi：用来调用 C 代码的外来函数接口。<a href="https://pypi.python.org/pypi/cffi" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/ctypes/" target="_blank" rel="external">ctypes</a>：(Python 标准库) 用来调用 C 代码的外来函数接口。<a href="https://docs.python.org/2/library/ctypes.html" target="_blank" rel="external">官网</a></li>
+<li>PyCUDA：Nvidia CUDA API 的封装。<a href="https://mathema.tician.de/software/pycuda/" target="_blank" rel="external">官网</a></li>
+<li>SWIG：简化的封装和接口生成器。<a href="http://www.swig.org/Doc1.3/Python.html" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="高性能"><a href="#高性能" class="headerlink" title="高性能"></a>高性能</h3><p>让 Python 更快的库。</p>
+<ul>
+<li>Cython：优化的 Python 静态编译器。使用类型混合使 Python 编译成 C 或 C++ 模块来获得性能的极大提升。<a href="http://cython.org/" target="_blank" rel="external">官网</a></li>
+<li>PeachPy：嵌入 Python 的 x86-64 汇编器。可以被用作 Python 内联的汇编器或者是独立的汇编器，用于 Windows, Linux, OS X, Native Client 或者 Go 。<a href="https://github.com/Maratyszcza/PeachPy" target="_blank" rel="external">官网</a></li>
+<li>PyPy：使用 Python 实现的 Python。解释器使用黑魔法加快 Python 运行速度且不需要加入额外的类型信息。<a href="http://pypy.org/" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/pyston-llvm-jit/" target="_blank" rel="external">Pyston</a>：使用 LLVM 和现代 JIT 技术构建的 Python 实现，目标是为了获得很好的性能。<a href="https://github.com/dropbox/pyston" target="_blank" rel="external">官网</a></li>
+<li>Stackless Python：一个强化版的 Python。<a href="https://bitbucket.org/stackless-dev/stackless/overview" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="微软的-Windows平台"><a href="#微软的-Windows平台" class="headerlink" title="微软的 Windows平台"></a>微软的 Windows平台</h3><p>在 Windows 平台上进行 Python 编程。</p>
+<ul>
+<li>Python(x,y)：面向科学应用的 Python 发行版，基于 Qt 和 Spyder。<a href="http://python-xy.github.io/" target="_blank" rel="external">官网</a></li>
+<li>pythonlibs：非官方的 Windows 平台 Python 扩展二进制包。<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank" rel="external">官网</a></li>
+<li>PythonNet：Python 与 .NET 公共语言运行库 (CLR)的集成。<a href="https://github.com/pythonnet/pythonnet" target="_blank" rel="external">官网</a></li>
+<li>PyWin32：针对 Windows 的Python 扩展。<a href="http://sourceforge.net/projects/pywin32/" target="_blank" rel="external">官网</a></li>
+<li>WinPython：Windows 7/8 系统下便携式开发环境。<a href="https://winpython.github.io/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="网络可视化和SDN"><a href="#网络可视化和SDN" class="headerlink" title="网络可视化和SDN"></a>网络可视化和SDN</h3><p>用来进行网络可视化和SDN(软件定义网络)的工具和库。</p>
+<ul>
+<li>Mininet：一款流行的网络模拟器以及用 Python 编写的 API。<a href="http://mininet.org/" target="_blank" rel="external">官网</a></li>
+<li>POX：一个针对基于 Python 的软件定义网络应用（例如 OpenFlow SDN 控制器）的开源开发平台。<a href="https://github.com/noxrepo/pox" target="_blank" rel="external">官网</a></li>
+<li>Pyretic：火热的 SDN 编程语言中的一员，为网络交换机和模拟器提供强大的抽象能力。<a href="http://frenetic-lang.org/pyretic/" target="_blank" rel="external">官网</a></li>
+<li>SDX Platform：基于 SDN 的 IXP 实现，影响了 Mininet, POX 和 Pyretic。<a href="https://github.com/sdn-ixp/internet2award" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><p>用来对硬件进行编程的库。</p>
+<ul>
+<li>ino：操作<a href="https://www.arduino.cc/" target="_blank" rel="external">Arduino</a>的命令行工具。<a href="http://inotool.org/" target="_blank" rel="external">官网</a> </li>
+<li>Pyro：Python 机器人编程库。<a href="http://pyrorobotics.com/" target="_blank" rel="external">官网</a></li>
+<li>PyUserInput：跨平台的，控制鼠标和键盘的模块。<a href="https://github.com/SavinaRoja/PyUserInput" target="_blank" rel="external">官网</a></li>
+<li>scapy：一个非常棒的操作数据包的库。<a href="https://github.com/secdev/scapy" target="_blank" rel="external">官网</a></li>
+<li>wifi：一个 Python 库和命令行工具用来在 Linux 平台上操作WiFi。<a href="https://wifi.readthedocs.org/en/latest/" target="_blank" rel="external">官网</a></li>
+<li>Pingo：Pingo 为类似Raspberry Pi，pcDuino， Intel Galileo等设备提供统一的API用以编程。<a href="http://www.pingo.io/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><p>帮助从 Python 2 向 Python 3迁移的库。</p>
+<ul>
+<li>Python-Future：这就是 Python 2 和 Python 3 之间丢失的那个兼容性层。<a href="http://python-future.org/index.html" target="_blank" rel="external">官网</a></li>
+<li>Python-Modernize：使 Python 代码更加现代化以便最终迁移到 Python 3。<a href="https://github.com/mitsuhiko/python-modernize" target="_blank" rel="external">官网</a></li>
+<li>Six：Python 2 和 3 的兼容性工具。<a href="https://pypi.python.org/pypi/six" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h3><p>不属于上面任何一个类别，但是非常有用的库。</p>
+<ul>
+<li>blinker：一个快速的 Python 进程内信号/事件分发系统。<a href="https://github.com/jek/blinker" target="_blank" rel="external">官网</a></li>
+<li>itsdangerous：一系列辅助工具用来将可信的数据传入不可信的环境。<a href="https://github.com/mitsuhiko/itsdangerous" target="_blank" rel="external">官网</a></li>
+<li>pluginbase：一个简单但是非常灵活的 Python 插件系统。<a href="https://github.com/mitsuhiko/pluginbase" target="_blank" rel="external">官网</a></li>
+<li>Pychievements：一个用来创建和追踪成就的 Python 框架。<a href="https://github.com/PacketPerception/pychievements" target="_blank" rel="external">官网</a></li>
+<li>Tryton：一个通用商务框架。<a href="http://www.tryton.org/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="算法和设计模式"><a href="#算法和设计模式" class="headerlink" title="算法和设计模式"></a>算法和设计模式</h3><p>Python 实现的算法和设计模式。</p>
+<ul>
+<li><a href="http://hao.jobbole.com/algorithms/" target="_blank" rel="external">algorithms</a>：一个 Python 算法模块。<a href="https://github.com/nryoung/algorithms" target="_blank" rel="external">官网</a> </li>
+<li>python-patterns：Python 设计模式的集合。<a href="https://github.com/faif/python-patterns" target="_blank" rel="external">官网</a></li>
+<li>sortedcontainers：快速，纯 Python 实现的SortedList，SortedDict 和 SortedSet 类型。<a href="http://www.grantjenks.com/docs/sortedcontainers/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="编辑器插件"><a href="#编辑器插件" class="headerlink" title="编辑器插件"></a>编辑器插件</h3><p>编辑器和 IDE 的插件</p>
+<ul>
+<li>Emacs<ul>
+<li>Elpy：Emacs Python 开发环境。<a href="https://github.com/jorgenschaefer/elpy" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Sublime Text<ul>
+<li>SublimeJEDI：一个 Sublime Text 插件，用来使用超赞的自动补全库 Jedi。<a href="https://github.com/srusskih/SublimeJEDI" target="_blank" rel="external">官网</a></li>
+<li>Anaconda：Anaconda 把你的 Sublime Text 3 变成一个功能齐全的 Python IDE。<a href="https://github.com/DamnWidget/anaconda" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Vim<ul>
+<li>YouCompleteMe：引入基于 <a href="https://github.com/davidhalter/jedi" target="_blank" rel="external">Jedi</a> 的 Python 自动补全引擎。<a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="external">官网</a></li>
+<li>Jedi-vim：绑定 Vim 和 Jedi 自动补全库对 Python 进行自动补全。<a href="https://github.com/davidhalter/jedi-vim" target="_blank" rel="external">官网</a></li>
+<li>Python-mode：将 Vim 变成 Python IDE 的一款多合一插件。<a href="https://github.com/klen/python-mode" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+<li>Visual Studio<ul>
+<li>PTVS：Visual Studio 的 Python 工具<a href="https://github.com/Microsoft/PTVS" target="_blank" rel="external">官网</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="集成开发环境"><a href="#集成开发环境" class="headerlink" title="集成开发环境"></a>集成开发环境</h3><p>流行的 Python 集成开发环境。</p>
+<ul>
+<li>PyCharm：商业化的 Python IDE ，由 JetBrains 开发。也有免费的社区版提供。<a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="external">官网</a></li>
+<li>LiClipse：基于 Eclipse 的免费多语言 IDE 。使用 PyDev 来支持 Python 。<a href="http://www.liclipse.com/" target="_blank" rel="external">官网</a></li>
+<li>Spyder：开源 Python IDE。<a href="https://github.com/spyder-ide/spyder" target="_blank" rel="external">官网</a></li>
+</ul>
+<h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><p>在线工具和简化开发的 API 。</p>
+<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p>参见: <a href="https://github.com/ciandcd/awesome-ciandcd#online-build-system" target="_blank" rel="external">awesome-CIandCD</a>.</p>
+<ul>
+<li>Travis CI：一个流行的工具，为你的开源和<a href="https://travis-ci.com/" target="_blank" rel="external">私人</a>项目提供持续集成服务。(仅支持 GitHub)<a href="https://travis-ci.org/" target="_blank" rel="external">官网</a></li>
+<li>CircleCI：一个持续集成工具，可以非常快速的进行并行测试。 (仅支持 GitHub)<a href="https://circleci.com/" target="_blank" rel="external">官网</a></li>
+<li>Vexor CI：一个为私人 app 提供持续集成的工具，支持按分钟付费。<a href="https://vexor.io/" target="_blank" rel="external">官网</a></li>
+<li>Wercker：基于 Docker 平台，用来构建和部署微服务。<a href="http://wercker.com/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h3 id="代码质量"><a href="#代码质量" class="headerlink" title="代码质量"></a>代码质量</h3><ul>
+<li>Codacy：自动化代码审查，更加快速的发布高质量代码。对于开源项目是免费的。<a href="https://www.codacy.com/" target="_blank" rel="external">官网</a></li>
+<li>QuantifiedCode：一个数据驱动、自动、持续的代码审查工具。<a href="https://www.quantifiedcode.com/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p>在这里可以找到新的 Python 库。</p>
+<h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><ul>
+<li><a href="https://www.reddit.com/r/python" target="_blank" rel="external">r/Python</a></li>
+<li><a href="https://www.coolgithubprojects.com/" target="_blank" rel="external">CoolGithubProjects</a></li>
+<li><a href="https://www.djangopackages.com/" target="_blank" rel="external">Django Packages</a></li>
+<li><a href="http://www.fullstackpython.com/" target="_blank" rel="external">Full Stack Python</a></li>
+<li><a href="http://python3wos.appspot.com/" target="_blank" rel="external">Python 3 Wall of Superpowers</a></li>
+<li><a href="http://pythonhackers.com/open-source/" target="_blank" rel="external">Python Hackers</a></li>
+<li><a href="https://python.zeef.com/alan.richmond" target="_blank" rel="external">Python ZEEF</a></li>
+<li><a href="https://github.com/trending?l=python" target="_blank" rel="external">Trending Python repositories on GitHub today</a></li>
+<li><a href="http://pypi-ranking.info/alltime" target="_blank" rel="external">PyPI Ranking</a></li>
+</ul>
+<h3 id="周刊"><a href="#周刊" class="headerlink" title="周刊"></a>周刊</h3><ul>
+<li><a href="http://importpython.com/newsletter/" target="_blank" rel="external">Import Python Newsletter</a></li>
+<li><a href="http://pycoders.com/" target="_blank" rel="external">Pycoder’s Weekly</a></li>
+<li><a href="http://www.pythonweekly.com/" target="_blank" rel="external">Python Weekly</a></li>
+</ul>
+<h3 id="Twitter"><a href="#Twitter" class="headerlink" title="Twitter"></a>Twitter</h3><ul>
+<li><a href="https://twitter.com/codetengu" target="_blank" rel="external">@codetengu</a></li>
+<li><a href="https://twitter.com/getpy" target="_blank" rel="external">@getpy</a></li>
+<li><a href="https://twitter.com/planetpython" target="_blank" rel="external">@planetpython</a></li>
+<li><a href="https://twitter.com/pycoders" target="_blank" rel="external">@pycoders</a></li>
+<li><a href="https://twitter.com/pypi" target="_blank" rel="external">@pypi</a></li>
+<li><a href="https://twitter.com/pythontrending" target="_blank" rel="external">@pythontrending</a></li>
+<li><a href="https://twitter.com/PythonWeekly" target="_blank" rel="external">@PythonWeekly</a></li>
+</ul>
+<h3 id="学习指南"><a href="#学习指南" class="headerlink" title="学习指南"></a>学习指南</h3><ul>
+<li><a href="http://hao.jobbole.com/scipy-lecture-notes/" target="_blank" rel="external">Scipy-lecture-notes</a>：如何用Python来做学术？<a href="https://github.com/scipy-lectures/scipy-lecture-notes" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/scientific-python-lectures/" target="_blank" rel="external">SScientific-python-lectures</a>：Python科学计算的资料。<a href="https://github.com/jrjohansson/scientific-python-lectures" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/mario-level-1/" target="_blank" rel="external">Mario-Level-1</a>：用Python和Pygame写的超级马里奥第一关。<a href="https://github.com/justinmeister/Mario-Level-1" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/python-koans/" target="_blank" rel="external">Python Koans</a>：Python的交互式学习工具。<a href="https://github.com/gregmalcolm/python_koans" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/minecraft-python/" target="_blank" rel="external">Minecraft</a>：用python写的Minecraft游戏。<a href="https://github.com/fogleman/Minecraft" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/python-pycrumbs/" target="_blank" rel="external">pycrumbs</a>：Python资源大全。<a href="https://github.com/kirang89/pycrumbs/blob/master/pycrumbs.md" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/python-patterns/" target="_blank" rel="external">python-patterns</a>：使用python实现设计模式。<a href="https://github.com/faif/python-patterns" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/python-projects/" target="_blank" rel="external">Projects</a>：Python项目大集合。<a href="https://github.com/karan/Projects" target="_blank" rel="external">官网</a></li>
+<li><a href="http://hao.jobbole.com/the-hitchhikers-guide-to-python/" target="_blank" rel="external">The Hitchhiker’s Guide to Python</a>：旅行者的Python学习指南。<a href="http://docs.python-guide.org/en/latest/" target="_blank" rel="external">官网</a></li>
+</ul>
+<p></p><h3 id="websites">知名网站</h3><br><em>值得关注的 Python 技术站点。</em><p></p>
+<h4>中文站点</h4>
+
+<ul>
+<li>伯乐在线 Python 频道：分享 Python 开发技术、相关的行业动态。<a href="http://python.jobbole.com/" target="_blank" rel="external">官网</a></li>
+</ul>
+<h4>英文站点</h4>
+
+<p>待补充</p>
+<p></p><h3 id="weibo-weixin">微博、微信公众号</h3><p></p>
+<ul>
+<li>Python开发者 微博：<a href="http://weibo.com/u/5305630013" target="_blank" rel="external">@Python开发者</a></li>
+<li>Python开发者：人生苦短，我用 Python。Python 越来越受广大程序员的喜爱。「Python开发者」是最受欢迎的、专注分享Python技术的微信公众号，主要分享 Python 相关的技术文章、工具资源和资讯等。<br><br><img src="http://ww3.sinaimg.cn/small/63918611gw1epb2cbm6cmj2046046wek.jpg" width="150" height="150"></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作者：&lt;a href=&quot;https://github.com/wangaicc/awesome-python-cn&quot;&gt;litai wong/wangaicc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我想很多程序员应该记得 GitHub 上有一个 Awesome - XXX 系列的资源整理。&lt;a href=&quot;https://github.com/vinta/awesome-python&quot;&gt;awesome-python&lt;/a&gt; 是 vinta 发起维护的 Python 资源列表，内容包括：Web框架、网络爬虫、网络内容提取、模板引擎、数据库、数据可视化、图片处理、文本处理、自然语言处理、机器学习、日志、代码分析等。由伯乐在线持续更新。&lt;/p&gt;
+&lt;p&gt;Awesome 系列虽然挺全，但基本只对收录的资源做了极为简要的介绍，如果有更详细的中文介绍，对相应开发者的帮助会更大。这也是我们发起这个开源项目的初衷。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="python" scheme="http://ipcreator.me/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2016年最精彩科学美图</title>
     <link href="http://ipcreator.me/2017/02/11/beautiful-pics-of-scientific-discovery/"/>
     <id>http://ipcreator.me/2017/02/11/beautiful-pics-of-scientific-discovery/</id>
     <published>2017-02-11T12:24:06.000Z</published>
-    <updated>2017-02-11T12:56:38.273Z</updated>
+    <updated>2017-02-12T01:09:13.589Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://tech.163.com/api/photoview/0AI20009/13961.html?1483151802840#p=C9JVV9TV0AI20009?ad" target="_blank" rel="external">这一年有啥留恋：看2016年最精彩科学美图</a></p>
 <p>随着2016年即将接近尾声，美国新闻聚合网站BuzzFeed评选出2016年最精彩的科学美图。这些美图展示了今年被发现的科学奇迹，包括揭示了从微观到宇宙尺度等不同物体的形态，比如国际空间站、鲨鱼、变色龙等，下面就让我们带领大家欣赏这些令人震撼的图片。</p>
@@ -149,7 +1258,7 @@
       <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="分享" scheme="http://ipcreator.me/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -158,7 +1267,7 @@
     <link href="http://ipcreator.me/2017/02/11/credits-%20of-%20death%20/"/>
     <id>http://ipcreator.me/2017/02/11/credits- of- death /</id>
     <published>2017-02-11T11:02:06.000Z</published>
-    <updated>2017-02-11T13:41:18.389Z</updated>
+    <updated>2017-02-12T01:06:57.501Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://book.douban.com/subject/26422275/" target="_blank" rel="external">李开复《向死而生：我修的死亡学分》</a></p>
 <p><strong>脱去虚名与成就，你的人生还剩下什么?</strong></p>
@@ -231,7 +1340,7 @@
       <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="感悟" scheme="http://ipcreator.me/tags/%E6%84%9F%E6%82%9F/"/>
     
   </entry>
   
@@ -435,7 +1544,7 @@
     <link href="http://ipcreator.me/2017/02/11/how-to-use-google/"/>
     <id>http://ipcreator.me/2017/02/11/how-to-use-google/</id>
     <published>2017-02-11T08:33:06.000Z</published>
-    <updated>2017-02-11T08:42:12.099Z</updated>
+    <updated>2017-02-12T01:06:17.395Z</updated>
     
     <content type="html"><![CDATA[<p>原文作者：李笑来，摘自<a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/C04.html" target="_blank" rel="external">《新生 —— 七年就是一辈子》</a></p>
 <blockquote>
@@ -482,10 +1591,10 @@
     
     </summary>
     
-      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
     
   </entry>
   
@@ -494,7 +1603,7 @@
     <link href="http://ipcreator.me/2017/02/11/wisdom-of-choose/"/>
     <id>http://ipcreator.me/2017/02/11/wisdom-of-choose/</id>
     <published>2017-02-11T01:12:06.000Z</published>
-    <updated>2017-02-11T08:24:29.899Z</updated>
+    <updated>2017-02-12T01:07:21.580Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.360doc.com/content/14/1206/17/15680008_430856157.shtml" target="_blank" rel="external">李开复写《给中国学生的第六封信》——选择的智慧</a></p>
 <blockquote>
@@ -585,7 +1694,7 @@
       <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="成长" scheme="http://ipcreator.me/tags/%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
@@ -594,7 +1703,7 @@
     <link href="http://ipcreator.me/2017/02/11/retirement-speech-of-HP-president/"/>
     <id>http://ipcreator.me/2017/02/11/retirement-speech-of-HP-president/</id>
     <published>2017-02-10T23:50:06.000Z</published>
-    <updated>2017-02-11T01:17:58.788Z</updated>
+    <updated>2017-02-12T01:07:55.002Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://news.mbalib.com/story/12504" target="_blank" rel="external">HP大中华区总裁孙振耀退休感言</a></p>
 <blockquote>
@@ -710,10 +1819,10 @@
     
     </summary>
     
-      <category term="管理" scheme="http://ipcreator.me/categories/%E7%AE%A1%E7%90%86/"/>
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="感悟" scheme="http://ipcreator.me/tags/%E6%84%9F%E6%82%9F/"/>
     
   </entry>
   
@@ -722,7 +1831,7 @@
     <link href="http://ipcreator.me/2017/02/09/golden-age-of-artificial-intelligence/"/>
     <id>http://ipcreator.me/2017/02/09/golden-age-of-artificial-intelligence/</id>
     <published>2017-02-09T10:06:18.000Z</published>
-    <updated>2017-02-10T07:26:44.006Z</updated>
+    <updated>2017-02-12T01:04:49.970Z</updated>
     
     <content type="html"><![CDATA[<p><strong><a href="http://gelonghui.com/p/101767.html" target="_blank" rel="external">“人工智能时代，将是一个比移动互联时代大十倍的市场 —-李开复”</a></strong></p>
 <blockquote>
@@ -843,10 +1952,10 @@
     
     </summary>
     
-      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
   </entry>
   
@@ -855,7 +1964,7 @@
     <link href="http://ipcreator.me/2017/02/09/reborn-every-7-years/"/>
     <id>http://ipcreator.me/2017/02/09/reborn-every-7-years/</id>
     <published>2017-02-09T10:00:18.000Z</published>
-    <updated>2017-02-11T08:46:39.683Z</updated>
+    <updated>2017-02-12T01:09:47.616Z</updated>
     
     <content type="html"><![CDATA[<p><strong><a href="http://zhibimo.com/books/xiaolai/reborn-every-7-years" target="_blank" rel="external">“我们的一生其实可以活很多辈子的…… —-李笑来”</a></strong></p>
 <blockquote>
@@ -1535,7 +2644,7 @@
       <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="成长" scheme="http://ipcreator.me/tags/%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
@@ -1544,7 +2653,7 @@
     <link href="http://ipcreator.me/2017/02/08/view-of-shenzhen/"/>
     <id>http://ipcreator.me/2017/02/08/view-of-shenzhen/</id>
     <published>2017-02-08T12:28:06.000Z</published>
-    <updated>2017-02-09T01:28:59.595Z</updated>
+    <updated>2017-02-12T01:10:17.545Z</updated>
     
     <content type="html"><![CDATA[<p><strong>“美好的事物值得付出、等待和分享”</strong></p>
 <p><a href="http://baike.baidu.com/link?url=g5N6inQzetaZNNinKTWr_x-sfg_TDVPB26aHdp6uOTD_CSt5mYHxg_Sa0mJ8CjY1ykZGQ8ncTXqqiQF_emulF6Z018i1OvLg1Zv-VZ2Sltkpq_ncQ0w7QFkKHZkSaZaC" target="_blank" rel="external">欢乐海岸</a></p>
@@ -1603,7 +2712,7 @@
       <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="旅游" scheme="http://ipcreator.me/tags/%E6%97%85%E6%B8%B8/"/>
+      <category term="分享" scheme="http://ipcreator.me/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -1612,7 +2721,7 @@
     <link href="http://ipcreator.me/2017/02/08/view-of-huizhou/"/>
     <id>http://ipcreator.me/2017/02/08/view-of-huizhou/</id>
     <published>2017-02-08T07:10:06.000Z</published>
-    <updated>2017-02-08T12:29:25.058Z</updated>
+    <updated>2017-02-12T01:10:44.323Z</updated>
     
     <content type="html"><![CDATA[<p><strong>“美好的事物值得付出、等待和分享”</strong></p>
 <p><a href="http://baike.baidu.com/link?url=YpJIrF8gmEpUpPcJHSJuGOrcqouOXc0G82ofqrXuBKAPgLZvX_nT7wqjnzdxPSuh7Tfw0Xzz3gxnsDl4p99jIpQLSMluLZItPeDyh1DXVybOnfimIMOwrxNCUVrWIHdLVv9CnKsnL06g_Fjybr0BKq" target="_blank" rel="external">巽寮湾（xùn liáo wān）简介</a></p>
@@ -1638,16 +2747,16 @@
       <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="旅游" scheme="http://ipcreator.me/tags/%E6%97%85%E6%B8%B8/"/>
+      <category term="分享" scheme="http://ipcreator.me/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
-    <title>转：从前端到全端：JavaScript逆袭之路</title>
+    <title>从前端到全端：JavaScript逆袭之路</title>
     <link href="http://ipcreator.me/2017/02/07/zh-history-of-javascript/"/>
     <id>http://ipcreator.me/2017/02/07/zh-history-of-javascript/</id>
     <published>2017-02-07T11:55:06.000Z</published>
-    <updated>2017-02-08T12:30:15.005Z</updated>
+    <updated>2017-02-12T01:12:06.730Z</updated>
     
     <content type="html"><![CDATA[<p>作者：今日头条技术团队</p>
   <div class="article-content"><div><p>近年来，前端技术日新月异，前端已经不仅仅是网页，更多的开始由狭义向广义发展。</p><p>先后涌现出了具备后端能力的node，具备移动开发能力的react native，具备游戏渲染能力的cocos2d-js，以及iOS上的热修复技术JSPatch等等新技术。</p><p>咋一看，几乎各个端都被JavaScript攻陷，大有一统江湖之势。</p><p>究竟，JavaScript如何做到上天入地无所不能？JavaScript真的能一统江湖吗？</p><br><br>  <a id="more"></a><br><br>  <p><img src="http://p9.pstatp.com/large/16310006a4d9cabde1e5" img_width="774" img_height="204" alt="从前端到全端：JavaScript逆袭之路"></p><p><span>乱世出英雄：JavaScript的诞生</span>故事要从JavaScript的由来说起。<br></p><blockquote><p>高能瞎扯淡版，正经脸的同学可以忽略</p><p>有人的地方就有江湖，有江湖的地方就有纷争。</p><p>故事要从当年的浏览器之战说起。</p><p>时间回到1994年，</p><p>（→ 那时候我还是个宝宝~ #天真脸#）</p><p>景兄弟横空出世，并自带神器网景导航，战斗力爆表，势如劈竹，瞬时间威震天下。</p><p>一出世就武装到牙齿，武力值这么高还自带兵器，这个科学吗？</p><p>港真，我也觉得不科学，也许跟熊孩子哪吒、女汉子雅典娜是一个品种吧？</p><p>这一切北方的老前辈微软大湿，都看在眼里，不甘天下尽归景兄弟这个初出茅庐的毛孩子，大湿积淀多年，潜心修炼一年，终于带着大杀器IE 1.0出关了，誓于景兄弟争个高低。</p><p>自此景兄弟的网景导航 VS 微软大湿的IE 的军备战争开始。</p><p>景兄弟仔细掂量，微软大湿财大气粗，内功深厚，臣妾实在是办不到啊啊啊啊啊啊。</p><p>景兄弟紧急召集门人商议对策，有一门人曰：”以我们微薄之力硬磕，是万万使不得的。如今我们，一是宜施行合纵之策，抱大腿，组成联盟！二是避其锋芒，出奇招致胜。“</p><p>于是景兄弟依照此策略，一方面找到了当时德高为重的另一位前辈SUN，组成了开发者联盟。</p><p>（微软大湿：握草，联盟都粗来了，那我是不是得搞个部落？）</p><p>另一方面，景兄弟找到了锻造大师布兰登，请布大师帮忙升级兵器网景导航，大师就是大师，不费吹灰之力就完成了强化升级，然而布大师突发奇想，本来这是近距离攻击兵器，要是有多一个远距离攻击的能力那岂不是更好？Just do it. 想罢大师就加了一个远距离攻击的feature。于是有了自带远距离攻击能力的网景导航2.0。景兄弟一看这么流弊心里甚是欢喜，不过远距离攻击的技能叫做LiveScript，感觉不是特别Fashion。特然想到这不是跟SUN前辈联盟嘛，SUN家的Java正是独霸武林之时。不如把名字改成跟Java有关，蹭一把东风，蹭点光环。一拍脑袋，JavaScript！！！众门人一听：”好好好，JavaScript 流弊炫酷吊炸天！“</p><p>果然第一节下半场，景兄弟携强化过的网景导航2.0 战个痛快，那是杠杠的！人家一问，你咋还能远程攻击，你这个远程攻击用的是啥？答曰：JavaScript。“JavaScript，一定是跟SUN家Java是一个系列产品，一定很流弊！”#光环加成，各种膜拜脸#</p><p>微软大湿亏了一场，痛定思痛，也要搞远程攻击功能，果然不久，就祭出了同样带有远程攻击能力的IE 3.0，鉴于景兄弟的远程攻击叫做JavaScript，J开头的感觉应该比较流弊，所以微软大湿的叫做JScript。</p><p>然后战争就从地面贴身肉搏战，开始逐步升级到了远距离核战争。</p><p>正所谓，城门失火，殃及池鱼。这么打下去苦逼的是搬砖的页面仔，就是我这种，到处都是雷区，无处下脚。</p><p>最后到了1997年，“联合国安理会秘书长”艾玛（ECMA）出来调停，多方签署了“核不扩散条约”，约束各种远程攻击武器的使用，这才走上了正轨。</p></blockquote><p>1995年SUN开发了Java技术，这是第一个通用软件平台。Java拥有跨平台、面向对象、泛型编程的特性，广泛应用于企业级Web应用开发和移动应用开发。Java也伴随着互联网的迅猛发展而发展，逐渐成为重要的网络编程语言。名噪一时。</p><p>1994年Netscape公司成立，并推出了自己的浏览器的免费版本 Netscape Navigator，很快就占有了浏览器市场。到了 1995 年，微软公司开始加入，并很快发布了自己的 Internet Explorer 1.0。</p><p>1995年，当时在Netscape就职的Brendan Eich（布兰登·艾克），正为Netscape Navigator 2.0浏览器开发的一门名为LiveScript的脚本语言，后来Netscape与Sun Microsystems组成的开发联盟，为了让这门语言搭上Java这个编程语言“热词”，将其临时改名为“JavaScript”，日后这成为大众对这门语言有诸多误解的原因之一。</p><p>JavaScript最初受Java启发而开始设计的，目的之一就是“看上去像Java”，因此语法上有类似之处，一些名称和命名规范也借自Java。但JavaScript的主要设计原则源自Self和Scheme。JavaScript与Java名称上的近似，是当时Netscape为了营销考虑与SUN达成协议的结果。</p><p>==&gt; <strong>所以，JavaScript和Java其实没有半毛钱关系。</strong></p><p>JavaScript推出后在浏览器上大获成功，微软在不久后就为Internet Explorer 3.0浏览器推出了JScript，以与处于市场领导地位的Netscape产品同台竞争。JScript也是一种JavaScript实现，这两个</p><p>JavaScript语言版本在浏览器端共存意味着语言标准化的缺失，对这门语言进行标准化被提上了日程，在1997年，由Netscape、SUN、微软、宝蓝等公司组织及个人组成的技术委员会在ECMA（欧洲计算机制造商协会）确定定义了一种名叫ECMAScript的新脚本语言标准，规范名为ECMA-262。JavaScript成为了ECMAScript的实现之一。ECMA-262 第五版，即是ES5。</p><p>==&gt; <strong>ECMA-262，包括ES5, ES6等是一个标准，JavaScript是ECMAScript的一个实现。</strong></p><p>完整的JavaScript实现应该包含三个部分：</p><p><img src="http://p3.pstatp.com/large/1680000399109a171ce7" img_width="772" img_height="299" alt="从前端到全端：JavaScript逆袭之路"></p><p>在网景导航2.0和IE 3.0出现之后的几年间，网景和微软公司不停的发布新版本的浏览器，支持更多的新功能。自此拉开了浏览器之战的序幕。这场浏览器之战到现在还在继续，以下一张图看清楚过程。</p><p><img src="http://p3.pstatp.com/large/16840000a75b7a4a9f72" img_width="520" img_height="2627" alt="从前端到全端：JavaScript逆袭之路"></p><p>从浏览器之战可以看出，各家浏览器比拼的大致两个方面视觉体验（渲染排版）和速度（脚本运行）。</p><p>==&gt; <strong>所以一个完整的浏览器组成，至少包含两个部分：</strong></p><p><img src="http://p3.pstatp.com/large/16850003aee9db816a3f" img_width="772" img_height="286" alt="从前端到全端：JavaScript逆袭之路"></p><p>补充一个市面常见浏览器的内核和JavaScript引擎搭配：</p><p><img src="http://p3.pstatp.com/large/168000039912b206fac4" img_width="772" img_height="391" alt="从前端到全端：JavaScript逆袭之路"></p><p>其他JavaScript引擎，Rhino，由Mozilla基金会管理，开放源代码，完全以Java编写，可以看做SpiderMonkey的Java版。</p><p>注意：webkit不单单只是一个排版引擎，webkit = 排版引擎 + JavaScript引擎。</p><p>==&gt; <strong>所以，JavaScript是动态语言，它的运行都是基于JavaScript引擎，引擎大都是由静态语言实现C++、Java、and so on。JavaScript的能力也是由引擎赋予。不管是浏览器环境中是window，亦或是node环境中的process，均是由引擎提供。</strong></p><p>（番外：Mozilla的人不知道为啥特别喜欢猴子，经常以猴子命名技术，所以看到带Monkey的，十有八九估计是他们搞的。）</p><h1>诺曼底登陆：JavaScript Binding/Bridge 桥接技术</h1><p>在浏览器环境中，DOM、BOM、window对象、setTimeout/setInterval，alert，console等方法均不是JavaScript自身具备的能力，而是浏览器native实现，然后通过JavaScript引擎注入到JS运行的全局上下文中，供JS使用。</p><p>鉴别方式，在调试器console中打出来，带有[native code]的即是：</p><p><img src="http://p3.pstatp.com/large/16330000a6c3c68598f6" img_width="393" img_height="237" alt="从前端到全端：JavaScript逆袭之路"></p><p>讲道理：</p><ol class=" list-paddingleft-2"><li><p>JavaScript运行 → 依赖于JavaScript引擎 ← 浏览器集成了JavaScript引擎，同时通过JavaScript引擎注入native代码工JS脚本使用</p></li><li><p>发散一下思维，只要有JavaScript引擎，就能运行JS脚本，不管有没有浏览器！只是缺少浏览器提供的alert，window等方法。</p></li><li><p>既然浏览器可以往JavaScript引擎中注入代码，赋予JS脚本在网页中特殊的能力，同理我们可以自己集成JavaScript引擎，自己定义自己的方法往JavaScript引擎中注入，赋予JS更多更强的自定义能力！</p><p>注入的关键是：值类型相互对应，Obj映射class的一个实例，function映射一个句柄或者引用</p></li></ol><p><img src="http://p3.pstatp.com/large/16310006b973a10d8a3b" img_width="771" img_height="242" alt="从前端到全端：JavaScript逆袭之路"></p><h1>JavaScript数值型中的坑</h1><p>JavaScript内部，所有数字都是以64位浮点数形式储存，即使整数也是如此</p><p>这就是说，在JavaScript语言的底层，根本没有整数，所有数字都是小数（64位浮点数）。容易造成混淆的是，某些运算只有整数才能完成，此时JavaScript会自动把64位浮点数，转成32位整数，然后再进行运算。由于浮点数不是精确的值，所以涉及小数的比较和运算要特别小心。尽量避免使用JavaScript做精准计算和密集计算。</p><p><img src="http://p1.pstatp.com/large/16330000a6c45e403310" img_width="389" img_height="216" alt="从前端到全端：JavaScript逆袭之路"></p><p>根据国际标准IEEE 754，JavaScript浮点数的64个二进制位，从最左边开始，是这样组成的。</p><ul class=" list-paddingleft-2"><li><p>第1位：符号位，0表示正数，1表示负数</p></li><li><p>第2位到第12位：储存指数部分</p></li><li><p>第13位到第64位：储存小数部分（即有效数字）</p><p>符号位决定了一个数的正负，指数部分决定了数值的大小，小数部分决定了数值的精度。</p><p>IEEE 754规定，有效数字第一位默认总是1，不保存在64位浮点数之中。也就是说，有效数字总是1.xx…xx的形式，其中xx..xx的部分保存在64位浮点数之中，最长可能为52位。因此，JavaScript提供的有效数字最长为53个二进制位（64位浮点的后52位+有效数字第一位的1）。</p></li></ul><p>内部表现公式：<strong>(-1)^符号位 1.xx…xx 2^指数位</strong></p><p>精度最多只能到53个二进制位，这意味着，绝对值小于2的53次方的整数，即-(253-1)到253-1，都可以精确表示。</p><p>而大部分的后端语言，C++、Java、Python等的long型都是可以支持到64位，因此long型数据从后端语言传给JavaScript会发生<strong>低位截断</strong>。遇到这种情况一般使用String处理，如需要在JavaScript中做long型计算，需要自行实现计算器。</p><p><img src="http://p1.pstatp.com/large/16330000a6c5e9df6218" img_width="377" img_height="100" alt="从前端到全端：JavaScript逆袭之路"></p><p>有了自行往JavaScript引擎中注入的想法，接下来就是分析可行性。</p><p>大部分是JavaScript引擎是使用C++编写，如果自己的程序使用的是C++可以很方便的进行注入，如果是OC，可以使用OC和C++混编的形式。</p><p>其他语言怎么破？</p><p>要在一门静态语言上与动态语言JavaScript相互调用，最便捷的方式是找到一个这门语言实现的JavaScript引擎（开源），直接进行集成，注入。如果没有，则需要使用多一层桥接，把这门语言的接口暴露给C++，再由C++实现的JavaScript引擎将接口注入供JavaScript使用。</p><p>服务端集成思路&amp;实践：</p><p><img src="http://p1.pstatp.com/large/168100022cb5848b948a" img_width="686" img_height="410" alt="从前端到全端：JavaScript逆袭之路"></p><h1>nodeJS中的桥接</h1><p>我们都知道nodeJS，但是nodeJS的运行依赖于Google的V8 引擎，V8是C++实现，底层使用C++实现底层功能，比如网络，数据库IO，对外暴露一个构造器接口注入到上下文中，注意此处暴露的只是一个构造器接口而不是一个创建完的实例。然后实现了一个require的hook函数。当使用require加载一个JS模块时，跟网页中使用AMD 的require并无异样，当使用require加载系统库，既是C++的模块时，会调用暴露出来的构造器接口，得到一个实例对象。不管是装载JS模块还是装载C++模块，得到的都可以看做是一个Module Object，node会将装载完的模块缓存到binding_cache中，下次在别处的代码中使用require装载模块时，就会先去binding_cache中查找，如果找到了则返回该module object，如果没找到再执行上面的装载流程。</p><p>这就是node的基本原理：<strong>C++封装底层操作，通过V8注入，使得JS脚本有网络和IO能力</strong></p><h1>基于Spring的桥接</h1><p>以上说到的几个都是C++层面的应用，那么经典的Java怎么玩？是不是Java就必须是静态语言的玩法，没有办法像C++之类的，可以使用JS的动态特性？</p><p>当然不是。这个时候，我们需要说起前面介绍过的一个JS引擎 Rhino，Rhino是完全由Java编写，可想而知，Rhino几乎就是为Java应用而生的。</p><p>用法是这样：</p><ol class=" list-paddingleft-2"><li><p>首先在我们的Java应用中集成Rhino；</p></li><li><p>所有的IO操作，网络操作等，都封装成service，并提供增删改查，setter &amp;&amp; getter等多种方法</p></li><li><p>通过spring，把这些service bean注入到Rhino中；</p></li><li><p>把业务逻辑写到JS代码中，JS代码调用多个已注入的Java service处理业务逻辑，拼装数据返回！</p></li></ol><p>好处：修改业务逻辑不需要修改Java代码，也就是不需要重新编译和部署，只需要刷新下跑在Rhino中的JS代码即可。以往Java应用的一个痛点是部署，需要重新编译，打包，部署重启服务器，现在以这种形式开发，可以达到服务端的热更新和热部署。既可以享有Java服务的稳定性和可靠性，又可以享有JS的灵活性。</p><p>这种技术和用法在差不多十年前就有过，前EMC的工程师基于EMC著名的商业产品Documentum，设计了一套Java开源的中小企业CMS系统Alfresco，在该系统中实现了这种技术，这种技术基于spring，叫做spring-surf，做了一个胶水层。可以看做小十年前的node吧。</p><p>Demo，使用spring-surf框架的系统中一个webscript模块</p><p><img src="http://p3.pstatp.com/large/1631000534c36e7bf5bf" img_width="629" img_height="131" alt="从前端到全端：JavaScript逆袭之路"></p><ol class=" list-paddingleft-2"><li><p>categorynode.get.xml定义URL拦截器和权限控制；</p></li><li><p>.get指明是处理GET请求，RESTful；</p></li><li><p>在categorynode.get.js中调用已注入的Java Bean处理业务逻辑；</p></li><li><p>若为网页请求返回.html.ftl，若为Ajax，返回.json.ftl；</p></li></ol><p>（此处配套使用的是FreeMarker模板引擎）</p><p>==&gt; categorynode.get.desc.xml</p><p><img src="http://p3.pstatp.com/large/168100024d1e71a97e3d" img_width="887" img_height="272" alt="从前端到全端：JavaScript逆袭之路"></p><p>==&gt; categorynode.get.js</p><p><img src="http://p3.pstatp.com/large/168100024d1f88fef0d9" img_width="895" img_height="804" alt="从前端到全端：JavaScript逆袭之路"></p><p>==&gt; categorynode.get.html.ftl</p><p><img src="http://p9.pstatp.com/large/16330000c75d708489d6" img_width="897" img_height="52" alt="从前端到全端：JavaScript逆袭之路"></p><p>==&gt; categorynode.get.json.ftl</p><p><img src="http://p1.pstatp.com/large/16330000c75e74f3cf70" img_width="896" img_height="581" alt="从前端到全端：JavaScript逆袭之路"></p><h1>移动端集成思路&amp;实践：</h1><p><img src="http://p3.pstatp.com/large/16800002283984cd4613" img_width="676" img_height="413" alt="从前端到全端：JavaScript逆袭之路"></p><h1>React Native中的桥接</h1><p>React Native目前也是异常火爆，RN程序的运行依赖于Facebook的RN框架。在iOS、Android的模拟器或是真机上，React Native使用的是JavaScriptCore引擎，也就是Safari所使用的JavaScript引擎。但是在iOS上JavaScriptCore并没有使用即时编译技术（JIT），因为在iOS中应用无权拥有可写可执行的内存页（因而无法动态生成代码），在安卓上，理论上是可以使用的。JavaScriptCore引擎也是使用C++编写，在iOS和安卓中，JavaScriptCore都做了一层封装，可以无须关心引擎和系统桥接的那一层。iOS/Android系统通过JavaScriptCore引擎将定制好的各种原生组件注入，如：listview，text等。</p><h1>Cocos2d-JS中的桥接</h1><p>cocos2dx是游戏开发中非常常用的游戏渲染引擎，有一系列的产品，如：cocos2dx(C++)，cocos2d-lua（lua）, cocos2d-js(JavaScript)等多个产品。其中最新退出的是cocos2dx的JS版本的cocos2d-js，编写游戏渲染特效代码相比于C++和lua非常方便。对于做需要经常更新的渲染场景，C++是静态语言，每次修改都需要重新编译才能运行，显然是不合适的。自然也就想到了脚本语言，lua和js，两者有些类似，都是动态语言，只需要集成一个运行引擎，提供一个运行的容器即可运行，同时通过引擎注入底层方法供脚本调用即可。lua好处是精简，语法精简，引擎页很小很精简，所以不可避免的代码量会比js多，同时学习成本比较高。js的好处是有ECMAScrtpt的核心，语法比较丰富，同时有支持一些高级属性。在cocos2d-js中，cocos2dx(C++)集成了SpiderMonkey（C++）作为JS运行引擎，中间做了一个胶水层既是JS Binding，通过引擎注入了一个cc的全局对象，映射的是底层C++的一个单例C++实例。表面上写的是JS代码，实际上操作的是底层的C++。cocos2d-js是代码可以运行在多种环境中，当运行的网页环境中时，使用的是cocos2d-html5引擎，底层操作的是canvas；当运行在客户端上时，使用的是cocos2dx引擎，底层操作的是C++，再由C++去操控openGL做绘制和渲染。提供相同的API，对开发者几乎是透明无差异的，开发者只需要关注实现效果即可。达到一套代码，多端运行（网页端，客户端）。</p><p><img src="http://p3.pstatp.com/large/16330000a6c603d7d918" img_width="727" img_height="427" alt="从前端到全端：JavaScript逆袭之路"></p><h1>JSPatch技术中的桥接</h1><p>JSPatch是目前比较流行的iOS上的热修复技术，JSPatch 能做到通过 JS 调用和改写 OC 方法最根本的原因是 Objective-C 是动态语言，OC 上所有方法的调用/类的生成都通过 Objective-C Runtime 在运行时进行，我们可以通过类名/方法名反射得到相应的类和方法。JSPatch 的基本原理就是：JS 传递字符串给 OC，OC 通过 Runtime 接口调用和替换 OC 方法。</p><p>关键技术之一是 JS 和 OC 之间的消息互传。JSPatch里包含了，一个JS引擎JavaScriptCore（Safari，React Native用的同款）。用到了 JavaScriptCore 的接口，OC 端在启动 JSPatch 引擎时会创建一个 JSContext 实例，JSContext 是 JS 代码的执行环境，可以给 JSContext 添加方法，JS 就可以直接调用这个方法。本质上就是通过JavaScriptCore引擎注入，暴露OC的方法供JS调用来实现动态修改OC的反射。</p><p>Demo，iOS热更新，热修复：</p><ol class=" list-paddingleft-2"><li><p>集成JavaScriptCore引擎；</p></li><li><p>通过引擎，桥接JS和OC；</p></li><li><p>通过JS修改OC反射。</p></li></ol><p><img src="http://p3.pstatp.com/large/168100024d206f2316a0" img_width="898" img_height="232" alt="从前端到全端：JavaScript逆袭之路"></p><p>详细的JSPatch技术介绍请移步：<a href="https://github.com/bang590/JSPatch/wiki" target="_blank" rel="external">https://github.com/bang590/JSPatch/wiki</a></p><p><strong>关于JavaScript引擎：</strong></p><p>在iOS 或 android 上能够运行的JavaScript 引擎有4个：JavaScriptCore，SpiderMonkey，V8，Rhino。下面这个表格展示各个引擎在iOS 和 Android 的兼容性。</p><p><img src="http://p3.pstatp.com/large/16310006bb65c9cc9231" img_width="772" img_height="310" alt="从前端到全端：JavaScript逆袭之路"></p><p>因为iOS平台不支持JIT即时编译，而V8只有JIT模式，所以V8无法在iOS平台使用（越狱设备除外，想体验iOS JIT的同学可以自行越狱）。</p><p>所以，目前可以做到横跨iOS和Android双平台的JS引擎，只有两款，即是SpiderMonkey和JavaScriptCore。</p><p>JavaScript引擎会受很多东西影响，比如交叉编译器的版本、引擎的版本和操作系统的种类等。</p><p>至于如何选择，可以参考:《Part I: How to Choose a JavaScript Engine for iOS and Android Development》</p><p>至此，JavaScript从立足于前端，到征战全端的逆袭之路，可以总结为“携引擎以令天下”。</p><p>不足之处，还请各位看官轻拍~</p><h1>参考文章：</h1><p>bang590/JSPatch中问参考文档</p><p>Cocos2d-JS | Cocos2d-x官方参考文档</p><p>Alfresco官方参考文档</p><p>《Browser Wars: The End or Just the Beginning?》</p><p>《Part I: How to Choose a JavaScript Engine for iOS and Android Development》</p><p>《React Native 从入门到源码》</p></div></div>
@@ -1674,7 +2783,7 @@
     <link href="http://ipcreator.me/2017/02/03/my-view-of-management/"/>
     <id>http://ipcreator.me/2017/02/03/my-view-of-management/</id>
     <published>2017-02-03T06:30:18.000Z</published>
-    <updated>2017-02-10T07:28:53.421Z</updated>
+    <updated>2017-02-12T01:13:06.338Z</updated>
     
     <content type="html"><![CDATA[<h3>基本概念</h3>
 
@@ -1751,10 +2860,10 @@
     
     </summary>
     
-      <category term="管理" scheme="http://ipcreator.me/categories/%E7%AE%A1%E7%90%86/"/>
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="管理" scheme="http://ipcreator.me/tags/%E7%AE%A1%E7%90%86/"/>
+      <category term="成长" scheme="http://ipcreator.me/tags/%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
@@ -1763,7 +2872,7 @@
     <link href="http://ipcreator.me/2017/02/03/my-book-list/"/>
     <id>http://ipcreator.me/2017/02/03/my-book-list/</id>
     <published>2017-02-03T06:30:18.000Z</published>
-    <updated>2017-02-03T14:17:00.219Z</updated>
+    <updated>2017-02-12T01:13:30.259Z</updated>
     
     <content type="html"><![CDATA[<p><strong>“美好的事物值得付出、等待和分享”</strong></p>
 <h3>专利</h3>
@@ -1887,7 +2996,7 @@
       <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="分享" scheme="http://ipcreator.me/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -1896,7 +3005,7 @@
     <link href="http://ipcreator.me/2017/02/03/my-view-of-innovation/"/>
     <id>http://ipcreator.me/2017/02/03/my-view-of-innovation/</id>
     <published>2017-02-03T05:53:18.000Z</published>
-    <updated>2017-02-03T11:27:56.233Z</updated>
+    <updated>2017-02-12T01:27:22.123Z</updated>
     
     <content type="html"><![CDATA[<h3>基本概念</h3>
 
@@ -1936,10 +3045,10 @@
     
     </summary>
     
-      <category term="创新" scheme="http://ipcreator.me/categories/%E5%88%9B%E6%96%B0/"/>
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="创新" scheme="http://ipcreator.me/tags/%E5%88%9B%E6%96%B0/"/>
+      <category term="感悟" scheme="http://ipcreator.me/tags/%E6%84%9F%E6%82%9F/"/>
     
   </entry>
   
@@ -1948,7 +3057,7 @@
     <link href="http://ipcreator.me/2017/02/03/my-view-of-patent-strategy/"/>
     <id>http://ipcreator.me/2017/02/03/my-view-of-patent-strategy/</id>
     <published>2017-02-03T05:53:18.000Z</published>
-    <updated>2017-02-03T11:47:33.999Z</updated>
+    <updated>2017-02-12T01:14:00.859Z</updated>
     
     <content type="html"><![CDATA[<h3>基本概念</h3>
 
@@ -1998,19 +3107,19 @@
     
     </summary>
     
-      <category term="专利" scheme="http://ipcreator.me/categories/%E4%B8%93%E5%88%A9/"/>
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="专利" scheme="http://ipcreator.me/tags/%E4%B8%93%E5%88%A9/"/>
+      <category term="感悟" scheme="http://ipcreator.me/tags/%E6%84%9F%E6%82%9F/"/>
     
   </entry>
   
   <entry>
     <title>成长之我见</title>
-    <link href="http://ipcreator.me/2017/02/03/my-view-of-growth/"/>
-    <id>http://ipcreator.me/2017/02/03/my-view-of-growth/</id>
+    <link href="http://ipcreator.me/2017/02/03/my-view-of-growing-up/"/>
+    <id>http://ipcreator.me/2017/02/03/my-view-of-growing-up/</id>
     <published>2017-02-03T05:53:18.000Z</published>
-    <updated>2017-02-04T09:14:26.239Z</updated>
+    <updated>2017-02-12T01:14:37.686Z</updated>
     
     <content type="html"><![CDATA[<h3>基本概念</h3>
 
@@ -2095,16 +3204,16 @@
       <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="成长" scheme="http://ipcreator.me/tags/%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
   <entry>
     <title>简书的 Markdown 新手指南</title>
-    <link href="http://ipcreator.me/2017/02/03/mark-down/"/>
-    <id>http://ipcreator.me/2017/02/03/mark-down/</id>
+    <link href="http://ipcreator.me/2017/02/03/zh-mark-down/"/>
+    <id>http://ipcreator.me/2017/02/03/zh-mark-down/</id>
     <published>2017-02-03T04:55:06.000Z</published>
-    <updated>2017-02-03T05:24:00.140Z</updated>
+    <updated>2017-02-12T01:28:22.409Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.jianshu.com/p/qqGjLN" target="_blank">『为什么作家应该用 Markdown 保存自己的文稿』</a>。</p>
 <p>在此，我们总结 Markdown 的优点如下：</p>
@@ -2517,10 +3626,10 @@ document.write(fib(10));
     
     </summary>
     
-      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="Markdown" scheme="http://ipcreator.me/tags/Markdown/"/>
     
   </entry>
   
@@ -2529,7 +3638,7 @@ document.write(fib(10));
     <link href="http://ipcreator.me/2017/02/02/The%20Unix%20and%20Internet%20Fundamentals%20HOWTO/"/>
     <id>http://ipcreator.me/2017/02/02/The Unix and Internet Fundamentals HOWTO/</id>
     <published>2017-02-02T14:19:06.000Z</published>
-    <updated>2017-02-03T03:36:19.011Z</updated>
+    <updated>2017-02-12T01:30:44.777Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.faqs.org/docs/Linux-HOWTO/Unix-and-Internet-Fundamentals-HOWTO.html" target="_blank" rel="external">Eric Raymond</a><br><img src="/img/eric-raymond.jpg" alt="Eric Raymond"><br>This document describes the working basics of PC-class computers, Unix-like operating systems, and the Internet in non-technical language.</p>
 <a id="more"></a> 
@@ -2803,7 +3912,9 @@ document.write(fib(10));
       <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="技术" scheme="http://ipcreator.me/tags/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Unix" scheme="http://ipcreator.me/tags/Unix/"/>
+    
+      <category term="Internet" scheme="http://ipcreator.me/tags/Internet/"/>
     
   </entry>
   
@@ -2812,7 +3923,7 @@ document.write(fib(10));
     <link href="http://ipcreator.me/2017/02/02/How%20To%20Become%20A%20Hacker/"/>
     <id>http://ipcreator.me/2017/02/02/How To Become A Hacker/</id>
     <published>2017-02-02T13:49:06.000Z</published>
-    <updated>2017-02-03T03:36:39.497Z</updated>
+    <updated>2017-02-12T01:31:14.578Z</updated>
     
     <content type="html"><![CDATA[<p>Eric Steven Raymond<br><a class="reference external" href="http://catb.org/~esr/" target="_blank" rel="external">Thyrsus Enterprises</a><br>Copyright © 2001 Eric S. Raymond &lt;<a class="reference external" href="mailto:esr&#37;&#52;&#48;thyrsus&#46;com" target="_blank" rel="external">esr<span>&#64;</span>thyrsus<span>&#46;</span>com</a>&gt;<br>Wang Dingwei &lt;<a class="reference external" href="mailto:wangdingwei82&#37;&#52;&#48;gmail&#46;com" target="_blank" rel="external">wangdingwei82<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt; 基于 Barret 的翻译更正而成。转载请注明出处。</p>
 <a id="more"></a> 
@@ -3105,7 +4216,7 @@ If you want to change it, more info is available in our docs:
       <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="技术" scheme="http://ipcreator.me/tags/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Hacker" scheme="http://ipcreator.me/tags/Hacker/"/>
     
   </entry>
   
@@ -3114,7 +4225,7 @@ If you want to change it, more info is available in our docs:
     <link href="http://ipcreator.me/2017/02/02/How-To-Ask-Questions-The-Smart-Way/"/>
     <id>http://ipcreator.me/2017/02/02/How-To-Ask-Questions-The-Smart-Way/</id>
     <published>2017-02-02T13:32:06.000Z</published>
-    <updated>2017-02-03T03:36:30.869Z</updated>
+    <updated>2017-02-12T01:31:41.966Z</updated>
     
     <content type="html"><![CDATA[<p><strong>How To Ask Questions The Smart Way</strong><br>Copyright © 2001,2006,2014 Eric S. Raymond, Rick Moen<br>本指南英文版版权为 <a href="http://www.catb.org/%7Eesr/faqs/smart-questions.html" target="_blank" rel="external">Eric S. Raymond, Rick Moen</a> 所有。<br>本中文指南是基于原文 3.10 版以及 2010 年由 <a href="https://github.com/gasolin" target="_blank" rel="external">Gasolin</a> 所翻译版本的最新翻译；<br>本文另有<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README.md" target="_blank" rel="external">繁體中文版</a>。</p>
 <a id="more"></a> 
@@ -3724,7 +4835,7 @@ If you want to change it, more info is available in our docs:
       <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="技术" scheme="http://ipcreator.me/tags/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Ask" scheme="http://ipcreator.me/tags/Ask/"/>
     
   </entry>
   
@@ -3733,7 +4844,7 @@ If you want to change it, more info is available in our docs:
     <link href="http://ipcreator.me/2017/01/31/my-article-for-newspaper/"/>
     <id>http://ipcreator.me/2017/01/31/my-article-for-newspaper/</id>
     <published>2017-01-31T09:22:06.000Z</published>
-    <updated>2017-02-01T15:13:55.970Z</updated>
+    <updated>2017-02-12T01:32:10.333Z</updated>
     
     <content type="html"><![CDATA[<p><div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/my-article.JPG" width="640" height="360" alt="personal photo"><br> </div><br>                                                       <a href="http://www.cipnews.com.cn/zgzscqb/images/2016-03/30/11/zgzscqb2016033011.pdf" target="_blank" rel="external">文章下载</a></p>
 <a id="more"></a>
@@ -3768,7 +4879,7 @@ If you want to change it, more info is available in our docs:
       <category term="专利" scheme="http://ipcreator.me/categories/%E4%B8%93%E5%88%A9/"/>
     
     
-      <category term="专利" scheme="http://ipcreator.me/tags/%E4%B8%93%E5%88%A9/"/>
+      <category term="管理" scheme="http://ipcreator.me/tags/%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
@@ -3777,7 +4888,7 @@ If you want to change it, more info is available in our docs:
     <link href="http://ipcreator.me/2017/01/30/my-patent-list/"/>
     <id>http://ipcreator.me/2017/01/30/my-patent-list/</id>
     <published>2017-01-30T12:53:06.000Z</published>
-    <updated>2017-02-03T03:37:22.495Z</updated>
+    <updated>2017-02-12T01:32:38.931Z</updated>
     
     <content type="html"><![CDATA[<h3 id="检索方法"><a href="#检索方法" class="headerlink" title="检索方法"></a>检索方法</h3><p>1、打开专利检索网址<a href="http://www.innojoy.com" target="_blank" rel="external">大为</a>；<br>2、以“汪智勇”为关键字进行检索；<br>3、在检索结果中，以申请（权利人）为“宇龙/Yulong” or “酷派/Coolpad”进行二次筛选便可得出结果。</p>
 <h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><blockquote>
@@ -4467,7 +5578,7 @@ If you want to change it, more info is available in our docs:
     
     </summary>
     
-      <category term="专利" scheme="http://ipcreator.me/categories/%E4%B8%93%E5%88%A9/"/>
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
       <category term="专利" scheme="http://ipcreator.me/tags/%E4%B8%93%E5%88%A9/"/>
@@ -4479,7 +5590,7 @@ If you want to change it, more info is available in our docs:
     <link href="http://ipcreator.me/2017/01/29/my-resume/"/>
     <id>http://ipcreator.me/2017/01/29/my-resume/</id>
     <published>2017-01-29T11:37:06.000Z</published>
-    <updated>2017-02-09T01:14:55.585Z</updated>
+    <updated>2017-02-12T01:33:07.780Z</updated>
     
     <content type="html"><![CDATA[<p><strong>“合适的才是最好的”</strong></p>
 <hr>
@@ -4528,7 +5639,7 @@ If you want to change it, more info is available in our docs:
       <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="简历" scheme="http://ipcreator.me/tags/%E7%AE%80%E5%8E%86/"/>
     
   </entry>
   
@@ -4537,7 +5648,7 @@ If you want to change it, more info is available in our docs:
     <link href="http://ipcreator.me/2017/01/29/hello-world/"/>
     <id>http://ipcreator.me/2017/01/29/hello-world/</id>
     <published>2017-01-29T11:37:06.000Z</published>
-    <updated>2017-02-09T01:30:40.873Z</updated>
+    <updated>2017-02-12T01:32:53.860Z</updated>
     
     <content type="html"><![CDATA[<p>IPCreator = IP + Creator <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" rel="external">网易中文博客</a></p>
 <blockquote>
@@ -4568,7 +5679,7 @@ If you want to change it, more info is available in our docs:
       <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="个人" scheme="http://ipcreator.me/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="博客" scheme="http://ipcreator.me/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -4577,7 +5688,7 @@ If you want to change it, more info is available in our docs:
     <link href="http://ipcreator.me/2017/01/10/echarts-demo3/"/>
     <id>http://ipcreator.me/2017/01/10/echarts-demo3/</id>
     <published>2017-01-10T00:51:44.000Z</published>
-    <updated>2017-02-01T15:27:50.323Z</updated>
+    <updated>2017-02-12T01:34:00.999Z</updated>
     
     <content type="html"><![CDATA[<p>直接通过调用js脚本实现</p>
 <script type="text/javascript">
@@ -4728,7 +5839,7 @@ for (var i = 0; i &lt; 100; i++) {
       <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="echarts" scheme="http://ipcreator.me/tags/echarts/"/>
+      <category term="Echarts" scheme="http://ipcreator.me/tags/Echarts/"/>
     
   </entry>
   
@@ -4737,15 +5848,15 @@ for (var i = 0; i &lt; 100; i++) {
     <link href="http://ipcreator.me/2016/12/30/echarts-demo2/"/>
     <id>http://ipcreator.me/2016/12/30/echarts-demo2/</id>
     <published>2016-12-30T12:51:44.000Z</published>
-    <updated>2017-02-01T15:10:54.554Z</updated>
+    <updated>2017-02-12T01:33:49.251Z</updated>
     
     <content type="html"><![CDATA[<p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行<br>增加标题信息</p>
-<div id="echarts2378" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts740" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts2378'));
+        var myChart = echarts.init(document.getElementById('echarts740'));
         // 指定图表的配置项和数据
         var option = {
 
@@ -4827,12 +5938,12 @@ for (var i = 0; i &lt; 100; i++) {
     <summary type="html">
     
       &lt;p&gt;通过&lt;a href=&quot;http://kchen.cc/2016/11/05/echarts-in-hexo/&quot;&gt;ECharts 插件&lt;/a&gt;直接运行&lt;br&gt;增加标题信息&lt;/p&gt;
-&lt;div id=&quot;echarts2378&quot; style=&quot;width: 85%;height: 400px;margin: 0 auto&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;echarts740&quot; style=&quot;width: 85%;height: 400px;margin: 0 auto&quot;&gt;&lt;/div&gt;
 &lt;script src=&quot;http://echarts.baidu.com/dist/echarts.common.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script type=&quot;text/javascript&quot;&gt;
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById(&#39;echarts2378&#39;));
+        var myChart = echarts.init(document.getElementById(&#39;echarts740&#39;));
         // 指定图表的配置项和数据
         var option = {
 
@@ -4913,7 +6024,7 @@ for (var i = 0; i &lt; 100; i++) {
       <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="echarts" scheme="http://ipcreator.me/tags/echarts/"/>
+      <category term="Echarts" scheme="http://ipcreator.me/tags/Echarts/"/>
     
   </entry>
   
@@ -4922,16 +6033,16 @@ for (var i = 0; i &lt; 100; i++) {
     <link href="http://ipcreator.me/2016/12/29/echarts-demo/"/>
     <id>http://ipcreator.me/2016/12/29/echarts-demo/</id>
     <published>2016-12-29T12:51:44.000Z</published>
-    <updated>2017-02-03T04:43:01.656Z</updated>
+    <updated>2017-02-12T01:33:34.964Z</updated>
     
     <content type="html"><![CDATA[<p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行</p>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">echarts</span> 400 '85%' %&#125;</span><span class="xml"></span></div><div class="line">\\TODO option goes here</div><div class="line"><span class="template-tag">&#123;% <span class="name">endecharts</span> %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
-<div id="echarts1597" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts6844" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts1597'));
+        var myChart = echarts.init(document.getElementById('echarts6844'));
         // 指定图表的配置项和数据
         var option = {
 
@@ -5011,18 +6122,19 @@ for (var i = 0; i &lt; 100; i++) {
       <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="echarts" scheme="http://ipcreator.me/tags/echarts/"/>
+      <category term="Echarts" scheme="http://ipcreator.me/tags/Echarts/"/>
     
   </entry>
   
   <entry>
-    <title>转：&quot;浏览器野史 UserAgent列传（下）&quot;</title>
+    <title>浏览器野史 UserAgent列传（下）</title>
     <link href="http://ipcreator.me/2014/10/05/zh-history-of-browser-useragent2/"/>
     <id>http://ipcreator.me/2014/10/05/zh-history-of-browser-useragent2/</id>
     <published>2014-10-05T09:26:00.000Z</published>
-    <updated>2017-02-01T15:25:42.486Z</updated>
+    <updated>2017-02-12T01:38:22.426Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/img/browser-history2.jpg" alt="其实应该叫做浏览器约架史">    </p>
+    <content type="html"><![CDATA[<p>作者：<a href="http://litten.me/" target="_blank" rel="external">Litten</a></p>
+<p><img src="/img/browser-history2.jpg" alt="其实应该叫做浏览器约架史">    </p>
 <p>前篇<a href="/2014/09/26/zh-history-of-browser-useragent/">《浏览器野史 UserAgent列传（上）》</a></p>
 <h3 id="六、师夷长技"><a href="#六、师夷长技" class="headerlink" title="六、师夷长技"></a>六、师夷长技</h3><p>前面说到，微软靠Windows系统捆绑IE销售。而Windows自然也有它的对手，Linux。一个技术快速发展的时代，系统的世界里也是战火纷飞。Linux系统自从有了可视化界面，也需要浏览器呀。桌面系统KDE的缔造者们就发明了一个。</p>
 <a id="more"></a>
@@ -5067,7 +6179,8 @@ for (var i = 0; i &lt; 100; i++) {
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/img/browser-history2.jpg&quot; alt=&quot;其实应该叫做浏览器约架史&quot;&gt;    &lt;/p&gt;
+      &lt;p&gt;作者：&lt;a href=&quot;http://litten.me/&quot;&gt;Litten&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/browser-history2.jpg&quot; alt=&quot;其实应该叫做浏览器约架史&quot;&gt;    &lt;/p&gt;
 &lt;p&gt;前篇&lt;a href=&quot;/2014/09/26/zh-history-of-browser-useragent/&quot;&gt;《浏览器野史 UserAgent列传（上）》&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;六、师夷长技&quot;&gt;&lt;a href=&quot;#六、师夷长技&quot; class=&quot;headerlink&quot; title=&quot;六、师夷长技&quot;&gt;&lt;/a&gt;六、师夷长技&lt;/h3&gt;&lt;p&gt;前面说到，微软靠Windows系统捆绑IE销售。而Windows自然也有它的对手，Linux。一个技术快速发展的时代，系统的世界里也是战火纷飞。Linux系统自从有了可视化界面，也需要浏览器呀。桌面系统KDE的缔造者们就发明了一个。&lt;/p&gt;
     
@@ -5083,13 +6196,14 @@ for (var i = 0; i &lt; 100; i++) {
   </entry>
   
   <entry>
-    <title>转：&quot;浏览器野史 UserAgent列传（上）&quot;</title>
+    <title>浏览器野史 UserAgent列传（上）</title>
     <link href="http://ipcreator.me/2014/09/26/zh-history-of-browser-useragent/"/>
     <id>http://ipcreator.me/2014/09/26/zh-history-of-browser-useragent/</id>
     <published>2014-09-26T03:26:00.000Z</published>
-    <updated>2017-01-31T06:36:55.236Z</updated>
+    <updated>2017-02-12T01:38:15.993Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/img/browser-history.jpg" alt="其实应该叫做浏览器约架史">   </p>
+    <content type="html"><![CDATA[<p>作者：<a href="http://litten.me/" target="_blank" rel="external">Litten</a></p>
+<p><img src="/img/browser-history.jpg" alt="其实应该叫做浏览器约架史">   </p>
 <p>某天，我做一个小项目，需要判断一下浏览器类型。简单的呀。<br>控制台敲下：<code>navigator.userAgent</code><br>浏览器回应：<code>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36</code></p>
 <p>天，这串是啥？你怎么连话都说不清楚？</p>
 <p>我对userAgent并不陌生，但明明一个单词就可以说清楚的事情，却是这么掏心掏肺的回答。怪可怜的，一定有冤情。</p>
@@ -5137,7 +6251,8 @@ for (var i = 0; i &lt; 100; i++) {
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/img/browser-history.jpg&quot; alt=&quot;其实应该叫做浏览器约架史&quot;&gt;   &lt;/p&gt;
+      &lt;p&gt;作者：&lt;a href=&quot;http://litten.me/&quot;&gt;Litten&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/browser-history.jpg&quot; alt=&quot;其实应该叫做浏览器约架史&quot;&gt;   &lt;/p&gt;
 &lt;p&gt;某天，我做一个小项目，需要判断一下浏览器类型。简单的呀。&lt;br&gt;控制台敲下：&lt;code&gt;navigator.userAgent&lt;/code&gt;&lt;br&gt;浏览器回应：&lt;code&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;天，这串是啥？你怎么连话都说不清楚？&lt;/p&gt;
 &lt;p&gt;我对userAgent并不陌生，但明明一个单词就可以说清楚的事情，却是这么掏心掏肺的回答。怪可怜的，一定有冤情。&lt;/p&gt;
@@ -5155,13 +6270,14 @@ for (var i = 0; i &lt; 100; i++) {
   </entry>
   
   <entry>
-    <title>转：&quot;兔子，胡萝卜与OAuth的故事&quot;</title>
+    <title>兔子，胡萝卜与OAuth的故事</title>
     <link href="http://ipcreator.me/2013/08/20/zh-oauth-rabbit/"/>
     <id>http://ipcreator.me/2013/08/20/zh-oauth-rabbit/</id>
     <published>2013-08-20T04:55:00.000Z</published>
-    <updated>2017-01-31T06:41:14.936Z</updated>
+    <updated>2017-02-12T01:41:39.930Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/img/rabbit.jpg" alt="来搞一记Oauth吧"> </p>
+    <content type="html"><![CDATA[<p>作者：<a href="http://litten.me/" target="_blank" rel="external">Litten</a></p>
+<p><img src="/img/rabbit.jpg" alt="来搞一记Oauth吧"> </p>
 <blockquote>
 <p>那些简单的故事，就别用复杂的方式传诵</p>
 </blockquote>
@@ -5205,7 +6321,8 @@ for (var i = 0; i &lt; 100; i++) {
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/img/rabbit.jpg&quot; alt=&quot;来搞一记Oauth吧&quot;&gt; &lt;/p&gt;
+      &lt;p&gt;作者：&lt;a href=&quot;http://litten.me/&quot;&gt;Litten&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/rabbit.jpg&quot; alt=&quot;来搞一记Oauth吧&quot;&gt; &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;那些简单的故事，就别用复杂的方式传诵&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -5219,16 +6336,19 @@ for (var i = 0; i &lt; 100; i++) {
     
       <category term="web" scheme="http://ipcreator.me/tags/web/"/>
     
+      <category term="OAuth" scheme="http://ipcreator.me/tags/OAuth/"/>
+    
   </entry>
   
   <entry>
-    <title>转：&quot;谈谈OAuth1,OAuth2异同&quot;</title>
+    <title>谈谈OAuth1,OAuth2异同</title>
     <link href="http://ipcreator.me/2013/08/11/zh-brief-oauth/"/>
     <id>http://ipcreator.me/2013/08/11/zh-brief-oauth/</id>
     <published>2013-08-11T02:55:00.000Z</published>
-    <updated>2017-01-31T06:26:48.046Z</updated>
+    <updated>2017-02-12T01:41:46.949Z</updated>
     
-    <content type="html"><![CDATA[<p>##<strong>一、写在前面</strong><br>在收集资料时，我查询和学习了许多介绍OAuth的文章，这些文章有好有坏，但大多是从个例出发。因此我想从官方文档出发，结合在stackoverflow上的一些讨论，一并整理一下。整理的内容分为OAuth1.0a和OAuth2两部分。</p>
+    <content type="html"><![CDATA[<p>作者：<a href="http://litten.me/" target="_blank" rel="external">Litten</a></p>
+<p>##<strong>一、写在前面</strong><br>在收集资料时，我查询和学习了许多介绍OAuth的文章，这些文章有好有坏，但大多是从个例出发。因此我想从官方文档出发，结合在stackoverflow上的一些讨论，一并整理一下。整理的内容分为OAuth1.0a和OAuth2两部分。</p>
 <blockquote>
 <p>OAuth 1.0a：One Leg -&gt;Two Leg -&gt; Three Legged<br>OAuth 2:Two Leg -&gt;Three Legged (附：Refresh Token的方式)</p>
 </blockquote>
@@ -5435,7 +6555,8 @@ for (var i = 0; i &lt; 100; i++) {
     
     <summary type="html">
     
-      &lt;p&gt;##&lt;strong&gt;一、写在前面&lt;/strong&gt;&lt;br&gt;在收集资料时，我查询和学习了许多介绍OAuth的文章，这些文章有好有坏，但大多是从个例出发。因此我想从官方文档出发，结合在stackoverflow上的一些讨论，一并整理一下。整理的内容分为OAuth1.0a和OAuth2两部分。&lt;/p&gt;
+      &lt;p&gt;作者：&lt;a href=&quot;http://litten.me/&quot;&gt;Litten&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;##&lt;strong&gt;一、写在前面&lt;/strong&gt;&lt;br&gt;在收集资料时，我查询和学习了许多介绍OAuth的文章，这些文章有好有坏，但大多是从个例出发。因此我想从官方文档出发，结合在stackoverflow上的一些讨论，一并整理一下。整理的内容分为OAuth1.0a和OAuth2两部分。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;OAuth 1.0a：One Leg -&amp;gt;Two Leg -&amp;gt; Three Legged&lt;br&gt;OAuth 2:Two Leg -&amp;gt;Three Legged (附：Refresh Token的方式)&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -5447,6 +6568,8 @@ for (var i = 0; i &lt; 100; i++) {
     
     
       <category term="web" scheme="http://ipcreator.me/tags/web/"/>
+    
+      <category term="OAuth" scheme="http://ipcreator.me/tags/OAuth/"/>
     
   </entry>
   
