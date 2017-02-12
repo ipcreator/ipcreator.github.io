@@ -4,8 +4,130 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/07/zh-history-of-javascript/</loc>
+    <lastmod>2017-02-12T13:20:56.915Z</lastmod>
+    <data>
+        <display>
+        <title>从前端到全端：JavaScript逆袭之路</title>
+        <pubTime>2017-02-07T11:55:06.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/11/quick-learn-javascript/</loc>
+    <lastmod>2017-02-12T13:18:19.233Z</lastmod>
+    <data>
+        <display>
+        <title>最简单直接的 Javascript 开发环境</title>
+        <pubTime>2017-02-11T13:09:06.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/11/quick-learn-regular-expression/</loc>
+    <lastmod>2017-02-12T13:05:29.157Z</lastmod>
+    <data>
+        <display>
+        <title>正则表达式极简“入门”</title>
+        <pubTime>2017-02-11T12:59:06.000Z</pubTime>
+        
+        <tag>Regular Expression</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/11/quick-learn-html-and-css/</loc>
+    <lastmod>2017-02-12T12:58:00.322Z</lastmod>
+    <data>
+        <display>
+        <title>快速学习 HTML 和 CSS</title>
+        <pubTime>2017-02-11T12:24:06.000Z</pubTime>
+        
+        <tag>Html</tag>
+         
+        <tag>CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/11/sit-idle-and-enjoy-the-fruits/</loc>
+    <lastmod>2017-02-12T12:12:39.589Z</lastmod>
+    <data>
+        <display>
+        <title>坐享其成</title>
+        <pubTime>2017-02-11T11:16:06.000Z</pubTime>
+        
+        <tag>感悟</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/01/29/hello-world/</loc>
+    <lastmod>2017-02-12T11:11:35.272Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎访问我的个人博客</title>
+        <pubTime>2017-01-29T11:37:06.000Z</pubTime>
+        
+        <tag>博客</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/11/everybody-can-be-engineer/</loc>
-    <lastmod>2017-02-12T07:24:19.632Z</lastmod>
+    <lastmod>2017-02-12T11:06:28.311Z</lastmod>
     <data>
         <display>
         <title>人人都是工程师</title>
@@ -17,6 +139,54 @@
            
              
               <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/11/how-to-use-english/</loc>
+    <lastmod>2017-02-12T10:18:38.107Z</lastmod>
+    <data>
+        <display>
+        <title>十分钟后开始使用英语</title>
+        <pubTime>2017-02-11T08:33:06.000Z</pubTime>
+        
+        <tag>音标</tag>
+         
+        <tag>词典</tag>
+         
+        <tag>语法</tag>
+         
+        <tag>阅读</tag>
+         
+        <tag>口语</tag>
+         
+         
+           
+             
+              <breadCrumb title="英语" url="http://ipcreator.me/categories/%E8%8B%B1%E8%AF%AD/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/09/summary-and-table-of-principles/</loc>
+    <lastmod>2017-02-12T09:41:03.327Z</lastmod>
+    <data>
+        <display>
+        <title>Summary and Table of Principles</title>
+        <pubTime>2017-02-09T10:00:18.000Z</pubTime>
+        
+        <tag>管理</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
           
         </display>
     </data>
@@ -57,6 +227,26 @@
            
              
               <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/11/beautiful-pics-of-scientific-discovery/</loc>
+    <lastmod>2017-02-12T06:41:13.090Z</lastmod>
+    <data>
+        <display>
+        <title>2016年最精彩科学美图</title>
+        <pubTime>2017-02-11T12:24:06.000Z</pubTime>
+        
+        <tag>分享</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
           
         </display>
     </data>
@@ -428,26 +618,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/29/hello-world/</loc>
-    <lastmod>2017-02-12T01:32:53.860Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎访问我的个人博客</title>
-        <pubTime>2017-01-29T11:37:06.000Z</pubTime>
-        
-        <tag>博客</tag>
-         
-         
-           
-             
-              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/01/30/my-patent-list/</loc>
     <lastmod>2017-02-12T01:32:38.931Z</lastmod>
     <data>
@@ -650,26 +820,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/07/zh-history-of-javascript/</loc>
-    <lastmod>2017-02-12T01:12:06.730Z</lastmod>
-    <data>
-        <display>
-        <title>从前端到全端：JavaScript逆袭之路</title>
-        <pubTime>2017-02-07T11:55:06.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/08/view-of-huizhou/</loc>
     <lastmod>2017-02-12T01:10:44.323Z</lastmod>
     <data>
@@ -718,26 +868,6 @@
         <pubTime>2017-02-09T10:00:18.000Z</pubTime>
         
         <tag>成长</tag>
-         
-         
-           
-             
-              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/beautiful-pics-of-scientific-discovery/</loc>
-    <lastmod>2017-02-12T01:09:13.589Z</lastmod>
-    <data>
-        <display>
-        <title>2016年最精彩科学美图</title>
-        <pubTime>2017-02-11T12:24:06.000Z</pubTime>
-        
-        <tag>分享</tag>
          
          
            
