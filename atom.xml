@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-02-12T04:46:54.645Z</updated>
+  <updated>2017-02-12T15:01:13.211Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -14,6 +14,166 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人工智能VS机器学习</title>
+    <link href="http://ipcreator.me/2017/02/12/ai-vs-machine-learning/"/>
+    <id>http://ipcreator.me/2017/02/12/ai-vs-machine-learning/</id>
+    <published>2017-02-12T14:49:06.000Z</published>
+    <updated>2017-02-12T15:01:13.211Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://dy.163.com/v2/article/detail/CBLFGEEV0511CUKV.html" target="_blank" rel="external">作者：网易AI研究院</a></p>
+ <div align="center"><br><img src="http://dingyue.nosdn.127.net/FvoCteXeaxOQg4IblKLzFzKWGzhz86zMvylL6jsI6tLsx1485348908493compressflag.jpg" width="839" height="416"><br> </div>
+
+<p>  对于企业而言，该投资人工智能还是机器学习呢？国外媒体发表Avanade高级总监贾马尔·赫瓦贾（Jamal Khawaja）的文章对这一问题进行了深入解析。</p>
+  <a id="more"></a>
+<p>　在过去的一年里，笔者一直在研究两种在如何利用大数据上相互矛盾的方法：人工智能（AI）和机器学习（ML）。毕竟，大数据没什么令人兴奋的，除非你有个机制去处理它。经过数周的深入研究后，我意识到大家对于一切的定义都是不一致的。另外，二者之间的区别相当无趣乏味。因此，我将尝试用一种既不讨好供应商也不讨好学术界的语言，来解析我对未来十年行业的发展的看法。</p>
+<p>　　不过，在展开讨论之前，我们首先说明一些背景信息。先来谈谈AI和ML与大数据相关的定义：</p>
+<p>　　<strong>人工智能</strong>：AI的目标是理解神经功能，模拟大脑的神经功能来从给定的情境中学习。在很多情况下，大脑实质上就是鲁布·戈德堡机器（即极为复杂的机器设备）。有了这种进化性的构建模块，我们就能够达到一种复杂的终端状态。</p>
+<p>　　早在1980年代，AI在科学家当中是一个热门研究领域：专家们是如何做他们的工作的，如何将他们的那些任务简化成一系列的规则，如何通过编程给计算机引入那些规则，进而取代那些专家。研究人员想要教导计算机诊断疾病，翻译各种语言，甚至推断我们想要但不自知的东西。<strong>从根本上说，AI寻求构造在一个系统内进行逻辑推理的能力。</strong></p>
+<p>　　这种努力并没有成功。</p>
+<p>　　在被宣告失败之前，传统的AI项目吸引了数亿美元的风投资金。当时，AI的问题在于，我们没有足够有成本效率的计算能力去完成那些目标。但得益于Map Reduce和云技术，我们现在有足够充裕的计算能力去做AI。</p>
+<p>　　<strong>机器学习</strong>：ML实际上是数项技术的集合，其中包括计算统计学、算法设计和数学，旨在尝试进行数据挖掘分析，以发现模式，再将模式转化成语言。这种技术会给系统提供初始的指令组，然后系统进行数据归纳，发现或者推断出模式，以期将那些信息应用到新的解决方案。</p>
+<p>　　<strong>ML是从AI进化而来的。</strong>当AI的挑战变得非常显著，变得无法克服时，理论家们寻求一种更加定制化的归纳计算决策方法。这种模式有不同的种类。供应商们将它们的系统称为“机器智能”或者“监督式学习”。</p>
+<p>　　除了更容易构造以外，机器学习的好处都显而易见。<strong>ML始于一个界定的问题，以及描述对给定数据集的恰当分析的规则组。</strong></p>
+<h2 id="AI与ML的相似之处"><a href="#AI与ML的相似之处" class="headerlink" title="AI与ML的相似之处"></a>AI与ML的相似之处</h2><p>　　- 迭代算法：尽管机制上存在差异，但ML和AI有着共同的主要组成部分：迭代学习。<strong>在ML中，迭代学习是从所描述的参数组中定义不确定边界的过程。在AI中，迭代学习通过通常随时间变动的非线性序列发生。</strong></p>
+<p>　　- 数据越多，迭代越快：系统本身会从学习中构造和优化算法模型。</p>
+<p>　　- 可应用在明确算法不能实行的地方（垃圾邮件过滤、OCM和计算机视觉）。本质上，当物体、动作或者任何其它的东西的定义无法精确描述出来的时候，就需要更加复杂的指令组（通常是概率建模）来分析和理解。</p>
+<p>-两种系统都依靠基于归纳推理的“学会学习”能力：二者的运作过程存在着很大的差异，但最终的效果都取决于系统从经验中学习的能力。那种学习可以是外显的，有指导的（典型的例子就是机器学习），也可以是基于一系列的先验知识，由系统本身进行推测（典型例子就是人工智能）。</p>
+<h2 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a>人工智能</h2><p>　　- AI的目标是推理。系统不仅仅要鉴别需要估算什么，还要鉴别如何进行估算，即便在不确定的情况下也是如此。这是一项困难的任务，很多人都缺乏这种能力。</p>
+<p>　　- 所基于的神经网络：AI执行最常见的解决方案机制是人工神经网络。从根本上说，不同抽象层次的互联神经元会权衡受观察或者被计算的行为的价值，会通过使用输入的非线性函数来调整驱动系统的算法。</p>
+<p>　　- 在不同的抽象层次学习：AI算法会在信号从输入层传送到输出层的过程中将信号遇到的转变参数化。该转变是有可训练的考量因素的处理单元，如权重和阈值。层数反映神经网络的复杂性，参数的权重反映它背后的逻辑。</p>
+<p>　　- 寻找方差的转变，以识别变化：在神经网络中，有机制识别方差的实际转变和变化的程度。这是AI的基石之一；量化方差和推断其影响的能力对于AI而言必不可少。</p>
+<h2 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h2><p>　　- ML专注于根据已知属性预测未知属性，这反过来是依据概率分布。这反映出ML的两个主要目标：</p>
+<p>　　1. 目标是解决问题；利用给定的带有定义输入的数据组和监督式误差反向传播，鉴别和解决问题</p>
+<p>　　2. ML并不是寻求思考的能力；相反，它是寻求做会思考的实体能够做的事情的能力</p>
+<p>-ML方面有两类函数：能够被学习的东西和不能够被学习的东西。这种机制是通过围绕与前馈控制系统相关的复杂性建模建立起来的，该系统负责将来自来源的控制信号向外部环境进行例示。这表明理解的层次不仅仅是围绕系统扰动，还围绕基于数学建模的系统中的预期变化。相反地，反馈系统会反应性地改变控制信号。这些系统无法使得行为有理化时，则会将函数渲染为无法学习的东西，以及在机器学习环境范畴之外的东西。</p>
+<p>　　关于ML，值得注意的是量子机器开始被引入系统的学习过程。理论上，量子计算可给给定环境提供无限量的前馈系统。人们可能会断定，量子学习本质上不是确定性的；量子计算（量子位）的基本计算元素创造了一种模糊的逻辑模型。这可能会带来已知物理定律下最具创造性的问题解决过程。目前，它正被应用于图像识别，但未来的实施会考虑训练基于难解运算的概率模型。</p>
+<p>　　然而，不管使用哪一种系统：</p>
+<p>　　- 你最终都会得出经过优化的结果。你不一定理解你是如何将其进化的，但结果不言而喻。你只能够理解过程和界面。</p>
+<p>　　- 学习的中心从产品转向过程：不改动最终产品，而是改动过程。</p>
+<p>　　- 这两种模型都不仅仅涉及工程设计：我们试图创造的东西比我们想象的要多。</p>
+<p>　　那么，该投资AI还是ML呢？说到底，这取决于你的业务需求。<strong>ML可提供大量的企业友好型工具</strong>，这使得它成为很多企业项目的首选解决方案：它能够受到已知技术的约束；它能够解决特定的问题，所出现的问题能够通过调整输入信息、数据结构或者输出值来解决。事实上，<strong>AI在1980年代失宠是有原因的：无法将专家的能力转化成可外推到更加复杂的场景的规则组。</strong></p>
+<p>　　然而，我认为<strong>AI才是未来。推理能力包含比商业需要重要的智力能力和情感能力。</strong>这是程序员、理论家和科学家们自统计学分析创立以来一直在竭力追求的东西；我们如何才能创造出能够解答我们不知道的问题的机器呢？IBM在这一领域进行了巨额投资，微软，特斯拉，甲骨文，谷歌，地球上的每一家医疗保健公司，大多数的银行，每一位想要找到赚更多钱的窍门且精通技术的企业家亦然。</p>
+<p>　　如果你是位普通的企业家，那就投资机器学习。它会给你带来好处。但如果你是有远见的人，那就<strong>投资人工智能，你可能会改变世界。</strong>（皓慧）</p>
+<p>　　注：本文为网易智能工作室稿件，转载需注明出处，否则追究其法律责任。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://dy.163.com/v2/article/detail/CBLFGEEV0511CUKV.html&quot;&gt;作者：网易AI研究院&lt;/a&gt;&lt;/p&gt;
+ &lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://dingyue.nosdn.127.net/FvoCteXeaxOQg4IblKLzFzKWGzhz86zMvylL6jsI6tLsx1485348908493compressflag.jpg&quot; width = &quot;839&quot; height = &quot;416&quot; &gt;&lt;br&gt; &lt;/div&gt;
+
+&lt;p&gt;  对于企业而言，该投资人工智能还是机器学习呢？国外媒体发表Avanade高级总监贾马尔·赫瓦贾（Jamal Khawaja）的文章对这一问题进行了深入解析。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器人的前世今生</title>
+    <link href="http://ipcreator.me/2017/02/12/zh-history-of-robot/"/>
+    <id>http://ipcreator.me/2017/02/12/zh-history-of-robot/</id>
+    <published>2017-02-12T14:28:06.000Z</published>
+    <updated>2017-02-12T14:40:35.615Z</updated>
+    
+    <content type="html"><![CDATA[<p>作者：网易AI研究院</p>
+ <div align="center"><br><img src="http://cms-bucket.nosdn.127.net/454f0a5abb5341b480579aa0e58d91ea20170124073152.jpeg" width="761" height="315"><br> </div>
+
+
+  <a id="more"></a>
+<p>  在90年代流行文化浸淫中长大的美国人一定对《克拉丽莎》（Clarissa Explains It All）这个电视节目不陌生。电视剧讲述了一个早慧少女另大多数人羡慕的冒险经历。在其中一集里，克拉丽莎被要求为学校创作一首诗，然而这显然超出了小主人公的能力范围。结果她的电脑替她完成了创作。</p>
+<p>　　多年后的今天，我意识到克拉丽莎的电脑就是一个早期的机器人。这算是我第一次在流行文化中见识什么是AI。不过AI和机器人的概念要比克拉丽莎的90年代要久远很多。事实上，有人甚至将AI机器人的原型追溯到了古希腊神话。不过本文讨论从1950年左右开始，机器与人真正意义上开始交互正是发生在那时候。</p>
+<p>　　科幻情节暂放一边，让我们来探索究竟什么是一个机器人，以及我们如何来到对机器人习以为常的今日世界。</p>
+<p> <div align="center"><br><img src="http://dingyue.nosdn.127.net/JV9lvAdRgx58efajK55xTnEbtn9zYHeNpt1PmkL95MuLW1485220554959compressflag.jpg" width="1000" height="837"><br> </div>　　</p>
+<p>　　什么是机器人？</p>
+<p>　　机器人是一种自动化技术，通过编程能够在无人干预的情况下执行某些任务。也就是说，机器人能够接受人类指令，然后自主完成执行。</p>
+<p>　　机器人是人工智能（AI）的形式之一。HubSpot市场分析师Mimi An将之描述为“能够从事人类所能做之事的技术——无论是谈话、视物、学习，或是社交和推理。”今天，像Siri和谷歌助手这类的人工智能已能如真人一般回答人们的提问。下面为谷歌助手的示范：</p>
+<p>　　<!--position:video#{"vid":"VCAJLGF3C"}--></p>
+<p>　　绝大多数的人在日常中经常用到机器人技术——每天或每周55%的人会使用语音助理技术。机器人技术业已成为许多需求的解决方案，比如客户服务和商业促销。在了解这些机器人如何工作之前，让我们从最开始的地方切入观察。</p>
+<p>　　机器人发展简史1950年代 图灵测试</p>
+<p>　　1950年，计算机科学家兼数学家阿兰·图灵提出了图灵测试（Turing Test），又称模仿游戏（Imitation Game）。最原始的图灵测试包含三个角色：A、B和C。</p>
+<p>　　-角色A是机器，角色B是一个人类</p>
+<p>　　-发问者C也是一个人类，通过计算机发出问题</p>
+<p>　　-发问者C接受A和B针对问题作出的回应</p>
+<p>　　-发问者C根据回应判断A和B哪一个是人类</p>
+<p>　　不过这里有一个问题。图灵那个年代的数据库十分有限，只能储存有限数量的人类短语。这意味着参加测试的机器人很容易“词穷无言”露出破绽。被发问者识别出来，便意味着机器无法通过图灵测试。</p>
+<p>　　图灵测试沿用至今，不过也有争议</p>
+<p>　　2014年，雷丁大学举办“2014图灵测试大会”，其中由30名评委担任“发问者C”的角色。如果有超过30%的评委认为测试对象是人类，那么计算机就被视为通过了图灵测试。在本届大会上，一个名叫“尤金·古斯特曼”（Eugene Goostman）的AI程序首次通过图灵测试。它扮演一名13岁的乌克兰男孩，并成功迷惑了33%的人类评委。</p>
+<p>　　这一历史性的突破同时招来了赞美和批评。许多人对古斯特曼的能力持怀疑态度，质疑其是否真的比原始AI更先进。</p>
+<p>　　无论如何，图灵被认为是这个领域的先驱，正是由他开启的一系列事件引向了我们今日所处的AI情形。就在图灵测试问世五年之后，1956年数学教授约翰·麦卡锡（John McCarthy）开始领导达特茅斯人工智能暑期研究项目。麦卡锡被认为是第一个使用了“人工智能”（Artificial intelligence）一词的人，并让人工智能成为大学里的研究学科。</p>
+<p>　　1958年，麦卡锡在麻省理工学院开发了LISP，一种长久以来为人们所喜爱的编程语言。包括计算机科学家艾伦·凯（Alan Kay）在内的许多业界大咖都称赞LISP为“有史以来最伟大的编程语言”。</p>
+<p>　　1960年代ELIZA</p>
+<p>　　20世纪60年代最重要的AI成就要数机器人ELIZA。这个机器人的名字源自于萧伯纳戏剧《窈窕淑女》中的“伊莱莎”一角，其角色属性是扮演一名心理治疗师。ELIZA由麻省理工学院教授约瑟夫·维森鲍姆（Joseph Weizenbaum）创建，它的技术尚且有限，正如它在剧中原型伊莱莎粗陋的词汇一样。当你尝试使用它时，就会发现这一点。</p>
+<p>　　 <div align="center"><br><img src="http://cms-bucket.nosdn.127.net/c3395e07b2ba43298b1ed7c786a4af0720170124074337.gif" width="357" height="248"><br> </div>　　</p>
+<p>　　维森鲍姆清楚自己的作品还有很大的提升空间。他形容ELIZA是一个“已知知识有限，但学习能力还不错”的人。</p>
+<p>　　“这些早期的发明清楚地显示，人类渴望同科技进行类似人与人之间那样的沟通。”尼古拉斯·巴耶克（Nicolas Bayerque）对科技媒体VentureBeat说道。“只不过彼时缺乏技术知识将之成为现实。”</p>
+<p>　　1966年ALPAC报告的发表并没有给机器人研究带来帮助，而是相反。这份报告充满对机器学习的怀疑，导致许多政府纷纷停止了给AI研究项目的经费支持。许多人指责这份报告导致多年的科技停滞，70年代之前那段时间里确实很少再有重大的发展。尽管60年代后期也有一些令人欣喜的研究，比如斯坦福研究所推出的Shakey，一个具有有限语言能力的自我导向机器人。</p>
+<p>　　1969年第一届人工智能国际联合大会召开——之后该会议每年举行一次——不过AI研究并未很快得到复兴。</p>
+<p>　　1970年代～1980年代Freddy</p>
+<p>　　20世纪70年代，爱丁堡大学研究人员开发的一个非语言机器人弗雷迪（Freddy）吸引了人们的目光。弗雷迪无法与人沟通，不过却擅长在无人操纵的情况下组装物品。弗雷迪最具革命性的元素是其使用视觉来执行任务的能力——它利用一个相机“看到”并识别装配零件。不过，眼神好之外，速度显然不是弗雷迪的强项——它需要16个小时才能完成整个组装。</p>
+<p>　　<!--position:video#{"vid":"VCAJLL8SQ"}--></p>
+<p>　　医学机器人</p>
+<p>　　20世纪70年代还见证了机器人在医疗领域最早的应用。MYCIN是1972年开始为斯坦福医学院服务的专家系统，能通过问答收集病患信息，并通过知识库进行病证识别。</p>
+<p>　　70年代中期，匹兹堡大学也创建了具有类似功能的INTERNIST-1——正是使用麦卡锡的LISP语言编写——并迅速变成快速医疗参考（QMR），作为“决策支持系统”来进行多重诊断。这一技术现已终止。</p>
+<p>　　20世纪80年代，人工智能发展呈壮大之势。美国人工智能协会的第一次年会在80年代初召开，几年后人们见证了艺术机器人AARON的诞生。AARON能够创作抽象派画作，其作品还在泰特画廊和旧金山现代艺术博物馆进行了展出。</p>
+<p>　　<!--position:video#{"vid":"VCAJLOEUL"}--></p>
+<p>　　自动驾驶汽车在最近发展的火热，不过其背后的技术实际上可以追溯到20世界80年代。1989年，卡内基梅隆大学教授迪恩·波美勒（Dean Pomerleau）打造了“ALVINN”，使用神经网络技术实现了初级的自动驾驶功能。</p>
+<p>　　1900年代～2000年代 面向消费者的机器人</p>
+<p>　　在接下来的十年中，机器人面对消费者的一面发生了重大转变。一些早期的电脑游戏通常被认为是最早面向消费者的机器人，特别是那些需要用命令来操控的游戏——尽管可能现已没人再记得它们的名字。</p>
+<p>　　或许更好的一个例子是日本人在1996年推出的数码宠物Tamagotchi。虽然该产品没有被冠以机器人之名，不过其交互却是相似的。Tamagotchi是一个手持大小的数码宠物，需要用户提供数字化的照料，比如“喂食”、“游戏”和“洗澡”等等。</p>
+<p>　　这一时期机器人变得更加聪明，功能也更加多样。90年代的机器人甚至能达到互相之间举行机器人运动会的程度。其中最著名的例子便是1997年第一届官方RoboCup仿人机器人足球赛，40支机器人组成的参赛队伍彼此之间展开桌面足球的较量。</p>
+<p>　　Smarter Child</p>
+<p>　　2000年对机器人领域来说有些关键。聊天机器人“SmarterChild”出现在老牌即时通讯AIM上。SmarterChild经过预编程能对用户查询给出反馈。在某种程度上，它是后世Siri等语音搜索工具的早期版本。</p>
+<p>　　“使用谷歌和雅虎，你得花费几分钟的时间才能最终得到你想要的信息。”SmarterChild研发公司ActiveBuddy的联合创始人兼首席执行官彼得·列维坦（Peter Levitan）说。“你问‘昨晚纽约扬基队的得分是多少？’在你点击的一瞬间结果就呈现出来。”这种技术让当时的人大呼过瘾。</p>
+<p>　　 <div align="center"><br><img src="http://cms-bucket.nosdn.127.net/af7beb2ac9414fce8c5a74e17227838220170124074511.png" width="604" height="277"><br> </div>　　
+　　</p>
+<p>　　ActiveBuddy的成功引得微软在2006年将它买下，并利用其技术推出了Windows Live Agents。</p>
+<p>　　21世纪伊始，自动驾驶汽车取得进一步进展。斯坦福大学打造的“Stanley”成为第一辆完成DARPA挑战赛的无人驾驶车辆。这是由国防部高级研究计划局DARPA在2003年发起的机器人挑战大赛，要求自动驾驶汽车在10小时内穿越142英里的沙漠路程。</p>
+<p>　　<!--position:video#{"vid":"VCAJLT8PD"}--></p>
+<p>　　巴耶克认为2000年代智能手机的普及是造成机器人进步的重要促进因素。智能手机的设备迫使网站开发者改造其网页服务以适应更小的手机屏幕，这一过程最终引向对可用性和响应性的探索。“我们能找到一个更好的界面吗？”事实证明人们可以。答案就是人类的自然交互。</p>
+<p>　　2011年之后</p>
+<p>　　基于巴耶克对智能手机的洞察，我们不难理解语音搜索导致促成AI个人助理的产生，进而使得机器人在消费者中实现快速增长。此前少许比较出名的AI如iRobot也从最初的国防承包商演变成家用机器人厂商，名字也改成了Roomba。</p>
+<p>　　人们无法与Roomba进行语音交谈，它除了擦地板之外并不能提供多少其他的帮助。因此当Siri于2011年推出，其语音交互堪称惊艳。Siri一举改变了机器人的服务形态，语音助理市场自此兴起。</p>
+<p>　　今天，这个领域内有四大主角：</p>
+<p>　　 <div align="center"><br><img src="http://cms-bucket.nosdn.127.net/33896968901a4ba4b92142c2f00666cd20170124074601.png" width="629" height="337"><br> </div>　　
+　　</p>
+<p>　　制造商没有花费太多时间就将语音搜索与物联网结合起来。在Siri亮相后的第三年，亚马逊发布了Echo。Echo中内置的Alexa机器人不仅可以回答用户关于天气和度量衡转换的问题，还能处理家庭自动化。</p>
+<p>　　网络巨头谷歌也插入进来要分一杯羹， 于2015年发布Google Home。</p>
+<p>　　此处的关键主题变成了服务。机器人不仅可用于语音搜索和各种形式的个人助理，各品牌也开始在客户服务中采用机器人技术。2016年4月，Facebook宣布其Messenger平台可与机器人集成，提供从内容自动订阅（天气和交通信息）到客户定制通讯（收讫和包裹查询）以及聊天中的自动消息建议。下面是路易威登和Everlane使用该平台进行交易的示例：</p>
+<p>　　 <div align="center"><br><img src="http://cms-bucket.nosdn.127.net/9cb4a9a3b31245b4b6ee47ab3451711220170124074611.png" width="629" height="337"><br> </div>　　
+　　</p>
+<p>　　此外我们还看到MYCIN和INTERNIST-1医疗机器人在新时代的后续。诸如Healthtap这样的应用使用医疗信息数据库自动回答用户有关病症的问题。</p>
+<p>　　小结</p>
+<p>　　此处所有列出的发展只不过是整体的冰山一角。机器人的应用如此广泛，以至不可能在一处全部列出。</p>
+<p>　　就在本月，一个新的个人助理“Olly”出现在世人面前。具有甜甜圈外形的它除了具有Echo和Google Home的大部分相同功能之外，还主打个性化和情感互动。</p>
+<p>　　机器人被训练观察用户的行为模式，聆听主人讲话的方式，并模仿它行事。无论是你订购的食品、读的书或是你专有的口头禅，Olly都能将之理解并为之所用。这让你觉得很酷，还是心里发毛呢？</p>
+<p>　　最新的进展表明以往只能在科幻小说中存在的幻想将很快成为现实。我们将密切关注机器人的增长，并期待分享更进一步的发展。</p>
+<p>　　注：本文为网易智能工作室稿件，转载需注明出处，否则追究其法律责任。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作者：网易AI研究院&lt;/p&gt;
+ &lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cms-bucket.nosdn.127.net/454f0a5abb5341b480579aa0e58d91ea20170124073152.jpeg&quot; width = &quot;761&quot; height = &quot;315&quot; &gt;&lt;br&gt; &lt;/div&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Robot" scheme="http://ipcreator.me/tags/Robot/"/>
+    
+  </entry>
   
   <entry>
     <title>scikit-learn machine learning in Python</title>
@@ -45,9 +205,9 @@
       <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Python" scheme="http://ipcreator.me/tags/Python/"/>
-    
       <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
+    
+      <category term="Python" scheme="http://ipcreator.me/tags/Python/"/>
     
   </entry>
   
@@ -2898,6 +3058,123 @@
   </entry>
   
   <entry>
+    <title>快速学习 HTML 和 CSS</title>
+    <link href="http://ipcreator.me/2017/02/11/quick-learn-html-and-css/"/>
+    <id>http://ipcreator.me/2017/02/11/quick-learn-html-and-css/</id>
+    <published>2017-02-11T12:24:06.000Z</published>
+    <updated>2017-02-12T12:58:00.322Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://lixiaolai.com/2016/06/25/makecs-html-css/" target="_blank" rel="external">快速学习 HTML 和 CSS</a></p>
+<blockquote>
+<p>真正的熟练，只能在践行之中通过试错、改进、总结、纠正等必要的环节才能获得。</p>
+</blockquote>
+<p><strong>HTML 是什么东西呢？</strong></p>
+<blockquote>
+<p>HTML 是用来在纯文本内添加各种标记（用尖括号括起来的标记，叫做“TAG”），以便让浏览器能以正确的格式显示那些内容的“语言”。</p>
+</blockquote>
+<p>当我们用浏览器打开一个网页的时候，看到的那些内容是浏览器将从服务器那里获得的 HTML、CSS、JAVASCRIPT 等文件的内容，组合起来解析之后，“渲染”（Render）出来的</p>
+<p><strong>CSS 是什么呢？</strong></p>
+<blockquote>
+<p>CSS 就是用来批量指定标签内容样式的方法。</p>
+</blockquote>
+<a id="more"></a>
+<p>假设你在 HTML 里写的是这样的：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">&lt;p&gt;</span> This <span class="keyword">is</span> the <span class="keyword">first</span> paragraph.&lt;/<span class="keyword">p</span>&gt;</div><div class="line"><span class="symbol">&lt;p&gt;</span> This <span class="keyword">is</span> the second paragraph.&lt;/<span class="keyword">p</span>&gt;</div><div class="line"><span class="symbol">&lt;p&gt;</span> This <span class="keyword">is</span> <span class="keyword">a</span> <span class="symbol">&lt;strong&gt;</span>word&lt;/strong&gt; marked <span class="keyword">as</span> strong.&lt;/<span class="keyword">p</span>&gt;</div><div class="line"><span class="symbol">&lt;p&gt;</span> This <span class="keyword">is</span> <span class="keyword">a</span> <span class="symbol">&lt;em&gt;</span>word&lt;/<span class="keyword">em</span>&gt; marked <span class="keyword">as</span> emphasized.&lt;/<span class="keyword">p</span>&gt;</div></pre></td></tr></table></figure>
+<p>然后浏览器会将其显示成这样子：</p>
+<p> This is the first paragraph.</p><br><p> This is the second paragraph.</p><br><p> This is a <strong>word</strong> marked as strong.</p><br><p> This is a <em>word</em> marked as emphasized.</p>
+
+<p>格式（Format），通常很简陋，只包括字体大小、字体加重、倾斜、删除线、下划线等等；另外一个词叫样式（Style），除了最基本的格式之外，还可以包括更多的细节，行间距、字间距、背景色等等……</p>
+<p>你只要在 HTML 文件里加上这么一句：</p>
+<p><code>&lt;style&gt;strong {color: blue;}&lt;/style&gt;</code></p>
+<p>那么整个文档里的所有被标记为“加重”的文字（<strong>）就都显示为蓝色（blue）了…… 当然你还可以为所有加重的文字加上更多的样式：</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">  <span class="selector-tag">strong</span> &#123;</div><div class="line">    <span class="attribute">font-family</span>: <span class="string">"Courier New"</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">border</span>: yellow solid <span class="number">1px</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">3px</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">5px</span>;</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="快速体验"><a href="#快速体验" class="headerlink" title="快速体验"></a>快速体验</h2><p>Firefox 有一个插件，Greasemonkey，可以编制一些 JAVASCRIPT 脚本，用来改变任意网站的显示样式…… 在以下网站上，可以找到很多别人写好的用户脚本：</p>
+<p><a href="https://openuserjs.org/" target="_blank" rel="external">https://openuserjs.org/</a><br><a href="https://greasyfork.org/en/scripts" target="_blank" rel="external">https://greasyfork.org/en/scripts</a><br><a href="http://userscripts-mirror.org/" target="_blank" rel="external">http://userscripts-mirror.org/</a></p>
+<h2 id="系统了解-HTML-和-CSS"><a href="#系统了解-HTML-和-CSS" class="headerlink" title="系统了解 HTML 和 CSS"></a>系统了解 HTML 和 CSS</h2><p>快速系统了解 HTML 和 CSS 了。先去这个地方：把 w3schools 上的这两个教程反复看个两三遍，对不止一遍 —— 当然，光看完不够，要每个要素都要逐一实验过。别觉得自己记不住，记不住的原因只有一个，就是用的次数不够多而已。<br>HTML <a href="http://www.w3schools.com/html/default.asp" target="_blank" rel="external">http://www.w3schools.com/html/default.asp</a><br>CSS <a href="http://www.w3schools.com/css/default.asp" target="_blank" rel="external">http://www.w3schools.com/css/default.asp</a></p>
+<p>用的技术是否时髦或者是否过时，在另外一个因素面前完全没有意义：做的事情有没有价值。w3schools 做的事情明显价值很大……<br>所以说，在很多的时候，“做对的事情”（do right things），远“比把事情做对”（do things right）重要得多……<br>再进一步，技术是用来实现思想的…… 所以，思想更重要。只钻研技术，没有思想，其实很可怜的……<br>当然，有丰富的思想却没有技术，那更可怜。</p>
+<h2 id="读不止一个教程"><a href="#读不止一个教程" class="headerlink" title="读不止一个教程"></a>读不止一个教程</h2><p>一般来说，Documentation，只要看 Official Documentation 一个就够了，把一个 OD 读透就行。很多的时候，所谓的读透，只不过是把结构弄清楚，以便将来随便查询…… 真的不难。</p>
+<p>可若是读教程，那有个好建议就是：<br>读一个以上的教程。同一个话题的书，可以读很多本 —— 这绝对是最好的学习习惯之一。<br>除了 w3schools 之外，有关 HTML/CSS 的教程，其实很多，你不妨搜索一下：</p>
+<ul>
+<li>Google Web Fundamentals</li>
+<li>MDN Learning web Developement</li>
+</ul>
+<h2 id="先学范儿，某种意义上也是对的"><a href="#先学范儿，某种意义上也是对的" class="headerlink" title="先学范儿，某种意义上也是对的"></a>先学范儿，某种意义上也是对的</h2><p>第一遍读完 w3schools 上的 HTML Tutorial 之后，要看的是这个：<br><a href="http://www.w3schools.com/html/html5_syntax.asp" target="_blank" rel="external">HTML(5) Style Guide and Coding Conventions</a></p>
+<p>凡事儿都需要做得有模有样…… 我一直认为所谓真正的专家，其实是那些真正用专家的标准要求自己的人，而不一定是那些被别人称为专家的人。</p>
+<p>不管学什么，先认真观察那些专家的“范儿”，是有益处的，虽然有很多细节目前做不到，但目标就是将来要做到，所以要提前观察，提前模仿，提前准备…… 以后学各种语言的时候，都要这样，先去看看 Style Guide 和 Coding Conventions……</p>
+<h2 id="学会就能用一辈子：总结、整理、提炼重点"><a href="#学会就能用一辈子：总结、整理、提炼重点" class="headerlink" title="学会就能用一辈子：总结、整理、提炼重点"></a>学会就能用一辈子：总结、整理、提炼重点</h2><p>上学的时候，学习能力强的同学，经常做各种总结整理，并分享出来…… 殊不知，那些喜欢等别人整理好了再用的人，常常因为缺失了自己动脑总结整理的过程而使得这方面能力逐步下降直至退化为零…… 观察一下生活吧，学习能力差的人，其实说穿了都有统一的局限：</p>
+<ol>
+<li>总结整理能力差</li>
+<li>提炼重点能力差</li>
+</ol>
+<p>总结、整理、提炼重点，这类事情一定要自己动手做。别嫌麻烦，这种事情不是麻烦，是修炼。怕麻烦的人，就是这样在每一个重要的环节上都吃亏却觉得自己占了便宜，乃至于有一天发现自己吃了亏，却完全不知道哪儿吃了亏…… 而上一章中提到的 “Atom 的 Snippets 最好自己动手写” 其实也是一样的道理。</p>
+<p>在 w3schools 上把 HTML Tutorial 反复看两三遍的过程中，要不断地想：</p>
+<p>我有什么办法把这些 Tag 分类，以便在脑子里形成一个清晰的框架呢？<br>重点究竟是什么呢？</p>
+<p>分类的一个基本技巧，虽然简单，很多人却并不知道：</p>
+<p>总是有一些元素最终无法精确分类…… 于是只好放到“其它”这么个无奈而必须的类别中去。</p>
+<p>说实话，“其它”这个无奈的类别，也是很多人总结整理的功夫总也练不成的主要原因，<br>因为他们不知道那个“其它”是最终对谁来说都是因无奈而必要的类别，所以总是觉得自己做得不够好，或者干脆不会做……<br>于是因为只好等别人的所以自己的能力不断退化；又由于他们确实不知道这个事实，所以，当他们在别人的分类中看到“其它”类别的时候，竟然反应不过来“那是最终对谁来说都是因无奈而必要的类别”……<br>听起来有点绕，但仔细琢磨一下吧，看看是不是这么回事儿？</p>
+<p>如果自己没把握，不妨还是“故技重演”，去网上搜索一下 HTML5 CheatSheet，看看别人是怎么总结、怎么整理、如何分类、如何提炼重点的…… 然后自己再试试。</p>
+<p>至为了锻炼自己的总结整理、提炼重点的能力，可以尝试很多种分类方法，比如，随便举个分类方法的例子：</p>
+<ul>
+<li>隐含的：像 <head>、<link>、<meta> 标签所标记的内容，是不会在浏览器上直接显示的……</head></li>
+<li>显示的：大多数 Tag 都是标记内容格式的，所以当然是属于“显示的”……</li>
+</ul>
+<p>“显示的标签中”，也可以继续分类：</p>
+<ul>
+<li>事关布局的（比如 <header>、<section>、<aside>、<footer> 等等）</footer></aside></section></header></li>
+<li>事关内容的（比如 <p>、<table>、<blockquote> 等等）</blockquote></table></p></li>
+<li>事关提交的（比如 <form>、<input> 等等）</form></li>
+</ul>
+<p>这种看起来耗时费力的事情，都不要偷懒不去做，因为这是一种虽然简单，但必然有积累效应的能力获取，以后你的总结整理能力会越来越强的，然后基本上最终就是遇到这种情况，“随手一做”就比别人弄得好 —— 当然，显然会学得更快、应用得更好…… 就好像你真的像他们说的那样“更聪明似的”…… 说实话，最终也确实是的。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>HTML 和 CSS 其实都不难，但以后你会知道，真的要足够深入，确实还是挺难的 —— 可之所以难，只不过是因为深入了解需要时间，而大多数人总是舍不得花自己的时间在正地方而已，他们一方面舍不得自己的时间花在正地儿，却又在另一方面把大量的时间浪费在自己都不知道是哪儿的地方 —— 说来也怪。</p>
+<p>HTML 和 CSS 肯定是未来你一定会反复回来研究的东西。到了 2016 年，有一个趋势越来越明显：<br><strong>未来一切都是 Web Application……</strong></p>
+<p>现在，无论是网站，还是 APP，还是 PC/Mac 上程序，都可以用 HTML 写了（Github 为了打造一个 Atom 编辑器，甚至之前先写了一个跨平台程序开发框架：Electron…… 早晚你也要学会的）。</p>
+<p>另外，还有一个刻意练习 —— 就是自己动手写 HTML 和 CSS 的<br>Atom Snippets…… 对自己认真一点的话，就边练边写罢。</p>
+<p>顺带给大家看个在学习上“洁身自好”的实例：</p>
+<p><a href="http://ricostacruz.com/cheatsheets/" target="_blank" rel="external">http://ricostacruz.com/cheatsheets/</a></p>
+<p>看看人家这些年写了多少个 Cheatsheets 给自己……</p>
+<h2 id="工程师的时光穿梭机-——-git"><a href="#工程师的时光穿梭机-——-git" class="headerlink" title="工程师的时光穿梭机 —— git"></a>工程师的时光穿梭机 —— git</h2><p>Think Python，用这本书，把一些基础的编程概念谙熟于心：</p>
+<ul>
+<li>变量</li>
+<li>值（整数、分数、字符串、布林值）</li>
+<li>运算符（优先级）</li>
+<li>控制流（分支、循环）</li>
+<li>数组</li>
+<li>函数</li>
+<li>保留关键字<br>这点东西，是所有编程语言的核心，是你未来可以很快地学会任何一门编程语言的基础。</li>
+</ul>
+<p>学会哪怕一点点东西，你就可以做很多你自己以前完全没办法做的事情，若是不停地学呢？<br>人们各自就是活在同一个世界的不同版本之中，各自相距天壤。</p>
+<p>你和那些没折腾过的人在这方面完全无法沟通了…… 因为你们已经不在一个频道上了。<br>今天的你 和 一个月前的你 若是两个人的话，那么你们俩就是完全无法沟通的……</p>
+<p>你明白学习的作用了吧？学习的好处和不学习的坏处，实在是太明显太残酷了。按照脑科学家们的说法，经过接二连三的折腾，你的大脑结构都已经发生了不可逆的变化……</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://lixiaolai.com/2016/06/25/makecs-html-css/&quot;&gt;快速学习 HTML 和 CSS&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;真正的熟练，只能在践行之中通过试错、改进、总结、纠正等必要的环节才能获得。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;HTML 是什么东西呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HTML 是用来在纯文本内添加各种标记（用尖括号括起来的标记，叫做“TAG”），以便让浏览器能以正确的格式显示那些内容的“语言”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当我们用浏览器打开一个网页的时候，看到的那些内容是浏览器将从服务器那里获得的 HTML、CSS、JAVASCRIPT 等文件的内容，组合起来解析之后，“渲染”（Render）出来的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CSS 是什么呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CSS 就是用来批量指定标签内容样式的方法。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Html" scheme="http://ipcreator.me/tags/Html/"/>
+    
+      <category term="CSS" scheme="http://ipcreator.me/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2016年最精彩科学美图</title>
     <link href="http://ipcreator.me/2017/02/11/beautiful-pics-of-scientific-discovery/"/>
     <id>http://ipcreator.me/2017/02/11/beautiful-pics-of-scientific-discovery/</id>
@@ -3036,123 +3313,6 @@
   </entry>
   
   <entry>
-    <title>快速学习 HTML 和 CSS</title>
-    <link href="http://ipcreator.me/2017/02/11/quick-learn-html-and-css/"/>
-    <id>http://ipcreator.me/2017/02/11/quick-learn-html-and-css/</id>
-    <published>2017-02-11T12:24:06.000Z</published>
-    <updated>2017-02-12T12:58:00.322Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://lixiaolai.com/2016/06/25/makecs-html-css/" target="_blank" rel="external">快速学习 HTML 和 CSS</a></p>
-<blockquote>
-<p>真正的熟练，只能在践行之中通过试错、改进、总结、纠正等必要的环节才能获得。</p>
-</blockquote>
-<p><strong>HTML 是什么东西呢？</strong></p>
-<blockquote>
-<p>HTML 是用来在纯文本内添加各种标记（用尖括号括起来的标记，叫做“TAG”），以便让浏览器能以正确的格式显示那些内容的“语言”。</p>
-</blockquote>
-<p>当我们用浏览器打开一个网页的时候，看到的那些内容是浏览器将从服务器那里获得的 HTML、CSS、JAVASCRIPT 等文件的内容，组合起来解析之后，“渲染”（Render）出来的</p>
-<p><strong>CSS 是什么呢？</strong></p>
-<blockquote>
-<p>CSS 就是用来批量指定标签内容样式的方法。</p>
-</blockquote>
-<a id="more"></a>
-<p>假设你在 HTML 里写的是这样的：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">&lt;p&gt;</span> This <span class="keyword">is</span> the <span class="keyword">first</span> paragraph.&lt;/<span class="keyword">p</span>&gt;</div><div class="line"><span class="symbol">&lt;p&gt;</span> This <span class="keyword">is</span> the second paragraph.&lt;/<span class="keyword">p</span>&gt;</div><div class="line"><span class="symbol">&lt;p&gt;</span> This <span class="keyword">is</span> <span class="keyword">a</span> <span class="symbol">&lt;strong&gt;</span>word&lt;/strong&gt; marked <span class="keyword">as</span> strong.&lt;/<span class="keyword">p</span>&gt;</div><div class="line"><span class="symbol">&lt;p&gt;</span> This <span class="keyword">is</span> <span class="keyword">a</span> <span class="symbol">&lt;em&gt;</span>word&lt;/<span class="keyword">em</span>&gt; marked <span class="keyword">as</span> emphasized.&lt;/<span class="keyword">p</span>&gt;</div></pre></td></tr></table></figure>
-<p>然后浏览器会将其显示成这样子：</p>
-<p> This is the first paragraph.</p><br><p> This is the second paragraph.</p><br><p> This is a <strong>word</strong> marked as strong.</p><br><p> This is a <em>word</em> marked as emphasized.</p>
-
-<p>格式（Format），通常很简陋，只包括字体大小、字体加重、倾斜、删除线、下划线等等；另外一个词叫样式（Style），除了最基本的格式之外，还可以包括更多的细节，行间距、字间距、背景色等等……</p>
-<p>你只要在 HTML 文件里加上这么一句：</p>
-<p><code>&lt;style&gt;strong {color: blue;}&lt;/style&gt;</code></p>
-<p>那么整个文档里的所有被标记为“加重”的文字（<strong>）就都显示为蓝色（blue）了…… 当然你还可以为所有加重的文字加上更多的样式：</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">  <span class="selector-tag">strong</span> &#123;</div><div class="line">    <span class="attribute">font-family</span>: <span class="string">"Courier New"</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">border</span>: yellow solid <span class="number">1px</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">3px</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">5px</span>;</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="快速体验"><a href="#快速体验" class="headerlink" title="快速体验"></a>快速体验</h2><p>Firefox 有一个插件，Greasemonkey，可以编制一些 JAVASCRIPT 脚本，用来改变任意网站的显示样式…… 在以下网站上，可以找到很多别人写好的用户脚本：</p>
-<p><a href="https://openuserjs.org/" target="_blank" rel="external">https://openuserjs.org/</a><br><a href="https://greasyfork.org/en/scripts" target="_blank" rel="external">https://greasyfork.org/en/scripts</a><br><a href="http://userscripts-mirror.org/" target="_blank" rel="external">http://userscripts-mirror.org/</a></p>
-<h2 id="系统了解-HTML-和-CSS"><a href="#系统了解-HTML-和-CSS" class="headerlink" title="系统了解 HTML 和 CSS"></a>系统了解 HTML 和 CSS</h2><p>快速系统了解 HTML 和 CSS 了。先去这个地方：把 w3schools 上的这两个教程反复看个两三遍，对不止一遍 —— 当然，光看完不够，要每个要素都要逐一实验过。别觉得自己记不住，记不住的原因只有一个，就是用的次数不够多而已。<br>HTML <a href="http://www.w3schools.com/html/default.asp" target="_blank" rel="external">http://www.w3schools.com/html/default.asp</a><br>CSS <a href="http://www.w3schools.com/css/default.asp" target="_blank" rel="external">http://www.w3schools.com/css/default.asp</a></p>
-<p>用的技术是否时髦或者是否过时，在另外一个因素面前完全没有意义：做的事情有没有价值。w3schools 做的事情明显价值很大……<br>所以说，在很多的时候，“做对的事情”（do right things），远“比把事情做对”（do things right）重要得多……<br>再进一步，技术是用来实现思想的…… 所以，思想更重要。只钻研技术，没有思想，其实很可怜的……<br>当然，有丰富的思想却没有技术，那更可怜。</p>
-<h2 id="读不止一个教程"><a href="#读不止一个教程" class="headerlink" title="读不止一个教程"></a>读不止一个教程</h2><p>一般来说，Documentation，只要看 Official Documentation 一个就够了，把一个 OD 读透就行。很多的时候，所谓的读透，只不过是把结构弄清楚，以便将来随便查询…… 真的不难。</p>
-<p>可若是读教程，那有个好建议就是：<br>读一个以上的教程。同一个话题的书，可以读很多本 —— 这绝对是最好的学习习惯之一。<br>除了 w3schools 之外，有关 HTML/CSS 的教程，其实很多，你不妨搜索一下：</p>
-<ul>
-<li>Google Web Fundamentals</li>
-<li>MDN Learning web Developement</li>
-</ul>
-<h2 id="先学范儿，某种意义上也是对的"><a href="#先学范儿，某种意义上也是对的" class="headerlink" title="先学范儿，某种意义上也是对的"></a>先学范儿，某种意义上也是对的</h2><p>第一遍读完 w3schools 上的 HTML Tutorial 之后，要看的是这个：<br><a href="http://www.w3schools.com/html/html5_syntax.asp" target="_blank" rel="external">HTML(5) Style Guide and Coding Conventions</a></p>
-<p>凡事儿都需要做得有模有样…… 我一直认为所谓真正的专家，其实是那些真正用专家的标准要求自己的人，而不一定是那些被别人称为专家的人。</p>
-<p>不管学什么，先认真观察那些专家的“范儿”，是有益处的，虽然有很多细节目前做不到，但目标就是将来要做到，所以要提前观察，提前模仿，提前准备…… 以后学各种语言的时候，都要这样，先去看看 Style Guide 和 Coding Conventions……</p>
-<h2 id="学会就能用一辈子：总结、整理、提炼重点"><a href="#学会就能用一辈子：总结、整理、提炼重点" class="headerlink" title="学会就能用一辈子：总结、整理、提炼重点"></a>学会就能用一辈子：总结、整理、提炼重点</h2><p>上学的时候，学习能力强的同学，经常做各种总结整理，并分享出来…… 殊不知，那些喜欢等别人整理好了再用的人，常常因为缺失了自己动脑总结整理的过程而使得这方面能力逐步下降直至退化为零…… 观察一下生活吧，学习能力差的人，其实说穿了都有统一的局限：</p>
-<ol>
-<li>总结整理能力差</li>
-<li>提炼重点能力差</li>
-</ol>
-<p>总结、整理、提炼重点，这类事情一定要自己动手做。别嫌麻烦，这种事情不是麻烦，是修炼。怕麻烦的人，就是这样在每一个重要的环节上都吃亏却觉得自己占了便宜，乃至于有一天发现自己吃了亏，却完全不知道哪儿吃了亏…… 而上一章中提到的 “Atom 的 Snippets 最好自己动手写” 其实也是一样的道理。</p>
-<p>在 w3schools 上把 HTML Tutorial 反复看两三遍的过程中，要不断地想：</p>
-<p>我有什么办法把这些 Tag 分类，以便在脑子里形成一个清晰的框架呢？<br>重点究竟是什么呢？</p>
-<p>分类的一个基本技巧，虽然简单，很多人却并不知道：</p>
-<p>总是有一些元素最终无法精确分类…… 于是只好放到“其它”这么个无奈而必须的类别中去。</p>
-<p>说实话，“其它”这个无奈的类别，也是很多人总结整理的功夫总也练不成的主要原因，<br>因为他们不知道那个“其它”是最终对谁来说都是因无奈而必要的类别，所以总是觉得自己做得不够好，或者干脆不会做……<br>于是因为只好等别人的所以自己的能力不断退化；又由于他们确实不知道这个事实，所以，当他们在别人的分类中看到“其它”类别的时候，竟然反应不过来“那是最终对谁来说都是因无奈而必要的类别”……<br>听起来有点绕，但仔细琢磨一下吧，看看是不是这么回事儿？</p>
-<p>如果自己没把握，不妨还是“故技重演”，去网上搜索一下 HTML5 CheatSheet，看看别人是怎么总结、怎么整理、如何分类、如何提炼重点的…… 然后自己再试试。</p>
-<p>至为了锻炼自己的总结整理、提炼重点的能力，可以尝试很多种分类方法，比如，随便举个分类方法的例子：</p>
-<ul>
-<li>隐含的：像 <head>、<link>、<meta> 标签所标记的内容，是不会在浏览器上直接显示的……</head></li>
-<li>显示的：大多数 Tag 都是标记内容格式的，所以当然是属于“显示的”……</li>
-</ul>
-<p>“显示的标签中”，也可以继续分类：</p>
-<ul>
-<li>事关布局的（比如 <header>、<section>、<aside>、<footer> 等等）</footer></aside></section></header></li>
-<li>事关内容的（比如 <p>、<table>、<blockquote> 等等）</blockquote></table></p></li>
-<li>事关提交的（比如 <form>、<input> 等等）</form></li>
-</ul>
-<p>这种看起来耗时费力的事情，都不要偷懒不去做，因为这是一种虽然简单，但必然有积累效应的能力获取，以后你的总结整理能力会越来越强的，然后基本上最终就是遇到这种情况，“随手一做”就比别人弄得好 —— 当然，显然会学得更快、应用得更好…… 就好像你真的像他们说的那样“更聪明似的”…… 说实话，最终也确实是的。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>HTML 和 CSS 其实都不难，但以后你会知道，真的要足够深入，确实还是挺难的 —— 可之所以难，只不过是因为深入了解需要时间，而大多数人总是舍不得花自己的时间在正地方而已，他们一方面舍不得自己的时间花在正地儿，却又在另一方面把大量的时间浪费在自己都不知道是哪儿的地方 —— 说来也怪。</p>
-<p>HTML 和 CSS 肯定是未来你一定会反复回来研究的东西。到了 2016 年，有一个趋势越来越明显：<br><strong>未来一切都是 Web Application……</strong></p>
-<p>现在，无论是网站，还是 APP，还是 PC/Mac 上程序，都可以用 HTML 写了（Github 为了打造一个 Atom 编辑器，甚至之前先写了一个跨平台程序开发框架：Electron…… 早晚你也要学会的）。</p>
-<p>另外，还有一个刻意练习 —— 就是自己动手写 HTML 和 CSS 的<br>Atom Snippets…… 对自己认真一点的话，就边练边写罢。</p>
-<p>顺带给大家看个在学习上“洁身自好”的实例：</p>
-<p><a href="http://ricostacruz.com/cheatsheets/" target="_blank" rel="external">http://ricostacruz.com/cheatsheets/</a></p>
-<p>看看人家这些年写了多少个 Cheatsheets 给自己……</p>
-<h2 id="工程师的时光穿梭机-——-git"><a href="#工程师的时光穿梭机-——-git" class="headerlink" title="工程师的时光穿梭机 —— git"></a>工程师的时光穿梭机 —— git</h2><p>Think Python，用这本书，把一些基础的编程概念谙熟于心：</p>
-<ul>
-<li>变量</li>
-<li>值（整数、分数、字符串、布林值）</li>
-<li>运算符（优先级）</li>
-<li>控制流（分支、循环）</li>
-<li>数组</li>
-<li>函数</li>
-<li>保留关键字<br>这点东西，是所有编程语言的核心，是你未来可以很快地学会任何一门编程语言的基础。</li>
-</ul>
-<p>学会哪怕一点点东西，你就可以做很多你自己以前完全没办法做的事情，若是不停地学呢？<br>人们各自就是活在同一个世界的不同版本之中，各自相距天壤。</p>
-<p>你和那些没折腾过的人在这方面完全无法沟通了…… 因为你们已经不在一个频道上了。<br>今天的你 和 一个月前的你 若是两个人的话，那么你们俩就是完全无法沟通的……</p>
-<p>你明白学习的作用了吧？学习的好处和不学习的坏处，实在是太明显太残酷了。按照脑科学家们的说法，经过接二连三的折腾，你的大脑结构都已经发生了不可逆的变化……</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://lixiaolai.com/2016/06/25/makecs-html-css/&quot;&gt;快速学习 HTML 和 CSS&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;真正的熟练，只能在践行之中通过试错、改进、总结、纠正等必要的环节才能获得。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;HTML 是什么东西呢？&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;HTML 是用来在纯文本内添加各种标记（用尖括号括起来的标记，叫做“TAG”），以便让浏览器能以正确的格式显示那些内容的“语言”。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;当我们用浏览器打开一个网页的时候，看到的那些内容是浏览器将从服务器那里获得的 HTML、CSS、JAVASCRIPT 等文件的内容，组合起来解析之后，“渲染”（Render）出来的&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;CSS 是什么呢？&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;CSS 就是用来批量指定标签内容样式的方法。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Html" scheme="http://ipcreator.me/tags/Html/"/>
-    
-      <category term="CSS" scheme="http://ipcreator.me/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>坐享其成</title>
     <link href="http://ipcreator.me/2017/02/11/sit-idle-and-enjoy-the-fruits/"/>
     <id>http://ipcreator.me/2017/02/11/sit-idle-and-enjoy-the-fruits/</id>
@@ -3220,6 +3380,44 @@
 &lt;blockquote&gt;
 &lt;p&gt;坐享，也许是最简单的大脑锻炼方式，这也是人类莫名其妙地已经运用了两千五百年以上的大脑锻炼方式。已经有足够多的科学研究证明，它能使你的大脑皮层表面积加大，能使你的灰质变厚，它也能增强人们的免疫系统，它还能让人们摆脱抑郁症……&lt;br&gt;尽管简单，但也相当神奇。&lt;br&gt;虽然神奇，却又非常简单。&lt;/p&gt;
 &lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="感悟" scheme="http://ipcreator.me/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>此生未完成</title>
+    <link href="http://ipcreator.me/2017/02/11/unfinished-life/"/>
+    <id>http://ipcreator.me/2017/02/11/unfinished-life/</id>
+    <published>2017-02-11T11:02:06.000Z</published>
+    <updated>2017-02-12T07:00:12.646Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://book.douban.com/subject/6397275/" target="_blank" rel="external">于娟《此生未完成：一个母亲、妻子、女儿的生命日记》</a></p>
+<p><strong>我们要用多大的代价，才能认清活着的意义。</strong></p>
+<blockquote>
+<p>在生命的最后日子里，于娟完全放下了生死，放下了名利权情，赤裸裸的去反思和写作。所有的浮躁沉淀了，所有的伪装剥离了，所有的喧嚣远去了，所有的执着放下了。只有一个普通的女子，普通的女儿、妻子、母亲对生命最单纯的感悟。在这个故事里，很多读者看到的不是于娟，而是自己。</p>
+</blockquote>
+<div align="center"><br><img src="https://img3.doubanio.com/lpic/s6343233.jpg" width="303" height="438" alt="personal photo"><br> </div>
+
+ <a id="more"></a>
+<p>在生死临界点的时候，你会发现，任何的加班，给自己太多的压力，买房买车的需求，这些都是浮云。如果有时间好好陪陪你的孩子，把买车的钱给父母买双鞋子，不要拼命去换什么大房子 ，和爱的人在一起蜗居也温暖…… </p>
+<p>不要认为后面还有更好的，因为现在拥有的就是最好的；不要认为还年轻可以晚些结婚，爱情是不等年龄的；不要因为距离太远而放弃，爱情是可以和你一起坐火车的；不要因为对方不富裕而放弃，只要不是无能的人，彼此鼓励可以让你们富足的；不要因为外人反对而放弃，幸福是靠自己内心来感受的。</p>
+<p>人有个好的心态，才能享受人生。不奢望太多的东西，只要这一生中有自己的居所，有自己的小家，甜蜜而温馨，每天过着快乐的生活就够了。随缘的爱是最幸福的爱，无须计划，无须设计，一切都顺理成章，轻松，自然，流淌着最本真的爱，相爱的人儿自是充满着感动，心喜，激动。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/6397275/&quot;&gt;于娟《此生未完成：一个母亲、妻子、女儿的生命日记》&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们要用多大的代价，才能认清活着的意义。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在生命的最后日子里，于娟完全放下了生死，放下了名利权情，赤裸裸的去反思和写作。所有的浮躁沉淀了，所有的伪装剥离了，所有的喧嚣远去了，所有的执着放下了。只有一个普通的女子，普通的女儿、妻子、母亲对生命最单纯的感悟。在这个故事里，很多读者看到的不是于娟，而是自己。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://img3.doubanio.com/lpic/s6343233.jpg&quot; width = &quot;303&quot; height = &quot;438&quot; alt=&quot;personal photo&quot;&gt;&lt;br&gt; &lt;/div&gt;
     
     </summary>
     
@@ -3468,44 +3666,6 @@
   </entry>
   
   <entry>
-    <title>此生未完成</title>
-    <link href="http://ipcreator.me/2017/02/11/unfinished-life/"/>
-    <id>http://ipcreator.me/2017/02/11/unfinished-life/</id>
-    <published>2017-02-11T11:02:06.000Z</published>
-    <updated>2017-02-12T07:00:12.646Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://book.douban.com/subject/6397275/" target="_blank" rel="external">于娟《此生未完成：一个母亲、妻子、女儿的生命日记》</a></p>
-<p><strong>我们要用多大的代价，才能认清活着的意义。</strong></p>
-<blockquote>
-<p>在生命的最后日子里，于娟完全放下了生死，放下了名利权情，赤裸裸的去反思和写作。所有的浮躁沉淀了，所有的伪装剥离了，所有的喧嚣远去了，所有的执着放下了。只有一个普通的女子，普通的女儿、妻子、母亲对生命最单纯的感悟。在这个故事里，很多读者看到的不是于娟，而是自己。</p>
-</blockquote>
-<div align="center"><br><img src="https://img3.doubanio.com/lpic/s6343233.jpg" width="303" height="438" alt="personal photo"><br> </div>
-
- <a id="more"></a>
-<p>在生死临界点的时候，你会发现，任何的加班，给自己太多的压力，买房买车的需求，这些都是浮云。如果有时间好好陪陪你的孩子，把买车的钱给父母买双鞋子，不要拼命去换什么大房子 ，和爱的人在一起蜗居也温暖…… </p>
-<p>不要认为后面还有更好的，因为现在拥有的就是最好的；不要认为还年轻可以晚些结婚，爱情是不等年龄的；不要因为距离太远而放弃，爱情是可以和你一起坐火车的；不要因为对方不富裕而放弃，只要不是无能的人，彼此鼓励可以让你们富足的；不要因为外人反对而放弃，幸福是靠自己内心来感受的。</p>
-<p>人有个好的心态，才能享受人生。不奢望太多的东西，只要这一生中有自己的居所，有自己的小家，甜蜜而温馨，每天过着快乐的生活就够了。随缘的爱是最幸福的爱，无须计划，无须设计，一切都顺理成章，轻松，自然，流淌着最本真的爱，相爱的人儿自是充满着感动，心喜，激动。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/6397275/&quot;&gt;于娟《此生未完成：一个母亲、妻子、女儿的生命日记》&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;我们要用多大的代价，才能认清活着的意义。&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在生命的最后日子里，于娟完全放下了生死，放下了名利权情，赤裸裸的去反思和写作。所有的浮躁沉淀了，所有的伪装剥离了，所有的喧嚣远去了，所有的执着放下了。只有一个普通的女子，普通的女儿、妻子、母亲对生命最单纯的感悟。在这个故事里，很多读者看到的不是于娟，而是自己。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://img3.doubanio.com/lpic/s6343233.jpg&quot; width = &quot;303&quot; height = &quot;438&quot; alt=&quot;personal photo&quot;&gt;&lt;br&gt; &lt;/div&gt;
-    
-    </summary>
-    
-      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-    
-    
-      <category term="感悟" scheme="http://ipcreator.me/tags/%E6%84%9F%E6%82%9F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>理财理念</title>
     <link href="http://ipcreator.me/2017/02/11/financial-philosophy./"/>
     <id>http://ipcreator.me/2017/02/11/financial-philosophy./</id>
@@ -3701,65 +3861,6 @@
   </entry>
   
   <entry>
-    <title>正确高效使用 Google</title>
-    <link href="http://ipcreator.me/2017/02/11/how-to-use-google/"/>
-    <id>http://ipcreator.me/2017/02/11/how-to-use-google/</id>
-    <published>2017-02-11T08:33:06.000Z</published>
-    <updated>2017-02-12T01:06:17.395Z</updated>
-    
-    <content type="html"><![CDATA[<p>原文作者：李笑来，摘自<a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/C04.html" target="_blank" rel="external">《新生 —— 七年就是一辈子》</a></p>
-<blockquote>
-<p>研究这个词，在英文中是research，我把它理解为re-search，实际上各种语言是相通的，所谓re-search其实就是“反复搜索”，就是“上下求索”（路漫漫其修远兮，吾将上下而求索）。<br>所以，如果你想学点什么，就要善于搜索。而在这个时代里，最好的搜索工具就是 Google。</p>
-</blockquote>
-<div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/google.JPG" width="994" height="634" alt="personal photo"><br> </div>
-
-<a id="more"></a>
-<p>搜索引擎之所以迷人，就是因为它就好像望远镜一样：</p>
-<p>能让你看到你原本完全看不到的东西……<br>互联网就好像那浩瀚的宇宙，里面几乎什么都有，只要你肯用“望远镜”去看、用搜索引擎去搜……</p>
-<p>搜索引擎是公开的，人人都可以用的，可偏偏大多数人不用、不会用，甚至错误地用…… 于是人与人之间的差异多了另外一个不断延展的维度。在这个维度上你不如人家你能怪谁？</p>
-<p>最烂的提问是：“我连不上 Google 怎么办呀？” 答案是“自己想办法” —— 如果你在乎，你就肯花时间自己解决这个问题，如果你不在乎，就不用在乎了。</p>
-<p>1 使用“本尊”</p>
-<p>最好使用 <a href="http://www.google.com/ncr" target="_blank" rel="external">http://www.google.com/ncr</a> NCR: No Country Redirection，而不是<a href="http://www.google.com.hk；有时，直接输入http://www.google.com也会被自动转到“本地Google”，比如，我用日本的" target="_blank" rel="external">http://www.google.com.hk；有时，直接输入http://www.google.com也会被自动转到“本地Google”，比如，我用日本的</a> VPN，浏览器就会把我转到<a href="http://www.google.co.jp……" target="_blank" rel="external">http://www.google.co.jp……</a></p>
-<p>2 优先使用英文关键字搜索</p>
-<p>这是个好习惯。别说不会英文，不会就学，没那么难。</p>
-<p>3 基本技巧</p>
-<p>Google 搜索引擎也许是世界上最简单的应用界面，只有一个输入框和一个按钮。然而，用好它还是需要花点时间去学习的。Google 有帮助文档，还专门设计了个学习网站 A Google A Day</p>
-<p>3.a 加号</p>
-<p>在 Google 的输入框里，所有的空格都被 Google 理解为加号+。如果你输入的是 purpose of education那么 Google 返回的文章里既有“purpose”存在，也有“education”存在，但不一定有“purpose of education”存在。另外，过分常用的、单独存在没有意义的词汇往往被忽略掉，比如冠词“a”、“the”；介词“of”、“in”、“on”、“at”、“to”；连词“and”、“or”、“but”；从属连词“that”、“which”、“when”；代词“my”、“his”、“them”等等。</p>
-<p>3.b 引号</p>
-<p>如果你想要找含有“purpose of education”这个词组的文章，那么你必须输入”purpose of education”。现在的 Google 已经可以处理 utf-8 大字符集了，所以，即便你在输入的时候使用的是全角字符（不是半角字符的”而是“或者”）Google也照样能够正确处理。比较一下两种输入返回的结果：purpose of education vs.“purpose of education”。再试试 the most important benefit of education 和 “the most important benefit of education”。这就是引号（“……”）的作用——返回“完整匹配”的结果。</p>
-<p>3.c 减号</p>
-<p>为了进一步筛选搜索结果，还需要学会另外一个符号——减号-。比如，“the most important benefit of education” – “united states”要求Google返回含有“the most important benefit of education”但不存在“united states”的文章。</p>
-<p>3.d 星号</p>
-<p>另外一个威力无穷的符号是星号<em>。Google 支持通配符搜索，即搜索字符串中可以包含星号</em>，用来替代任意字符串。比如，“the most * examples of censorship”将会返回含有类似“the most outrageous examples of censorship”、“the most brazen examples of censorship”、“the most heinous examples of censorship”、“the most stupidest examples of censorship”、“the most dangerous examples of censorship”、“the most egregious examples of censorship”、“the most prolific examples of censorship”、“the most absurd examples of censorship”……</p>
-<p>3.e 波浪号</p>
-<p>还有一个运用相当灵活、经常带来意外收获的符号是波浪号~。把波浪号~加在某个单词前面，是在告诉 Google：除了给出的关键字之外，还要搜索与波浪号~后面的那个单词相关的词汇。比如，搜索the importance of ~censorship的结果中包含着“the importance of censorship”，也包含着与censorship相关的另外一个词汇“propaganda”——“the importance of propaganda”。</p>
-<p>4 高级技巧</p>
-<p>4.a 站内搜索</p>
-<p>再学一个在指定网站中搜索的语法“site:”。比如，“the purpose of education” site:<a href="http://www.time.com/就是要求" target="_blank" rel="external">http://www.time.com/就是要求</a> Google 只返回 <a href="http://www.time.com" target="_blank" rel="external">http://www.time.com</a> 这个网站里的含有“the purpose of education”的文章。</p>
-<p>4.b 定制搜索</p>
-<p>2006年，Google 推出了“co-op”服务（自定义搜索引擎）。其中最常用的功能之一就是可以指定 Google 搜索一个或者若干个指定的网站——相当于前面提到的 Google 语法“site:”的扩展。比如，我就曾经为我的学生定制了一个 Google cse（Custom Search Engine）——Search News Media。不妨看看在这个自定义搜索引擎上搜索censorship返回的结果（GRE/SAT 的作文考试中，都有很多关于“censorship”的作文题）。这个 cse 只搜索以下10个网站：</p>
-<p><a href="http://www.economist.com/" target="_blank" rel="external">http://www.economist.com/</a><br><a href="http://www.cnn.com/" target="_blank" rel="external">http://www.cnn.com/</a><br><a href="http://www.time.com/" target="_blank" rel="external">http://www.time.com/</a><br><a href="http://nytimes.com/" target="_blank" rel="external">http://nytimes.com/</a><br><a href="http://www.washingtonpost.com/" target="_blank" rel="external">http://www.washingtonpost.com/</a><br><a href="http://www.usnews.com/" target="_blank" rel="external">http://www.usnews.com/</a><br><a href="http://usatoday.com/" target="_blank" rel="external">http://usatoday.com/</a><br><a href="http://www.reuters.com/" target="_blank" rel="external">http://www.reuters.com/</a><br><a href="http://www.bbc.co.uk/" target="_blank" rel="external">http://www.bbc.co.uk/</a><br><a href="http://en.wikinews.org/" target="_blank" rel="external">http://en.wikinews.org/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;原文作者：李笑来，摘自&lt;a href=&quot;http://zhibimo.com/read/xiaolai/reborn-every-7-years/C04.html&quot;&gt;《新生 —— 七年就是一辈子》&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;研究这个词，在英文中是research，我把它理解为re-search，实际上各种语言是相通的，所谓re-search其实就是“反复搜索”，就是“上下求索”（路漫漫其修远兮，吾将上下而求索）。&lt;br&gt;所以，如果你想学点什么，就要善于搜索。而在这个时代里，最好的搜索工具就是 Google。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/google.JPG&quot; width = &quot;994&quot; height = &quot;634&quot; alt=&quot;personal photo&quot;&gt;&lt;br&gt; &lt;/div&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
-    
-  </entry>
-  
-  <entry>
     <title>十分钟后开始使用英语</title>
     <link href="http://ipcreator.me/2017/02/11/how-to-use-english/"/>
     <id>http://ipcreator.me/2017/02/11/how-to-use-english/</id>
@@ -3846,6 +3947,65 @@
       <category term="阅读" scheme="http://ipcreator.me/tags/%E9%98%85%E8%AF%BB/"/>
     
       <category term="口语" scheme="http://ipcreator.me/tags/%E5%8F%A3%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正确高效使用 Google</title>
+    <link href="http://ipcreator.me/2017/02/11/how-to-use-google/"/>
+    <id>http://ipcreator.me/2017/02/11/how-to-use-google/</id>
+    <published>2017-02-11T08:33:06.000Z</published>
+    <updated>2017-02-12T01:06:17.395Z</updated>
+    
+    <content type="html"><![CDATA[<p>原文作者：李笑来，摘自<a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/C04.html" target="_blank" rel="external">《新生 —— 七年就是一辈子》</a></p>
+<blockquote>
+<p>研究这个词，在英文中是research，我把它理解为re-search，实际上各种语言是相通的，所谓re-search其实就是“反复搜索”，就是“上下求索”（路漫漫其修远兮，吾将上下而求索）。<br>所以，如果你想学点什么，就要善于搜索。而在这个时代里，最好的搜索工具就是 Google。</p>
+</blockquote>
+<div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/google.JPG" width="994" height="634" alt="personal photo"><br> </div>
+
+<a id="more"></a>
+<p>搜索引擎之所以迷人，就是因为它就好像望远镜一样：</p>
+<p>能让你看到你原本完全看不到的东西……<br>互联网就好像那浩瀚的宇宙，里面几乎什么都有，只要你肯用“望远镜”去看、用搜索引擎去搜……</p>
+<p>搜索引擎是公开的，人人都可以用的，可偏偏大多数人不用、不会用，甚至错误地用…… 于是人与人之间的差异多了另外一个不断延展的维度。在这个维度上你不如人家你能怪谁？</p>
+<p>最烂的提问是：“我连不上 Google 怎么办呀？” 答案是“自己想办法” —— 如果你在乎，你就肯花时间自己解决这个问题，如果你不在乎，就不用在乎了。</p>
+<p>1 使用“本尊”</p>
+<p>最好使用 <a href="http://www.google.com/ncr" target="_blank" rel="external">http://www.google.com/ncr</a> NCR: No Country Redirection，而不是<a href="http://www.google.com.hk；有时，直接输入http://www.google.com也会被自动转到“本地Google”，比如，我用日本的" target="_blank" rel="external">http://www.google.com.hk；有时，直接输入http://www.google.com也会被自动转到“本地Google”，比如，我用日本的</a> VPN，浏览器就会把我转到<a href="http://www.google.co.jp……" target="_blank" rel="external">http://www.google.co.jp……</a></p>
+<p>2 优先使用英文关键字搜索</p>
+<p>这是个好习惯。别说不会英文，不会就学，没那么难。</p>
+<p>3 基本技巧</p>
+<p>Google 搜索引擎也许是世界上最简单的应用界面，只有一个输入框和一个按钮。然而，用好它还是需要花点时间去学习的。Google 有帮助文档，还专门设计了个学习网站 A Google A Day</p>
+<p>3.a 加号</p>
+<p>在 Google 的输入框里，所有的空格都被 Google 理解为加号+。如果你输入的是 purpose of education那么 Google 返回的文章里既有“purpose”存在，也有“education”存在，但不一定有“purpose of education”存在。另外，过分常用的、单独存在没有意义的词汇往往被忽略掉，比如冠词“a”、“the”；介词“of”、“in”、“on”、“at”、“to”；连词“and”、“or”、“but”；从属连词“that”、“which”、“when”；代词“my”、“his”、“them”等等。</p>
+<p>3.b 引号</p>
+<p>如果你想要找含有“purpose of education”这个词组的文章，那么你必须输入”purpose of education”。现在的 Google 已经可以处理 utf-8 大字符集了，所以，即便你在输入的时候使用的是全角字符（不是半角字符的”而是“或者”）Google也照样能够正确处理。比较一下两种输入返回的结果：purpose of education vs.“purpose of education”。再试试 the most important benefit of education 和 “the most important benefit of education”。这就是引号（“……”）的作用——返回“完整匹配”的结果。</p>
+<p>3.c 减号</p>
+<p>为了进一步筛选搜索结果，还需要学会另外一个符号——减号-。比如，“the most important benefit of education” – “united states”要求Google返回含有“the most important benefit of education”但不存在“united states”的文章。</p>
+<p>3.d 星号</p>
+<p>另外一个威力无穷的符号是星号<em>。Google 支持通配符搜索，即搜索字符串中可以包含星号</em>，用来替代任意字符串。比如，“the most * examples of censorship”将会返回含有类似“the most outrageous examples of censorship”、“the most brazen examples of censorship”、“the most heinous examples of censorship”、“the most stupidest examples of censorship”、“the most dangerous examples of censorship”、“the most egregious examples of censorship”、“the most prolific examples of censorship”、“the most absurd examples of censorship”……</p>
+<p>3.e 波浪号</p>
+<p>还有一个运用相当灵活、经常带来意外收获的符号是波浪号~。把波浪号~加在某个单词前面，是在告诉 Google：除了给出的关键字之外，还要搜索与波浪号~后面的那个单词相关的词汇。比如，搜索the importance of ~censorship的结果中包含着“the importance of censorship”，也包含着与censorship相关的另外一个词汇“propaganda”——“the importance of propaganda”。</p>
+<p>4 高级技巧</p>
+<p>4.a 站内搜索</p>
+<p>再学一个在指定网站中搜索的语法“site:”。比如，“the purpose of education” site:<a href="http://www.time.com/就是要求" target="_blank" rel="external">http://www.time.com/就是要求</a> Google 只返回 <a href="http://www.time.com" target="_blank" rel="external">http://www.time.com</a> 这个网站里的含有“the purpose of education”的文章。</p>
+<p>4.b 定制搜索</p>
+<p>2006年，Google 推出了“co-op”服务（自定义搜索引擎）。其中最常用的功能之一就是可以指定 Google 搜索一个或者若干个指定的网站——相当于前面提到的 Google 语法“site:”的扩展。比如，我就曾经为我的学生定制了一个 Google cse（Custom Search Engine）——Search News Media。不妨看看在这个自定义搜索引擎上搜索censorship返回的结果（GRE/SAT 的作文考试中，都有很多关于“censorship”的作文题）。这个 cse 只搜索以下10个网站：</p>
+<p><a href="http://www.economist.com/" target="_blank" rel="external">http://www.economist.com/</a><br><a href="http://www.cnn.com/" target="_blank" rel="external">http://www.cnn.com/</a><br><a href="http://www.time.com/" target="_blank" rel="external">http://www.time.com/</a><br><a href="http://nytimes.com/" target="_blank" rel="external">http://nytimes.com/</a><br><a href="http://www.washingtonpost.com/" target="_blank" rel="external">http://www.washingtonpost.com/</a><br><a href="http://www.usnews.com/" target="_blank" rel="external">http://www.usnews.com/</a><br><a href="http://usatoday.com/" target="_blank" rel="external">http://usatoday.com/</a><br><a href="http://www.reuters.com/" target="_blank" rel="external">http://www.reuters.com/</a><br><a href="http://www.bbc.co.uk/" target="_blank" rel="external">http://www.bbc.co.uk/</a><br><a href="http://en.wikinews.org/" target="_blank" rel="external">http://en.wikinews.org/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;原文作者：李笑来，摘自&lt;a href=&quot;http://zhibimo.com/read/xiaolai/reborn-every-7-years/C04.html&quot;&gt;《新生 —— 七年就是一辈子》&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;研究这个词，在英文中是research，我把它理解为re-search，实际上各种语言是相通的，所谓re-search其实就是“反复搜索”，就是“上下求索”（路漫漫其修远兮，吾将上下而求索）。&lt;br&gt;所以，如果你想学点什么，就要善于搜索。而在这个时代里，最好的搜索工具就是 Google。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/google.JPG&quot; width = &quot;994&quot; height = &quot;634&quot; alt=&quot;personal photo&quot;&gt;&lt;br&gt; &lt;/div&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
     
   </entry>
   
@@ -4207,693 +4367,6 @@
     
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Summary and Table of Principles</title>
-    <link href="http://ipcreator.me/2017/02/09/summary-and-table-of-principles/"/>
-    <id>http://ipcreator.me/2017/02/09/summary-and-table-of-principles/</id>
-    <published>2017-02-09T10:00:18.000Z</published>
-    <updated>2017-02-12T09:41:03.327Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong><a href="http://zhibimo.com/read/wang-miao/yuan-ze/Part303SummaryandTableofPrinciples.html" target="_blank" rel="external">Principles —-译者：刘念 张帆”</a></strong></p>
-<p>Principles 记录了Bridgewater创始人Ray Dalio对自己人生成功过程的反思，试图提供一套能通用的理念，帮助人们在生活中作出正确的选择。<br>Ray Dalio，来自纽约中产之家，中年创建Bridgewater，2011年六十岁时Bridgewater成为世界上第一大对冲基金。</p>
-<div align="center"><br><img src="https://img3.doubanio.com/lpic/s27196293.jpg" width="288" height="462" alt="personal photo"><br> </div>
-
-<a id="more"></a> 
-<p>原则汇总列表</p>
-<p>To Get the Culture Right…<br>塑造良好的公司文化</p>
-<p>… 1) Trust in truth. </p>
-<p>… 1) 相信真相</p>
-<p>… 2) Realize that you have nothing to fear from truth. </p>
-<p>… 2) 你要知道，真相没什么可怕的。</p>
-<p>… 3) Create an environment in which everyone has the right to understand what makes sense and no one has the right to hold a critical opinion withoutspeaking up about it. </p>
-<p>… 3) 创造这样一种氛围，只要是合理的事情，人人都能相互理解，没有人有权妄加批评，除非他能开诚布公地讲他的理由。</p>
-<p>… 4) Be extremely open. </p>
-<p>… 4) 要极为开放。</p>
-<p>… 5) Have integrity and demand it from others. </p>
-<p>… 5) 保持正直，要求别人也必须保持正直。</p>
-<p>a) Never say anything about a person you wouldn’t say to them directly, and don’t try people without accusing them to their face. </p>
-<p>a) 若当面不对别人进行评论，背地里也不要说。若未曾当面控诉过别人，也不要背地里试探。</p>
-<p>b) Don’t let “loyalty” stand in the way of truth and openness. </p>
-<p>b) 所谓的“忠诚”不能成为真相与开放的拦路虎。</p>
-<p>… 6) Be radically transparent. </p>
-<p>… 6) 要极为透明。</p>
-<p>a) Record almost all meetings and share them with all relevant people. </p>
-<p>a) 记录每一次会议，并分享给与之有关系的人。</p>
-<p>… 7) Don’t tolerate dishonesty. </p>
-<p>… 7) 绝不容忍失信。</p>
-<p>a) Don’t believe it when someone caught being dishonest says they have seen the light and will never do that sort of thing again. </p>
-<p>a) 不要相信失信之人说他已痛改前非，绝不再犯。</p>
-<p>… 8) Create a Culture in which it is oK to make mistakes but unacceptable Not to identify, Analyze, and Learn From Them </p>
-<p>… 8) 创造这样一种文化：容许犯错，并从错误中进行识别、分析、吸取教训。</p>
-<p>… 9) Recognize that effective, innovative thinkers are going to make mistakes </p>
-<p>… 9）要意识到处事高效创新的思考者都会犯错。</p>
-<p>… 10) Do not feel bad about your mistakes or those of others. Love them! </p>
-<p>… 10）不要为自己或别人犯的错而郁郁寡欢，要热爱这些错！</p>
-<p>… 11) Observe the patterns of mistakes to see if they are a product of weaknesses. </p>
-<p>… 11）仔细观察所犯错误的模式，看看它们是不是自身缺点所导致。</p>
-<p>… 12) Do not feel bad about your weaknesses or those of others. </p>
-<p>… 12）不要因为自己或别人的缺点而感到糟糕。</p>
-<p>… 13) Don’t worry about looking good - worry about achieving your goals. </p>
-<p>… 13）别老担心面子上过不过得去，而要担心是否会影响目的的实现。</p>
-<p>… 14) Get over “blame” and “credit” and get on with “accurate” and “inaccurate.” </p>
-<p>… 14）别去管“责备”或“赞扬”，要习惯关注错误的归因是“精准”还是“不精准”。</p>
-<p>… 15) Don’t depersonalize mistakes. </p>
-<p>… 15）错误归因要具体到个人。</p>
-<p>… 16) Write down your weaknesses and the weaknesses of others to help remember and acknowledge them. </p>
-<p>… 16）写下你和别人的缺点，帮助自己牢记并承认这些缺点。</p>
-<p>… 17) When you experience pain, remember to reflect. </p>
-<p>… 17）若因犯了错而感到痛苦，记得要反省。</p>
-<p>… 18) Be self-reflective and make sure your people are self-reflective. </p>
-<p>… 18）要自我反思，也确保你身边的朋友们也都是懂得自我反思的。</p>
-<p>… 19) Teach and reinforce the merits of mistake-based learning. </p>
-<p>… 19）教导和强化基于错误学习的优点。</p>
-<p>a) The most valuable tool we have for this is the issues log (explained fully later) , which is aimed at identifying and learning from mistakes.</p>
-<p>a) 最有效的工具是建立“问题日志”（下文中将详述），旨在鉴别问题，并从中吸取教训。</p>
-<p>…20) Constantly Get in Synch. </p>
-<p>…20）不断争取意见统一。</p>
-<p>… 21) Constantly get in synch about what is true and what to do about it. </p>
-<p>… 21）要去伪存真，争取在解决方案上的意见统一。</p>
-<p>… 22) Talk about “Is it true?” and “Does it make sense?” </p>
-<p>… 22）讨论“这是对的么？”和“这事有意义么？”</p>
-<p>… 23) Fight for right. </p>
-<p>… 23）认为对的事情，要据理力争。</p>
-<p>… 24) Be assertive and open-minded at the same time. </p>
-<p>… 24）既要立场坚定，也要保持兼容并蓄。</p>
-<p>a) Ask yourself whether you have earned the right to have an opinion. </p>
-<p>a) 问问自己，是否拥有发表观点的权利。</p>
-<p>b) Recognize that you always have the right to have and ask questions. </p>
-<p>b) 要知道自己始终拥有提问的权利。</p>
-<p>c) Distinguish open-minded people from closed-minded people. </p>
-<p>c) 区分思维开放的人和思想保守的人。</p>
-<p>d) Don’t have anything to do with closed-minded, inexperienced people. </p>
-<p>d) 思想保守、缺乏经验之人，还是敬而远之吧。</p>
-<p>e) Be wary of the arrogant intellectual who comments from the stands without having played on the field. </p>
-<p>e) 谨防纸上谈兵、夸夸其谈的人。</p>
-<p>f) Watch out for people who think it’s embarrassing not to know. </p>
-<p>f) 谨防那些不知为耻的人。</p>
-<p>… 25) Make sure responsible parties are open-minded about the questions and comments of others. </p>
-<p>… 25）确保主要责任方对于他人提出的问题与评论都是持开放态度的。</p>
-<p>… 26) Recognize that conflicts are essential for great relationships because they are the means by which people determine whether their principles are alignedand resolve their differences. </p>
-<p>… 26）要意识到，冲突对于建立重要关系是大有裨益的，因为通过冲突人们才能确定对方的原则是否与自己的一致，便于化解分歧。</p>
-<p>a) Expect more open-minded disagreements at Bridgewater than at most other firms. </p>
-<p>a) 在桥水联合基金公司里，要期待比其他公司更多的不拘于成见的分歧。</p>
-<p>b) There is giant untapped potential in disagreement, especially if the disagreement is between two or more thoughtful people </p>
-<p>b) 分歧中蕴含巨大潜力，尤其对于两个有想法的人之间的分歧而言，更是如此。</p>
-<p>… 27) Know when to stop debating and move on to agreeing about what should be done. </p>
-<p>… 27）知道什么时候终止辩论，进而讨论一致的解决方案。</p>
-<p>a) However, when people disagree on the importance of debating something, it should be debated. </p>
-<p>a) 当有人质疑就某事展开辩论的重要性时，辩论是有必要的。</p>
-<p>b) Recognize that “there are many good ways to skin a cat.” </p>
-<p>b) “办法总比问题多”。</p>
-<p>c) For disagreements to have a positive effect, people evaluating an individual decision ordecision-maker must view the issue within a broader context. </p>
-<p>c) 要想通过分歧获得积极的结果，评估个人抉择或决策者的观点时需要树立大局观。</p>
-<p>d) Distinguish between 1) idle complaints and 2) complaints that are meant to lead to improvement. </p>
-<p>d) 要区分两个概念：1）无用的抱怨 2）旨在实现改善的合理诉求。</p>
-<p>… 28) Appreciate that open debate is not meant to create rule by referendum. </p>
-<p>… 28）赞赏开放式辩论的讨论方式并不意味着要通过全体投票来制定规则。</p>
-<p>… 29) Evaluate whether an issue calls for debate, discussion, or teaching. </p>
-<p>… 29）要评估事项是否需要辩论、讨论或传授。</p>
-<p>a) To avoid confusion, make clear which kind of conversation (debate, discussion, or teaching) you are having </p>
-<p>a) 为了避免产生误解，需要确定使用何种沟通方式（辩论、讨论或传授）。</p>
-<p>b) Communication aimed at getting the best answer should involve the most relevant people. </p>
-<p>b) 旨在获得最佳方案的沟通，应该邀请最相关的人参与其中。</p>
-<p>c) Communication aimed at educating or boosting cohesion should involve a broader set of people than would be needed if the aim were just getting the best answer. </p>
-<p>c) 旨在教育，增强凝聚力的沟通，如果目标是获取最优解决方案，那么就应该听取更多人的意见。</p>
-<p>d) Leverage your communication. </p>
-<p>d) 充分利用各种沟通手段。</p>
-<p>… 30) Don’t treat all opinions as equally valuable. </p>
-<p>… 30) 不要对所有的观点一视同仁。</p>
-<p>a) A hierarchy of merit is not only consistent with a meritocracy of ideas but essential forit. </p>
-<p>a) 能力层级不仅需要与观点优先原则相一致，更是后者的必然要求。</p>
-<p>… 31) Consider your own and others’ “believabilities.” </p>
-<p>… 31）思考自己和别人的可信度。</p>
-<p>a) Ask yourself whether you have earned the right to have an opinion. </p>
-<p>a) 问问自己，是否拥有发表观点的权利。</p>
-<p>b) People who have repeatedly and successfully accomplished the thing in question andhave great explanations when probed are most believable. </p>
-<p>b) 若有人多次成功解决悬而未决的问题，面对质疑也能讲得头头是道，这种人的观点最可信。</p>
-<p>c) If someone asks you a question, think first whether you’re the responsible party/rightperson to be answering the question. </p>
-<p>c) 如果有人问你一个问题，首先要考虑自己是不是能够解答这个问题的人。</p>
-<p>… 32) Spend lavishly on the time and energy you devote to “getting in synch”because it’s the best investment you can make. </p>
-<p>… 32）为了“意见统一”，花再多的时间与精力都不为过，因为这是最有价值的投资。</p>
-<p>… 33) If it is your meeting to run, manage the conversation. </p>
-<p>… 33）如果是你主持会议，请协调好会议中各方的讨论。</p>
-<p>a) Make it clear who the meeting is meant to serve and who is directing the meeting. </p>
-<p>a) 弄清会议的服务方和主持方。</p>
-<p>b) Make clear what type of communication you are going to have in light of the objectivesand priorities. </p>
-<p>b) 根据会议目标与重点议题，确定会议的交流方式。</p>
-<p>c) Lead the discussion by being assertive and open-minded. </p>
-<p>c) 主持讨论要坚定自信，开诚布公。</p>
-<p>d) A small group (3 to 5) of smart, conceptual people seeking the right answers in anopen-minded way will generally lead to the best answer. </p>
-<p>d) 组织三至五人的小组讨论，邀请思维灵活、概念清晰的成员开放地寻求最佳方案，这种情况一般能取得最好的效果。</p>
-<p>e) 1+1=3.</p>
-<p>f) Navigate the levels of the conversation clearly. </p>
-<p>f) 要明确讨论的层次的方向。</p>
-<p>g) Watch out for “topic slip.” </p>
-<p>g) 注意不要让讨论偏题。</p>
-<p>h) Enforce the logic of conversations. </p>
-<p>h) 增强沟通的逻辑性。</p>
-<p>i) Worry about substance more than style. </p>
-<p>i) 实质内容比形式更重要。</p>
-<p>j) Achieve completion in conversations. </p>
-<p>j) 在讨论中要得出一定结论。</p>
-<p>k) Have someone assigned to maintain notes in meetings and make sure follow-throughhappens. </p>
-<p>k) 安排人做会议纪要，保证会议讨论的事项后续落实。</p>
-<p>l) Be careful not to lose personal responsibility via group decision-making. </p>
-<p>l) 需要注意的是，集体决策时不要忘记了个人的职责。</p>
-<p>… 34) Make sure people don’t confuse their right to complain, give advice, anddebate with the right to make decisions. </p>
-<p>… 34）不要将控诉、献言献策、辩论的权利同抉择权混为一谈。</p>
-<p>… 35) Recognize that getting in synch is a two-way responsibility. </p>
-<p>… 35）要认识到，达成意见统一是双向责任。</p>
-<p>… 36) Escalate if you can’t get in synch.</p>
-<p>… 36）如果意见无法统一，提交上级进行讨论。</p>
-<p>To Get the People Right… </p>
-<p>选对人，用对人</p>
-<p>… 37) Recognize the Most Important Decisions You Make Are Who You Choose toBe Your Responsible Party </p>
-<p>… 37）要知道，最重要的选择是选谁做负责人。</p>
-<p>… 38) Remember that almost everything good comes from having great peopleoperating in a great culture. </p>
-<p>…38）要记住，几乎所有的成功都是来自优秀的文化以及在其中工作的优秀的人才。</p>
-<p>… 39) First, match the person to the design. </p>
-<p>… 39）首先，要选择合适的人参与规划。</p>
-<p>a) Most importantly, find people who share your values. </p>
-<p>a) 最为重要的是要找同你价值观一致的人。</p>
-<p>b) Look for people who are willing to look at themselves objectively and have character. </p>
-<p>b) 要找愿意客观评价自己且有自身性格特点的人。</p>
-<p>c) Conceptual thinking and common sense are required in order to assign someone theresponsibility for achieving goals (as distinct from tasks) . </p>
-<p>c) 根据需要完成任务和实现目标，选择具备相关概念性思维和常识的人履职尽责。</p>
-<p>… 40) Recognize that the inevitable responsible party is the person who bears theconsequences of what is done. </p>
-<p>… 40）必然责任人是需要承担一切后果的。</p>
-<p>… 41) By and large, you will get what you deserve over time. </p>
-<p>… 41）总的来说，日积月累，你会得到你应得的。</p>
-<p>… 42) The most important responsible parties are those who are most responsible forthe goals, outcomes, and machines (they are those higher in the pyramid) . </p>
-<p>… 42）最重要的责任人要为目标、结果和组织机构负主要责任（即位于组织里的上层的人）。</p>
-<p>… 43) Choose those who understand the difference between goals and tasks to runthings. </p>
-<p>… 43）选择那些明白“目标”与“任务”之间差异的人来做事。</p>
-<p>…44) Recognize that People Are Built Very Differently </p>
-<p>…44) 要知道每个人生来和后天塑造都是不同的。</p>
-<p>… 45) Think about their very different values, abilities, and skills. </p>
-<p>… 45）考虑他们在价值观、能力和技能上的差异。</p>
-<p>… 46） Understand what each person who works for you is like so that you know whatto expect from them. </p>
-<p>… 46）要了解你每个员工的情况，才能知道你能在他们身上有何种期待。</p>
-<p>… 47) Recognize that the type of person you fit in the job must match therequirements for that job. </p>
-<p>… 47）岗位用人要与职位要求相匹配。</p>
-<p>… 48) Use personality assessment tests and quality reflections on experiences tohelp you identify these differences. </p>
-<p>… 48）通过性格测试以及员工工作经历中反映的性格特点来帮助自己了解他们之间的差异。</p>
-<p>… 49) Understand that different ways of seeing and thinking make people suitable fordifferent jobs. </p>
-<p>… 49）要知道，每个人的观察与思考方式不同，因此适合的职位也不同。</p>
-<p>a) People are best at the jobs that require what they do well. </p>
-<p>a) 人们在所擅长的领域工作表现最佳。</p>
-<p>b) If you’re not naturally good at one type of thinking, it doesn’t mean you’re precludedfrom paths that require that type of thinking </p>
-<p>b) 若你天生不擅长某种思维方式，并不意味着就做不好需要这种思维方式的工作。</p>
-<p>… 50) Don’t hide these differences. Explore them openly with the goal of figuring outhow you and your people are built so you can put the right people in the rightjobs and clearly assign responsibilities. </p>
-<p>… 50）不要隐藏这些差异，坦诚沟通，以深入了解自己和员工，把合适的人用在合适的岗位上，并明确任务分工。</p>
-<p>… 51) Remember that people who see things and think one way often have difficultycommunicating and relating to people who see things and think another way. </p>
-<p>… 51）要记住，看待事物与思维方式不同的人，在交流和相处上是存在困难的。</p>
-<p>… 52) Hire Right, Because the Penalties of Hiring Wrong Are Huge </p>
-<p>… 52）雇佣对的人，用错了人，代价会极为惨重。</p>
-<p>… 53) Think through what values, abilities, and skills you are looking for. </p>
-<p>… 53) 仔细审度自己想要的员工应具备什么样的价值观、能力和技能。</p>
-<p>… 54) Weigh values and abilities more heavily than skills in deciding whom to hire. </p>
-<p>… 54）招聘员工时，要多考虑员工的价值观与能力，这比技能更重要。</p>
-<p>… 55) Write the profile of the person you are looking for into the job description. </p>
-<p>… 55）招聘员工时，在岗位说明里描述希望招到一个什么样的员工。</p>
-<p>… 56) Select the appropriate people and tests for assessing each of these qualitiesand compare the results of those assessments to what you’ve decided isneeded for the job. </p>
-<p>… 56）挑选合适人选，根据相应工作岗位应具备的素质要求对他们进行考核评估，比对评估结果与素质要求。</p>
-<p>a) Remember that people tend to pick people like themselves, so pick interviewers whocan identify what you are looking for. </p>
-<p>a) 要记住，人们往往倾向于选择和自己相似的人，因此应挑选那些了解自己想雇佣何种员工的人担任面试考官。</p>
-<p>b) Understand how to use and interpret personality assessments. </p>
-<p>b) 要知道如何使用和解读性格测试。</p>
-<p>c) Pay attention to people’s track records. </p>
-<p>c) 注意受聘者的过往业绩。</p>
-<p>d) Dig deeply to discover why people did what they did. </p>
-<p>d) 深入挖掘，探寻他们过往行为的动机。</p>
-<p>e) Recognize that performance in school, while of some value in making assessments,doesn’t tell you much about whether the person has the values and abilities you arelooking for. </p>
-<p>e) 要认识到，尽管学校表现在进行评估时有一定价值，但却不能体现应聘者是否具备你想要的价值观或能力。</p>
-<p>f) Ask for past reviews. </p>
-<p>f) 要求提供过往业绩的评估。</p>
-<p>g) Check references. </p>
-<p>g) 参考推荐信。</p>
-<p>… 57) Look for people who have lots of great questions. </p>
-<p>… 57）寻找可提出好问题的员工。</p>
-<p>… 58) Make sure candidates interview you and Bridgewater. </p>
-<p>… 58）确保应聘者对你和桥水联合基金也进行了面试。</p>
-<p>… 59) Don’t hire people just to fit the first job they will do at Bridgewater; hire peopleyou want to share your life with. </p>
-<p>… 59）不要聘用那些只把桥水联合基金当做第一份工作的人，要用那些你愿意与之分享人生的人。</p>
-<p>… 60) Look for people who sparkle, not just “another one of those.” </p>
-<p>… 60）要选熠熠生辉之人，而不是又一个平庸之辈。</p>
-<p>… 61) Hear the click: Find the right fit between the role and the person. </p>
-<p>… 61）听到咔哒声：所需职位和聘用之人一定要匹配合适。</p>
-<p>… 62) Pay for the person, not for the job. </p>
-<p>… 62）以人论酬，而不是以岗论酬。</p>
-<p>… 63) Recognize that no matter how good you are at hiring, there is a high probabilitythat the person you hire will not be the great person you need for the job. </p>
-<p>… 63）要知道无论你在招聘人才方面有多在行，你所聘用的人选都很有可能不是岗位的最佳人选。</p>
-<p>… 64) Manage as Someone Who Is Designing and Operating a Machine to Achieve the Goal </p>
-<p>… 64）像设计和运行一台机器一样做好管理工作，才能实现预期目标。</p>
-<p>… 65) Understand the differences between managing, micromanaging, and notmanaging. </p>
-<p>… 65）明白管理、微观管理和不管理之间的区别。</p>
-<p>a) Managing the people who report to you should feel like “skiing together.” </p>
-<p>a) 管理下属应该感觉像是一同滑雪一样。</p>
-<p>b) An excellent skier is probably going to be more critical and a better critic of anotherskier than a novice skier. </p>
-<p>b) 优秀的滑雪者更能挑出对方的毛病，这是初学者很难做到的。</p>
-<p>… 66) Constantly compare your outcomes to your goals. </p>
-<p>… 66）不断比较完成情况和目标之间的差距。</p>
-<p>… 67) Look down on your machine and yourself within it from the higher level. </p>
-<p>… 67）在所管理的机制内，从更高层次审视自己和机制。</p>
-<p>… 68) Connect the case at hand to your principles for handling cases of that type. </p>
-<p>… 68）解决问题要参照同类别问题解决时所遵循的原则。</p>
-<p>… 69) Conduct the discussion at two levels when a problem occurs: 1) the “machine”level discussion of why the machine produced that outcome and 2) the “caseat hand” discussion of what to do now about the problem. </p>
-<p>… 69）问题出现时，要展开两个层面的讨论：1）从机制层面来讨论，为什么会出现这个问题？2）单从问题本身层面来讨论，当下应如何解决。</p>
-<p>… 70) Don’t try to be followed; try to be understood and to understand others. </p>
-<p>… 70）和员工的关系不是服从与被服从，而应是相互理解。</p>
-<p>a) Don’t try to control people by giving them orders. </p>
-<p>a) 不要给员工下命令控制他们。</p>
-<p>b) Communicate the logic and welcome feedback. </p>
-<p>b) 沟通要有逻辑，多听取反馈意见。</p>
-<p>… 71) Clearly assign responsibilities. </p>
-<p>… 71）明确责任分工。</p>
-<p>… 72) Hold people accountable and appreciate them holding you accountable. </p>
-<p>… 72）对员工进行工作问责制度，若他们问责你，要感谢他们。</p>
-<p>a) Distinguish between failures where someone broke their “contract” from ones where there was no contract to begin with. </p>
-<p>a) 要分清楚，有些工作上的失败是因为员工没履行一开始的“约定”，而有些则是因为一开始就没有指定“约定”。</p>
-<p>… 73) Avoid the “sucked down” phenomenon. </p>
-<p>… 73）避免“上级卷入下级工作职责”现象</p>
-<p>a) Watch out for people who confuse goals and tasks, because you can’t trust people with responsibilities if they don’t understand the goals. </p>
-<p>a) 提防那些混淆目标与任务的员工，不能理解工作目标的员工是不值得信任的。</p>
-<p>… 74) Think like an owner, and expect the people you work with to do the same. </p>
-<p>… 74）要有主人翁思维，并希望员工们也能具备这种思维方式。</p>
-<p>… 75) Force yourself and the people who work for you to do difficult things. </p>
-<p>… 75）强迫自己和员工迎难而上。</p>
-<p>a) Hold yourself and others accountable. </p>
-<p>a) 对自己和他人要采取问责制度。</p>
-<p>… 76) Don’t worry if your people like you; worry about whether you are helping your people and Bridgewater to be great. </p>
-<p>… 76）别担忧员工喜不喜欢你，还是多想想自己所做的事情能不能帮员工和桥水联合基金获得成功吧。</p>
-<p>… 77) Know what you want and stick to it if you believe it’s right, even if others want to take you in another direction. </p>
-<p>… 77）知道自己想要什么，坚信自己认为的是正确的事情，不要轻易被人牵着鼻子走。</p>
-<p>… 78) Communicate the plan clearly. </p>
-<p>… 78）计划沟通要清晰明了。</p>
-<p>a) Have agreed-upon goals and tasks that everyone knows (from the people in the departments to the people outside the departments who oversee them) . </p>
-<p>a) 已达成共识的目标任务要让所有相关人士都知道。（包括有关部门的员工及监管层的领导）</p>
-<p>b) Watch out for the unfocused and unproductive “we should … (do something) .” </p>
-<p>b) 要警惕交流中出现没有重点，低效无用的句式：我们应该如何。</p>
-<p>… 79) Constantly get in synch with your people. </p>
-<p>… 79）保持与员工意见统一。</p>
-<p>… 80) Get a “threshold level of understanding” </p>
-<p>… 80）充分了解工作相关情况。</p>
-<p>… 81) Avoid staying too distant. </p>
-<p>… 81）避免和员工产生距离感。</p>
-<p>a) Tool: Use daily updates as a tool for staying on top of what your people are doing and thinking. </p>
-<p>a) 工具：使用每日进度更新了解员工工作与思考的情况。</p>
-<p>… 82) Learn confidence in your people—don’t presume it. </p>
-<p>… 82）对员工的信任度不能先入为主，要逐步去了解。</p>
-<p>… 83) Vary your involvement based on your confidence. </p>
-<p>… 83）处理问题时，根据自己感觉有把握的情况来调整参与度。</p>
-<p>… 84) Avoid the “theoretical should.” </p>
-<p>… 84）避免说“理论上应该”。</p>
-<p>… 85) Care about the people who work for you. </p>
-<p>… 85）关爱员工。</p>
-<p>… 86) Logic, reason, and common sense must trump everything else in decision-making. </p>
-<p>… 86）决策中最重要的是讲究逻辑、给明理由且符合常识。</p>
-<p>… 87) While logic drives our decisions, feelings are very relevant. </p>
-<p>… 87）尽管做决策时主要依靠逻辑，但情感感觉也是很重要的。</p>
-<p>… 88) Escalate when you can’t adequately handle your responsibilities, and make sure that the people who work for you do the same. </p>
-<p>… 88）如果发现自己无法有效解决问题时，应将问题提交给上级，确保为你工作的员工们也是这样操作的。</p>
-<p>a) Make sure your people know to be proactive. </p>
-<p>a) 确保员工主动积极。</p>
-<p>b) Tool: An escalation button. </p>
-<p>b) 工具：升级按钮。</p>
-<p>… 89) Involve the person who is the point of the pyramid when encountering material cross-departmental or cross sub-departmental issues. </p>
-<p>… 89）跨部门间或跨子部门间出现问题时，需要上级部门，也就是这个组织的“金字塔尖”的那个人来参与定夺。</p>
-<p>… 90) Probe Deep and Hard to Learn What to Expect from Your “Machine” </p>
-<p>… 90) 认真深入调查，了解机制能够创造什么。</p>
-<p>… 91) Know what your people are like, and make sure they do their jobs excellently. </p>
-<p>… 91) 了解自己的员工，确保他们顺利完成工作。</p>
-<p>… 92) Constantly probe the people who report to you, and encourage them to probe you. </p>
-<p>… 92) 不断调查直接向你汇报的下级，并鼓励他们调查你。</p>
-<p>a) Remind the people you are probing that problems and mistakes are fuel for improvement. </p>
-<p>a) 提醒你调查的员工，问题和错误是改进的动力。</p>
-<p>… 93) Probe to the level below the people who work for you. </p>
-<p>… 93) 调查你属下的下级。</p>
-<p>… 94) Remember that few people see themselves objectively, so it’s important to welcome probing and to probe others. </p>
-<p>… 94) 记住，只要极少人能够客观地看待自己。因此，你应该欢迎调查，同时要去调查别人。</p>
-<p>… 95) Probe so that you have a good enough understanding of whether problems are likely to occur before they actually do. </p>
-<p>… 95) 调查有助于你在问题出现之前充分了解其出现的可能性。</p>
-<p>a) When a crisis appears to be brewing, contact should be so close that it’s extremely unlikely that there will be any surprises. </p>
-<p>a) 如果说有迹象显示危机正在酝酿，那么你就应该保持密切关注，就能在其发生之时没有任何惊讶。</p>
-<p>b) Investigate and let people know you are going to investigate so there are no surprises and they don’t take it personally. </p>
-<p>b) 调查情况的时候要告诉被调查的人，不要让被调查的人措手不及，让他们知道你是对事不对人。</p>
-<p>… 96) Don’t “pick your battles.” Fight them all. </p>
-<p>… 96) 不要挑肥拣瘦，要解决所有问题。</p>
-<p>… 97) Don’t let people off the hook. </p>
-<p>… 97) 不要让人逃避责任。</p>
-<p>… 98) Don’t assume that people’s answers are correct. </p>
-<p>… 98) 不要想当然地认为人们的答案都是正确的。</p>
-<p>… 99) Make the probing transparent rather than private. </p>
-<p>… 99) 将调查透明化，不要私下进行。</p>
-<p>… 100) Evaluate People Accurately, Not “Kindly” </p>
-<p>… 100) 准确地，而不是善意地评估员工。</p>
-<p>… 101) Make accurate assessments. </p>
-<p>… 101) 进行准确评估。</p>
-<p>a) Use evaluation tools such as performance surveys, metrics, and formal reviews to document all aspects of a person’s performance. These will help clarify assessments and communication surrounding them. </p>
-<p>a) 使用各种评估工具来记录员工全方位表现，包括工作表现调查问卷、计量图表、正式评估报告。这些工具能够帮助你将员工的相关评估和沟通整理清楚。</p>
-<p>b) Maintain “baseball cards” and/or “believability matrixes” for your people. </p>
-<p>b) 为员工建立“棒球记录卡”以及“可信度图表”。</p>
-<p>… 102) Evaluate employees with the same rigor as you evaluate job candidates. </p>
-<p>… 102) 以同等的严厉程度来评价员工、雇佣新人。</p>
-<p>… 103) Know what makes your people tick, because people are your most important resource. </p>
-<p>… 103) 充分了解员工的特质，因为人才是最重要的资源。</p>
-<p>… 104) Recognize that while most people prefer compliments over criticisms, there is nothing more valuable than accurate criticisms. </p>
-<p>… 104) 要认识到，尽管大多数人都喜欢被表扬，不喜欢被批评，但准确的批评却是最宝贵的。</p>
-<p>… 105) Make this discovery process open, evolutionary, and iterative. </p>
-<p>… 105) 将这一发现过程公开，循环往复，促其演变。</p>
-<p>… 106) Provide constant, clear, and honest feedback, and encourage discussion of this feedback. </p>
-<p>… 106) 提供频繁的、清楚的、诚实的反馈，并鼓励就这些反馈进行讨论。</p>
-<p>a) Put your compliments and criticisms into perspective. </p>
-<p>a) 正确对待表扬与批评。</p>
-<p>b) Remember that convincing people of their strengths is generally much easier than convincing them of their weaknesses. </p>
-<p>b) 记住，让别人看到自己的长处通常比让他们看到自己的短处要容易得多。</p>
-<p>c) Encourage objective reflection </p>
-<p>c) 鼓励客观的反思。</p>
-<p>d) Employee reviews: </p>
-<p>d) 员工评估报告:</p>
-<p>… 107) Understand that you and the people you manage will go through a process of personal evolution. </p>
-<p>… 107) 你以及你管理的人都会经历个人成长的过程。</p>
-<p>… 108) Recognize that your evolution at Bridgewater should be relatively rapid and a natural consequence of discovering your strengths and weaknesses; as a result, your career path is not planned at the outset </p>
-<p>… 108) 要认识到，你在桥水基金的成长会相对较快，这是了解自己优缺点的必然结果。因此，你的职业规划不是在一开始就定下来的。</p>
-<p>… 109) Remember that the only purpose of looking at what people did is to learn what they are like. </p>
-<p>… 109) 要记住，了解员工的过去是为了了解他们的特质。</p>
-<p>a) Look at patterns of behaviors and don’t read too much into any one event. </p>
-<p>a) 关注行为模式，但不要过分解读任何单一事件。</p>
-<p>b) Don’t believe that being good or bad at some things means that the person is good or bad at everything. </p>
-<p>b) 不要认为擅长（或不擅长）某件事的人就一定对所有的事都擅长（或不擅长）。</p>
-<p>… 110) If someone is doing their job poorly, consider whether this is due to inadequate learning (i.e., training/experience) or inadequate ability </p>
-<p>… 110) 如果某人工作做得很差劲，要去想这是因为缺少学习（培训或相关经验）还是因为缺少能力。</p>
-<p>… 111) Remember that when it comes to assessing people, the two biggest mistakes are being overconfident in your assessment and failing to get in synch on that assessment. Don’t make those mistakes. </p>
-<p>… 111) 记住，在评估员工时最常犯的两个错误是：对于评估结果过于自信；对于评估结果意见无法达成一致。不要犯这两个错误。</p>
-<p>a) Get in synch in a non-hierarchical way regarding assessments. </p>
-<p>a) 针对评估争取意见一致时，要以非等级的方式来进行。</p>
-<p>b) Learn about your people and have them learn about you with very frank conversations about mistakes and their root causes. </p>
-<p>b) 通过开展坦诚对话，讨论错误以及犯错的根源，来了解彼此。</p>
-<p>… 112) Help people through the pain that comes with exploring their weaknesses. </p>
-<p>… 112) 帮助人们渡过发现缺点的阵痛期。</p>
-<p>… 113) Recognize that when you are really in synch with people about weaknesses, whether yours or theirs, they are probably true. </p>
-<p>… 113) 要认识到，如果你就某人的弱点达成一致，不管是你的还是其他人的，这个弱点多半是事实。</p>
-<p>… 114) Remember that you don’t need to get to the point of “beyond a shadow of a doubt” when judging people. </p>
-<p>… 114) 记住，在评价员工时，并不需要达到“不含一丝质疑”的程度。</p>
-<p>… 115) Understand that you should be able to learn the most about what a person is like and whether they are a “click” for the job in their first year. </p>
-<p>… 115) 要知道，你是能够了解一个人的大部分特质的，也能够在他们第一年来时判断他们是否能够胜任工作。</p>
-<p>… 116) Continue assessing people throughout their time at Bridgewater. </p>
-<p>… 116) 员工在桥水联合基金工作期间，持续对员工进行评估。</p>
-<p>… 117) Train and Test People Through Experiences </p>
-<p>… 117) 通过实战经验来培训、测试员工。</p>
-<p>… 118) Understand that training is really guiding the process of personal evolution. </p>
-<p>… 118) 要知道，培训对个人的成长过程起着指引作用。</p>
-<p>… 119) Know that experience creates internalization </p>
-<p>… 119) 经验能够内化成为知识。</p>
-<p>… 120) Provide constant feedback to put the learning in perspective </p>
-<p>… 120) 正确对待学习，频繁提供反馈。</p>
-<p>… 121) Remember that everything is a case study. </p>
-<p>… 121) 要记住，每件事都是一个案例</p>
-<p>… 122) Teach your people to fish rather than give them fish. </p>
-<p>… 122) 授人以鱼不如授人以渔。</p>
-<p>… 123) Recognize that sometimes it is better to let people make mistakes so that they can learn from them rather than tell them the better decision. </p>
-<p>… 123) 要认识到，有时让人犯错并从中吸取教训要比直接告诉他们一个更好决定更明智。</p>
-<p>a) When criticizing, try to make helpful suggestions. </p>
-<p>a) 在批评时，要提一些有建设性的意见。</p>
-<p>b) Learn from success as well as from failure. </p>
-<p>b) 从成功中学习，也要从失败中学习。</p>
-<p>… 124) Know what types of mistakes are acceptable and unacceptable, and don’t allow the people who work for you to make the unacceptable ones. </p>
-<p>… 124) 分清哪些错误是可以接受的，哪些是不能接受的。不要让员工犯不可接受的错误。</p>
-<p>… 125) Recognize that behavior modification typically takes about 18 months of constant reinforcement. </p>
-<p>… 125) 要认识到，一般需要18个月持续不断的巩固才能实现行为矫正。</p>
-<p>… 126) Train people; don’t rehabilitate them. </p>
-<p>… 126) 培训员工，而不是改造员工。</p>
-<p>a) A common mistake: training and testing a poor performer to see if he or she can acquire the required skills without simultaneously trying to assess their abilities. </p>
-<p>a) 常见错误：在没有对一个工作表现差的员工进行能力评估之前，培训、测试该员工，试图让他获得所需技能。</p>
-<p>… 127) After you decide “what’s true” (i.e., after you figure out what your people are lik<br>e) , think carefully about “what to do about it.” </p>
-<p>… 127) 在找到真相之后（即了解到员工的真实情况），谨慎思考下一步该做什么。</p>
-<p>… 128) Sort People into Other Jobs at Bridgewater, or Remove Them from Bridgewater </p>
-<p>… 128) 在桥水基金内部进行换岗，或将其解雇。</p>
-<p>… 129) When you find that someone is not a good “click” for a job, get them out of it ASAP. </p>
-<p>… 129) 一旦发现某人不能胜任工作，尽快将其调离该职位。</p>
-<p>… 130) Know that it is much worse to keep someone in a job who is not suited for it than it is to fire someone. </p>
-<p>… 130) 勉强将某人留在不合适的职位上要比将其开除更糟糕。</p>
-<p>… 131) When people are “without a box,” consider whether there is an open box at Bridgewater that would be a better fit. If not, fire them. </p>
-<p>… 131) 当员工没有岗位时，思考桥水公司内部是否还有更适合的岗位。如果没有，应该将该员工开除。</p>
-<p>… 132) Do not lower the bar. </p>
-<p>… 132) 不要降低标准。</p>
-<p>To Perceive, Diagnose, and Solve Problems… </p>
-<p>发现、诊断、解决问题</p>
-<p>… 133) Know How to Perceive Problems Effectively </p>
-<p>… 133) 懂得如何有效地发现问题</p>
-<p>… 134) Keep in mind the 5-Step Process explained in Part 2. </p>
-<p>… 134) 时刻牢记在第二部分阐释过的五步流程。</p>
-<p>… 135) Recognize that perceiving problems is the first essential step toward great management. </p>
-<p>… 135) 要认识到，发现问题是优秀管理的第一步。</p>
-<p>… 136) Understand that problems are the fuel for improvement. </p>
-<p>… 136) 要理解，问题是提升的动力。</p>
-<p>… 137) You need to be able to perceive if things are above the bar (i.e., good enough) or below the bar (i.e., not good enough) , and you need to make sure your people can as well </p>
-<p>… 137) 你需要观察事情是在预期之上还是在预期之下，确保你的员工也有此观察力。</p>
-<p>… 138) Don’t tolerate badness. </p>
-<p>… 138) 不要容忍问题。</p>
-<p>… 139) “Taste the soup.” </p>
-<p>… 139) “品尝汤的味道”。</p>
-<p>… 140) Have as many eyes looking for problems as possible. </p>
-<p>… 140) 找尽可能多的人手来一起发现问题。</p>
-<p>a) “Pop the cork.” </p>
-<p>a) “拔出瓶塞。”</p>
-<p>b) Hold people accountable for raising their complaints. </p>
-<p>b) 将投诉作为员工义务来进行。</p>
-<p>c) The leader must encourage disagreement and be either impartial or open-minded. </p>
-<p>c) 领导者必须鼓励提出不同的意见，不偏不倚，思想开放。</p>
-<p>d) The people closest to certain jobs probably know them best, or at least have perspectives you need to understand, so those people are essential for creating improvement. </p>
-<p>d) 与某项工作接触最密切的人应该最了解该项工作，或者至少有值得你借鉴的观点。因此，这些人对于促进提升是很重要的。</p>
-<p>… 141) To perceive problems, compare how the movie is unfolding relative to your script </p>
-<p>… 141) 参照你的剧本，比较电影情节的发展，通过这种方式来发现问题。</p>
-<p>… 142) Don’t use the anonymous “we” and “they,” because that masks personal responsibility—use specific names. </p>
-<p>… 142) 不要使用模糊的人称，如“我们”或“他们”，这样做会掩盖个人责任。请使用具体人名。</p>
-<p>… 143) Be very specific about problems; don’t start with generalizations. </p>
-<p>… 143) 具体问题要具体对待，不要一开始就过于宽泛。</p>
-<p>… 144) Tool: Use the following tools to catch problems: issues logs, metrics, surveys, checklists, outside consultants, and internal auditors. </p>
-<p>… 144) 工具：使用以下工具来捕捉问题：问题日志、计量图表、调查问卷、清单、外部咨询，以及内部审计。</p>
-<p>… 145) The most common reason problems aren’t perceived is what I call the “frog in the boiling water” problem.</p>
-<p>… 145) 最常见的无法观察到原因的问题是被称为“温水煮青蛙”的问题。</p>
-<p>… 146) In some cases, people accept unacceptable problems because they are perceived as being too difficult to fix. Yet fixing unacceptable problems is actually a lot easier than not fixing them, because not fixing them will make you miserable. </p>
-<p>… 146) 在某些情况下，因为某些问题实在难以解决，人们不得不接受那些不可接受的问题。但是，解决那些不可接受的问题其实要比不解决它们更容易，因为不解决它们，将后患无穷。</p>
-<p>a) Problems that have good, planned solutions are completely different from those that don’t. </p>
-<p>a) 已经拥有有效周密的解决方案的问题与那些没有解决方案的问题天差地别。</p>
-<p>… 147) Diagnose to Understand What the Problems Are Symptomatic Of</p>
-<p>… 147) 通过诊断分析来理解问题症结所在</p>
-<p>… 148) Recognize that all problems are just manifestations of their root causes, so diagnose to understand what the problems are symptomatic of. </p>
-<p>… 148) 要认识到所有问题只是其根本原因的表征，所以要通过诊断分析来理解问题症结所在。</p>
-<p>… 149) Understand that diagnosis is foundational both to progress and quality relationships. </p>
-<p>… 149) 要明白诊断分析是发展公司和建立良好人际关系的基础。</p>
-<p>… 150) Ask the following questions when diagnosing. </p>
-<p>… 150) 诊断分析时要问自己以下几个问题。</p>
-<p>… 151) Remember that a root cause is not an action but a reason. </p>
-<p>… 151) 要谨记根本原因不是行为而是原因。</p>
-<p>… 152) Identify at which step failure occurred in the 5-Step Process. </p>
-<p>… 152) 找出五步流程中哪一步失败了。</p>
-<p>… 153) Remember that a proper diagnosis requires a quality, collaborative, and honest discussion to get at the truth. </p>
-<p>… 153) 要做好诊断分析，需要深入讨论，共同协作，态度诚恳，只有这样才能触及问题真相。</p>
-<p>… 154) Keep in mind that diagnoses should produce outcomes. </p>
-<p>… 154) 要记得诊断分析应该出结果。</p>
-<p>… 155) Don’t make too much out of one “dot”—synthesize a richer picture by squeezing lots of “dots” quickly and triangulating with others. </p>
-<p>… 155) 不要试图从一个“点”中获取大量信息，而应该快速压榨大量的“点”，并将它们相互联结，从而形成更丰富的图像。</p>
-<p>… 156) Maintain an emerging synthesis by diagnosing continuously<br>… 156) 要进行持续性的诊断分析，整合新思路。</p>
-<p>… 157) To distinguish between a capacity issue and a capability issue, imagine how the person would perform at that particular function if they had ample capacity. </p>
-<p>… 157) 要区别才能问题和能力问题，就去想象如果一个人有足够的才能，那他在这个特定职能上的表现会是如何。</p>
-<p>… 158) The most common reasons managers fail to produce excellent results or escalate are </p>
-<p>… 158) 管理者绩效不佳或未能升职最常见的原因有：</p>
-<p>… 159) Avoid “Monday morning quarterbacking.” </p>
-<p>… 159) 不要做事后诸葛。</p>
-<p>… 160) Identify the principles that were violated. </p>
-<p>… 160) 找出违背了哪些原则。</p>
-<p>… 161) Remember that if you have the same people doing the same things, you should expect the same results. </p>
-<p>… 161) 要记得如果你让同样的人做同样的事，那么得到的也应该是同样的结果。</p>
-<p>… 162) Use the following “drilldown” technique to gain an 80/20 understanding of a department or sub-department that is having problems. </p>
-<p>… 162) 运用下述的“钻取”方法，重点理解部门或分部面临的问题。</p>
-<p>… 163) Put Things in Perspective </p>
-<p>… 163）理清思维</p>
-<p>… 164) Go back before going forward. </p>
-<p>… 164) 前进之前请先回顾。</p>
-<p>a) Tool: Have all new employees listen to tapes of “the story” to bring them up to date. </p>
-<p>a) 方法：让所有新员工听“故事”磁带，帮助他们了解公司截止到目前的发展状况。</p>
-<p>… 165) Understand “above the line” and “below the line” thinking and how to navigate between the two. </p>
-<p>… 165）理解“宏观”和“微观”的思维模式及其适用范围。</p>
-<p>… 166) Design Your Machine to Achieve Your Goals </p>
-<p>… 166) 设定机制，达成目标</p>
-<p>… 167) Remember: You are designing a “machine” or system that will produce outcomes. </p>
-<p>… 167）要记得：你是在设定一个能够有产出的“机制”或系统。</p>
-<p>a) A short-term goal probably won’t require you to build a machine. </p>
-<p>a) 短期目标可能不需要你设立机制。</p>
-<p>b) Beware of paying too much attention to what is coming at you and not enough attention to what your responsibilities are or how your machine should work to achieve your goals. </p>
-<p>b) 注意不要太过关注你眼前的问题，而忽视了你的职责，以及机制怎样运行并达成目标。</p>
-<p>… 168) Don’t act before thinking. Take the time to come up with a game plan</p>
-<p>… 168）三思而后行。花点时间做计划。</p>
-<p>… 169) The organizational design you draw up should minimize problems and maximize capitalization on opportunities. </p>
-<p>… 169）你拟出的组织设计应该能最小化问题，最大化机会。</p>
-<p>… 170) Put yourself in the “position of pain” for a while so that you gain a richer understanding of what you’re designing for. </p>
-<p>… 170) 将自己体会一段时间的“痛点”，你就会更理解自己的设定针对的是什么样的对象。</p>
-<p>… 171) Recognize that design is an iterative process; between a bad “now” and a good “then” is a “working through it” period. </p>
-<p>… 171) 要认识到，机构设置是一个循环往复的过程，在一个糟糕的“现在”和一个美好的“未来”之间，是“努力实现”的过程。</p>
-<p>… 172) Visualize alternative machines and their outcomes, and then choose. </p>
-<p>… 172) 将可替代的其他机制及其成果形象化，以供选择。</p>
-<p>… 173) Think about second- and third-order consequences as well as first-order consequences. </p>
-<p>… 173) 思考二、三级效应与一级效应。</p>
-<p>… 174) Most importantly, build the organization around goals rather than tasks. </p>
-<p>… 174) 以目标为中心建立机构，而不是以任务为中心，这是重中之重。</p>
-<p>a) First come up with the best workflow design, sketch it out in an organizational chart, visualize how the parts interact, specify what qualities are required for each job, and, only after that is done, choose the right people to fill the jobs. </p>
-<p>a) 首先，设计最佳工作流，在一个组织图中画出草图，将各部分互动情况形象化，标出每个职位所需的特质，最后，选择合适的员工来填充岗位 (根据他们的能力和意愿来进行需求匹配) 。</p>
-<p>b) Organize departments and sub-departments around the most logical groupings. </p>
-<p>b) 按照最富逻辑的组团方式来组建部门和子部门。</p>
-<p>c) Make departments as self-sufficient as possible so that they have control over the resources they need to achieve the goals. </p>
-<p>c) 让每个部门尽可能的自给自足，以此确保他们能够自主控制达成目标所需的资源。</p>
-<p>d) The efficiency of an organization decreases and the bureaucracy of an organization increases in direct relation to the increase in the number of people and/or the complexity of the organization. </p>
-<p>d) 公司效率的下降与官僚作风的扩张程度与公司人数增长和复杂性提升直接相关。</p>
-<p>… 175) Build your organization from the top down. </p>
-<p>… 175) 自上而下组建公司。</p>
-<p>a) Everyone must be overseen by a believable person who has high standards. </p>
-<p>a) 应该给每名员工安排一位拥有高标准的靠谱的人，负责对其进行监管。</p>
-<p>b) The people at the top of each pyramid should have the skills and focus to manage their direct reports and a deep understanding of their jobs. </p>
-<p>b) 位于金字塔尖的管理者应该具备管理直接下属的能力和精力，对下属的工作职责有深入的了解。</p>
-<p>c) The ratio of senior managers to junior managers and to the number of people who work two levels below should be limited, to preserve quality communication and mutual understanding. </p>
-<p>c) 高级管理者与初级管理者、管理者与两级以下的被管理者之间的人数比例应该限定在一定范围内，以确保高质量的沟通与互相理解。</p>
-<p>d) The number of layers from top to bottom and the ratio of managers to their direct reports will limit the size of an effective organization. </p>
-<p>d) 自上而下的层级数量以及管理者与直接下属的比例会制约高效公司的规模。</p>
-<p>e) The larger the organization, the more important are 1) information technology expertise in management and 2) cross-department communication (more on these later) . </p>
-<p>e) 公司越大，越需要1）在管理中运用信息技术；2）跨部门沟通（后详）。</p>
-<p>f) Do not build the organization to fit the people. </p>
-<p>f) 不要为了迁就人员而组建机构。岗位是基于所需完成的工作来设定的，而不是基于人们想要干什么事，能干什么事而设定。</p>
-<p>… 176) Have the clearest possible delineation of responsibilities and reporting lines. </p>
-<p>… 176) 尽可能清楚地描述工作职责与级别关系。</p>
-<p>a) Create an organizational chart to look like a pyramid, with straight lines down that don’t cross. </p>
-<p>a) 建立一个金字塔形的组织图，画出不相交的竖线</p>
-<p>… 177) Constantly think about how to produce leverage. </p>
-<p>… 177) 经常思考该如何让事情发挥最大的效果。</p>
-<p>a) You should be able to delegate the details away. </p>
-<p>a) 你应该将细节工作委派给他人。</p>
-<p>b) It is far better to find a few smart people and give them the best technology than to have a greater number of ordinary and less well-equipped people. </p>
-<p>b) 与其让一众能力平庸之人获得不那么精良的装备，不如只给一小部分聪明人配备最好的技术。<br>c) Use “leveragers.” </p>
-<p>c) 使用执行力强的人。</p>
-<p>… 178) Understand the clover-leaf design.<br>… 178) 理解四叶草形的机构设置。</p>
-<p>… 179) Don’t do work for people in another department or grab people from another department to do work for you unless you speak to the boss. </p>
-<p>… 179) 不要为其他部门做事，也不要在没有和其他部门领导交涉的情况下从其他部门抓人来为你做事。</p>
-<p>… 180) Watch out for “department slip.” </p>
-<p>… 180) 谨防“部门职能错位”。</p>
-<p>… 181) Assign responsibilities based on workflow design and people’s abilities, not job titles. </p>
-<p>… 181) 在分配责任时，注意考虑工作流的设置和员工的能力，而不是岗位头衔。</p>
-<p>… 182) Watch out for consultant addiction. </p>
-<p>… 182) 谨防过分依赖外部咨询。</p>
-<p>… 183) Tool: Maintain a procedures manual. </p>
-<p>… 183) 工具：使用流程手册。</p>
-<p>… 184) Tool: Use checklists. </p>
-<p>… 184) 工具：使用任务清单。</p>
-<p>a) Don’t confuse checklists with personal responsibility. </p>
-<p>a) 不要将任务清单与个人责任混为一谈。</p>
-<p>b) Remember that “systematic” doesn’t necessarily mean computerized. </p>
-<p>b) 记住，系统性并不意味着必须全部由电脑来控制。</p>
-<p>c) Use “double-do” rather than “double-check” to make sure mission-critical tasks are done correctly. </p>
-<p>c) 要“重复工作”，不要“重复检查”，保证重要任务完成无误。</p>
-<p>… 185) Watch out for “job slip.” </p>
-<p>… 185) 谨防“职责错位”。</p>
-<p>… 186) Think clearly how things should go, and when they aren’t going that way, acknowledge it and investigate </p>
-<p>… 186) 考虑清楚工作应该如何开展，如果事情不是朝预期的方向发展，需要及时发现并展开调查。</p>
-<p>… 187) Have good controls so that you are not exposed to the dishonesty of others and trust is never an issue. </p>
-<p>… 187) 加强监管，谨防他人的不诚实，使信任不再成为问题。</p>
-<p>a) People doing auditing should report to people outside the department being audited, and auditing procedures should not be made known to those being audited. </p>
-<p>a) 审计人员应该向被审计部门之外的人汇报审计结果，同时审计程序不能向被审计对象透露。</p>
-<p>b) Remember: There is no sense in having laws unless you have policemen (auditors) . </p>
-<p>b) 记住，如果没有警察（审计人员），法律则形同虚设。</p>
-<p>… 188) Do What You Set Out to Do </p>
-<p>… 188) 按计划进行。</p>
-<p>… 189) Push through! </p>
-<p>… 189) 坚持到底！</p>
-<p>To Make Decisions Effectively… </p>
-<p>有效决策</p>
-<p>…190) Recognize the Power of Knowing How to Deal with Not Knowing </p>
-<p>…190) 认可处理无知的能力</p>
-<p>… 191) Recognize that your goal is to come up with the best answer, that the probability of your having it is small, and that even if you have it, you can’t be confident that you do have it unless you have other believable people test you. </p>
-<p>… 191) 要认识到，你的目标是找到最佳答案，而找到最佳答案的可能性是很小的，就算你真的找到了，你也无法确信自己成功了，你必须让其他的靠谱的人来对你进行测试。</p>
-<p>… 192) Understand that the ability to deal with not knowing is far more powerful than knowing </p>
-<p>… 192) 要知道，处理无知的能力要比知道某事的能力更强大。</p>
-<p>a) Embrace the power of asking: “What don’t I know, and what should I do about it?” </p>
-<p>a) 鼓励提问：“有什么是我不知道的呢？那我该怎么办呢？”</p>
-<p>b) Finding the path to success is at least as dependent on coming up with the right questions as coming up with answers. </p>
-<p>b) 寻找成功的道路上，提出正确的问题与获得正确答案同等重要。</p>
-<p>… 193) Remember that your goal is to find the best answer, not to give the best one you have. </p>
-<p>… 193) 记住，你的目标是寻找最佳答案，而不是在已有的答案中挑一个最好的。</p>
-<p>… 194) While everyone has the right to have questions and theories, only believable people have the right to have opinions </p>
-<p>… 194) 每个人都有权拥有自己的问题和理论，但是只有靠谱的人才有权提出观点。</p>
-<p>… 195) Constantly worry about what you are missing. </p>
-<p>… 195) 时刻警惕考虑不周的情况。</p>
-<p>a) Successful people ask for the criticism of others and consider its merit. </p>
-<p>a) 成功人士会征求别人的批评意见，并看到批评的价值。</p>
-<p>b) Triangulate your view. </p>
-<p>b) 吸收众人观点。</p>
-<p>… 196) Make All Decisions Logically, as Expected Value Calculations </p>
-<p>… 196）做决定要讲逻辑，基于期望值测算</p>
-<p>… 197) Considering both the probabilities and the payoffs of the consequences, make sure that the probability of the unacceptable (i.e., the risk of ruin) is nil. </p>
-<p>… 197）考虑结果的可能性与收益，确保不可接受结果（如搞砸的风险）的可能性为零。</p>
-<p>a) The cost of a bad decision is equal to or greater than the reward of a good decision, so knowing what you don’t know is at least as valuable as knowing. </p>
-<p>a) 不良决策的代价等同于，甚至严重于正确决策带来的回报，因此，知道自己没掌握什么，至少和知道自己掌握什么一样有价值。</p>
-<p>b) Recognize opportunities where there isn’t much to lose and a lot to gain, even if the probability of the gain happening is low. </p>
-<p>b) 鉴别出有亏少利多的机会，就算获利可能性低也要试试。</p>
-<p>c) Understand how valuable it is to raise the probability that your decision will be right by accurately assessing the probability of your being right. </p>
-<p>c) 精准评估，提高决策的准确性十分有价值。</p>
-<p>d) Don’t bet too much on anything. Make 15 or more good, uncorrelated bets. </p>
-<p>d) 任何事情都不能押过多赌注，要留15%或更多的余地给无关联的赌注。</p>
-<p>… 198) Remember the 80/20 Rule, and Know What the Key 20% Is </p>
-<p>… 198）牢记80/20法则，并知道那关键的20%是什么。</p>
-<p>… 199) Distinguish the important things from the unimportant things and deal with the important things first. </p>
-<p>… 199）区分重要事项和不重要事项，先处理重要事项。</p>
-<p>a) Don’t be a perfectionist </p>
-<p>a) 不要做完美主义者。</p>
-<p>b) Since 80% of the juice can be gotten with the first 20% of the squeezing, there are relatively few (typically less than five) important things to consider in making a decision. </p>
-<p>b) 压榨过程进行20%的时候就能得到80%的果汁，所以做决定时，最重要的事项是比较少的（一般少于五件）。</p>
-<p>c) Watch out for “detail anxiety,” </p>
-<p>c) 警惕“细节焦虑”。</p>
-<p>d) Don’t mistake small things for unimportant things, because some small things can be very important </p>
-<p>d) 不要混淆小事情和不重要事项，因为小事情也可能很重要。</p>
-<p>… 200) Think about the appropriate time to make a decision in light of the marginal gains made by acquiring additional information versus the marginal costs of postponing the decision. </p>
-<p>… 200）要根据获取额外信息而取得的边际收益与延迟决定所造成的边际成本的比较与权衡，来思考合适的时间做出一个决定。</p>
-<p>… 201) Make sure all the “must do’s” are above the bar before you do anything else. </p>
-<p>… 201）确保所有“必须完成的任务”在完成时优先于其他任何事情。</p>
-<p>… 202) Remember that the best choices are the ones with more pros than cons, not those that don’t have any cons. Watch out for people who tend to argue against something because they can find something wrong with it without properly weighing all the pros against the cons. </p>
-<p>… 202）要记住，最佳选择是基于赞同意见多于反对意见的，当然不是说不允许任何反对意见。要警惕有人在不恰当权衡正反意见的基础上挑错，进而反对。</p>
-<p>… 203) Watch out for unproductively identifying possibilities without assigning them probabilities, because it screws up prioritization. </p>
-<p>…203）要警惕在没有考虑所有可能性的情况下，就低效地确定其可能性，这样会打乱优先次序。</p>
-<p>… 204) Understand the concept and use the phrase “by and large.” </p>
-<p>… 204）理解并运用“总体来说”的概念。</p>
-<p>a) When you ask someone whether something is true and they tell you that “It’s not totally true,” it’s probably true enough. </p>
-<p>a) 当询问某事的真实性时，若对方告诉你“也不完全是事实”时，其实也八九不离十了。</p>
-<p>… 205) Synthesize </p>
-<p>… 205）综合</p>
-<p>… 206) Understand and connect the dots. </p>
-<p>… 206） 理解并串联关键点</p>
-<p>… 207) Understand what an acceptable rate of improvement is, and that it is the level and not the rate of change that matters most. </p>
-<p>… 207）知道可接受的改善速度是多少，因为改变的程度比改变的速度更关键。</p>
-<p>… 208) If your best solution isn’t good enough, think harder or escalate that you can’t produce a solution that is good enough. </p>
-<p>… 208）如果最佳方案不够令人满意，就得尽力想出更好的办法，实在想不到就提交给上级。</p>
-<p>… 209) Avoid the temptation to compromise on that which is uncompromisable. </p>
-<p>… 209）经受住诱惑，避免让不可妥协的事情得到妥协。</p>
-<p>… 210) Don’t try to please everyone </p>
-<p>… 210）不要试图让所有人都满意。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://zhibimo.com/read/wang-miao/yuan-ze/Part303SummaryandTableofPrinciples.html&quot;&gt;Principles —-译者：刘念 张帆”&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Principles 记录了Bridgewater创始人Ray Dalio对自己人生成功过程的反思，试图提供一套能通用的理念，帮助人们在生活中作出正确的选择。&lt;br&gt;Ray Dalio，来自纽约中产之家，中年创建Bridgewater，2011年六十岁时Bridgewater成为世界上第一大对冲基金。&lt;/p&gt;
-&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://img3.doubanio.com/lpic/s27196293.jpg&quot; width = &quot;288&quot; height = &quot;462&quot; alt=&quot;personal photo&quot;&gt;&lt;br&gt; &lt;/div&gt;
-    
-    </summary>
-    
-      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-    
-    
-      <category term="管理" scheme="http://ipcreator.me/tags/%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
@@ -5587,6 +5060,693 @@
   </entry>
   
   <entry>
+    <title>Summary and Table of Principles</title>
+    <link href="http://ipcreator.me/2017/02/09/summary-and-table-of-principles/"/>
+    <id>http://ipcreator.me/2017/02/09/summary-and-table-of-principles/</id>
+    <published>2017-02-09T10:00:18.000Z</published>
+    <updated>2017-02-12T09:41:03.327Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><a href="http://zhibimo.com/read/wang-miao/yuan-ze/Part303SummaryandTableofPrinciples.html" target="_blank" rel="external">Principles —-译者：刘念 张帆”</a></strong></p>
+<p>Principles 记录了Bridgewater创始人Ray Dalio对自己人生成功过程的反思，试图提供一套能通用的理念，帮助人们在生活中作出正确的选择。<br>Ray Dalio，来自纽约中产之家，中年创建Bridgewater，2011年六十岁时Bridgewater成为世界上第一大对冲基金。</p>
+<div align="center"><br><img src="https://img3.doubanio.com/lpic/s27196293.jpg" width="288" height="462" alt="personal photo"><br> </div>
+
+<a id="more"></a> 
+<p>原则汇总列表</p>
+<p>To Get the Culture Right…<br>塑造良好的公司文化</p>
+<p>… 1) Trust in truth. </p>
+<p>… 1) 相信真相</p>
+<p>… 2) Realize that you have nothing to fear from truth. </p>
+<p>… 2) 你要知道，真相没什么可怕的。</p>
+<p>… 3) Create an environment in which everyone has the right to understand what makes sense and no one has the right to hold a critical opinion withoutspeaking up about it. </p>
+<p>… 3) 创造这样一种氛围，只要是合理的事情，人人都能相互理解，没有人有权妄加批评，除非他能开诚布公地讲他的理由。</p>
+<p>… 4) Be extremely open. </p>
+<p>… 4) 要极为开放。</p>
+<p>… 5) Have integrity and demand it from others. </p>
+<p>… 5) 保持正直，要求别人也必须保持正直。</p>
+<p>a) Never say anything about a person you wouldn’t say to them directly, and don’t try people without accusing them to their face. </p>
+<p>a) 若当面不对别人进行评论，背地里也不要说。若未曾当面控诉过别人，也不要背地里试探。</p>
+<p>b) Don’t let “loyalty” stand in the way of truth and openness. </p>
+<p>b) 所谓的“忠诚”不能成为真相与开放的拦路虎。</p>
+<p>… 6) Be radically transparent. </p>
+<p>… 6) 要极为透明。</p>
+<p>a) Record almost all meetings and share them with all relevant people. </p>
+<p>a) 记录每一次会议，并分享给与之有关系的人。</p>
+<p>… 7) Don’t tolerate dishonesty. </p>
+<p>… 7) 绝不容忍失信。</p>
+<p>a) Don’t believe it when someone caught being dishonest says they have seen the light and will never do that sort of thing again. </p>
+<p>a) 不要相信失信之人说他已痛改前非，绝不再犯。</p>
+<p>… 8) Create a Culture in which it is oK to make mistakes but unacceptable Not to identify, Analyze, and Learn From Them </p>
+<p>… 8) 创造这样一种文化：容许犯错，并从错误中进行识别、分析、吸取教训。</p>
+<p>… 9) Recognize that effective, innovative thinkers are going to make mistakes </p>
+<p>… 9）要意识到处事高效创新的思考者都会犯错。</p>
+<p>… 10) Do not feel bad about your mistakes or those of others. Love them! </p>
+<p>… 10）不要为自己或别人犯的错而郁郁寡欢，要热爱这些错！</p>
+<p>… 11) Observe the patterns of mistakes to see if they are a product of weaknesses. </p>
+<p>… 11）仔细观察所犯错误的模式，看看它们是不是自身缺点所导致。</p>
+<p>… 12) Do not feel bad about your weaknesses or those of others. </p>
+<p>… 12）不要因为自己或别人的缺点而感到糟糕。</p>
+<p>… 13) Don’t worry about looking good - worry about achieving your goals. </p>
+<p>… 13）别老担心面子上过不过得去，而要担心是否会影响目的的实现。</p>
+<p>… 14) Get over “blame” and “credit” and get on with “accurate” and “inaccurate.” </p>
+<p>… 14）别去管“责备”或“赞扬”，要习惯关注错误的归因是“精准”还是“不精准”。</p>
+<p>… 15) Don’t depersonalize mistakes. </p>
+<p>… 15）错误归因要具体到个人。</p>
+<p>… 16) Write down your weaknesses and the weaknesses of others to help remember and acknowledge them. </p>
+<p>… 16）写下你和别人的缺点，帮助自己牢记并承认这些缺点。</p>
+<p>… 17) When you experience pain, remember to reflect. </p>
+<p>… 17）若因犯了错而感到痛苦，记得要反省。</p>
+<p>… 18) Be self-reflective and make sure your people are self-reflective. </p>
+<p>… 18）要自我反思，也确保你身边的朋友们也都是懂得自我反思的。</p>
+<p>… 19) Teach and reinforce the merits of mistake-based learning. </p>
+<p>… 19）教导和强化基于错误学习的优点。</p>
+<p>a) The most valuable tool we have for this is the issues log (explained fully later) , which is aimed at identifying and learning from mistakes.</p>
+<p>a) 最有效的工具是建立“问题日志”（下文中将详述），旨在鉴别问题，并从中吸取教训。</p>
+<p>…20) Constantly Get in Synch. </p>
+<p>…20）不断争取意见统一。</p>
+<p>… 21) Constantly get in synch about what is true and what to do about it. </p>
+<p>… 21）要去伪存真，争取在解决方案上的意见统一。</p>
+<p>… 22) Talk about “Is it true?” and “Does it make sense?” </p>
+<p>… 22）讨论“这是对的么？”和“这事有意义么？”</p>
+<p>… 23) Fight for right. </p>
+<p>… 23）认为对的事情，要据理力争。</p>
+<p>… 24) Be assertive and open-minded at the same time. </p>
+<p>… 24）既要立场坚定，也要保持兼容并蓄。</p>
+<p>a) Ask yourself whether you have earned the right to have an opinion. </p>
+<p>a) 问问自己，是否拥有发表观点的权利。</p>
+<p>b) Recognize that you always have the right to have and ask questions. </p>
+<p>b) 要知道自己始终拥有提问的权利。</p>
+<p>c) Distinguish open-minded people from closed-minded people. </p>
+<p>c) 区分思维开放的人和思想保守的人。</p>
+<p>d) Don’t have anything to do with closed-minded, inexperienced people. </p>
+<p>d) 思想保守、缺乏经验之人，还是敬而远之吧。</p>
+<p>e) Be wary of the arrogant intellectual who comments from the stands without having played on the field. </p>
+<p>e) 谨防纸上谈兵、夸夸其谈的人。</p>
+<p>f) Watch out for people who think it’s embarrassing not to know. </p>
+<p>f) 谨防那些不知为耻的人。</p>
+<p>… 25) Make sure responsible parties are open-minded about the questions and comments of others. </p>
+<p>… 25）确保主要责任方对于他人提出的问题与评论都是持开放态度的。</p>
+<p>… 26) Recognize that conflicts are essential for great relationships because they are the means by which people determine whether their principles are alignedand resolve their differences. </p>
+<p>… 26）要意识到，冲突对于建立重要关系是大有裨益的，因为通过冲突人们才能确定对方的原则是否与自己的一致，便于化解分歧。</p>
+<p>a) Expect more open-minded disagreements at Bridgewater than at most other firms. </p>
+<p>a) 在桥水联合基金公司里，要期待比其他公司更多的不拘于成见的分歧。</p>
+<p>b) There is giant untapped potential in disagreement, especially if the disagreement is between two or more thoughtful people </p>
+<p>b) 分歧中蕴含巨大潜力，尤其对于两个有想法的人之间的分歧而言，更是如此。</p>
+<p>… 27) Know when to stop debating and move on to agreeing about what should be done. </p>
+<p>… 27）知道什么时候终止辩论，进而讨论一致的解决方案。</p>
+<p>a) However, when people disagree on the importance of debating something, it should be debated. </p>
+<p>a) 当有人质疑就某事展开辩论的重要性时，辩论是有必要的。</p>
+<p>b) Recognize that “there are many good ways to skin a cat.” </p>
+<p>b) “办法总比问题多”。</p>
+<p>c) For disagreements to have a positive effect, people evaluating an individual decision ordecision-maker must view the issue within a broader context. </p>
+<p>c) 要想通过分歧获得积极的结果，评估个人抉择或决策者的观点时需要树立大局观。</p>
+<p>d) Distinguish between 1) idle complaints and 2) complaints that are meant to lead to improvement. </p>
+<p>d) 要区分两个概念：1）无用的抱怨 2）旨在实现改善的合理诉求。</p>
+<p>… 28) Appreciate that open debate is not meant to create rule by referendum. </p>
+<p>… 28）赞赏开放式辩论的讨论方式并不意味着要通过全体投票来制定规则。</p>
+<p>… 29) Evaluate whether an issue calls for debate, discussion, or teaching. </p>
+<p>… 29）要评估事项是否需要辩论、讨论或传授。</p>
+<p>a) To avoid confusion, make clear which kind of conversation (debate, discussion, or teaching) you are having </p>
+<p>a) 为了避免产生误解，需要确定使用何种沟通方式（辩论、讨论或传授）。</p>
+<p>b) Communication aimed at getting the best answer should involve the most relevant people. </p>
+<p>b) 旨在获得最佳方案的沟通，应该邀请最相关的人参与其中。</p>
+<p>c) Communication aimed at educating or boosting cohesion should involve a broader set of people than would be needed if the aim were just getting the best answer. </p>
+<p>c) 旨在教育，增强凝聚力的沟通，如果目标是获取最优解决方案，那么就应该听取更多人的意见。</p>
+<p>d) Leverage your communication. </p>
+<p>d) 充分利用各种沟通手段。</p>
+<p>… 30) Don’t treat all opinions as equally valuable. </p>
+<p>… 30) 不要对所有的观点一视同仁。</p>
+<p>a) A hierarchy of merit is not only consistent with a meritocracy of ideas but essential forit. </p>
+<p>a) 能力层级不仅需要与观点优先原则相一致，更是后者的必然要求。</p>
+<p>… 31) Consider your own and others’ “believabilities.” </p>
+<p>… 31）思考自己和别人的可信度。</p>
+<p>a) Ask yourself whether you have earned the right to have an opinion. </p>
+<p>a) 问问自己，是否拥有发表观点的权利。</p>
+<p>b) People who have repeatedly and successfully accomplished the thing in question andhave great explanations when probed are most believable. </p>
+<p>b) 若有人多次成功解决悬而未决的问题，面对质疑也能讲得头头是道，这种人的观点最可信。</p>
+<p>c) If someone asks you a question, think first whether you’re the responsible party/rightperson to be answering the question. </p>
+<p>c) 如果有人问你一个问题，首先要考虑自己是不是能够解答这个问题的人。</p>
+<p>… 32) Spend lavishly on the time and energy you devote to “getting in synch”because it’s the best investment you can make. </p>
+<p>… 32）为了“意见统一”，花再多的时间与精力都不为过，因为这是最有价值的投资。</p>
+<p>… 33) If it is your meeting to run, manage the conversation. </p>
+<p>… 33）如果是你主持会议，请协调好会议中各方的讨论。</p>
+<p>a) Make it clear who the meeting is meant to serve and who is directing the meeting. </p>
+<p>a) 弄清会议的服务方和主持方。</p>
+<p>b) Make clear what type of communication you are going to have in light of the objectivesand priorities. </p>
+<p>b) 根据会议目标与重点议题，确定会议的交流方式。</p>
+<p>c) Lead the discussion by being assertive and open-minded. </p>
+<p>c) 主持讨论要坚定自信，开诚布公。</p>
+<p>d) A small group (3 to 5) of smart, conceptual people seeking the right answers in anopen-minded way will generally lead to the best answer. </p>
+<p>d) 组织三至五人的小组讨论，邀请思维灵活、概念清晰的成员开放地寻求最佳方案，这种情况一般能取得最好的效果。</p>
+<p>e) 1+1=3.</p>
+<p>f) Navigate the levels of the conversation clearly. </p>
+<p>f) 要明确讨论的层次的方向。</p>
+<p>g) Watch out for “topic slip.” </p>
+<p>g) 注意不要让讨论偏题。</p>
+<p>h) Enforce the logic of conversations. </p>
+<p>h) 增强沟通的逻辑性。</p>
+<p>i) Worry about substance more than style. </p>
+<p>i) 实质内容比形式更重要。</p>
+<p>j) Achieve completion in conversations. </p>
+<p>j) 在讨论中要得出一定结论。</p>
+<p>k) Have someone assigned to maintain notes in meetings and make sure follow-throughhappens. </p>
+<p>k) 安排人做会议纪要，保证会议讨论的事项后续落实。</p>
+<p>l) Be careful not to lose personal responsibility via group decision-making. </p>
+<p>l) 需要注意的是，集体决策时不要忘记了个人的职责。</p>
+<p>… 34) Make sure people don’t confuse their right to complain, give advice, anddebate with the right to make decisions. </p>
+<p>… 34）不要将控诉、献言献策、辩论的权利同抉择权混为一谈。</p>
+<p>… 35) Recognize that getting in synch is a two-way responsibility. </p>
+<p>… 35）要认识到，达成意见统一是双向责任。</p>
+<p>… 36) Escalate if you can’t get in synch.</p>
+<p>… 36）如果意见无法统一，提交上级进行讨论。</p>
+<p>To Get the People Right… </p>
+<p>选对人，用对人</p>
+<p>… 37) Recognize the Most Important Decisions You Make Are Who You Choose toBe Your Responsible Party </p>
+<p>… 37）要知道，最重要的选择是选谁做负责人。</p>
+<p>… 38) Remember that almost everything good comes from having great peopleoperating in a great culture. </p>
+<p>…38）要记住，几乎所有的成功都是来自优秀的文化以及在其中工作的优秀的人才。</p>
+<p>… 39) First, match the person to the design. </p>
+<p>… 39）首先，要选择合适的人参与规划。</p>
+<p>a) Most importantly, find people who share your values. </p>
+<p>a) 最为重要的是要找同你价值观一致的人。</p>
+<p>b) Look for people who are willing to look at themselves objectively and have character. </p>
+<p>b) 要找愿意客观评价自己且有自身性格特点的人。</p>
+<p>c) Conceptual thinking and common sense are required in order to assign someone theresponsibility for achieving goals (as distinct from tasks) . </p>
+<p>c) 根据需要完成任务和实现目标，选择具备相关概念性思维和常识的人履职尽责。</p>
+<p>… 40) Recognize that the inevitable responsible party is the person who bears theconsequences of what is done. </p>
+<p>… 40）必然责任人是需要承担一切后果的。</p>
+<p>… 41) By and large, you will get what you deserve over time. </p>
+<p>… 41）总的来说，日积月累，你会得到你应得的。</p>
+<p>… 42) The most important responsible parties are those who are most responsible forthe goals, outcomes, and machines (they are those higher in the pyramid) . </p>
+<p>… 42）最重要的责任人要为目标、结果和组织机构负主要责任（即位于组织里的上层的人）。</p>
+<p>… 43) Choose those who understand the difference between goals and tasks to runthings. </p>
+<p>… 43）选择那些明白“目标”与“任务”之间差异的人来做事。</p>
+<p>…44) Recognize that People Are Built Very Differently </p>
+<p>…44) 要知道每个人生来和后天塑造都是不同的。</p>
+<p>… 45) Think about their very different values, abilities, and skills. </p>
+<p>… 45）考虑他们在价值观、能力和技能上的差异。</p>
+<p>… 46） Understand what each person who works for you is like so that you know whatto expect from them. </p>
+<p>… 46）要了解你每个员工的情况，才能知道你能在他们身上有何种期待。</p>
+<p>… 47) Recognize that the type of person you fit in the job must match therequirements for that job. </p>
+<p>… 47）岗位用人要与职位要求相匹配。</p>
+<p>… 48) Use personality assessment tests and quality reflections on experiences tohelp you identify these differences. </p>
+<p>… 48）通过性格测试以及员工工作经历中反映的性格特点来帮助自己了解他们之间的差异。</p>
+<p>… 49) Understand that different ways of seeing and thinking make people suitable fordifferent jobs. </p>
+<p>… 49）要知道，每个人的观察与思考方式不同，因此适合的职位也不同。</p>
+<p>a) People are best at the jobs that require what they do well. </p>
+<p>a) 人们在所擅长的领域工作表现最佳。</p>
+<p>b) If you’re not naturally good at one type of thinking, it doesn’t mean you’re precludedfrom paths that require that type of thinking </p>
+<p>b) 若你天生不擅长某种思维方式，并不意味着就做不好需要这种思维方式的工作。</p>
+<p>… 50) Don’t hide these differences. Explore them openly with the goal of figuring outhow you and your people are built so you can put the right people in the rightjobs and clearly assign responsibilities. </p>
+<p>… 50）不要隐藏这些差异，坦诚沟通，以深入了解自己和员工，把合适的人用在合适的岗位上，并明确任务分工。</p>
+<p>… 51) Remember that people who see things and think one way often have difficultycommunicating and relating to people who see things and think another way. </p>
+<p>… 51）要记住，看待事物与思维方式不同的人，在交流和相处上是存在困难的。</p>
+<p>… 52) Hire Right, Because the Penalties of Hiring Wrong Are Huge </p>
+<p>… 52）雇佣对的人，用错了人，代价会极为惨重。</p>
+<p>… 53) Think through what values, abilities, and skills you are looking for. </p>
+<p>… 53) 仔细审度自己想要的员工应具备什么样的价值观、能力和技能。</p>
+<p>… 54) Weigh values and abilities more heavily than skills in deciding whom to hire. </p>
+<p>… 54）招聘员工时，要多考虑员工的价值观与能力，这比技能更重要。</p>
+<p>… 55) Write the profile of the person you are looking for into the job description. </p>
+<p>… 55）招聘员工时，在岗位说明里描述希望招到一个什么样的员工。</p>
+<p>… 56) Select the appropriate people and tests for assessing each of these qualitiesand compare the results of those assessments to what you’ve decided isneeded for the job. </p>
+<p>… 56）挑选合适人选，根据相应工作岗位应具备的素质要求对他们进行考核评估，比对评估结果与素质要求。</p>
+<p>a) Remember that people tend to pick people like themselves, so pick interviewers whocan identify what you are looking for. </p>
+<p>a) 要记住，人们往往倾向于选择和自己相似的人，因此应挑选那些了解自己想雇佣何种员工的人担任面试考官。</p>
+<p>b) Understand how to use and interpret personality assessments. </p>
+<p>b) 要知道如何使用和解读性格测试。</p>
+<p>c) Pay attention to people’s track records. </p>
+<p>c) 注意受聘者的过往业绩。</p>
+<p>d) Dig deeply to discover why people did what they did. </p>
+<p>d) 深入挖掘，探寻他们过往行为的动机。</p>
+<p>e) Recognize that performance in school, while of some value in making assessments,doesn’t tell you much about whether the person has the values and abilities you arelooking for. </p>
+<p>e) 要认识到，尽管学校表现在进行评估时有一定价值，但却不能体现应聘者是否具备你想要的价值观或能力。</p>
+<p>f) Ask for past reviews. </p>
+<p>f) 要求提供过往业绩的评估。</p>
+<p>g) Check references. </p>
+<p>g) 参考推荐信。</p>
+<p>… 57) Look for people who have lots of great questions. </p>
+<p>… 57）寻找可提出好问题的员工。</p>
+<p>… 58) Make sure candidates interview you and Bridgewater. </p>
+<p>… 58）确保应聘者对你和桥水联合基金也进行了面试。</p>
+<p>… 59) Don’t hire people just to fit the first job they will do at Bridgewater; hire peopleyou want to share your life with. </p>
+<p>… 59）不要聘用那些只把桥水联合基金当做第一份工作的人，要用那些你愿意与之分享人生的人。</p>
+<p>… 60) Look for people who sparkle, not just “another one of those.” </p>
+<p>… 60）要选熠熠生辉之人，而不是又一个平庸之辈。</p>
+<p>… 61) Hear the click: Find the right fit between the role and the person. </p>
+<p>… 61）听到咔哒声：所需职位和聘用之人一定要匹配合适。</p>
+<p>… 62) Pay for the person, not for the job. </p>
+<p>… 62）以人论酬，而不是以岗论酬。</p>
+<p>… 63) Recognize that no matter how good you are at hiring, there is a high probabilitythat the person you hire will not be the great person you need for the job. </p>
+<p>… 63）要知道无论你在招聘人才方面有多在行，你所聘用的人选都很有可能不是岗位的最佳人选。</p>
+<p>… 64) Manage as Someone Who Is Designing and Operating a Machine to Achieve the Goal </p>
+<p>… 64）像设计和运行一台机器一样做好管理工作，才能实现预期目标。</p>
+<p>… 65) Understand the differences between managing, micromanaging, and notmanaging. </p>
+<p>… 65）明白管理、微观管理和不管理之间的区别。</p>
+<p>a) Managing the people who report to you should feel like “skiing together.” </p>
+<p>a) 管理下属应该感觉像是一同滑雪一样。</p>
+<p>b) An excellent skier is probably going to be more critical and a better critic of anotherskier than a novice skier. </p>
+<p>b) 优秀的滑雪者更能挑出对方的毛病，这是初学者很难做到的。</p>
+<p>… 66) Constantly compare your outcomes to your goals. </p>
+<p>… 66）不断比较完成情况和目标之间的差距。</p>
+<p>… 67) Look down on your machine and yourself within it from the higher level. </p>
+<p>… 67）在所管理的机制内，从更高层次审视自己和机制。</p>
+<p>… 68) Connect the case at hand to your principles for handling cases of that type. </p>
+<p>… 68）解决问题要参照同类别问题解决时所遵循的原则。</p>
+<p>… 69) Conduct the discussion at two levels when a problem occurs: 1) the “machine”level discussion of why the machine produced that outcome and 2) the “caseat hand” discussion of what to do now about the problem. </p>
+<p>… 69）问题出现时，要展开两个层面的讨论：1）从机制层面来讨论，为什么会出现这个问题？2）单从问题本身层面来讨论，当下应如何解决。</p>
+<p>… 70) Don’t try to be followed; try to be understood and to understand others. </p>
+<p>… 70）和员工的关系不是服从与被服从，而应是相互理解。</p>
+<p>a) Don’t try to control people by giving them orders. </p>
+<p>a) 不要给员工下命令控制他们。</p>
+<p>b) Communicate the logic and welcome feedback. </p>
+<p>b) 沟通要有逻辑，多听取反馈意见。</p>
+<p>… 71) Clearly assign responsibilities. </p>
+<p>… 71）明确责任分工。</p>
+<p>… 72) Hold people accountable and appreciate them holding you accountable. </p>
+<p>… 72）对员工进行工作问责制度，若他们问责你，要感谢他们。</p>
+<p>a) Distinguish between failures where someone broke their “contract” from ones where there was no contract to begin with. </p>
+<p>a) 要分清楚，有些工作上的失败是因为员工没履行一开始的“约定”，而有些则是因为一开始就没有指定“约定”。</p>
+<p>… 73) Avoid the “sucked down” phenomenon. </p>
+<p>… 73）避免“上级卷入下级工作职责”现象</p>
+<p>a) Watch out for people who confuse goals and tasks, because you can’t trust people with responsibilities if they don’t understand the goals. </p>
+<p>a) 提防那些混淆目标与任务的员工，不能理解工作目标的员工是不值得信任的。</p>
+<p>… 74) Think like an owner, and expect the people you work with to do the same. </p>
+<p>… 74）要有主人翁思维，并希望员工们也能具备这种思维方式。</p>
+<p>… 75) Force yourself and the people who work for you to do difficult things. </p>
+<p>… 75）强迫自己和员工迎难而上。</p>
+<p>a) Hold yourself and others accountable. </p>
+<p>a) 对自己和他人要采取问责制度。</p>
+<p>… 76) Don’t worry if your people like you; worry about whether you are helping your people and Bridgewater to be great. </p>
+<p>… 76）别担忧员工喜不喜欢你，还是多想想自己所做的事情能不能帮员工和桥水联合基金获得成功吧。</p>
+<p>… 77) Know what you want and stick to it if you believe it’s right, even if others want to take you in another direction. </p>
+<p>… 77）知道自己想要什么，坚信自己认为的是正确的事情，不要轻易被人牵着鼻子走。</p>
+<p>… 78) Communicate the plan clearly. </p>
+<p>… 78）计划沟通要清晰明了。</p>
+<p>a) Have agreed-upon goals and tasks that everyone knows (from the people in the departments to the people outside the departments who oversee them) . </p>
+<p>a) 已达成共识的目标任务要让所有相关人士都知道。（包括有关部门的员工及监管层的领导）</p>
+<p>b) Watch out for the unfocused and unproductive “we should … (do something) .” </p>
+<p>b) 要警惕交流中出现没有重点，低效无用的句式：我们应该如何。</p>
+<p>… 79) Constantly get in synch with your people. </p>
+<p>… 79）保持与员工意见统一。</p>
+<p>… 80) Get a “threshold level of understanding” </p>
+<p>… 80）充分了解工作相关情况。</p>
+<p>… 81) Avoid staying too distant. </p>
+<p>… 81）避免和员工产生距离感。</p>
+<p>a) Tool: Use daily updates as a tool for staying on top of what your people are doing and thinking. </p>
+<p>a) 工具：使用每日进度更新了解员工工作与思考的情况。</p>
+<p>… 82) Learn confidence in your people—don’t presume it. </p>
+<p>… 82）对员工的信任度不能先入为主，要逐步去了解。</p>
+<p>… 83) Vary your involvement based on your confidence. </p>
+<p>… 83）处理问题时，根据自己感觉有把握的情况来调整参与度。</p>
+<p>… 84) Avoid the “theoretical should.” </p>
+<p>… 84）避免说“理论上应该”。</p>
+<p>… 85) Care about the people who work for you. </p>
+<p>… 85）关爱员工。</p>
+<p>… 86) Logic, reason, and common sense must trump everything else in decision-making. </p>
+<p>… 86）决策中最重要的是讲究逻辑、给明理由且符合常识。</p>
+<p>… 87) While logic drives our decisions, feelings are very relevant. </p>
+<p>… 87）尽管做决策时主要依靠逻辑，但情感感觉也是很重要的。</p>
+<p>… 88) Escalate when you can’t adequately handle your responsibilities, and make sure that the people who work for you do the same. </p>
+<p>… 88）如果发现自己无法有效解决问题时，应将问题提交给上级，确保为你工作的员工们也是这样操作的。</p>
+<p>a) Make sure your people know to be proactive. </p>
+<p>a) 确保员工主动积极。</p>
+<p>b) Tool: An escalation button. </p>
+<p>b) 工具：升级按钮。</p>
+<p>… 89) Involve the person who is the point of the pyramid when encountering material cross-departmental or cross sub-departmental issues. </p>
+<p>… 89）跨部门间或跨子部门间出现问题时，需要上级部门，也就是这个组织的“金字塔尖”的那个人来参与定夺。</p>
+<p>… 90) Probe Deep and Hard to Learn What to Expect from Your “Machine” </p>
+<p>… 90) 认真深入调查，了解机制能够创造什么。</p>
+<p>… 91) Know what your people are like, and make sure they do their jobs excellently. </p>
+<p>… 91) 了解自己的员工，确保他们顺利完成工作。</p>
+<p>… 92) Constantly probe the people who report to you, and encourage them to probe you. </p>
+<p>… 92) 不断调查直接向你汇报的下级，并鼓励他们调查你。</p>
+<p>a) Remind the people you are probing that problems and mistakes are fuel for improvement. </p>
+<p>a) 提醒你调查的员工，问题和错误是改进的动力。</p>
+<p>… 93) Probe to the level below the people who work for you. </p>
+<p>… 93) 调查你属下的下级。</p>
+<p>… 94) Remember that few people see themselves objectively, so it’s important to welcome probing and to probe others. </p>
+<p>… 94) 记住，只要极少人能够客观地看待自己。因此，你应该欢迎调查，同时要去调查别人。</p>
+<p>… 95) Probe so that you have a good enough understanding of whether problems are likely to occur before they actually do. </p>
+<p>… 95) 调查有助于你在问题出现之前充分了解其出现的可能性。</p>
+<p>a) When a crisis appears to be brewing, contact should be so close that it’s extremely unlikely that there will be any surprises. </p>
+<p>a) 如果说有迹象显示危机正在酝酿，那么你就应该保持密切关注，就能在其发生之时没有任何惊讶。</p>
+<p>b) Investigate and let people know you are going to investigate so there are no surprises and they don’t take it personally. </p>
+<p>b) 调查情况的时候要告诉被调查的人，不要让被调查的人措手不及，让他们知道你是对事不对人。</p>
+<p>… 96) Don’t “pick your battles.” Fight them all. </p>
+<p>… 96) 不要挑肥拣瘦，要解决所有问题。</p>
+<p>… 97) Don’t let people off the hook. </p>
+<p>… 97) 不要让人逃避责任。</p>
+<p>… 98) Don’t assume that people’s answers are correct. </p>
+<p>… 98) 不要想当然地认为人们的答案都是正确的。</p>
+<p>… 99) Make the probing transparent rather than private. </p>
+<p>… 99) 将调查透明化，不要私下进行。</p>
+<p>… 100) Evaluate People Accurately, Not “Kindly” </p>
+<p>… 100) 准确地，而不是善意地评估员工。</p>
+<p>… 101) Make accurate assessments. </p>
+<p>… 101) 进行准确评估。</p>
+<p>a) Use evaluation tools such as performance surveys, metrics, and formal reviews to document all aspects of a person’s performance. These will help clarify assessments and communication surrounding them. </p>
+<p>a) 使用各种评估工具来记录员工全方位表现，包括工作表现调查问卷、计量图表、正式评估报告。这些工具能够帮助你将员工的相关评估和沟通整理清楚。</p>
+<p>b) Maintain “baseball cards” and/or “believability matrixes” for your people. </p>
+<p>b) 为员工建立“棒球记录卡”以及“可信度图表”。</p>
+<p>… 102) Evaluate employees with the same rigor as you evaluate job candidates. </p>
+<p>… 102) 以同等的严厉程度来评价员工、雇佣新人。</p>
+<p>… 103) Know what makes your people tick, because people are your most important resource. </p>
+<p>… 103) 充分了解员工的特质，因为人才是最重要的资源。</p>
+<p>… 104) Recognize that while most people prefer compliments over criticisms, there is nothing more valuable than accurate criticisms. </p>
+<p>… 104) 要认识到，尽管大多数人都喜欢被表扬，不喜欢被批评，但准确的批评却是最宝贵的。</p>
+<p>… 105) Make this discovery process open, evolutionary, and iterative. </p>
+<p>… 105) 将这一发现过程公开，循环往复，促其演变。</p>
+<p>… 106) Provide constant, clear, and honest feedback, and encourage discussion of this feedback. </p>
+<p>… 106) 提供频繁的、清楚的、诚实的反馈，并鼓励就这些反馈进行讨论。</p>
+<p>a) Put your compliments and criticisms into perspective. </p>
+<p>a) 正确对待表扬与批评。</p>
+<p>b) Remember that convincing people of their strengths is generally much easier than convincing them of their weaknesses. </p>
+<p>b) 记住，让别人看到自己的长处通常比让他们看到自己的短处要容易得多。</p>
+<p>c) Encourage objective reflection </p>
+<p>c) 鼓励客观的反思。</p>
+<p>d) Employee reviews: </p>
+<p>d) 员工评估报告:</p>
+<p>… 107) Understand that you and the people you manage will go through a process of personal evolution. </p>
+<p>… 107) 你以及你管理的人都会经历个人成长的过程。</p>
+<p>… 108) Recognize that your evolution at Bridgewater should be relatively rapid and a natural consequence of discovering your strengths and weaknesses; as a result, your career path is not planned at the outset </p>
+<p>… 108) 要认识到，你在桥水基金的成长会相对较快，这是了解自己优缺点的必然结果。因此，你的职业规划不是在一开始就定下来的。</p>
+<p>… 109) Remember that the only purpose of looking at what people did is to learn what they are like. </p>
+<p>… 109) 要记住，了解员工的过去是为了了解他们的特质。</p>
+<p>a) Look at patterns of behaviors and don’t read too much into any one event. </p>
+<p>a) 关注行为模式，但不要过分解读任何单一事件。</p>
+<p>b) Don’t believe that being good or bad at some things means that the person is good or bad at everything. </p>
+<p>b) 不要认为擅长（或不擅长）某件事的人就一定对所有的事都擅长（或不擅长）。</p>
+<p>… 110) If someone is doing their job poorly, consider whether this is due to inadequate learning (i.e., training/experience) or inadequate ability </p>
+<p>… 110) 如果某人工作做得很差劲，要去想这是因为缺少学习（培训或相关经验）还是因为缺少能力。</p>
+<p>… 111) Remember that when it comes to assessing people, the two biggest mistakes are being overconfident in your assessment and failing to get in synch on that assessment. Don’t make those mistakes. </p>
+<p>… 111) 记住，在评估员工时最常犯的两个错误是：对于评估结果过于自信；对于评估结果意见无法达成一致。不要犯这两个错误。</p>
+<p>a) Get in synch in a non-hierarchical way regarding assessments. </p>
+<p>a) 针对评估争取意见一致时，要以非等级的方式来进行。</p>
+<p>b) Learn about your people and have them learn about you with very frank conversations about mistakes and their root causes. </p>
+<p>b) 通过开展坦诚对话，讨论错误以及犯错的根源，来了解彼此。</p>
+<p>… 112) Help people through the pain that comes with exploring their weaknesses. </p>
+<p>… 112) 帮助人们渡过发现缺点的阵痛期。</p>
+<p>… 113) Recognize that when you are really in synch with people about weaknesses, whether yours or theirs, they are probably true. </p>
+<p>… 113) 要认识到，如果你就某人的弱点达成一致，不管是你的还是其他人的，这个弱点多半是事实。</p>
+<p>… 114) Remember that you don’t need to get to the point of “beyond a shadow of a doubt” when judging people. </p>
+<p>… 114) 记住，在评价员工时，并不需要达到“不含一丝质疑”的程度。</p>
+<p>… 115) Understand that you should be able to learn the most about what a person is like and whether they are a “click” for the job in their first year. </p>
+<p>… 115) 要知道，你是能够了解一个人的大部分特质的，也能够在他们第一年来时判断他们是否能够胜任工作。</p>
+<p>… 116) Continue assessing people throughout their time at Bridgewater. </p>
+<p>… 116) 员工在桥水联合基金工作期间，持续对员工进行评估。</p>
+<p>… 117) Train and Test People Through Experiences </p>
+<p>… 117) 通过实战经验来培训、测试员工。</p>
+<p>… 118) Understand that training is really guiding the process of personal evolution. </p>
+<p>… 118) 要知道，培训对个人的成长过程起着指引作用。</p>
+<p>… 119) Know that experience creates internalization </p>
+<p>… 119) 经验能够内化成为知识。</p>
+<p>… 120) Provide constant feedback to put the learning in perspective </p>
+<p>… 120) 正确对待学习，频繁提供反馈。</p>
+<p>… 121) Remember that everything is a case study. </p>
+<p>… 121) 要记住，每件事都是一个案例</p>
+<p>… 122) Teach your people to fish rather than give them fish. </p>
+<p>… 122) 授人以鱼不如授人以渔。</p>
+<p>… 123) Recognize that sometimes it is better to let people make mistakes so that they can learn from them rather than tell them the better decision. </p>
+<p>… 123) 要认识到，有时让人犯错并从中吸取教训要比直接告诉他们一个更好决定更明智。</p>
+<p>a) When criticizing, try to make helpful suggestions. </p>
+<p>a) 在批评时，要提一些有建设性的意见。</p>
+<p>b) Learn from success as well as from failure. </p>
+<p>b) 从成功中学习，也要从失败中学习。</p>
+<p>… 124) Know what types of mistakes are acceptable and unacceptable, and don’t allow the people who work for you to make the unacceptable ones. </p>
+<p>… 124) 分清哪些错误是可以接受的，哪些是不能接受的。不要让员工犯不可接受的错误。</p>
+<p>… 125) Recognize that behavior modification typically takes about 18 months of constant reinforcement. </p>
+<p>… 125) 要认识到，一般需要18个月持续不断的巩固才能实现行为矫正。</p>
+<p>… 126) Train people; don’t rehabilitate them. </p>
+<p>… 126) 培训员工，而不是改造员工。</p>
+<p>a) A common mistake: training and testing a poor performer to see if he or she can acquire the required skills without simultaneously trying to assess their abilities. </p>
+<p>a) 常见错误：在没有对一个工作表现差的员工进行能力评估之前，培训、测试该员工，试图让他获得所需技能。</p>
+<p>… 127) After you decide “what’s true” (i.e., after you figure out what your people are lik<br>e) , think carefully about “what to do about it.” </p>
+<p>… 127) 在找到真相之后（即了解到员工的真实情况），谨慎思考下一步该做什么。</p>
+<p>… 128) Sort People into Other Jobs at Bridgewater, or Remove Them from Bridgewater </p>
+<p>… 128) 在桥水基金内部进行换岗，或将其解雇。</p>
+<p>… 129) When you find that someone is not a good “click” for a job, get them out of it ASAP. </p>
+<p>… 129) 一旦发现某人不能胜任工作，尽快将其调离该职位。</p>
+<p>… 130) Know that it is much worse to keep someone in a job who is not suited for it than it is to fire someone. </p>
+<p>… 130) 勉强将某人留在不合适的职位上要比将其开除更糟糕。</p>
+<p>… 131) When people are “without a box,” consider whether there is an open box at Bridgewater that would be a better fit. If not, fire them. </p>
+<p>… 131) 当员工没有岗位时，思考桥水公司内部是否还有更适合的岗位。如果没有，应该将该员工开除。</p>
+<p>… 132) Do not lower the bar. </p>
+<p>… 132) 不要降低标准。</p>
+<p>To Perceive, Diagnose, and Solve Problems… </p>
+<p>发现、诊断、解决问题</p>
+<p>… 133) Know How to Perceive Problems Effectively </p>
+<p>… 133) 懂得如何有效地发现问题</p>
+<p>… 134) Keep in mind the 5-Step Process explained in Part 2. </p>
+<p>… 134) 时刻牢记在第二部分阐释过的五步流程。</p>
+<p>… 135) Recognize that perceiving problems is the first essential step toward great management. </p>
+<p>… 135) 要认识到，发现问题是优秀管理的第一步。</p>
+<p>… 136) Understand that problems are the fuel for improvement. </p>
+<p>… 136) 要理解，问题是提升的动力。</p>
+<p>… 137) You need to be able to perceive if things are above the bar (i.e., good enough) or below the bar (i.e., not good enough) , and you need to make sure your people can as well </p>
+<p>… 137) 你需要观察事情是在预期之上还是在预期之下，确保你的员工也有此观察力。</p>
+<p>… 138) Don’t tolerate badness. </p>
+<p>… 138) 不要容忍问题。</p>
+<p>… 139) “Taste the soup.” </p>
+<p>… 139) “品尝汤的味道”。</p>
+<p>… 140) Have as many eyes looking for problems as possible. </p>
+<p>… 140) 找尽可能多的人手来一起发现问题。</p>
+<p>a) “Pop the cork.” </p>
+<p>a) “拔出瓶塞。”</p>
+<p>b) Hold people accountable for raising their complaints. </p>
+<p>b) 将投诉作为员工义务来进行。</p>
+<p>c) The leader must encourage disagreement and be either impartial or open-minded. </p>
+<p>c) 领导者必须鼓励提出不同的意见，不偏不倚，思想开放。</p>
+<p>d) The people closest to certain jobs probably know them best, or at least have perspectives you need to understand, so those people are essential for creating improvement. </p>
+<p>d) 与某项工作接触最密切的人应该最了解该项工作，或者至少有值得你借鉴的观点。因此，这些人对于促进提升是很重要的。</p>
+<p>… 141) To perceive problems, compare how the movie is unfolding relative to your script </p>
+<p>… 141) 参照你的剧本，比较电影情节的发展，通过这种方式来发现问题。</p>
+<p>… 142) Don’t use the anonymous “we” and “they,” because that masks personal responsibility—use specific names. </p>
+<p>… 142) 不要使用模糊的人称，如“我们”或“他们”，这样做会掩盖个人责任。请使用具体人名。</p>
+<p>… 143) Be very specific about problems; don’t start with generalizations. </p>
+<p>… 143) 具体问题要具体对待，不要一开始就过于宽泛。</p>
+<p>… 144) Tool: Use the following tools to catch problems: issues logs, metrics, surveys, checklists, outside consultants, and internal auditors. </p>
+<p>… 144) 工具：使用以下工具来捕捉问题：问题日志、计量图表、调查问卷、清单、外部咨询，以及内部审计。</p>
+<p>… 145) The most common reason problems aren’t perceived is what I call the “frog in the boiling water” problem.</p>
+<p>… 145) 最常见的无法观察到原因的问题是被称为“温水煮青蛙”的问题。</p>
+<p>… 146) In some cases, people accept unacceptable problems because they are perceived as being too difficult to fix. Yet fixing unacceptable problems is actually a lot easier than not fixing them, because not fixing them will make you miserable. </p>
+<p>… 146) 在某些情况下，因为某些问题实在难以解决，人们不得不接受那些不可接受的问题。但是，解决那些不可接受的问题其实要比不解决它们更容易，因为不解决它们，将后患无穷。</p>
+<p>a) Problems that have good, planned solutions are completely different from those that don’t. </p>
+<p>a) 已经拥有有效周密的解决方案的问题与那些没有解决方案的问题天差地别。</p>
+<p>… 147) Diagnose to Understand What the Problems Are Symptomatic Of</p>
+<p>… 147) 通过诊断分析来理解问题症结所在</p>
+<p>… 148) Recognize that all problems are just manifestations of their root causes, so diagnose to understand what the problems are symptomatic of. </p>
+<p>… 148) 要认识到所有问题只是其根本原因的表征，所以要通过诊断分析来理解问题症结所在。</p>
+<p>… 149) Understand that diagnosis is foundational both to progress and quality relationships. </p>
+<p>… 149) 要明白诊断分析是发展公司和建立良好人际关系的基础。</p>
+<p>… 150) Ask the following questions when diagnosing. </p>
+<p>… 150) 诊断分析时要问自己以下几个问题。</p>
+<p>… 151) Remember that a root cause is not an action but a reason. </p>
+<p>… 151) 要谨记根本原因不是行为而是原因。</p>
+<p>… 152) Identify at which step failure occurred in the 5-Step Process. </p>
+<p>… 152) 找出五步流程中哪一步失败了。</p>
+<p>… 153) Remember that a proper diagnosis requires a quality, collaborative, and honest discussion to get at the truth. </p>
+<p>… 153) 要做好诊断分析，需要深入讨论，共同协作，态度诚恳，只有这样才能触及问题真相。</p>
+<p>… 154) Keep in mind that diagnoses should produce outcomes. </p>
+<p>… 154) 要记得诊断分析应该出结果。</p>
+<p>… 155) Don’t make too much out of one “dot”—synthesize a richer picture by squeezing lots of “dots” quickly and triangulating with others. </p>
+<p>… 155) 不要试图从一个“点”中获取大量信息，而应该快速压榨大量的“点”，并将它们相互联结，从而形成更丰富的图像。</p>
+<p>… 156) Maintain an emerging synthesis by diagnosing continuously<br>… 156) 要进行持续性的诊断分析，整合新思路。</p>
+<p>… 157) To distinguish between a capacity issue and a capability issue, imagine how the person would perform at that particular function if they had ample capacity. </p>
+<p>… 157) 要区别才能问题和能力问题，就去想象如果一个人有足够的才能，那他在这个特定职能上的表现会是如何。</p>
+<p>… 158) The most common reasons managers fail to produce excellent results or escalate are </p>
+<p>… 158) 管理者绩效不佳或未能升职最常见的原因有：</p>
+<p>… 159) Avoid “Monday morning quarterbacking.” </p>
+<p>… 159) 不要做事后诸葛。</p>
+<p>… 160) Identify the principles that were violated. </p>
+<p>… 160) 找出违背了哪些原则。</p>
+<p>… 161) Remember that if you have the same people doing the same things, you should expect the same results. </p>
+<p>… 161) 要记得如果你让同样的人做同样的事，那么得到的也应该是同样的结果。</p>
+<p>… 162) Use the following “drilldown” technique to gain an 80/20 understanding of a department or sub-department that is having problems. </p>
+<p>… 162) 运用下述的“钻取”方法，重点理解部门或分部面临的问题。</p>
+<p>… 163) Put Things in Perspective </p>
+<p>… 163）理清思维</p>
+<p>… 164) Go back before going forward. </p>
+<p>… 164) 前进之前请先回顾。</p>
+<p>a) Tool: Have all new employees listen to tapes of “the story” to bring them up to date. </p>
+<p>a) 方法：让所有新员工听“故事”磁带，帮助他们了解公司截止到目前的发展状况。</p>
+<p>… 165) Understand “above the line” and “below the line” thinking and how to navigate between the two. </p>
+<p>… 165）理解“宏观”和“微观”的思维模式及其适用范围。</p>
+<p>… 166) Design Your Machine to Achieve Your Goals </p>
+<p>… 166) 设定机制，达成目标</p>
+<p>… 167) Remember: You are designing a “machine” or system that will produce outcomes. </p>
+<p>… 167）要记得：你是在设定一个能够有产出的“机制”或系统。</p>
+<p>a) A short-term goal probably won’t require you to build a machine. </p>
+<p>a) 短期目标可能不需要你设立机制。</p>
+<p>b) Beware of paying too much attention to what is coming at you and not enough attention to what your responsibilities are or how your machine should work to achieve your goals. </p>
+<p>b) 注意不要太过关注你眼前的问题，而忽视了你的职责，以及机制怎样运行并达成目标。</p>
+<p>… 168) Don’t act before thinking. Take the time to come up with a game plan</p>
+<p>… 168）三思而后行。花点时间做计划。</p>
+<p>… 169) The organizational design you draw up should minimize problems and maximize capitalization on opportunities. </p>
+<p>… 169）你拟出的组织设计应该能最小化问题，最大化机会。</p>
+<p>… 170) Put yourself in the “position of pain” for a while so that you gain a richer understanding of what you’re designing for. </p>
+<p>… 170) 将自己体会一段时间的“痛点”，你就会更理解自己的设定针对的是什么样的对象。</p>
+<p>… 171) Recognize that design is an iterative process; between a bad “now” and a good “then” is a “working through it” period. </p>
+<p>… 171) 要认识到，机构设置是一个循环往复的过程，在一个糟糕的“现在”和一个美好的“未来”之间，是“努力实现”的过程。</p>
+<p>… 172) Visualize alternative machines and their outcomes, and then choose. </p>
+<p>… 172) 将可替代的其他机制及其成果形象化，以供选择。</p>
+<p>… 173) Think about second- and third-order consequences as well as first-order consequences. </p>
+<p>… 173) 思考二、三级效应与一级效应。</p>
+<p>… 174) Most importantly, build the organization around goals rather than tasks. </p>
+<p>… 174) 以目标为中心建立机构，而不是以任务为中心，这是重中之重。</p>
+<p>a) First come up with the best workflow design, sketch it out in an organizational chart, visualize how the parts interact, specify what qualities are required for each job, and, only after that is done, choose the right people to fill the jobs. </p>
+<p>a) 首先，设计最佳工作流，在一个组织图中画出草图，将各部分互动情况形象化，标出每个职位所需的特质，最后，选择合适的员工来填充岗位 (根据他们的能力和意愿来进行需求匹配) 。</p>
+<p>b) Organize departments and sub-departments around the most logical groupings. </p>
+<p>b) 按照最富逻辑的组团方式来组建部门和子部门。</p>
+<p>c) Make departments as self-sufficient as possible so that they have control over the resources they need to achieve the goals. </p>
+<p>c) 让每个部门尽可能的自给自足，以此确保他们能够自主控制达成目标所需的资源。</p>
+<p>d) The efficiency of an organization decreases and the bureaucracy of an organization increases in direct relation to the increase in the number of people and/or the complexity of the organization. </p>
+<p>d) 公司效率的下降与官僚作风的扩张程度与公司人数增长和复杂性提升直接相关。</p>
+<p>… 175) Build your organization from the top down. </p>
+<p>… 175) 自上而下组建公司。</p>
+<p>a) Everyone must be overseen by a believable person who has high standards. </p>
+<p>a) 应该给每名员工安排一位拥有高标准的靠谱的人，负责对其进行监管。</p>
+<p>b) The people at the top of each pyramid should have the skills and focus to manage their direct reports and a deep understanding of their jobs. </p>
+<p>b) 位于金字塔尖的管理者应该具备管理直接下属的能力和精力，对下属的工作职责有深入的了解。</p>
+<p>c) The ratio of senior managers to junior managers and to the number of people who work two levels below should be limited, to preserve quality communication and mutual understanding. </p>
+<p>c) 高级管理者与初级管理者、管理者与两级以下的被管理者之间的人数比例应该限定在一定范围内，以确保高质量的沟通与互相理解。</p>
+<p>d) The number of layers from top to bottom and the ratio of managers to their direct reports will limit the size of an effective organization. </p>
+<p>d) 自上而下的层级数量以及管理者与直接下属的比例会制约高效公司的规模。</p>
+<p>e) The larger the organization, the more important are 1) information technology expertise in management and 2) cross-department communication (more on these later) . </p>
+<p>e) 公司越大，越需要1）在管理中运用信息技术；2）跨部门沟通（后详）。</p>
+<p>f) Do not build the organization to fit the people. </p>
+<p>f) 不要为了迁就人员而组建机构。岗位是基于所需完成的工作来设定的，而不是基于人们想要干什么事，能干什么事而设定。</p>
+<p>… 176) Have the clearest possible delineation of responsibilities and reporting lines. </p>
+<p>… 176) 尽可能清楚地描述工作职责与级别关系。</p>
+<p>a) Create an organizational chart to look like a pyramid, with straight lines down that don’t cross. </p>
+<p>a) 建立一个金字塔形的组织图，画出不相交的竖线</p>
+<p>… 177) Constantly think about how to produce leverage. </p>
+<p>… 177) 经常思考该如何让事情发挥最大的效果。</p>
+<p>a) You should be able to delegate the details away. </p>
+<p>a) 你应该将细节工作委派给他人。</p>
+<p>b) It is far better to find a few smart people and give them the best technology than to have a greater number of ordinary and less well-equipped people. </p>
+<p>b) 与其让一众能力平庸之人获得不那么精良的装备，不如只给一小部分聪明人配备最好的技术。<br>c) Use “leveragers.” </p>
+<p>c) 使用执行力强的人。</p>
+<p>… 178) Understand the clover-leaf design.<br>… 178) 理解四叶草形的机构设置。</p>
+<p>… 179) Don’t do work for people in another department or grab people from another department to do work for you unless you speak to the boss. </p>
+<p>… 179) 不要为其他部门做事，也不要在没有和其他部门领导交涉的情况下从其他部门抓人来为你做事。</p>
+<p>… 180) Watch out for “department slip.” </p>
+<p>… 180) 谨防“部门职能错位”。</p>
+<p>… 181) Assign responsibilities based on workflow design and people’s abilities, not job titles. </p>
+<p>… 181) 在分配责任时，注意考虑工作流的设置和员工的能力，而不是岗位头衔。</p>
+<p>… 182) Watch out for consultant addiction. </p>
+<p>… 182) 谨防过分依赖外部咨询。</p>
+<p>… 183) Tool: Maintain a procedures manual. </p>
+<p>… 183) 工具：使用流程手册。</p>
+<p>… 184) Tool: Use checklists. </p>
+<p>… 184) 工具：使用任务清单。</p>
+<p>a) Don’t confuse checklists with personal responsibility. </p>
+<p>a) 不要将任务清单与个人责任混为一谈。</p>
+<p>b) Remember that “systematic” doesn’t necessarily mean computerized. </p>
+<p>b) 记住，系统性并不意味着必须全部由电脑来控制。</p>
+<p>c) Use “double-do” rather than “double-check” to make sure mission-critical tasks are done correctly. </p>
+<p>c) 要“重复工作”，不要“重复检查”，保证重要任务完成无误。</p>
+<p>… 185) Watch out for “job slip.” </p>
+<p>… 185) 谨防“职责错位”。</p>
+<p>… 186) Think clearly how things should go, and when they aren’t going that way, acknowledge it and investigate </p>
+<p>… 186) 考虑清楚工作应该如何开展，如果事情不是朝预期的方向发展，需要及时发现并展开调查。</p>
+<p>… 187) Have good controls so that you are not exposed to the dishonesty of others and trust is never an issue. </p>
+<p>… 187) 加强监管，谨防他人的不诚实，使信任不再成为问题。</p>
+<p>a) People doing auditing should report to people outside the department being audited, and auditing procedures should not be made known to those being audited. </p>
+<p>a) 审计人员应该向被审计部门之外的人汇报审计结果，同时审计程序不能向被审计对象透露。</p>
+<p>b) Remember: There is no sense in having laws unless you have policemen (auditors) . </p>
+<p>b) 记住，如果没有警察（审计人员），法律则形同虚设。</p>
+<p>… 188) Do What You Set Out to Do </p>
+<p>… 188) 按计划进行。</p>
+<p>… 189) Push through! </p>
+<p>… 189) 坚持到底！</p>
+<p>To Make Decisions Effectively… </p>
+<p>有效决策</p>
+<p>…190) Recognize the Power of Knowing How to Deal with Not Knowing </p>
+<p>…190) 认可处理无知的能力</p>
+<p>… 191) Recognize that your goal is to come up with the best answer, that the probability of your having it is small, and that even if you have it, you can’t be confident that you do have it unless you have other believable people test you. </p>
+<p>… 191) 要认识到，你的目标是找到最佳答案，而找到最佳答案的可能性是很小的，就算你真的找到了，你也无法确信自己成功了，你必须让其他的靠谱的人来对你进行测试。</p>
+<p>… 192) Understand that the ability to deal with not knowing is far more powerful than knowing </p>
+<p>… 192) 要知道，处理无知的能力要比知道某事的能力更强大。</p>
+<p>a) Embrace the power of asking: “What don’t I know, and what should I do about it?” </p>
+<p>a) 鼓励提问：“有什么是我不知道的呢？那我该怎么办呢？”</p>
+<p>b) Finding the path to success is at least as dependent on coming up with the right questions as coming up with answers. </p>
+<p>b) 寻找成功的道路上，提出正确的问题与获得正确答案同等重要。</p>
+<p>… 193) Remember that your goal is to find the best answer, not to give the best one you have. </p>
+<p>… 193) 记住，你的目标是寻找最佳答案，而不是在已有的答案中挑一个最好的。</p>
+<p>… 194) While everyone has the right to have questions and theories, only believable people have the right to have opinions </p>
+<p>… 194) 每个人都有权拥有自己的问题和理论，但是只有靠谱的人才有权提出观点。</p>
+<p>… 195) Constantly worry about what you are missing. </p>
+<p>… 195) 时刻警惕考虑不周的情况。</p>
+<p>a) Successful people ask for the criticism of others and consider its merit. </p>
+<p>a) 成功人士会征求别人的批评意见，并看到批评的价值。</p>
+<p>b) Triangulate your view. </p>
+<p>b) 吸收众人观点。</p>
+<p>… 196) Make All Decisions Logically, as Expected Value Calculations </p>
+<p>… 196）做决定要讲逻辑，基于期望值测算</p>
+<p>… 197) Considering both the probabilities and the payoffs of the consequences, make sure that the probability of the unacceptable (i.e., the risk of ruin) is nil. </p>
+<p>… 197）考虑结果的可能性与收益，确保不可接受结果（如搞砸的风险）的可能性为零。</p>
+<p>a) The cost of a bad decision is equal to or greater than the reward of a good decision, so knowing what you don’t know is at least as valuable as knowing. </p>
+<p>a) 不良决策的代价等同于，甚至严重于正确决策带来的回报，因此，知道自己没掌握什么，至少和知道自己掌握什么一样有价值。</p>
+<p>b) Recognize opportunities where there isn’t much to lose and a lot to gain, even if the probability of the gain happening is low. </p>
+<p>b) 鉴别出有亏少利多的机会，就算获利可能性低也要试试。</p>
+<p>c) Understand how valuable it is to raise the probability that your decision will be right by accurately assessing the probability of your being right. </p>
+<p>c) 精准评估，提高决策的准确性十分有价值。</p>
+<p>d) Don’t bet too much on anything. Make 15 or more good, uncorrelated bets. </p>
+<p>d) 任何事情都不能押过多赌注，要留15%或更多的余地给无关联的赌注。</p>
+<p>… 198) Remember the 80/20 Rule, and Know What the Key 20% Is </p>
+<p>… 198）牢记80/20法则，并知道那关键的20%是什么。</p>
+<p>… 199) Distinguish the important things from the unimportant things and deal with the important things first. </p>
+<p>… 199）区分重要事项和不重要事项，先处理重要事项。</p>
+<p>a) Don’t be a perfectionist </p>
+<p>a) 不要做完美主义者。</p>
+<p>b) Since 80% of the juice can be gotten with the first 20% of the squeezing, there are relatively few (typically less than five) important things to consider in making a decision. </p>
+<p>b) 压榨过程进行20%的时候就能得到80%的果汁，所以做决定时，最重要的事项是比较少的（一般少于五件）。</p>
+<p>c) Watch out for “detail anxiety,” </p>
+<p>c) 警惕“细节焦虑”。</p>
+<p>d) Don’t mistake small things for unimportant things, because some small things can be very important </p>
+<p>d) 不要混淆小事情和不重要事项，因为小事情也可能很重要。</p>
+<p>… 200) Think about the appropriate time to make a decision in light of the marginal gains made by acquiring additional information versus the marginal costs of postponing the decision. </p>
+<p>… 200）要根据获取额外信息而取得的边际收益与延迟决定所造成的边际成本的比较与权衡，来思考合适的时间做出一个决定。</p>
+<p>… 201) Make sure all the “must do’s” are above the bar before you do anything else. </p>
+<p>… 201）确保所有“必须完成的任务”在完成时优先于其他任何事情。</p>
+<p>… 202) Remember that the best choices are the ones with more pros than cons, not those that don’t have any cons. Watch out for people who tend to argue against something because they can find something wrong with it without properly weighing all the pros against the cons. </p>
+<p>… 202）要记住，最佳选择是基于赞同意见多于反对意见的，当然不是说不允许任何反对意见。要警惕有人在不恰当权衡正反意见的基础上挑错，进而反对。</p>
+<p>… 203) Watch out for unproductively identifying possibilities without assigning them probabilities, because it screws up prioritization. </p>
+<p>…203）要警惕在没有考虑所有可能性的情况下，就低效地确定其可能性，这样会打乱优先次序。</p>
+<p>… 204) Understand the concept and use the phrase “by and large.” </p>
+<p>… 204）理解并运用“总体来说”的概念。</p>
+<p>a) When you ask someone whether something is true and they tell you that “It’s not totally true,” it’s probably true enough. </p>
+<p>a) 当询问某事的真实性时，若对方告诉你“也不完全是事实”时，其实也八九不离十了。</p>
+<p>… 205) Synthesize </p>
+<p>… 205）综合</p>
+<p>… 206) Understand and connect the dots. </p>
+<p>… 206） 理解并串联关键点</p>
+<p>… 207) Understand what an acceptable rate of improvement is, and that it is the level and not the rate of change that matters most. </p>
+<p>… 207）知道可接受的改善速度是多少，因为改变的程度比改变的速度更关键。</p>
+<p>… 208) If your best solution isn’t good enough, think harder or escalate that you can’t produce a solution that is good enough. </p>
+<p>… 208）如果最佳方案不够令人满意，就得尽力想出更好的办法，实在想不到就提交给上级。</p>
+<p>… 209) Avoid the temptation to compromise on that which is uncompromisable. </p>
+<p>… 209）经受住诱惑，避免让不可妥协的事情得到妥协。</p>
+<p>… 210) Don’t try to please everyone </p>
+<p>… 210）不要试图让所有人都满意。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://zhibimo.com/read/wang-miao/yuan-ze/Part303SummaryandTableofPrinciples.html&quot;&gt;Principles —-译者：刘念 张帆”&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Principles 记录了Bridgewater创始人Ray Dalio对自己人生成功过程的反思，试图提供一套能通用的理念，帮助人们在生活中作出正确的选择。&lt;br&gt;Ray Dalio，来自纽约中产之家，中年创建Bridgewater，2011年六十岁时Bridgewater成为世界上第一大对冲基金。&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://img3.doubanio.com/lpic/s27196293.jpg&quot; width = &quot;288&quot; height = &quot;462&quot; alt=&quot;personal photo&quot;&gt;&lt;br&gt; &lt;/div&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="管理" scheme="http://ipcreator.me/tags/%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>深圳风采</title>
     <link href="http://ipcreator.me/2017/02/08/view-of-shenzhen/"/>
     <id>http://ipcreator.me/2017/02/08/view-of-shenzhen/</id>
@@ -5939,58 +6099,6 @@
   </entry>
   
   <entry>
-    <title>创新之我见</title>
-    <link href="http://ipcreator.me/2017/02/03/my-view-of-innovation/"/>
-    <id>http://ipcreator.me/2017/02/03/my-view-of-innovation/</id>
-    <published>2017-02-03T05:53:18.000Z</published>
-    <updated>2017-02-12T01:27:22.123Z</updated>
-    
-    <content type="html"><![CDATA[<h3>基本概念</h3>
-
-<p>什么是创新？</p>
-<blockquote>
-<p><strong>你无我有、你有我优、你优我快</strong></p>
-</blockquote>
-<p>什么是体验？</p>
-<blockquote>
-<p><strong>用起来很爽，很智能非常快</strong></p>
-</blockquote>
-<a id="more"></a>
-<h3>快速智能示例一</h3>
-
-<p>支持联系人拼音首字母键盘定位，智能屏蔽无数据按键</p>
-<div align="center"><br><img src="\img\contact-quick-search-demo.png" width="302" height="401" alt="personal photo"><br> </div>
-
-<p></p><h3>快速智能示例二</h3><br>支持联系人分组一键群发短信，智能屏蔽呼出按钮，以防用户误操作<p></p>
-<div align="center"><br><img src="\img\contact-smart-group-demo.png" width="302" height="401" alt="personal photo"><br> </div>
-
-
-
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3&gt;基本概念&lt;/h3&gt;
-
-&lt;p&gt;什么是创新？&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;你无我有、你有我优、你优我快&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;什么是体验？&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;用起来很爽，很智能非常快&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-    
-    
-      <category term="感悟" scheme="http://ipcreator.me/tags/%E6%84%9F%E6%82%9F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>专利之我见</title>
     <link href="http://ipcreator.me/2017/02/03/my-view-of-patent-strategy/"/>
     <id>http://ipcreator.me/2017/02/03/my-view-of-patent-strategy/</id>
@@ -6143,6 +6251,58 @@
     
     
       <category term="成长" scheme="http://ipcreator.me/tags/%E6%88%90%E9%95%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创新之我见</title>
+    <link href="http://ipcreator.me/2017/02/03/my-view-of-innovation/"/>
+    <id>http://ipcreator.me/2017/02/03/my-view-of-innovation/</id>
+    <published>2017-02-03T05:53:18.000Z</published>
+    <updated>2017-02-12T01:27:22.123Z</updated>
+    
+    <content type="html"><![CDATA[<h3>基本概念</h3>
+
+<p>什么是创新？</p>
+<blockquote>
+<p><strong>你无我有、你有我优、你优我快</strong></p>
+</blockquote>
+<p>什么是体验？</p>
+<blockquote>
+<p><strong>用起来很爽，很智能非常快</strong></p>
+</blockquote>
+<a id="more"></a>
+<h3>快速智能示例一</h3>
+
+<p>支持联系人拼音首字母键盘定位，智能屏蔽无数据按键</p>
+<div align="center"><br><img src="\img\contact-quick-search-demo.png" width="302" height="401" alt="personal photo"><br> </div>
+
+<p></p><h3>快速智能示例二</h3><br>支持联系人分组一键群发短信，智能屏蔽呼出按钮，以防用户误操作<p></p>
+<div align="center"><br><img src="\img\contact-smart-group-demo.png" width="302" height="401" alt="personal photo"><br> </div>
+
+
+
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3&gt;基本概念&lt;/h3&gt;
+
+&lt;p&gt;什么是创新？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;你无我有、你有我优、你优我快&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;什么是体验？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;用起来很爽，很智能非常快&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="感悟" scheme="http://ipcreator.me/tags/%E6%84%9F%E6%82%9F/"/>
     
   </entry>
   
@@ -8524,6 +8684,49 @@ If you want to change it, more info is available in our docs:
   </entry>
   
   <entry>
+    <title>欢迎访问我的个人博客</title>
+    <link href="http://ipcreator.me/2017/01/29/hello-world/"/>
+    <id>http://ipcreator.me/2017/01/29/hello-world/</id>
+    <published>2017-01-29T11:37:06.000Z</published>
+    <updated>2017-02-12T14:34:16.281Z</updated>
+    
+    <content type="html"><![CDATA[<p>IPCreator = IP + Creator <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" rel="external">网易中文博客</a></p>
+<blockquote>
+<p>创新不难、专利有趣<br>学以致用、知行合一<br>自知者明、自胜者强<br>不忘初心、方得始终</p>
+</blockquote>
+<a id="more"></a>
+<div align="center"><br><img src="\img\work-hard-life-easy.png" width="670" height="500"><br> </div>
+
+<p>明代杨慎《临江仙》</p>
+<blockquote>
+<p>滚滚长江东逝水，浪花淘尽英雄。<br>是非成败转头空。青山依旧在，几度夕阳红。<br>白发渔樵江渚上，惯看秋月春风。<br>一壶浊酒喜相逢。古今多少事，都付笑谈中。</p>
+</blockquote>
+<p>明代唐伯虎：《桃花庵歌》</p>
+<blockquote>
+<p>桃花坞里桃明代花庵，桃花庵里桃花仙；<br>桃花仙人种桃树，又摘桃花换酒钱。<br>酒醒只在花间坐，酒醉还来花下眠；<br>半醒半醉日复日，花开花落年复年。<br>但愿老死花酒间，不愿鞠躬车马前；<br>车尘马足贵者趣，酒盏花枝贫者缘。<br>若将贫贱比贫者，一在平地一在天；<br>若将贫贱比车马，他得驱驰我得闲。<br>别人笑我太疯癫，我笑他人看不穿；<br>不见五陵豪杰墓，无花无酒锄作田。</p>
+</blockquote>
+<h2 id="李笑来：Hello-World"><a href="#李笑来：Hello-World" class="headerlink" title="李笑来：Hello World"></a><strong><a href="http://lixiaolai.com/2016/05/18/hello-world/" target="_blank" rel="external">李笑来：Hello World</a></strong></h2><p>学习其实只不过是一种生活方式，否则为什么会有的人就是停不下来呢？学习不需要坚持、不需要毅力、不需要信念，不需要各种“不得已而为之的概念”，它只不过是一种选择，一个一旦真选了就再也不可逆的选择。仅此而已。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (alive) &#123;</div><div class="line">    learn();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>嗯，<a href="https://www.gitbook.com/book/xiaolai/reborn/details" target="_blank" rel="external">七年就是一辈子</a>，干嘛不玩得高兴一点？</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;IPCreator = IP + Creator &lt;a href=&quot;http://blog.163.com/zhuxuanlv@126/&quot;&gt;网易中文博客&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;创新不难、专利有趣&lt;br&gt;学以致用、知行合一&lt;br&gt;自知者明、自胜者强&lt;br&gt;不忘初心、方得始终&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="博客" scheme="http://ipcreator.me/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>IPCreator简历</title>
     <link href="http://ipcreator.me/2017/01/29/my-resume/"/>
     <id>http://ipcreator.me/2017/01/29/my-resume/</id>
@@ -8578,49 +8781,6 @@ If you want to change it, more info is available in our docs:
     
     
       <category term="简历" scheme="http://ipcreator.me/tags/%E7%AE%80%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>欢迎访问我的个人博客</title>
-    <link href="http://ipcreator.me/2017/01/29/hello-world/"/>
-    <id>http://ipcreator.me/2017/01/29/hello-world/</id>
-    <published>2017-01-29T11:37:06.000Z</published>
-    <updated>2017-02-12T11:11:35.272Z</updated>
-    
-    <content type="html"><![CDATA[<p>IPCreator = IP + Creator <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" rel="external">网易中文博客</a></p>
-<blockquote>
-<p>创新不难、专利有趣<br>学以致用、知行合一<br>自知者明、自胜者强<br>不忘初心、方得始终</p>
-</blockquote>
-<a id="more"></a>
-<div align="center"><br><img src="\img\work-hard-life-easy.png" width="670" height="500" alt="personal photo"><br> </div>
-
-<p>明代杨慎《临江仙》</p>
-<blockquote>
-<p>滚滚长江东逝水，浪花淘尽英雄。<br>是非成败转头空。青山依旧在，几度夕阳红。<br>白发渔樵江渚上，惯看秋月春风。<br>一壶浊酒喜相逢。古今多少事，都付笑谈中。</p>
-</blockquote>
-<p>明代唐伯虎：《桃花庵歌》</p>
-<blockquote>
-<p>桃花坞里桃明代花庵，桃花庵里桃花仙；<br>桃花仙人种桃树，又摘桃花换酒钱。<br>酒醒只在花间坐，酒醉还来花下眠；<br>半醒半醉日复日，花开花落年复年。<br>但愿老死花酒间，不愿鞠躬车马前；<br>车尘马足贵者趣，酒盏花枝贫者缘。<br>若将贫贱比贫者，一在平地一在天；<br>若将贫贱比车马，他得驱驰我得闲。<br>别人笑我太疯癫，我笑他人看不穿；<br>不见五陵豪杰墓，无花无酒锄作田。</p>
-</blockquote>
-<h2 id="李笑来：Hello-World"><a href="#李笑来：Hello-World" class="headerlink" title="李笑来：Hello World"></a><strong><a href="http://lixiaolai.com/2016/05/18/hello-world/" target="_blank" rel="external">李笑来：Hello World</a></strong></h2><p>学习其实只不过是一种生活方式，否则为什么会有的人就是停不下来呢？学习不需要坚持、不需要毅力、不需要信念，不需要各种“不得已而为之的概念”，它只不过是一种选择，一个一旦真选了就再也不可逆的选择。仅此而已。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (alive) &#123;</div><div class="line">    learn();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>嗯，<a href="https://www.gitbook.com/book/xiaolai/reborn/details" target="_blank" rel="external">七年就是一辈子</a>，干嘛不玩得高兴一点？</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;IPCreator = IP + Creator &lt;a href=&quot;http://blog.163.com/zhuxuanlv@126/&quot;&gt;网易中文博客&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;创新不难、专利有趣&lt;br&gt;学以致用、知行合一&lt;br&gt;自知者明、自胜者强&lt;br&gt;不忘初心、方得始终&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-    
-    
-      <category term="博客" scheme="http://ipcreator.me/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -8792,12 +8952,12 @@ for (var i = 0; i &lt; 100; i++) {
     <updated>2017-02-12T01:33:49.251Z</updated>
     
     <content type="html"><![CDATA[<p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行<br>增加标题信息</p>
-<div id="echarts5401" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts2651" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts5401'));
+        var myChart = echarts.init(document.getElementById('echarts2651'));
         // 指定图表的配置项和数据
         var option = {
 
@@ -8879,12 +9039,12 @@ for (var i = 0; i &lt; 100; i++) {
     <summary type="html">
     
       &lt;p&gt;通过&lt;a href=&quot;http://kchen.cc/2016/11/05/echarts-in-hexo/&quot;&gt;ECharts 插件&lt;/a&gt;直接运行&lt;br&gt;增加标题信息&lt;/p&gt;
-&lt;div id=&quot;echarts5401&quot; style=&quot;width: 85%;height: 400px;margin: 0 auto&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;echarts2651&quot; style=&quot;width: 85%;height: 400px;margin: 0 auto&quot;&gt;&lt;/div&gt;
 &lt;script src=&quot;http://echarts.baidu.com/dist/echarts.common.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script type=&quot;text/javascript&quot;&gt;
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById(&#39;echarts5401&#39;));
+        var myChart = echarts.init(document.getElementById(&#39;echarts2651&#39;));
         // 指定图表的配置项和数据
         var option = {
 
@@ -8978,12 +9138,12 @@ for (var i = 0; i &lt; 100; i++) {
     
     <content type="html"><![CDATA[<p>通过<a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">ECharts 插件</a>直接运行</p>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">echarts</span> 400 '85%' %&#125;</span><span class="xml"></span></div><div class="line">\\TODO option goes here</div><div class="line"><span class="template-tag">&#123;% <span class="name">endecharts</span> %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
-<div id="echarts5069" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts7361" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts5069'));
+        var myChart = echarts.init(document.getElementById('echarts7361'));
         // 指定图表的配置项和数据
         var option = {
 

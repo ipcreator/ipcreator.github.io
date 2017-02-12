@@ -4,6 +4,70 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/12/ai-vs-machine-learning/</loc>
+    <lastmod>2017-02-12T15:01:13.211Z</lastmod>
+    <data>
+        <display>
+        <title>人工智能VS机器学习</title>
+        <pubTime>2017-02-12T14:49:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/12/zh-history-of-robot/</loc>
+    <lastmod>2017-02-12T14:40:35.615Z</lastmod>
+    <data>
+        <display>
+        <title>机器人的前世今生</title>
+        <pubTime>2017-02-12T14:28:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Robot</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/01/29/hello-world/</loc>
+    <lastmod>2017-02-12T14:34:16.281Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎访问我的个人博客</title>
+        <pubTime>2017-01-29T11:37:06.000Z</pubTime>
+        
+        <tag>博客</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/07/zh-history-of-javascript/</loc>
     <lastmod>2017-02-12T13:20:56.915Z</lastmod>
     <data>
@@ -94,26 +158,6 @@
         <pubTime>2017-02-11T11:16:06.000Z</pubTime>
         
         <tag>感悟</tag>
-         
-         
-           
-             
-              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/01/29/hello-world/</loc>
-    <lastmod>2017-02-12T11:11:35.272Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎访问我的个人博客</title>
-        <pubTime>2017-01-29T11:37:06.000Z</pubTime>
-        
-        <tag>博客</tag>
          
          
            
@@ -261,9 +305,9 @@
         <title>scikit-learn machine learning in Python</title>
         <pubTime>2017-02-12T04:40:06.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>Python</tag>
          
          
            
