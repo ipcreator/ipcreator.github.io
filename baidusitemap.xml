@@ -4,8 +4,242 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/14/ten-truths-of-ai-star-up-firm/</loc>
+    <lastmod>2017-02-14T07:24:09.298Z</lastmod>
+    <data>
+        <display>
+        <title>李开复：AI 创业的十个真相</title>
+        <pubTime>2017-02-14T07:08:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>创业</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/14/the-future-of-personal-terminal/</loc>
+    <lastmod>2017-02-14T07:04:30.007Z</lastmod>
+    <data>
+        <display>
+        <title>智能手机 + 机器学习 = 个人终端的未来</title>
+        <pubTime>2017-02-14T06:58:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
+         
+        <tag>SmartPhone</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/14/ppt-of-andrew-ng/</loc>
+    <lastmod>2017-02-14T06:48:40.515Z</lastmod>
+    <data>
+        <display>
+        <title>吴恩达 NIPS 2016：利用深度学习开发人工智能应用的基本要点</title>
+        <pubTime>2017-02-14T06:39:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Deep Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/14/ai-on-terminal-of-google/</loc>
+    <lastmod>2017-02-14T05:25:09.372Z</lastmod>
+    <data>
+        <display>
+        <title>谷歌发布全新轻型机器学习架构：可直接载于设备端的AI系统</title>
+        <pubTime>2017-02-14T05:15:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Google</tag>
+         
+        <tag>Android Wear</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/14/pytorch-of-facebook/</loc>
+    <lastmod>2017-02-14T05:13:57.633Z</lastmod>
+    <data>
+        <display>
+        <title>Facebook 发布开源框架 PyTorch</title>
+        <pubTime>2017-02-14T05:11:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Open Source</tag>
+         
+        <tag>Facebook</tag>
+         
+        <tag>PyTorch</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/14/basic-knowledge-of-scikit-learn/</loc>
+    <lastmod>2017-02-14T05:07:19.478Z</lastmod>
+    <data>
+        <display>
+        <title>Scikit-learn入门指南</title>
+        <pubTime>2017-02-14T05:04:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
+         
+        <tag>Scikit</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/14/20-open-source-projects-of-machine-learning/</loc>
+    <lastmod>2017-02-14T05:00:48.768Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习年度 20 大开源项目花落谁家？（Python 版）</title>
+        <pubTime>2017-02-14T04:55:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
+         
+        <tag>Open Source</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/14/right-way-of-master-machine-learning/</loc>
+    <lastmod>2017-02-14T04:55:10.268Z</lastmod>
+    <data>
+        <display>
+        <title>技术大牛带你走向机器学习“正道”</title>
+        <pubTime>2017-02-14T04:47:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/14/white-paper-of-google-machine-learning/</loc>
+    <lastmod>2017-02-14T04:46:04.083Z</lastmod>
+    <data>
+        <display>
+        <title>谷歌机器学习白皮书全解析43条黄金法则</title>
+        <pubTime>2017-02-13T23:14:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
+         
+        <tag>Google</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/14/brain-and-chips/</loc>
+    <lastmod>2017-02-14T00:30:57.188Z</lastmod>
+    <data>
+        <display>
+        <title>脑芯编：窥脑究竟，织网造芯</title>
+        <pubTime>2017-02-13T23:14:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Chip</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/13/ai-on-ear-phone/</loc>
-    <lastmod>2017-02-13T08:43:13.957Z</lastmod>
+    <lastmod>2017-02-14T00:01:46.617Z</lastmod>
     <data>
         <display>
         <title>新型耳机将要拉开AI增强人耳听觉序幕？</title>
@@ -16,6 +250,28 @@
         <tag>Product</tag>
          
         <tag>Service</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/14/how-to-train-deep-neural-network/</loc>
+    <lastmod>2017-02-13T23:57:08.535Z</lastmod>
+    <data>
+        <display>
+        <title>如何训练深度神经网络？老司机的 15 点建议</title>
+        <pubTime>2017-02-13T23:54:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Neural Network</tag>
          
          
            
