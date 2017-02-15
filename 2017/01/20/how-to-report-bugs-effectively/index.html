@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://ipcreator.me">
+  <title>如何有效地报告 Bug | IPCreator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="作者：Simon Tatham 专业的自由软件程序员翻译：Dasn
+引言为公众写过软件的人，大概都收到过很拙劣的bug（计算机程序代码中的错误或程序运行时的瑕疵——译者注）报告，例如：
+
+在报告中说“不好用”；
+所报告内容毫无意义；
+在报告中用户没有提供足够的信息；
+在报告中提供了错误信息；
+所报告的问题是由于用户的过失而产生的；
+所报告的问题是由于其他程序的错误而产生的；
+所报告的问题是由于网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何有效地报告 Bug">
+<meta property="og:url" content="http://ipcreator.me/2017/01/20/how-to-report-bugs-effectively/index.html">
+<meta property="og:site_name" content="IPCreator">
+<meta property="og:description" content="作者：Simon Tatham 专业的自由软件程序员翻译：Dasn
+引言为公众写过软件的人，大概都收到过很拙劣的bug（计算机程序代码中的错误或程序运行时的瑕疵——译者注）报告，例如：
+
+在报告中说“不好用”；
+所报告内容毫无意义；
+在报告中用户没有提供足够的信息；
+在报告中提供了错误信息；
+所报告的问题是由于用户的过失而产生的；
+所报告的问题是由于其他程序的错误而产生的；
+所报告的问题是由于网络">
+<meta property="og:updated_time" content="2017-02-15T13:05:04.953Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何有效地报告 Bug">
+<meta name="twitter:description" content="作者：Simon Tatham 专业的自由软件程序员翻译：Dasn
+引言为公众写过软件的人，大概都收到过很拙劣的bug（计算机程序代码中的错误或程序运行时的瑕疵——译者注）报告，例如：
+
+在报告中说“不好用”；
+所报告内容毫无意义；
+在报告中用户没有提供足够的信息；
+在报告中提供了错误信息；
+所报告的问题是由于用户的过失而产生的；
+所报告的问题是由于其他程序的错误而产生的；
+所报告的问题是由于网络">
+  
+  
+    <link rel="icon" href="/img/personalphoto.jpg">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.2d7529.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #4d4d4d"></div>
+<div class="intrude-less">
+
+
+
+
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/personalphoto.jpg" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">For life</a></h1>
+		</hgroup>
+		
+		<p class="header-subtitle">Growing up is the only password.</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/personalphoto.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">For life</h1>
+			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Growing up is the only password.<i class="icon icon-quo-right"></i></p>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/archives">归档</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-how-to-report-bugs-effectively" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何有效地报告 Bug
+    </h1>
+  
+
+        
+        <a href="/2017/01/20/how-to-report-bugs-effectively/" class="archive-article-date">
+  	<time datetime="2017-01-20T12:23:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作者：<a href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html" target="_blank" rel="external">Simon Tatham</a> 专业的自由软件程序员<br>翻译：Dasn</p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>为公众写过软件的人，大概都收到过很拙劣的bug（计算机程序代码中的错误或程序运行时的瑕疵——译者注）报告，例如：</p>
+<ul>
+<li>在报告中说“不好用”；</li>
+<li>所报告内容毫无意义；</li>
+<li>在报告中用户没有提供足够的信息；</li>
+<li>在报告中提供了错误信息；</li>
+<li>所报告的问题是由于用户的过失而产生的；</li>
+<li>所报告的问题是由于其他程序的错误而产生的；</li>
+<li>所报告的问题是由于网络错误而产生的；</li>
+</ul>
+<p>这便是为什么“技术支持”被认为是一件可怕的工作，因为有拙劣的bug报告需要处理。然而并不是所有的bug报告都令人生厌：我在业余时间维护自由软件，有时我会收到非常清晰、有帮助并且“有内容”的bug报告。在这里我会尽力阐明如何写一个好的bug报告。我非常希望每一个人在报告bug之前都读一下这篇短文，当然我也希望用户在给我报告bug之前已经读过这篇文章。</p>
+<a id="more"></a>
+<p>简单地说，报告bug的目的是为了让程序员看到程序的错误。您可以亲自示范，也可以给出能导致程序出错的、详尽的操作步骤。如果程序出错了，程序员会收集额外的信息直到找到错误的原因；如果程序没有出错，那么他们会请您继续关注这个问题，收集相关的信息。</p>
+<p>在bug报告里，要设法搞清什么是事实（例如：“我在电脑旁”和“XX出现了”）什么是推测（例如：“我想问题可能是出在……”）。如果愿意的话，您可以省去推测，但是千万别省略事实。</p>
+<p>当您报告bug的时候（既然您已经这么做了），一定是希望bug得到及时修正。所以此时针对程序员的任何过激或亵渎的言语（甚至谩骂）都是与事无补的——因为这可能是程序员的错误，也有可能是您的错误，也许您有权对他们发火，但是如果您能多提供一些有用的信息（而不是激愤之词）或许bug会被更快的修正。除此以外，请记住：如果是免费软件，作者提供给我们已经是出于好心，所以要是太多的人对他们无礼，他们可能就要“收起”这份好心了。</p>
+<p>##“程序不好用”</p>
+<p>程序员不是弱智：如果程序一点都不好用，他们不可能不知道。他们不知道一定是因为程序在他们看来工作得很正常。所以，或者是您作过一些与他们不同的操作，或者是您的环境与他们不同。他们需要信息，报告bug也是为了提供信息。信息总是越多越好。</p>
+<p>许多程序，特别是自由软件，会公布一个“已知bug列表”。如果您找到的bug在列表里已经有了，那就不必再报告了，但是如果您认为自己掌握的信息比列表中的丰富，那无论如何也要与程序员联系。您提供的信息可能会使他们更简单地修复bug。</p>
+<p>本文中提到的都是一些指导方针，没有哪一条是必须恪守的准则。不同的程序员会喜欢不同形式的bug报告。如果程序附带了一套报告bug的准则，一定要读。如果它与本文中提到的规则相抵触，那么请以它为准。</p>
+<p>如果您不是报告bug，而是寻求帮助，您应该说明您曾经到哪里找过答案，（例如：我看了第四章和第五章的第二节，但我找不到解决的办法。）这会使程序员了解用户喜欢到哪里去找答案，从而使程序员把帮助文档做得更容易使用。</p>
+<p>##“演示给我看”</p>
+<p>报告bug的最好的方法之一是“演示”给程序员看。让程序员站在电脑前，运行他们的程序，指出程序的错误。让他们看着您启动电脑、运行程序、如何进行操作以及程序对您的输入有何反应。</p>
+<p>他们对自己写的软件了如指掌，他们知道哪些地方不会出问题，而哪些地方最可能出问题。他们本能地知道应该注意什么。在程序真的出错之前，他们可能已经注意到某些地方不对劲，这些都会给他们一些线索。他们会观察程序测试中的每一个细节，并且选出他们认为有用的信息。</p>
+<p>这些可能还不够。也许他们觉得还需要更多的信息，会请您重复刚才的操作。他们可能在这期间需要与您交流一下，以便在他们需要的时候让bug重新出现。他们可能会改变一些操作，看看这个错误的产生是个别问题还是相关的一类问题。如果您不走运，他们可能需要坐下来，拿出一堆开发工具，花上几个小时来好好地研究一下。但是最重要的是在程序出错的时候让程序员在电脑旁。一旦他们看到了问题，他们通常会找到原因并开始试着修改。</p>
+<p>##“告诉我该怎么做”</p>
+<p>如今是网络时代，是信息交流的时代。我可以点一下鼠标把自己的程序送到俄罗斯的某个朋友那里，当然他也可以用同样简单的方法给我一些建议。但是如果我的程序出了什么问题，我不可能在他旁边。“演示”是很好的办法，但是常常做不到。</p>
+<p>如果您必须报告bug，而此时程序员又不在您身边，那么您就要想办法让bug重现在他们面前。当他们亲眼看到错误时，就能够进行处理了。</p>
+<p>确切地告诉程序员您做了些什么。如果是一个图形界面程序，告诉他们您按了哪个按钮，依照什么顺序按的。如果是一个命令行程序，精确的告诉他们您键入了什么命令。您应该尽可能详细地提供您所键入的命令和程序的反应。</p>
+<p>把您能想到的所有的输入方式都告诉程序员，如果程序要读取一个文件，您可能需要发一个文件的拷贝给他们。如果程序需要通过网络与另一台电脑通讯，您或许不能把那台电脑复制过去，但至少可以说一下电脑的类型和安装了哪些软件（如果可以的话）。</p>
+<p>##“哪儿出错了？在我看来一切正常哦！”</p>
+<p>如果您给了程序员一长串输入和指令，他们执行以后没有出现错误，那是因为您没有给他们足够的信息，可能错误不是在每台计算机上都出现，您的系统可能和他们的在某些地方不一样。有时候程序的行为可能和您预想的不一样，这也许是误会，但是您会认为程序出错了，程序员却认为这是对的。</p>
+<p>同样也要描述发生了什么。精确的描述您看到了什么。告诉他们为什么您觉得自己所看到的是错误的，最好再告诉他们，您认为自己应该看到什么。如果您只是说：“程序出错了”，那您很可能漏掉了非常重要的信息。</p>
+<p>如果您看到了错误消息，一定要仔细、准确的告诉程序员，这确实很重要。在这种情况下，程序员只要修正错误，而不用去找错误。他们需要知道是什么出问题了，系统所报的错误消息正好帮助了他们。如果您没有更好的方法记住这些消息，就把它们写下来。只报告“程序出了一个错”是毫无意义的，除非您把错误消息一块报上来。</p>
+<p>特殊情况下，如果有错误消息号，一定要把这些号码告诉程序员。不要以为您看不出任何意义，它就没有意义。错误消息号包含了能被程序员读懂的各种信息，并且很有可能包含重要的线索。给错误消息编号是因为用语言描述计算机错误常常令人费解。用这种方式告诉您错误的所在是一个最好的办法。</p>
+<p>在这种情形下，程序员的排错工作会十分高效。他们不知道发生了什么，也不可能到现场去观察，所以他们一直在搜寻有价值的线索。错误消息、错误消息号以及一些莫名其妙的延迟，都是很重要的线索，就像办案时的指纹一样重要，保存好。</p>
+<p>如果您使用UNIX系统，程序可能会产生一个内核输出（coredump）。内核输出是特别有用的线索来源，别扔了它们。另一方面，大多数程序员不喜欢收到含有大量内核输出文件的EMAIL，所以在发邮件之前最好先问一下。还有一点要注意：内核输出文件记录了完整的程序状态，也就是说任何秘密（可能当时程序正在处理一些私人信息或秘密数据）都可能包含在内核输出文件里。</p>
+<p>##“出了问题之后，我做了……”</p>
+<p>当一个错误或bug发生的时候，您可能会做许多事情。但是大多数人会使事情变的更糟。我的一个朋友在学校里误删了她所有的Word文件，在找人帮忙之前她重装了Word，又运行了一遍碎片整理程序，这些操作对于恢复文件是毫无益处的，因为这些操作搞乱了磁盘的文件区块。恐怕在这个世界上没有一种反删除软件能恢复她的文件了。如果她不做任何操作，或许还有一线希望。</p>
+<p>这种用户仿佛一只被逼到墙角的鼬（黄鼠狼、紫貂一类的动物——译者注）：背靠墙壁，面对死亡的降临奋起反扑，疯狂攻击。他们认为做点什么总比什么都不做强。然而这些在处理计算机软件问题时并不适用。</p>
+<p>不要做鼬，做一只羚羊。当一只羚羊面对料想不到的情况或受到惊吓时，它会一动不动，是为了不吸引任何注意，与此同时也在思考解决问题的最好办法（如果羚羊有一条技术支持热线，此时占线。）。然后，一旦它找到了最安全的行动方案，它便去做。</p>
+<p>当程序出毛病的时候，立刻停止正在做的任何操作。不要按任何健。仔细地看一下屏幕，注意那些不正常的地方，记住它或者写下来。然后慎重地点击“确定” 或“取消”，选择一个最安全的。学着养成一种条件反射——一旦电脑出了问题，先不要动。要想摆脱这个问题，关掉受影响的程序或者重新启动计算机都不好，一个解决问题的好办法是让问题再次产生。程序员们喜欢可以被重现的问题，快乐的程序员可以更快而且更有效率的修复bug。</p>
+<p>##“我想粒子的跃迁与错误的极化有关”</p>
+<p>并不只是非专业的用户才会写出拙劣的bug报告，我见过一些非常差的bug报告出自程序员之手，有些还是非常优秀的程序员。</p>
+<p>有一次我与另一个程序员一起工作，他一直在找代码中的bug，他常常遇到一个bug，但是不会解决，于是就叫我帮忙。“出什么毛病了？”我问。而他的回答却总是一些关于bug的意见。如果他的观点正确，那的确是一件好事。这意味着他已经完成了工作的一半，并且我们可以一起完成另一半工作。这是有效率并有用的。</p>
+<p>但事实上他常常是错的。这就会使我们花上半个小时在原本正确的代码里来回寻找错误，而实际上问题出在别的地方。我敢肯定他不会对医生这么做。“大夫，我得了Hydroyoyodyne（真是怪病——译者），给我开个方子”，人们知道不该对一位医生说这些。您描述一下症状，哪个地方不舒服，哪里疼、起皮疹、发烧……让医生诊断您得了什么病，应该怎样治疗。否则医生会把您当做疑心病或精神病患者打发了，这似乎没什么不对。</p>
+<p>做程序员也是一样。即便您自己的“诊断”有时真的有帮助，也要只说“症状”。“诊断”是可说可不说的，但是“症状”一定要说。同样，在bug报告里面附上一份针对bug而做出修改的源代码是有用处的，但它并不能替代bug报告本身。</p>
+<p>如果程序员向您询问额外的信息，千万别应付。曾经有一个人向我报告bug，我让他试一个命令，我知道这个命令不好用，但我是要看看程序会返回一个什么错误（这是很重要的线索）。但是这位老兄根本就没试，他在回复中说“那肯定不好用”，于是我又花了好些时间才说服他试了一下那个命令。</p>
+<p>用户多动动脑筋对程序员的工作是有帮助的。即使您的推断是错误的，程序员也应该感谢您，至少您想去帮助他们，使他们的工作变的更简单。不过千万别忘了报告“症状”，否则只会使事情变得更糟。</p>
+<p>##“真是奇怪，刚才还不好用，怎么现在又好了？”</p>
+<p>“间歇性错误”着实让程序员发愁。相比之下，进行一系列简单的操作便能导致错误发生的问题是简单的。程序员可以在一个便于观察的条件下重复那些操作，观察每一个细节。太多的问题在这种情况下不能解决，例如：程序每星期出一次错，或者偶然出一次错，或者在程序员面前从不出错（程序员一离开就出错。——译者）。当然还有就是程序的截止日期到了，那肯定要出错。</p>
+<p>大多数“间歇性错误”并不是真正的“间歇”。其中的大多数错误与某些地方是有联系的。有一些错误可能是内存泄漏产生的，有一些可能是别的程序在不恰当的时候修改某个重要文件造成的，还有一些可能发生在每一个小时的前半个小时中（我确实遇到过这种事情）。</p>
+<p>同样，如果您能使bug重现，而程序员不能，那很有可能是他们的计算机和您的计算机在某些地方是不同的，这种不同引起了问题。我曾写过一个程序，它的窗口可以蜷缩成一个小球呆在屏幕的左上角，它在别的计算机上只能在 800x600 的解析度工作，但是在我的机器上却可以在 1024x768 下工作。</p>
+<p>程序员想要了解任何与您发现的问题相关的事情。有可能的话您到另一台机器上试试，多试几次，两次，三次，看看问题是不是经常发生。如果问题出现在您进行了一系列操作之后，不是您想让它出现它就会出现，这就有可能是长时间的运行或处理大文件所导致的错误。程序崩溃的时候，您要尽可能的记住您都做了些什么，并且如果您看到任何图形,也别忘了提一下。您提供的任何事情都是有帮助的。即使只是概括性的描述（例如：当后台有EMACS运行时，程序常常出错），这虽然不能提供导致问题的直接线索，但是可能帮助程序员重现问题。</p>
+<p>最重要的是：程序员想要确定他们正在处理的是一个真正的“间歇性错误”呢，还是一个在另一类特定的计算机上才出现的错误。他们想知道有关您计算机的许多细节，以便了解您的机器与他们的有什么不同。有许多细节都依仗特定的程序，但是有一件东西您一定要提供——版本号。程序的版本、操作系统的版本以及与问题有关的程序的版本。</p>
+<p>##“我把磁盘装进了 Windows……”</p>
+<p>表意清楚在一份bug报告里是最基本的要求。如果程序员不知道您说的是什么意思，那您就跟没说一样。我收到的bug报告来自世界各地，有许多是来自非英语国家，他们通常为自己的英文不好而表示歉意。总的来说，这些用户发来的bug报告通常是清晰而且有用的。几乎所有不清晰的bug报告都是来自母语是英语的人，他们总是以为只要自己随便说说，程序员就能明白。</p>
+<p>精确。如果做相同的事情有两种方法，请说明您用的是哪一种。例如：“我选择了‘载入’”，可能意味着“我用鼠标点击‘载入’”或“我按下了‘ALT+L’”，说清楚您用了哪种方法，有时候这也有关系。<br>详细。信息宁多毋少！如果您说了很多，程序员可以略去一部分，可是如果您说的太少，他们就不得不回过头再去问您一些问题。有一次我收到了一份bug报告只有一句话，每一次我问他更多事情时，他每次的回复都是一句话，于是我花了几个星期的时间才得到了有用的信息。<br>慎用代词。诸如“它”，“窗体”这些词，当它们指代不清晰的时候不要用。来看看这句话：“我运行了FooApp，它弹出一个警告窗口，我试着关掉它，它就崩溃了。”这种表述并不清晰，用户究竟关掉了哪个窗口？是警告窗口还是整个FooApp程序？您可以这样说，“我运行FooApp程序时弹出一个警告窗口，我试着关闭警告窗口，FooApp崩溃了。”这样虽然罗嗦点，但是很清晰不容易产生误解。</p>
+<p>检查。重新读一遍您写的bug报告，您觉得它是否清晰？如果您列出了一系列能导致程序出错的操作，那么照着做一遍，看看您是不是漏写了一步。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>bug报告的首要目的是让程序员亲眼看到错误。如果您不能亲自做给他们看，给他们能使程序出错的详细的操作步骤。</li>
+<li>如果首要目的不能达成，程序员不能看到程序出错。这就需要bug报告的第二个目的来描述程序的什么地方出毛病了。详细的描述每一件事情：您看到了什么，您想看到什么，把错误消息记下来，尤其是“错误消息号”。</li>
+<li>当您的计算机做了什么您料想不到的事，不要动！在您平静下来之前什么都别做。不要做您认为不安全的事。</li>
+<li>尽量试着自己“诊断”程序出错的原因（如果您认为自己可以的话）。即使做出了“诊断”，您仍然应该报告“症状”。</li>
+<li>如果程序员需要，请准备好额外的信息。如果他们不需要，就不会问您要。他们不会故意为难自己。您手头上一定要有程序的版本号，它很可能是必需品。</li>
+<li>表述清楚，确保您的意思不能被曲解。</li>
+<li>总的来说，最重要的是要做到精确。程序员喜欢精确。</li>
+</ul>
+<p>声明：我从没有真的看见过鼬和羚羊，我的比喻可能不恰当。</p>
+<p>版权所有 Simon Tatham 1999</p>
+<p>本文属于OPL（OpenContent License），请在复制和使用本文时自觉遵守OPL。</p>
+<p>对本文的任何意见和批评请发送至：</p>
+<p>英文版：anakin@pobox.com</p>
+<p>中文版：dasn@users.sf.net</p>
+<h1 id="How-to-Report-Bugs-Effectively"><a href="#How-to-Report-Bugs-Effectively" class="headerlink" title="How to Report Bugs Effectively"></a><a href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html" target="_blank" rel="external">How to Report Bugs Effectively</a></h1><p>by Simon Tatham, professional and free-software programmer</p>
+<p>[ English | Português | 简体中文 | Česky | Dansk | Deutsch | Español | Français | Magyar | Italiano | 日本語 | Nederlands | Polski | Русский | 繁體中文 ]</p>
+<p>Introduction</p>
+<p>Anybody who has written software for public use will probably have received at least one bad bug report. Reports that say nothing (“It doesn’t work!”); reports that make no sense; reports that don’t give enough information; reports that give wrong information. Reports of problems that turn out to be user error; reports of problems that turn out to be the fault of somebody else’s program; reports of problems that turn out to be network failures.</p>
+<p>There’s a reason why technical support is seen as a horrible job to be in, and that reason is bad bug reports. However, not all bug reports are unpleasant: I maintain free software, when I’m not earning my living, and sometimes I receive wonderfully clear, helpful, informative bug reports.</p>
+<p>In this essay I’ll try to state clearly what makes a good bug report. Ideally I would like everybody in the world to read this essay before reporting any bugs to anybody. Certainly I would like everybody who reports bugs to me to have read it.</p>
+<p>In a nutshell, the aim of a bug report is to enable the programmer to see the program failing in front of them. You can either show them in person, or give them careful and detailed instructions on how to make it fail. If they can make it fail, they will try to gather extra information until they know the cause. If they can’t make it fail, they will have to ask you to gather that information for them.</p>
+<p>In bug reports, try to make very clear what are actual facts (“I was at the computer and this happened”) and what are speculations (“I think the problem might be this”). Leave out speculations if you want to, but don’t leave out facts.</p>
+<p>When you report a bug, you are doing so because you want the bug fixed. There is no point in swearing at the programmer or being deliberately unhelpful: it may be their fault and your problem, and you might be right to be angry with them, but the bug will get fixed faster if you help them by supplying all the information they need. Remember also that if the program is free, then the author is providing it out of kindness, so if too many people are rude to them then they may stop feeling kind.</p>
+<p>“It doesn’t work.”</p>
+<p>Give the programmer some credit for basic intelligence: if the program really didn’t work at all, they would probably have noticed. Since they haven’t noticed, it must be working for them. Therefore, either you are doing something differently from them, or your environment is different from theirs. They need information; providing this information is the purpose of a bug report. More information is almost always better than less.</p>
+<p>Many programs, particularly free ones, publish their list of known bugs. If you can find a list of known bugs, it’s worth reading it to see if the bug you’ve just found is already known or not. If it’s already known, it probably isn’t worth reporting again, but if you think you have more information than the report in the bug list, you might want to contact the programmer anyway. They might be able to fix the bug more easily if you can give them information they didn’t already have.</p>
+<p>This essay is full of guidelines. None of them is an absolute rule. Particular programmers have particular ways they like bugs to be reported. If the program comes with its own set of bug-reporting guidelines, read them. If the guidelines that come with the program contradict the guidelines in this essay, follow the ones that come with the program!</p>
+<p>If you are not reporting a bug but just asking for help using the program, you should state where you have already looked for the answer to your question. (“I looked in chapter 4 and section 5.2 but couldn’t find anything that told me if this is possible.”) This will let the programmer know where people will expect to find the answer, so they can make the documentation easier to use.</p>
+<p>“Show me.”</p>
+<p>One of the very best ways you can report a bug is by showing it to the programmer. Stand them in front of your computer, fire up their software, and demonstrate the thing that goes wrong. Let them watch you start the machine, watch you run the software, watch how you interact with the software, and watch what the software does in response to your inputs.</p>
+<p>They know that software like the back of their hand. They know which parts they trust, and they know which parts are likely to have faults. They know intuitively what to watch for. By the time the software does something obviously wrong, they may well have already noticed something subtly wrong earlier which might give them a clue. They can observe everything the computer does during the test run, and they can pick out the important bits for themselves.</p>
+<p>This may not be enough. They may decide they need more information, and ask you to show them the same thing again. They may ask you to talk them through the procedure, so that they can reproduce the bug for themselves as many times as they want. They might try varying the procedure a few times, to see whether the problem occurs in only one case or in a family of related cases. If you’re unlucky, they may need to sit down for a couple of hours with a set of development tools and really start investigating. But the most important thing is to have the programmer looking at the computer when it goes wrong. Once they can see the problem happening, they can usually take it from there and start trying to fix it.</p>
+<p>“Show me how to show myself.”</p>
+<p>This is the era of the Internet. This is the era of worldwide communication. This is the era in which I can send my software to somebody in Russia at the touch of a button, and he can send me comments about it just as easily. But if he has a problem with my program, he can’t have me standing in front of it while it fails. “Show me” is good when you can, but often you can’t.</p>
+<p>If you have to report a bug to a programmer who can’t be present in person, the aim of the exercise is to enable them to reproduce the problem. You want the programmer to run their own copy of the program, do the same things to it, and make it fail in the same way. When they can see the problem happening in front of their eyes, then they can deal with it.</p>
+<p>So tell them exactly what you did. If it’s a graphical program, tell them which buttons you pressed and what order you pressed them in. If it’s a program you run by typing a command, show them precisely what command you typed. Wherever possible, you should provide a verbatim transcript of the session, showing what commands you typed and what the computer output in response.</p>
+<p>Give the programmer all the input you can think of. If the program reads from a file, you will probably need to send a copy of the file. If the program talks to another computer over a network, you probably can’t send a copy of that computer, but you can at least say what kind of computer it is, and (if you can) what software is running on it.</p>
+<p>“Works for me. So what goes wrong?”</p>
+<p>If you give the programmer a long list of inputs and actions, and they fire up their own copy of the program and nothing goes wrong, then you haven’t given them enough information. Possibly the fault doesn’t show up on every computer; your system and theirs may differ in some way. Possibly you have misunderstood what the program is supposed to do, and you are both looking at exactly the same display but you think it’s wrong and they know it’s right.</p>
+<p>So also describe what happened. Tell them exactly what you saw. Tell them why you think what you saw is wrong; better still, tell them exactly what you expected to see. If you say “and then it went wrong”, you have left out some very important information.</p>
+<p>If you saw error messages then tell the programmer, carefully and precisely, what they were. They are important! At this stage, the programmer is not trying to fix the problem: they’re just trying to find it. They need to know what has gone wrong, and those error messages are the computer’s best effort to tell you that. Write the errors down if you have no other easy way to remember them, but it’s not worth reporting that the program generated an error unless you can also report what the error message was.</p>
+<p>In particular, if the error message has numbers in it, do let the programmer have those numbers. Just because you can’t see any meaning in them doesn’t mean there isn’t any. Numbers contain all kinds of information that can be read by programmers, and they are likely to contain vital clues. Numbers in error messages are there because the computer is too confused to report the error in words, but is doing the best it can to get the important information to you somehow.</p>
+<p>At this stage, the programmer is effectively doing detective work. They don’t know what’s happened, and they can’t get close enough to watch it happening for themselves, so they are searching for clues that might give it away. Error messages, incomprehensible strings of numbers, and even unexplained delays are all just as important as fingerprints at the scene of a crime. Keep them!</p>
+<p>If you are using Unix, the program may have produced a core dump. Core dumps are a particularly good source of clues, so don’t throw them away. On the other hand, most programmers don’t like to receive huge core files by e-mail without warning, so ask before mailing one to anybody. Also, be aware that the core file contains a record of the complete state of the program: any “secrets” involved (maybe the program was handling a personal message, or dealing with confidential data) may be contained in the core file.</p>
+<p>“So then I tried . . .”</p>
+<p>There are a lot of things you might do when an error or bug comes up. Many of them make the problem worse. A friend of mine at school deleted all her Word documents by mistake, and before calling in any expert help, she tried reinstalling Word, and then she tried running Defrag. Neither of these helped recover her files, and between them they scrambled her disk to the extent that no Undelete program in the world would have been able to recover anything. If she’d only left it alone, she might have had a chance.</p>
+<p>Users like this are like a mongoose backed into a corner: with its back to the wall and seeing certain death staring it in the face, it attacks frantically, because doing something has to be better than doing nothing. This is not well adapted to the type of problems computers produce.</p>
+<p>Instead of being a mongoose, be an antelope. When an antelope is confronted with something unexpected or frightening, it freezes. It stays absolutely still and tries not to attract any attention, while it stops and thinks and works out the best thing to do. (If antelopes had a technical support line, it would be telephoning it at this point.) Then, once it has decided what the safest thing to do is, it does it.</p>
+<p>When something goes wrong, immediately stop doing anything. Don’t touch any buttons at all. Look at the screen and notice everything out of the ordinary, and remember it or write it down. Then perhaps start cautiously pressing “OK” or “Cancel”, whichever seems safest. Try to develop a reflex reaction - if a computer does anything unexpected, freeze.</p>
+<p>If you manage to get out of the problem, whether by closing down the affected program or by rebooting the computer, a good thing to do is to try to make it happen again. Programmers like problems that they can reproduce more than once. Happy programmers fix bugs faster and more efficiently.</p>
+<p>“I think the tachyon modulation must be wrongly polarised.”</p>
+<p>It isn’t only non-programmers who produce bad bug reports. Some of the worst bug reports I’ve ever seen come from programmers, and even from good programmers.</p>
+<p>I worked with another programmer once, who kept finding bugs in his own code and trying to fix them. Every so often he’d hit a bug he couldn’t solve, and he’d call me over to help. “What’s gone wrong?” I’d ask. He would reply by telling me his current opinion of what needed to be fixed.</p>
+<p>This worked fine when his current opinion was right. It meant he’d already done half the work and we were able to finish the job together. It was efficient and useful.</p>
+<p>But quite often he was wrong. We would work for some time trying to figure out why some particular part of the program was producing incorrect data, and eventually we would discover that it wasn’t, that we’d been investigating a perfectly good piece of code for half an hour, and that the actual problem was somewhere else.</p>
+<p>I’m sure he wouldn’t do that to a doctor. “Doctor, I need a prescription for Hydroyoyodyne.” People know not to say that to a doctor: you describe the symptoms, the actual discomforts and aches and pains and rashes and fevers, and you let the doctor do the diagnosis of what the problem is and what to do about it. Otherwise the doctor dismisses you as a hypochondriac or crackpot, and quite rightly so.</p>
+<p>It’s the same with programmers. Providing your own diagnosis might be helpful sometimes, but always state the symptoms. The diagnosis is an optional extra, and not an alternative to giving the symptoms. Equally, sending a modification to the code to fix the problem is a useful addition to a bug report but not an adequate substitute for one.</p>
+<p>If a programmer asks you for extra information, don’t make it up! Somebody reported a bug to me once, and I asked him to try a command that I knew wouldn’t work. The reason I asked him to try it was that I wanted to know which of two different error messages it would give. Knowing which error message came back would give a vital clue. But he didn’t actually try it - he just mailed me back and said “No, that won’t work”. It took me some time to persuade him to try it for real.</p>
+<p>Using your intelligence to help the programmer is fine. Even if your deductions are wrong, the programmer should be grateful that you at least tried to make their life easier. But report the symptoms as well, or you may well make their life much more difficult instead.</p>
+<p>“That’s funny, it did it a moment ago.”</p>
+<p>Say “intermittent fault” to any programmer and watch their face fall. The easy problems are the ones where performing a simple sequence of actions will cause the failure to occur. The programmer can then repeat those actions under closely observed test conditions and watch what happens in great detail. Too many problems simply don’t work that way: there will be programs that fail once a week, or fail once in a blue moon, or never fail when you try them in front of the programmer but always fail when you have a deadline coming up.</p>
+<p>Most intermittent faults are not truly intermittent. Most of them have some logic somewhere. Some might occur when the machine is running out of memory, some might occur when another program tries to modify a critical file at the wrong moment, and some might occur only in the first half of every hour! (I’ve actually seen one of these.)</p>
+<p>Also, if you can reproduce the bug but the programmer can’t, it could very well be that their computer and your computer are different in some way and this difference is causing the problem. I had a program once whose window curled up into a little ball in the top left corner of the screen, and sat there and sulked. But it only did it on 800x600 screens; it was fine on my 1024x768 monitor.</p>
+<p>The programmer will want to know anything you can find out about the problem. Try it on another machine, perhaps. Try it twice or three times and see how often it fails. If it goes wrong when you’re doing serious work but not when you’re trying to demonstrate it, it might be long running times or large files that make it fall over. Try to remember as much detail as you can about what you were doing to it when it did fall over, and if you see any patterns, mention them. Anything you can provide has to be some help. Even if it’s only probabilistic (such as “it tends to crash more often when Emacs is running”), it might not provide direct clues to the cause of the problem, but it might help the programmer reproduce it.</p>
+<p>Most importantly, the programmer will want to be sure of whether they’re dealing with a true intermittent fault or a machine-specific fault. They will want to know lots of details about your computer, so they can work out how it differs from theirs. A lot of these details will depend on the particular program, but one thing you should definitely be ready to provide is version numbers. The version number of the program itself, and the version number of the operating system, and probably the version numbers of any other programs that are involved in the problem.</p>
+<p>“So I loaded the disk on to my Windows . . .”</p>
+<p>Writing clearly is essential in a bug report. If the programmer can’t tell what you meant, you might as well not have said anything.</p>
+<p>I get bug reports from all around the world. Many of them are from non-native English speakers, and a lot of those apologise for their poor English. In general, the bug reports with apologies for their poor English are actually very clear and useful. All the most unclear reports come from native English speakers who assume that I will understand them even if they don’t make any effort to be clear or precise.</p>
+<p>Be specific. If you can do the same thing two different ways, state which one you used. “I selected Load” might mean “I clicked on Load” or “I pressed Alt-L”. Say which you did. Sometimes it matters.<br>Be verbose. Give more information rather than less. If you say too much, the programmer can ignore some of it. If you say too little, they have to come back and ask more questions. One bug report I received was a single sentence; every time I asked for more information, the reporter would reply with another single sentence. It took me several weeks to get a useful amount of information, because it turned up one short sentence at a time.<br>Be careful of pronouns. Don’t use words like “it”, or references like “the window”, when it’s unclear what they mean. Consider this: “I started FooApp. It put up a warning window. I tried to close it and it crashed.” It isn’t clear what the user tried to close. Did they try to close the warning window, or the whole of FooApp? It makes a difference. Instead, you could say “I started FooApp, which put up a warning window. I tried to close the warning window, and FooApp crashed.” This is longer and more repetitive, but also clearer and less easy to misunderstand.<br>Read what you wrote. Read the report back to yourself, and see if you think it’s clear. If you have listed a sequence of actions which should produce the failure, try following them yourself, to see if you missed a step.<br>Summary</p>
+<p>The first aim of a bug report is to let the programmer see the failure with their own eyes. If you can’t be with them to make it fail in front of them, give them detailed instructions so that they can make it fail for themselves.<br>In case the first aim doesn’t succeed, and the programmer can’t see it failing themselves, the second aim of a bug report is to describe what went wrong. Describe everything in detail. State what you saw, and also state what you expected to see. Write down the error messages, especially if they have numbers in.<br>When your computer does something unexpected, freeze. Do nothing until you’re calm, and don’t do anything that you think might be dangerous.<br>By all means try to diagnose the fault yourself if you think you can, but if you do, you should still report the symptoms as well.<br>Be ready to provide extra information if the programmer needs it. If they didn’t need it, they wouldn’t be asking for it. They aren’t being deliberately awkward. Have version numbers at your fingertips, because they will probably be needed.<br>Write clearly. Say what you mean, and make sure it can’t be misinterpreted.<br>Above all, be precise. Programmers like precision.<br>Disclaimer: I’ve never actually seen a mongoose or an antelope. My zoology may be inaccurate.</p>
+<p>$Id$</p>
+<p>Copyright © 1999 Simon Tatham.<br>This document is OpenContent.<br>You may copy and use the text under the terms of the OpenContent Licence.</p>
+<p>This article is not specific to any particular program.</p>
+<p>If you have reached this page by following a link from the website for a particular program, DO NOT send bug reports for that program to me. Instead, return to the page you came from to find out where to report bugs in the program.</p>
+<p>If you have comments or criticism about this article itself, please send them to anakin@pobox.com.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMklEQVR42u3ay4qEQAxG4X7/l3ZgVgONev5EByp1XDXipT4X6Vzq88HH8Xt8n/l7/vg60uvP7n3skCFDxrIM8jjyArKg6+ef/UZUGTJkbMC4DrKdwEoCN3nvzZplyJAhA4dgwqgFYhkyZMjgDFJwpkiSJsqQIUMGKWJrjbO0SH69FpchQ8aCjHQw8J+/X5xvyJAhYxFGP0TyQrR2PVqPDBkyRjPea/rXBpm8tXdTi8uQIWMQgwc7ko+RcpczgqGmDBkyNmCQS68LS07i44HgShkyZIxmdIIvWRYZQ/INFqgZJ0OGjKGMdKFkiJiOJzvDURkyZMxmpAlfv2RNx6VxEStDhoxxDH4paZnxUjNt5/G7ZMiQsQMjbXgRQK2pV/twMmTImMqoteNrA8ha0x99CBkyZIxmpIVrLX2slbWkJSdDhox9GHyUyM+niWMnrMuQIWMqI72BB+J0oxhP+25GmDJkyBjH6GzhShdHzqetPRkyZOzAqKVubwwyeRF7mhrKkCFjKKM2kgzmoqXA+sA/hgwZMgYx+OtJE782gEzHBqfbLGTIkDGU8dRGijTUpgloEOJlyJAxjnGER2cAWWvDoafJkCFjNIMfvPVPtmJ0PhMP0DJkyJjE4EG2NoxMO39kDUHmKEOGjEGMtHPVwfARZlCLy5AhQ0andGw314JtFjJkyNiekU4bOo2z+JPJkCFjA0aaxl2/JuXVCuZgyiFDhozFGZ2gXGOkC3osSZUhQ8Z6jB+o9ISaB7lXiwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/01/20/how-to-ask-questions-the-smart-way/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          提问的智慧
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/20/software-release-practice-howto/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Software Release Practice HOWTO</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="how-to-report-bugs-effectively" data-title="如何有效地报告 Bug" data-url="http://ipcreator.me/2017/01/20/how-to-report-bugs-effectively/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 For life
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+    
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','QVk44u3hiUx_EaM1x32V'); //�����Լ���
+</script>    
+    
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true,
+		showTags: true
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.2d7529.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Program</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Machine Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Open Source</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Product</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Service</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Google</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android Wear</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Scikit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Chip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">理财</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">投资</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Neural Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">英语</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">分享</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">简历</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">成长</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">专利</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Facebook</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PyTorch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">创业</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SmartPhone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Data Digging</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Recommend System</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/25870384/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>你的生命有什么可能</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://mt.sohu.com/20161026/n471374646.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>个体崛起的时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnfy.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>成为一个超级个体</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://gelonghui.com/p/101767.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人工智能的黄金时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都是工程师</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都能用英语</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>把时间当作朋友</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>七年就是一辈子</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://news.mbalib.com/story/12504" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>退休感言</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.360doc.com/content/14/1206/17/15680008_430856157.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>选择的智慧</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/6397275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>此生未完成</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/26422275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>向死而生</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">自知者明&lt;br&gt;自胜者强&lt;br&gt;不忘初心&lt;br&gt;方得始终</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

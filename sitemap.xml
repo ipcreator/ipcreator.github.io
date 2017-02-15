@@ -2,16 +2,366 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ipcreator.me/2017/02/14/ten-truths-of-ai-star-up-firm/</loc>
+    <loc>http://ipcreator.me/2017/12/31/white-paper-of-google-machine-learning/</loc>
     
-    <lastmod>2017-02-14T07:24:09.298Z</lastmod>
+    <lastmod>2017-02-15T13:18:32.348Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/14/the-future-of-personal-terminal/</loc>
+    <loc>http://ipcreator.me/2017/01/20/how-to-use-english/</loc>
     
-    <lastmod>2017-02-14T07:04:30.007Z</lastmod>
+    <lastmod>2017-02-15T13:15:33.380Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/how-to-use-google/</loc>
+    
+    <lastmod>2017-02-15T13:15:26.462Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/financial-philosophy./</loc>
+    
+    <lastmod>2017-02-15T13:15:12.456Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/sit-idle-and-enjoy-the-fruits/</loc>
+    
+    <lastmod>2017-02-15T13:15:00.281Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/want-to-start-a-startup-undergraduate/</loc>
+    
+    <lastmod>2017-02-15T13:09:56.993Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/want-to-start-a-startup-great-hacker/</loc>
+    
+    <lastmod>2017-02-15T13:07:10.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/things-every-hacker-once-knew/</loc>
+    
+    <lastmod>2017-02-15T13:06:27.820Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/the-unix-and-internet-fundamentals-howto/</loc>
+    
+    <lastmod>2017-02-15T13:06:21.209Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/the-loginataka/</loc>
+    
+    <lastmod>2017-02-15T13:06:15.488Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/the-art-of-unix-programming/</loc>
+    
+    <lastmod>2017-02-15T13:06:07.892Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/teach-yourself-programming-in-ten-years/</loc>
+    
+    <lastmod>2017-02-15T13:06:00.988Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/19/summary-and-table-of-principles/</loc>
+    
+    <lastmod>2017-02-15T13:05:52.118Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/software-release-practice-howto/</loc>
+    
+    <lastmod>2017-02-15T13:05:24.292Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/how-to-report-bugs-effectively/</loc>
+    
+    <lastmod>2017-02-15T13:05:04.953Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/how-to-become-a-hacker/</loc>
+    
+    <lastmod>2017-02-15T13:04:57.169Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/advice-for-computer-science-college-students/</loc>
+    
+    <lastmod>2017-02-15T13:04:49.261Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/how-to-ask-questions-the-smart-way/</loc>
+    
+    <lastmod>2017-02-15T13:04:45.417Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/19/credits-of-death%20/</loc>
+    
+    <lastmod>2017-02-15T13:03:22.233Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/18/unfinished-life/</loc>
+    
+    <lastmod>2017-02-15T13:03:05.044Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/17/wisdom-of-choose/</loc>
+    
+    <lastmod>2017-02-15T13:02:53.882Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/16/retirement-speech-of-HP-president/</loc>
+    
+    <lastmod>2017-02-15T13:02:41.408Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/15/reborn-every-7-years/</loc>
+    
+    <lastmod>2017-02-15T13:02:18.353Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/14/take-time-as-friend/</loc>
+    
+    <lastmod>2017-02-15T13:01:40.653Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/13/english-is-a-friend-for-everybody/</loc>
+    
+    <lastmod>2017-02-15T13:01:08.266Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/12/everybody-can-be-engineer/</loc>
+    
+    <lastmod>2017-02-15T13:00:56.826Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/10/live-your-life/</loc>
+    
+    <lastmod>2017-02-15T13:00:44.720Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/11/to-be-a-super-individual/</loc>
+    
+    <lastmod>2017-02-15T12:58:00.002Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/10/my-book-list/</loc>
+    
+    <lastmod>2017-02-15T12:57:27.839Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/09/my-view-of-management/</loc>
+    
+    <lastmod>2017-02-15T12:57:03.061Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/08/my-view-of-patent-strategy/</loc>
+    
+    <lastmod>2017-02-15T12:56:55.164Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/07/my-view-of-innovation/</loc>
+    
+    <lastmod>2017-02-15T12:56:41.223Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/06/my-view-of-growing-up/</loc>
+    
+    <lastmod>2017-02-15T12:56:23.824Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/04/my-patent-list/</loc>
+    
+    <lastmod>2017-02-15T12:56:03.058Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/05/my-article-for-newspaper/</loc>
+    
+    <lastmod>2017-02-15T12:55:59.504Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/03/my-resume/</loc>
+    
+    <lastmod>2017-02-15T12:55:20.967Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/right-way-of-master-machine-learning/</loc>
+    
+    <lastmod>2017-02-15T12:53:49.277Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/ai-on-terminal-of-google/</loc>
+    
+    <lastmod>2017-02-15T12:52:29.046Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/20-open-source-projects-of-machine-learning/</loc>
+    
+    <lastmod>2017-02-15T12:50:39.979Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/awesome-machine-learning/</loc>
+    
+    <lastmod>2017-02-15T12:50:23.063Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/15/ai-vs-machine-learning/</loc>
+    
+    <lastmod>2017-02-15T12:50:21.273Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/awesome-deep-learning/</loc>
+    
+    <lastmod>2017-02-15T12:49:57.917Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/30/basic-knowledge-of-scikit-learn/</loc>
+    
+    <lastmod>2017-02-15T12:49:11.608Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/the-future-of-personal-terminal/</loc>
+    
+    <lastmod>2017-02-15T12:48:12.906Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/ten-truths-of-ai-star-up-firm/</loc>
+    
+    <lastmod>2017-02-15T12:43:53.501Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/golden-age-of-artificial-intelligence/</loc>
+    
+    <lastmod>2017-02-15T12:43:36.619Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/30/tools-of-python/</loc>
+    
+    <lastmod>2017-02-15T12:40:49.199Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/30/big-data-resources/</loc>
+    
+    <lastmod>2017-02-15T12:39:48.440Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2016/12/31/hello-world/</loc>
+    
+    <lastmod>2017-02-15T12:35:32.612Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/02/view-of-scientific-discovery/</loc>
+    
+    <lastmod>2017-02-15T12:34:28.007Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/01/view-of-journey/</loc>
+    
+    <lastmod>2017-02-15T12:34:13.777Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/12/google-styleguide/</loc>
+    
+    <lastmod>2017-02-15T12:20:26.050Z</lastmod>
     
   </url>
   
@@ -23,44 +373,9 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/14/ai-on-terminal-of-google/</loc>
-    
-    <lastmod>2017-02-14T05:25:09.372Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/14/pytorch-of-facebook/</loc>
     
     <lastmod>2017-02-14T05:13:57.633Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/14/basic-knowledge-of-scikit-learn/</loc>
-    
-    <lastmod>2017-02-14T05:07:19.478Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/14/20-open-source-projects-of-machine-learning/</loc>
-    
-    <lastmod>2017-02-14T05:00:48.768Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/14/right-way-of-master-machine-learning/</loc>
-    
-    <lastmod>2017-02-14T04:55:10.268Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/14/white-paper-of-google-machine-learning/</loc>
-    
-    <lastmod>2017-02-14T04:46:04.083Z</lastmod>
     
   </url>
   
@@ -93,13 +408,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/13/ai-of-intel-and-amd/</loc>
-    
-    <lastmod>2017-02-13T05:43:50.651Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/13/ai-and-algorithms/</loc>
     
     <lastmod>2017-02-13T05:30:26.878Z</lastmod>
@@ -114,373 +422,9 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/09/golden-age-of-artificial-intelligence/</loc>
-    
-    <lastmod>2017-02-13T04:59:44.774Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/ai-vs-machine-learning/</loc>
-    
-    <lastmod>2017-02-13T04:37:00.486Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/13/microsoft-provides-ai-tools/</loc>
-    
-    <lastmod>2017-02-13T02:02:59.709Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/13/ai-and-machine-learning-need-more-open-sources/</loc>
     
     <lastmod>2017-02-13T00:49:59.978Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/zh-history-of-robot/</loc>
-    
-    <lastmod>2017-02-12T14:40:35.615Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/29/hello-world/</loc>
-    
-    <lastmod>2017-02-12T14:34:16.281Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/07/zh-history-of-javascript/</loc>
-    
-    <lastmod>2017-02-12T13:20:56.915Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/quick-learn-javascript/</loc>
-    
-    <lastmod>2017-02-12T13:18:19.233Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/quick-learn-regular-expression/</loc>
-    
-    <lastmod>2017-02-12T13:05:29.157Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/quick-learn-html-and-css/</loc>
-    
-    <lastmod>2017-02-12T12:58:00.322Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/sit-idle-and-enjoy-the-fruits/</loc>
-    
-    <lastmod>2017-02-12T12:12:39.589Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/everybody-can-be-engineer/</loc>
-    
-    <lastmod>2017-02-12T11:06:28.311Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/how-to-use-english/</loc>
-    
-    <lastmod>2017-02-12T10:18:38.107Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/09/summary-and-table-of-principles/</loc>
-    
-    <lastmod>2017-02-12T09:41:03.327Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/unfinished-life/</loc>
-    
-    <lastmod>2017-02-12T07:00:12.646Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/03/zh-mark-down/</loc>
-    
-    <lastmod>2017-02-12T06:48:18.229Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/beautiful-pics-of-scientific-discovery/</loc>
-    
-    <lastmod>2017-02-12T06:41:13.090Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/zh-scikit-learn/</loc>
-    
-    <lastmod>2017-02-12T04:46:54.645Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/zh-good-python-articles/</loc>
-    
-    <lastmod>2017-02-12T04:31:55.413Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/zh-big-data-resources/</loc>
-    
-    <lastmod>2017-02-12T04:26:00.302Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/zh-google-styleguide/</loc>
-    
-    <lastmod>2017-02-12T04:16:04.056Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/zh-awesome-deep-learning/</loc>
-    
-    <lastmod>2017-02-12T04:08:02.364Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/zh-question-answering-system/</loc>
-    
-    <lastmod>2017-02-12T03:56:39.651Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/zh-android-green-antivirus/</loc>
-    
-    <lastmod>2017-02-12T03:56:27.448Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/zh-android-training-course-in-chinese/</loc>
-    
-    <lastmod>2017-02-12T03:56:17.178Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/zh-awesome-machine-learning/</loc>
-    
-    <lastmod>2017-02-12T03:55:56.868Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2013/08/11/zh-brief-oauth/</loc>
-    
-    <lastmod>2017-02-12T01:41:46.949Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2013/08/20/zh-oauth-rabbit/</loc>
-    
-    <lastmod>2017-02-12T01:41:39.930Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2014/10/05/zh-history-of-browser-useragent2/</loc>
-    
-    <lastmod>2017-02-12T01:38:22.426Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2014/09/26/zh-history-of-browser-useragent/</loc>
-    
-    <lastmod>2017-02-12T01:38:15.993Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/10/echarts-demo3/</loc>
-    
-    <lastmod>2017-02-12T01:34:00.999Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2016/12/30/echarts-demo2/</loc>
-    
-    <lastmod>2017-02-12T01:33:49.251Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2016/12/29/echarts-demo/</loc>
-    
-    <lastmod>2017-02-12T01:33:34.964Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/29/my-resume/</loc>
-    
-    <lastmod>2017-02-12T01:33:07.780Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/30/my-patent-list/</loc>
-    
-    <lastmod>2017-02-12T01:32:38.931Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/31/my-article-for-newspaper/</loc>
-    
-    <lastmod>2017-02-12T01:32:10.333Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/02/How-To-Ask-Questions-The-Smart-Way/</loc>
-    
-    <lastmod>2017-02-12T01:31:41.966Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/02/How%20To%20Become%20A%20Hacker/</loc>
-    
-    <lastmod>2017-02-12T01:31:14.578Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/02/The%20Unix%20and%20Internet%20Fundamentals%20HOWTO/</loc>
-    
-    <lastmod>2017-02-12T01:30:44.777Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/03/my-view-of-innovation/</loc>
-    
-    <lastmod>2017-02-12T01:27:22.123Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/03/my-view-of-growing-up/</loc>
-    
-    <lastmod>2017-02-12T01:14:37.686Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/03/my-view-of-patent-strategy/</loc>
-    
-    <lastmod>2017-02-12T01:14:00.859Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/03/my-book-list/</loc>
-    
-    <lastmod>2017-02-12T01:13:30.259Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/03/my-view-of-management/</loc>
-    
-    <lastmod>2017-02-12T01:13:06.338Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/08/view-of-huizhou/</loc>
-    
-    <lastmod>2017-02-12T01:10:44.323Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/08/view-of-shenzhen/</loc>
-    
-    <lastmod>2017-02-12T01:10:17.545Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/09/reborn-every-7-years/</loc>
-    
-    <lastmod>2017-02-12T01:09:47.616Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/retirement-speech-of-HP-president/</loc>
-    
-    <lastmod>2017-02-12T01:07:55.002Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/wisdom-of-choose/</loc>
-    
-    <lastmod>2017-02-12T01:07:21.580Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/credits-%20of-%20death%20/</loc>
-    
-    <lastmod>2017-02-12T01:06:57.501Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/how-to-use-google/</loc>
-    
-    <lastmod>2017-02-12T01:06:17.395Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/12/zh-tools-of-python/</loc>
-    
-    <lastmod>2017-02-12T01:03:41.615Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/11/financial-philosophy./</loc>
-    
-    <lastmod>2017-02-11T13:43:18.595Z</lastmod>
     
   </url>
   
