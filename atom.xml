@@ -362,9 +362,9 @@
       <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
-    
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
     
       <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
     
@@ -420,110 +420,7 @@
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
-      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
-    
       <category term="Smart Phone" scheme="http://ipcreator.me/tags/Smart-Phone/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>技术大牛带你走向机器学习“正道”</title>
-    <link href="http://ipcreator.me/2017/12/31/ProgramAI/right-way-of-master-machine-learning/"/>
-    <id>http://ipcreator.me/2017/12/31/ProgramAI/right-way-of-master-machine-learning/</id>
-    <published>2017-12-31T15:57:06.000Z</published>
-    <updated>2017-02-15T12:53:49.277Z</updated>
-    
-    <content type="html"><![CDATA[<p>作者：<a href="http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html" target="_blank" rel="external">雷锋网 亚峰</a></p>
-<p>导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。</p>
-<p>雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：</p>
-<p>现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。<br>随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。</p>
-<p>其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？</p>
-<p>雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。</p>
-  <a id="more"></a>
-<p>嘉宾介绍：</p>
-<p>王刚，前乐视大数据总监，现任某电商平台大数据总监。10 年大数据领域工作经验，具有 Hadoop 和 Spark 生态相关技术的实际应用经验。目前专注于机器学习，搜索和推荐系统的设计和开发。</p>
-<p>以下为王刚所撰写的正文：</p>
-<p>机器学习对很多初学者来说，最大的学习困难和障碍就是模型、算法、“眼花缭乱”的数学公式所带来的抽象感，无法有效的建立起直觉上的理解。所以本文的目的是尝试给初学者具体的学习方式建议，以帮助初学者打通机器学习的任督二脉，然后通过不断的学习和实践，使得自己在机器学习领域的专业能力持续提升。</p>
-<p>机器学习与人工智能、深度学习之间的关系</p>
-<p>当前被提及的高频词语是“AI人工智能”、“机器学习”、“深度学习”。那这些词语背后所代表的技术之间到底是什么关系呢？充分的理解这个关系，有利于建立起更加系统的专业学习框架。</p>
-<p>首先，我们要搞明白机器学习到底学习的是什么，答案是模型“参数”，比如Y=AX+B是个机器学习的模型，通过样本数据，可以学习出参数A和B的确定值。然后基于这两个参数，对模型进行泛化，即对给定的X对Y进行预测。明白了机器学习到底是学习什么之后，我们一起看看下图来搞清楚机器学习与人工智能和深度学习之间的关系。</p>
-<p>技术大牛带你走向机器学习“正道”：小朋友才迷信算法，大人们更重视工程实践</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888f9bedd1f.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>如上图所示，人工智能是最大的一个范畴，人工智能的实现目前看主要有两种途径：一种是基于脑科学的方式来实现智能。另一种是基于机器学习的方式来实现智能，这种方式的假设是当学习的数据足够充分，就可以大概率的逼近事实。</p>
-<p>再回到公式Y=AX+B，我们可以看到机器学习是通过X和Y来学习出参数A和B，而在机器学习中，X是人工构造的特征，Y是人工进行标注的标签。一句话，机器学习就是通过构造X和Y来学习参数A和B。但通常情况下，构造X和标注Y需要耗用大量的人力和时间。所以，对于如何更智能的构造X和标注Y是机器学习很重要的研究方向。深度学习的一个重要作用就是能够更智能的构造X，即进行更好的特征表示。所以深度学习是机器学习的一个子集。那如何更好的标注Y呢，当前流行的对抗生成网络（GAN）就是一种解决方案。</p>
-<p>机器学习需要的基础知识体系</p>
-<p>机器学习的三个关键要素是模型、策略、算法。模型指的是具体的机器学习模型，比如决策树、SVM、神经网络、LDA等具体模型。策略指的是最小化模型结构性风险的手段，即避免模型欠拟合和过拟合的应对策略，在这里专指正则化（Regularization）。算法指的是建立好模型之后，如何对模型中的参数进行学习。也即最优化的方法。所以，初学者需要掌握的基础知识为：</p>
-<p>1.导数与微积分，以及还需要对泰勒展开式、拉格朗日等定理和公式有充分的掌握。这是进行算法推导的基础中的基础。</p>
-<p>2.线性代数，矩阵运算等要做到熟练掌握，因为机器学习的最优化算法中涉及到的复杂计算需要线性代数好矩阵运算的内容。</p>
-<p>3.概率论，概率论的基础知识是理解像极大似然、最大熵、EM算法、贝叶斯网络、概率图模型的基础。</p>
-<p>4.最优化，机器学习中的模型训练是通过对模型中参数的学习来进行泛化推广。如何对模型中的参数进行学习是最优化要解决的问题。比如线性优化、非线性优化的各种主要方法（比如梯度下降法、牛顿和拟牛顿法等）要有充分的理解。</p>
-<p>5.机器学习模型的思想和具体实现方式要理解透彻。</p>
-<p>机器学习的应用实践</p>
-<p>特征工程，如上面所说就是造X，机器学习实践中大部分的实践都在处理特征工程上。所以真正有机器学习实践经验的人都知道机器学习更多的时间不是高大上的算法，而是苦逼特征工程。工程师每天更多的是基于对业务的深刻理解，通过构建“更好”的特征，持续提升模型的准确度。</p>
-<p>推荐系统与搜索系统</p>
-<p>当推荐和搜索这些字眼出现在网页中，专业书籍中，或是大部分的培训课程中，更多的是与机器学习和算法关联起来。这种情况的原因可能是为了迎合机器学习在大部分人认知中的“高大上”吧。</p>
-<p>在实际的产品设计和开发中，推荐系统和搜索系统是有着一个更大概念的系统架构，绝非仅仅是只有机器学习和算法。其中UI/UE的重要性占比为40%，业务理解重要性占比为30%，数据重要性占比为20%，模型重要性占比为10%。</p>
-<p>以推荐系统举例，整个推荐系统的框架应当如下图所示：</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fc4b17f9.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>下图是电商平台上推荐系统的框架</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fd1d31a4.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>所以，建议的推荐系统知识学习体系为：</p>
-<p>一、推荐系统之整体架构</p>
-<p>1.推荐系统的本质、目标及价值</p>
-<p>2.一个好的推荐系统的相貌</p>
-<p>3.线下零售的促销员与电商平台的推荐系统的关系</p>
-<p>3.推荐系统与搜索的关系</p>
-<p>4.主流电商平台上的推荐系统学习</p>
-<p>5.推荐系统的整体架构图以及如何学习推荐系统</p>
-<p>二、推荐系统之策略及模型</p>
-<ol>
-<li><p>基于规则的推荐算法</p>
-</li>
-<li><p>基于内容(Content-Based)的推荐算法</p>
-</li>
-<li><p>基于协同过滤（CF)的推荐算法</p>
-</li>
-<li><p>基于隐因子（SVD/SVD++/MF/FM/FFM/PLSA/LDA）的推荐算法</p>
-</li>
-<li><p>推荐结果的排序模型（GBDT+LR，LTR）</p>
-</li>
-<li><p>数学基础及典型最优化算法</p>
-</li>
-</ol>
-<p>7.不同场景下的推荐策略（如在电商平台上，首页、详情页、购物车页、搜索结果页等不同场景下的推荐策略）</p>
-<p>8.推荐系统评估</p>
-<p>如何评估线下模型，如何评估线上效果</p>
-<p>三、推荐系统之特征工程</p>
-<p>1.用户画像如何构建</p>
-<p>2.特征工程如何构建，以及如何进行特征分析</p>
-<p>四、推荐系统之交互体验</p>
-<p>如何向用户展示推荐系统的权威性、取得用户的信任、如何帮助用户决策、如何获取用户反馈。</p>
-<p>如何开始机器学习</p>
-<p>对于大多数人来说，如果以抽象的方式开始学习一项内容肯定不是最好的方式。相反，先建立起直觉，然后建立具体到抽象的映射，再深入学习抽象部分完成对细节部分的掌握，最后循环到具体的应用是适合大多数人的学习方式。所以对于机器学习初学者建议的学习路径为：</p>
-<p>步骤一：先选择一门实战性非常强的机器学习及其应用课程进行学习。目标是通过足够多具体的应用，能够深刻理解机器学习的实际使用方式，从而建立起直觉。</p>
-<p>步骤二：学习机器学习的理论课程，包括具体的模型算法，最优化方法，以及相关的公式推导。过了这一关，就完成了对机器学习细节的更好掌控。</p>
-<p>步骤三：如果能够立刻参与到机器学习的实际项目中是最好不过了。如果不能，可以去完成Kaggle中的一些比赛项目。</p>
-<p>最后，也是最最重要的建议，如果要想“更快速”“更高效”的掌握机器学习，找到合适的培训课程进行学习是最合适的方式。用钱买时间，买别人的经验，以更高效的方式掌握机器学习后，这些付出的费用可能仅仅是你工作之后月薪的很小的一部分。</p>
-<p>在任督二脉打通之后，可以适当的对分布式存储和计算相关体系的内容进行学习。即靠的是个人的持续修行，在理论与实践循环提升中，成长为真正的专家。</p>
-<p>PS：为了推动 AI 人才全面化，雷锋网将为大家提供一个业界顶级的专业 AI 技术培训平台：1024MOOC 。其中王刚老师也会在1024MOOC 开展系统的机器学习实战培训课程，具体开课时间在年后一周左右，请大家持续关注雷锋网(公众号：雷锋网)信息。</p>
-<p>雷锋网原创文章，未经授权禁止转载。详情见转载须知。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;作者：&lt;a href=&quot;http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html&quot;&gt;雷锋网 亚峰&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。&lt;/p&gt;
-&lt;p&gt;雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：&lt;/p&gt;
-&lt;p&gt;现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。&lt;br&gt;随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。&lt;/p&gt;
-&lt;p&gt;其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？&lt;/p&gt;
-&lt;p&gt;雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
       <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
     
@@ -677,6 +574,109 @@
       <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
     
       <category term="Open Source" scheme="http://ipcreator.me/tags/Open-Source/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>技术大牛带你走向机器学习“正道”</title>
+    <link href="http://ipcreator.me/2017/12/31/ProgramAI/right-way-of-master-machine-learning/"/>
+    <id>http://ipcreator.me/2017/12/31/ProgramAI/right-way-of-master-machine-learning/</id>
+    <published>2017-12-31T15:57:06.000Z</published>
+    <updated>2017-02-15T12:53:49.277Z</updated>
+    
+    <content type="html"><![CDATA[<p>作者：<a href="http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html" target="_blank" rel="external">雷锋网 亚峰</a></p>
+<p>导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。</p>
+<p>雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：</p>
+<p>现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。<br>随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。</p>
+<p>其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？</p>
+<p>雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。</p>
+  <a id="more"></a>
+<p>嘉宾介绍：</p>
+<p>王刚，前乐视大数据总监，现任某电商平台大数据总监。10 年大数据领域工作经验，具有 Hadoop 和 Spark 生态相关技术的实际应用经验。目前专注于机器学习，搜索和推荐系统的设计和开发。</p>
+<p>以下为王刚所撰写的正文：</p>
+<p>机器学习对很多初学者来说，最大的学习困难和障碍就是模型、算法、“眼花缭乱”的数学公式所带来的抽象感，无法有效的建立起直觉上的理解。所以本文的目的是尝试给初学者具体的学习方式建议，以帮助初学者打通机器学习的任督二脉，然后通过不断的学习和实践，使得自己在机器学习领域的专业能力持续提升。</p>
+<p>机器学习与人工智能、深度学习之间的关系</p>
+<p>当前被提及的高频词语是“AI人工智能”、“机器学习”、“深度学习”。那这些词语背后所代表的技术之间到底是什么关系呢？充分的理解这个关系，有利于建立起更加系统的专业学习框架。</p>
+<p>首先，我们要搞明白机器学习到底学习的是什么，答案是模型“参数”，比如Y=AX+B是个机器学习的模型，通过样本数据，可以学习出参数A和B的确定值。然后基于这两个参数，对模型进行泛化，即对给定的X对Y进行预测。明白了机器学习到底是学习什么之后，我们一起看看下图来搞清楚机器学习与人工智能和深度学习之间的关系。</p>
+<p>技术大牛带你走向机器学习“正道”：小朋友才迷信算法，大人们更重视工程实践</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888f9bedd1f.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>如上图所示，人工智能是最大的一个范畴，人工智能的实现目前看主要有两种途径：一种是基于脑科学的方式来实现智能。另一种是基于机器学习的方式来实现智能，这种方式的假设是当学习的数据足够充分，就可以大概率的逼近事实。</p>
+<p>再回到公式Y=AX+B，我们可以看到机器学习是通过X和Y来学习出参数A和B，而在机器学习中，X是人工构造的特征，Y是人工进行标注的标签。一句话，机器学习就是通过构造X和Y来学习参数A和B。但通常情况下，构造X和标注Y需要耗用大量的人力和时间。所以，对于如何更智能的构造X和标注Y是机器学习很重要的研究方向。深度学习的一个重要作用就是能够更智能的构造X，即进行更好的特征表示。所以深度学习是机器学习的一个子集。那如何更好的标注Y呢，当前流行的对抗生成网络（GAN）就是一种解决方案。</p>
+<p>机器学习需要的基础知识体系</p>
+<p>机器学习的三个关键要素是模型、策略、算法。模型指的是具体的机器学习模型，比如决策树、SVM、神经网络、LDA等具体模型。策略指的是最小化模型结构性风险的手段，即避免模型欠拟合和过拟合的应对策略，在这里专指正则化（Regularization）。算法指的是建立好模型之后，如何对模型中的参数进行学习。也即最优化的方法。所以，初学者需要掌握的基础知识为：</p>
+<p>1.导数与微积分，以及还需要对泰勒展开式、拉格朗日等定理和公式有充分的掌握。这是进行算法推导的基础中的基础。</p>
+<p>2.线性代数，矩阵运算等要做到熟练掌握，因为机器学习的最优化算法中涉及到的复杂计算需要线性代数好矩阵运算的内容。</p>
+<p>3.概率论，概率论的基础知识是理解像极大似然、最大熵、EM算法、贝叶斯网络、概率图模型的基础。</p>
+<p>4.最优化，机器学习中的模型训练是通过对模型中参数的学习来进行泛化推广。如何对模型中的参数进行学习是最优化要解决的问题。比如线性优化、非线性优化的各种主要方法（比如梯度下降法、牛顿和拟牛顿法等）要有充分的理解。</p>
+<p>5.机器学习模型的思想和具体实现方式要理解透彻。</p>
+<p>机器学习的应用实践</p>
+<p>特征工程，如上面所说就是造X，机器学习实践中大部分的实践都在处理特征工程上。所以真正有机器学习实践经验的人都知道机器学习更多的时间不是高大上的算法，而是苦逼特征工程。工程师每天更多的是基于对业务的深刻理解，通过构建“更好”的特征，持续提升模型的准确度。</p>
+<p>推荐系统与搜索系统</p>
+<p>当推荐和搜索这些字眼出现在网页中，专业书籍中，或是大部分的培训课程中，更多的是与机器学习和算法关联起来。这种情况的原因可能是为了迎合机器学习在大部分人认知中的“高大上”吧。</p>
+<p>在实际的产品设计和开发中，推荐系统和搜索系统是有着一个更大概念的系统架构，绝非仅仅是只有机器学习和算法。其中UI/UE的重要性占比为40%，业务理解重要性占比为30%，数据重要性占比为20%，模型重要性占比为10%。</p>
+<p>以推荐系统举例，整个推荐系统的框架应当如下图所示：</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fc4b17f9.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>下图是电商平台上推荐系统的框架</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fd1d31a4.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>所以，建议的推荐系统知识学习体系为：</p>
+<p>一、推荐系统之整体架构</p>
+<p>1.推荐系统的本质、目标及价值</p>
+<p>2.一个好的推荐系统的相貌</p>
+<p>3.线下零售的促销员与电商平台的推荐系统的关系</p>
+<p>3.推荐系统与搜索的关系</p>
+<p>4.主流电商平台上的推荐系统学习</p>
+<p>5.推荐系统的整体架构图以及如何学习推荐系统</p>
+<p>二、推荐系统之策略及模型</p>
+<ol>
+<li><p>基于规则的推荐算法</p>
+</li>
+<li><p>基于内容(Content-Based)的推荐算法</p>
+</li>
+<li><p>基于协同过滤（CF)的推荐算法</p>
+</li>
+<li><p>基于隐因子（SVD/SVD++/MF/FM/FFM/PLSA/LDA）的推荐算法</p>
+</li>
+<li><p>推荐结果的排序模型（GBDT+LR，LTR）</p>
+</li>
+<li><p>数学基础及典型最优化算法</p>
+</li>
+</ol>
+<p>7.不同场景下的推荐策略（如在电商平台上，首页、详情页、购物车页、搜索结果页等不同场景下的推荐策略）</p>
+<p>8.推荐系统评估</p>
+<p>如何评估线下模型，如何评估线上效果</p>
+<p>三、推荐系统之特征工程</p>
+<p>1.用户画像如何构建</p>
+<p>2.特征工程如何构建，以及如何进行特征分析</p>
+<p>四、推荐系统之交互体验</p>
+<p>如何向用户展示推荐系统的权威性、取得用户的信任、如何帮助用户决策、如何获取用户反馈。</p>
+<p>如何开始机器学习</p>
+<p>对于大多数人来说，如果以抽象的方式开始学习一项内容肯定不是最好的方式。相反，先建立起直觉，然后建立具体到抽象的映射，再深入学习抽象部分完成对细节部分的掌握，最后循环到具体的应用是适合大多数人的学习方式。所以对于机器学习初学者建议的学习路径为：</p>
+<p>步骤一：先选择一门实战性非常强的机器学习及其应用课程进行学习。目标是通过足够多具体的应用，能够深刻理解机器学习的实际使用方式，从而建立起直觉。</p>
+<p>步骤二：学习机器学习的理论课程，包括具体的模型算法，最优化方法，以及相关的公式推导。过了这一关，就完成了对机器学习细节的更好掌控。</p>
+<p>步骤三：如果能够立刻参与到机器学习的实际项目中是最好不过了。如果不能，可以去完成Kaggle中的一些比赛项目。</p>
+<p>最后，也是最最重要的建议，如果要想“更快速”“更高效”的掌握机器学习，找到合适的培训课程进行学习是最合适的方式。用钱买时间，买别人的经验，以更高效的方式掌握机器学习后，这些付出的费用可能仅仅是你工作之后月薪的很小的一部分。</p>
+<p>在任督二脉打通之后，可以适当的对分布式存储和计算相关体系的内容进行学习。即靠的是个人的持续修行，在理论与实践循环提升中，成长为真正的专家。</p>
+<p>PS：为了推动 AI 人才全面化，雷锋网将为大家提供一个业界顶级的专业 AI 技术培训平台：1024MOOC 。其中王刚老师也会在1024MOOC 开展系统的机器学习实战培训课程，具体开课时间在年后一周左右，请大家持续关注雷锋网(公众号：雷锋网)信息。</p>
+<p>雷锋网原创文章，未经授权禁止转载。详情见转载须知。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作者：&lt;a href=&quot;http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html&quot;&gt;雷锋网 亚峰&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。&lt;/p&gt;
+&lt;p&gt;雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：&lt;/p&gt;
+&lt;p&gt;现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。&lt;br&gt;随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。&lt;/p&gt;
+&lt;p&gt;其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？&lt;/p&gt;
+&lt;p&gt;雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
     
   </entry>
   
@@ -1100,9 +1100,9 @@
       <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
-    
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
     
       <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
     
@@ -2233,7 +2233,7 @@
     <link href="http://ipcreator.me/2017/12/30/ProgramAI/big-data-resources/"/>
     <id>http://ipcreator.me/2017/12/30/ProgramAI/big-data-resources/</id>
     <published>2017-12-30T04:23:06.000Z</published>
-    <updated>2017-02-15T12:39:48.440Z</updated>
+    <updated>2017-02-16T02:30:45.464Z</updated>
     
     <content type="html"><![CDATA[<p>作者：<a href="https://github.com/Flowerowl/Big_Data_Resources" target="_blank" rel="external">Zhe Yu/Flowerowl</a></p>
 <p>大数据/数据挖掘/推荐系统/机器学习相关资源</p>
@@ -2515,9 +2515,7 @@
     
       <category term="Big Data" scheme="http://ipcreator.me/tags/Big-Data/"/>
     
-      <category term="Data Digging" scheme="http://ipcreator.me/tags/Data-Digging/"/>
-    
-      <category term="Recommend System" scheme="http://ipcreator.me/tags/Recommend-System/"/>
+      <category term="Data Mining" scheme="http://ipcreator.me/tags/Data-Mining/"/>
     
   </entry>
   
@@ -4076,7 +4074,7 @@
     <link href="http://ipcreator.me/2017/02/14/ProgramAI/brain-and-chips/"/>
     <id>http://ipcreator.me/2017/02/14/ProgramAI/brain-and-chips/</id>
     <published>2017-02-13T23:14:06.000Z</published>
-    <updated>2017-02-14T00:30:57.188Z</updated>
+    <updated>2017-02-16T02:27:24.266Z</updated>
     
     <content type="html"><![CDATA[<p>作者：<a href="http://www.leiphone.com/news/201612/E4eY2HYElJIC0be5.html" target="_blank" rel="external">雷锋网：本文作者痴笑，矽说（微信号：silicon_talks）主笔。</a></p>
 <p>你信不信有一天，硅工造的芯片会写诗？</p>
@@ -4304,8 +4302,6 @@
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
-      <category term="Chip" scheme="http://ipcreator.me/tags/Chip/"/>
-    
   </entry>
   
   <entry>
@@ -4343,9 +4339,9 @@
       <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
-    
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
     
   </entry>
   
@@ -4691,9 +4687,9 @@
       <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Algorithm" scheme="http://ipcreator.me/tags/Algorithm/"/>
-    
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Algorithm" scheme="http://ipcreator.me/tags/Algorithm/"/>
     
       <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
     
@@ -4843,7 +4839,7 @@
     <published>2017-01-20T12:31:06.000Z</published>
     <updated>2017-02-15T13:04:57.169Z</updated>
     
-    <content type="html"><![CDATA[<p>如何成为一名黑客<br>——Eric S. Raymond <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#101;&#115;&#114;&#x40;&#x74;&#104;&#121;&#x72;&#115;&#x75;&#115;&#46;&#99;&#111;&#109;">&#101;&#115;&#114;&#x40;&#x74;&#104;&#121;&#x72;&#115;&#x75;&#115;&#46;&#99;&#111;&#109;</a><br><a href="http://translations.readthedocs.io/en/latest/hacker_howto.html" target="_blank" rel="external">Wang Dingwei <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#119;&#x61;&#x6e;&#103;&#x64;&#105;&#x6e;&#x67;&#x77;&#x65;&#x69;&#x38;&#x32;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;">&#119;&#x61;&#x6e;&#103;&#x64;&#105;&#x6e;&#x67;&#x77;&#x65;&#x69;&#x38;&#x32;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a></a> 基于 Barret 的翻译更正而成。转载请注明出处。</p>
+    <content type="html"><![CDATA[<p>如何成为一名黑客<br>——Eric S. Raymond <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x65;&#x73;&#x72;&#x40;&#x74;&#x68;&#121;&#114;&#x73;&#117;&#x73;&#x2e;&#99;&#111;&#x6d;">&#x65;&#x73;&#x72;&#x40;&#x74;&#x68;&#121;&#114;&#x73;&#117;&#x73;&#x2e;&#99;&#111;&#x6d;</a><br><a href="http://translations.readthedocs.io/en/latest/hacker_howto.html" target="_blank" rel="external">Wang Dingwei <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#x77;&#x61;&#110;&#x67;&#x64;&#x69;&#x6e;&#103;&#x77;&#x65;&#105;&#56;&#x32;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#x77;&#x61;&#110;&#x67;&#x64;&#x69;&#x6e;&#103;&#x77;&#x65;&#105;&#56;&#x32;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a></a> 基于 Barret 的翻译更正而成。转载请注明出处。</p>
 <p>目录</p>
 <ol>
 <li>为什么会有这份文档？</li>
@@ -5388,7 +5384,7 @@ become the master.
     
     <summary type="html">
     
-      &lt;p&gt;如何成为一名黑客&lt;br&gt;——Eric S. Raymond &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#116;&amp;#111;&amp;#x3a;&amp;#101;&amp;#115;&amp;#114;&amp;#x40;&amp;#x74;&amp;#104;&amp;#121;&amp;#x72;&amp;#115;&amp;#x75;&amp;#115;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&quot;&gt;&amp;#101;&amp;#115;&amp;#114;&amp;#x40;&amp;#x74;&amp;#104;&amp;#121;&amp;#x72;&amp;#115;&amp;#x75;&amp;#115;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://translations.readthedocs.io/en/latest/hacker_howto.html&quot;&gt;Wang Dingwei &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#108;&amp;#x74;&amp;#111;&amp;#58;&amp;#119;&amp;#x61;&amp;#x6e;&amp;#103;&amp;#x64;&amp;#105;&amp;#x6e;&amp;#x67;&amp;#x77;&amp;#x65;&amp;#x69;&amp;#x38;&amp;#x32;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#119;&amp;#x61;&amp;#x6e;&amp;#103;&amp;#x64;&amp;#105;&amp;#x6e;&amp;#x67;&amp;#x77;&amp;#x65;&amp;#x69;&amp;#x38;&amp;#x32;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;/a&gt; 基于 Barret 的翻译更正而成。转载请注明出处。&lt;/p&gt;
+      &lt;p&gt;如何成为一名黑客&lt;br&gt;——Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#x68;&amp;#121;&amp;#114;&amp;#x73;&amp;#117;&amp;#x73;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#x68;&amp;#121;&amp;#114;&amp;#x73;&amp;#117;&amp;#x73;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://translations.readthedocs.io/en/latest/hacker_howto.html&quot;&gt;Wang Dingwei &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#108;&amp;#116;&amp;#x6f;&amp;#58;&amp;#x77;&amp;#x61;&amp;#110;&amp;#x67;&amp;#x64;&amp;#x69;&amp;#x6e;&amp;#103;&amp;#x77;&amp;#x65;&amp;#105;&amp;#56;&amp;#x32;&amp;#64;&amp;#x67;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&quot;&gt;&amp;#x77;&amp;#x61;&amp;#110;&amp;#x67;&amp;#x64;&amp;#x69;&amp;#x6e;&amp;#103;&amp;#x77;&amp;#x65;&amp;#105;&amp;#56;&amp;#x32;&amp;#64;&amp;#x67;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/a&gt; 基于 Barret 的翻译更正而成。转载请注明出处。&lt;/p&gt;
 &lt;p&gt;目录&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;为什么会有这份文档？&lt;/li&gt;
@@ -6833,7 +6829,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <updated>2017-02-15T13:06:15.488Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.catb.org/~esr/faqs/loginataka.html" target="_blank" rel="external">The Loginataka</a></p>
-<p>by Eric S. Raymond <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#x65;&#x73;&#114;&#64;&#x74;&#x68;&#x79;&#x72;&#x73;&#x75;&#115;&#x2e;&#x63;&#x6f;&#109;">&#x65;&#x73;&#114;&#64;&#x74;&#x68;&#x79;&#x72;&#x73;&#x75;&#115;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>by Eric S. Raymond <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#101;&#x73;&#x72;&#x40;&#x74;&#104;&#x79;&#x72;&#115;&#117;&#115;&#46;&#x63;&#x6f;&#109;">&#101;&#x73;&#x72;&#x40;&#x74;&#104;&#x79;&#x72;&#115;&#117;&#115;&#46;&#x63;&#x6f;&#109;</a></p>
 <p>  Speak, O Guru: How can I become a Unix Wizard?</p>
 <p>  O, Nobly Born: know that the Way to Wizardhood is long, and winding, and Fraught with Risks. Thou must Attune thyself with the Source, attaining the arcane Knowledge and Conversation of the System Libraries and Internals. Yea; and such an all-consuming Time and Energy Sink is this as to greatly Imperil thy Grade Point Average (if one thou hast), not to mention thy Sex Life (if one thou hast). But persevere, oh Larval One; rewards beyond the Dreams of Lusers await thee!</p>
   <a id="more"></a>
@@ -6902,7 +6898,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <summary type="html">
     
       &lt;p&gt;&lt;a href=&quot;http://www.catb.org/~esr/faqs/loginataka.html&quot;&gt;The Loginataka&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#x65;&amp;#x73;&amp;#114;&amp;#64;&amp;#x74;&amp;#x68;&amp;#x79;&amp;#x72;&amp;#x73;&amp;#x75;&amp;#115;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#x65;&amp;#x73;&amp;#114;&amp;#64;&amp;#x74;&amp;#x68;&amp;#x79;&amp;#x72;&amp;#x73;&amp;#x75;&amp;#115;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#101;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#104;&amp;#x79;&amp;#x72;&amp;#115;&amp;#117;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#104;&amp;#x79;&amp;#x72;&amp;#115;&amp;#117;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;  Speak, O Guru: How can I become a Unix Wizard?&lt;/p&gt;
 &lt;p&gt;  O, Nobly Born: know that the Way to Wizardhood is long, and winding, and Fraught with Risks. Thou must Attune thyself with the Source, attaining the arcane Knowledge and Conversation of the System Libraries and Internals. Yea; and such an all-consuming Time and Energy Sink is this as to greatly Imperil thy Grade Point Average (if one thou hast), not to mention thy Sex Life (if one thou hast). But persevere, oh Larval One; rewards beyond the Dreams of Lusers await thee!&lt;/p&gt;
     
@@ -6916,6 +6912,70 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
   </entry>
   
   <entry>
+    <title>The Art of Unix Programming</title>
+    <link href="http://ipcreator.me/2017/01/20/Master/the-art-of-unix-programming/"/>
+    <id>http://ipcreator.me/2017/01/20/Master/the-art-of-unix-programming/</id>
+    <published>2017-01-20T11:16:06.000Z</published>
+    <updated>2017-02-16T00:06:16.386Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://catb.org/~esr/writings/taoup/html/" target="_blank" rel="external">The Art of Unix Programming</a></p>
+<p><img src="http://catb.org/~esr/writings/taoup/cover.png" alt=""></p>
+<p>Eric Steven Raymond</p>
+<p>This book and its on-line version are distributed under the terms of the Creative Commons Attribution-NoDerivs 1.0 license, with the additional proviso that the right to publish it on paper for sale or other for-profit use is reserved to Pearson Education, Inc. A reference copy of this license may be found at <a href="http://creativecommons.org/licenses/by-nd/1.0/legalcode" target="_blank" rel="external">http://creativecommons.org/licenses/by-nd/1.0/legalcode</a>.</p>
+  <a id="more"></a>
+<p>AIX, AS/400, DB/2, OS/2, System/360, MVS, VM/CMS, and IBM PC are trademarks of IBM. Alpha, DEC, VAX, HP-UX, PDP, TOPS-10, TOPS-20, VMS, and VT-100 are trademarks of Compaq. Amiga and AmigaOS are trademarks of Amiga, Inc. Apple, Macintosh, MacOS, Newton, OpenDoc, and OpenStep are trademarks of Apple Computers, Inc. ClearCase is a trademark of Rational Software, Inc. Ethernet is a trademark of 3COM, Inc. Excel, MS-DOS, Microsoft Windows and PowerPoint are trademarks of Microsoft, Inc. Java. J2EE, JavaScript, NeWS, and Solaris are trademarks of Sun Microsystems. SPARC is a trademark of SPARC international. Informix is a trademark of Informix software. Itanium is a trademark of Intel. Linux is a trademark of Linus Torvalds. Netscape is a trademark of AOL. PDF and PostScript are trademarks of Adobe, Inc. UNIX is a trademark of The Open Group.</p>
+<p>The photograph of Ken and Dennis in Chapter 2 appears courtesy of Bell Labs/Lucent Technologies.</p>
+<p>The epigraph on the Portability chapter is from the Bell System Technical Journal, v57 #6 part 2 (July-Aug. 1978) pp. 2021-2048 and is reproduced with the permission of Bell Labs/Lucent Technologies.</p>
+<p>Revision History<br>Revision 1.0    19 September 2003    esr<br>This is the content that went to Addison-Wesley’s printers.<br>Revision 0.4    5 February 2003    esr<br>Release for public review.<br>Revision 0.3    22 January 2003    esr<br>First eighteen-chapter draft. Manuscript walkthrough at Chapter 12. Limited release for early reviewers.<br>Revision 0.2    2 January 2003    esr<br>First manuscript walkthrough at Chapter 7. Released to Dmitry Kirsanov at AW production.<br>Revision 0.1    16 November 2002    esr<br>First DocBook draft, fifteen chapters. Languages rewritten to incorporate lots of feedback. Transparency, Modularity, Multiprogramming, Configuration, Interfaces, Documentation, and Open Source chapters released. Shipped to Mark Taub at AW.<br>Revision 0.0    1999    esr<br>Public HTML draft, first four chapters only.<br>Dedication</p>
+<p>To Ken Thompson and Dennis Ritchie, because you inspired me.</p>
+<p>Table of Contents</p>
+<p>Preface<br>Who Should Read This Book<br>How to Use This Book<br>Related References<br>Conventions Used in This Book<br>Our Case Studies<br>Author’s Acknowledgements<br>I. Context</p>
+<ol>
+<li>Philosophy<br>Culture? What Culture?<br>The Durability of Unix<br>The Case against Learning Unix Culture<br>What Unix Gets Wrong<br>What Unix Gets Right<br>Open-Source Software<br>Cross-Platform Portability and Open Standards<br>The Internet and the World Wide Web<br>The Open-Source Community<br>Flexibility All the Way Down<br>Unix Is Fun to Hack<br>The Lessons of Unix Can Be Applied Elsewhere<br>Basics of the Unix Philosophy<br>Rule of Modularity: Write simple parts connected by clean interfaces.<br>Rule of Clarity: Clarity is better than cleverness.<br>Rule of Composition: Design programs to be connected with other programs.<br>Rule of Separation: Separate policy from mechanism; separate interfaces from engines.<br>Rule of Simplicity: Design for simplicity; add complexity only where you must.<br>Rule of Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.<br>Rule of Transparency: Design for visibility to make inspection and debugging easier.<br>Rule of Robustness: Robustness is the child of transparency and simplicity.<br>Rule of Representation: Fold knowledge into data, so program logic can be stupid and robust.<br>Rule of Least Surprise: In interface design, always do the least surprising thing.<br>Rule of Silence: When a program has nothing surprising to say, it should say nothing.<br>Rule of Repair: Repair what you can — but when you must fail, fail noisily and as soon as possible.<br>Rule of Economy: Programmer time is expensive; conserve it in preference to machine time.<br>Rule of Generation: Avoid hand-hacking; write programs to write programs when you can.<br>Rule of Optimization: Prototype before polishing. Get it working before you optimize it.<br>Rule of Diversity: Distrust all claims for one true way.<br>Rule of Extensibility: Design for the future, because it will be here sooner than you think.<br>The Unix Philosophy in One Lesson<br>Applying the Unix Philosophy<br>Attitude Matters Too</li>
+<li>History<br>Origins and History of Unix, 1969-1995<br>Genesis: 1969–1971<br>Exodus: 1971–1980<br>TCP/IP and the Unix Wars: 1980-1990<br>Blows against the Empire: 1991-1995<br>Origins and History of the Hackers, 1961-1995<br>At Play in the Groves of Academe: 1961-1980<br>Internet Fusion and the Free Software Movement: 1981-1991<br>Linux and the Pragmatist Reaction: 1991-1998<br>The Open-Source Movement: 1998 and Onward<br>The Lessons of Unix History</li>
+<li>Contrasts<br>The Elements of Operating-System Style<br>What Is the Operating System’s Unifying Idea?<br>Multitasking Capability<br>Cooperating Processes<br>Internal Boundaries<br>File Attributes and Record Structures<br>Binary File Formats<br>Preferred User Interface Style<br>Intended Audience<br>Entry Barriers to Development<br>Operating-System Comparisons<br>VMS<br>MacOS<br>OS/2<br>Windows NT<br>BeOS<br>MVS<br>VM/CMS<br>Linux<br>What Goes Around, Comes Around<br>II. Design</li>
+<li>Modularity<br>Encapsulation and Optimal Module Size<br>Compactness and Orthogonality<br>Compactness<br>Orthogonality<br>The SPOT Rule<br>Compactness and the Strong Single Center<br>The Value of Detachment<br>Software Is a Many-Layered Thing<br>Top-Down versus Bottom-Up<br>Glue Layers<br>Case Study: C Considered as Thin Glue<br>Libraries<br>Case Study: GIMP Plugins<br>Unix and Object-Oriented Languages<br>Coding for Modularity</li>
+<li>Textuality<br>The Importance of Being Textual<br>Case Study: Unix Password File Format<br>Case Study: .newsrc Format<br>Case Study: The PNG Graphics File Format<br>Data File Metaformats<br>DSV Style<br>RFC 822 Format<br>Cookie-Jar Format<br>Record-Jar Format<br>XML<br>Windows INI Format<br>Unix Textual File Format Conventions<br>The Pros and Cons of File Compression<br>Application Protocol Design<br>Case Study: SMTP, the Simple Mail Transfer Protocol<br>Case Study: POP3, the Post Office Protocol<br>Case Study: IMAP, the Internet Message Access Protocol<br>Application Protocol Metaformats<br>The Classical Internet Application Metaprotocol<br>HTTP as a Universal Application Protocol<br>BEEP: Blocks Extensible Exchange Protocol<br>XML-RPC, SOAP, and Jabber</li>
+<li>Transparency<br>Studying Cases<br>Case Study: audacity<br>Case Study: fetchmail’s -v option<br>Case Study: GCC<br>Case Study: kmail<br>Case Study: SNG<br>Case Study: The Terminfo Database<br>Case Study: Freeciv Data Files<br>Designing for Transparency and Discoverability<br>The Zen of Transparency<br>Coding for Transparency and Discoverability<br>Transparency and Avoiding Overprotectiveness<br>Transparency and Editable Representations<br>Transparency, Fault Diagnosis, and Fault Recovery<br>Designing for Maintainability</li>
+<li>Multiprogramming<br>Separating Complexity Control from Performance Tuning<br>Taxonomy of Unix IPC Methods<br>Handing off Tasks to Specialist Programs<br>Pipes, Redirection, and Filters<br>Wrappers<br>Security Wrappers and Bernstein Chaining<br>Slave Processes<br>Peer-to-Peer Inter-Process Communication<br>Problems and Methods to Avoid<br>Obsolescent Unix IPC Methods<br>Remote Procedure Calls<br>Threads — Threat or Menace?<br>Process Partitioning at the Design Level</li>
+<li>Minilanguages<br>Understanding the Taxonomy of Languages<br>Applying Minilanguages<br>Case Study: sng<br>Case Study: Regular Expressions<br>Case Study: Glade<br>Case Study: m4<br>Case Study: XSLT<br>Case Study: The Documenter’s Workbench Tools<br>Case Study: fetchmail Run-Control Syntax<br>Case Study: awk<br>Case Study: PostScript<br>Case Study: bc and dc<br>Case Study: Emacs Lisp<br>Case Study: JavaScript<br>Designing Minilanguages<br>Choosing the Right Complexity Level<br>Extending and Embedding Languages<br>Writing a Custom Grammar<br>Macros — Beware!<br>Language or Application Protocol?</li>
+<li>Generation<br>Data-Driven Programming<br>Case Study: ascii<br>Case Study: Statistical Spam Filtering<br>Case Study: Metaclass Hacking in fetchmailconf<br>Ad-hoc Code Generation<br>Case Study: Generating Code for the ascii Displays<br>Case Study: Generating HTML Code for a Tabular List</li>
+<li>Configuration<br>What Should Be Configurable?<br>Where Configurations Live<br>Run-Control Files<br>Case Study: The .netrc File<br>Portability to Other Operating Systems<br>Environment Variables<br>System Environment Variables<br>User Environment Variables<br>When to Use Environment Variables<br>Portability to Other Operating Systems<br>Command-Line Options<br>The -a to -z of Command-Line Options<br>Portability to Other Operating Systems<br>How to Choose among the Methods<br>Case Study: fetchmail<br>Case Study: The XFree86 Server<br>On Breaking These Rules</li>
+<li>Interfaces<br>Applying the Rule of Least Surprise<br>History of Interface Design on Unix<br>Evaluating Interface Designs<br>Tradeoffs between CLI and Visual Interfaces<br>Case Study: Two Ways to Write a Calculator Program<br>Transparency, Expressiveness, and Configurability<br>Unix Interface Design Patterns<br>The Filter Pattern<br>The Cantrip Pattern<br>The Source Pattern<br>The Sink Pattern<br>The Compiler Pattern<br>The ed pattern<br>The Roguelike Pattern<br>The ‘Separated Engine and Interface’ Pattern<br>The CLI Server Pattern<br>Language-Based Interface Patterns<br>Applying Unix Interface-Design Patterns<br>The Polyvalent-Program Pattern<br>The Web Browser as a Universal Front End<br>Silence Is Golden</li>
+<li>Optimization<br>Don’t Just Do Something, Stand There!<br>Measure before Optimizing<br>Nonlocality Considered Harmful<br>Throughput vs. Latency<br>Batching Operations<br>Overlapping Operations<br>Caching Operation Results</li>
+<li>Complexity<br>Speaking of Complexity<br>The Three Sources of Complexity<br>Tradeoffs between Interface and Implementation Complexity<br>Essential, Optional, and Accidental Complexity<br>Mapping Complexity<br>When Simplicity Is Not Enough<br>A Tale of Five Editors<br>ed<br>vi<br>Sam<br>Emacs<br>Wily<br>The Right Size for an Editor<br>Identifying the Complexity Problems<br>Compromise Doesn’t Work<br>Is Emacs an Argument against the Unix Tradition?<br>The Right Size of Software<br>III. Implementation</li>
+<li>Languages<br>Unix’s Cornucopia of Languages<br>Why Not C?<br>Interpreted Languages and Mixed Strategies<br>Language Evaluations<br>C<br>C++<br>Shell<br>Perl<br>Tcl<br>Python<br>Java<br>Emacs Lisp<br>Trends for the Future<br>Choosing an X Toolkit</li>
+<li>Tools<br>A Developer-Friendly Operating System<br>Choosing an Editor<br>Useful Things to Know about vi<br>Useful Things to Know about Emacs<br>The Antireligious Choice: Using Both<br>Special-Purpose Code Generators<br>yacc and lex<br>Case Study: Glade<br>make: Automating Your Recipes<br>Basic Theory of make<br>make in Non-C/C++ Development<br>Utility Productions<br>Generating Makefiles<br>Version-Control Systems<br>Why Version Control?<br>Version Control by Hand<br>Automated Version Control<br>Unix Tools for Version Control<br>Runtime Debugging<br>Profiling<br>Combining Tools with Emacs<br>Emacs and make<br>Emacs and Runtime Debugging<br>Emacs and Version Control<br>Emacs and Profiling<br>Like an IDE, Only Better</li>
+<li>Reuse<br>The Tale of J. Random Newbie<br>Transparency as the Key to Reuse<br>From Reuse to Open Source<br>The Best Things in Life Are Open<br>Where to Look?<br>Issues in Using Open-Source Software<br>Licensing Issues<br>What Qualifies as Open Source<br>Standard Open-Source Licenses<br>When You Need a Lawyer<br>IV. Community</li>
+<li>Portability<br>Evolution of C<br>Early History of C<br>C Standards<br>Unix Standards<br>Standards and the Unix Wars<br>The Ghost at the Victory Banquet<br>Unix Standards in the Open-Source World<br>IETF and the RFC Standards Process<br>Specifications as DNA, Code as RNA<br>Programming for Portability<br>Portability and Choice of Language<br>Avoiding System Dependencies<br>Tools for Portability<br>Internationalization<br>Portability, Open Standards, and Open Source</li>
+<li>Documentation<br>Documentation Concepts<br>The Unix Style<br>The Large-Document Bias<br>Cultural Style<br>The Zoo of Unix Documentation Formats<br>troff and the Documenter’s Workbench Tools<br>TeX<br>Texinfo<br>POD<br>HTML<br>DocBook<br>The Present Chaos and a Possible Way Out<br>DocBook<br>Document Type Definitions<br>Other DTDs<br>The DocBook Toolchain<br>Migration Tools<br>Editing Tools<br>Related Standards and Practices<br>SGML<br>XML-DocBook References<br>Best Practices for Writing Unix Documentation</li>
+<li>Open Source<br>Unix and Open Source<br>Best Practices for Working with Open-Source Developers<br>Good Patching Practice<br>Good Project- and Archive-Naming Practice<br>Good Development Practice<br>Good Distribution-Making Practice<br>Good Communication Practice<br>The Logic of Licenses: How to Pick One<br>Why You Should Use a Standard License<br>Varieties of Open-Source Licensing<br>MIT or X Consortium License<br>BSD Classic License<br>Artistic License<br>General Public License<br>Mozilla Public License</li>
+<li>Futures<br>Essence and Accident in Unix Tradition<br>Plan 9: The Way the Future Was<br>Problems in the Design of Unix<br>A Unix File Is Just a Big Bag of Bytes<br>Unix Support for GUIs Is Weak<br>File Deletion Is Forever<br>Unix Assumes a Static File System<br>The Design of Job Control Was Badly Botched<br>The Unix API Doesn’t Use Exceptions<br>ioctl2 and fcntl2 Are an Embarrassment<br>The Unix Security Model May Be Too Primitive<br>Unix Has Too Many Different Kinds of Names<br>File Systems Might Be Considered Harmful<br>Towards a Global Internet Address Space<br>Problems in the Environment of Unix<br>Problems in the Culture of Unix<br>Reasons to Believe<br>A. Glossary of Abbreviations<br>B. References<br>C. Contributors<br>D. Rootless Root<br>Editor’s Introduction<br>Master Foo and the Ten Thousand Lines<br>Master Foo and the Script Kiddie<br>Master Foo Discourses on the Two Paths<br>Master Foo and the Methodologist<br>Master Foo Discourses on the Graphical User Interface<br>Master Foo and the Unix Zealot<br>Master Foo Discourses on the Unix-Nature<br>Master Foo and the End User<br>List of Figures</li>
+</ol>
+<p>2.1. The PDP-7.<br>3.1. Schematic history of timesharing.<br>4.1. Qualitative plot of defect count and density vs. module size.<br>4.2. Caller/callee relationships in GIMP with a plugin loaded.<br>6.1. Screen shot of audacity.<br>6.2. Screen shot of kmail.<br>6.3. Main window of a Freeciv game.<br>8.1. Taxonomy of languages.<br>11.1. The xcalc GUI.<br>11.2. Screen shot of the original Rogue game.<br>11.3. The Xcdroast GUI.<br>11.4. Caller/callee relationships in a polyvalent program.<br>13.1. Sources and kinds of complexity.<br>18.1. Processing structural documents.<br>18.2. Present-day XML-DocBook toolchain.<br>18.3. Future XML-DocBook toolchain with FOP.<br>List of Tables</p>
+<p>8.1. Regular-expression examples.<br>8.2. Introduction to regular-expression operations.<br>14.1. Language choices.<br>14.2. Summary of X Toolkits.<br>List of Examples</p>
+<p>5.1. Password file example.<br>5.2. A .newsrc example.<br>5.3. A fortune file example.<br>5.4. Basic data for three planets in a record-jar format.<br>5.5. An XML example.<br>5.6. A .INI file example.<br>5.7. An SMTP session example.<br>5.8. A POP3 example session.<br>5.9. An IMAP session example.<br>6.1. An example fetchmail -v transcript.<br>6.2. An SNG Example.<br>7.1. The pic2graph pipeline.<br>8.1. Glade Hello, World.<br>8.2. A sample m4 macro.<br>8.3. A sample XSLT program.<br>8.4. Taxonomy of languages — the pic source.<br>8.5. Synthetic example of a fetchmailrc.<br>8.6. RSA implementation using dc.<br>9.1. Example of fetchmailrc syntax.<br>9.2. Python structure dump of a fetchmail configuration.<br>9.3. copy_instance metaclass code.<br>9.4. Calling context for copy_instance.<br>9.5. ascii usage screen.<br>9.6. Desired output format for the star table.<br>9.7. Master form of the star table.<br>10.1. A .netrc example.<br>10.2. X configuration example.<br>18.1. groff1 markup example.<br>18.2. man markup example.<br>19.1. tar archive maker production.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://catb.org/~esr/writings/taoup/html/&quot;&gt;The Art of Unix Programming&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://catb.org/~esr/writings/taoup/cover.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Eric Steven Raymond&lt;/p&gt;
+&lt;p&gt;This book and its on-line version are distributed under the terms of the Creative Commons Attribution-NoDerivs 1.0 license, with the additional proviso that the right to publish it on paper for sale or other for-profit use is reserved to Pearson Education, Inc. A reference copy of this license may be found at &lt;a href=&quot;http://creativecommons.org/licenses/by-nd/1.0/legalcode&quot;&gt;http://creativecommons.org/licenses/by-nd/1.0/legalcode&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
+    
+      <category term="Unix" scheme="http://ipcreator.me/tags/Unix/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Things Every Hacker Once Knew</title>
     <link href="http://ipcreator.me/2017/01/20/Master/things-every-hacker-once-knew/"/>
     <id>http://ipcreator.me/2017/01/20/Master/things-every-hacker-once-knew/</id>
@@ -6923,7 +6983,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <updated>2017-02-15T13:06:27.820Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.catb.org/~esr/faqs/things-every-hacker-once-knew/" target="_blank" rel="external">Things Every Hacker Once Knew</a></p>
-<p>by Eric S. Raymond <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#101;&#x73;&#x72;&#x40;&#x74;&#104;&#x79;&#114;&#x73;&#117;&#x73;&#46;&#x63;&#111;&#x6d;">&#101;&#x73;&#x72;&#x40;&#x74;&#104;&#x79;&#114;&#x73;&#117;&#x73;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>by Eric S. Raymond <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#101;&#x73;&#114;&#64;&#116;&#104;&#x79;&#x72;&#115;&#x75;&#115;&#46;&#x63;&#x6f;&#x6d;">&#101;&#x73;&#114;&#64;&#116;&#104;&#x79;&#x72;&#115;&#x75;&#115;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <p>One fine day in January 2017 I was reminded of something I had half-noticed a few times over the previous decade. That is, younger hackers don’t know the bit structure of ASCII and the meaning of the odder control characters in it.</p>
 <p>This is knowledge every fledgling hacker used to absorb through their pores. It’s nobody’s fault this changed; the obsolescence of hardware terminals and the near-obsolescence of the RS-232 protocol is what did it. Tools generate culture; sometimes, when a tool becomes obsolete, a bit of cultural commonality quietly evaporates. It can be difficult to notice that this has happened.</p>
 <p>This document is a collection of facts about ASCII and related technologies, notably hardware serial terminals and RS-232 and modems. This is lore that was at one time near-universal and is no longer. It’s not likely to be directly useful today - until you trip over some piece of still-functioning technology where it’s relevant (like a GPS puck), or it makes sense of some old-fart war story. Even so, it’s good to know anyway, for cultural-literacy reasons.</p>
@@ -7046,7 +7106,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <summary type="html">
     
       &lt;p&gt;&lt;a href=&quot;http://www.catb.org/~esr/faqs/things-every-hacker-once-knew/&quot;&gt;Things Every Hacker Once Knew&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#101;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#104;&amp;#x79;&amp;#114;&amp;#x73;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#101;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#104;&amp;#x79;&amp;#114;&amp;#x73;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#101;&amp;#x73;&amp;#114;&amp;#64;&amp;#116;&amp;#104;&amp;#x79;&amp;#x72;&amp;#115;&amp;#x75;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#101;&amp;#x73;&amp;#114;&amp;#64;&amp;#116;&amp;#104;&amp;#x79;&amp;#x72;&amp;#115;&amp;#x75;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;One fine day in January 2017 I was reminded of something I had half-noticed a few times over the previous decade. That is, younger hackers don’t know the bit structure of ASCII and the meaning of the odder control characters in it.&lt;/p&gt;
 &lt;p&gt;This is knowledge every fledgling hacker used to absorb through their pores. It’s nobody’s fault this changed; the obsolescence of hardware terminals and the near-obsolescence of the RS-232 protocol is what did it. Tools generate culture; sometimes, when a tool becomes obsolete, a bit of cultural commonality quietly evaporates. It can be difficult to notice that this has happened.&lt;/p&gt;
 &lt;p&gt;This document is a collection of facts about ASCII and related technologies, notably hardware serial terminals and RS-232 and modems. This is lore that was at one time near-universal and is no longer. It’s not likely to be directly useful today - until you trip over some piece of still-functioning technology where it’s relevant (like a GPS puck), or it makes sense of some old-fart war story. Even so, it’s good to know anyway, for cultural-literacy reasons.&lt;/p&gt;
@@ -7059,70 +7119,6 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     
     
       <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Art of Unix Programming</title>
-    <link href="http://ipcreator.me/2017/01/20/Master/the-art-of-unix-programming/"/>
-    <id>http://ipcreator.me/2017/01/20/Master/the-art-of-unix-programming/</id>
-    <published>2017-01-20T11:16:06.000Z</published>
-    <updated>2017-02-16T00:06:16.386Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://catb.org/~esr/writings/taoup/html/" target="_blank" rel="external">The Art of Unix Programming</a></p>
-<p><img src="http://catb.org/~esr/writings/taoup/cover.png" alt=""></p>
-<p>Eric Steven Raymond</p>
-<p>This book and its on-line version are distributed under the terms of the Creative Commons Attribution-NoDerivs 1.0 license, with the additional proviso that the right to publish it on paper for sale or other for-profit use is reserved to Pearson Education, Inc. A reference copy of this license may be found at <a href="http://creativecommons.org/licenses/by-nd/1.0/legalcode" target="_blank" rel="external">http://creativecommons.org/licenses/by-nd/1.0/legalcode</a>.</p>
-  <a id="more"></a>
-<p>AIX, AS/400, DB/2, OS/2, System/360, MVS, VM/CMS, and IBM PC are trademarks of IBM. Alpha, DEC, VAX, HP-UX, PDP, TOPS-10, TOPS-20, VMS, and VT-100 are trademarks of Compaq. Amiga and AmigaOS are trademarks of Amiga, Inc. Apple, Macintosh, MacOS, Newton, OpenDoc, and OpenStep are trademarks of Apple Computers, Inc. ClearCase is a trademark of Rational Software, Inc. Ethernet is a trademark of 3COM, Inc. Excel, MS-DOS, Microsoft Windows and PowerPoint are trademarks of Microsoft, Inc. Java. J2EE, JavaScript, NeWS, and Solaris are trademarks of Sun Microsystems. SPARC is a trademark of SPARC international. Informix is a trademark of Informix software. Itanium is a trademark of Intel. Linux is a trademark of Linus Torvalds. Netscape is a trademark of AOL. PDF and PostScript are trademarks of Adobe, Inc. UNIX is a trademark of The Open Group.</p>
-<p>The photograph of Ken and Dennis in Chapter 2 appears courtesy of Bell Labs/Lucent Technologies.</p>
-<p>The epigraph on the Portability chapter is from the Bell System Technical Journal, v57 #6 part 2 (July-Aug. 1978) pp. 2021-2048 and is reproduced with the permission of Bell Labs/Lucent Technologies.</p>
-<p>Revision History<br>Revision 1.0    19 September 2003    esr<br>This is the content that went to Addison-Wesley’s printers.<br>Revision 0.4    5 February 2003    esr<br>Release for public review.<br>Revision 0.3    22 January 2003    esr<br>First eighteen-chapter draft. Manuscript walkthrough at Chapter 12. Limited release for early reviewers.<br>Revision 0.2    2 January 2003    esr<br>First manuscript walkthrough at Chapter 7. Released to Dmitry Kirsanov at AW production.<br>Revision 0.1    16 November 2002    esr<br>First DocBook draft, fifteen chapters. Languages rewritten to incorporate lots of feedback. Transparency, Modularity, Multiprogramming, Configuration, Interfaces, Documentation, and Open Source chapters released. Shipped to Mark Taub at AW.<br>Revision 0.0    1999    esr<br>Public HTML draft, first four chapters only.<br>Dedication</p>
-<p>To Ken Thompson and Dennis Ritchie, because you inspired me.</p>
-<p>Table of Contents</p>
-<p>Preface<br>Who Should Read This Book<br>How to Use This Book<br>Related References<br>Conventions Used in This Book<br>Our Case Studies<br>Author’s Acknowledgements<br>I. Context</p>
-<ol>
-<li>Philosophy<br>Culture? What Culture?<br>The Durability of Unix<br>The Case against Learning Unix Culture<br>What Unix Gets Wrong<br>What Unix Gets Right<br>Open-Source Software<br>Cross-Platform Portability and Open Standards<br>The Internet and the World Wide Web<br>The Open-Source Community<br>Flexibility All the Way Down<br>Unix Is Fun to Hack<br>The Lessons of Unix Can Be Applied Elsewhere<br>Basics of the Unix Philosophy<br>Rule of Modularity: Write simple parts connected by clean interfaces.<br>Rule of Clarity: Clarity is better than cleverness.<br>Rule of Composition: Design programs to be connected with other programs.<br>Rule of Separation: Separate policy from mechanism; separate interfaces from engines.<br>Rule of Simplicity: Design for simplicity; add complexity only where you must.<br>Rule of Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.<br>Rule of Transparency: Design for visibility to make inspection and debugging easier.<br>Rule of Robustness: Robustness is the child of transparency and simplicity.<br>Rule of Representation: Fold knowledge into data, so program logic can be stupid and robust.<br>Rule of Least Surprise: In interface design, always do the least surprising thing.<br>Rule of Silence: When a program has nothing surprising to say, it should say nothing.<br>Rule of Repair: Repair what you can — but when you must fail, fail noisily and as soon as possible.<br>Rule of Economy: Programmer time is expensive; conserve it in preference to machine time.<br>Rule of Generation: Avoid hand-hacking; write programs to write programs when you can.<br>Rule of Optimization: Prototype before polishing. Get it working before you optimize it.<br>Rule of Diversity: Distrust all claims for one true way.<br>Rule of Extensibility: Design for the future, because it will be here sooner than you think.<br>The Unix Philosophy in One Lesson<br>Applying the Unix Philosophy<br>Attitude Matters Too</li>
-<li>History<br>Origins and History of Unix, 1969-1995<br>Genesis: 1969–1971<br>Exodus: 1971–1980<br>TCP/IP and the Unix Wars: 1980-1990<br>Blows against the Empire: 1991-1995<br>Origins and History of the Hackers, 1961-1995<br>At Play in the Groves of Academe: 1961-1980<br>Internet Fusion and the Free Software Movement: 1981-1991<br>Linux and the Pragmatist Reaction: 1991-1998<br>The Open-Source Movement: 1998 and Onward<br>The Lessons of Unix History</li>
-<li>Contrasts<br>The Elements of Operating-System Style<br>What Is the Operating System’s Unifying Idea?<br>Multitasking Capability<br>Cooperating Processes<br>Internal Boundaries<br>File Attributes and Record Structures<br>Binary File Formats<br>Preferred User Interface Style<br>Intended Audience<br>Entry Barriers to Development<br>Operating-System Comparisons<br>VMS<br>MacOS<br>OS/2<br>Windows NT<br>BeOS<br>MVS<br>VM/CMS<br>Linux<br>What Goes Around, Comes Around<br>II. Design</li>
-<li>Modularity<br>Encapsulation and Optimal Module Size<br>Compactness and Orthogonality<br>Compactness<br>Orthogonality<br>The SPOT Rule<br>Compactness and the Strong Single Center<br>The Value of Detachment<br>Software Is a Many-Layered Thing<br>Top-Down versus Bottom-Up<br>Glue Layers<br>Case Study: C Considered as Thin Glue<br>Libraries<br>Case Study: GIMP Plugins<br>Unix and Object-Oriented Languages<br>Coding for Modularity</li>
-<li>Textuality<br>The Importance of Being Textual<br>Case Study: Unix Password File Format<br>Case Study: .newsrc Format<br>Case Study: The PNG Graphics File Format<br>Data File Metaformats<br>DSV Style<br>RFC 822 Format<br>Cookie-Jar Format<br>Record-Jar Format<br>XML<br>Windows INI Format<br>Unix Textual File Format Conventions<br>The Pros and Cons of File Compression<br>Application Protocol Design<br>Case Study: SMTP, the Simple Mail Transfer Protocol<br>Case Study: POP3, the Post Office Protocol<br>Case Study: IMAP, the Internet Message Access Protocol<br>Application Protocol Metaformats<br>The Classical Internet Application Metaprotocol<br>HTTP as a Universal Application Protocol<br>BEEP: Blocks Extensible Exchange Protocol<br>XML-RPC, SOAP, and Jabber</li>
-<li>Transparency<br>Studying Cases<br>Case Study: audacity<br>Case Study: fetchmail’s -v option<br>Case Study: GCC<br>Case Study: kmail<br>Case Study: SNG<br>Case Study: The Terminfo Database<br>Case Study: Freeciv Data Files<br>Designing for Transparency and Discoverability<br>The Zen of Transparency<br>Coding for Transparency and Discoverability<br>Transparency and Avoiding Overprotectiveness<br>Transparency and Editable Representations<br>Transparency, Fault Diagnosis, and Fault Recovery<br>Designing for Maintainability</li>
-<li>Multiprogramming<br>Separating Complexity Control from Performance Tuning<br>Taxonomy of Unix IPC Methods<br>Handing off Tasks to Specialist Programs<br>Pipes, Redirection, and Filters<br>Wrappers<br>Security Wrappers and Bernstein Chaining<br>Slave Processes<br>Peer-to-Peer Inter-Process Communication<br>Problems and Methods to Avoid<br>Obsolescent Unix IPC Methods<br>Remote Procedure Calls<br>Threads — Threat or Menace?<br>Process Partitioning at the Design Level</li>
-<li>Minilanguages<br>Understanding the Taxonomy of Languages<br>Applying Minilanguages<br>Case Study: sng<br>Case Study: Regular Expressions<br>Case Study: Glade<br>Case Study: m4<br>Case Study: XSLT<br>Case Study: The Documenter’s Workbench Tools<br>Case Study: fetchmail Run-Control Syntax<br>Case Study: awk<br>Case Study: PostScript<br>Case Study: bc and dc<br>Case Study: Emacs Lisp<br>Case Study: JavaScript<br>Designing Minilanguages<br>Choosing the Right Complexity Level<br>Extending and Embedding Languages<br>Writing a Custom Grammar<br>Macros — Beware!<br>Language or Application Protocol?</li>
-<li>Generation<br>Data-Driven Programming<br>Case Study: ascii<br>Case Study: Statistical Spam Filtering<br>Case Study: Metaclass Hacking in fetchmailconf<br>Ad-hoc Code Generation<br>Case Study: Generating Code for the ascii Displays<br>Case Study: Generating HTML Code for a Tabular List</li>
-<li>Configuration<br>What Should Be Configurable?<br>Where Configurations Live<br>Run-Control Files<br>Case Study: The .netrc File<br>Portability to Other Operating Systems<br>Environment Variables<br>System Environment Variables<br>User Environment Variables<br>When to Use Environment Variables<br>Portability to Other Operating Systems<br>Command-Line Options<br>The -a to -z of Command-Line Options<br>Portability to Other Operating Systems<br>How to Choose among the Methods<br>Case Study: fetchmail<br>Case Study: The XFree86 Server<br>On Breaking These Rules</li>
-<li>Interfaces<br>Applying the Rule of Least Surprise<br>History of Interface Design on Unix<br>Evaluating Interface Designs<br>Tradeoffs between CLI and Visual Interfaces<br>Case Study: Two Ways to Write a Calculator Program<br>Transparency, Expressiveness, and Configurability<br>Unix Interface Design Patterns<br>The Filter Pattern<br>The Cantrip Pattern<br>The Source Pattern<br>The Sink Pattern<br>The Compiler Pattern<br>The ed pattern<br>The Roguelike Pattern<br>The ‘Separated Engine and Interface’ Pattern<br>The CLI Server Pattern<br>Language-Based Interface Patterns<br>Applying Unix Interface-Design Patterns<br>The Polyvalent-Program Pattern<br>The Web Browser as a Universal Front End<br>Silence Is Golden</li>
-<li>Optimization<br>Don’t Just Do Something, Stand There!<br>Measure before Optimizing<br>Nonlocality Considered Harmful<br>Throughput vs. Latency<br>Batching Operations<br>Overlapping Operations<br>Caching Operation Results</li>
-<li>Complexity<br>Speaking of Complexity<br>The Three Sources of Complexity<br>Tradeoffs between Interface and Implementation Complexity<br>Essential, Optional, and Accidental Complexity<br>Mapping Complexity<br>When Simplicity Is Not Enough<br>A Tale of Five Editors<br>ed<br>vi<br>Sam<br>Emacs<br>Wily<br>The Right Size for an Editor<br>Identifying the Complexity Problems<br>Compromise Doesn’t Work<br>Is Emacs an Argument against the Unix Tradition?<br>The Right Size of Software<br>III. Implementation</li>
-<li>Languages<br>Unix’s Cornucopia of Languages<br>Why Not C?<br>Interpreted Languages and Mixed Strategies<br>Language Evaluations<br>C<br>C++<br>Shell<br>Perl<br>Tcl<br>Python<br>Java<br>Emacs Lisp<br>Trends for the Future<br>Choosing an X Toolkit</li>
-<li>Tools<br>A Developer-Friendly Operating System<br>Choosing an Editor<br>Useful Things to Know about vi<br>Useful Things to Know about Emacs<br>The Antireligious Choice: Using Both<br>Special-Purpose Code Generators<br>yacc and lex<br>Case Study: Glade<br>make: Automating Your Recipes<br>Basic Theory of make<br>make in Non-C/C++ Development<br>Utility Productions<br>Generating Makefiles<br>Version-Control Systems<br>Why Version Control?<br>Version Control by Hand<br>Automated Version Control<br>Unix Tools for Version Control<br>Runtime Debugging<br>Profiling<br>Combining Tools with Emacs<br>Emacs and make<br>Emacs and Runtime Debugging<br>Emacs and Version Control<br>Emacs and Profiling<br>Like an IDE, Only Better</li>
-<li>Reuse<br>The Tale of J. Random Newbie<br>Transparency as the Key to Reuse<br>From Reuse to Open Source<br>The Best Things in Life Are Open<br>Where to Look?<br>Issues in Using Open-Source Software<br>Licensing Issues<br>What Qualifies as Open Source<br>Standard Open-Source Licenses<br>When You Need a Lawyer<br>IV. Community</li>
-<li>Portability<br>Evolution of C<br>Early History of C<br>C Standards<br>Unix Standards<br>Standards and the Unix Wars<br>The Ghost at the Victory Banquet<br>Unix Standards in the Open-Source World<br>IETF and the RFC Standards Process<br>Specifications as DNA, Code as RNA<br>Programming for Portability<br>Portability and Choice of Language<br>Avoiding System Dependencies<br>Tools for Portability<br>Internationalization<br>Portability, Open Standards, and Open Source</li>
-<li>Documentation<br>Documentation Concepts<br>The Unix Style<br>The Large-Document Bias<br>Cultural Style<br>The Zoo of Unix Documentation Formats<br>troff and the Documenter’s Workbench Tools<br>TeX<br>Texinfo<br>POD<br>HTML<br>DocBook<br>The Present Chaos and a Possible Way Out<br>DocBook<br>Document Type Definitions<br>Other DTDs<br>The DocBook Toolchain<br>Migration Tools<br>Editing Tools<br>Related Standards and Practices<br>SGML<br>XML-DocBook References<br>Best Practices for Writing Unix Documentation</li>
-<li>Open Source<br>Unix and Open Source<br>Best Practices for Working with Open-Source Developers<br>Good Patching Practice<br>Good Project- and Archive-Naming Practice<br>Good Development Practice<br>Good Distribution-Making Practice<br>Good Communication Practice<br>The Logic of Licenses: How to Pick One<br>Why You Should Use a Standard License<br>Varieties of Open-Source Licensing<br>MIT or X Consortium License<br>BSD Classic License<br>Artistic License<br>General Public License<br>Mozilla Public License</li>
-<li>Futures<br>Essence and Accident in Unix Tradition<br>Plan 9: The Way the Future Was<br>Problems in the Design of Unix<br>A Unix File Is Just a Big Bag of Bytes<br>Unix Support for GUIs Is Weak<br>File Deletion Is Forever<br>Unix Assumes a Static File System<br>The Design of Job Control Was Badly Botched<br>The Unix API Doesn’t Use Exceptions<br>ioctl2 and fcntl2 Are an Embarrassment<br>The Unix Security Model May Be Too Primitive<br>Unix Has Too Many Different Kinds of Names<br>File Systems Might Be Considered Harmful<br>Towards a Global Internet Address Space<br>Problems in the Environment of Unix<br>Problems in the Culture of Unix<br>Reasons to Believe<br>A. Glossary of Abbreviations<br>B. References<br>C. Contributors<br>D. Rootless Root<br>Editor’s Introduction<br>Master Foo and the Ten Thousand Lines<br>Master Foo and the Script Kiddie<br>Master Foo Discourses on the Two Paths<br>Master Foo and the Methodologist<br>Master Foo Discourses on the Graphical User Interface<br>Master Foo and the Unix Zealot<br>Master Foo Discourses on the Unix-Nature<br>Master Foo and the End User<br>List of Figures</li>
-</ol>
-<p>2.1. The PDP-7.<br>3.1. Schematic history of timesharing.<br>4.1. Qualitative plot of defect count and density vs. module size.<br>4.2. Caller/callee relationships in GIMP with a plugin loaded.<br>6.1. Screen shot of audacity.<br>6.2. Screen shot of kmail.<br>6.3. Main window of a Freeciv game.<br>8.1. Taxonomy of languages.<br>11.1. The xcalc GUI.<br>11.2. Screen shot of the original Rogue game.<br>11.3. The Xcdroast GUI.<br>11.4. Caller/callee relationships in a polyvalent program.<br>13.1. Sources and kinds of complexity.<br>18.1. Processing structural documents.<br>18.2. Present-day XML-DocBook toolchain.<br>18.3. Future XML-DocBook toolchain with FOP.<br>List of Tables</p>
-<p>8.1. Regular-expression examples.<br>8.2. Introduction to regular-expression operations.<br>14.1. Language choices.<br>14.2. Summary of X Toolkits.<br>List of Examples</p>
-<p>5.1. Password file example.<br>5.2. A .newsrc example.<br>5.3. A fortune file example.<br>5.4. Basic data for three planets in a record-jar format.<br>5.5. An XML example.<br>5.6. A .INI file example.<br>5.7. An SMTP session example.<br>5.8. A POP3 example session.<br>5.9. An IMAP session example.<br>6.1. An example fetchmail -v transcript.<br>6.2. An SNG Example.<br>7.1. The pic2graph pipeline.<br>8.1. Glade Hello, World.<br>8.2. A sample m4 macro.<br>8.3. A sample XSLT program.<br>8.4. Taxonomy of languages — the pic source.<br>8.5. Synthetic example of a fetchmailrc.<br>8.6. RSA implementation using dc.<br>9.1. Example of fetchmailrc syntax.<br>9.2. Python structure dump of a fetchmail configuration.<br>9.3. copy_instance metaclass code.<br>9.4. Calling context for copy_instance.<br>9.5. ascii usage screen.<br>9.6. Desired output format for the star table.<br>9.7. Master form of the star table.<br>10.1. A .netrc example.<br>10.2. X configuration example.<br>18.1. groff1 markup example.<br>18.2. man markup example.<br>19.1. tar archive maker production.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://catb.org/~esr/writings/taoup/html/&quot;&gt;The Art of Unix Programming&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://catb.org/~esr/writings/taoup/cover.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Eric Steven Raymond&lt;/p&gt;
-&lt;p&gt;This book and its on-line version are distributed under the terms of the Creative Commons Attribution-NoDerivs 1.0 license, with the additional proviso that the right to publish it on paper for sale or other for-profit use is reserved to Pearson Education, Inc. A reference copy of this license may be found at &lt;a href=&quot;http://creativecommons.org/licenses/by-nd/1.0/legalcode&quot;&gt;http://creativecommons.org/licenses/by-nd/1.0/legalcode&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
-    
-      <category term="Unix" scheme="http://ipcreator.me/tags/Unix/"/>
     
   </entry>
   

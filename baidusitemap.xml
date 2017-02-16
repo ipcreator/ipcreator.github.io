@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/12/30/ProgramAI/big-data-resources/</loc>
+    <lastmod>2017-02-16T02:30:45.464Z</lastmod>
+    <data>
+        <display>
+        <title>大数据/数据挖掘/推荐系统/机器学习相关资源</title>
+        <pubTime>2017-12-30T04:23:06.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>Data Mining</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/14/ProgramAI/brain-and-chips/</loc>
+    <lastmod>2017-02-16T02:27:24.266Z</lastmod>
+    <data>
+        <display>
+        <title>脑芯编：窥脑究竟，织网造芯</title>
+        <pubTime>2017-02-13T23:14:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/01/02/MyShare/lixiaolai-lead-to-freedom-of-wealth/</loc>
     <lastmod>2017-02-16T02:20:48.216Z</lastmod>
     <data>
@@ -193,9 +235,9 @@
         <title>Google RAISR技术落地应用 可节约75%流量</title>
         <pubTime>2017-02-13T06:30:06.000Z</pubTime>
         
-        <tag>Google</tag>
-         
         <tag>AI</tag>
+         
+        <tag>Google</tag>
          
          
            
@@ -239,9 +281,9 @@
         
         <tag>AI</tag>
          
-        <tag>Machine Learning</tag>
-         
         <tag>Smart Phone</tag>
+         
+        <tag>Machine Learning</tag>
          
          
            
@@ -261,9 +303,9 @@
         <title>谷歌发布全新轻型机器学习架构：可直接载于设备端的AI系统</title>
         <pubTime>2017-12-31T15:59:56.000Z</pubTime>
         
-        <tag>Google</tag>
-         
         <tag>AI</tag>
+         
+        <tag>Google</tag>
          
         <tag>Android</tag>
          
@@ -897,9 +939,9 @@
         <title>谷歌机器学习白皮书全解析43条黄金法则</title>
         <pubTime>2017-12-31T15:57:00.000Z</pubTime>
         
-        <tag>Google</tag>
-         
         <tag>AI</tag>
+         
+        <tag>Google</tag>
          
         <tag>Machine Learning</tag>
          
@@ -1286,30 +1328,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/12/30/ProgramAI/big-data-resources/</loc>
-    <lastmod>2017-02-15T12:39:48.440Z</lastmod>
-    <data>
-        <display>
-        <title>大数据/数据挖掘/推荐系统/机器学习相关资源</title>
-        <pubTime>2017-12-30T04:23:06.000Z</pubTime>
-        
-        <tag>Big Data</tag>
-         
-        <tag>Data Digging</tag>
-         
-        <tag>Recommend System</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/12/ProgramAI/google-styleguide/</loc>
     <lastmod>2017-02-15T12:20:26.050Z</lastmod>
     <data>
@@ -1354,28 +1372,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/14/ProgramAI/brain-and-chips/</loc>
-    <lastmod>2017-02-14T00:30:57.188Z</lastmod>
-    <data>
-        <display>
-        <title>脑芯编：窥脑究竟，织网造芯</title>
-        <pubTime>2017-02-13T23:14:06.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-        <tag>Chip</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/14/ProgramAI/how-to-train-deep-neural-network/</loc>
     <lastmod>2017-02-13T23:57:08.535Z</lastmod>
     <data>
@@ -1405,9 +1401,9 @@
         <title>这一年来，数据科学家都用了哪些算法玩转人工智能？</title>
         <pubTime>2017-02-13T00:58:06.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>AI</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Machine Learning</tag>
          
