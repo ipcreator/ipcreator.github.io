@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://ipcreator.me">
+  <title>脑芯编：窥脑究竟，织网造芯 | IPCreator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="作者：雷锋网：本文作者痴笑，矽说（微信号：silicon_talks）主笔。
+你信不信有一天，硅工造的芯片会写诗？
+如果信，那说好的“诗三百，一言以蔽之，思无邪”，还真的是“无邪”么？如果不信，请读下面这一首：脑芯编：窥脑究竟，织网造芯（一）
+如果要给这诗一个赏析，大概可以是一个忧伤的故事。
+天边云的变换复杂，而我却是半梦半醒，我在想一个人，想第一次和他相见，想他的风流倜傥，想他的英雄飒爽。如果你">
+<meta property="og:type" content="article">
+<meta property="og:title" content="脑芯编：窥脑究竟，织网造芯">
+<meta property="og:url" content="http://ipcreator.me/2017/02/14/ProgramAI/brain-and-chips/index.html">
+<meta property="og:site_name" content="IPCreator">
+<meta property="og:description" content="作者：雷锋网：本文作者痴笑，矽说（微信号：silicon_talks）主笔。
+你信不信有一天，硅工造的芯片会写诗？
+如果信，那说好的“诗三百，一言以蔽之，思无邪”，还真的是“无邪”么？如果不信，请读下面这一首：脑芯编：窥脑究竟，织网造芯（一）
+如果要给这诗一个赏析，大概可以是一个忧伤的故事。
+天边云的变换复杂，而我却是半梦半醒，我在想一个人，想第一次和他相见，想他的风流倜傥，想他的英雄飒爽。如果你">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd23f4a433.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd320e7eec.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd367a6d30.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd3a83cb17.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd3e86d523.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e4d856ce4.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e5045817e.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e53c8e71c.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e5579eda1.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e607733af.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e64598d02.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc646c2275.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc6a0193ea.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc6c9758fe.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc6e6f2767.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc723e9c30.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc75dae36b.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a0cb9a28b.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a1ad71993.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a1fcea2a3.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a22c2f924.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a25c458be.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a28b3f7c4.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a2b1e3ab0.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a2c45e2f6.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a32026751.png?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/5857b487c9ddd.gif">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5882df0757279.jpg?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5882df534880c.jpg?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e0a993ecf.jpg?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e0d5ba7f7.jpg?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e0fb15171.jpg?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e111dc984.jpg?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e12495542.jpg?imageMogr2/format/jpg/quality/90">
+<meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e13881167.jpg?imageMogr2/format/jpg/quality/90">
+<meta property="og:updated_time" content="2017-02-14T00:30:57.188Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="脑芯编：窥脑究竟，织网造芯">
+<meta name="twitter:description" content="作者：雷锋网：本文作者痴笑，矽说（微信号：silicon_talks）主笔。
+你信不信有一天，硅工造的芯片会写诗？
+如果信，那说好的“诗三百，一言以蔽之，思无邪”，还真的是“无邪”么？如果不信，请读下面这一首：脑芯编：窥脑究竟，织网造芯（一）
+如果要给这诗一个赏析，大概可以是一个忧伤的故事。
+天边云的变换复杂，而我却是半梦半醒，我在想一个人，想第一次和他相见，想他的风流倜傥，想他的英雄飒爽。如果你">
+<meta name="twitter:image" content="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd23f4a433.png?imageMogr2/format/jpg/quality/90">
+  
+  
+    <link rel="icon" href="/img/personalphoto.jpg">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.2d7529.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #4d4d4d"></div>
+<div class="intrude-less">
+
+
+
+
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/personalphoto.jpg" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">For life</a></h1>
+		</hgroup>
+		
+		<p class="header-subtitle">Growing up is the only password.</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/personalphoto.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">For life</h1>
+			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Growing up is the only password.<i class="icon icon-quo-right"></i></p>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/archives">归档</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-ProgramAI/brain-and-chips" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      脑芯编：窥脑究竟，织网造芯
+    </h1>
+  
+
+        
+        <a href="/2017/02/14/ProgramAI/brain-and-chips/" class="archive-article-date">
+  	<time datetime="2017-02-13T23:14:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作者：<a href="http://www.leiphone.com/news/201612/E4eY2HYElJIC0be5.html" target="_blank" rel="external">雷锋网：本文作者痴笑，矽说（微信号：silicon_talks）主笔。</a></p>
+<p>你信不信有一天，硅工造的芯片会写诗？</p>
+<p>如果信，<br>那说好的“诗三百，一言以蔽之，思无邪”，<br>还真的是“无邪”么？<br>如果不信，请读下面这一首：<br><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd23f4a433.png?imageMogr2/format/jpg/quality/90" alt=""><br>脑芯编：窥脑究竟，织网造芯（一）</p>
+<p>如果要给这诗一个赏析，大概可以是一个忧伤的故事。</p>
+<p>天边云的变换复杂，而我却是半梦半醒，我在想一个人，想第一次和他相见，想他的风流倜傥，想他的英雄飒爽。<br>如果你是个文科生，或许你会嘲笑这首连平仄都不满足的劣质诗歌，韵脚也押的有些蹩脚，故事更是为赋新词强说愁。</p>
+<p>如果你是理科男，或许对这种思春的小情怀不以为然。</p>
+<p>不过，那是因为你们并没有看懂这首诗。</p>
+<p>因为这诗暗藏了一个密码，藏着人工智能遇到摩尔定律后蹭出的火花。</p>
+<p>另外，这诗不是人工智能的产物，只是矽说在这个人工智能横行的年代里特有的小情怀。</p>
+<p>但可能在不远的将来，人工智能将会开车，会翻译，会调情，也会写下更美的篇章。想解开这个人工智能与集成电路的秘密？关注雷锋网(公众号：雷锋网)后期更新，我们一句一句地读下去。</p>
+  <a id="more"></a>
+<h2 id="〈一〉昨夜神风送层云"><a href="#〈一〉昨夜神风送层云" class="headerlink" title="〈一〉昨夜神风送层云"></a>〈一〉昨夜神风送层云</h2><p>在我读书的时候，人工智能（Artifical Intelligence, AI）从来就是CS (Computer Science)的天下，哪有电路撺掇的份。那时候的码农们或许会挂着机器学习，数据挖掘，支持向量机，压缩感知……但从来没有一次，电路的突破是由人工智能推动的。可是在今天，如果你打开半导体行业的利好消息，有多少不是和人工智能，深度学习相关的？</p>
+<p>过去几个月，光在半导体巨头们发生的人工智能的故事就足以吊足大家的胃口。何况，这还是只是很多硅工心目中的人工智能元年。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd320e7eec.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>是什么导致了半导体行业”AI一出惊天下“的巨大改变？矽说推出“脑芯编”系列，为你揭秘类脑芯片的过去，现在与未来。</p>
+<p>从人工智能到神经网络神经网络</p>
+<p>在人工智能改变半导体行业之前，在AI领域发生过一场“华山论剑”，耗时数载，最终以“深度学习神经网络（Deep Learning Neural Network）”一统江湖落下帷幕。该过程腥风血雨，而主角“神经网络”的遭遇更堪比张无忌、杨过，历经少年时的悲惨遭遇，被无数号称时代“大侠”嗤之以鼻，但终究是主角光环加持，加之得外家指点，十年一剑终成大器，号令天下，谁敢不从。</p>
+<p>本篇对这里其中的故事，按下不表，有好事者，可以去各处搜搜，剧情精彩不容错过。但是这里还是要感谢，在神经网络经历最寒冬的时候，一众大牛如 Yann LeCun (读作杨雷昆，不是严立春！！)，Geoffrey Hinton等的默默坚守，才有神经网络的今天。不过他们也早已是Facebook / Google的首席科学家，如今功成名就，也是吾等小辈无法企及的高度。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd367a6d30.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>Yann LeCun,   Geoffrey Hinton</p>
+<p>神经网络在人工智能领域，属于机器学习一路的分支。所谓机器学习，就是让电脑经过学习后代替人脑做出判断，理解，甚至决定（还记得赢了李世石的AlphaGo么？）。而所谓深度学习和浅学习的区别在于设计者是否告诉电脑的学习策略。最常见的例子是大家电子邮件系统里的垃圾邮件分类，一般一份邮件是否是垃圾邮件，在于它是否满足一些标准，比如是不是群发的，有没有叫你买东西的广告，是不是图片占有比例很高，然后发信人有没有被举报过等等……这些标准都是一个个特征，如果一种机器学习方法规定了学习的特征与策略，那就是浅学习，如果没有规定，需要算法本身去挖掘策略，那就是深度学习。</p>
+<p>所以，深度学习的一大隐忧就是——人类并不知道算法本身究竟在想什么？所以如果哪天他在他负责的算法下隐藏了一个暗算/统治人类的bug，那我们就被彻底奴役了。</p>
+<p>不过，所谓“庄生晓梦迷蝴蝶”，人类自己究竟是不是被另外一个物种开发出来的一种新智慧呢？然后，那个物种是不是已经被我们灭绝了呢？我们并没有答案。</p>
+<p>码农老师教的生物课</p>
+<p>为了弄清这横扫千军的神经网络，首先让我们来上一堂不污的生物课。既然叫神经网络，那起源就是生物脑科学。很久以前，人们发现一个单神经细胞（也叫神经元）包括输入（树突dendrites），激活判断（细胞核nucleus），输出（轴突axon）和与下一个神经元的连接关系（突触synapse）。如果用数学抽象出来过程，就是把一堆输入经过线性组合以后经过一个阈值判断，然后输出给下一级。这样一个简单的神经元就形成。把足够多个神经元连起来就能实现神经网络了。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd3a83cb17.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>上面两个图就是真实的神经元和它的数学模型。不过我还是要吐槽下：</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd3e86d523.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>从上述神经元的提出，到许多仿生的算法结构的研究，如多层感知器(Multilayer Perceptron) ，脉冲神经元(Spiking Neural)之类的，经过了一个甲子的时间，特别但都没没什么巨大的成功，原因有两个：</p>
+<p>（1）当时的集成电路计算规模与资源远没有达到面向实际应用的需求，仔细去研究神经元的数学模型，会发现每个神经元有若干个权重和成累加计算 。他对应汇编可以大致是如下流程：</p>
+<p>累加器清零                            (mov)<br>– 循环开始                             (branch)<br>    从存储器中加载权重          (load)<br>    从存储器/外设中加载输入    (load)<br>    权重 乘以 输入                    (multiply)<br>    累加                                    (add)<br>– 判断是否重新循环              (goto)<br>    激活函数                             (??)<br>输出 存储                           (store)<br>对于一个N输入的神经元要走N个循环，这对于上个世纪的单核单线程的CPU，实在是操作难度太复杂。这也就是为什么当流水线与并行处理 不断壮大的近十年，神经网络的发展得到了迅猛发展。</p>
+<p>（2）连得不对。这短短四个字，虽说的轻巧，但要找到连连看的窍门，着实花费了多少人的青春？关于怎么连，各位看官先别着急，且听脑芯编下回分解。</p>
+<p>作为脑芯编的开篇，今天就到这里，所谓“神风送层云”指的就是集成电路的下一个增长点或许就在在人工智能领域取得巨大成功的神经网络硬件实现上。</p>
+<h2 id="〈二〉几重卷积几重生"><a href="#〈二〉几重卷积几重生" class="headerlink" title="〈二〉几重卷积几重生"></a>〈二〉几重卷积几重生</h2><p>蜘蛛结网，是为了捕食昆虫；<br>蜘蛛侠结网，是为了拯救世界；<br>码农Data Scientist (~ds~) 结网，是为了——<br>换一个角度看世界，<br>英语叫做： Representation。<br>如果你只想知道一个关于神经网络的常识，我认为上面这个单词是最不应该错过的。就像每个学模拟电子学的人，其实归根结底就是学了两个字——放大。</p>
+<p>话接上回，我们说到，通过一系列乘累加和非线性激活函数，我们就可以实现一个神经元。而关键的问题就是如何把神经元们连起来。解决这个问题之前，我们先要明白神经网络的作用——通过一系列线性和非线性的变化重新将输入信息映射成为表达事物的本质的简化特征。</p>
+<p>如果你觉得上面一句的每个字都认识，却不知道他在说什么，那么我们来看一个经典的例子——人类的视觉皮层（Visual Cortex）。</p>
+<p>视觉皮层, 一场生物与AI的伟大握手</p>
+<p>码农老师的生物课又来了……</p>
+<p>你有没有想过当你看到生命中一个重要的人的时候，比如说基友（码农怎么会有妹纸？），你是看到是他/她的鼻子，眼睛，脸上的痘痘，昨晚熬夜的黑眼圈……但是这些东西最后都只留下了一个映像——我面基了。可是你有没有想过从你看到图像，到你得到的结论，无数的信息都已经没有过滤，你的脑子完成了一次将4K3D图像压缩成两个字的过程，到底发生了什么事？</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e4d856ce4.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>这个过程就是从信息经过视觉皮层（神经网络？？）的过程。从前到后，他经过了几站：</p>
+<p>（1）始发站——视网膜 ，比较像是一个电子系统的传感器，用来接收信号；</p>
+<p>（2）快速交流道——LGN，他是将左右眼看到的信号重新编码后传递给视觉皮层，像是一个电子系统中的主控处理器与总线（请原谅我不说LGN的中文，因为说了你也记 不住） ；</p>
+<p>（3）第一站——主视觉区V1，第一层神经网络，司“边界检测（Edge Detection）”一职，这可能是神经元数量最丰富的一个区域；</p>
+<p>（4）第二站——次视觉区V2，第二层神经网络，司“基础特征提取”一职，归纳视觉信号的形状、大小、颜色、频率……</p>
+<p>（5）第三站—— V3，司“位置“，也是个过渡区，一条线上你有些站你不知道为什么会停~</p>
+<p>（6）第四站——V4/V5（MT）分支，深度神经网络，各司“色彩/运动”；</p>
+<p>（6）V4分支终点站1——换乘inferotemporal Cortex，近深度智能TE区，司 ”目标识别“ <del>~终于终于我认出基友来了，撒花</del></p>
+<p>（7）V5分支终点站2——换乘Parietal Cortex, 进深度智能MST区，司“空间运动分析”。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e5045817e.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>视觉皮层可能是目前为止人类认识的最透彻的大脑部分，不过，好像建立在无数的活体实验上。。。即使如此，还是有很多未知的空间亟待生物学家探索。</p>
+<p>不知道读到这里，对人工智能略有了解的你有没有觉得这堂生物课在哪里见过？ 先做边界检测，在再做特征提取，在进行分类识别，这不就是大名鼎鼎的</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e53c8e71c.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>卷积，让加速成为一种可能</p>
+<p>其实在神经网络领域里，目前为止唯一能算的上前所未有成功的就是CNN （Convolution Neural Network，卷积神经网络）。最早的CNN可以追溯到98年Yann LeCun的一篇如何识别手写数字的paper，这里出现了第一个CNN的雏形LeNet：</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e5579eda1.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>从结构上来，CNN继承了视觉皮层中对信号处理“层”的概念，虽然不是那么的100%的吻合，但是CNN的初级层往往用来做“边界检测”这样的简单的特征提取，而在深度层重新组合初级层的信息成为抽象的再表达（Representation）,最后交给事件的发生的相关概率归纳出事物的本质。</p>
+<p>另外，一个比较不太准确的趋势是神经元的数量随层的深度逐渐减少，但是单个神经元的粗壮程度（输入数量）随层的深度逐渐增加。视觉皮层也具有相似的规律，V1的数量多，但是结构比较简单，但到了V4/V5，链接变得很复杂，但占的区域却比V1小的多。</p>
+<p>然而，这些都不是做电路的人重点。</p>
+<p>对于硅工们而言，CNN获得巨大成功的原因在于：它极大地节省了神经网络的硬件开销，使神经元为单位作加速器成为了可能。</p>
+<p>（1） CNN定义了一种更高能效的元操作——卷积核</p>
+<p>关于卷积是什么，大家可以去参考一篇《一文读懂卷积神经网络》（广泛地转载于各大公众号间），下图是我目前看到的最形象的卷积描述。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e607733af.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>该图片源自网络，感谢原gif作者</p>
+<p>其本质就是对于一个区块，判断和自己系数组成的“基”区块的相似程度，得到的分数越高就越相似。这样，当一种“基区块”被赋予一种特征是，即使用于整张图片的特征提取，他的系数也是固定的，因此大量的系数加载操作可以被省略。同时，一个固定大小的“卷积核”成为了比“乘累加”更高阶、更高效的原子操作，在现代计算机体系结构中，实现越复杂，但操作越固定的加速器，其效率和速度的提升也就越大。</p>
+<p>（2） Pooling —— 是垃圾就要扔掉</p>
+<p>CNN网络的另一个巨大贡献就是在卷积层和层之间，设置了一个”垃圾箱“，把上一层产生的无效信息都扔掉，避免了超大规模的数据传输和存储。大家把这叫做Pooling，我又要来吐槽那个中国人给他取了个”池化“的名字，虽然我也找不到更好的名字，但根本无法帮助理解。Pooling的策略很多，最常见的是max pooling就是留个最大的，然后又其他都扔掉。</p>
+<p>（3） “乱撸”？ (ReLU)</p>
+<p>LeNet后期发展到AlexNet后，激活函数也从sigmoid变成了ReLu，他们的图形曲线大概如下所示。用脚趾头也知道，Relu操作的实现就是把符号位为负置0就好了。至于sigmoid么，传承自经典机器学习回归理论，是e指数的除法操作，编译后简直就是一场噩梦，我们先把他当作一个古老的神话就好了。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5851e64598d02.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>以上种种硬件实现的简化，加上CNN的巨大胜利，都当让硅工们看到了直接从电路角度优化的角度切入人工智能芯片的可能。但是，也发现了一个问题，传统的硬件加速的算法往往是做死的，比如椭圆加密，浮点乘除等等。但是CNN的元操作——卷积核——虽然模式固定，但是其每一层的卷积核数量和层数却是纷繁复杂，固定的硬件并不能实现网络的可塑性（structual plasticity）？</p>
+<p>那该怎么办？下一次，如何利用具有高度可编程性的CPU来配置不同结构的神经网络——计算机的”形与令“。就到这里，且听下回分解。</p>
+<h2 id="〈三〉梦里不问形与令"><a href="#〈三〉梦里不问形与令" class="headerlink" title="〈三〉梦里不问形与令"></a>〈三〉梦里不问形与令</h2><p>世界上有两种管家：</p>
+<p>一种是Batman的Alfred<br>能服务能做饭能伪装能打架<br>狠起来超人也不是干不过<br>另一种是天朝的大内总管<br>掌印秉笔，啥事不会<br>老大又吩咐了就去传个话<br>你脑子里的CPU是哪一种？</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc646c2275.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>有了神经元，知道了怎么把神经元连成网络，这个系列终于进入了主题——怎么实现神经网络。如果在这个问题上加一个条件，那就是“怎样用芯片实现神经网络的计算”？</p>
+<p>在回答这个问题以前，让我们先去拜访两位长者——Alan Turing和John Von Neumann，目前大家公认的计算机之父。话说前者才是真的“苟利国家生死以，岂因祸福避趋之”，详见卷福主演的奥斯卡获奖电影《模仿游戏》。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc6a0193ea.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>Turing-Von-Neumann架构</p>
+<p>为了表达对大师的尊敬，我起了个很干脆的标题。大师之所以是大师，是因为他们定义了在80年前定义了通用计算机的数学模型和体系结构。在这过去的80年里，任何试图推翻这些结构的“投机”分子几乎都没什么好下场。但是，总有人希望推翻这个架构。先简单的描述下两位长者干了什么。</p>
+<p>Alan Turing在1936年提出了一种具有普适性的逻辑计算模型，证明通过有限状态机完成输入数据的操作，可以实现任意复杂的逻辑运算。图灵机本身描述的场景在现在看来已经没什么意义，但是他第一次完整的定义普适计算机体系机构——一卷很长很长的带子（infinite lengthtape）通过一个有磁头(head)的有限状态表(finite state table)进行读取/处理/改写的机器。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc6c9758fe.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>9年后，Von Neumann把带子改叫做“Memory”，状态表叫做“CPU”，磁头改叫做“Connection (Bus) ”，换了一副图，就有了史称“冯诺依曼架构”的现代计算机体系结构。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc6e6f2767.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>教科书上会说这个结构有啥特点，这是让你背的。其实很简单，图灵-冯诺依曼架构最大的特点是把计算任务分为了2个部分——数据存储(memory)和数据处理(processor)。处理器几乎不能存数据，存储器几乎不能算数据。两部分用一种连接方式(bus)按一定规则通信。泾渭分明的特点让冯诺依曼架构处理事情起来特别有条理，就像“男主外女主内”的家庭角色分配一样，在硬件资源极度受限的情况下，成为了自动化发展的中坚力量。</p>
+<p>冯诺依曼架构有一个升级版，叫做哈佛(Harvard)架构，把存储空间分为了指令(instruction)存储和数据存储，对应不一样的操作。目前的主流嵌入式微处理器基本采用这个架构，但Anyway这并不重要。</p>
+<p>冯诺依曼架构在过去的60年称霸人间，如果这项专利申请成功的话，这一定是史上最赚钱的专利。可是，冯诺依曼架构在经历了各种法院撕逼后，被判定为一项没有收益人的专利……（Youyou Tu和青蒿素在这面前简直不值一提）</p>
+<p>成也萧何 - x86的不可一世</p>
+<p>虽然冯老爷子在自己的架构下发明了人类第一台计算机，ENIAC和EDVAC，但诺依曼的真正崛起还是要归功于x86。如果你不知道80x86是什么，那只能说明我们已经有代沟了，嗯，很深深的代沟。</p>
+<p>Intel自1978年推出8086后，x86体系架构就一直是电脑（上到服务器，下到平板电脑）核心处理芯片的不二选择。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc723e9c30.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>Intel x86 i7 版图</p>
+<p>顺便做个普及，在冯诺依曼架构下，每个处理器会干的事情是有限制的，通常这个限制叫做指令集。它规定CPU的基本操作，没有指令集(instruction set)定义的复杂操作可以通过基本操作的组合来完成，比如指令集里没有乘法，那我们可以通过一定数量的加法来完成。</p>
+<p>在冯老爷子的机构里，谁的指令集越大，可以访问的存储空间越大，谁就越牛逼。x86的指令集从8086到i7不断扩张与膨胀，最终成为了一个会算双精单精、矢量图像，多核多线程多Cache的巨无霸。简单的说，到2013年的时候，史上最强core已经无所不能了。可是历史不断在重演一幕就是，当绝顶高手号称要独孤求败的时候，不知道哪里窜出来的毛小伙子可能一个起手式就把你撂倒了。圣经里大卫王这么干掉了Goliath，《倚天屠龙记》里，张无忌这么称霸了光明顶。</p>
+<p>那谁是x86的张无忌呢？</p>
+<p>移动设备，RISC的春天</p>
+<p>独孤求败的x86其实有个致命的缺陷——能效，通俗地说就是“做一次”要花费的能量。可是每块肌肉都很发达的muscleman总是要比一般人多吃几碗饭吧。我们现在能买到的i7即使在省电模式也要消费超过47W的功耗。本身47W不算什么，但是苹果乔大叔的出现，让47W一下子很麻烦。</p>
+<p>Iphone/Ipad和一系列手持的充电设备对瓦级以上的功耗是非常敏感的！x86的功耗导致它“充电2小时使用5分钟”的悲惨结局。肌肉男瘦身变成筋肉男的必然的命运。</p>
+<p>这时，x86，或者说是intel的张无忌出现了—ARM Cortex RISC. 所谓RSIC就是精简指令集（Reduced Instruction Set），他能干的事情很有限，但是他的功耗低。X86在其巅峰时期无数次地战胜过RISC，以至于ARM出现时并有没足够重视他，那时候Intel还在和AMD抢64位x86的主导权呢。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fc75dae36b.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>为什么无数次败下阵来的RISC可以最终成功呢？因为这次，他寻找到了一个partner——加速器。在移动端的应用设备里，其实也有很对需要强大计算消耗的进程，这是RISC本身无法胜任的。但是，实际应用上，往往这些进程是有固定的模式和使用场景的。比如手机在通话时的语音编解码，拍照时的图像处理（俗称“美颜”）和无线通信是的编解码。对于这样一个经常重复，且模式固定的高通量计算，可以在总线上加入一个专用模块（ASIC）加速，在处理专用任务是ASIC的能效又比通用处理器高很多。下图就是ARM有名的产品之一A9，除了CPU外，它的浮点与超标量计算（NEON）都被移到了CPU外（一般来说，这不能算作加速器）</p>
+<p>这就是开头的那个故事，你每天充的电不够“超人”吃的，与只能换个块头小，但是能够指挥其他人的总管</p>
+<p>败也萧何 – 冯诺依曼瓶颈</p>
+<p>“泾渭分明，靠总线连”的冯诺依曼架构带来了单核/少核时代计算机的春天，但冯诺依曼架构的致命缺陷——冯诺依曼瓶颈——也悄悄地增长。随着摩尔定律的发展，远距离的搬移大规模数据早已取代了计算本身，成为制约高效计算的重要瓶颈，对于x86结构，有太多指令可以直接穿过总线访问存储空间。</p>
+<p>在RISC+加速器的体系结构里，总线作为“总管”和“内务府”、“上书房”、“御膳房”间的桥梁，更是好不吃紧。当瓶颈出现在通信上时，冯诺依曼架构就体现出了它垂垂老矣的一面。</p>
+<p>这个问题，在实时处理的人工智能场景下显得格外突出，信号从入到出，都是按照是数据流(Data flow)的传输模式一帧一帧地来。这一特征在类脑的神经网络实现中就更加明显。如果每一个卷积的系数都要去云深不知处的存储海洋里去寻找，那神经元的处理效率会非常低。简单地说：</p>
+<p>谁脑子TM的是一半纯记忆一半纯分析的呢？</p>
+<p>脑子么，都是左右开工的。边走边忘，雁过留痕，却也是旧相识，恢复不出来一个一毛一样的。</p>
+<p>所以，摆在类脑芯面前的路有三条：</p>
+<p>（1）  采用冯诺依曼经典架构，把神经元计算写在指令集里，反正是超人，技多不压身；</p>
+<p>（2）  采用RISC+神经元/神经网络加速器，给“总管”再开个府呗；</p>
+<p>（3）  放弃冯诺依曼架构，完全分布式硬件，像“数据流“一样的风骚走位。</p>
+<p>这三个选项都有不错的代表，我们慢慢来。</p>
+<p>梦里不问形与令，你知道计算机形（体系结构）和令（指令集）了么？</p>
+<h2 id="如何对神经网络人工智能硬件进行优化设计？"><a href="#如何对神经网络人工智能硬件进行优化设计？" class="headerlink" title="如何对神经网络人工智能硬件进行优化设计？"></a>如何对神经网络人工智能硬件进行优化设计？</h2><p>有三种方式，可以在传统体系结构的基础上面向神经网络人工智能硬件进行优化设计。</p>
+<p>本文为《脑芯编：窥脑究竟，织网造芯》系列第四篇。</p>
+<p>写这篇的时候想到哥哥的《我》，因为这次的主角就是，那个特里独行的我：</p>
+<p>我就是我，是长度不一样的开拓<br>天空海阔，要讨最并行的生活<br>我喜欢我，让矢量算出一种结果<br>简单的指令集，一样加速的很妥妥<br>他的名字，叫做<br>SIMD<br>Single Instruction Multiple Data<br>话接上回《窥脑究竟，结网造芯（三）》我们说到，有三种方式，可以在传统体系结构的基础上面向神经网络人工智能硬件进行优化设计。这次，我们先来提第一种——在简单指令集（RISC）中增加指令的方式来达到性能的优化。我们将着重介绍如何加速卷积核的计算（忘了（一）和（二）？点这里！）</p>
+<p>这次的故事，要从并行计算机体系结构讲起。说到并行计算机体系结构，就要掉一个书袋——</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a0cb9a28b.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>我从上的第一门计算机体系结构课，到并行提算计体系机构，到高级计算机体系结构都在用这一本书。不得不感谢作者让我少买了好多教科书钱。当然，牛x书的作者也很牛x，这里就不八卦了。有人愿意把这本书叫做计算机体系结构的bible，我不评论，但是下面我们所讲的，好多都出自这本书。</p>
+<p>言归正传，这个特立独行的故事从这里开先，我们要认识一个老爷爷（还活着好像），他叫Michael Flynn。老人家生于大萧条时代的扭腰城，一不小心提出了一个分类法，叫做Flynn Taxonomy（1966）。然后计算机体系机构就被Flynn taxonomy的五指山给压几十年。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a1ad71993.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>Flynn Taxonomy的五指山把计算机结构分为两个部分：指令与数据。在时间轴上指令与数据可以单步执行或多次运行进行分类，即单指令单数据（SISD），单指令多数据（SIMD），多指令单数据（MISD）和多指令多数据（MIMD）。</p>
+<p>并行，从Pipeline到SIMD</p>
+<p>Flynn taxonomy给并行计算机体系结构指了两条明路——指令级并行和数据级并行。</p>
+<p>首先来看下指令与数据的关系。指令是处理器单步可以实现的操作的集合。指令集里的每一条指令，都包含两个部分：（1）什么操作；（2）对什么数据进行操作。专业地，我们把前者叫做opcode，后者叫做operand（也就是数据）。当然，并不是所有的命令都有数据操作。传统定义的指令集里面，对应的operand不超过2。比如，加减乘除都是典型的二元操作。数据读写就是一元的，还有些就是没有任何数据的操作，比如一个条件判断（if）发生了，根据判断结果程序何去何从，只是一个jump操作，他并不需要任何数据输入。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a1fcea2a3.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>指令级并行的第一种、也是最经典的办法叫做时间上并行，这是所有的体系结构教科书最喜欢教的流水线架构（pipeline）。简而言之，在发明流水线以前，处理器里面只有一个老司机，什么事情都得他来干，但是下一条指令得等老司机干完上一个~但是，流水线就是把一个老死机变成了三个臭皮匠，每个人干三分之一就给下一个，这样下一条指令只需在上一条被干完1/3后就可以进来了。虽然老司机体力好，但赶不上年轻的臭皮匠干的快啊。这样，流水线可以实现时间上的指令集并行，成倍提高实际指令的处理效率。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a22c2f924.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>经典MIPS-5 级流水线</p>
+<p>有一就有二，有时间当然就有空间。所以，第二种办法是空间上的并行。空间并行基于一个观察——对数据的操作有很多种——加减乘除移位、整数操作、浮点操作……每一个模块的处理（ALU/EXU）是独立的，所以，就空间上，一个浮点加法在处理的时候，完全可以同时进行一个整数移位操作，像老顽童教小龙女的左右互搏分心二用。所以，在计算机体系的历史上，练成“左右互博”术的处理器包括超标量（Superscalar）/超长指令(Very Long Instruction Word, VLIW)处理器。具体我们先不展开。</p>
+<p>相比于流水线／超标量复杂的修炼过程（黄蓉都练不会“左右互博”），数据级并行就是简单纯粹的叠加硬件，打造并行处理的“千手观音”：</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a25c458be.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>“千手观音”的学名叫做SIMD，Single Instruction Multiple Data，单指令多数据（流）处理器。其实，说白了就是原来有处理单元（ALU/EXU）现在一个加法器，现在变成了N个了。对应神经网络的计算，原来要M次展开的乘累加，现在只要M/N次，对应的时钟和时间都显著地降低。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a28b3f7c4.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>简单粗暴的并行，不仅提高了让每个指令的数据吞吐率，还让本身单一的标量处理进化成阵列式的“矢量型”处理，于是就有SIMD又有了“矢量处理”指令的称呼。其实，SIMD并不是到了神经网络再兴起的新玩样儿，早在MP3的年代，SIMD处理器就广泛地使用在各类信号处理芯片中。所以关于SIMD指令也早有了需要行业标准。以下，我们就来看一个SIMD指令集实例——</p>
+<p>ARM NEON，厉害了word令</p>
+<p>在上一编中，我们简单提到了史上第一个攻城掠地的RISC-ARM。为手机、平板等便携式的最重要处理器，ARM的SIMD指令也是王者风范，从它的名字开始——NEON。</p>
+<p>NEON的指令的操作的输入（operand）是一组128位位宽的寄存器，但这个寄存器存着的几个数，就由码农自己去预定义了，可以是4个32位的浮点，或者定点，或者8个16位定点，或者16个8位定点……整个指令集宽泛地定义了输入、输出的位宽，供变成者自由支配，考虑到在神经网络中，前馈网络往往只要16位、8位整数位宽，所以最高效的NEON命令可以一次实现16个乘累加计算（16个Synapse）。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a2b1e3ab0.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>仅仅是SIMD怎能彰显NEON的侠者风范？ NEON还充分应用了指令级并行，采用10级流水线（4级decode+6级运算单元）,可以简单地理解为把卷积计算的吞吐率由提高了10倍。加起来，相比与传统的单指令5级流水，提高至少32倍的效率。再辅以ARM Cortex A7以上的超标量核心处理单元,筑起了第一条通用并行计算的快车道。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a2c45e2f6.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>当神经网络遇上SIMD，滑起吧！</p>
+<p>流水线和SIMD都是在神经网络还没羽翼丰满的时候就已经称霸江湖的大侠。在神经网络不可一世的今天，这两者还是固步自封么？答案显然是否定的。</p>
+<p>当通用SIMD处理器遇上神经网络，他们既碰撞出了火花，也开始相互埋怨。我们先说埋怨——存储空间管理。我们知道，在NN中通常每个卷积核都需要先load系数与输入数据，再算出部分的乘累加结果，再store回存储空间。而指令执行与存储空间的通信就是我们上一编讲到的——冯诺伊曼瓶颈。对于神经网络来说，如此多次的存储读写是制约性能的关键。减少数据的载入与中间结果是面向神经网络的SIMD指令的主要问题。</p>
+<p>那火花是什么？</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5857a32026751.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>这就给SIMD带来了一个面向神经网络的新机遇——部分更新与数据滑行（sliding）。我们来看下面这张动图「原作为MIT Eyeriss项目研究组」。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/5857b487c9ddd.gif" alt=""></p>
+<p>对于一个采用SIMD的卷积核，有一组输入是固定——系数矢量，而另一组输入像一个FIFO，在起始填满后，每次注入一个单元（也排出一个单元）进行乘雷佳，另外上一次累加的结果在保存在执行单元的寄存器内，只有最终的卷积核结果会写回到存储器中。</p>
+<p>这样，在神经网络中，无论是数据导入、还是结果输出，起对存储空间的访问都会大大降低。当然，上述示意图仅仅是一维的。当卷积核的维度达到二三维时，情况会复杂很多。这里推荐大家可以去读读MIT的Eyeriss，Kaist的MIMD，或者IMEC的2D-SIMD（ENVISION）。这里就不太多展开了。</p>
+<p>好了，这次就到这里。所谓“烛台簇华照单影”就是那一粒粒自由定义的小数据，在同一声SIMD的指令下，排成队，集成行，成为了一个孤独的矢量运算。</p>
+<h2 id="脑芯编：分手？摆脱冯诺依曼的深度学习硬件"><a href="#脑芯编：分手？摆脱冯诺依曼的深度学习硬件" class="headerlink" title="脑芯编：分手？摆脱冯诺依曼的深度学习硬件"></a>脑芯编：分手？摆脱冯诺依曼的深度学习硬件</h2><p>本文作者：矽说    2017-01-21 12:26</p>
+<p>导语：“冯诺依曼”结构是阻碍深度学习神经网络的一个重要瓶颈。很多人把TrueNorth看作深度学习硬件发展史上打得最响的水花。</p>
+<p>雷锋网(公众号：雷锋网)按：本文作者痴笑，矽说（微信号：silicon_talks）主笔。本文为《脑芯编：窥脑究竟，织网造芯》系列第五篇。</p>
+<p>不知不觉，《脑芯编》已经走过了上半阙。默默挥手告别那些弃剧的看官，也由衷感谢仍然愿意用手指点进来的您。你们是撑住脑芯编不烂尾的重要力量，与其肉麻，不如再念一遍诗的上半阙：</p>
+<p>昨夜神风送层云，（神经元与网络）</p>
+<p>几重卷积几重生。（卷积神经网络）</p>
+<p>梦里不知形与令，（计算体系结构）</p>
+<p>烛台簇华照单影。（单指令多数据）</p>
+<p>上次我们讲到，现行的计算机体系结构——“冯诺依曼”结构是阻碍深度学习神经网络的一个重要瓶颈。其计算和存储分离的特点，使得神经元计算的效率低下。合理改变指令集，加入乘累加指令和SIMD（单指令多数据）指令可以缓解该问题，但仍然指标不治本。</p>
+<p>此时，革“冯诺依曼”的命变成了很多懵逼骚年（讲的是心态，年纪可是很大哦）的选项。非冯架构的深度学习硬件一时间成为了洛阳纸贵的一时之选。这个过程自然有资本主义的糖衣炮弹加持，美国国防部先进项目研究局（传说中的DARPA，可以理解为神盾局？）便在非冯架构上与世界顶级研究机构——IBM合作，搞了个叫SyNAPSE （System of Neuromophic Adaptive Plastic Scalable Electronics，其实synapse在字面上也“突触”的拼法）的项目。从第一阶段到最终，DARPA赞助了IBM 4千2百万刀，打响了深度学习抗冯的第一枪——TrueNorth（真北）。</p>
+<p>当然，很多人也把TrueNorth看作深度学习硬件发展史上打得最响的水花。</p>
+<p>Neuromophic，替天行道？</p>
+<p>任何革命都要师出有名，就算水泊梁山也有个“替天行道”的名头。那真北的“名”在哪里呢？很简单，我们要造一个真“大脑”，而不是计算机这样给冯老爷子当傀儡的“伪电脑”。英语叫做Neuromophic，神经形态的硬件。于是就有了这张图：</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/5882df0757279.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>真北的设计理念，以人脑为起蓝本，依葫芦画瓢，不带点儿差的。</p>
+<p>IBM的工程狮从微观到宏观，将人的大脑分成三个层次——神经核团、脑功能区和脑皮层。每个核团由很多个神经元组成，每个功能区由很多核团组成，一个能完整地进行一项任务的皮层由很多个功能区组成。（是不是好久没有上过码农老师的生物课了，有没有点怀念呢？下面还有。）</p>
+<p>对应的，真北架构下，也分为这三个层次。先做了一个核团对应的硬件——neurosynaptic core，每个core由256个输出与输入、以及对应的系数存储，并集成了神经信号的路由器（router）使得信号可以在长距离上游走；在此基础上，一块芯片有64乘64个这样的核团，共4096个，组成了一个“功能区”。而很多完整的应用和复杂的任务，还需要芯片与芯片间的互联，实现一个完整的皮层功能。看，这才是真正的神经形态的“电脑”。</p>
+<p>TrueNorth还追求了一个大脑的特点，没有全局时钟控制的信号传递。真北只有帧时钟（1KHz，和intel的3.6GHz比慢了几百万倍哦~），并没有控制信号流的时钟，数据和数据之间采用异步的方式进行通讯，寻求高能效和低功耗。</p>
+<p>这里留给读者一个问题：为什么是非冯呢？（提示：memory在哪里？）如果各位看官到这里眼皮还没有搭起来，可以考虑去读读TrueNorth的Science原著，保证一夜睡到天明。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/5882df534880c.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>SpikeNN，致命缺陷？</p>
+<p>如果有一件事情，可以把昏昏欲睡的人们从周公的世界里拉回来，那一定是——撕逼。</p>
+<p>当所有人都觉得TrueNorth要改变人类的时候，惊天一声雷从华山之巅劈下来。出手的，是在神经网络中有“东邪西毒南帝北丐”之称呼的Yann LeCun。（我们在脑芯编（一）中提到过他。）</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e0a993ecf.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>深度学习的“东邪西毒南帝北丐”F4</p>
+<p>Yann大人在Facebook上发了一篇长长的博客来表达自己对True North的不屑。这里节录部分。（冬天了，小编最近比较懒，所以靠复制黏贴凑字数）</p>
+<p>Now, what wrong with TrueNorth? My main criticism is that TrueNorth implements networks of integrate-and-fire spiking neurons. This type of neural net that has never been shown to yield accuracy anywhere close to state of the art on any task of interest (like, say recognizing objects from the ImageNet dataset).<br>简单的说，问题出在Spiking Neural Networks。Spiking的中文可以叫做脉冲，用现代的生物医学技术发现，spike是人脑中信息传递的真实电学过程。下图就是人脑中一个神经元附近测到spike信号：</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e0d5ba7f7.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>医学上，也叫这个信号为细胞膜动作电位（Action Potential）。事事以脑科学为准绳的TrueNorth，自然在这基础理论上一定是向生物学看齐的。可是，问题便在于，在神经网络被提出来的前几十年，就是这spike NN的英魂不散，才导致了其早期“食之无味，弃之可惜”的尴尬地位。</p>
+<p>就像那个最有名的比喻：因为鸟的翅膀，让人类渴望飞翔；但放弃对翅膀的模仿，才让飞机真正飞上蓝天。很多事物只能赐予灵感，却无法100%照搬，否则下场就是那些个鸟人。（这话也不是我这种小辈敢说的，同样来自Yann大人）</p>
+<p>Memristor，吴下阿蒙?</p>
+<p>一方面，如果spike完成神经信号的传递与运算真的有问题，那人类为什么聪明？ 另一方面，如果SpikeNN真的100%模仿了我们的脑子，为什么连个ImageNet分类都分不清楚？一定是哪里出了问题。答案是后者。</p>
+<p>首先，在我们通常使用的神经网络里面有个假设——系数（Weight）在训练完成后是固定，不改变的。这个假设在CNN/RNN等一系列架构中显得天下太平，因为系数位宽大么。但是到了SpikeNN就是个大麻烦，所有的信号是二进制的，所谓的系数只改变链接关系、延时，不改变幅度，自由度大大衰减。那我们的脑子真的是这样的么？</p>
+<p>唉，生物课又来了。</p>
+<p>虽然我们的大脑的神经元看上去是二元的，但是神经元通路还有一个可塑性维度，叫STDP （Spike Timing Dependent Plasticity），就是突触的连接强度（Plasticity，可塑性）收到输入输出脉冲（Spikie）间的时间先后（Time Dependent）关系，其本质核心如下图。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e0fb15171.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>如果输入将将早于输出，代表输入输出间是完美的因果关系，神经元联系会被增强；如果输入的脉冲稍晚于输出，那么他们之间是果因关系，神经元的联系应该要减弱。STDP被认为是我们大脑的主要学习机制，而且在不同动物上都经过了实验验证。</p>
+<p>问题来了，这种学习机制和CS里面主流的学习机制——Stochastic Gradient Descent (SGD，中文叫做随机梯度最速下降？) 的后馈算法有着天壤之别。小编觉得这也是目前神经网络算法与神经科学的最大分歧。</p>
+<p>没有STDP的真北就这样陷入了SpikeNN的坑。但话说回来，STDP这么高级的操作模型，用传统模数混合集成电路实现是非常浪费面积，且不划算的。好巧不巧，人类突然造出了一个除了电阻电容电感之外的第四类电学器件——Memristor，忆阻器。仿佛是上帝要有光，就有一缕阳光照进SpikeNN的黑暗的胡同里。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e111dc984.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>对于一个电阻，两端的电压和电流成正比，对于一个电容，两段的电荷和电压正比，对于一个电感，两端的磁通量和电流正比，对于一个忆阻器，就应该是两端的磁通量和电荷成正比。虽然很抽象，但是忆阻器的实际效果就是其电阻（导通强度）受流过的电流调制。这个效果已经非常接近STDP了。</p>
+<p>试想，连在忆阻器两端的突触，当设定为上一层的神经元先发生spike，而下一层后发生spike，那一个正向的电路流过忆阻器，减小忆阻器阻值，加强链接。反之，负向电流流过忆阻器，增大阻值，减缓链接。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e12495542.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>于是，大家逐渐开始相信，在真北架构上如果能用可随摩尔定律减小的微纳尺寸忆阻器，或许才是Brain Inspired Computer真正焕发春天时候。</p>
+<p>于是，兼容先进集成电路的高性能忆阻器就成了问题的关键。但是，作为memristor的发明者和最努力的推广者——HP，最近好像有点无奈。</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/5882e13881167.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>但是也不要太灰心，最近intel和micron联合推得风声水起的3D Xpoint Memory被认为是某种程度的RRAM/memristor。究竟忆阻器是吴下阿蒙，还是未来的江左梅郎，还在未定之天呢。</p>
+<p>这一期可能是脑心编目前为止最为干货满满的一期，牵涉好多paper，如果看官您的目光移驾到这里，小编我也是要这厢有礼的，不容易啊。</p>
+<p>”真北路上初相见“，告诉你采用非冯架构的IBM TrueNorth（真北）的出生、虐缘和不明亮也不灰暗的未来。下一次，我们要来讲讲以GPU为代表的协处理器深度学习架构——“一见泰坦误终身”。</p>
+<p>特别鸣谢复旦大学脑芯片研究中心提供技术咨询，欢迎有志青年报考。</p>
+<p>雷锋网版权文章，未经授权禁止转载。详情见转载须知。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Chip</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aS27DMAxF0ex/0+40A0u4j3QKmLoaBXZa63jAiJ/PB6/ra+2v1O7urz+2ZMiQ8VrGtV1kW2Rz5HXwuzdUGTJkHMBYRbD9psmV9G/3z11elyFDhozSwS4NrDJkyJDxbMBdbQ49Mjw4ypAhQwZPYmtBufM6fpKLy5Ah44UMXnX//88/6W/IkCHjVYwrXLypyUt1aZC9eYoMGTJGM3iA6/A6gZsPf8iQIWMqIx2z4EMYaZOAD5/dUGXIkDGawYv4z5b+eYMzHfiQIUPGCQwCIJsmQTMNvkWADBkyRjDSA2IaWHl47TRHZciQMZVRG3HYl9jQmyu1BIJQK0OGjHGMThLbD508vC6/KUOGjNGMFFA7LO6RQa+V3JUhQ8Y4Ri28pu2EWgmPH0BlyJAxm1EbfUjbA/0RChSmZciQMZSRlsb4FtP2Z5rcLnNxGTJkjGP0S2m8xJ/OesS5uAwZMoYyeHMxnb+qhen0lcmQIeMERlreqhX6eTLcT3dlyJAxlRGLSyGYv440SZYhQ8Y5jH4zoF+r7xTpZMiQcRqDNyk7ZbKHx8VkyJAxlHGFK01NyRZJ8ow6sTJkyBjK4Kv2r/lBsPYDIEOGjHMYvARWC5GdRkKQQsuQIeMABimZpQU1nujWCnkyZMiQkZbe0hNoLaw/HHBlyJAxlMEPkeQAWjt6LtsDMmTIGM3go1q1EQ3O+0kjU4YMGS9npKljLWj2N9FJfWXIkPFaxh9jRtE/HP7SfAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/02/14/ProgramAI/how-to-train-deep-neural-network/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          如何训练深度神经网络？老司机的 15 点建议
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/13/ProductAI/google-raisr/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Google RAISR技术落地应用 可节约75%流量</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="ProgramAI/brain-and-chips" data-title="脑芯编：窥脑究竟，织网造芯" data-url="http://ipcreator.me/2017/02/14/ProgramAI/brain-and-chips/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 For life
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+    
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','QVk44u3hiUx_EaM1x32V'); //�����Լ���
+</script>    
+    
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true,
+		showTags: true
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.2d7529.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Program</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Google</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Machine Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Open Source</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Business</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Scikit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Atom</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Neural Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Smart Phone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Product</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Chip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Data Digging</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Recommend System</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/25870384/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>你的生命有什么可能</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://mt.sohu.com/20161026/n471374646.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>个体崛起的时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnfy.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>成为一个超级个体</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://gelonghui.com/p/101767.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人工智能的黄金时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都是工程师</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都能用英语</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>把时间当作朋友</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>七年就是一辈子</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://news.mbalib.com/story/12504" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>退休感言</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.360doc.com/content/14/1206/17/15680008_430856157.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>选择的智慧</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/6397275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>此生未完成</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/26422275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>向死而生</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">自知者明&lt;br&gt;自胜者强&lt;br&gt;不忘初心&lt;br&gt;方得始终</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
