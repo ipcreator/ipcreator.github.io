@@ -2,105 +2,266 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ipcreator.me/2017/12/30/ProgramAI/big-data-resources/</loc>
+    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/gudian-super-individual/</loc>
+    
+    <lastmod>2017-02-17T15:37:33.561Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/Tensorflow/good-understanding-of-tensorflow/</loc>
+    
+    <lastmod>2017-02-17T15:34:43.389Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/Tensorflow/gentle-understanding-of-tensorflow/</loc>
+    
+    <lastmod>2017-02-17T15:32:21.943Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/Tensorflow/simple-understanding-of-tensorflow/</loc>
+    
+    <lastmod>2017-02-17T15:31:31.983Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/Tensorflow/quick-learning-of-tensorflow/</loc>
+    
+    <lastmod>2017-02-17T15:30:30.501Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/visual-interactive-guide-basics-neural-networks/</loc>
+    
+    <lastmod>2017-02-17T15:14:57.701Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/supercharging-android-apps-with-tensorflow/</loc>
+    
+    <lastmod>2017-02-17T15:10:29.777Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/tensorflow-android-camera-demo/</loc>
+    
+    <lastmod>2017-02-17T14:55:11.735Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/tensorflow-android-stand-alone-demo/</loc>
+    
+    <lastmod>2017-02-17T14:48:18.479Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/applications-of-tensorflow/</loc>
+    
+    <lastmod>2017-02-17T02:12:35.170Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/platforms-of-tensorflow/</loc>
+    
+    <lastmod>2017-02-17T02:03:41.956Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/</loc>
+    
+    <lastmod>2017-02-17T01:59:11.229Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/history-of-tensorflow/</loc>
+    
+    <lastmod>2017-02-17T01:55:48.288Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/wujun-letters-from-silicon-valley/</loc>
+    
+    <lastmod>2017-02-16T13:31:54.482Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/wangyuquan-front-guard/</loc>
+    
+    <lastmod>2017-02-16T13:31:37.554Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/luozhenyu-logic-thinking/</loc>
+    
+    <lastmod>2017-02-16T13:31:10.635Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/lixiaolai-lead-to-freedom-of-wealth/</loc>
+    
+    <lastmod>2017-02-16T13:30:55.935Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/lixiang-reference-of-business-inside/</loc>
+    
+    <lastmod>2017-02-16T13:30:35.396Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/liuxuefeng-classic-music/</loc>
+    
+    <lastmod>2017-02-16T13:30:09.043Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/BusinessAI/some-thoughts-of-fusheng/</loc>
+    
+    <lastmod>2017-02-16T13:22:53.672Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/Tensorflow/basic-concept-and-operation-of-tensorflow/</loc>
+    
+    <lastmod>2017-02-16T13:15:39.980Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/</loc>
+    
+    <lastmod>2017-02-16T12:52:47.050Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/Resources/benchmark-of-machine-learning/</loc>
+    
+    <lastmod>2017-02-16T12:32:36.896Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProductAI/recognize-license-number-of-car/</loc>
+    
+    <lastmod>2017-02-16T11:48:51.139Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProductAI/generate-lyric-from-lyric-of-jay/</loc>
+    
+    <lastmod>2017-02-16T10:23:54.458Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/ProgramAI/Tensorflow/core-components-from-deep-learning-framework/</loc>
+    
+    <lastmod>2017-02-16T08:56:58.997Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2016/12/31/MyView/my-hello-world/</loc>
+    
+    <lastmod>2017-02-16T08:15:01.784Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2016/12/31/MyShare/view-of-english/</loc>
+    
+    <lastmod>2017-02-16T08:13:53.543Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/ProgramAI/OpenSources/28-open-source-projects-of-machine-learning/</loc>
+    
+    <lastmod>2017-02-16T07:58:24.649Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/30/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</loc>
+    
+    <lastmod>2017-02-16T06:07:42.108Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/30/SmartAI/ProgramAI/Resources/big-data-resources/</loc>
     
     <lastmod>2017-02-16T02:30:45.464Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/14/ProgramAI/brain-and-chips/</loc>
+    <loc>http://ipcreator.me/2017/02/14/SmartAI/ProgramAI/Concepts/brain-and-chips/</loc>
     
     <lastmod>2017-02-16T02:27:24.266Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/lixiaolai-lead-to-freedom-of-wealth/</loc>
-    
-    <lastmod>2017-02-16T02:20:48.216Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/liuxuefeng-classic-music/</loc>
-    
-    <lastmod>2017-02-16T02:19:54.912Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/wangyuquan-front-guard/</loc>
-    
-    <lastmod>2017-02-16T02:17:40.291Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/lixiang-reference-of-business-inside/</loc>
-    
-    <lastmod>2017-02-16T02:08:25.831Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/gudian-super-individual/</loc>
-    
-    <lastmod>2017-02-16T02:04:06.964Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/wujun-letters-from-silicon-valley/</loc>
-    
-    <lastmod>2017-02-16T01:54:21.545Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/luozhenyu-logic-thinking/</loc>
-    
-    <lastmod>2017-02-16T01:26:29.048Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/12/30/ProgramAI/tools-of-python/</loc>
+    <loc>http://ipcreator.me/2017/12/30/SmartAI/ProgramAI/Tools/tools-of-python/</loc>
     
     <lastmod>2017-02-16T01:00:02.379Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/14/ProgramAI/pytorch-of-facebook/</loc>
+    <loc>http://ipcreator.me/2017/02/14/SmartAI/ProgramAI/Resources/pytorch-of-facebook/</loc>
     
     <lastmod>2017-02-16T01:00:02.364Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/13/ProductAI/google-raisr/</loc>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProductAI/google-raisr/</loc>
     
     <lastmod>2017-02-16T00:59:05.703Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/13/ProductAI/ai-on-ear-phone/</loc>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProductAI/ai-on-ear-phone/</loc>
     
     <lastmod>2017-02-16T00:59:05.693Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/12/31/ProductAI/the-future-of-personal-terminal/</loc>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/ProductAI/the-future-of-personal-terminal/</loc>
     
     <lastmod>2017-02-16T00:35:24.337Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/12/31/ProductAI/ai-on-terminal-of-google/</loc>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/ProductAI/ai-on-terminal-of-google/</loc>
     
     <lastmod>2017-02-16T00:35:04.149Z</lastmod>
     
@@ -145,13 +306,6 @@
     <loc>http://ipcreator.me/2017/01/04/MyView/my-patent-list/</loc>
     
     <lastmod>2017-02-16T00:34:36.853Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2016/12/31/MyView/my-hello-world/</loc>
-    
-    <lastmod>2017-02-16T00:34:36.845Z</lastmod>
     
   </url>
   
@@ -275,49 +429,49 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/want-to-start-a-startup-undergraduate/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/want-to-start-a-startup-undergraduate/</loc>
     
     <lastmod>2017-02-16T00:13:17.299Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/the-art-of-unix-programming/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/the-art-of-unix-programming/</loc>
     
     <lastmod>2017-02-16T00:06:16.386Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/software-release-practice-howto/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/software-release-practice-howto/</loc>
     
     <lastmod>2017-02-16T00:05:36.074Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/12/31/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
     
     <lastmod>2017-02-16T00:05:11.280Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/13/BusinessAI/how-to-find-ai-start-up-firm/</loc>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/BusinessAI/how-to-find-ai-start-up-firm/</loc>
     
     <lastmod>2017-02-16T00:04:56.474Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/15/ProgramAI/techniques-of-atom-editor/</loc>
+    <loc>http://ipcreator.me/2017/02/15/SmartAI/ProgramAI/Tools/techniques-of-atom-editor/</loc>
     
     <lastmod>2017-02-15T14:34:03.978Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/12/31/ProgramAI/white-paper-of-google-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/ProgramAI/Concepts/white-paper-of-google-machine-learning/</loc>
     
     <lastmod>2017-02-15T13:18:32.348Z</lastmod>
     
@@ -331,63 +485,63 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/want-to-start-a-startup-great-hacker/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/want-to-start-a-startup-great-hacker/</loc>
     
     <lastmod>2017-02-15T13:07:10.397Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/things-every-hacker-once-knew/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/things-every-hacker-once-knew/</loc>
     
     <lastmod>2017-02-15T13:06:27.820Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/the-unix-and-internet-fundamentals-howto/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/the-unix-and-internet-fundamentals-howto/</loc>
     
     <lastmod>2017-02-15T13:06:21.209Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/the-loginataka/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/the-loginataka/</loc>
     
     <lastmod>2017-02-15T13:06:15.488Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/teach-yourself-programming-in-ten-years/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/teach-yourself-programming-in-ten-years/</loc>
     
     <lastmod>2017-02-15T13:06:00.988Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/how-to-report-bugs-effectively/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/how-to-report-bugs-effectively/</loc>
     
     <lastmod>2017-02-15T13:05:04.953Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/how-to-become-a-hacker/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/how-to-become-a-hacker/</loc>
     
     <lastmod>2017-02-15T13:04:57.169Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/advice-for-computer-science-college-students/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/advice-for-computer-science-college-students/</loc>
     
     <lastmod>2017-02-15T13:04:49.261Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Master/how-to-ask-questions-the-smart-way/</loc>
+    <loc>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/how-to-ask-questions-the-smart-way/</loc>
     
     <lastmod>2017-02-15T13:04:45.417Z</lastmod>
     
@@ -401,84 +555,84 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/12/31/ProgramAI/right-way-of-master-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/ProgramAI/Concepts/right-way-of-master-machine-learning/</loc>
     
     <lastmod>2017-02-15T12:53:49.277Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/12/31/ProgramAI/20-open-source-projects-of-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/ProgramAI/OpenSources/20-open-source-projects-of-machine-learning/</loc>
     
     <lastmod>2017-02-15T12:50:39.979Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/12/31/ProgramAI/awesome-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/ProgramAI/Resources/awesome-machine-learning/</loc>
     
     <lastmod>2017-02-15T12:50:23.063Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/15/ProgramAI/ai-vs-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/15/SmartAI/ProgramAI/Concepts/ai-vs-machine-learning/</loc>
     
     <lastmod>2017-02-15T12:50:21.273Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/12/31/ProgramAI/awesome-deep-learning/</loc>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/ProgramAI/Resources/awesome-deep-learning/</loc>
     
     <lastmod>2017-02-15T12:49:57.917Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/12/30/ProgramAI/basic-knowledge-of-scikit-learn/</loc>
+    <loc>http://ipcreator.me/2017/12/30/SmartAI/ProgramAI/Resources/basic-knowledge-of-scikit-learn/</loc>
     
     <lastmod>2017-02-15T12:49:11.608Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/12/31/BusinessAI/golden-age-of-artificial-intelligence/</loc>
+    <loc>http://ipcreator.me/2017/12/31/SmartAI/BusinessAI/golden-age-of-artificial-intelligence/</loc>
     
     <lastmod>2017-02-15T12:43:36.619Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/12/ProgramAI/google-styleguide/</loc>
+    <loc>http://ipcreator.me/2017/02/12/SmartAI/ProgramAI/Tools/google-styleguide/</loc>
     
     <lastmod>2017-02-15T12:20:26.050Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/14/ProgramAI/ppt-of-andrew-ng/</loc>
+    <loc>http://ipcreator.me/2017/02/14/SmartAI/ProgramAI/Concepts/ppt-of-andrew-ng/</loc>
     
     <lastmod>2017-02-14T06:48:40.515Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/14/ProgramAI/how-to-train-deep-neural-network/</loc>
+    <loc>http://ipcreator.me/2017/02/14/SmartAI/ProgramAI/Tensorflow/how-to-train-deep-neural-network/</loc>
     
     <lastmod>2017-02-13T23:57:08.535Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/13/ProgramAI/ai-and-algorithms/</loc>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/Concepts/ai-and-algorithms/</loc>
     
     <lastmod>2017-02-13T05:30:26.878Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/13/ProgramAI/ai-and-machine-learning-need-more-open-sources/</loc>
+    <loc>http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/OpenSources/ai-and-machine-learning-need-more-open-sources/</loc>
     
     <lastmod>2017-02-13T00:49:59.978Z</lastmod>
     
