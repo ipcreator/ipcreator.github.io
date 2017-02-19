@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-python/</loc>
+    <lastmod>2017-02-19T10:19:58.441Z</lastmod>
+    <data>
+        <display>
+        <title>Python教程</title>
+        <pubTime>2017-02-19T06:14:06.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-git/</loc>
+    <lastmod>2017-02-19T06:13:31.825Z</lastmod>
+    <data>
+        <display>
+        <title>Git教程</title>
+        <pubTime>2017-02-19T06:09:06.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Resources/awesome-machine-learning/</loc>
     <lastmod>2017-02-19T06:03:00.883Z</lastmod>
     <data>
@@ -72,6 +112,28 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    <data>
+        <display>
+        <title>李开复：AI 创业的十个真相</title>
+        <pubTime>2017-02-19T15:59:58.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Business</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/</loc>
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
@@ -79,6 +141,28 @@
         <title>Awesome Deep Learning</title>
         <pubTime>2017-02-19T15:56:00.000Z</pubTime>
         
+        <tag>Deep Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tensorflow/core-components-from-deep-learning-framework/</loc>
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    <data>
+        <display>
+        <title>深度学习框架太抽象？其实不外乎这五大核心组件</title>
+        <pubTime>2017-02-19T15:57:20.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
         <tag>Deep Learning</tag>
          
          
@@ -142,50 +226,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tensorflow/core-components-from-deep-learning-framework/</loc>
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    <data>
-        <display>
-        <title>深度学习框架太抽象？其实不外乎这五大核心组件</title>
-        <pubTime>2017-02-19T15:57:20.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-        <tag>Deep Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    <data>
-        <display>
-        <title>李开复：AI 创业的十个真相</title>
-        <pubTime>2017-02-19T15:59:58.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-        <tag>Business</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/golden-age-of-artificial-intelligence/</loc>
     <lastmod>2017-02-19T06:03:00.877Z</lastmod>
     <data>
@@ -194,30 +234,6 @@
         <pubTime>2017-02-19T15:59:59.000Z</pubTime>
         
         <tag>AI</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProductAI/ai-on-terminal-of-google/</loc>
-    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
-    <data>
-        <display>
-        <title>谷歌发布全新轻型机器学习架构：可直接载于设备端的AI系统</title>
-        <pubTime>2017-02-19T15:59:56.000Z</pubTime>
-        
-        <tag>Google</tag>
-         
-        <tag>AI</tag>
-         
-        <tag>Android</tag>
          
          
            
@@ -276,18 +292,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/</loc>
-    <lastmod>2017-02-19T06:03:00.875Z</lastmod>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProductAI/ai-on-terminal-of-google/</loc>
+    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     <data>
         <display>
-        <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
-        <pubTime>2017-02-19T15:59:59.000Z</pubTime>
+        <title>谷歌发布全新轻型机器学习架构：可直接载于设备端的AI系统</title>
+        <pubTime>2017-02-19T15:59:56.000Z</pubTime>
         
+        <tag>Google</tag>
+         
         <tag>AI</tag>
          
-        <tag>Deep Learning</tag>
-         
-        <tag>Business</tag>
+        <tag>Android</tag>
          
          
            
@@ -300,14 +316,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tools/tools-of-python/</loc>
-    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/</loc>
+    <lastmod>2017-02-19T06:03:00.875Z</lastmod>
     <data>
         <display>
-        <title>Python 资源大全中文版</title>
-        <pubTime>2017-02-18T01:02:06.000Z</pubTime>
+        <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
+        <pubTime>2017-02-19T15:59:59.000Z</pubTime>
         
-        <tag>Python</tag>
+        <tag>AI</tag>
+         
+        <tag>Deep Learning</tag>
+         
+        <tag>Business</tag>
          
          
            
@@ -354,6 +374,26 @@
         <tag>AI</tag>
          
         <tag>Tensorflow</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tools/tools-of-python/</loc>
+    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
+    <data>
+        <display>
+        <title>Python 资源大全中文版</title>
+        <pubTime>2017-02-18T01:02:06.000Z</pubTime>
+        
+        <tag>Python</tag>
          
          
            
