@@ -3698,7 +3698,7 @@
     <link href="http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-git/"/>
     <id>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-git/</id>
     <published>2017-02-19T06:09:06.000Z</published>
-    <updated>2017-02-22T00:02:41.958Z</updated>
+    <updated>2017-02-22T08:00:24.670Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/git-workflow-release-cycle-2feature.png" alt=""></p>
 <p>作者：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰</a></p>
@@ -3714,6 +3714,84 @@
 <p> 关于作者</p>
 <p>廖雪峰，十年软件开发经验，业余产品经理，精通Java/Python/Ruby/Visual Basic/Objective C等，对开源框架有深入研究，著有《Spring 2.0核心技术与最佳实践》一书，多个业余开源项目托管在GitHub，欢迎微博交流：</p>
 <p><img src="http://service.t.sina.com.cn/widget/qmd/1658384301/078cedea/2.png" alt=""></p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h2 id="Practice-in-Action"><a href="#Practice-in-Action" class="headerlink" title="Practice in Action"></a>Practice in Action</h2><p>$ git init<br>Reinitialized existing Git repository in D:/IPCreatorBlog/themes/yilia/.git/</p>
+<p>$ git remote add yilia git@github.com:ipcreator/hexo-theme-yilia.git</p>
+<p>$ git push -u yilia master<br>Branch master set up to track remote branch master from yilia.<br>Everything up-to-date</p>
+<p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘yilia/master’.<br>Changes not staged for commit:<br>  (use “git add <file>…” to update what will be committed)<br>  (use “git checkout – <file>…” to discard changes in working directory)</file></file></p>
+<pre><code>modified:   _config.yml
+modified:   layout/_partial/after-footer.ejs
+modified:   layout/_partial/footer.ejs
+modified:   layout/_partial/left-col.ejs
+modified:   source-src/css/article-main.scss
+modified:   source-src/css/fonts/iconfont.svg
+modified:   source-src/js/mobile.js
+modified:   source/fonts/iconfont.dba24b.svg
+</code></pre><p>Untracked files:<br>  (use “git add <file>…” to include in what will be committed)</file></p>
+<pre><code>source/main.0d8e3c.css
+source/main.0d8e3c.js
+source/mobile.0b1d99.js
+source/slider.fa3fc2.js
+</code></pre><p>no changes added to commit (use “git add” and/or “git commit -a”)</p>
+<p>$ git branch</p>
+<ul>
+<li>master</li>
+</ul>
+<p>$ git add _config.yml</p>
+<p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘yilia/master’.<br>Changes to be committed:<br>  (use “git reset HEAD <file>…” to unstage)</file></p>
+<pre><code>modified:   _config.yml
+</code></pre><p>Changes not staged for commit:<br>  (use “git add <file>…” to update what will be committed)<br>  (use “git checkout – <file>…” to discard changes in working directory)</file></file></p>
+<pre><code>modified:   layout/_partial/after-footer.ejs
+modified:   layout/_partial/footer.ejs
+modified:   layout/_partial/left-col.ejs
+modified:   source-src/css/article-main.scss
+modified:   source-src/css/fonts/iconfont.svg
+modified:   source-src/js/mobile.js
+modified:   source/fonts/iconfont.dba24b.svg
+</code></pre><p>Untracked files:<br>  (use “git add <file>…” to include in what will be committed)</file></p>
+<pre><code>source/main.0d8e3c.css
+source/main.0d8e3c.js
+source/mobile.0b1d99.js
+source/slider.fa3fc2.js
+</code></pre><p>$ git add layout/_partial/after-footer.ejs<br>$ git add layout/_partial/footer.ejs<br>$ git add layout/_partial/left-col.ejs<br>$ git add source-src/css/article-main.scss<br>$ git add source-src/css/fonts/iconfont.svg<br>warning: LF will be replaced by CRLF in source-src/css/fonts/iconfont.svg.<br>The file will have its original line endings in your working directory.</p>
+<p>$ git add  source-src/js/mobile.js<br>$ git add source/fonts/iconfont.dba24b.svg<br>warning: LF will be replaced by CRLF in source/fonts/iconfont.dba24b.svg.<br>The file will have its original line endings in your working directory.</p>
+<p>$ git add  source/main.0d8e3c.css<br>$ git add source/main.0d8e3c.js<br>warning: LF will be replaced by CRLF in source/main.0d8e3c.js.<br>The file will have its original line endings in your working directory.</p>
+<p>$ git add source/mobile.0b1d99.js<br>$ git add source/slider.fa3fc2.js<br>warning: LF will be replaced by CRLF in source/slider.fa3fc2.js.<br>The file will have its original line endings in your working directory.</p>
+<p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘yilia/master’.<br>Changes to be committed:<br>  (use “git reset HEAD <file>…” to unstage)</file></p>
+<pre><code>modified:   _config.yml
+modified:   layout/_partial/after-footer.ejs
+modified:   layout/_partial/footer.ejs
+modified:   layout/_partial/left-col.ejs
+modified:   source-src/css/article-main.scss
+modified:   source-src/js/mobile.js
+new file:   source/main.0d8e3c.css
+new file:   source/main.0d8e3c.js
+new file:   source/mobile.0b1d99.js
+new file:   source/slider.fa3fc2.js
+</code></pre><p>$ git commit -m “first bak”<br>[master 8251377] first bak<br> 10 files changed, 111 insertions(+), 28 deletions(-)<br> create mode 100644 source/main.0d8e3c.css<br> create mode 100644 source/main.0d8e3c.js<br> create mode 100644 source/mobile.0b1d99.js<br> create mode 100644 source/slider.fa3fc2.js</p>
+<p>$ git push -u yilia master<br>Counting objects: 18, done.<br>Delta compression using up to 8 threads.<br>Compressing objects: 100% (18/18), done.<br>Writing objects: 100% (18/18), 63.54 KiB | 0 bytes/s, done.<br>Total 18 (delta 10), reused 3 (delta 0)<br>remote: Resolving deltas: 100% (10/10), completed with 10 local objects.<br>Branch master set up to track remote branch master from yilia.<br>To github.com:ipcreator/hexo-theme-yilia.git<br>   8ff6b52..8251377  master -&gt; master</p>
+<p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘yilia/master’.<br>Changes not staged for commit:<br>  (use “git add <file>…” to update what will be committed)<br>  (use “git checkout – <file>…” to discard changes in working directory)</file></file></p>
+<pre><code>modified:   _config.yml
+</code></pre><p>no changes added to commit (use “git add” and/or “git commit -a”)</p>
+<p>$ git diff HEAD – _config.yml<br>diff –git a/_config.yml b/_config.yml<br>index 4f8698a..e00540b 100644<br>— a/_config.yml<br>+++ b/_config.yml<br>@@ -79,11 +79,11 @@ duoshuo-key: ipcreator<br> style:</p>
+<ul>
+<li>#header: ‘#4d4d4d’</li>
+<li>header: ‘#47A2E4’</li>
+</ul>
+<ul>
+<li>header: ‘#4d4d4d’</li>
+<li>#header: ‘#47A2E4’</li>
+</ul>
+<ul>
+<li>#slider: ‘linear-gradient(200deg,#a0cfe4,#e8c37e)’</li>
+<li>slider: ‘linear-gradient(200deg,#47A2E4,#47A2E4)’</li>
+</ul>
+<ul>
+<li>slider: ‘linear-gradient(200deg,#a0cfe4,#e8c37e)’</li>
+<li>#slider: ‘linear-gradient(200deg,#47A2E4,#47A2E4)’</li>
+</ul>
+<p>$ git add _config.yml</p>
+<p>$ git commit -m “restore color”<br>[master 1acf4a2] restore color<br> 1 file changed, 4 insertions(+), 4 deletions(-)</p>
+<p>$ git push -u yilia master<br>Counting objects: 3, done.<br>Delta compression using up to 8 threads.<br>Compressing objects: 100% (3/3), done.<br>Writing objects: 100% (3/3), 329 bytes | 0 bytes/s, done.<br>Total 3 (delta 2), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (2/2), completed with 2 local objects.<br>Branch master set up to track remote branch master from yilia.<br>To github.com:ipcreator/hexo-theme-yilia.git<br>   2547415..1acf4a2  master -&gt; master</p>
 ]]></content>
     
     <summary type="html">
@@ -4101,58 +4179,6 @@
       <category term="Big Data" scheme="http://ipcreator.me/tags/Big-Data/"/>
     
       <category term="Data Mining" scheme="http://ipcreator.me/tags/Data-Mining/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
-    <link href="http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</id>
-    <published>2017-02-18T01:02:06.000Z</published>
-    <updated>2017-02-19T06:02:30.218Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
-<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<a id="more"></a>
-<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
-<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
-<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
-<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
-<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
-<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
-<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
-<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
-<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
-<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
-<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
-<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
-<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
-<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
-<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
-<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
-<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
-<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
-<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
-<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
-<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
     
   </entry>
   
@@ -5266,6 +5292,58 @@
   </entry>
   
   <entry>
+    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
+    <link href="http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/"/>
+    <id>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</id>
+    <published>2017-02-18T01:02:06.000Z</published>
+    <updated>2017-02-19T06:02:30.218Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
+<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<a id="more"></a>
+<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
+<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
+<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
+<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
+<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
+<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
+<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
+<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
+<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
+<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
+<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
+<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
+<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
+<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
+<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
+<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
+<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
+<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
+<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
+<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
+<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
+    
+  </entry>
+  
+  <entry>
     <title>超智能体</title>
     <link href="http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Concepts/super-intelligence-individual/"/>
     <id>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Concepts/super-intelligence-individual/</id>
@@ -5730,6 +5808,92 @@
   </entry>
   
   <entry>
+    <title>Supercharging Android Apps With TensorFlow</title>
+    <link href="http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/supercharging-android-apps-with-tensorflow/"/>
+    <id>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/supercharging-android-apps-with-tensorflow/</id>
+    <published>2017-02-17T02:26:06.000Z</published>
+    <updated>2017-02-17T15:10:29.777Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://jalammar.github.io/Supercharging-android-apps-using-tensorflow/" target="_blank" rel="external">J Alammar</a></p>
+<p>Supercharging Android Apps With TensorFlow (Google’s Open Source Machine Learning Library)<br>In November 2015, Google announced and open sourced TensorFlow, its latest and greatest machine learning library. This is a big deal for three reasons:</p>
+<ol>
+<li>Machine Learning expertise: Google is a dominant force in machine learning. Its prominence in search owes a lot to the strides it achieved in machine learning.</li>
+<li>Scalability: the announcement noted that TensorFlow was initially designed for internal use and that it’s already in production for some live product features.</li>
+<li>Ability to run on Mobile.</li>
+</ol>
+<p>This last reason is the operating reason for this post since we’ll be focusing on Android. If you examine the tensorflow repo on GitHub, you’ll find a little tensorflow/examples/android directory. I’ll try to shed some light on the Android TensorFlow example and some of the things going on under the hood.</p>
+  <a id="more"></a>
+<h2 id="A-Look-of-Recognition"><a href="#A-Look-of-Recognition" class="headerlink" title="A Look of Recognition"></a>A Look of Recognition</h2><p>The app glances out through your camera and tries to identify the objects it sees. Sometimes it does a good job, other times it can’t quite pin down the object, and at times it leads to thought provoking guesses! Overall, it feels pretty magical.</p>
+<p><img src="https://jalammar.github.io/images/android_tensorflow_classifier_results.jpg" alt=""><br>android_tensorflow_classifier_results.jpg</p>
+<p>The app accomplishes this feat using a bundled machine learning model running in TensorFlow on the device (no network calls to a backend service). The model is trained against millions of images so that it can look at the photos the camera feeds it and classify the object into its best guess (from the 1000 object classifications it knows). Along with its best guess, it shows a confidence score to indicate how sure it is about its guess.</p>
+<p>The Android example page gives you an idea on how to build the app, and ultimately culminates in producing this <a href="https://s3.amazonaws.com/jalammar.github.io/tensorflow_demo.apk" target="_blank" rel="external">APK</a> (I built and uploaded the APK to save you some time since the building process requires installing the Android NDK and Bazel, Google’s build tool).</p>
+<p>NOTE: Android 5.0 or later required since the example uses the Camera2 package introduced in Android 5.0.</p>
+<p>NOTE: if your device runs Android 6.0 or later, you have to install the app with the following command (It gives the app the appropriate permissions it needs to run):</p>
+<pre><code>adb install -r -g /path/to/apk.apk
+</code></pre><h2 id="App-Structure-Walkthrough"><a href="#App-Structure-Walkthrough" class="headerlink" title="App Structure Walkthrough"></a>App Structure Walkthrough</h2><p><img src="https://jalammar.github.io/images/android-tensorflow-app-structure_1.png" alt=""><br>android-tensorflow-app-structure_1.png</p>
+<p>The core TensorFlow engine is built with C++, but programmers can write their TensorFlow software in either C++ or Python. The Android TensorFlow example uses the C++ interface in the following manner:</p>
+<p>On startup, the app launches an Android activity (CameraActivity.java) which then starts a fragment (CameraConnectionFragment.java)<br>The fragment does some setup to basically start the camera and feed the incoming stream of images to an object it instantiates (TensorflowImageListener.java)<br>The listener consults the classifier (TensorflowClassifier.java) about each image it gets, and receives the classification and confidence score for each image.<br>The good thing is that most of this logic is in normal Android Java SDK territory – so this should be familiar to most Android devs. So where is the C++?<br><img src="https://jalammar.github.io/images/android-tensorflow-app-structure_2.png" alt=""><br>android-tensorflow-app-structure_2.png</p>
+<p>If you look closely at TensorflowClassifier, you may notice the following methods:</p>
+<pre><code>public native int initializeTensorflow( );
+
+private native String classifyImageBmp(Bitmap bitmap);
+</code></pre><p>The native keywords in these method signatures indicate that these methods are implemented in native C++ code. Look for them under the “android/jni” directory and true enough, you’ll find tensorflow_jni.cc</p>
+<pre><code>JNIEXPORT jint JNICALL
+TENSORFLOW_METHOD(initializeTensorflow)(...) {
+...
+}
+
+
+JNIEXPORT jstring JNICALL
+TENSORFLOW_METHOD(classifyImageBmp)(...) {
+...
+}
+</code></pre><p>JNI (short for Java Native Interface) is a way in which the Java parts of an Android app can communicate with the native C++ parts. So when we call classifyImageBmp(bitmap) in our Java code, it will actually invoke the C++ function exported in tensorflow_jni.cc and return the value it returns.</p>
+<p>A Bitmap file cannot directly be sent to TensorFlow as input. It has be transformed into an input tensor that we’d send in step #2 in the flow above. A tensor is an n-dimensional array of values, and is the motif TensorFlow uses to send data between all of its different parts/operations. This model expect a 3-dimensional array that supplies the Red/Green/Blue value of each pixel in the image. The dimensions are:</p>
+<ol>
+<li>X-index of the pixel</li>
+<li>Y-index of the pixel</li>
+<li>indication of which value this cell holds (0 for red, 1 for green, 2 for blue)<br>And the value of the cell would be the actual value of R or G or B channel for that pixel.<br><img src="https://jalammar.github.io/images/input_tensor.png" alt=""><br>input_tensor.png</li>
+</ol>
+<p>(This is somewhat oversimplified. I glanced over two things for simplicity’s sake. First is the conversion from the YUV format that the Android camera exports to the RGB format the model expects. Second is that the model actually takes a 4-dimensional tensor, but these three are the ones we care about)</p>
+<h2 id="The-Model"><a href="#The-Model" class="headerlink" title="The Model"></a>The Model</h2><p>As you read the example’s README.md, you’ll notice that it instructs you to download a zip file containing the TensorFlow model and add it to the assets directory. This zip file contains two files that are important for us:</p>
+<p>tensorflow_inception_graph.pb- At 54 MBs unzipped, this file constitutes the majority of the APK size (58 MBs). This is our trained machine learning model and where the magic comes from. It’s a pre-built TensorFlow Graph describing the exact operations needed to compute a classification from input image data. This Graph is serialized and encoded into binary with Google’s Protocol Buffers so it can be deserialized across different platforms (think of it as a binary-encoded JSON file).</p>
+<p>imagenet_comp_graph_label_strings.txt- this contains the 1000 classifications that the output of the model corresponds to (e.g. “vending machine”, “water bottle”, “coffee mug”). These classifications are defined by the ImageNet Large Scale Visual Recognition Challenge which the model was built to compete in.</p>
+<p>The model here is what’s known as a deep convolutional neural network. It is built in the Inception architecture described in Going Deeper with Convolutions. Convolutional neural networks are some of the most popular models in deep learning. They have been very successful in image recognition (so much so, that most highly ranked teams in the competition used them).</p>
+<p>The model is read from the file and fed into TensorFlow when the app starts up. This code is actually really interesting to read and see how to communicate with tensorflow (if you run the app with your device connected to your computer, you can see these helpful log messages printed in logcat).</p>
+<h2 id="Build-System"><a href="#Build-System" class="headerlink" title="Build System"></a>Build System</h2><p>The Android app example is not built the traditional Gradle way. Because the app has to contain NDK elements as well as TensorFlow itself, a more elaborate build system was utilized. The example is configured to be built with Google’s Bazel build system running from the TensorFlow root directory.</p>
+<p>The WORKSPACE file in the root directory specifies the main parameters of the project. The BUILD file in the Android directory instructs the build system to build the Java and C++ files of the app.</p>
+<h2 id="The-Possibilities"><a href="#The-Possibilities" class="headerlink" title="The Possibilities"></a>The Possibilities</h2><p><strong>Using a trained model in your app seems to be the lowest hanging fruit for mobile TensorFlow apps at the moment.</strong> While you can probably train a model on Android, mobile devices are not well suited for the intensive processing required by complex models with larger training sets.</p>
+<p>Want to learn more about machine learning? Consider checking out the Machine Learning course on Coursera. There’s also a good discussion in /r/MachineLearning here: In your experience, which machine learning course on Coursera (or other MOOC web site) was the best?.</p>
+<p>Want to comment? /r/androiddev, Hacker News.</p>
+<p>Written on January 6, 2016</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://jalammar.github.io/Supercharging-android-apps-using-tensorflow/&quot;&gt;J Alammar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Supercharging Android Apps With TensorFlow (Google’s Open Source Machine Learning Library)&lt;br&gt;In November 2015, Google announced and open sourced TensorFlow, its latest and greatest machine learning library. This is a big deal for three reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Machine Learning expertise: Google is a dominant force in machine learning. Its prominence in search owes a lot to the strides it achieved in machine learning.&lt;/li&gt;
+&lt;li&gt;Scalability: the announcement noted that TensorFlow was initially designed for internal use and that it’s already in production for some live product features.&lt;/li&gt;
+&lt;li&gt;Ability to run on Mobile.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This last reason is the operating reason for this post since we’ll be focusing on Android. If you examine the tensorflow repo on GitHub, you’ll find a little tensorflow/examples/android directory. I’ll try to shed some light on the Android TensorFlow example and some of the things going on under the hood.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
+    
+      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title>TensorFlow Android Camera Demo</title>
     <link href="http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/tensorflow-android-camera-demo/"/>
     <id>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/tensorflow-android-camera-demo/</id>
@@ -5821,95 +5985,9 @@ At this point you can add the tensorflow/examples/android directory as a new And
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
-      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
-    
       <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Supercharging Android Apps With TensorFlow</title>
-    <link href="http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/supercharging-android-apps-with-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/supercharging-android-apps-with-tensorflow/</id>
-    <published>2017-02-17T02:26:06.000Z</published>
-    <updated>2017-02-17T15:10:29.777Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://jalammar.github.io/Supercharging-android-apps-using-tensorflow/" target="_blank" rel="external">J Alammar</a></p>
-<p>Supercharging Android Apps With TensorFlow (Google’s Open Source Machine Learning Library)<br>In November 2015, Google announced and open sourced TensorFlow, its latest and greatest machine learning library. This is a big deal for three reasons:</p>
-<ol>
-<li>Machine Learning expertise: Google is a dominant force in machine learning. Its prominence in search owes a lot to the strides it achieved in machine learning.</li>
-<li>Scalability: the announcement noted that TensorFlow was initially designed for internal use and that it’s already in production for some live product features.</li>
-<li>Ability to run on Mobile.</li>
-</ol>
-<p>This last reason is the operating reason for this post since we’ll be focusing on Android. If you examine the tensorflow repo on GitHub, you’ll find a little tensorflow/examples/android directory. I’ll try to shed some light on the Android TensorFlow example and some of the things going on under the hood.</p>
-  <a id="more"></a>
-<h2 id="A-Look-of-Recognition"><a href="#A-Look-of-Recognition" class="headerlink" title="A Look of Recognition"></a>A Look of Recognition</h2><p>The app glances out through your camera and tries to identify the objects it sees. Sometimes it does a good job, other times it can’t quite pin down the object, and at times it leads to thought provoking guesses! Overall, it feels pretty magical.</p>
-<p><img src="https://jalammar.github.io/images/android_tensorflow_classifier_results.jpg" alt=""><br>android_tensorflow_classifier_results.jpg</p>
-<p>The app accomplishes this feat using a bundled machine learning model running in TensorFlow on the device (no network calls to a backend service). The model is trained against millions of images so that it can look at the photos the camera feeds it and classify the object into its best guess (from the 1000 object classifications it knows). Along with its best guess, it shows a confidence score to indicate how sure it is about its guess.</p>
-<p>The Android example page gives you an idea on how to build the app, and ultimately culminates in producing this <a href="https://s3.amazonaws.com/jalammar.github.io/tensorflow_demo.apk" target="_blank" rel="external">APK</a> (I built and uploaded the APK to save you some time since the building process requires installing the Android NDK and Bazel, Google’s build tool).</p>
-<p>NOTE: Android 5.0 or later required since the example uses the Camera2 package introduced in Android 5.0.</p>
-<p>NOTE: if your device runs Android 6.0 or later, you have to install the app with the following command (It gives the app the appropriate permissions it needs to run):</p>
-<pre><code>adb install -r -g /path/to/apk.apk
-</code></pre><h2 id="App-Structure-Walkthrough"><a href="#App-Structure-Walkthrough" class="headerlink" title="App Structure Walkthrough"></a>App Structure Walkthrough</h2><p><img src="https://jalammar.github.io/images/android-tensorflow-app-structure_1.png" alt=""><br>android-tensorflow-app-structure_1.png</p>
-<p>The core TensorFlow engine is built with C++, but programmers can write their TensorFlow software in either C++ or Python. The Android TensorFlow example uses the C++ interface in the following manner:</p>
-<p>On startup, the app launches an Android activity (CameraActivity.java) which then starts a fragment (CameraConnectionFragment.java)<br>The fragment does some setup to basically start the camera and feed the incoming stream of images to an object it instantiates (TensorflowImageListener.java)<br>The listener consults the classifier (TensorflowClassifier.java) about each image it gets, and receives the classification and confidence score for each image.<br>The good thing is that most of this logic is in normal Android Java SDK territory – so this should be familiar to most Android devs. So where is the C++?<br><img src="https://jalammar.github.io/images/android-tensorflow-app-structure_2.png" alt=""><br>android-tensorflow-app-structure_2.png</p>
-<p>If you look closely at TensorflowClassifier, you may notice the following methods:</p>
-<pre><code>public native int initializeTensorflow( );
-
-private native String classifyImageBmp(Bitmap bitmap);
-</code></pre><p>The native keywords in these method signatures indicate that these methods are implemented in native C++ code. Look for them under the “android/jni” directory and true enough, you’ll find tensorflow_jni.cc</p>
-<pre><code>JNIEXPORT jint JNICALL
-TENSORFLOW_METHOD(initializeTensorflow)(...) {
-...
-}
-
-
-JNIEXPORT jstring JNICALL
-TENSORFLOW_METHOD(classifyImageBmp)(...) {
-...
-}
-</code></pre><p>JNI (short for Java Native Interface) is a way in which the Java parts of an Android app can communicate with the native C++ parts. So when we call classifyImageBmp(bitmap) in our Java code, it will actually invoke the C++ function exported in tensorflow_jni.cc and return the value it returns.</p>
-<p>A Bitmap file cannot directly be sent to TensorFlow as input. It has be transformed into an input tensor that we’d send in step #2 in the flow above. A tensor is an n-dimensional array of values, and is the motif TensorFlow uses to send data between all of its different parts/operations. This model expect a 3-dimensional array that supplies the Red/Green/Blue value of each pixel in the image. The dimensions are:</p>
-<ol>
-<li>X-index of the pixel</li>
-<li>Y-index of the pixel</li>
-<li>indication of which value this cell holds (0 for red, 1 for green, 2 for blue)<br>And the value of the cell would be the actual value of R or G or B channel for that pixel.<br><img src="https://jalammar.github.io/images/input_tensor.png" alt=""><br>input_tensor.png</li>
-</ol>
-<p>(This is somewhat oversimplified. I glanced over two things for simplicity’s sake. First is the conversion from the YUV format that the Android camera exports to the RGB format the model expects. Second is that the model actually takes a 4-dimensional tensor, but these three are the ones we care about)</p>
-<h2 id="The-Model"><a href="#The-Model" class="headerlink" title="The Model"></a>The Model</h2><p>As you read the example’s README.md, you’ll notice that it instructs you to download a zip file containing the TensorFlow model and add it to the assets directory. This zip file contains two files that are important for us:</p>
-<p>tensorflow_inception_graph.pb- At 54 MBs unzipped, this file constitutes the majority of the APK size (58 MBs). This is our trained machine learning model and where the magic comes from. It’s a pre-built TensorFlow Graph describing the exact operations needed to compute a classification from input image data. This Graph is serialized and encoded into binary with Google’s Protocol Buffers so it can be deserialized across different platforms (think of it as a binary-encoded JSON file).</p>
-<p>imagenet_comp_graph_label_strings.txt- this contains the 1000 classifications that the output of the model corresponds to (e.g. “vending machine”, “water bottle”, “coffee mug”). These classifications are defined by the ImageNet Large Scale Visual Recognition Challenge which the model was built to compete in.</p>
-<p>The model here is what’s known as a deep convolutional neural network. It is built in the Inception architecture described in Going Deeper with Convolutions. Convolutional neural networks are some of the most popular models in deep learning. They have been very successful in image recognition (so much so, that most highly ranked teams in the competition used them).</p>
-<p>The model is read from the file and fed into TensorFlow when the app starts up. This code is actually really interesting to read and see how to communicate with tensorflow (if you run the app with your device connected to your computer, you can see these helpful log messages printed in logcat).</p>
-<h2 id="Build-System"><a href="#Build-System" class="headerlink" title="Build System"></a>Build System</h2><p>The Android app example is not built the traditional Gradle way. Because the app has to contain NDK elements as well as TensorFlow itself, a more elaborate build system was utilized. The example is configured to be built with Google’s Bazel build system running from the TensorFlow root directory.</p>
-<p>The WORKSPACE file in the root directory specifies the main parameters of the project. The BUILD file in the Android directory instructs the build system to build the Java and C++ files of the app.</p>
-<h2 id="The-Possibilities"><a href="#The-Possibilities" class="headerlink" title="The Possibilities"></a>The Possibilities</h2><p><strong>Using a trained model in your app seems to be the lowest hanging fruit for mobile TensorFlow apps at the moment.</strong> While you can probably train a model on Android, mobile devices are not well suited for the intensive processing required by complex models with larger training sets.</p>
-<p>Want to learn more about machine learning? Consider checking out the Machine Learning course on Coursera. There’s also a good discussion in /r/MachineLearning here: In your experience, which machine learning course on Coursera (or other MOOC web site) was the best?.</p>
-<p>Want to comment? /r/androiddev, Hacker News.</p>
-<p>Written on January 6, 2016</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://jalammar.github.io/Supercharging-android-apps-using-tensorflow/&quot;&gt;J Alammar&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Supercharging Android Apps With TensorFlow (Google’s Open Source Machine Learning Library)&lt;br&gt;In November 2015, Google announced and open sourced TensorFlow, its latest and greatest machine learning library. This is a big deal for three reasons:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Machine Learning expertise: Google is a dominant force in machine learning. Its prominence in search owes a lot to the strides it achieved in machine learning.&lt;/li&gt;
-&lt;li&gt;Scalability: the announcement noted that TensorFlow was initially designed for internal use and that it’s already in production for some live product features.&lt;/li&gt;
-&lt;li&gt;Ability to run on Mobile.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This last reason is the operating reason for this post since we’ll be focusing on Android. If you examine the tensorflow repo on GitHub, you’ll find a little tensorflow/examples/android directory. I’ll try to shed some light on the Android TensorFlow example and some of the things going on under the hood.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
       <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
     
   </entry>
   
@@ -5946,9 +6024,9 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
-      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
-    
       <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
+    
+      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
     
   </entry>
   
@@ -6012,71 +6090,6 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
 &lt;p&gt;&lt;strong&gt;通过一些TensorFlow实际应用，让大家对TensorFlow有理性和感性的双层认知。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;随着谷歌2015年发布开源人工系统TensorFlow，让本就如火如荼的深度学习再添一把火，截至现在，TensorFlow已经历了多个版本演进，功能不断完善，AI开发者也能灵活自如的运用TensorFlow解决一些实际问题，下面雷锋网(公众号：雷锋网)会对一些比较实用的TensorFlow应用做相关整理，让大家对TensorFlow有理性和感性的双层认知。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tensorflow 的入门与安装</title>
-    <link href="http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/</id>
-    <published>2017-02-17T01:56:06.000Z</published>
-    <updated>2017-02-17T01:59:11.229Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.leiphone.com/news/201702/I9mcLjB6pKjTf1Or.html" target="_blank" rel="external">作者：AI研习社</a></p>
-<blockquote>
-<p><strong>作为AI 领域最受关注和使用率最高的开源框架之一，TensorFlow 究竟是如何安装的呢？这篇汇总资料你不得不看！</strong></p>
-</blockquote>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a2d3a8ba7be.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>自2015年11月发布以来，谷歌旗下的机器学习开源框架TensorFlow已经在图像识别，大数据分析，语音识别和语义理解，机器翻译等各个领域得到了广泛应用，同时也得到了业内人士的普遍认可，成为了目前最受关注和使用率最高的开源框架之一。</p>
-<p>本文将重点整理TensorFlow框架的入门和安装教程。更多关于TensorFlow的深入介绍、应用项目以及各机器学习开源框架之间的对比等内容，请见雷锋网(公众号：雷锋网)的系列文章。</p>
-  <a id="more"></a>
-<p>下面是本文整理的资料内容：</p>
-<p>在安装之前，这里先列出一些对TensorFlow给出大略介绍的文章，其中包括一些重要的概念解释，TensorFlow的具体含义和优点，以及TensorFlow的基本工作原理等。</p>
-<ol>
-<li><p>《TensorFlow极速入门》<br>链接：<a href="http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html" target="_blank" rel="external">http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html</a><br>本文介绍了 graph 与 session 等基本组件，解释了 rank 和 shape 等基础数据结构概念，讲解了一些 variable 需要注意的地方并介绍了 placeholders 与 feed_dict 。最终以一个手写数字识别的实例将这些点串起来进行了具体说明。</p>
-</li>
-<li><p>《TensorFlow学习笔记1：入门》<br>链接：<a href="http://www.jeyzhang.com/tensorflow-learning-notes.html" target="_blank" rel="external">http://www.jeyzhang.com/tensorflow-learning-notes.html</a><br>本文与上一篇的行文思路基本一致，首先概括了TensorFlow的特性，然后介绍了graph、session、variable 等基本概念的含义，以具体代码的形式针对每个概念给出了进一步的解释。最后通过手写数字识别的实例将这些点串起来进行了具体说明。<br>需要指出的是，两篇文章覆盖的基础概念不尽相同，并且举例用的代码也不一样。</p>
-</li>
-<li><p>《TensorFlow入门》<br>链接：<a href="http://www.jianshu.com/p/6766fbcd43b9#" target="_blank" rel="external">http://www.jianshu.com/p/6766fbcd43b9#</a><br>与上面两篇不同，本文简单介绍了 TensorFlow 的含义、优点、安装和基本工作原理之后，直接通过代码示例的方式讲解了 TensorFlow 的简单用法，包括生成三维数据，然后用一个平面拟合它，以及通过 variable 实现一个简单的计数器等。</p>
-</li>
-</ol>
-<p>值得一提的是，以上第二和第三篇分别来自两个系列文章，这两个系列也都是关于 TensorFlow 入门和实践的优秀博客。第二篇的后续文章讲述了卷积神经网络（CNN）模型构建，以及利用 TensorFlow 生成词向量 (Word Embedding) 的具体过程。第三篇则实际上是基于斯坦福大学基于深度学习的自然语言处理课程的学习笔记，该系列其他的文章还讲述了循环神经网络（RNN）和 word2vec 模型等更深入的知识，感兴趣的读者可以从文章的作者页找到更多文章。</p>
-<p>上述文章都更倾向于 TensorFlow 的简单介绍了基础用法，但对于TensorFlow具体安装过程的讲述则不够细致。因此这里专门针对TensorFlow的安装过程推荐一篇教程。</p>
-<ol>
-<li>《真正从零开始，TensorFlow详细安装入门图文教程！》<br>链接：<a href="http://www.leiphone.com/news/201606/ORlQ7uK3TIW8xVGF.html" target="_blank" rel="external">http://www.leiphone.com/news/201606/ORlQ7uK3TIW8xVGF.html</a><br>上文来自雷锋网小编的亲身实践，真正做到了从零开始，详细介绍了在Linux环境下如何通过pip命令安装TensorFlow框架的完整流程，以及面对一些常见问题的处理办法。值得一提的是，本文在讲解完框架安装之后，还针对Komodo开发环境进行了简单介绍。</li>
-</ol>
-<p>经过了以上来自民间的实践教程之后，相信各位读者对TensorFlow的大致情况和具体安装方法已经有了自己的理解。下面对于那些想要更全面和深入地了解TensorFlow的读者，我们推荐几个官方的教程。</p>
-<ol>
-<li><p>谷歌官方入门教程<br>链接：<a href="https://www.tensorflow.org/get_started/" target="_blank" rel="external">https://www.tensorflow.org/get_started/</a></p>
-</li>
-<li><p>谷歌教程翻译<br><a href="https://github.com/jikexueyuanwiki/tensorflow-zh" target="_blank" rel="external">https://github.com/jikexueyuanwiki/tensorflow-zh</a></p>
-</li>
-</ol>
-<p>这里谷歌给出的入门教程内容十分丰富，除了最基本的安装、名词解释和代码示例之外，还给出了 API 接口的详细解释和说明。但考虑到内容全是英文，因此雷锋网在这里给出了国内志愿者对谷歌内容的中文翻译版，可以为那些英文不好的读者提供参考。</p>
-<ol>
-<li>TensorFlow中文社区<br><a href="http://www.tensorfly.cn/" target="_blank" rel="external">http://www.tensorfly.cn/</a><br>最后我们在这里推荐一个 TensorFlow 的中文社区，该网站几乎可以认为是 TensorFlow 的中文官网，除了上述谷歌官方教程的中文翻译之外，该网站还包括进阶指南、API中文手册、精华文章和TF社区等诸多板块。</li>
-</ol>
-<p>雷锋网版权文章，未经授权禁止转载。详情见转载须知。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.leiphone.com/news/201702/I9mcLjB6pKjTf1Or.html&quot;&gt;作者：AI研习社&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;作为AI 领域最受关注和使用率最高的开源框架之一，TensorFlow 究竟是如何安装的呢？这篇汇总资料你不得不看！&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;http://static.leiphone.com/uploads/new/article/740_740/201702/58a2d3a8ba7be.jpg?imageMogr2/format/jpg/quality/90&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;自2015年11月发布以来，谷歌旗下的机器学习开源框架TensorFlow已经在图像识别，大数据分析，语音识别和语义理解，机器翻译等各个领域得到了广泛应用，同时也得到了业内人士的普遍认可，成为了目前最受关注和使用率最高的开源框架之一。&lt;/p&gt;
-&lt;p&gt;本文将重点整理TensorFlow框架的入门和安装教程。更多关于TensorFlow的深入介绍、应用项目以及各机器学习开源框架之间的对比等内容，请见雷锋网(公众号：雷锋网)的系列文章。&lt;/p&gt;
     
     </summary>
     
@@ -6186,6 +6199,71 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;http://static.leiphone.com/uploads/new/article/740_740/201702/58a3fff2bdea1.png?imageMogr2/format/jpg/quality/90&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;作为机器学习领域、尤其是 Python 生态圈最受欢迎的框架平台，TensorFlow 具有许多吸引开发者的优点。其中最显而易见的是谷歌的技术支持和完善的社区（庞大用户群）。这些都为 TensorFlow 的普及打下了基础。但是，开发者需要了解 Tensorflow 在技术上有哪些值得一提的优势，又有哪些不足，以便在处理特定任务时进行工具选择。而这些，必须要在与其他平台、框架的对比中才能凸显。顺便说一句老生常谈的话，&lt;strong&gt;没有万能的工具，只有在不同应用场景下最合适的选择。&lt;/strong&gt; 因此，雷锋网(公众号：雷锋网)整理了介绍 Tensorflow、Caffe、Microsoft Cognitive Toolkit （CNTK）、MXnet、Torch 等平台框架，以及对它们做横向对比的文章，供读者按图索骥。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tensorflow 的入门与安装</title>
+    <link href="http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/"/>
+    <id>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/</id>
+    <published>2017-02-17T01:56:06.000Z</published>
+    <updated>2017-02-17T01:59:11.229Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.leiphone.com/news/201702/I9mcLjB6pKjTf1Or.html" target="_blank" rel="external">作者：AI研习社</a></p>
+<blockquote>
+<p><strong>作为AI 领域最受关注和使用率最高的开源框架之一，TensorFlow 究竟是如何安装的呢？这篇汇总资料你不得不看！</strong></p>
+</blockquote>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a2d3a8ba7be.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>自2015年11月发布以来，谷歌旗下的机器学习开源框架TensorFlow已经在图像识别，大数据分析，语音识别和语义理解，机器翻译等各个领域得到了广泛应用，同时也得到了业内人士的普遍认可，成为了目前最受关注和使用率最高的开源框架之一。</p>
+<p>本文将重点整理TensorFlow框架的入门和安装教程。更多关于TensorFlow的深入介绍、应用项目以及各机器学习开源框架之间的对比等内容，请见雷锋网(公众号：雷锋网)的系列文章。</p>
+  <a id="more"></a>
+<p>下面是本文整理的资料内容：</p>
+<p>在安装之前，这里先列出一些对TensorFlow给出大略介绍的文章，其中包括一些重要的概念解释，TensorFlow的具体含义和优点，以及TensorFlow的基本工作原理等。</p>
+<ol>
+<li><p>《TensorFlow极速入门》<br>链接：<a href="http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html" target="_blank" rel="external">http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html</a><br>本文介绍了 graph 与 session 等基本组件，解释了 rank 和 shape 等基础数据结构概念，讲解了一些 variable 需要注意的地方并介绍了 placeholders 与 feed_dict 。最终以一个手写数字识别的实例将这些点串起来进行了具体说明。</p>
+</li>
+<li><p>《TensorFlow学习笔记1：入门》<br>链接：<a href="http://www.jeyzhang.com/tensorflow-learning-notes.html" target="_blank" rel="external">http://www.jeyzhang.com/tensorflow-learning-notes.html</a><br>本文与上一篇的行文思路基本一致，首先概括了TensorFlow的特性，然后介绍了graph、session、variable 等基本概念的含义，以具体代码的形式针对每个概念给出了进一步的解释。最后通过手写数字识别的实例将这些点串起来进行了具体说明。<br>需要指出的是，两篇文章覆盖的基础概念不尽相同，并且举例用的代码也不一样。</p>
+</li>
+<li><p>《TensorFlow入门》<br>链接：<a href="http://www.jianshu.com/p/6766fbcd43b9#" target="_blank" rel="external">http://www.jianshu.com/p/6766fbcd43b9#</a><br>与上面两篇不同，本文简单介绍了 TensorFlow 的含义、优点、安装和基本工作原理之后，直接通过代码示例的方式讲解了 TensorFlow 的简单用法，包括生成三维数据，然后用一个平面拟合它，以及通过 variable 实现一个简单的计数器等。</p>
+</li>
+</ol>
+<p>值得一提的是，以上第二和第三篇分别来自两个系列文章，这两个系列也都是关于 TensorFlow 入门和实践的优秀博客。第二篇的后续文章讲述了卷积神经网络（CNN）模型构建，以及利用 TensorFlow 生成词向量 (Word Embedding) 的具体过程。第三篇则实际上是基于斯坦福大学基于深度学习的自然语言处理课程的学习笔记，该系列其他的文章还讲述了循环神经网络（RNN）和 word2vec 模型等更深入的知识，感兴趣的读者可以从文章的作者页找到更多文章。</p>
+<p>上述文章都更倾向于 TensorFlow 的简单介绍了基础用法，但对于TensorFlow具体安装过程的讲述则不够细致。因此这里专门针对TensorFlow的安装过程推荐一篇教程。</p>
+<ol>
+<li>《真正从零开始，TensorFlow详细安装入门图文教程！》<br>链接：<a href="http://www.leiphone.com/news/201606/ORlQ7uK3TIW8xVGF.html" target="_blank" rel="external">http://www.leiphone.com/news/201606/ORlQ7uK3TIW8xVGF.html</a><br>上文来自雷锋网小编的亲身实践，真正做到了从零开始，详细介绍了在Linux环境下如何通过pip命令安装TensorFlow框架的完整流程，以及面对一些常见问题的处理办法。值得一提的是，本文在讲解完框架安装之后，还针对Komodo开发环境进行了简单介绍。</li>
+</ol>
+<p>经过了以上来自民间的实践教程之后，相信各位读者对TensorFlow的大致情况和具体安装方法已经有了自己的理解。下面对于那些想要更全面和深入地了解TensorFlow的读者，我们推荐几个官方的教程。</p>
+<ol>
+<li><p>谷歌官方入门教程<br>链接：<a href="https://www.tensorflow.org/get_started/" target="_blank" rel="external">https://www.tensorflow.org/get_started/</a></p>
+</li>
+<li><p>谷歌教程翻译<br><a href="https://github.com/jikexueyuanwiki/tensorflow-zh" target="_blank" rel="external">https://github.com/jikexueyuanwiki/tensorflow-zh</a></p>
+</li>
+</ol>
+<p>这里谷歌给出的入门教程内容十分丰富，除了最基本的安装、名词解释和代码示例之外，还给出了 API 接口的详细解释和说明。但考虑到内容全是英文，因此雷锋网在这里给出了国内志愿者对谷歌内容的中文翻译版，可以为那些英文不好的读者提供参考。</p>
+<ol>
+<li>TensorFlow中文社区<br><a href="http://www.tensorfly.cn/" target="_blank" rel="external">http://www.tensorfly.cn/</a><br>最后我们在这里推荐一个 TensorFlow 的中文社区，该网站几乎可以认为是 TensorFlow 的中文官网，除了上述谷歌官方教程的中文翻译之外，该网站还包括进阶指南、API中文手册、精华文章和TF社区等诸多板块。</li>
+</ol>
+<p>雷锋网版权文章，未经授权禁止转载。详情见转载须知。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.leiphone.com/news/201702/I9mcLjB6pKjTf1Or.html&quot;&gt;作者：AI研习社&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;作为AI 领域最受关注和使用率最高的开源框架之一，TensorFlow 究竟是如何安装的呢？这篇汇总资料你不得不看！&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://static.leiphone.com/uploads/new/article/740_740/201702/58a2d3a8ba7be.jpg?imageMogr2/format/jpg/quality/90&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;自2015年11月发布以来，谷歌旗下的机器学习开源框架TensorFlow已经在图像识别，大数据分析，语音识别和语义理解，机器翻译等各个领域得到了广泛应用，同时也得到了业内人士的普遍认可，成为了目前最受关注和使用率最高的开源框架之一。&lt;/p&gt;
+&lt;p&gt;本文将重点整理TensorFlow框架的入门和安装教程。更多关于TensorFlow的深入介绍、应用项目以及各机器学习开源框架之间的对比等内容，请见雷锋网(公众号：雷锋网)的系列文章。&lt;/p&gt;
     
     </summary>
     
@@ -8119,7 +8197,7 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
     <published>2017-01-20T12:31:06.000Z</published>
     <updated>2017-02-15T13:04:57.169Z</updated>
     
-    <content type="html"><![CDATA[<p>如何成为一名黑客<br>——Eric S. Raymond <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#101;&#x73;&#x72;&#x40;&#x74;&#x68;&#x79;&#114;&#x73;&#117;&#x73;&#46;&#x63;&#111;&#109;">&#101;&#x73;&#x72;&#x40;&#x74;&#x68;&#x79;&#114;&#x73;&#117;&#x73;&#46;&#x63;&#111;&#109;</a><br><a href="http://translations.readthedocs.io/en/latest/hacker_howto.html" target="_blank" rel="external">Wang Dingwei <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x77;&#x61;&#x6e;&#103;&#x64;&#105;&#110;&#x67;&#119;&#x65;&#105;&#56;&#x32;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#x77;&#x61;&#x6e;&#103;&#x64;&#105;&#110;&#x67;&#119;&#x65;&#105;&#56;&#x32;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a></a> 基于 Barret 的翻译更正而成。转载请注明出处。</p>
+    <content type="html"><![CDATA[<p>如何成为一名黑客<br>——Eric S. Raymond <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x65;&#x73;&#x72;&#64;&#116;&#x68;&#121;&#x72;&#x73;&#x75;&#115;&#46;&#x63;&#x6f;&#x6d;">&#x65;&#x73;&#x72;&#64;&#116;&#x68;&#121;&#x72;&#x73;&#x75;&#115;&#46;&#x63;&#x6f;&#x6d;</a><br><a href="http://translations.readthedocs.io/en/latest/hacker_howto.html" target="_blank" rel="external">Wang Dingwei <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#x77;&#x61;&#110;&#x67;&#100;&#x69;&#x6e;&#103;&#119;&#101;&#x69;&#56;&#50;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#x77;&#x61;&#110;&#x67;&#100;&#x69;&#x6e;&#103;&#119;&#101;&#x69;&#56;&#50;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a></a> 基于 Barret 的翻译更正而成。转载请注明出处。</p>
 <p>目录</p>
 <ol>
 <li>为什么会有这份文档？</li>
@@ -8664,7 +8742,7 @@ become the master.
     
     <summary type="html">
     
-      &lt;p&gt;如何成为一名黑客&lt;br&gt;——Eric S. Raymond &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#101;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#x68;&amp;#x79;&amp;#114;&amp;#x73;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&quot;&gt;&amp;#101;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#x68;&amp;#x79;&amp;#114;&amp;#x73;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://translations.readthedocs.io/en/latest/hacker_howto.html&quot;&gt;Wang Dingwei &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#116;&amp;#111;&amp;#58;&amp;#x77;&amp;#x61;&amp;#x6e;&amp;#103;&amp;#x64;&amp;#105;&amp;#110;&amp;#x67;&amp;#119;&amp;#x65;&amp;#105;&amp;#56;&amp;#x32;&amp;#x40;&amp;#103;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#x77;&amp;#x61;&amp;#x6e;&amp;#103;&amp;#x64;&amp;#105;&amp;#110;&amp;#x67;&amp;#119;&amp;#x65;&amp;#105;&amp;#56;&amp;#x32;&amp;#x40;&amp;#103;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;/a&gt; 基于 Barret 的翻译更正而成。转载请注明出处。&lt;/p&gt;
+      &lt;p&gt;如何成为一名黑客&lt;br&gt;——Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#64;&amp;#116;&amp;#x68;&amp;#121;&amp;#x72;&amp;#x73;&amp;#x75;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#64;&amp;#116;&amp;#x68;&amp;#121;&amp;#x72;&amp;#x73;&amp;#x75;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://translations.readthedocs.io/en/latest/hacker_howto.html&quot;&gt;Wang Dingwei &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#x77;&amp;#x61;&amp;#110;&amp;#x67;&amp;#100;&amp;#x69;&amp;#x6e;&amp;#103;&amp;#119;&amp;#101;&amp;#x69;&amp;#56;&amp;#50;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#x77;&amp;#x61;&amp;#110;&amp;#x67;&amp;#100;&amp;#x69;&amp;#x6e;&amp;#103;&amp;#119;&amp;#101;&amp;#x69;&amp;#56;&amp;#50;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;/a&gt; 基于 Barret 的翻译更正而成。转载请注明出处。&lt;/p&gt;
 &lt;p&gt;目录&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;为什么会有这份文档？&lt;/li&gt;
@@ -9846,118 +9924,6 @@ become the master.
   </entry>
   
   <entry>
-    <title>Great hacker, Want to start a startup?</title>
-    <link href="http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/want-to-start-a-startup-great-hacker/"/>
-    <id>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/want-to-start-a-startup-great-hacker/</id>
-    <published>2017-01-20T11:37:06.000Z</published>
-    <updated>2017-02-15T13:07:10.397Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.paulgraham.com/gh.html" target="_blank" rel="external">Paul Graham</a> July 2004</p>
-<p><img src="http://ep.yimg.com/ca/I/paulgraham_2202_9271894" alt=""></p>
-<p>(This essay is derived from a talk at Oscon 2004.)</p>
-<p>A few months ago I finished a new book, and in reviews I keep noticing words like “provocative’’ and “controversial.’’ To say nothing of “idiotic.’’</p>
-<p>I didn’t mean to make the book controversial. I was trying to make it efficient. I didn’t want to waste people’s time telling them things they already knew. It’s more efficient just to give them the diffs. But I suppose that’s bound to yield an alarming book.</p>
- <a id="more"></a>
-<p>Edisons</p>
-<p>There’s no controversy about which idea is most controversial: the suggestion that variation in wealth might not be as big a problem as we think.</p>
-<p>I didn’t say in the book that variation in wealth was in itself a good thing. I said in some situations it might be a sign of good things. A throbbing headache is not a good thing, but it can be a sign of a good thing– for example, that you’re recovering consciousness after being hit on the head.</p>
-<p>Variation in wealth can be a sign of variation in productivity. (In a society of one, they’re identical.) And that is almost certainly a good thing: if your society has no variation in productivity, it’s probably not because everyone is Thomas Edison. It’s probably because you have no Thomas Edisons.</p>
-<p>In a low-tech society you don’t see much variation in productivity. If you have a tribe of nomads collecting sticks for a fire, how much more productive is the best stick gatherer going to be than the worst? A factor of two? Whereas when you hand people a complex tool like a computer, the variation in what they can do with it is enormous.</p>
-<p>That’s not a new idea. Fred Brooks wrote about it in 1974, and the study he quoted was published in 1968. But I think he underestimated the variation between programmers. He wrote about productivity in lines of code: the best programmers can solve a given problem in a tenth the time. But what if the problem isn’t given? In programming, as in many fields, the hard part isn’t solving problems, but deciding what problems to solve. Imagination is hard to measure, but in practice it dominates the kind of productivity that’s measured in lines of code.</p>
-<p>Productivity varies in any field, but there are few in which it varies so much. The variation between programmers is so great that it becomes a difference in kind. I don’t think this is something intrinsic to programming, though. In every field, technology magnifies differences in productivity. I think what’s happening in programming is just that we have a lot of technological leverage. But in every field the lever is getting longer, so the variation we see is something that more and more fields will see as time goes on. And the success of companies, and countries, will depend increasingly on how they deal with it.</p>
-<p>If variation in productivity increases with technology, then the contribution of the most productive individuals will not only be disproportionately large, but will actually grow with time. When you reach the point where 90% of a group’s output is created by 1% of its members, you lose big if something (whether Viking raids, or central planning) drags their productivity down to the average.</p>
-<p>If we want to get the most out of them, we need to understand these especially productive people. What motivates them? What do they need to do their jobs? How do you recognize them? How do you get them to come and work for you? And then of course there’s the question, how do you become one?</p>
-<p>More than Money</p>
-<p>I know a handful of super-hackers, so I sat down and thought about what they have in common. Their defining quality is probably that they really love to program. Ordinary programmers write code to pay the bills. Great hackers think of it as something they do for fun, and which they’re delighted to find people will pay them for.</p>
-<p>Great programmers are sometimes said to be indifferent to money. This isn’t quite true. It is true that all they really care about is doing interesting work. But if you make enough money, you get to work on whatever you want, and for that reason hackers are attracted by the idea of making really large amounts of money. But as long as they still have to show up for work every day, they care more about what they do there than how much they get paid for it.</p>
-<p>Economically, this is a fact of the greatest importance, because it means you don’t have to pay great hackers anything like what they’re worth. A great programmer might be ten or a hundred times as productive as an ordinary one, but he’ll consider himself lucky to get paid three times as much. As I’ll explain later, this is partly because great hackers don’t know how good they are. But it’s also because money is not the main thing they want.</p>
-<p>What do hackers want? Like all craftsmen, hackers like good tools. In fact, that’s an understatement. Good hackers find it unbearable to use bad tools. They’ll simply refuse to work on projects with the wrong infrastructure.</p>
-<p>At a startup I once worked for, one of the things pinned up on our bulletin board was an ad from IBM. It was a picture of an AS400, and the headline read, I think, “hackers despise it.’’ [1]</p>
-<p>When you decide what infrastructure to use for a project, you’re not just making a technical decision. You’re also making a social decision, and this may be the more important of the two. For example, if your company wants to write some software, it might seem a prudent choice to write it in Java. But when you choose a language, you’re also choosing a community. The programmers you’ll be able to hire to work on a Java project won’t be as smart as the ones you could get to work on a project written in Python. And the quality of your hackers probably matters more than the language you choose. Though, frankly, the fact that good hackers prefer Python to Java should tell you something about the relative merits of those languages.</p>
-<p>Business types prefer the most popular languages because they view languages as standards. They don’t want to bet the company on Betamax. The thing about languages, though, is that they’re not just standards. If you have to move bits over a network, by all means use TCP/IP. But a programming language isn’t just a format. A programming language is a medium of expression.</p>
-<p>I’ve read that Java has just overtaken Cobol as the most popular language. As a standard, you couldn’t wish for more. But as a medium of expression, you could do a lot better. Of all the great programmers I can think of, I know of only one who would voluntarily program in Java. And of all the great programmers I can think of who don’t work for Sun, on Java, I know of zero.</p>
-<p>Great hackers also generally insist on using open source software. Not just because it’s better, but because it gives them more control. Good hackers insist on control. This is part of what makes them good hackers: when something’s broken, they need to fix it. You want them to feel this way about the software they’re writing for you. You shouldn’t be surprised when they feel the same way about the operating system.</p>
-<p>A couple years ago a venture capitalist friend told me about a new startup he was involved with. It sounded promising. But the next time I talked to him, he said they’d decided to build their software on Windows NT, and had just hired a very experienced NT developer to be their chief technical officer. When I heard this, I thought, these guys are doomed. One, the CTO couldn’t be a first rate hacker, because to become an eminent NT developer he would have had to use NT voluntarily, multiple times, and I couldn’t imagine a great hacker doing that; and two, even if he was good, he’d have a hard time hiring anyone good to work for him if the project had to be built on NT. [2]</p>
-<p>The Final Frontier</p>
-<p>After software, the most important tool to a hacker is probably his office. Big companies think the function of office space is to express rank. But hackers use their offices for more than that: they use their office as a place to think in. And if you’re a technology company, their thoughts are your product. So making hackers work in a noisy, distracting environment is like having a paint factory where the air is full of soot.</p>
-<p>The cartoon strip Dilbert has a lot to say about cubicles, and with good reason. All the hackers I know despise them. The mere prospect of being interrupted is enough to prevent hackers from working on hard problems. If you want to get real work done in an office with cubicles, you have two options: work at home, or come in early or late or on a weekend, when no one else is there. Don’t companies realize this is a sign that something is broken? An office environment is supposed to be something that helps you work, not something you work despite.</p>
-<p>Companies like Cisco are proud that everyone there has a cubicle, even the CEO. But they’re not so advanced as they think; obviously they still view office space as a badge of rank. Note too that Cisco is famous for doing very little product development in house. They get new technology by buying the startups that created it– where presumably the hackers did have somewhere quiet to work.</p>
-<p>One big company that understands what hackers need is Microsoft. I once saw a recruiting ad for Microsoft with a big picture of a door. Work for us, the premise was, and we’ll give you a place to work where you can actually get work done. And you know, Microsoft is remarkable among big companies in that they are able to develop software in house. Not well, perhaps, but well enough.</p>
-<p>If companies want hackers to be productive, they should look at what they do at home. At home, hackers can arrange things themselves so they can get the most done. And when they work at home, hackers don’t work in noisy, open spaces; they work in rooms with doors. They work in cosy, neighborhoody places with people around and somewhere to walk when they need to mull something over, instead of in glass boxes set in acres of parking lots. They have a sofa they can take a nap on when they feel tired, instead of sitting in a coma at their desk, pretending to work. There’s no crew of people with vacuum cleaners that roars through every evening during the prime hacking hours. There are no meetings or, God forbid, corporate retreats or team-building exercises. And when you look at what they’re doing on that computer, you’ll find it reinforces what I said earlier about tools. They may have to use Java and Windows at work, but at home, where they can choose for themselves, you’re more likely to find them using Perl and Linux.</p>
-<p>Indeed, these statistics about Cobol or Java being the most popular language can be misleading. What we ought to look at, if we want to know what tools are best, is what hackers choose when they can choose freely– that is, in projects of their own. When you ask that question, you find that open source operating systems already have a dominant market share, and the number one language is probably Perl.</p>
-<p>Interesting</p>
-<p>Along with good tools, hackers want interesting projects. What makes a project interesting? Well, obviously overtly sexy applications like stealth planes or special effects software would be interesting to work on. But any application can be interesting if it poses novel technical challenges. So it’s hard to predict which problems hackers will like, because some become interesting only when the people working on them discover a new kind of solution. Before ITA (who wrote the software inside Orbitz), the people working on airline fare searches probably thought it was one of the most boring applications imaginable. But ITA made it interesting by redefining the problem in a more ambitious way.</p>
-<p>I think the same thing happened at Google. When Google was founded, the conventional wisdom among the so-called portals was that search was boring and unimportant. But the guys at Google didn’t think search was boring, and that’s why they do it so well.</p>
-<p>This is an area where managers can make a difference. Like a parent saying to a child, I bet you can’t clean up your whole room in ten minutes, a good manager can sometimes redefine a problem as a more interesting one. Steve Jobs seems to be particularly good at this, in part simply by having high standards. There were a lot of small, inexpensive computers before the Mac. He redefined the problem as: make one that’s beautiful. And that probably drove the developers harder than any carrot or stick could.</p>
-<p>They certainly delivered. When the Mac first appeared, you didn’t even have to turn it on to know it would be good; you could tell from the case. A few weeks ago I was walking along the street in Cambridge, and in someone’s trash I saw what appeared to be a Mac carrying case. I looked inside, and there was a Mac SE. I carried it home and plugged it in, and it booted. The happy Macintosh face, and then the finder. My God, it was so simple. It was just like … Google.</p>
-<p>Hackers like to work for people with high standards. But it’s not enough just to be exacting. You have to insist on the right things. Which usually means that you have to be a hacker yourself. I’ve seen occasional articles about how to manage programmers. Really there should be two articles: one about what to do if you are yourself a programmer, and one about what to do if you’re not. And the second could probably be condensed into two words: give up.</p>
-<p>The problem is not so much the day to day management. Really good hackers are practically self-managing. The problem is, if you’re not a hacker, you can’t tell who the good hackers are. A similar problem explains why American cars are so ugly. I call it the design paradox. You might think that you could make your products beautiful just by hiring a great designer to design them. But if you yourself don’t have good taste, how are you going to recognize a good designer? By definition you can’t tell from his portfolio. And you can’t go by the awards he’s won or the jobs he’s had, because in design, as in most fields, those tend to be driven by fashion and schmoozing, with actual ability a distant third. There’s no way around it: you can’t manage a process intended to produce beautiful things without knowing what beautiful is. American cars are ugly because American car companies are run by people with bad taste.</p>
-<p>Many people in this country think of taste as something elusive, or even frivolous. It is neither. To drive design, a manager must be the most demanding user of a company’s products. And if you have really good taste, you can, as Steve Jobs does, make satisfying you the kind of problem that good people like to work on.</p>
-<p>Nasty Little Problems</p>
-<p>It’s pretty easy to say what kinds of problems are not interesting: those where instead of solving a few big, clear, problems, you have to solve a lot of nasty little ones. One of the worst kinds of projects is writing an interface to a piece of software that’s full of bugs. Another is when you have to customize something for an individual client’s complex and ill-defined needs. To hackers these kinds of projects are the death of a thousand cuts.</p>
-<p>The distinguishing feature of nasty little problems is that you don’t learn anything from them. Writing a compiler is interesting because it teaches you what a compiler is. But writing an interface to a buggy piece of software doesn’t teach you anything, because the bugs are random. [3] So it’s not just fastidiousness that makes good hackers avoid nasty little problems. It’s more a question of self-preservation. Working on nasty little problems makes you stupid. Good hackers avoid it for the same reason models avoid cheeseburgers.</p>
-<p>Of course some problems inherently have this character. And because of supply and demand, they pay especially well. So a company that found a way to get great hackers to work on tedious problems would be very successful. How would you do it?</p>
-<p>One place this happens is in startups. At our startup we had Robert Morris working as a system administrator. That’s like having the Rolling Stones play at a bar mitzvah. You can’t hire that kind of talent. But people will do any amount of drudgery for companies of which they’re the founders. [4]</p>
-<p>Bigger companies solve the problem by partitioning the company. They get smart people to work for them by establishing a separate R&amp;D department where employees don’t have to work directly on customers’ nasty little problems. [5] In this model, the research department functions like a mine. They produce new ideas; maybe the rest of the company will be able to use them.</p>
-<p>You may not have to go to this extreme. Bottom-up programming suggests another way to partition the company: have the smart people work as toolmakers. If your company makes software to do x, have one group that builds tools for writing software of that type, and another that uses these tools to write the applications. This way you might be able to get smart people to write 99% of your code, but still keep them almost as insulated from users as they would be in a traditional research department. The toolmakers would have users, but they’d only be the company’s own developers. [6]</p>
-<p>If Microsoft used this approach, their software wouldn’t be so full of security holes, because the less smart people writing the actual applications wouldn’t be doing low-level stuff like allocating memory. Instead of writing Word directly in C, they’d be plugging together big Lego blocks of Word-language. (Duplo, I believe, is the technical term.)</p>
-<p>Clumping</p>
-<p>Along with interesting problems, what good hackers like is other good hackers. Great hackers tend to clump together– sometimes spectacularly so, as at Xerox Parc. So you won’t attract good hackers in linear proportion to how good an environment you create for them. The tendency to clump means it’s more like the square of the environment. So it’s winner take all. At any given time, there are only about ten or twenty places where hackers most want to work, and if you aren’t one of them, you won’t just have fewer great hackers, you’ll have zero.</p>
-<p>Having great hackers is not, by itself, enough to make a company successful. It works well for Google and ITA, which are two of the hot spots right now, but it didn’t help Thinking Machines or Xerox. Sun had a good run for a while, but their business model is a down elevator. In that situation, even the best hackers can’t save you.</p>
-<p>I think, though, that all other things being equal, a company that can attract great hackers will have a huge advantage. There are people who would disagree with this. When we were making the rounds of venture capital firms in the 1990s, several told us that software companies didn’t win by writing great software, but through brand, and dominating channels, and doing the right deals.</p>
-<p>They really seemed to believe this, and I think I know why. I think what a lot of VCs are looking for, at least unconsciously, is the next Microsoft. And of course if Microsoft is your model, you shouldn’t be looking for companies that hope to win by writing great software. But VCs are mistaken to look for the next Microsoft, because no startup can be the next Microsoft unless some other company is prepared to bend over at just the right moment and be the next IBM.</p>
-<p>It’s a mistake to use Microsoft as a model, because their whole culture derives from that one lucky break. Microsoft is a bad data point. If you throw them out, you find that good products do tend to win in the market. What VCs should be looking for is the next Apple, or the next Google.</p>
-<p>I think Bill Gates knows this. What worries him about Google is not the power of their brand, but the fact that they have better hackers. [7]</p>
-<p>Recognition</p>
-<p>So who are the great hackers? How do you know when you meet one? That turns out to be very hard. Even hackers can’t tell. I’m pretty sure now that my friend Trevor Blackwell is a great hacker. You may have read on Slashdot how he made his own Segway. The remarkable thing about this project was that he wrote all the software in one day (in Python, incidentally).</p>
-<p>For Trevor, that’s par for the course. But when I first met him, I thought he was a complete idiot. He was standing in Robert Morris’s office babbling at him about something or other, and I remember standing behind him making frantic gestures at Robert to shoo this nut out of his office so we could go to lunch. Robert says he misjudged Trevor at first too. Apparently when Robert first met him, Trevor had just begun a new scheme that involved writing down everything about every aspect of his life on a stack of index cards, which he carried with him everywhere. He’d also just arrived from Canada, and had a strong Canadian accent and a mullet.</p>
-<p>The problem is compounded by the fact that hackers, despite their reputation for social obliviousness, sometimes put a good deal of effort into seeming smart. When I was in grad school I used to hang around the MIT AI Lab occasionally. It was kind of intimidating at first. Everyone there spoke so fast. But after a while I learned the trick of speaking fast. You don’t have to think any faster; just use twice as many words to say everything.</p>
-<p>With this amount of noise in the signal, it’s hard to tell good hackers when you meet them. I can’t tell, even now. You also can’t tell from their resumes. It seems like the only way to judge a hacker is to work with him on something.</p>
-<p>And this is the reason that high-tech areas only happen around universities. The active ingredient here is not so much the professors as the students. Startups grow up around universities because universities bring together promising young people and make them work on the same projects. The smart ones learn who the other smart ones are, and together they cook up new projects of their own.</p>
-<p>Because you can’t tell a great hacker except by working with him, hackers themselves can’t tell how good they are. This is true to a degree in most fields. I’ve found that people who are great at something are not so much convinced of their own greatness as mystified at why everyone else seems so incompetent.</p>
-<p>But it’s particularly hard for hackers to know how good they are, because it’s hard to compare their work. This is easier in most other fields. In the hundred meters, you know in 10 seconds who’s fastest. Even in math there seems to be a general consensus about which problems are hard to solve, and what constitutes a good solution. But hacking is like writing. Who can say which of two novels is better? Certainly not the authors.</p>
-<p>With hackers, at least, other hackers can tell. That’s because, unlike novelists, hackers collaborate on projects. When you get to hit a few difficult problems over the net at someone, you learn pretty quickly how hard they hit them back. But hackers can’t watch themselves at work. So if you ask a great hacker how good he is, he’s almost certain to reply, I don’t know. He’s not just being modest. He really doesn’t know.</p>
-<p>And none of us know, except about people we’ve actually worked with. Which puts us in a weird situation: we don’t know who our heroes should be. The hackers who become famous tend to become famous by random accidents of PR. Occasionally I need to give an example of a great hacker, and I never know who to use. The first names that come to mind always tend to be people I know personally, but it seems lame to use them. So, I think, maybe I should say Richard Stallman, or Linus Torvalds, or Alan Kay, or someone famous like that. But I have no idea if these guys are great hackers. I’ve never worked with them on anything.</p>
-<p>If there is a Michael Jordan of hacking, no one knows, including him.</p>
-<p>Cultivation</p>
-<p>Finally, the question the hackers have all been wondering about: how do you become a great hacker? I don’t know if it’s possible to make yourself into one. But it’s certainly possible to do things that make you stupid, and if you can make yourself stupid, you can probably make yourself smart too.</p>
-<p>The key to being a good hacker may be to work on what you like. When I think about the great hackers I know, one thing they have in common is the extreme difficulty of making them work on anything they don’t want to. I don’t know if this is cause or effect; it may be both.</p>
-<p>To do something well you have to love it. So to the extent you can preserve hacking as something you love, you’re likely to do it well. Try to keep the sense of wonder you had about programming at age 14. If you’re worried that your current job is rotting your brain, it probably is.</p>
-<p>The best hackers tend to be smart, of course, but that’s true in a lot of fields. Is there some quality that’s unique to hackers? I asked some friends, and the number one thing they mentioned was curiosity. I’d always supposed that all smart people were curious– that curiosity was simply the first derivative of knowledge. But apparently hackers are particularly curious, especially about how things work. That makes sense, because programs are in effect giant descriptions of how things work.</p>
-<p>Several friends mentioned hackers’ ability to concentrate– their ability, as one put it, to “tune out everything outside their own heads.’’ I’ve certainly noticed this. And I’ve heard several hackers say that after drinking even half a beer they can’t program at all. So maybe hacking does require some special ability to focus. Perhaps great hackers can load a large amount of context into their head, so that when they look at a line of code, they see not just that line but the whole program around it. John McPhee wrote that Bill Bradley’s success as a basketball player was due partly to his extraordinary peripheral vision. “Perfect’’ eyesight means about 47 degrees of vertical peripheral vision. Bill Bradley had 70; he could see the basket when he was looking at the floor. Maybe great hackers have some similar inborn ability. (I cheat by using a very dense language, which shrinks the court.)</p>
-<p>This could explain the disconnect over cubicles. Maybe the people in charge of facilities, not having any concentration to shatter, have no idea that working in a cubicle feels to a hacker like having one’s brain in a blender. (Whereas Bill, if the rumors of autism are true, knows all too well.)</p>
-<p>One difference I’ve noticed between great hackers and smart people in general is that hackers are more politically incorrect. To the extent there is a secret handshake among good hackers, it’s when they know one another well enough to express opinions that would get them stoned to death by the general public. And I can see why political incorrectness would be a useful quality in programming. Programs are very complex and, at least in the hands of good programmers, very fluid. In such situations it’s helpful to have a habit of questioning assumptions.</p>
-<p>Can you cultivate these qualities? I don’t know. But you can at least not repress them. So here is my best shot at a recipe. If it is possible to make yourself into a great hacker, the way to do it may be to make the following deal with yourself: you never have to work on boring projects (unless your family will starve otherwise), and in return, you’ll never allow yourself to do a half-assed job. All the great hackers I know seem to have made that deal, though perhaps none of them had any choice in the matter.</p>
-<p>Notes</p>
-<p>[1] In fairness, I have to say that IBM makes decent hardware. I wrote this on an IBM laptop.</p>
-<p>[2] They did turn out to be doomed. They shut down a few months later.</p>
-<p>[3] I think this is what people mean when they talk about the “meaning of life.” On the face of it, this seems an odd idea. Life isn’t an expression; how could it have meaning? But it can have a quality that feels a lot like meaning. In a project like a compiler, you have to solve a lot of problems, but the problems all fall into a pattern, as in a signal. Whereas when the problems you have to solve are random, they seem like noise.</p>
-<p>[4] Einstein at one point worked designing refrigerators. (He had equity.)</p>
-<p>[5] It’s hard to say exactly what constitutes research in the computer world, but as a first approximation, it’s software that doesn’t have users.</p>
-<p>I don’t think it’s publication that makes the best hackers want to work in research departments. I think it’s mainly not having to have a three hour meeting with a product manager about problems integrating the Korean version of Word 13.27 with the talking paperclip.</p>
-<p>[6] Something similar has been happening for a long time in the construction industry. When you had a house built a couple hundred years ago, the local builders built everything in it. But increasingly what builders do is assemble components designed and manufactured by someone else. This has, like the arrival of desktop publishing, given people the freedom to experiment in disastrous ways, but it is certainly more efficient.</p>
-<p>[7] Google is much more dangerous to Microsoft than Netscape was. Probably more dangerous than any other company has ever been. Not least because they’re determined to fight. On their job listing page, they say that one of their “core values’’ is “Don’t be evil.’’ From a company selling soybean oil or mining equipment, such a statement would merely be eccentric. But I think all of us in the computer world recognize who that is a declaration of war on.</p>
-<p>Thanks to Jessica Livingston, Robert Morris, and Sarah Harlin for reading earlier versions of this talk.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/gh.html&quot;&gt;Paul Graham&lt;/a&gt; July 2004&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ep.yimg.com/ca/I/paulgraham_2202_9271894&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;(This essay is derived from a talk at Oscon 2004.)&lt;/p&gt;
-&lt;p&gt;A few months ago I finished a new book, and in reviews I keep noticing words like “provocative’’ and “controversial.’’ To say nothing of “idiotic.’’&lt;/p&gt;
-&lt;p&gt;I didn’t mean to make the book controversial. I was trying to make it efficient. I didn’t want to waste people’s time telling them things they already knew. It’s more efficient just to give them the diffs. But I suppose that’s bound to yield an alarming book.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Undergraduation, Want to start a startup?</title>
     <link href="http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/want-to-start-a-startup-undergraduate/"/>
     <id>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/want-to-start-a-startup-undergraduate/</id>
@@ -10102,6 +10068,118 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
   </entry>
   
   <entry>
+    <title>Great hacker, Want to start a startup?</title>
+    <link href="http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/want-to-start-a-startup-great-hacker/"/>
+    <id>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/want-to-start-a-startup-great-hacker/</id>
+    <published>2017-01-20T11:37:06.000Z</published>
+    <updated>2017-02-15T13:07:10.397Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.paulgraham.com/gh.html" target="_blank" rel="external">Paul Graham</a> July 2004</p>
+<p><img src="http://ep.yimg.com/ca/I/paulgraham_2202_9271894" alt=""></p>
+<p>(This essay is derived from a talk at Oscon 2004.)</p>
+<p>A few months ago I finished a new book, and in reviews I keep noticing words like “provocative’’ and “controversial.’’ To say nothing of “idiotic.’’</p>
+<p>I didn’t mean to make the book controversial. I was trying to make it efficient. I didn’t want to waste people’s time telling them things they already knew. It’s more efficient just to give them the diffs. But I suppose that’s bound to yield an alarming book.</p>
+ <a id="more"></a>
+<p>Edisons</p>
+<p>There’s no controversy about which idea is most controversial: the suggestion that variation in wealth might not be as big a problem as we think.</p>
+<p>I didn’t say in the book that variation in wealth was in itself a good thing. I said in some situations it might be a sign of good things. A throbbing headache is not a good thing, but it can be a sign of a good thing– for example, that you’re recovering consciousness after being hit on the head.</p>
+<p>Variation in wealth can be a sign of variation in productivity. (In a society of one, they’re identical.) And that is almost certainly a good thing: if your society has no variation in productivity, it’s probably not because everyone is Thomas Edison. It’s probably because you have no Thomas Edisons.</p>
+<p>In a low-tech society you don’t see much variation in productivity. If you have a tribe of nomads collecting sticks for a fire, how much more productive is the best stick gatherer going to be than the worst? A factor of two? Whereas when you hand people a complex tool like a computer, the variation in what they can do with it is enormous.</p>
+<p>That’s not a new idea. Fred Brooks wrote about it in 1974, and the study he quoted was published in 1968. But I think he underestimated the variation between programmers. He wrote about productivity in lines of code: the best programmers can solve a given problem in a tenth the time. But what if the problem isn’t given? In programming, as in many fields, the hard part isn’t solving problems, but deciding what problems to solve. Imagination is hard to measure, but in practice it dominates the kind of productivity that’s measured in lines of code.</p>
+<p>Productivity varies in any field, but there are few in which it varies so much. The variation between programmers is so great that it becomes a difference in kind. I don’t think this is something intrinsic to programming, though. In every field, technology magnifies differences in productivity. I think what’s happening in programming is just that we have a lot of technological leverage. But in every field the lever is getting longer, so the variation we see is something that more and more fields will see as time goes on. And the success of companies, and countries, will depend increasingly on how they deal with it.</p>
+<p>If variation in productivity increases with technology, then the contribution of the most productive individuals will not only be disproportionately large, but will actually grow with time. When you reach the point where 90% of a group’s output is created by 1% of its members, you lose big if something (whether Viking raids, or central planning) drags their productivity down to the average.</p>
+<p>If we want to get the most out of them, we need to understand these especially productive people. What motivates them? What do they need to do their jobs? How do you recognize them? How do you get them to come and work for you? And then of course there’s the question, how do you become one?</p>
+<p>More than Money</p>
+<p>I know a handful of super-hackers, so I sat down and thought about what they have in common. Their defining quality is probably that they really love to program. Ordinary programmers write code to pay the bills. Great hackers think of it as something they do for fun, and which they’re delighted to find people will pay them for.</p>
+<p>Great programmers are sometimes said to be indifferent to money. This isn’t quite true. It is true that all they really care about is doing interesting work. But if you make enough money, you get to work on whatever you want, and for that reason hackers are attracted by the idea of making really large amounts of money. But as long as they still have to show up for work every day, they care more about what they do there than how much they get paid for it.</p>
+<p>Economically, this is a fact of the greatest importance, because it means you don’t have to pay great hackers anything like what they’re worth. A great programmer might be ten or a hundred times as productive as an ordinary one, but he’ll consider himself lucky to get paid three times as much. As I’ll explain later, this is partly because great hackers don’t know how good they are. But it’s also because money is not the main thing they want.</p>
+<p>What do hackers want? Like all craftsmen, hackers like good tools. In fact, that’s an understatement. Good hackers find it unbearable to use bad tools. They’ll simply refuse to work on projects with the wrong infrastructure.</p>
+<p>At a startup I once worked for, one of the things pinned up on our bulletin board was an ad from IBM. It was a picture of an AS400, and the headline read, I think, “hackers despise it.’’ [1]</p>
+<p>When you decide what infrastructure to use for a project, you’re not just making a technical decision. You’re also making a social decision, and this may be the more important of the two. For example, if your company wants to write some software, it might seem a prudent choice to write it in Java. But when you choose a language, you’re also choosing a community. The programmers you’ll be able to hire to work on a Java project won’t be as smart as the ones you could get to work on a project written in Python. And the quality of your hackers probably matters more than the language you choose. Though, frankly, the fact that good hackers prefer Python to Java should tell you something about the relative merits of those languages.</p>
+<p>Business types prefer the most popular languages because they view languages as standards. They don’t want to bet the company on Betamax. The thing about languages, though, is that they’re not just standards. If you have to move bits over a network, by all means use TCP/IP. But a programming language isn’t just a format. A programming language is a medium of expression.</p>
+<p>I’ve read that Java has just overtaken Cobol as the most popular language. As a standard, you couldn’t wish for more. But as a medium of expression, you could do a lot better. Of all the great programmers I can think of, I know of only one who would voluntarily program in Java. And of all the great programmers I can think of who don’t work for Sun, on Java, I know of zero.</p>
+<p>Great hackers also generally insist on using open source software. Not just because it’s better, but because it gives them more control. Good hackers insist on control. This is part of what makes them good hackers: when something’s broken, they need to fix it. You want them to feel this way about the software they’re writing for you. You shouldn’t be surprised when they feel the same way about the operating system.</p>
+<p>A couple years ago a venture capitalist friend told me about a new startup he was involved with. It sounded promising. But the next time I talked to him, he said they’d decided to build their software on Windows NT, and had just hired a very experienced NT developer to be their chief technical officer. When I heard this, I thought, these guys are doomed. One, the CTO couldn’t be a first rate hacker, because to become an eminent NT developer he would have had to use NT voluntarily, multiple times, and I couldn’t imagine a great hacker doing that; and two, even if he was good, he’d have a hard time hiring anyone good to work for him if the project had to be built on NT. [2]</p>
+<p>The Final Frontier</p>
+<p>After software, the most important tool to a hacker is probably his office. Big companies think the function of office space is to express rank. But hackers use their offices for more than that: they use their office as a place to think in. And if you’re a technology company, their thoughts are your product. So making hackers work in a noisy, distracting environment is like having a paint factory where the air is full of soot.</p>
+<p>The cartoon strip Dilbert has a lot to say about cubicles, and with good reason. All the hackers I know despise them. The mere prospect of being interrupted is enough to prevent hackers from working on hard problems. If you want to get real work done in an office with cubicles, you have two options: work at home, or come in early or late or on a weekend, when no one else is there. Don’t companies realize this is a sign that something is broken? An office environment is supposed to be something that helps you work, not something you work despite.</p>
+<p>Companies like Cisco are proud that everyone there has a cubicle, even the CEO. But they’re not so advanced as they think; obviously they still view office space as a badge of rank. Note too that Cisco is famous for doing very little product development in house. They get new technology by buying the startups that created it– where presumably the hackers did have somewhere quiet to work.</p>
+<p>One big company that understands what hackers need is Microsoft. I once saw a recruiting ad for Microsoft with a big picture of a door. Work for us, the premise was, and we’ll give you a place to work where you can actually get work done. And you know, Microsoft is remarkable among big companies in that they are able to develop software in house. Not well, perhaps, but well enough.</p>
+<p>If companies want hackers to be productive, they should look at what they do at home. At home, hackers can arrange things themselves so they can get the most done. And when they work at home, hackers don’t work in noisy, open spaces; they work in rooms with doors. They work in cosy, neighborhoody places with people around and somewhere to walk when they need to mull something over, instead of in glass boxes set in acres of parking lots. They have a sofa they can take a nap on when they feel tired, instead of sitting in a coma at their desk, pretending to work. There’s no crew of people with vacuum cleaners that roars through every evening during the prime hacking hours. There are no meetings or, God forbid, corporate retreats or team-building exercises. And when you look at what they’re doing on that computer, you’ll find it reinforces what I said earlier about tools. They may have to use Java and Windows at work, but at home, where they can choose for themselves, you’re more likely to find them using Perl and Linux.</p>
+<p>Indeed, these statistics about Cobol or Java being the most popular language can be misleading. What we ought to look at, if we want to know what tools are best, is what hackers choose when they can choose freely– that is, in projects of their own. When you ask that question, you find that open source operating systems already have a dominant market share, and the number one language is probably Perl.</p>
+<p>Interesting</p>
+<p>Along with good tools, hackers want interesting projects. What makes a project interesting? Well, obviously overtly sexy applications like stealth planes or special effects software would be interesting to work on. But any application can be interesting if it poses novel technical challenges. So it’s hard to predict which problems hackers will like, because some become interesting only when the people working on them discover a new kind of solution. Before ITA (who wrote the software inside Orbitz), the people working on airline fare searches probably thought it was one of the most boring applications imaginable. But ITA made it interesting by redefining the problem in a more ambitious way.</p>
+<p>I think the same thing happened at Google. When Google was founded, the conventional wisdom among the so-called portals was that search was boring and unimportant. But the guys at Google didn’t think search was boring, and that’s why they do it so well.</p>
+<p>This is an area where managers can make a difference. Like a parent saying to a child, I bet you can’t clean up your whole room in ten minutes, a good manager can sometimes redefine a problem as a more interesting one. Steve Jobs seems to be particularly good at this, in part simply by having high standards. There were a lot of small, inexpensive computers before the Mac. He redefined the problem as: make one that’s beautiful. And that probably drove the developers harder than any carrot or stick could.</p>
+<p>They certainly delivered. When the Mac first appeared, you didn’t even have to turn it on to know it would be good; you could tell from the case. A few weeks ago I was walking along the street in Cambridge, and in someone’s trash I saw what appeared to be a Mac carrying case. I looked inside, and there was a Mac SE. I carried it home and plugged it in, and it booted. The happy Macintosh face, and then the finder. My God, it was so simple. It was just like … Google.</p>
+<p>Hackers like to work for people with high standards. But it’s not enough just to be exacting. You have to insist on the right things. Which usually means that you have to be a hacker yourself. I’ve seen occasional articles about how to manage programmers. Really there should be two articles: one about what to do if you are yourself a programmer, and one about what to do if you’re not. And the second could probably be condensed into two words: give up.</p>
+<p>The problem is not so much the day to day management. Really good hackers are practically self-managing. The problem is, if you’re not a hacker, you can’t tell who the good hackers are. A similar problem explains why American cars are so ugly. I call it the design paradox. You might think that you could make your products beautiful just by hiring a great designer to design them. But if you yourself don’t have good taste, how are you going to recognize a good designer? By definition you can’t tell from his portfolio. And you can’t go by the awards he’s won or the jobs he’s had, because in design, as in most fields, those tend to be driven by fashion and schmoozing, with actual ability a distant third. There’s no way around it: you can’t manage a process intended to produce beautiful things without knowing what beautiful is. American cars are ugly because American car companies are run by people with bad taste.</p>
+<p>Many people in this country think of taste as something elusive, or even frivolous. It is neither. To drive design, a manager must be the most demanding user of a company’s products. And if you have really good taste, you can, as Steve Jobs does, make satisfying you the kind of problem that good people like to work on.</p>
+<p>Nasty Little Problems</p>
+<p>It’s pretty easy to say what kinds of problems are not interesting: those where instead of solving a few big, clear, problems, you have to solve a lot of nasty little ones. One of the worst kinds of projects is writing an interface to a piece of software that’s full of bugs. Another is when you have to customize something for an individual client’s complex and ill-defined needs. To hackers these kinds of projects are the death of a thousand cuts.</p>
+<p>The distinguishing feature of nasty little problems is that you don’t learn anything from them. Writing a compiler is interesting because it teaches you what a compiler is. But writing an interface to a buggy piece of software doesn’t teach you anything, because the bugs are random. [3] So it’s not just fastidiousness that makes good hackers avoid nasty little problems. It’s more a question of self-preservation. Working on nasty little problems makes you stupid. Good hackers avoid it for the same reason models avoid cheeseburgers.</p>
+<p>Of course some problems inherently have this character. And because of supply and demand, they pay especially well. So a company that found a way to get great hackers to work on tedious problems would be very successful. How would you do it?</p>
+<p>One place this happens is in startups. At our startup we had Robert Morris working as a system administrator. That’s like having the Rolling Stones play at a bar mitzvah. You can’t hire that kind of talent. But people will do any amount of drudgery for companies of which they’re the founders. [4]</p>
+<p>Bigger companies solve the problem by partitioning the company. They get smart people to work for them by establishing a separate R&amp;D department where employees don’t have to work directly on customers’ nasty little problems. [5] In this model, the research department functions like a mine. They produce new ideas; maybe the rest of the company will be able to use them.</p>
+<p>You may not have to go to this extreme. Bottom-up programming suggests another way to partition the company: have the smart people work as toolmakers. If your company makes software to do x, have one group that builds tools for writing software of that type, and another that uses these tools to write the applications. This way you might be able to get smart people to write 99% of your code, but still keep them almost as insulated from users as they would be in a traditional research department. The toolmakers would have users, but they’d only be the company’s own developers. [6]</p>
+<p>If Microsoft used this approach, their software wouldn’t be so full of security holes, because the less smart people writing the actual applications wouldn’t be doing low-level stuff like allocating memory. Instead of writing Word directly in C, they’d be plugging together big Lego blocks of Word-language. (Duplo, I believe, is the technical term.)</p>
+<p>Clumping</p>
+<p>Along with interesting problems, what good hackers like is other good hackers. Great hackers tend to clump together– sometimes spectacularly so, as at Xerox Parc. So you won’t attract good hackers in linear proportion to how good an environment you create for them. The tendency to clump means it’s more like the square of the environment. So it’s winner take all. At any given time, there are only about ten or twenty places where hackers most want to work, and if you aren’t one of them, you won’t just have fewer great hackers, you’ll have zero.</p>
+<p>Having great hackers is not, by itself, enough to make a company successful. It works well for Google and ITA, which are two of the hot spots right now, but it didn’t help Thinking Machines or Xerox. Sun had a good run for a while, but their business model is a down elevator. In that situation, even the best hackers can’t save you.</p>
+<p>I think, though, that all other things being equal, a company that can attract great hackers will have a huge advantage. There are people who would disagree with this. When we were making the rounds of venture capital firms in the 1990s, several told us that software companies didn’t win by writing great software, but through brand, and dominating channels, and doing the right deals.</p>
+<p>They really seemed to believe this, and I think I know why. I think what a lot of VCs are looking for, at least unconsciously, is the next Microsoft. And of course if Microsoft is your model, you shouldn’t be looking for companies that hope to win by writing great software. But VCs are mistaken to look for the next Microsoft, because no startup can be the next Microsoft unless some other company is prepared to bend over at just the right moment and be the next IBM.</p>
+<p>It’s a mistake to use Microsoft as a model, because their whole culture derives from that one lucky break. Microsoft is a bad data point. If you throw them out, you find that good products do tend to win in the market. What VCs should be looking for is the next Apple, or the next Google.</p>
+<p>I think Bill Gates knows this. What worries him about Google is not the power of their brand, but the fact that they have better hackers. [7]</p>
+<p>Recognition</p>
+<p>So who are the great hackers? How do you know when you meet one? That turns out to be very hard. Even hackers can’t tell. I’m pretty sure now that my friend Trevor Blackwell is a great hacker. You may have read on Slashdot how he made his own Segway. The remarkable thing about this project was that he wrote all the software in one day (in Python, incidentally).</p>
+<p>For Trevor, that’s par for the course. But when I first met him, I thought he was a complete idiot. He was standing in Robert Morris’s office babbling at him about something or other, and I remember standing behind him making frantic gestures at Robert to shoo this nut out of his office so we could go to lunch. Robert says he misjudged Trevor at first too. Apparently when Robert first met him, Trevor had just begun a new scheme that involved writing down everything about every aspect of his life on a stack of index cards, which he carried with him everywhere. He’d also just arrived from Canada, and had a strong Canadian accent and a mullet.</p>
+<p>The problem is compounded by the fact that hackers, despite their reputation for social obliviousness, sometimes put a good deal of effort into seeming smart. When I was in grad school I used to hang around the MIT AI Lab occasionally. It was kind of intimidating at first. Everyone there spoke so fast. But after a while I learned the trick of speaking fast. You don’t have to think any faster; just use twice as many words to say everything.</p>
+<p>With this amount of noise in the signal, it’s hard to tell good hackers when you meet them. I can’t tell, even now. You also can’t tell from their resumes. It seems like the only way to judge a hacker is to work with him on something.</p>
+<p>And this is the reason that high-tech areas only happen around universities. The active ingredient here is not so much the professors as the students. Startups grow up around universities because universities bring together promising young people and make them work on the same projects. The smart ones learn who the other smart ones are, and together they cook up new projects of their own.</p>
+<p>Because you can’t tell a great hacker except by working with him, hackers themselves can’t tell how good they are. This is true to a degree in most fields. I’ve found that people who are great at something are not so much convinced of their own greatness as mystified at why everyone else seems so incompetent.</p>
+<p>But it’s particularly hard for hackers to know how good they are, because it’s hard to compare their work. This is easier in most other fields. In the hundred meters, you know in 10 seconds who’s fastest. Even in math there seems to be a general consensus about which problems are hard to solve, and what constitutes a good solution. But hacking is like writing. Who can say which of two novels is better? Certainly not the authors.</p>
+<p>With hackers, at least, other hackers can tell. That’s because, unlike novelists, hackers collaborate on projects. When you get to hit a few difficult problems over the net at someone, you learn pretty quickly how hard they hit them back. But hackers can’t watch themselves at work. So if you ask a great hacker how good he is, he’s almost certain to reply, I don’t know. He’s not just being modest. He really doesn’t know.</p>
+<p>And none of us know, except about people we’ve actually worked with. Which puts us in a weird situation: we don’t know who our heroes should be. The hackers who become famous tend to become famous by random accidents of PR. Occasionally I need to give an example of a great hacker, and I never know who to use. The first names that come to mind always tend to be people I know personally, but it seems lame to use them. So, I think, maybe I should say Richard Stallman, or Linus Torvalds, or Alan Kay, or someone famous like that. But I have no idea if these guys are great hackers. I’ve never worked with them on anything.</p>
+<p>If there is a Michael Jordan of hacking, no one knows, including him.</p>
+<p>Cultivation</p>
+<p>Finally, the question the hackers have all been wondering about: how do you become a great hacker? I don’t know if it’s possible to make yourself into one. But it’s certainly possible to do things that make you stupid, and if you can make yourself stupid, you can probably make yourself smart too.</p>
+<p>The key to being a good hacker may be to work on what you like. When I think about the great hackers I know, one thing they have in common is the extreme difficulty of making them work on anything they don’t want to. I don’t know if this is cause or effect; it may be both.</p>
+<p>To do something well you have to love it. So to the extent you can preserve hacking as something you love, you’re likely to do it well. Try to keep the sense of wonder you had about programming at age 14. If you’re worried that your current job is rotting your brain, it probably is.</p>
+<p>The best hackers tend to be smart, of course, but that’s true in a lot of fields. Is there some quality that’s unique to hackers? I asked some friends, and the number one thing they mentioned was curiosity. I’d always supposed that all smart people were curious– that curiosity was simply the first derivative of knowledge. But apparently hackers are particularly curious, especially about how things work. That makes sense, because programs are in effect giant descriptions of how things work.</p>
+<p>Several friends mentioned hackers’ ability to concentrate– their ability, as one put it, to “tune out everything outside their own heads.’’ I’ve certainly noticed this. And I’ve heard several hackers say that after drinking even half a beer they can’t program at all. So maybe hacking does require some special ability to focus. Perhaps great hackers can load a large amount of context into their head, so that when they look at a line of code, they see not just that line but the whole program around it. John McPhee wrote that Bill Bradley’s success as a basketball player was due partly to his extraordinary peripheral vision. “Perfect’’ eyesight means about 47 degrees of vertical peripheral vision. Bill Bradley had 70; he could see the basket when he was looking at the floor. Maybe great hackers have some similar inborn ability. (I cheat by using a very dense language, which shrinks the court.)</p>
+<p>This could explain the disconnect over cubicles. Maybe the people in charge of facilities, not having any concentration to shatter, have no idea that working in a cubicle feels to a hacker like having one’s brain in a blender. (Whereas Bill, if the rumors of autism are true, knows all too well.)</p>
+<p>One difference I’ve noticed between great hackers and smart people in general is that hackers are more politically incorrect. To the extent there is a secret handshake among good hackers, it’s when they know one another well enough to express opinions that would get them stoned to death by the general public. And I can see why political incorrectness would be a useful quality in programming. Programs are very complex and, at least in the hands of good programmers, very fluid. In such situations it’s helpful to have a habit of questioning assumptions.</p>
+<p>Can you cultivate these qualities? I don’t know. But you can at least not repress them. So here is my best shot at a recipe. If it is possible to make yourself into a great hacker, the way to do it may be to make the following deal with yourself: you never have to work on boring projects (unless your family will starve otherwise), and in return, you’ll never allow yourself to do a half-assed job. All the great hackers I know seem to have made that deal, though perhaps none of them had any choice in the matter.</p>
+<p>Notes</p>
+<p>[1] In fairness, I have to say that IBM makes decent hardware. I wrote this on an IBM laptop.</p>
+<p>[2] They did turn out to be doomed. They shut down a few months later.</p>
+<p>[3] I think this is what people mean when they talk about the “meaning of life.” On the face of it, this seems an odd idea. Life isn’t an expression; how could it have meaning? But it can have a quality that feels a lot like meaning. In a project like a compiler, you have to solve a lot of problems, but the problems all fall into a pattern, as in a signal. Whereas when the problems you have to solve are random, they seem like noise.</p>
+<p>[4] Einstein at one point worked designing refrigerators. (He had equity.)</p>
+<p>[5] It’s hard to say exactly what constitutes research in the computer world, but as a first approximation, it’s software that doesn’t have users.</p>
+<p>I don’t think it’s publication that makes the best hackers want to work in research departments. I think it’s mainly not having to have a three hour meeting with a product manager about problems integrating the Korean version of Word 13.27 with the talking paperclip.</p>
+<p>[6] Something similar has been happening for a long time in the construction industry. When you had a house built a couple hundred years ago, the local builders built everything in it. But increasingly what builders do is assemble components designed and manufactured by someone else. This has, like the arrival of desktop publishing, given people the freedom to experiment in disastrous ways, but it is certainly more efficient.</p>
+<p>[7] Google is much more dangerous to Microsoft than Netscape was. Probably more dangerous than any other company has ever been. Not least because they’re determined to fight. On their job listing page, they say that one of their “core values’’ is “Don’t be evil.’’ From a company selling soybean oil or mining equipment, such a statement would merely be eccentric. But I think all of us in the computer world recognize who that is a declaration of war on.</p>
+<p>Thanks to Jessica Livingston, Robert Morris, and Sarah Harlin for reading earlier versions of this talk.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/gh.html&quot;&gt;Paul Graham&lt;/a&gt; July 2004&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ep.yimg.com/ca/I/paulgraham_2202_9271894&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;(This essay is derived from a talk at Oscon 2004.)&lt;/p&gt;
+&lt;p&gt;A few months ago I finished a new book, and in reviews I keep noticing words like “provocative’’ and “controversial.’’ To say nothing of “idiotic.’’&lt;/p&gt;
+&lt;p&gt;I didn’t mean to make the book controversial. I was trying to make it efficient. I didn’t want to waste people’s time telling them things they already knew. It’s more efficient just to give them the diffs. But I suppose that’s bound to yield an alarming book.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
+    
+  </entry>
+  
+  <entry>
     <title>The Loginataka</title>
     <link href="http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/the-loginataka/"/>
     <id>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/the-loginataka/</id>
@@ -10109,7 +10187,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <updated>2017-02-15T13:06:15.488Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.catb.org/~esr/faqs/loginataka.html" target="_blank" rel="external">The Loginataka</a></p>
-<p>by Eric S. Raymond <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#101;&#x73;&#114;&#x40;&#x74;&#104;&#121;&#114;&#115;&#x75;&#x73;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#x73;&#114;&#x40;&#x74;&#104;&#121;&#114;&#115;&#x75;&#x73;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p>by Eric S. Raymond <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x65;&#x73;&#x72;&#x40;&#x74;&#x68;&#121;&#x72;&#115;&#117;&#x73;&#46;&#x63;&#111;&#109;">&#x65;&#x73;&#x72;&#x40;&#x74;&#x68;&#121;&#x72;&#115;&#117;&#x73;&#46;&#x63;&#111;&#109;</a></p>
 <p>  Speak, O Guru: How can I become a Unix Wizard?</p>
 <p>  O, Nobly Born: know that the Way to Wizardhood is long, and winding, and Fraught with Risks. Thou must Attune thyself with the Source, attaining the arcane Knowledge and Conversation of the System Libraries and Internals. Yea; and such an all-consuming Time and Energy Sink is this as to greatly Imperil thy Grade Point Average (if one thou hast), not to mention thy Sex Life (if one thou hast). But persevere, oh Larval One; rewards beyond the Dreams of Lusers await thee!</p>
   <a id="more"></a>
@@ -10178,7 +10256,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <summary type="html">
     
       &lt;p&gt;&lt;a href=&quot;http://www.catb.org/~esr/faqs/loginataka.html&quot;&gt;The Loginataka&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#116;&amp;#111;&amp;#58;&amp;#101;&amp;#x73;&amp;#114;&amp;#x40;&amp;#x74;&amp;#104;&amp;#121;&amp;#114;&amp;#115;&amp;#x75;&amp;#x73;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#101;&amp;#x73;&amp;#114;&amp;#x40;&amp;#x74;&amp;#104;&amp;#121;&amp;#114;&amp;#115;&amp;#x75;&amp;#x73;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#x68;&amp;#121;&amp;#x72;&amp;#115;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&quot;&gt;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#x68;&amp;#121;&amp;#x72;&amp;#115;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;  Speak, O Guru: How can I become a Unix Wizard?&lt;/p&gt;
 &lt;p&gt;  O, Nobly Born: know that the Way to Wizardhood is long, and winding, and Fraught with Risks. Thou must Attune thyself with the Source, attaining the arcane Knowledge and Conversation of the System Libraries and Internals. Yea; and such an all-consuming Time and Energy Sink is this as to greatly Imperil thy Grade Point Average (if one thou hast), not to mention thy Sex Life (if one thou hast). But persevere, oh Larval One; rewards beyond the Dreams of Lusers await thee!&lt;/p&gt;
     
@@ -10192,70 +10270,6 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
   </entry>
   
   <entry>
-    <title>The Art of Unix Programming</title>
-    <link href="http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/the-art-of-unix-programming/"/>
-    <id>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/the-art-of-unix-programming/</id>
-    <published>2017-01-20T11:16:06.000Z</published>
-    <updated>2017-02-16T00:06:16.386Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://catb.org/~esr/writings/taoup/html/" target="_blank" rel="external">The Art of Unix Programming</a></p>
-<p><img src="http://catb.org/~esr/writings/taoup/cover.png" alt=""></p>
-<p>Eric Steven Raymond</p>
-<p>This book and its on-line version are distributed under the terms of the Creative Commons Attribution-NoDerivs 1.0 license, with the additional proviso that the right to publish it on paper for sale or other for-profit use is reserved to Pearson Education, Inc. A reference copy of this license may be found at <a href="http://creativecommons.org/licenses/by-nd/1.0/legalcode" target="_blank" rel="external">http://creativecommons.org/licenses/by-nd/1.0/legalcode</a>.</p>
-  <a id="more"></a>
-<p>AIX, AS/400, DB/2, OS/2, System/360, MVS, VM/CMS, and IBM PC are trademarks of IBM. Alpha, DEC, VAX, HP-UX, PDP, TOPS-10, TOPS-20, VMS, and VT-100 are trademarks of Compaq. Amiga and AmigaOS are trademarks of Amiga, Inc. Apple, Macintosh, MacOS, Newton, OpenDoc, and OpenStep are trademarks of Apple Computers, Inc. ClearCase is a trademark of Rational Software, Inc. Ethernet is a trademark of 3COM, Inc. Excel, MS-DOS, Microsoft Windows and PowerPoint are trademarks of Microsoft, Inc. Java. J2EE, JavaScript, NeWS, and Solaris are trademarks of Sun Microsystems. SPARC is a trademark of SPARC international. Informix is a trademark of Informix software. Itanium is a trademark of Intel. Linux is a trademark of Linus Torvalds. Netscape is a trademark of AOL. PDF and PostScript are trademarks of Adobe, Inc. UNIX is a trademark of The Open Group.</p>
-<p>The photograph of Ken and Dennis in Chapter 2 appears courtesy of Bell Labs/Lucent Technologies.</p>
-<p>The epigraph on the Portability chapter is from the Bell System Technical Journal, v57 #6 part 2 (July-Aug. 1978) pp. 2021-2048 and is reproduced with the permission of Bell Labs/Lucent Technologies.</p>
-<p>Revision History<br>Revision 1.0    19 September 2003    esr<br>This is the content that went to Addison-Wesley’s printers.<br>Revision 0.4    5 February 2003    esr<br>Release for public review.<br>Revision 0.3    22 January 2003    esr<br>First eighteen-chapter draft. Manuscript walkthrough at Chapter 12. Limited release for early reviewers.<br>Revision 0.2    2 January 2003    esr<br>First manuscript walkthrough at Chapter 7. Released to Dmitry Kirsanov at AW production.<br>Revision 0.1    16 November 2002    esr<br>First DocBook draft, fifteen chapters. Languages rewritten to incorporate lots of feedback. Transparency, Modularity, Multiprogramming, Configuration, Interfaces, Documentation, and Open Source chapters released. Shipped to Mark Taub at AW.<br>Revision 0.0    1999    esr<br>Public HTML draft, first four chapters only.<br>Dedication</p>
-<p>To Ken Thompson and Dennis Ritchie, because you inspired me.</p>
-<p>Table of Contents</p>
-<p>Preface<br>Who Should Read This Book<br>How to Use This Book<br>Related References<br>Conventions Used in This Book<br>Our Case Studies<br>Author’s Acknowledgements<br>I. Context</p>
-<ol>
-<li>Philosophy<br>Culture? What Culture?<br>The Durability of Unix<br>The Case against Learning Unix Culture<br>What Unix Gets Wrong<br>What Unix Gets Right<br>Open-Source Software<br>Cross-Platform Portability and Open Standards<br>The Internet and the World Wide Web<br>The Open-Source Community<br>Flexibility All the Way Down<br>Unix Is Fun to Hack<br>The Lessons of Unix Can Be Applied Elsewhere<br>Basics of the Unix Philosophy<br>Rule of Modularity: Write simple parts connected by clean interfaces.<br>Rule of Clarity: Clarity is better than cleverness.<br>Rule of Composition: Design programs to be connected with other programs.<br>Rule of Separation: Separate policy from mechanism; separate interfaces from engines.<br>Rule of Simplicity: Design for simplicity; add complexity only where you must.<br>Rule of Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.<br>Rule of Transparency: Design for visibility to make inspection and debugging easier.<br>Rule of Robustness: Robustness is the child of transparency and simplicity.<br>Rule of Representation: Fold knowledge into data, so program logic can be stupid and robust.<br>Rule of Least Surprise: In interface design, always do the least surprising thing.<br>Rule of Silence: When a program has nothing surprising to say, it should say nothing.<br>Rule of Repair: Repair what you can — but when you must fail, fail noisily and as soon as possible.<br>Rule of Economy: Programmer time is expensive; conserve it in preference to machine time.<br>Rule of Generation: Avoid hand-hacking; write programs to write programs when you can.<br>Rule of Optimization: Prototype before polishing. Get it working before you optimize it.<br>Rule of Diversity: Distrust all claims for one true way.<br>Rule of Extensibility: Design for the future, because it will be here sooner than you think.<br>The Unix Philosophy in One Lesson<br>Applying the Unix Philosophy<br>Attitude Matters Too</li>
-<li>History<br>Origins and History of Unix, 1969-1995<br>Genesis: 1969–1971<br>Exodus: 1971–1980<br>TCP/IP and the Unix Wars: 1980-1990<br>Blows against the Empire: 1991-1995<br>Origins and History of the Hackers, 1961-1995<br>At Play in the Groves of Academe: 1961-1980<br>Internet Fusion and the Free Software Movement: 1981-1991<br>Linux and the Pragmatist Reaction: 1991-1998<br>The Open-Source Movement: 1998 and Onward<br>The Lessons of Unix History</li>
-<li>Contrasts<br>The Elements of Operating-System Style<br>What Is the Operating System’s Unifying Idea?<br>Multitasking Capability<br>Cooperating Processes<br>Internal Boundaries<br>File Attributes and Record Structures<br>Binary File Formats<br>Preferred User Interface Style<br>Intended Audience<br>Entry Barriers to Development<br>Operating-System Comparisons<br>VMS<br>MacOS<br>OS/2<br>Windows NT<br>BeOS<br>MVS<br>VM/CMS<br>Linux<br>What Goes Around, Comes Around<br>II. Design</li>
-<li>Modularity<br>Encapsulation and Optimal Module Size<br>Compactness and Orthogonality<br>Compactness<br>Orthogonality<br>The SPOT Rule<br>Compactness and the Strong Single Center<br>The Value of Detachment<br>Software Is a Many-Layered Thing<br>Top-Down versus Bottom-Up<br>Glue Layers<br>Case Study: C Considered as Thin Glue<br>Libraries<br>Case Study: GIMP Plugins<br>Unix and Object-Oriented Languages<br>Coding for Modularity</li>
-<li>Textuality<br>The Importance of Being Textual<br>Case Study: Unix Password File Format<br>Case Study: .newsrc Format<br>Case Study: The PNG Graphics File Format<br>Data File Metaformats<br>DSV Style<br>RFC 822 Format<br>Cookie-Jar Format<br>Record-Jar Format<br>XML<br>Windows INI Format<br>Unix Textual File Format Conventions<br>The Pros and Cons of File Compression<br>Application Protocol Design<br>Case Study: SMTP, the Simple Mail Transfer Protocol<br>Case Study: POP3, the Post Office Protocol<br>Case Study: IMAP, the Internet Message Access Protocol<br>Application Protocol Metaformats<br>The Classical Internet Application Metaprotocol<br>HTTP as a Universal Application Protocol<br>BEEP: Blocks Extensible Exchange Protocol<br>XML-RPC, SOAP, and Jabber</li>
-<li>Transparency<br>Studying Cases<br>Case Study: audacity<br>Case Study: fetchmail’s -v option<br>Case Study: GCC<br>Case Study: kmail<br>Case Study: SNG<br>Case Study: The Terminfo Database<br>Case Study: Freeciv Data Files<br>Designing for Transparency and Discoverability<br>The Zen of Transparency<br>Coding for Transparency and Discoverability<br>Transparency and Avoiding Overprotectiveness<br>Transparency and Editable Representations<br>Transparency, Fault Diagnosis, and Fault Recovery<br>Designing for Maintainability</li>
-<li>Multiprogramming<br>Separating Complexity Control from Performance Tuning<br>Taxonomy of Unix IPC Methods<br>Handing off Tasks to Specialist Programs<br>Pipes, Redirection, and Filters<br>Wrappers<br>Security Wrappers and Bernstein Chaining<br>Slave Processes<br>Peer-to-Peer Inter-Process Communication<br>Problems and Methods to Avoid<br>Obsolescent Unix IPC Methods<br>Remote Procedure Calls<br>Threads — Threat or Menace?<br>Process Partitioning at the Design Level</li>
-<li>Minilanguages<br>Understanding the Taxonomy of Languages<br>Applying Minilanguages<br>Case Study: sng<br>Case Study: Regular Expressions<br>Case Study: Glade<br>Case Study: m4<br>Case Study: XSLT<br>Case Study: The Documenter’s Workbench Tools<br>Case Study: fetchmail Run-Control Syntax<br>Case Study: awk<br>Case Study: PostScript<br>Case Study: bc and dc<br>Case Study: Emacs Lisp<br>Case Study: JavaScript<br>Designing Minilanguages<br>Choosing the Right Complexity Level<br>Extending and Embedding Languages<br>Writing a Custom Grammar<br>Macros — Beware!<br>Language or Application Protocol?</li>
-<li>Generation<br>Data-Driven Programming<br>Case Study: ascii<br>Case Study: Statistical Spam Filtering<br>Case Study: Metaclass Hacking in fetchmailconf<br>Ad-hoc Code Generation<br>Case Study: Generating Code for the ascii Displays<br>Case Study: Generating HTML Code for a Tabular List</li>
-<li>Configuration<br>What Should Be Configurable?<br>Where Configurations Live<br>Run-Control Files<br>Case Study: The .netrc File<br>Portability to Other Operating Systems<br>Environment Variables<br>System Environment Variables<br>User Environment Variables<br>When to Use Environment Variables<br>Portability to Other Operating Systems<br>Command-Line Options<br>The -a to -z of Command-Line Options<br>Portability to Other Operating Systems<br>How to Choose among the Methods<br>Case Study: fetchmail<br>Case Study: The XFree86 Server<br>On Breaking These Rules</li>
-<li>Interfaces<br>Applying the Rule of Least Surprise<br>History of Interface Design on Unix<br>Evaluating Interface Designs<br>Tradeoffs between CLI and Visual Interfaces<br>Case Study: Two Ways to Write a Calculator Program<br>Transparency, Expressiveness, and Configurability<br>Unix Interface Design Patterns<br>The Filter Pattern<br>The Cantrip Pattern<br>The Source Pattern<br>The Sink Pattern<br>The Compiler Pattern<br>The ed pattern<br>The Roguelike Pattern<br>The ‘Separated Engine and Interface’ Pattern<br>The CLI Server Pattern<br>Language-Based Interface Patterns<br>Applying Unix Interface-Design Patterns<br>The Polyvalent-Program Pattern<br>The Web Browser as a Universal Front End<br>Silence Is Golden</li>
-<li>Optimization<br>Don’t Just Do Something, Stand There!<br>Measure before Optimizing<br>Nonlocality Considered Harmful<br>Throughput vs. Latency<br>Batching Operations<br>Overlapping Operations<br>Caching Operation Results</li>
-<li>Complexity<br>Speaking of Complexity<br>The Three Sources of Complexity<br>Tradeoffs between Interface and Implementation Complexity<br>Essential, Optional, and Accidental Complexity<br>Mapping Complexity<br>When Simplicity Is Not Enough<br>A Tale of Five Editors<br>ed<br>vi<br>Sam<br>Emacs<br>Wily<br>The Right Size for an Editor<br>Identifying the Complexity Problems<br>Compromise Doesn’t Work<br>Is Emacs an Argument against the Unix Tradition?<br>The Right Size of Software<br>III. Implementation</li>
-<li>Languages<br>Unix’s Cornucopia of Languages<br>Why Not C?<br>Interpreted Languages and Mixed Strategies<br>Language Evaluations<br>C<br>C++<br>Shell<br>Perl<br>Tcl<br>Python<br>Java<br>Emacs Lisp<br>Trends for the Future<br>Choosing an X Toolkit</li>
-<li>Tools<br>A Developer-Friendly Operating System<br>Choosing an Editor<br>Useful Things to Know about vi<br>Useful Things to Know about Emacs<br>The Antireligious Choice: Using Both<br>Special-Purpose Code Generators<br>yacc and lex<br>Case Study: Glade<br>make: Automating Your Recipes<br>Basic Theory of make<br>make in Non-C/C++ Development<br>Utility Productions<br>Generating Makefiles<br>Version-Control Systems<br>Why Version Control?<br>Version Control by Hand<br>Automated Version Control<br>Unix Tools for Version Control<br>Runtime Debugging<br>Profiling<br>Combining Tools with Emacs<br>Emacs and make<br>Emacs and Runtime Debugging<br>Emacs and Version Control<br>Emacs and Profiling<br>Like an IDE, Only Better</li>
-<li>Reuse<br>The Tale of J. Random Newbie<br>Transparency as the Key to Reuse<br>From Reuse to Open Source<br>The Best Things in Life Are Open<br>Where to Look?<br>Issues in Using Open-Source Software<br>Licensing Issues<br>What Qualifies as Open Source<br>Standard Open-Source Licenses<br>When You Need a Lawyer<br>IV. Community</li>
-<li>Portability<br>Evolution of C<br>Early History of C<br>C Standards<br>Unix Standards<br>Standards and the Unix Wars<br>The Ghost at the Victory Banquet<br>Unix Standards in the Open-Source World<br>IETF and the RFC Standards Process<br>Specifications as DNA, Code as RNA<br>Programming for Portability<br>Portability and Choice of Language<br>Avoiding System Dependencies<br>Tools for Portability<br>Internationalization<br>Portability, Open Standards, and Open Source</li>
-<li>Documentation<br>Documentation Concepts<br>The Unix Style<br>The Large-Document Bias<br>Cultural Style<br>The Zoo of Unix Documentation Formats<br>troff and the Documenter’s Workbench Tools<br>TeX<br>Texinfo<br>POD<br>HTML<br>DocBook<br>The Present Chaos and a Possible Way Out<br>DocBook<br>Document Type Definitions<br>Other DTDs<br>The DocBook Toolchain<br>Migration Tools<br>Editing Tools<br>Related Standards and Practices<br>SGML<br>XML-DocBook References<br>Best Practices for Writing Unix Documentation</li>
-<li>Open Source<br>Unix and Open Source<br>Best Practices for Working with Open-Source Developers<br>Good Patching Practice<br>Good Project- and Archive-Naming Practice<br>Good Development Practice<br>Good Distribution-Making Practice<br>Good Communication Practice<br>The Logic of Licenses: How to Pick One<br>Why You Should Use a Standard License<br>Varieties of Open-Source Licensing<br>MIT or X Consortium License<br>BSD Classic License<br>Artistic License<br>General Public License<br>Mozilla Public License</li>
-<li>Futures<br>Essence and Accident in Unix Tradition<br>Plan 9: The Way the Future Was<br>Problems in the Design of Unix<br>A Unix File Is Just a Big Bag of Bytes<br>Unix Support for GUIs Is Weak<br>File Deletion Is Forever<br>Unix Assumes a Static File System<br>The Design of Job Control Was Badly Botched<br>The Unix API Doesn’t Use Exceptions<br>ioctl2 and fcntl2 Are an Embarrassment<br>The Unix Security Model May Be Too Primitive<br>Unix Has Too Many Different Kinds of Names<br>File Systems Might Be Considered Harmful<br>Towards a Global Internet Address Space<br>Problems in the Environment of Unix<br>Problems in the Culture of Unix<br>Reasons to Believe<br>A. Glossary of Abbreviations<br>B. References<br>C. Contributors<br>D. Rootless Root<br>Editor’s Introduction<br>Master Foo and the Ten Thousand Lines<br>Master Foo and the Script Kiddie<br>Master Foo Discourses on the Two Paths<br>Master Foo and the Methodologist<br>Master Foo Discourses on the Graphical User Interface<br>Master Foo and the Unix Zealot<br>Master Foo Discourses on the Unix-Nature<br>Master Foo and the End User<br>List of Figures</li>
-</ol>
-<p>2.1. The PDP-7.<br>3.1. Schematic history of timesharing.<br>4.1. Qualitative plot of defect count and density vs. module size.<br>4.2. Caller/callee relationships in GIMP with a plugin loaded.<br>6.1. Screen shot of audacity.<br>6.2. Screen shot of kmail.<br>6.3. Main window of a Freeciv game.<br>8.1. Taxonomy of languages.<br>11.1. The xcalc GUI.<br>11.2. Screen shot of the original Rogue game.<br>11.3. The Xcdroast GUI.<br>11.4. Caller/callee relationships in a polyvalent program.<br>13.1. Sources and kinds of complexity.<br>18.1. Processing structural documents.<br>18.2. Present-day XML-DocBook toolchain.<br>18.3. Future XML-DocBook toolchain with FOP.<br>List of Tables</p>
-<p>8.1. Regular-expression examples.<br>8.2. Introduction to regular-expression operations.<br>14.1. Language choices.<br>14.2. Summary of X Toolkits.<br>List of Examples</p>
-<p>5.1. Password file example.<br>5.2. A .newsrc example.<br>5.3. A fortune file example.<br>5.4. Basic data for three planets in a record-jar format.<br>5.5. An XML example.<br>5.6. A .INI file example.<br>5.7. An SMTP session example.<br>5.8. A POP3 example session.<br>5.9. An IMAP session example.<br>6.1. An example fetchmail -v transcript.<br>6.2. An SNG Example.<br>7.1. The pic2graph pipeline.<br>8.1. Glade Hello, World.<br>8.2. A sample m4 macro.<br>8.3. A sample XSLT program.<br>8.4. Taxonomy of languages — the pic source.<br>8.5. Synthetic example of a fetchmailrc.<br>8.6. RSA implementation using dc.<br>9.1. Example of fetchmailrc syntax.<br>9.2. Python structure dump of a fetchmail configuration.<br>9.3. copy_instance metaclass code.<br>9.4. Calling context for copy_instance.<br>9.5. ascii usage screen.<br>9.6. Desired output format for the star table.<br>9.7. Master form of the star table.<br>10.1. A .netrc example.<br>10.2. X configuration example.<br>18.1. groff1 markup example.<br>18.2. man markup example.<br>19.1. tar archive maker production.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://catb.org/~esr/writings/taoup/html/&quot;&gt;The Art of Unix Programming&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://catb.org/~esr/writings/taoup/cover.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Eric Steven Raymond&lt;/p&gt;
-&lt;p&gt;This book and its on-line version are distributed under the terms of the Creative Commons Attribution-NoDerivs 1.0 license, with the additional proviso that the right to publish it on paper for sale or other for-profit use is reserved to Pearson Education, Inc. A reference copy of this license may be found at &lt;a href=&quot;http://creativecommons.org/licenses/by-nd/1.0/legalcode&quot;&gt;http://creativecommons.org/licenses/by-nd/1.0/legalcode&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
-    
-      <category term="Unix" scheme="http://ipcreator.me/tags/Unix/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Things Every Hacker Once Knew</title>
     <link href="http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/things-every-hacker-once-knew/"/>
     <id>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/things-every-hacker-once-knew/</id>
@@ -10263,7 +10277,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <updated>2017-02-15T13:06:27.820Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.catb.org/~esr/faqs/things-every-hacker-once-knew/" target="_blank" rel="external">Things Every Hacker Once Knew</a></p>
-<p>by Eric S. Raymond <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#101;&#115;&#114;&#64;&#x74;&#104;&#x79;&#x72;&#115;&#x75;&#115;&#46;&#x63;&#111;&#x6d;">&#101;&#115;&#114;&#64;&#x74;&#104;&#x79;&#x72;&#115;&#x75;&#115;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>by Eric S. Raymond <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x65;&#x73;&#x72;&#64;&#116;&#x68;&#x79;&#x72;&#115;&#x75;&#x73;&#x2e;&#99;&#x6f;&#x6d;">&#x65;&#x73;&#x72;&#64;&#116;&#x68;&#x79;&#x72;&#115;&#x75;&#x73;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 <p>One fine day in January 2017 I was reminded of something I had half-noticed a few times over the previous decade. That is, younger hackers don’t know the bit structure of ASCII and the meaning of the odder control characters in it.</p>
 <p>This is knowledge every fledgling hacker used to absorb through their pores. It’s nobody’s fault this changed; the obsolescence of hardware terminals and the near-obsolescence of the RS-232 protocol is what did it. Tools generate culture; sometimes, when a tool becomes obsolete, a bit of cultural commonality quietly evaporates. It can be difficult to notice that this has happened.</p>
 <p>This document is a collection of facts about ASCII and related technologies, notably hardware serial terminals and RS-232 and modems. This is lore that was at one time near-universal and is no longer. It’s not likely to be directly useful today - until you trip over some piece of still-functioning technology where it’s relevant (like a GPS puck), or it makes sense of some old-fart war story. Even so, it’s good to know anyway, for cultural-literacy reasons.</p>
@@ -10386,7 +10400,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <summary type="html">
     
       &lt;p&gt;&lt;a href=&quot;http://www.catb.org/~esr/faqs/things-every-hacker-once-knew/&quot;&gt;Things Every Hacker Once Knew&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#58;&amp;#101;&amp;#115;&amp;#114;&amp;#64;&amp;#x74;&amp;#104;&amp;#x79;&amp;#x72;&amp;#115;&amp;#x75;&amp;#115;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#101;&amp;#115;&amp;#114;&amp;#64;&amp;#x74;&amp;#104;&amp;#x79;&amp;#x72;&amp;#115;&amp;#x75;&amp;#115;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#58;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#64;&amp;#116;&amp;#x68;&amp;#x79;&amp;#x72;&amp;#115;&amp;#x75;&amp;#x73;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#64;&amp;#116;&amp;#x68;&amp;#x79;&amp;#x72;&amp;#115;&amp;#x75;&amp;#x73;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;One fine day in January 2017 I was reminded of something I had half-noticed a few times over the previous decade. That is, younger hackers don’t know the bit structure of ASCII and the meaning of the odder control characters in it.&lt;/p&gt;
 &lt;p&gt;This is knowledge every fledgling hacker used to absorb through their pores. It’s nobody’s fault this changed; the obsolescence of hardware terminals and the near-obsolescence of the RS-232 protocol is what did it. Tools generate culture; sometimes, when a tool becomes obsolete, a bit of cultural commonality quietly evaporates. It can be difficult to notice that this has happened.&lt;/p&gt;
 &lt;p&gt;This document is a collection of facts about ASCII and related technologies, notably hardware serial terminals and RS-232 and modems. This is lore that was at one time near-universal and is no longer. It’s not likely to be directly useful today - until you trip over some piece of still-functioning technology where it’s relevant (like a GPS puck), or it makes sense of some old-fart war story. Even so, it’s good to know anyway, for cultural-literacy reasons.&lt;/p&gt;
@@ -10399,6 +10413,70 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     
     
       <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Art of Unix Programming</title>
+    <link href="http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/the-art-of-unix-programming/"/>
+    <id>http://ipcreator.me/2017/01/20/SmartAI/ProgramAI/Master/the-art-of-unix-programming/</id>
+    <published>2017-01-20T11:16:06.000Z</published>
+    <updated>2017-02-16T00:06:16.386Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://catb.org/~esr/writings/taoup/html/" target="_blank" rel="external">The Art of Unix Programming</a></p>
+<p><img src="http://catb.org/~esr/writings/taoup/cover.png" alt=""></p>
+<p>Eric Steven Raymond</p>
+<p>This book and its on-line version are distributed under the terms of the Creative Commons Attribution-NoDerivs 1.0 license, with the additional proviso that the right to publish it on paper for sale or other for-profit use is reserved to Pearson Education, Inc. A reference copy of this license may be found at <a href="http://creativecommons.org/licenses/by-nd/1.0/legalcode" target="_blank" rel="external">http://creativecommons.org/licenses/by-nd/1.0/legalcode</a>.</p>
+  <a id="more"></a>
+<p>AIX, AS/400, DB/2, OS/2, System/360, MVS, VM/CMS, and IBM PC are trademarks of IBM. Alpha, DEC, VAX, HP-UX, PDP, TOPS-10, TOPS-20, VMS, and VT-100 are trademarks of Compaq. Amiga and AmigaOS are trademarks of Amiga, Inc. Apple, Macintosh, MacOS, Newton, OpenDoc, and OpenStep are trademarks of Apple Computers, Inc. ClearCase is a trademark of Rational Software, Inc. Ethernet is a trademark of 3COM, Inc. Excel, MS-DOS, Microsoft Windows and PowerPoint are trademarks of Microsoft, Inc. Java. J2EE, JavaScript, NeWS, and Solaris are trademarks of Sun Microsystems. SPARC is a trademark of SPARC international. Informix is a trademark of Informix software. Itanium is a trademark of Intel. Linux is a trademark of Linus Torvalds. Netscape is a trademark of AOL. PDF and PostScript are trademarks of Adobe, Inc. UNIX is a trademark of The Open Group.</p>
+<p>The photograph of Ken and Dennis in Chapter 2 appears courtesy of Bell Labs/Lucent Technologies.</p>
+<p>The epigraph on the Portability chapter is from the Bell System Technical Journal, v57 #6 part 2 (July-Aug. 1978) pp. 2021-2048 and is reproduced with the permission of Bell Labs/Lucent Technologies.</p>
+<p>Revision History<br>Revision 1.0    19 September 2003    esr<br>This is the content that went to Addison-Wesley’s printers.<br>Revision 0.4    5 February 2003    esr<br>Release for public review.<br>Revision 0.3    22 January 2003    esr<br>First eighteen-chapter draft. Manuscript walkthrough at Chapter 12. Limited release for early reviewers.<br>Revision 0.2    2 January 2003    esr<br>First manuscript walkthrough at Chapter 7. Released to Dmitry Kirsanov at AW production.<br>Revision 0.1    16 November 2002    esr<br>First DocBook draft, fifteen chapters. Languages rewritten to incorporate lots of feedback. Transparency, Modularity, Multiprogramming, Configuration, Interfaces, Documentation, and Open Source chapters released. Shipped to Mark Taub at AW.<br>Revision 0.0    1999    esr<br>Public HTML draft, first four chapters only.<br>Dedication</p>
+<p>To Ken Thompson and Dennis Ritchie, because you inspired me.</p>
+<p>Table of Contents</p>
+<p>Preface<br>Who Should Read This Book<br>How to Use This Book<br>Related References<br>Conventions Used in This Book<br>Our Case Studies<br>Author’s Acknowledgements<br>I. Context</p>
+<ol>
+<li>Philosophy<br>Culture? What Culture?<br>The Durability of Unix<br>The Case against Learning Unix Culture<br>What Unix Gets Wrong<br>What Unix Gets Right<br>Open-Source Software<br>Cross-Platform Portability and Open Standards<br>The Internet and the World Wide Web<br>The Open-Source Community<br>Flexibility All the Way Down<br>Unix Is Fun to Hack<br>The Lessons of Unix Can Be Applied Elsewhere<br>Basics of the Unix Philosophy<br>Rule of Modularity: Write simple parts connected by clean interfaces.<br>Rule of Clarity: Clarity is better than cleverness.<br>Rule of Composition: Design programs to be connected with other programs.<br>Rule of Separation: Separate policy from mechanism; separate interfaces from engines.<br>Rule of Simplicity: Design for simplicity; add complexity only where you must.<br>Rule of Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.<br>Rule of Transparency: Design for visibility to make inspection and debugging easier.<br>Rule of Robustness: Robustness is the child of transparency and simplicity.<br>Rule of Representation: Fold knowledge into data, so program logic can be stupid and robust.<br>Rule of Least Surprise: In interface design, always do the least surprising thing.<br>Rule of Silence: When a program has nothing surprising to say, it should say nothing.<br>Rule of Repair: Repair what you can — but when you must fail, fail noisily and as soon as possible.<br>Rule of Economy: Programmer time is expensive; conserve it in preference to machine time.<br>Rule of Generation: Avoid hand-hacking; write programs to write programs when you can.<br>Rule of Optimization: Prototype before polishing. Get it working before you optimize it.<br>Rule of Diversity: Distrust all claims for one true way.<br>Rule of Extensibility: Design for the future, because it will be here sooner than you think.<br>The Unix Philosophy in One Lesson<br>Applying the Unix Philosophy<br>Attitude Matters Too</li>
+<li>History<br>Origins and History of Unix, 1969-1995<br>Genesis: 1969–1971<br>Exodus: 1971–1980<br>TCP/IP and the Unix Wars: 1980-1990<br>Blows against the Empire: 1991-1995<br>Origins and History of the Hackers, 1961-1995<br>At Play in the Groves of Academe: 1961-1980<br>Internet Fusion and the Free Software Movement: 1981-1991<br>Linux and the Pragmatist Reaction: 1991-1998<br>The Open-Source Movement: 1998 and Onward<br>The Lessons of Unix History</li>
+<li>Contrasts<br>The Elements of Operating-System Style<br>What Is the Operating System’s Unifying Idea?<br>Multitasking Capability<br>Cooperating Processes<br>Internal Boundaries<br>File Attributes and Record Structures<br>Binary File Formats<br>Preferred User Interface Style<br>Intended Audience<br>Entry Barriers to Development<br>Operating-System Comparisons<br>VMS<br>MacOS<br>OS/2<br>Windows NT<br>BeOS<br>MVS<br>VM/CMS<br>Linux<br>What Goes Around, Comes Around<br>II. Design</li>
+<li>Modularity<br>Encapsulation and Optimal Module Size<br>Compactness and Orthogonality<br>Compactness<br>Orthogonality<br>The SPOT Rule<br>Compactness and the Strong Single Center<br>The Value of Detachment<br>Software Is a Many-Layered Thing<br>Top-Down versus Bottom-Up<br>Glue Layers<br>Case Study: C Considered as Thin Glue<br>Libraries<br>Case Study: GIMP Plugins<br>Unix and Object-Oriented Languages<br>Coding for Modularity</li>
+<li>Textuality<br>The Importance of Being Textual<br>Case Study: Unix Password File Format<br>Case Study: .newsrc Format<br>Case Study: The PNG Graphics File Format<br>Data File Metaformats<br>DSV Style<br>RFC 822 Format<br>Cookie-Jar Format<br>Record-Jar Format<br>XML<br>Windows INI Format<br>Unix Textual File Format Conventions<br>The Pros and Cons of File Compression<br>Application Protocol Design<br>Case Study: SMTP, the Simple Mail Transfer Protocol<br>Case Study: POP3, the Post Office Protocol<br>Case Study: IMAP, the Internet Message Access Protocol<br>Application Protocol Metaformats<br>The Classical Internet Application Metaprotocol<br>HTTP as a Universal Application Protocol<br>BEEP: Blocks Extensible Exchange Protocol<br>XML-RPC, SOAP, and Jabber</li>
+<li>Transparency<br>Studying Cases<br>Case Study: audacity<br>Case Study: fetchmail’s -v option<br>Case Study: GCC<br>Case Study: kmail<br>Case Study: SNG<br>Case Study: The Terminfo Database<br>Case Study: Freeciv Data Files<br>Designing for Transparency and Discoverability<br>The Zen of Transparency<br>Coding for Transparency and Discoverability<br>Transparency and Avoiding Overprotectiveness<br>Transparency and Editable Representations<br>Transparency, Fault Diagnosis, and Fault Recovery<br>Designing for Maintainability</li>
+<li>Multiprogramming<br>Separating Complexity Control from Performance Tuning<br>Taxonomy of Unix IPC Methods<br>Handing off Tasks to Specialist Programs<br>Pipes, Redirection, and Filters<br>Wrappers<br>Security Wrappers and Bernstein Chaining<br>Slave Processes<br>Peer-to-Peer Inter-Process Communication<br>Problems and Methods to Avoid<br>Obsolescent Unix IPC Methods<br>Remote Procedure Calls<br>Threads — Threat or Menace?<br>Process Partitioning at the Design Level</li>
+<li>Minilanguages<br>Understanding the Taxonomy of Languages<br>Applying Minilanguages<br>Case Study: sng<br>Case Study: Regular Expressions<br>Case Study: Glade<br>Case Study: m4<br>Case Study: XSLT<br>Case Study: The Documenter’s Workbench Tools<br>Case Study: fetchmail Run-Control Syntax<br>Case Study: awk<br>Case Study: PostScript<br>Case Study: bc and dc<br>Case Study: Emacs Lisp<br>Case Study: JavaScript<br>Designing Minilanguages<br>Choosing the Right Complexity Level<br>Extending and Embedding Languages<br>Writing a Custom Grammar<br>Macros — Beware!<br>Language or Application Protocol?</li>
+<li>Generation<br>Data-Driven Programming<br>Case Study: ascii<br>Case Study: Statistical Spam Filtering<br>Case Study: Metaclass Hacking in fetchmailconf<br>Ad-hoc Code Generation<br>Case Study: Generating Code for the ascii Displays<br>Case Study: Generating HTML Code for a Tabular List</li>
+<li>Configuration<br>What Should Be Configurable?<br>Where Configurations Live<br>Run-Control Files<br>Case Study: The .netrc File<br>Portability to Other Operating Systems<br>Environment Variables<br>System Environment Variables<br>User Environment Variables<br>When to Use Environment Variables<br>Portability to Other Operating Systems<br>Command-Line Options<br>The -a to -z of Command-Line Options<br>Portability to Other Operating Systems<br>How to Choose among the Methods<br>Case Study: fetchmail<br>Case Study: The XFree86 Server<br>On Breaking These Rules</li>
+<li>Interfaces<br>Applying the Rule of Least Surprise<br>History of Interface Design on Unix<br>Evaluating Interface Designs<br>Tradeoffs between CLI and Visual Interfaces<br>Case Study: Two Ways to Write a Calculator Program<br>Transparency, Expressiveness, and Configurability<br>Unix Interface Design Patterns<br>The Filter Pattern<br>The Cantrip Pattern<br>The Source Pattern<br>The Sink Pattern<br>The Compiler Pattern<br>The ed pattern<br>The Roguelike Pattern<br>The ‘Separated Engine and Interface’ Pattern<br>The CLI Server Pattern<br>Language-Based Interface Patterns<br>Applying Unix Interface-Design Patterns<br>The Polyvalent-Program Pattern<br>The Web Browser as a Universal Front End<br>Silence Is Golden</li>
+<li>Optimization<br>Don’t Just Do Something, Stand There!<br>Measure before Optimizing<br>Nonlocality Considered Harmful<br>Throughput vs. Latency<br>Batching Operations<br>Overlapping Operations<br>Caching Operation Results</li>
+<li>Complexity<br>Speaking of Complexity<br>The Three Sources of Complexity<br>Tradeoffs between Interface and Implementation Complexity<br>Essential, Optional, and Accidental Complexity<br>Mapping Complexity<br>When Simplicity Is Not Enough<br>A Tale of Five Editors<br>ed<br>vi<br>Sam<br>Emacs<br>Wily<br>The Right Size for an Editor<br>Identifying the Complexity Problems<br>Compromise Doesn’t Work<br>Is Emacs an Argument against the Unix Tradition?<br>The Right Size of Software<br>III. Implementation</li>
+<li>Languages<br>Unix’s Cornucopia of Languages<br>Why Not C?<br>Interpreted Languages and Mixed Strategies<br>Language Evaluations<br>C<br>C++<br>Shell<br>Perl<br>Tcl<br>Python<br>Java<br>Emacs Lisp<br>Trends for the Future<br>Choosing an X Toolkit</li>
+<li>Tools<br>A Developer-Friendly Operating System<br>Choosing an Editor<br>Useful Things to Know about vi<br>Useful Things to Know about Emacs<br>The Antireligious Choice: Using Both<br>Special-Purpose Code Generators<br>yacc and lex<br>Case Study: Glade<br>make: Automating Your Recipes<br>Basic Theory of make<br>make in Non-C/C++ Development<br>Utility Productions<br>Generating Makefiles<br>Version-Control Systems<br>Why Version Control?<br>Version Control by Hand<br>Automated Version Control<br>Unix Tools for Version Control<br>Runtime Debugging<br>Profiling<br>Combining Tools with Emacs<br>Emacs and make<br>Emacs and Runtime Debugging<br>Emacs and Version Control<br>Emacs and Profiling<br>Like an IDE, Only Better</li>
+<li>Reuse<br>The Tale of J. Random Newbie<br>Transparency as the Key to Reuse<br>From Reuse to Open Source<br>The Best Things in Life Are Open<br>Where to Look?<br>Issues in Using Open-Source Software<br>Licensing Issues<br>What Qualifies as Open Source<br>Standard Open-Source Licenses<br>When You Need a Lawyer<br>IV. Community</li>
+<li>Portability<br>Evolution of C<br>Early History of C<br>C Standards<br>Unix Standards<br>Standards and the Unix Wars<br>The Ghost at the Victory Banquet<br>Unix Standards in the Open-Source World<br>IETF and the RFC Standards Process<br>Specifications as DNA, Code as RNA<br>Programming for Portability<br>Portability and Choice of Language<br>Avoiding System Dependencies<br>Tools for Portability<br>Internationalization<br>Portability, Open Standards, and Open Source</li>
+<li>Documentation<br>Documentation Concepts<br>The Unix Style<br>The Large-Document Bias<br>Cultural Style<br>The Zoo of Unix Documentation Formats<br>troff and the Documenter’s Workbench Tools<br>TeX<br>Texinfo<br>POD<br>HTML<br>DocBook<br>The Present Chaos and a Possible Way Out<br>DocBook<br>Document Type Definitions<br>Other DTDs<br>The DocBook Toolchain<br>Migration Tools<br>Editing Tools<br>Related Standards and Practices<br>SGML<br>XML-DocBook References<br>Best Practices for Writing Unix Documentation</li>
+<li>Open Source<br>Unix and Open Source<br>Best Practices for Working with Open-Source Developers<br>Good Patching Practice<br>Good Project- and Archive-Naming Practice<br>Good Development Practice<br>Good Distribution-Making Practice<br>Good Communication Practice<br>The Logic of Licenses: How to Pick One<br>Why You Should Use a Standard License<br>Varieties of Open-Source Licensing<br>MIT or X Consortium License<br>BSD Classic License<br>Artistic License<br>General Public License<br>Mozilla Public License</li>
+<li>Futures<br>Essence and Accident in Unix Tradition<br>Plan 9: The Way the Future Was<br>Problems in the Design of Unix<br>A Unix File Is Just a Big Bag of Bytes<br>Unix Support for GUIs Is Weak<br>File Deletion Is Forever<br>Unix Assumes a Static File System<br>The Design of Job Control Was Badly Botched<br>The Unix API Doesn’t Use Exceptions<br>ioctl2 and fcntl2 Are an Embarrassment<br>The Unix Security Model May Be Too Primitive<br>Unix Has Too Many Different Kinds of Names<br>File Systems Might Be Considered Harmful<br>Towards a Global Internet Address Space<br>Problems in the Environment of Unix<br>Problems in the Culture of Unix<br>Reasons to Believe<br>A. Glossary of Abbreviations<br>B. References<br>C. Contributors<br>D. Rootless Root<br>Editor’s Introduction<br>Master Foo and the Ten Thousand Lines<br>Master Foo and the Script Kiddie<br>Master Foo Discourses on the Two Paths<br>Master Foo and the Methodologist<br>Master Foo Discourses on the Graphical User Interface<br>Master Foo and the Unix Zealot<br>Master Foo Discourses on the Unix-Nature<br>Master Foo and the End User<br>List of Figures</li>
+</ol>
+<p>2.1. The PDP-7.<br>3.1. Schematic history of timesharing.<br>4.1. Qualitative plot of defect count and density vs. module size.<br>4.2. Caller/callee relationships in GIMP with a plugin loaded.<br>6.1. Screen shot of audacity.<br>6.2. Screen shot of kmail.<br>6.3. Main window of a Freeciv game.<br>8.1. Taxonomy of languages.<br>11.1. The xcalc GUI.<br>11.2. Screen shot of the original Rogue game.<br>11.3. The Xcdroast GUI.<br>11.4. Caller/callee relationships in a polyvalent program.<br>13.1. Sources and kinds of complexity.<br>18.1. Processing structural documents.<br>18.2. Present-day XML-DocBook toolchain.<br>18.3. Future XML-DocBook toolchain with FOP.<br>List of Tables</p>
+<p>8.1. Regular-expression examples.<br>8.2. Introduction to regular-expression operations.<br>14.1. Language choices.<br>14.2. Summary of X Toolkits.<br>List of Examples</p>
+<p>5.1. Password file example.<br>5.2. A .newsrc example.<br>5.3. A fortune file example.<br>5.4. Basic data for three planets in a record-jar format.<br>5.5. An XML example.<br>5.6. A .INI file example.<br>5.7. An SMTP session example.<br>5.8. A POP3 example session.<br>5.9. An IMAP session example.<br>6.1. An example fetchmail -v transcript.<br>6.2. An SNG Example.<br>7.1. The pic2graph pipeline.<br>8.1. Glade Hello, World.<br>8.2. A sample m4 macro.<br>8.3. A sample XSLT program.<br>8.4. Taxonomy of languages — the pic source.<br>8.5. Synthetic example of a fetchmailrc.<br>8.6. RSA implementation using dc.<br>9.1. Example of fetchmailrc syntax.<br>9.2. Python structure dump of a fetchmail configuration.<br>9.3. copy_instance metaclass code.<br>9.4. Calling context for copy_instance.<br>9.5. ascii usage screen.<br>9.6. Desired output format for the star table.<br>9.7. Master form of the star table.<br>10.1. A .netrc example.<br>10.2. X configuration example.<br>18.1. groff1 markup example.<br>18.2. man markup example.<br>19.1. tar archive maker production.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://catb.org/~esr/writings/taoup/html/&quot;&gt;The Art of Unix Programming&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://catb.org/~esr/writings/taoup/cover.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Eric Steven Raymond&lt;/p&gt;
+&lt;p&gt;This book and its on-line version are distributed under the terms of the Creative Commons Attribution-NoDerivs 1.0 license, with the additional proviso that the right to publish it on paper for sale or other for-profit use is reserved to Pearson Education, Inc. A reference copy of this license may be found at &lt;a href=&quot;http://creativecommons.org/licenses/by-nd/1.0/legalcode&quot;&gt;http://creativecommons.org/licenses/by-nd/1.0/legalcode&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
+    
+      <category term="Unix" scheme="http://ipcreator.me/tags/Unix/"/>
     
   </entry>
   
@@ -15341,6 +15419,40 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
   </entry>
   
   <entry>
+    <title>雪枫音乐会</title>
+    <link href="http://ipcreator.me/2017/01/02/MyShare/iGet/liuxuefeng-classic-music/"/>
+    <id>http://ipcreator.me/2017/01/02/MyShare/iGet/liuxuefeng-classic-music/</id>
+    <published>2017-01-01T20:00:06.000Z</published>
+    <updated>2017-02-16T13:30:09.043Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://h5.sao.cn/product/detail?alias=uk9zp31srred" target="_blank" rel="external">雪枫音乐会</a></p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/%E5%88%98%E9%9B%AA%E6%9E%AB.png" alt=""></p>
+<h2 id="雪枫音乐会"><a href="#雪枫音乐会" class="headerlink" title="雪枫音乐会"></a>雪枫音乐会</h2><p>带你一年听懂260首古典音乐<br>5月28日起，刘雪枫在得到App（罗辑思维出品）开设为期一年的订阅专栏，周一到周五，每天精选一首古典音乐讲给你听。</p>
+<p>白岩松: 如果说古典音乐是宗教，那刘雪枫一定是最好的传教士。<br>徐小平: 音乐给我带来了无限的欢乐和滔滔不绝的灵感，成为了我生活的底色。<br>余华: 刘雪枫人生的追求、生活的乐趣，全在古典音乐里面，除了这个没有别的。<br>谭盾: 雪枫在我眼里是音乐家，让更多的人走进音乐。<br>胡歌：让我们一起和古典音乐成为朋友，享受我们属于我们的文明和智慧。欢迎订阅《雪枫音乐会》。</p>
+ <a id="more"></a>
+<p>彻底被征服：<br>小宝宝们的最爱：<br>大宝宝更爱：<br>启蒙国人的美学教育：<br>音乐抒发情感，评论都是诗人：<br>往来无白丁，专业留言密集：</p>
+<p>白岩松说：“雪枫音乐会”，就是要拆掉人们进入古典音乐领域的“墙”。<br>这面墙如果有个名字，可以叫“懂”。<br>因为，这是让很多人困惑的致命障碍，在于“我怎么没听懂呢？”</p>
+<h2 id="刘雪枫"><a href="#刘雪枫" class="headerlink" title="刘雪枫"></a>刘雪枫</h2><p>中国著名的古典音乐评论家和推广者。<br>出席过上千场国内外顶级音乐会。<br>发表专业乐评近 200 万字。<br>收藏古典音乐唱片 100000 张。<br>曾任两本古典音乐杂志《爱乐》和《留声机》的主编。<br>长期以来，和他一起听音乐会、收藏唱片的往来友好名单中陆续添加了投资家徐小平、主持人白岩松、作家余华和李陀、画家何多苓、诗人北岛和欧阳江河、歌唱家龚琳娜、京剧名伶史依弘和孙慧珠，还有演员孙淳和葛优等等“大人物”。</p>
+<h2 id="适宜人群"><a href="#适宜人群" class="headerlink" title="适宜人群"></a>适宜人群</h2><p>艺术家、企业家、白领、教师、学生……适合所有爱音乐、享受音乐的朋友。只要你希望生活美一点，再美一点。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://h5.sao.cn/product/detail?alias=uk9zp31srred&quot;&gt;雪枫音乐会&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/%E5%88%98%E9%9B%AA%E6%9E%AB.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;雪枫音乐会&quot;&gt;&lt;a href=&quot;#雪枫音乐会&quot; class=&quot;headerlink&quot; title=&quot;雪枫音乐会&quot;&gt;&lt;/a&gt;雪枫音乐会&lt;/h2&gt;&lt;p&gt;带你一年听懂260首古典音乐&lt;br&gt;5月28日起，刘雪枫在得到App（罗辑思维出品）开设为期一年的订阅专栏，周一到周五，每天精选一首古典音乐讲给你听。&lt;/p&gt;
+&lt;p&gt;白岩松: 如果说古典音乐是宗教，那刘雪枫一定是最好的传教士。&lt;br&gt;徐小平: 音乐给我带来了无限的欢乐和滔滔不绝的灵感，成为了我生活的底色。&lt;br&gt;余华: 刘雪枫人生的追求、生活的乐趣，全在古典音乐里面，除了这个没有别的。&lt;br&gt;谭盾: 雪枫在我眼里是音乐家，让更多的人走进音乐。&lt;br&gt;胡歌：让我们一起和古典音乐成为朋友，享受我们属于我们的文明和智慧。欢迎订阅《雪枫音乐会》。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="Growing Up" scheme="http://ipcreator.me/tags/Growing-Up/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前哨</title>
     <link href="http://ipcreator.me/2017/01/02/MyShare/iGet/wangyuquan-front-guard/"/>
     <id>http://ipcreator.me/2017/01/02/MyShare/iGet/wangyuquan-front-guard/</id>
@@ -15368,40 +15480,6 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
 &lt;h2 id=&quot;为什么要订阅这个产品？&quot;&gt;&lt;a href=&quot;#为什么要订阅这个产品？&quot; class=&quot;headerlink&quot; title=&quot;为什么要订阅这个产品？&quot;&gt;&lt;/a&gt;为什么要订阅这个产品？&lt;/h2&gt;&lt;p&gt;他是你深入人类创新文明最前沿的侦察兵&lt;br&gt;因为我们正处于一个急速变动的时代，创新科技呈几何级数加速发展，人类的未来会发生根本性重塑。这种时候，哪怕一点点视野上的差距，都将导致难以逾越的认知障碍，差之毫厘、失之千里。雇佣王煜全做你的私家“哨探”，他就是你的“望远镜”，视野比别人更开阔；他也是你的“显微镜”，认知比别人更清晰。&lt;/p&gt;
 &lt;p&gt;因为王煜全有三种能力。&lt;br&gt;一是判断真伪的能力。哪些是真正可以改变未来的科技，哪些只是臆想和传说，在他眼里就隔着一张窗户纸，一点即透。&lt;br&gt;二是判断价值的能力。哪些科技只是热闹好玩，哪些科技会对人类的未来产生重大影响。他给你的，不止是信息和知识，更是机会和行动纲领，帮你先人一步摸到全球科技创新的风口。&lt;br&gt;三是判断时点的能力。他的探查与判断将是两年之后出现在媒体上的“大新闻”与“黑科技”，从现在就开始提前布局，两年之后抢占风口的就会是你。&lt;/p&gt;
 &lt;p&gt;他会成为你深入人类创新文明最前沿的侦察兵。帮助你，用最低的成本、最少的精力和时间，获得最顶级的视野。他会尽其所能，帮助你在对创新这件事的理解上，远超其他人。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-    
-    
-      <category term="Growing Up" scheme="http://ipcreator.me/tags/Growing-Up/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>雪枫音乐会</title>
-    <link href="http://ipcreator.me/2017/01/02/MyShare/iGet/liuxuefeng-classic-music/"/>
-    <id>http://ipcreator.me/2017/01/02/MyShare/iGet/liuxuefeng-classic-music/</id>
-    <published>2017-01-01T20:00:06.000Z</published>
-    <updated>2017-02-16T13:30:09.043Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://h5.sao.cn/product/detail?alias=uk9zp31srred" target="_blank" rel="external">雪枫音乐会</a></p>
-<p><img src="http://okkntqe2h.bkt.clouddn.com/%E5%88%98%E9%9B%AA%E6%9E%AB.png" alt=""></p>
-<h2 id="雪枫音乐会"><a href="#雪枫音乐会" class="headerlink" title="雪枫音乐会"></a>雪枫音乐会</h2><p>带你一年听懂260首古典音乐<br>5月28日起，刘雪枫在得到App（罗辑思维出品）开设为期一年的订阅专栏，周一到周五，每天精选一首古典音乐讲给你听。</p>
-<p>白岩松: 如果说古典音乐是宗教，那刘雪枫一定是最好的传教士。<br>徐小平: 音乐给我带来了无限的欢乐和滔滔不绝的灵感，成为了我生活的底色。<br>余华: 刘雪枫人生的追求、生活的乐趣，全在古典音乐里面，除了这个没有别的。<br>谭盾: 雪枫在我眼里是音乐家，让更多的人走进音乐。<br>胡歌：让我们一起和古典音乐成为朋友，享受我们属于我们的文明和智慧。欢迎订阅《雪枫音乐会》。</p>
- <a id="more"></a>
-<p>彻底被征服：<br>小宝宝们的最爱：<br>大宝宝更爱：<br>启蒙国人的美学教育：<br>音乐抒发情感，评论都是诗人：<br>往来无白丁，专业留言密集：</p>
-<p>白岩松说：“雪枫音乐会”，就是要拆掉人们进入古典音乐领域的“墙”。<br>这面墙如果有个名字，可以叫“懂”。<br>因为，这是让很多人困惑的致命障碍，在于“我怎么没听懂呢？”</p>
-<h2 id="刘雪枫"><a href="#刘雪枫" class="headerlink" title="刘雪枫"></a>刘雪枫</h2><p>中国著名的古典音乐评论家和推广者。<br>出席过上千场国内外顶级音乐会。<br>发表专业乐评近 200 万字。<br>收藏古典音乐唱片 100000 张。<br>曾任两本古典音乐杂志《爱乐》和《留声机》的主编。<br>长期以来，和他一起听音乐会、收藏唱片的往来友好名单中陆续添加了投资家徐小平、主持人白岩松、作家余华和李陀、画家何多苓、诗人北岛和欧阳江河、歌唱家龚琳娜、京剧名伶史依弘和孙慧珠，还有演员孙淳和葛优等等“大人物”。</p>
-<h2 id="适宜人群"><a href="#适宜人群" class="headerlink" title="适宜人群"></a>适宜人群</h2><p>艺术家、企业家、白领、教师、学生……适合所有爱音乐、享受音乐的朋友。只要你希望生活美一点，再美一点。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://h5.sao.cn/product/detail?alias=uk9zp31srred&quot;&gt;雪枫音乐会&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/%E5%88%98%E9%9B%AA%E6%9E%AB.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;雪枫音乐会&quot;&gt;&lt;a href=&quot;#雪枫音乐会&quot; class=&quot;headerlink&quot; title=&quot;雪枫音乐会&quot;&gt;&lt;/a&gt;雪枫音乐会&lt;/h2&gt;&lt;p&gt;带你一年听懂260首古典音乐&lt;br&gt;5月28日起，刘雪枫在得到App（罗辑思维出品）开设为期一年的订阅专栏，周一到周五，每天精选一首古典音乐讲给你听。&lt;/p&gt;
-&lt;p&gt;白岩松: 如果说古典音乐是宗教，那刘雪枫一定是最好的传教士。&lt;br&gt;徐小平: 音乐给我带来了无限的欢乐和滔滔不绝的灵感，成为了我生活的底色。&lt;br&gt;余华: 刘雪枫人生的追求、生活的乐趣，全在古典音乐里面，除了这个没有别的。&lt;br&gt;谭盾: 雪枫在我眼里是音乐家，让更多的人走进音乐。&lt;br&gt;胡歌：让我们一起和古典音乐成为朋友，享受我们属于我们的文明和智慧。欢迎订阅《雪枫音乐会》。&lt;/p&gt;
     
     </summary>
     

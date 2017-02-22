@@ -22,7 +22,7 @@
 既然号称史上最浅显易懂的Git教程，那这">
 <meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/git-workflow-release-cycle-2feature.png">
 <meta property="og:image" content="http://service.t.sina.com.cn/widget/qmd/1658384301/078cedea/2.png">
-<meta property="og:updated_time" content="2017-02-22T00:02:41.958Z">
+<meta property="og:updated_time" content="2017-02-22T08:00:24.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git教程">
 <meta name="twitter:description" content="作者：廖雪峰
@@ -209,6 +209,84 @@
 <p> 关于作者</p>
 <p>廖雪峰，十年软件开发经验，业余产品经理，精通Java/Python/Ruby/Visual Basic/Objective C等，对开源框架有深入研究，著有《Spring 2.0核心技术与最佳实践》一书，多个业余开源项目托管在GitHub，欢迎微博交流：</p>
 <p><img src="http://service.t.sina.com.cn/widget/qmd/1658384301/078cedea/2.png" alt=""></p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h2 id="Practice-in-Action"><a href="#Practice-in-Action" class="headerlink" title="Practice in Action"></a>Practice in Action</h2><p>$ git init<br>Reinitialized existing Git repository in D:/IPCreatorBlog/themes/yilia/.git/</p>
+<p>$ git remote add yilia git@github.com:ipcreator/hexo-theme-yilia.git</p>
+<p>$ git push -u yilia master<br>Branch master set up to track remote branch master from yilia.<br>Everything up-to-date</p>
+<p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘yilia/master’.<br>Changes not staged for commit:<br>  (use “git add <file>…” to update what will be committed)<br>  (use “git checkout – <file>…” to discard changes in working directory)</file></file></p>
+<pre><code>modified:   _config.yml
+modified:   layout/_partial/after-footer.ejs
+modified:   layout/_partial/footer.ejs
+modified:   layout/_partial/left-col.ejs
+modified:   source-src/css/article-main.scss
+modified:   source-src/css/fonts/iconfont.svg
+modified:   source-src/js/mobile.js
+modified:   source/fonts/iconfont.dba24b.svg
+</code></pre><p>Untracked files:<br>  (use “git add <file>…” to include in what will be committed)</file></p>
+<pre><code>source/main.0d8e3c.css
+source/main.0d8e3c.js
+source/mobile.0b1d99.js
+source/slider.fa3fc2.js
+</code></pre><p>no changes added to commit (use “git add” and/or “git commit -a”)</p>
+<p>$ git branch</p>
+<ul>
+<li>master</li>
+</ul>
+<p>$ git add _config.yml</p>
+<p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘yilia/master’.<br>Changes to be committed:<br>  (use “git reset HEAD <file>…” to unstage)</file></p>
+<pre><code>modified:   _config.yml
+</code></pre><p>Changes not staged for commit:<br>  (use “git add <file>…” to update what will be committed)<br>  (use “git checkout – <file>…” to discard changes in working directory)</file></file></p>
+<pre><code>modified:   layout/_partial/after-footer.ejs
+modified:   layout/_partial/footer.ejs
+modified:   layout/_partial/left-col.ejs
+modified:   source-src/css/article-main.scss
+modified:   source-src/css/fonts/iconfont.svg
+modified:   source-src/js/mobile.js
+modified:   source/fonts/iconfont.dba24b.svg
+</code></pre><p>Untracked files:<br>  (use “git add <file>…” to include in what will be committed)</file></p>
+<pre><code>source/main.0d8e3c.css
+source/main.0d8e3c.js
+source/mobile.0b1d99.js
+source/slider.fa3fc2.js
+</code></pre><p>$ git add layout/_partial/after-footer.ejs<br>$ git add layout/_partial/footer.ejs<br>$ git add layout/_partial/left-col.ejs<br>$ git add source-src/css/article-main.scss<br>$ git add source-src/css/fonts/iconfont.svg<br>warning: LF will be replaced by CRLF in source-src/css/fonts/iconfont.svg.<br>The file will have its original line endings in your working directory.</p>
+<p>$ git add  source-src/js/mobile.js<br>$ git add source/fonts/iconfont.dba24b.svg<br>warning: LF will be replaced by CRLF in source/fonts/iconfont.dba24b.svg.<br>The file will have its original line endings in your working directory.</p>
+<p>$ git add  source/main.0d8e3c.css<br>$ git add source/main.0d8e3c.js<br>warning: LF will be replaced by CRLF in source/main.0d8e3c.js.<br>The file will have its original line endings in your working directory.</p>
+<p>$ git add source/mobile.0b1d99.js<br>$ git add source/slider.fa3fc2.js<br>warning: LF will be replaced by CRLF in source/slider.fa3fc2.js.<br>The file will have its original line endings in your working directory.</p>
+<p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘yilia/master’.<br>Changes to be committed:<br>  (use “git reset HEAD <file>…” to unstage)</file></p>
+<pre><code>modified:   _config.yml
+modified:   layout/_partial/after-footer.ejs
+modified:   layout/_partial/footer.ejs
+modified:   layout/_partial/left-col.ejs
+modified:   source-src/css/article-main.scss
+modified:   source-src/js/mobile.js
+new file:   source/main.0d8e3c.css
+new file:   source/main.0d8e3c.js
+new file:   source/mobile.0b1d99.js
+new file:   source/slider.fa3fc2.js
+</code></pre><p>$ git commit -m “first bak”<br>[master 8251377] first bak<br> 10 files changed, 111 insertions(+), 28 deletions(-)<br> create mode 100644 source/main.0d8e3c.css<br> create mode 100644 source/main.0d8e3c.js<br> create mode 100644 source/mobile.0b1d99.js<br> create mode 100644 source/slider.fa3fc2.js</p>
+<p>$ git push -u yilia master<br>Counting objects: 18, done.<br>Delta compression using up to 8 threads.<br>Compressing objects: 100% (18/18), done.<br>Writing objects: 100% (18/18), 63.54 KiB | 0 bytes/s, done.<br>Total 18 (delta 10), reused 3 (delta 0)<br>remote: Resolving deltas: 100% (10/10), completed with 10 local objects.<br>Branch master set up to track remote branch master from yilia.<br>To github.com:ipcreator/hexo-theme-yilia.git<br>   8ff6b52..8251377  master -&gt; master</p>
+<p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘yilia/master’.<br>Changes not staged for commit:<br>  (use “git add <file>…” to update what will be committed)<br>  (use “git checkout – <file>…” to discard changes in working directory)</file></file></p>
+<pre><code>modified:   _config.yml
+</code></pre><p>no changes added to commit (use “git add” and/or “git commit -a”)</p>
+<p>$ git diff HEAD – _config.yml<br>diff –git a/_config.yml b/_config.yml<br>index 4f8698a..e00540b 100644<br>— a/_config.yml<br>+++ b/_config.yml<br>@@ -79,11 +79,11 @@ duoshuo-key: ipcreator<br> style:</p>
+<ul>
+<li>#header: ‘#4d4d4d’</li>
+<li>header: ‘#47A2E4’</li>
+</ul>
+<ul>
+<li>header: ‘#4d4d4d’</li>
+<li>#header: ‘#47A2E4’</li>
+</ul>
+<ul>
+<li>#slider: ‘linear-gradient(200deg,#a0cfe4,#e8c37e)’</li>
+<li>slider: ‘linear-gradient(200deg,#47A2E4,#47A2E4)’</li>
+</ul>
+<ul>
+<li>slider: ‘linear-gradient(200deg,#a0cfe4,#e8c37e)’</li>
+<li>#slider: ‘linear-gradient(200deg,#47A2E4,#47A2E4)’</li>
+</ul>
+<p>$ git add _config.yml</p>
+<p>$ git commit -m “restore color”<br>[master 1acf4a2] restore color<br> 1 file changed, 4 insertions(+), 4 deletions(-)</p>
+<p>$ git push -u yilia master<br>Counting objects: 3, done.<br>Delta compression using up to 8 threads.<br>Compressing objects: 100% (3/3), done.<br>Writing objects: 100% (3/3), 329 bytes | 0 bytes/s, done.<br>Total 3 (delta 2), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (2/2), completed with 2 local objects.<br>Branch master set up to track remote branch master from yilia.<br>To github.com:ipcreator/hexo-theme-yilia.git<br>   2547415..1acf4a2  master -&gt; master</p>
 
       
 
@@ -477,11 +555,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
+                <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -493,11 +571,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Share</a>
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+                <a href="javascript:void(0)" class="js-tag color1">Share</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -513,15 +591,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Business</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Product</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -529,11 +603,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -545,6 +615,14 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Business</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Open Source</a>
               </li>
              
@@ -553,19 +631,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Unix</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Scikit</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -585,6 +659,10 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Scikit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Neural Network</a>
               </li>
              
@@ -593,15 +671,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java Script</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
+                <a href="javascript:void(0)" class="js-tag color2">Java Script</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -613,7 +687,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
+                <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -622,6 +696,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
               </li>
             
             <div class="clearfix"></div>
