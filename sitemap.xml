@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/02/20/SmartAI/ProgramAI/Tools/learn-journey-of-javascript/</loc>
+    
+    <lastmod>2017-02-22T06:31:57.155Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/21/MyShare/beautiful-article-of-english/</loc>
     
     <lastmod>2017-02-22T03:22:41.352Z</lastmod>
@@ -65,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/20/SmartAI/ProgramAI/Tools/learn-journey-of-javascript/</loc>
-    
-    <lastmod>2017-02-20T03:13:15.513Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-python/</loc>
     
     <lastmod>2017-02-19T10:19:58.441Z</lastmod>
@@ -100,7 +100,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tensorflow/core-components-from-deep-learning-framework/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -114,14 +121,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tensorflow/core-components-from-deep-learning-framework/</loc>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -142,13 +142,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProductAI/the-future-of-personal-terminal/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/ProductAI/ai-on-terminal-of-google/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
@@ -163,6 +156,13 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProductAI/the-future-of-personal-terminal/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/</loc>
     
     <lastmod>2017-02-19T06:03:00.875Z</lastmod>
@@ -170,7 +170,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Resources/big-data-resources/</loc>
+    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tools/tools-of-python/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
@@ -184,7 +184,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tools/tools-of-python/</loc>
+    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Resources/big-data-resources/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
