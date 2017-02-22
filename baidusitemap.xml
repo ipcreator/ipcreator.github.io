@@ -292,54 +292,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/</loc>
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    <data>
-        <display>
-        <title>25个Java机器学习工具&库</title>
-        <pubTime>2017-02-19T15:50:06.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-        <tag>Machine Learning</tag>
-         
-        <tag>Open Source</tag>
-         
-        <tag>Java</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tensorflow/core-components-from-deep-learning-framework/</loc>
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    <data>
-        <display>
-        <title>深度学习框架太抽象？其实不外乎这五大核心组件</title>
-        <pubTime>2017-02-19T15:57:20.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-        <tag>Deep Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/20-open-source-projects-of-machine-learning/</loc>
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
@@ -406,6 +358,54 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tensorflow/core-components-from-deep-learning-framework/</loc>
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    <data>
+        <display>
+        <title>深度学习框架太抽象？其实不外乎这五大核心组件</title>
+        <pubTime>2017-02-19T15:57:20.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Deep Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/</loc>
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    <data>
+        <display>
+        <title>25个Java机器学习工具&库</title>
+        <pubTime>2017-02-19T15:50:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
+         
+        <tag>Open Source</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/golden-age-of-artificial-intelligence/</loc>
     <lastmod>2017-02-19T06:03:00.877Z</lastmod>
     <data>
@@ -414,6 +414,28 @@
         <pubTime>2017-02-19T15:59:59.000Z</pubTime>
         
         <tag>AI</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Concepts/right-way-of-master-machine-learning/</loc>
+    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    <data>
+        <display>
+        <title>技术大牛带你走向机器学习“正道”</title>
+        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
          
          
            
@@ -438,28 +460,6 @@
         <tag>AI</tag>
          
         <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Concepts/right-way-of-master-machine-learning/</loc>
-    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
-    <data>
-        <display>
-        <title>技术大牛带你走向机器学习“正道”</title>
-        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-        <tag>Machine Learning</tag>
          
          
            
@@ -520,26 +520,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tools/tools-of-python/</loc>
-    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
-    <data>
-        <display>
-        <title>Python 资源大全中文版</title>
-        <pubTime>2017-02-18T01:02:06.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</loc>
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     <data>
@@ -552,6 +532,26 @@
         <tag>AI</tag>
          
         <tag>Tensorflow</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tools/tools-of-python/</loc>
+    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
+    <data>
+        <display>
+        <title>Python 资源大全中文版</title>
+        <pubTime>2017-02-18T01:02:06.000Z</pubTime>
+        
+        <tag>Python</tag>
          
          
            
