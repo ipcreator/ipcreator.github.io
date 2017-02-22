@@ -943,6 +943,77 @@
   </entry>
   
   <entry>
+    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
+    <link href="http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/"/>
+    <id>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/</id>
+    <published>2017-02-19T15:59:59.000Z</published>
+    <updated>2017-02-19T06:03:00.875Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
+<p>作者：傅盛</p>
+<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
+<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
+<p>怎么思考呢?我讲几个关键点。</p>
+<a id="more"></a>
+<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
+<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
+<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
+<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
+<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
+<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
+<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
+<p>这才有了一句流行语——Welcome to the GPU world.</p>
+<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
+<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
+<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
+<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
+<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
+<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
+<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
+<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
+<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
+<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
+<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
+<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
+<p>为什么要异构?</p>
+<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
+<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
+<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
+<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
+<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
+<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
+<p>我认为，只要需求越多，它就会越来越准。</p>
+<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
+<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
+<p>漫漫长路，才刚刚开始。<br>End.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;作者：傅盛&lt;/p&gt;
+&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
+&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
+&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
+    
+      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>人工智能的黄金时代</title>
     <link href="http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/golden-age-of-artificial-intelligence/"/>
     <id>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/golden-age-of-artificial-intelligence/</id>
@@ -1110,77 +1181,6 @@
     
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
-    <link href="http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/"/>
-    <id>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/</id>
-    <published>2017-02-19T15:59:59.000Z</published>
-    <updated>2017-02-19T06:03:00.875Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
-<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
-<p>作者：傅盛</p>
-<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
-<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
-<p>怎么思考呢?我讲几个关键点。</p>
-<a id="more"></a>
-<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
-<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
-<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
-<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
-<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
-<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
-<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
-<p>这才有了一句流行语——Welcome to the GPU world.</p>
-<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
-<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
-<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
-<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
-<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
-<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
-<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
-<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
-<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
-<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
-<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
-<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
-<p>为什么要异构?</p>
-<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
-<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
-<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
-<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
-<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
-<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
-<p>我认为，只要需求越多，它就会越来越准。</p>
-<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
-<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
-<p>漫漫长路，才刚刚开始。<br>End.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;作者：傅盛&lt;/p&gt;
-&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
-&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
-&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
-    
-      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
     
   </entry>
   
@@ -3698,7 +3698,7 @@
     <link href="http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-git/"/>
     <id>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-git/</id>
     <published>2017-02-19T06:09:06.000Z</published>
-    <updated>2017-02-22T08:00:24.670Z</updated>
+    <updated>2017-02-22T13:06:46.711Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/git-workflow-release-cycle-2feature.png" alt=""></p>
 <p>作者：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰</a></p>
@@ -3714,7 +3714,277 @@
 <p> 关于作者</p>
 <p>廖雪峰，十年软件开发经验，业余产品经理，精通Java/Python/Ruby/Visual Basic/Objective C等，对开源框架有深入研究，著有《Spring 2.0核心技术与最佳实践》一书，多个业余开源项目托管在GitHub，欢迎微博交流：</p>
 <p><img src="http://service.t.sina.com.cn/widget/qmd/1658384301/078cedea/2.png" alt=""></p>
-<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h2 id="Practice-in-Action"><a href="#Practice-in-Action" class="headerlink" title="Practice in Action"></a>Practice in Action</h2><p>$ git init<br>Reinitialized existing Git repository in D:/IPCreatorBlog/themes/yilia/.git/</p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><p>集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。<br><img src="http://www.liaoxuefeng.com/files/attachments/001384860735706fd4c70aa2ce24b45a8ade85109b0222b000/0" alt=""></p>
+<p>分布式版本控制系统通常也有一台充当“中央服务器”的电脑，但这个服务器的作用仅仅是用来方便“交换”大家的修改，没有它大家也一样干活，只是交换修改不方便而已。<br><img src="http://www.liaoxuefeng.com/files/attachments/0013848607465969378d7e6d5e6452d8161cf472f835523000/0" alt=""></p>
+<p>通过git init命令把这个目录变成Git可以管理的仓库：</p>
+<blockquote>
+<p>$ git init</p>
+</blockquote>
+<p>当前目录下多了一个.git的隐藏目录，这个目录是Git来跟踪管理版本库的，没事千万不要手动修改这个目录里面的文件，不然改乱了，就把Git仓库给破坏了。</p>
+<p><strong>所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。</strong></p>
+<p>使用Windows的童鞋要特别注意：</p>
+<p>千万不要使用Windows自带的记事本编辑任何文本文件。原因是Microsoft开发记事本的团队使用了一个非常弱智的行为来保存UTF-8编码的文件，他们自作聪明地在每个文件开头添加了0xefbbbf（十六进制）的字符，你会遇到很多不可思议的问题，比如，网页第一行可能会显示一个“?”，明明正确的程序一编译就报语法错误，等等，都是由记事本的弱智行为带来的。建议你下载Notepad++代替记事本，不但功能强大，而且免费！记得把Notepad++的默认编码设置为UTF-8 without BOM即可：<br><img src="http://www.liaoxuefeng.com/files/attachments/001384907170801199e153159cc4a438bed8d255edf157a000/0" alt=""></p>
+<p>用命令git add告诉Git，把文件添加到仓库：</p>
+<blockquote>
+<p>$ git add readme.txt</p>
+</blockquote>
+<p>执行上面的命令，没有任何显示，这就对了，<strong>Unix的哲学是“没有消息就是好消息”</strong>，说明添加成功。</p>
+<p>用命令git commit告诉Git，把文件提交到仓库：</p>
+<blockquote>
+<p>$ git commit -m “wrote a readme file”</p>
+</blockquote>
+<p>为什么Git添加文件需要add，commit一共两步呢？因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如：</p>
+<blockquote>
+<p>$ git add file1.txt<br>$ git add file2.txt file3.txt<br>$ git commit -m “add 3 files.”</p>
+</blockquote>
+<p>git status命令可以让我们时刻掌握仓库当前的状态<br>git diff顾名思义就是查看difference</p>
+<blockquote>
+<p>$ git diff readme.txt</p>
+</blockquote>
+<p>每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为commit。一旦你把文件改乱了，或者误删了文件，还可以从最近的一个commit恢复，然后继续工作</p>
+<p>版本控制系统肯定有某个命令可以告诉我们历史记录，在Git中，我们用git log命令查看：如果嫌输出信息太多，看得眼花缭乱的，可以试试加上–pretty=oneline参数</p>
+<blockquote>
+<p>$ git log –pretty=oneline</p>
+</blockquote>
+<p>为什么commit id需要用这么一大串数字表示呢？因为Git是分布式的版本控制系统，后面我们还要研究多人在同一个版本库里工作，如果大家都用1，2，3……作为版本号，那肯定就冲突了。</p>
+<p>在Git中，用HEAD表示当前版本<br>Git的版本回退速度非常快，因为Git在内部有个指向当前版本的HEAD指针，当你回退版本的时候，Git仅仅是把HEAD从指向append GPL：<br><img src="http://www.liaoxuefeng.com/files/attachments/001384907584977fc9d4b96c99f4b5f8e448fbd8589d0b2000/0" alt=""><br>改为指向add distributed：<br><img src="http://www.liaoxuefeng.com/files/attachments/001384907594057a873c79f14184b45a1a66b1509f90b7a000/0" alt=""><br>然后顺便把工作区的文件更新了。所以你让HEAD指向哪个版本号，你就把当前版本定位在哪。<br>Git提供了一个命令git reflog用来记录你的每一次命令：</p>
+<p>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。<br><img src="http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0" alt=""></p>
+<p>我们把文件往Git版本库里添加的时候，是分两步执行的：<br>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；<br>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。<br>你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</p>
+<p><img src="http://www.liaoxuefeng.com/files/attachments/001384907720458e56751df1c474485b697575073c40ae9000/0" alt=""><br>git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支。</p>
+<p><img src="http://www.liaoxuefeng.com/files/attachments/0013849077337835a877df2d26742b88dd7f56a6ace3ecf000/0" alt=""></p>
+<p>Git会告诉你，git checkout – file可以丢弃工作区的修改<br>就是让这个文件回到最近一次git commit或git add时的状态。<br>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；<br>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</p>
+<blockquote>
+<p>$ git checkout – readme.txt</p>
+</blockquote>
+<p>git checkout – file命令中的–很重要，没有–，就变成了“切换到另一个分支”的命令,git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</p>
+<p>用命令git reset HEAD file可以把暂存区的修改撤销掉（unstage），重新放回工作区：</p>
+<blockquote>
+<p>$ git reset HEAD readme.txt</p>
+</blockquote>
+<p>git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。</p>
+<p>确实要从版本库中删除该文件，那就用命令git rm删掉，并且git commit：</p>
+<blockquote>
+<p>$ git rm test.txt<br>$ git commit -m “remove test.txt”</p>
+</blockquote>
+<p>在本地的learngit仓库下运行命令：</p>
+<blockquote>
+<p>$ git remote add origin git@github.com:michaelliao/learngit.git</p>
+</blockquote>
+<p>请千万注意，把上面的michaelliao替换成你自己的GitHub账户名，否则，你在本地关联的就是我的远程库，关联没有问题，但是你以后推送是推不上去的，因为你的SSH Key公钥不在我的账户列表中。</p>
+<p>添加后，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。</p>
+<p>下一步，就可以把本地库的所有内容推送到远程库上：</p>
+<blockquote>
+<p>$ git push -u origin master</p>
+</blockquote>
+<p>把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+<p>从现在起，只要本地作了提交，就可以通过命令：</p>
+<blockquote>
+<p>$ git push origin master</p>
+</blockquote>
+<p>登陆GitHub，创建一个新的仓库，名字叫gitskills：我们勾选Initialize this repository with a README，这样GitHub会自动为我们创建一个README.md文件。创建完毕后，可以看到README.md文件：现在，远程库已经准备好了，下一步是用命令git clone克隆一个本地库：</p>
+<blockquote>
+<p>$ git clone git@github.com:michaelliao/gitskills.git</p>
+</blockquote>
+<p>GitHub给出的地址不止一个，还可以用<a href="https://github.com/michaelliao/gitskills.git这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。" target="_blank" rel="external">https://github.com/michaelliao/gitskills.git这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。</a></p>
+<p>使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。</p>
+<p>每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。</p>
+<p>一开始的时候，master分支是一条线，Git用master指向最新的提交，再用HEAD指向master，就能确定当前分支，以及当前分支的提交点：每次提交，master分支都会向前移动一步，这样，随着你不断提交，master分支的线也越来越长：<br><img src="http://www.liaoxuefeng.com/files/attachments/0013849087937492135fbf4bbd24dfcbc18349a8a59d36d000/0" alt=""></p>
+<p>当我们创建新的分支，例如dev时，Git新建了一个指针叫dev，指向master相同的提交，再把HEAD指向dev，就表示当前分支在dev上：<br><img src="http://www.liaoxuefeng.com/files/attachments/001384908811773187a597e2d844eefb11f5cf5d56135ca000/0" alt=""></p>
+<p>你看，Git创建一个分支很快，因为除了增加一个dev指针，改改HEAD的指向，工作区的文件都没有任何变化！</p>
+<p>不过，从现在开始，对工作区的修改和提交就是针对dev分支了，比如新提交一次后，dev指针往前移动一步，而master指针不变：<br><img src="http://www.liaoxuefeng.com/files/attachments/0013849088235627813efe7649b4f008900e5365bb72323000/0" alt=""></p>
+<p>假如我们在dev上的工作完成了，就可以把dev合并到master上。Git怎么合并呢？最简单的方法，就是直接把master指向dev的当前提交，就完成了合并：<br><img src="http://www.liaoxuefeng.com/files/attachments/00138490883510324231a837e5d4aee844d3e4692ba50f5000/0" alt=""></p>
+<p>所以Git合并分支也很快！就改改指针，工作区内容也不变！</p>
+<p>合并完分支后，甚至可以删除dev分支。删除dev分支就是把dev指针给删掉，删掉后，我们就剩下了一条master分支：<br><img src="http://www.liaoxuefeng.com/files/attachments/001384908867187c83ca970bf0f46efa19badad99c40235000/0" alt=""></p>
+<p>创建dev分支，然后切换到dev分支：</p>
+<blockquote>
+<p>$ git checkout -b dev</p>
+</blockquote>
+<p>git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：</p>
+<blockquote>
+<p>$ git branch dev<br>$ git checkout dev</p>
+</blockquote>
+<p>用git branch命令查看当前分支：git branch命令会列出所有分支，当前分支前面会标一个*号。</p>
+<blockquote>
+<p>$ git branch</p>
+</blockquote>
+<p>dev分支的工作完成，我们就可以切换回master分支：</p>
+<blockquote>
+<p>$ git checkout master</p>
+</blockquote>
+<p>切换回master分支后，再查看一个readme.txt文件，刚才添加的内容不见了！因为那个提交是在dev分支上，而master分支此刻的提交点并没有变：<br><img src="http://www.liaoxuefeng.com/files/attachments/001384908892295909f96758654469cad60dc50edfa9abd000/0" alt=""></p>
+<p>我们把dev分支的工作成果合并到master分支上：git merge命令用于合并指定分支到当前分支。</p>
+<blockquote>
+<p>$ git merge dev</p>
+</blockquote>
+<p>合并完成后，就可以放心地删除dev分支了：</p>
+<blockquote>
+<p>$ git branch -d dev</p>
+</blockquote>
+<p>因为创建、合并和删除分支非常快，所以Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在master分支上工作效果是一样的，但过程更安全。</p>
+<p>master分支和feature1分支各自都分别有新的提交，变成了这样：<br><img src="http://www.liaoxuefeng.com/files/attachments/001384909115478645b93e2b5ae4dc78da049a0d1704a41000/0" alt=""></p>
+<p>Git告诉我们，readme.txt文件存在冲突，必须手动解决冲突后再提交。git status也可以告诉我们冲突的文件：<br>Git用&lt;&lt;&lt;&lt;&lt;&lt;&lt;，=======，&gt;&gt;&gt;&gt;&gt;&gt;&gt;标记出不同分支的内容</p>
+<p>修改后保存，再提交：</p>
+<p>$ git add readme.txt<br>$ git commit -m “conflict fixed”<br>[master 59bc1cb] conflict fixed<br>现在，master分支和feature1分支变成了下图所示：<br><img src="http://www.liaoxuefeng.com/files/attachments/00138490913052149c4b2cd9702422aa387ac024943921b000/0" alt=""></p>
+<p>用带参数的git log也可以看到分支的合并情况：<br>$ git log –graph –pretty=oneline –abbrev-commit</p>
+<p>合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。<br>如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</p>
+<p>准备合并dev分支，请注意–no-ff参数，表示禁用Fast forward：</p>
+<blockquote>
+<p>$ git merge –no-ff -m “merge with no-ff” dev</p>
+</blockquote>
+<p>不使用Fast forward模式，merge后就像这样：<br><img src="http://www.liaoxuefeng.com/files/attachments/001384909222841acf964ec9e6a4629a35a7a30588281bb000/0" alt=""></p>
+<p>分支策略</p>
+<p>在实际开发中，我们应该按照几个基本原则进行分支管理：</p>
+<p>首先，master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；</p>
+<p>那在哪干活呢？干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；</p>
+<p>你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。</p>
+<p>所以，团队合作的分支看起来就像这样：</p>
+<p><img src="http://www.liaoxuefeng.com/files/attachments/001384909239390d355eb07d9d64305b6322aaf4edac1e3000/0" alt=""></p>
+<p>Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：</p>
+<blockquote>
+<p>$ git stash</p>
+</blockquote>
+<p>刚才的工作现场存到哪去了？用git stash list命令看看：</p>
+<blockquote>
+<p>$ git stash list</p>
+</blockquote>
+<p>一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；<br>另一种方式是用git stash pop，恢复的同时把stash内容也删了：</p>
+<blockquote>
+<p>$ git stash pop</p>
+</blockquote>
+<p>你可以多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash，用命令：</p>
+<blockquote>
+<p>$ git stash apply stash@{0}</p>
+</blockquote>
+<p>软件开发中，总有无穷无尽的新的功能要不断添加进来。</p>
+<p>添加一个新功能时，你肯定不希望因为一些实验性质的代码，把主分支搞乱了，所以，每添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支。</p>
+<p>当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是origin。</p>
+<p>要查看远程库的信息，用git remote：或者，用git remote -v显示更详细的信息：</p>
+<blockquote>
+<p>$ git remote<br>$ git remote -v<br>origin  git@github.com:michaelliao/learngit.git (fetch)<br>origin  git@github.com:michaelliao/learngit.git (push)</p>
+</blockquote>
+<p>上面显示了可以抓取和推送的origin的地址。如果没有推送权限，就看不到push的地址。</p>
+<p>推送分支</p>
+<p>推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上：</p>
+<blockquote>
+<p>$ git push origin master<br>如果要推送其他分支，比如dev，就改成：</p>
+<p>$ git push origin dev</p>
+</blockquote>
+<p>master分支是主分支，因此要时刻与远程同步；<br>dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；<br>bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；<br>feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。</p>
+<p>当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到本地的master分支。现在，你的小伙伴要在dev分支上开发，就必须创建远程origin的dev分支到本地，于是他用这个命令创建本地dev分支：</p>
+<blockquote>
+<p>$ git checkout -b dev origin/dev<br>现在，他就可以在dev上继续修改，然后，时不时地把dev分支push到远程：</p>
+</blockquote>
+<p>你的小伙伴的最新提交和你试图推送的提交有冲突，解决办法也很简单，Git已经提示我们，先用git pull把最新的提交从origin/dev抓下来，然后，在本地合并，解决冲突，再推送：</p>
+<p>git pull也失败了，原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接：</p>
+<blockquote>
+<p>$ git branch –set-upstream dev origin/dev<br>Branch dev set up to track remote branch dev from origin.</p>
+</blockquote>
+<p>再pull：$ git pull</p>
+<p>多人协作的工作模式通常是这样：</p>
+<p>首先，可以试图用git push origin branch-name推送自己的修改；<br>如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；<br>如果合并有冲突，则解决冲突，并在本地提交；<br>没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！<br>如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令git branch –set-upstream branch-name origin/branch-name。</p>
+<p><strong>tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起。</strong></p>
+<p>在Git中打标签非常简单，首先，切换到需要打标签的分支上：</p>
+<p>$ git branch</p>
+<p>然后，敲命令git tag <name>就可以打一个新标签：</name></p>
+<p>$ git tag v1.0<br>可以用命令git tag查看所有标签：标签不是按时间顺序列出，而是按字母排序的。可以用git show <tagname>查看标签信息, 还可以创建带有说明的标签，用-a指定标签名，-m指定说明文字：还可以通过-s用私钥签名一个标签：签名采用PGP签名，因此，必须首先安装gpg（GnuPG），如果没有找到gpg，或者没有gpg密钥对，就会报错, 如果报错，请参考GnuPG帮助文档配置Key。用命令git show <tagname>可以看到PGP签名信息,用PGP签名的标签是不可伪造的，因为可以验证PGP签名。</tagname></tagname></p>
+<p>$ git tag -a v0.1 -m “version 0.1 released” 3628164</p>
+<p>$ git tag</p>
+<p>默认标签是打在最新提交的commit上的。有时候，如果忘了打标签，比如，现在已经是周五了，但应该在周一打的标签没有打，怎么办？</p>
+<p>方法是找到历史提交的commit id，然后打上就可以了：</p>
+<p>$ git log –pretty=oneline –abbrev-commit</p>
+<p>比方说要对add merge这次提交打标签，它对应的commit id是6224937，敲入命令：</p>
+<p>$ git tag v0.9 6224937</p>
+<p>如果标签打错了，也可以删除：</p>
+<p>$ git tag -d v0.1</p>
+<p>如果要推送某个标签到远程，使用命令git push origin <tagname>：</tagname></p>
+<p>$ git push origin v1.0</p>
+<p>一次性推送全部尚未推送到远程的本地标签：</p>
+<p>$ git push origin –tags</p>
+<p>如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除：</p>
+<p>$ git tag -d v0.9</p>
+<p>然后，从远程删除。删除命令也是push，但是格式如下：</p>
+<p>$ git push origin :refs/tags/v0.9</p>
+<p>如何参与一个开源项目呢？比如人气极高的bootstrap项目，这是一个非常强大的CSS框架，你可以访问它的项目主页<a href="https://github.com/twbs/bootstrap，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone：" target="_blank" rel="external">https://github.com/twbs/bootstrap，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone：</a></p>
+<p>git clone git@github.com:michaelliao/bootstrap.git<br>一定要从自己的账号下clone仓库，这样你才能推送修改。如果从bootstrap的作者的仓库地址git@github.com:twbs/bootstrap.git克隆，因为没有权限，你将不能推送修改。</p>
+<p>Bootstrap的官方仓库twbs/bootstrap、你在GitHub上克隆的仓库my/bootstrap，以及你自己克隆到本地电脑的仓库，他们的关系就像下图显示的那样：</p>
+<p><img src="http://www.liaoxuefeng.com/files/attachments/001384926554932eb5e65df912341c1a48045bc274ba4bf000/0" alt=""></p>
+<p>如果你想修复bootstrap的一个bug，或者新增一个功能，立刻就可以开始干活，干完后，往自己的仓库推送。</p>
+<p>如果你希望bootstrap的官方库能接受你的修改，你就可以在GitHub上发起一个pull request。当然，对方是否接受你的pull request就不一定了。</p>
+<p>在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。</p>
+<p>忽略文件的原则是：</p>
+<p>忽略操作系统自动生成的文件，比如缩略图等；<br>忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的.class文件；<br>忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。</p>
+<p>检验.gitignore的标准是git status命令是不是说working directory clean。<br>如果你在资源管理器里新建一个.gitignore文件，它会非常弱智地提示你必须输入文件名，但是在文本编辑器里“保存”或者“另存为”就可以把文件保存为.gitignore了。</p>
+<p>你想添加一个文件到Git，但发现添加不了，原因是这个文件被.gitignore忽略了：</p>
+<p>$ git add App.class<br>The following paths are ignored by one of your .gitignore files:<br>App.class<br>Use -f if you really want to add them.<br>如果你确实想添加该文件，可以用-f强制添加到Git：</p>
+<p>$ git add -f App.class<br>或者你发现，可能是.gitignore写得有问题，需要找出来到底哪个规则写错了，可以用git check-ignore命令检查：</p>
+<blockquote>
+<p>$ git check-ignore -v App.class<br>.gitignore:3:.class    App.class</p>
+</blockquote>
+<p>Git会告诉我们，.gitignore的第3行规则忽略了该文件，于是我们就可以知道应该修订哪个规则。</p>
+<p>给Git配置好别名，就可以输入命令时偷个懒。我们鼓励偷懒。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>初始化一个Git仓库，使用git init命令。<br>添加文件到Git仓库，分两步：<br>第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件；<br>第二步，使用命令git commit，完成。</file></p>
+<p>要随时掌握工作区的状态，使用git status命令。<br>如果git status告诉你有文件被修改过，用git diff可以查看修改内容。</p>
+<p>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset –hard commit_id。<br>穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。<br>要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。</p>
+<p>每次修改，如果不add到暂存区，那就不会加入到commit中。</p>
+<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout – file。<br>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。<br>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</p>
+<p>命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。</p>
+<p>要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；</p>
+<p>关联后，使用命令git push -u origin master第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；</p>
+<p>分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！</p>
+<p>要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。</p>
+<p>Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。</p>
+<p>Git鼓励大量使用分支：</p>
+<ul>
+<li>查看分支：git branch</li>
+<li>创建分支：git branch <name></name></li>
+<li>切换分支：git checkout <name></name></li>
+<li>创建+切换分支：git checkout -b <name></name></li>
+<li>合并某分支到当前分支：git merge <name></name></li>
+<li>删除分支：git branch -d <name></name></li>
+</ul>
+<p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。<br>用git log –graph命令可以看到分支合并图。</p>
+<p>Git分支十分强大，在团队开发中应该充分应用。</p>
+<p>合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</p>
+<p>修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；</p>
+<p>当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。</p>
+<p>开发一个新feature，最好新建一个分支；</p>
+<p>如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。</name></p>
+<p>查看远程库信息，使用git remote -v；</p>
+<p>本地新建的分支如果不推送到远程，对其他人就是不可见的；</p>
+<p>从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；</p>
+<p>在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；</p>
+<p>建立本地分支和远程分支的关联，使用git branch –set-upstream branch-name origin/branch-name；</p>
+<p>从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。</p>
+<p>命令git tag <name>用于新建一个标签，默认为HEAD，也可以指定一个commit id；</name></p>
+<p>git tag -a <tagname> -m “blablabla…”可以指定标签信息；</tagname></p>
+<p>git tag -s <tagname> -m “blablabla…”可以用PGP签名标签；</tagname></p>
+<p>命令git tag可以查看所有标签。</p>
+<p>命令git push origin <tagname>可以推送一个本地标签；<br>命令git push origin –tags可以推送全部未推送过的本地标签；<br>命令git tag -d <tagname>可以删除一个本地标签；<br>命令git push origin :refs/tags/<tagname>可以删除一个远程标签。</tagname></tagname></tagname></p>
+<p>在GitHub上，可以任意Fork开源仓库；<br>自己拥有Fork后的仓库的读写权限；<br>可以推送pull request给官方仓库来贡献代码。</p>
+<p>忽略某些文件时，需要编写.gitignore；<br>.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理！</p>
+<h2 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h2><p>如果敲git st就表示git status那就简单多了，当然这种偷懒的办法我们是极力赞成的。我们只需要敲一行命令，告诉Git，以后st就表示status：</p>
+<blockquote>
+<p>$ git config –global alias.st status</p>
+</blockquote>
+<p>当然还有别的命令可以简写，很多人都用co表示checkout，ci表示commit，br表示branch：</p>
+<blockquote>
+<p>$ git config –global alias.co checkout<br>$ git config –global alias.ci commit<br>$ git config –global alias.br branch</p>
+</blockquote>
+<p>–global参数是全局参数，也就是这些命令在这台电脑的所有Git仓库下都有用。命令git reset HEAD file可以把暂存区的修改撤销掉（unstage），重新放回工作区。既然是一个unstage操作，就可以配置一个unstage别名：</p>
+<p>$ git config –global alias.unstage ‘reset HEAD’</p>
+<p>配置一个git last，让其显示最后一次提交信息：</p>
+<p>$ git config –global alias.last ‘log -1’<br>这样，用git last就能显示最近一次的提交：</p>
+<p>$ git last</p>
+<p>甚至还有人丧心病狂地把lg配置成了：</p>
+<p>git config –global alias.lg “log –color –graph –pretty=format:’%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset’ –abbrev-commit”</p>
+<p>配置Git的时候，加上–global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。</p>
+<p>配置文件放哪了？每个仓库的Git配置文件都放在.git/config文件中：<br>而当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig中：</p>
+<p>搭建Git服务器非常简单，通常10分钟即可完成；<br>要方便管理公钥，用Gitosis；<br>要像SVN那样变态地控制权限，用Gitolite。</p>
+<p>Git虽然极其强大，命令繁多，但常用的就那么十来个，掌握好这十几个常用命令，你已经可以得心应手地使用Git了。</p>
+<p>友情附赠国外网友制作的Git Cheat Sheet，建议打印出来备用：</p>
+<p><a href="https://pan.baidu.com/s/1kU5OCOB#path=%252Fpub%252Fgit" target="_blank" rel="external">Git Cheat Sheet</a></p>
+<h2 id="Practice-in-Action"><a href="#Practice-in-Action" class="headerlink" title="Practice in Action"></a>Practice in Action</h2><p>$ git init<br>Reinitialized existing Git repository in D:/IPCreatorBlog/themes/yilia/.git/</p>
 <p>$ git remote add yilia git@github.com:ipcreator/hexo-theme-yilia.git</p>
 <p>$ git push -u yilia master<br>Branch master set up to track remote branch master from yilia.<br>Everything up-to-date</p>
 <p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘yilia/master’.<br>Changes not staged for commit:<br>  (use “git add <file>…” to update what will be committed)<br>  (use “git checkout – <file>…” to discard changes in working directory)</file></file></p>
@@ -4179,6 +4449,58 @@ new file:   source/slider.fa3fc2.js
       <category term="Big Data" scheme="http://ipcreator.me/tags/Big-Data/"/>
     
       <category term="Data Mining" scheme="http://ipcreator.me/tags/Data-Mining/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
+    <link href="http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/"/>
+    <id>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</id>
+    <published>2017-02-18T01:02:06.000Z</published>
+    <updated>2017-02-19T06:02:30.218Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
+<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<a id="more"></a>
+<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
+<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
+<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
+<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
+<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
+<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
+<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
+<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
+<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
+<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
+<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
+<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
+<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
+<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
+<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
+<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
+<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
+<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
+<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
+<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
+<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
     
   </entry>
   
@@ -5292,58 +5614,6 @@ new file:   source/slider.fa3fc2.js
   </entry>
   
   <entry>
-    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
-    <link href="http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</id>
-    <published>2017-02-18T01:02:06.000Z</published>
-    <updated>2017-02-19T06:02:30.218Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
-<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<a id="more"></a>
-<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
-<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
-<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
-<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
-<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
-<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
-<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
-<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
-<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
-<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
-<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
-<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
-<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
-<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
-<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
-<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
-<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
-<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
-<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
-<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
-<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
     <title>超智能体</title>
     <link href="http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Concepts/super-intelligence-individual/"/>
     <id>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Concepts/super-intelligence-individual/</id>
@@ -5887,9 +6157,9 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
       <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
     
   </entry>
   
@@ -5985,9 +6255,9 @@ At this point you can add the tensorflow/examples/android directory as a new And
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
       <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
     
   </entry>
   
@@ -6024,9 +6294,9 @@ At this point you can add the tensorflow/examples/android directory as a new And
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
       <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
     
   </entry>
   
@@ -7341,6 +7611,94 @@ At this point you can add the tensorflow/examples/android directory as a new And
   </entry>
   
   <entry>
+    <title>避免炒作，如何寻找有价值的人工智能初创企业？</title>
+    <link href="http://ipcreator.me/2017/02/13/SmartAI/BusinessAI/how-to-find-ai-start-up-firm/"/>
+    <id>http://ipcreator.me/2017/02/13/SmartAI/BusinessAI/how-to-find-ai-start-up-firm/</id>
+    <published>2017-02-13T00:58:06.000Z</published>
+    <updated>2017-02-16T00:04:56.474Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html" target="_blank" rel="external">作者：网易AI研究院</a></p>
+<p><img src="http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png" alt=""></p>
+<p>　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。</p>
+<p>　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：</p>
+  <a id="more"></a>
+<h2 id="人工智能是公司的核心价值所在吗？"><a href="#人工智能是公司的核心价值所在吗？" class="headerlink" title="人工智能是公司的核心价值所在吗？"></a>人工智能是公司的核心价值所在吗？</h2><p>  　　投资公司Qualcomm Ventures的风险投资人Varun Jain坦言，“很多陷入资金困境的公司都会将自己包装成人工智能企业。”Varun Jain列举了从人工智能路由器到人工智能榨汁机等产品和设备。</p>
+<p>  　　Varun Jain解释称，在很多情况下，公司所宣传的人工智能仅仅是一个附加功能，而不是公司的核心价值。他指出，“传统的WiFi路由器可以使用人工智能技术来检测网络中的异常数据，但路由器的功能并不会有实质性的改变。”</p>
+<p>  　　相比之下，Qualcomm Ventures投资了Clarifai和Cruise Automation等真正的人工智能初创企业，而Cruise Automation已经被通用收购。Cruise Automation通过人工智能技术为自动驾驶汽车供电，而Clarifai则是利用先进的深度学习和计算机视觉技术来识别图像和视频中的特定物体。</p>
+<h2 id="技术团队有多可靠？"><a href="#技术团队有多可靠？" class="headerlink" title="　　技术团队有多可靠？"></a>　　技术团队有多可靠？</h2><p>  　　CRV公司的风险投资人Max Gazor指出，“具备先进人工智能技术的公司往往拥有顶尖的技术人才，他们或者来自业内先进研究实验室，或是来自诸如Google Brain或Facebook人工智能团队等知名行业组织。”</p>
+<p>  　　CRV对技术的追求直接体现在他们的投资行为中，他们投资的公司创始人普遍具有非凡的技术经验。初创企业Rethink Robotics创始人Rod Brooks是麻省理工学院人工智能实验室的创始主管，也是著名机器人公司iRobot的创始人。而Jibo的Cynthia Breazeal也曾在麻省理工大学媒体实验室成立过机器人小组，是一名世界知名的社交机器人专家。Pullstring公司的创始人Oren Jacob也是如此，他曾是皮克斯的首席技术官，自公司成立初期就与史蒂夫乔布斯共事。</p>
+<p>  　　而投资公司DCM Capital的创始人David Cheng则指出，“在整个行业生命周期的这一特定阶段，<strong>一个公司拥有一定数量的人工智能专家就能够获得开发技术的必要经验，从而开发真正的创新解决方案。</strong> 如果一个团队声称他们的产品使用了领先的人工智能技术却没有相应的团队，那么我们对此将持怀疑态度。”</p>
+<h2 id="能够有效解决客户的实际问题吗？"><a href="#能够有效解决客户的实际问题吗？" class="headerlink" title="　　能够有效解决客户的实际问题吗？"></a>　　能够有效解决客户的实际问题吗？</h2><p>  　　投资公司GE Ventures投资人Michael Dolbec指出，“就我个人而言，一个公司若是仅仅对人工智能夸夸其谈，而毫不涉及客户问题，那我就没有什么兴趣。我们投资的是宝贵的技术成果，而不是科学实验项目。”</p>
+<p>  　　每一位投资者对此都表示认同。</p>
+<p>  　　IA Ventures的Brad Gillespie补充称，“如果让我在二者中选择其一时，那么一个公司的业务专业知识将胜过其机器学习专业技能。”IA Ventures曾投资了Vectra Networks，这是一家由经验丰富业内专家领导的网络安全公司，专注于为客户解决重要问题，为安全分析师最大限度提高可用性。而Vectra Networks的竞争对手不断强调他们机器学习技术的复杂性，但客户的反应是“这些家伙很聪明，但他们并不理解我的业务是什么。他们的产品很花哨，但我并不明白它到底是什么。”</p>
+<p>  　　有效解决客户的业务痛点需要创始团队能够超越狭隘的技术方法，拥有解决特定业务的能力。投资公司Two Sigma Ventures的Colin Beirne指出，“当然，<strong>解决当今大多数困难问题需要不同技术的整合，而在特定业务领域使用人工智能能够在一定程度上降低学习理解的复杂性。</strong>”</p>
+<h2 id="是否有相关的，自有或可扩展的数据源？"><a href="#是否有相关的，自有或可扩展的数据源？" class="headerlink" title="　　是否有相关的，自有或可扩展的数据源？"></a>　　是否有相关的，自有或可扩展的数据源？</h2><p>  　　投资公司Qualcomm Ventures的Jain总习惯于这样问创始人，“你是如何获取数据的？你是依托大公司提供的数据，还是独立获取数据？”当然这两种方法都是可行的，但投资人更倾向于创业公司能够独立获取数据。</p>
+<p>  　　传统上。自动驾驶汽车会在郊区等封闭环境中进行测试。而Qualcomm所投资的Cruise Automation则通过在开放城市环境中操作测试车辆，整合人工干预的因素，从而获取更多驾驶数据。同样，Qualcomm所投资的Clarifai通过应用程序能够获取更多的数据，通过此也能够处理更多的业务数据。</p>
+<p>  　　投资者除了对数据源的独特性和合理性有要求，此外人工智能数据还必须要与其面对的问题密切相关。投资公司Battery Ventures的Dharmesh Thakker指出，“<strong>新一代人工智能技术往往取决于获取数据的复杂程度。诸如图像、音视频等非结构化数据处理要比普通文本困难的多。</strong>”在投资决策中，Dharmesh Thakker还会考虑目标公司处理静态数据和快速移动物体数据的能力。诸如自动驾驶汽车获取的实时图像等快速移动物体数据处理算法通常会复杂很多。</p>
+<p>  　　最后，创始团队还需要 <strong>证实其有根据自有数据不断改进产品性能的能力</strong>。Qualcomm的Jain会定期考察团队是否有“快速处理数据并不断优化的能力，从而使系统更加健壮。”</p>
+<h2 id="开发独有技术还是依靠开源产品"><a href="#开发独有技术还是依靠开源产品" class="headerlink" title="　　开发独有技术还是依靠开源产品"></a>　　开发独有技术还是依靠开源产品</h2><p>  　　投资公司Verizon Ventures的投资人Suresh Madhavan指出，相比于开发专有技术，依托开源框架往往就像是一种赠品，“<strong>开源的确能够让你分析解决一些表面问题，但无助于从根本上解决有难度的业务问题。</strong>”</p>
+<p>  　　DCM Ventures的Cheng也同意这一点。DCM的投资团队背后拥有一个由行业顾问和技术专家组成的强大网络。“（这些专家）帮我们审查团队技术、数据架构方式，并能够确定创业团队进行数据收集、存储、解析的根本方法。他们也帮助我们擦亮眼睛，找出滥竽充数者。”</p>
+<h2 id="产品是否有粘性？"><a href="#产品是否有粘性？" class="headerlink" title="　　产品是否有粘性？"></a>　　产品是否有粘性？</h2><p>  　　Sumant Mandal是投资公司March Capital的合伙人，也是The Hive的共同创始人，后者是一家专注于人工智能初创企业的孵化器。Mandal坦言，“<strong>对于人工智能初创企业来说， 如果效率不能提高5到10倍，那么就很难打入市场，从而为投资者带来价值。</strong>”Mandal建议初创企业需要考虑客户的收益。比如要将人工智能用于改进招聘流程，Mandal就建议初创团队要问自己，“如果我能够将相应效率提高5倍，那么能否让客户从雇员身上获得百倍收益？”</p>
+<p>  　　此外，Mandal还指出，<strong>价值提升必须要以客户可见的方式提供给客户，譬如以仪表盘或是真正有价值的情报等形式展现出来。</strong> Mandal警告称，虽然人工智能在网络安全领域的应用已经很多，但数据和相关人才的缺乏，导致“安全分析师并不需要过多的警报”。</p>
+<p>  　　而即便有一个较为理想的产品，仅仅为客户提供单一的解决方案也不是一个可行的商业模式。Woodside Capital的Kartik Gada建议创业公司要寻求收益以及客户的多元化。“你的收入是否稳健？是否常态化？你的客户是否需要相同或更多的解决方案？”</p>
+<h2 id="创业团队是否全面？"><a href="#创业团队是否全面？" class="headerlink" title="　　创业团队是否全面？"></a>　　创业团队是否全面？</h2><p>  　　最后一点，投资者倾向于寻求那些能够解决人工智能业务的多样化团队。投资公司Monsanto Growth Ventures的Kiersten Stead解释称，“多样化意味着团队包括业内专家、商业领袖以及销售精英，而不仅仅是工程技术人员。”</p>
+<p>  　　但是，Stead观察到，很多创业团队，特别是那些仅仅由人工智能研究人员组成的技术团队，并没有特定行业的相关经验，更容易失败。在农业技术开发和遗传育种方面尤为如此。</p>
+<p>  　　她强调，“人工智能技术团队在销售上有短板，反之亦然。我们会寻找行业经验丰富的人工智能企业创始人，他们往往有完整成熟的职业生涯，可与各类人组成一个多样化的团队。”人工智能企业往往会忽视销售和营销，但这对于成功非常重要。</p>
+<p>  　　投资公司Woodside Capital的Gada也警告称，“<strong>很多人工智能初创企业犯下的最大错误就是完全无视营销的重要性。很多客户根本不知道他们需要这些产品。</strong>”（晗冰）</p>
+<h2 id="AI研究院-企业做人工智能转型有四大关键要素"><a href="#AI研究院-企业做人工智能转型有四大关键要素" class="headerlink" title="AI研究院 | 企业做人工智能转型有四大关键要素"></a>AI研究院 | 企业做人工智能转型有四大关键要素</h2><p>  　　【AI研究院 | 网易智能工作室倾力打造的人工智能专业栏目，聚焦行业，深度分析，只为专业】</p>
+<p>  　　<img src="http://dingyue.nosdn.127.net/qvgJyuC8=PfZZvxXgv1ME7yu5vNchInjJQ74zChPxAvSr1486702463725compressflag.jpg" alt=""></p>
+<p>  　　网易智能讯 2月10日消息，在很多行业我们都已接近人工智能技术发展的临界点，包括自动驾驶汽车、蜂巢无人机、自动售货等。如今一个公司无论规模大小如何，都必须了解人工智能将怎样影响、甚至消灭某个行业，以及学会利用人工智能和机器学习（ML）。</p>
+<p>  　　对于企业来说这是一个至关重要的选择——是投身到人工智能领域还是保持现状等着被淘汰，前者可以更有效地帮助企业实现商业目标。人工智能—机器学习将令我们的日常生活更加美好高效，把现有工作提升到更加精确、有效的水平。</p>
+<p>  　　像优步、谷歌和Facebook这样的科技创新公司，通过收购和内部组织的转型，在人工智能领域进行了大胆尝试，使它成为一项战略重点。在2017年达沃斯论坛上，世界各国领导人探讨了人工智能对就业的影响，以及哪些行业适合应用这项技术。</p>
+<p>  　　事实上，根据互联网数据中心（IDC）的数据显示，到2020年，企业在人工智能方面的投入将从2016年的80亿美元飙升至470亿美元。另外，到2019年，将会有超过1.1亿个安装了嵌入式智能助手的设备走进美国家庭。</p>
+<p>  　　Intuit公司的人工智能转型始于4年前，当时业内都在探讨两个问题：金融软件的未来是什么；我们在帮助客户方面扮演怎样的角色。人工智能的趋势在当时是很明显的，包括工作的个性化、自动化、增强和速度等，这些都需要软件来进行辅助。近年来，随着人工智能技术的进步，我们对它的看法也作出了改变。</p>
+<p>  　　现在我们将人工智能看作一种为用户提供方便的技术。我们预计人工智能将创造新技术，例如以一种曾经无法想象的高科技方法为消费者处理税务、为小型企业完成账目记录等。但要实现这一目标并非易事。Intuit公司拥有30多种人工智能和机器学习模型，可以在实时体验中接触客户，而且我们还在不断作出新的尝试。我们在实验和成果中不断学习、发展和改进技术。</p>
+<p>  　　如果你的公司致力于通过人工智能打造能够满足消费者需求的产品和服务，那么这里有几个关键的问题需要考虑。</p>
+<p>  　　<strong>1.重视数据</strong></p>
+<p>  　　每一家公司的人工智能探索之旅都从数据开始。数据令机器学习和人工智能更强大。如果你一直在考虑如何利用数据，那么现在就可以开始制定和实施计划了。</p>
+<p>  　　在Intuit，我们几年前就已经转向了对数据的关注。我们在与业务部门同事进行沟通后制定了技术路线，充分了解了客户需求、行业趋势以及数据能够带来的客户利益。我们的Intuit Analytics Cloud云分析系统打破了一些障碍，让我们能够以更全面地认识产品产生的海量数据。在拥有人工智能或机器学习模型之前，我们就开始专注于数据分析和个性化的基础性工作。<strong>可靠、快速、准确的数据是人工智能—机器学习发展的催化剂。</strong></p>
+<p>  　　<strong>2.展望未来</strong></p>
+<p>  　　设想公司的未来是很重要的，同时也要观察人工智能将如何令你更加强大，或者改变你对研发工作的想法。我们在Intuit进行了一场活动，会见了各种各样的组织和个人，包括大学的学者专家、创业公司、风投公司等，探讨了人工智能和机器学习的未来蓝图，以及Intuit公司将如何适应这一转变。规模较小的公司同样可以在相应的资源范围内做出创新。</p>
+<p>  　　<strong>3.转变心态</strong></p>
+<p>  　　在开始阶段向业务部门和产品负责人解释投资人工智能的益处，可能是一件很有挑战性的事情。重要的是每个季度的客户利益需要体现在商业价值上，而不是单纯研究数据。例如，Intuit的税务分析系统就分析了3000万客户的纳税申报表，对分项扣除还是统一扣除作出相应建议，这可以节省40%的税收工作准备时间。这样一个甚至非数据专家都能理解的切实的商业成果。可以说，<strong>人工智能—机器学习是一段探索之旅。通过实际产生的影响来预估潜在的成果</strong>，这是很重要的。</p>
+<p>  　　4.成立团队，选择项目</p>
+<p>  　　要在企业中开始发展人工智能，先选择一个容易解决的业务问题，组件一支跨职能员工团队，包括数据科学家、工程师和质量监管人员，同时要注意及时更新团队。在团队中建立起能够理解实验价值的文化。珍惜从人工智能应用中得来的知识。另外，你的团队还应同时拥有专业知识和实战经验。千万不要认为只需要聘请专家。同时，在亟待解决的问题上还需要保持与其他行业科学家的互动，比如其他领域的博士等，他们天生具有好奇心，能够理解科学原理，并且有一套不同的解决方案。<strong>真正的人工智能—机器学习可以在应用数据科学方面带来重大成果。</strong> 不要低估了它的重要性，同时也要改变心态。</p>
+<p>  　　我们才刚刚到达人工智能和机器学习的起步阶段。<strong>在公司初创之时紧跟最先进的技术，将有助于你在未来发展中处于优势地位。</strong></p>
+<p>  　　（来源/VentureBeat 翻译/机器小易 审校/小ka）</p>
+<p>  　　注：本文为网易智能工作室稿件，转载需注明出处，否则追究其法律责任。</p>
+<h2 id="人工智能的迅速崛起需要警惕这四大风险"><a href="#人工智能的迅速崛起需要警惕这四大风险" class="headerlink" title="人工智能的迅速崛起需要警惕这四大风险"></a>人工智能的迅速崛起需要警惕这四大风险</h2><p><img src="http://dingyue.nosdn.127.net/ydgEN7xEoWpsGyUkJBKbgdXlwrf5u91jceEc1KE5IZXI=1484981995496compressflag.jpg" alt=""></p>
+<p>　　【网易智能讯 1月21日消息】大家可以想象一下，一名营销主管深夜翻看公司的幻灯片，该公司承诺利用人工智能（AI）自动化他的评分过程、优化他的广告开支方案、帮助增加他的营销开支回报率，他想要知道，哪里可能出现问题？</p>
+<p>的确有可能出现问题。尽管公司使用AI会让营销人员的工作变得更简单，但我们必须承认，AI的承诺往往言过其实。AI带来的好处是显而易见的，但也存在巨大风险。即使你找到最好的AI，并将其应用到你的营销技术堆栈中，依然存在影响你成功部署AI的风险。我并不担心这些风险，也不想将它们藏起来，我认为最好是直接面对它们，直至最终解决它们。</p>
+<p>AI主要存在四大类危险：</p>
+<p><strong>AI危险一：害怕失去工作</strong><br>这是最容易理解的AI危险，同时也是最容易解决的。人们经常害怕AI，因为他们担心AI会让人类变得多余，最终被拥有机器大脑的AI取代我们独特的技能。对于某些工作来说，这可能是真的。但我认为，AI带来的实际危险可能比人类预想的更低。AI还不够先进，也无法全面取代营销专家。如果营销人员学会有效地使用AI，它们反而会增强人类能力。也就是说，为了促使人们购买AI支持的技术，我们首先需要平抚人们对AI的恐惧。</p>
+<p><strong>AI危险二：错位的激励</strong><br>技术传道者有时候会深入企业内部，并利用让人惊叹的创意，阐述他们的产品如何改变每个人。但是有了AI和许多企业技术，这些热情常常会撞墙，因为这些墙将各个部门隔离开。事实证明，公司中拥有大量数据的人，往往不会与其他利益相关者分享数据。无论是出于隐私担忧、部门政策、个人冲突亦或是简单的流程偏差，比如障碍往往可能导致雄心勃勃的AI项目被搁置。</p>
+<p>为此，到目前为止，两类公司在部署AI时取得最大成功，一类是初创企业（公司规模较小，刚刚创建还没有僵化思维），一类是像谷歌和Facebook这样的大科技公司（其全部生命线都基于对数据的利用）。介于这两类极端公司之间的其他企业，几乎包括世界上所有公司，部署AI都会遇到更大阻碍。想要利用AI提高效率的营销人员需要意识到部门和监管问题，这些问题可能影响到他们。此外，数据价值链上的所有玩家都需要保持一致。</p>
+<p><strong>AI危险三：不可预测性</strong><br>这可能是AI固有的最大危险。所有AI项目都是不可预测的，因为它们正被用于解决未知问题。与传统软件开发不同，目前还没有标准的工程方法，可以通过分步获得可预知的AI结果。在这种情况下，将AI应用到营销数据中就像纯粹的科幻。我们不知道特定的数据集是否能解决特定的问题。就像无法预测科学实验的所有结果那样，AI也很难预测结果。这是有关软件开发的全新思维方式，但对任何营销领域或没有AI经验的人来说，这将是个巨大挑战。</p>
+<p><strong>AI危险四：人才匮乏</strong><br>这是AI带来的最后危险，阻碍你的团队引入足够的人才。不幸的是，当前AI领域存在巨大的技术鸿沟。AI领域的绝大多数人才都没有真正处理大规模行业数据的经验。而真正的专家还很少，最新统计显示，数据科学家的职位空缺高达1.6万个。这意味着，找到你需要的专业人士，并让他们帮助部署和执行AI驱动的营销计划非常困难。</p>
+<p>由于存在这些风险，你可以看到截止到目前许多AI实验都以失败告终。举例来说，麦肯锡最近做了一项研究，对石油和天然气钻探作业决策中的数据进行实时分析。麦肯锡研究的1家公司在离岸钻井仪器方面投入巨资，并通过RFID标签和内嵌传感器收集到大量数据。不幸的是，他们收集的数据中只有40%能传回到陆地数据中心，只有1%能真正进入数据库中，不到1%能被用于终端用户的产品中。最终，这些数据没有为人们的决策提供任何帮助。</p>
+<p>不幸的是，你可能发现同样大的阻力。在使用AI过程中，你会遇到强烈的文化阻碍。许多人不相信机器做出的决定，直到机器算法有机会证明自己的决定。营销高管们部署AI面对的挑战是，需要确保所有相关利益者支持他们。确保人们受到相关训练，确保他们对可能结果产生现实期待，并获得正确的激励奖励。</p>
+<p>只有做到这些，你才能开始意识到AI革命为营销领域带来的惊人好处。（小小）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html&quot;&gt;作者：网易AI研究院&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。&lt;/p&gt;
+&lt;p&gt;　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="理财" scheme="http://ipcreator.me/categories/%E7%90%86%E8%B4%A2/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
+    
+  </entry>
+  
+  <entry>
     <title>这一年来，数据科学家都用了哪些算法玩转人工智能？</title>
     <link href="http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/Concepts/ai-and-algorithms/"/>
     <id>http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/Concepts/ai-and-algorithms/</id>
@@ -7485,94 +7843,6 @@ At this point you can add the tensorflow/examples/android directory as a new And
       <category term="Open Source" scheme="http://ipcreator.me/tags/Open-Source/"/>
     
       <category term="Algorithm" scheme="http://ipcreator.me/tags/Algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>避免炒作，如何寻找有价值的人工智能初创企业？</title>
-    <link href="http://ipcreator.me/2017/02/13/SmartAI/BusinessAI/how-to-find-ai-start-up-firm/"/>
-    <id>http://ipcreator.me/2017/02/13/SmartAI/BusinessAI/how-to-find-ai-start-up-firm/</id>
-    <published>2017-02-13T00:58:06.000Z</published>
-    <updated>2017-02-16T00:04:56.474Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html" target="_blank" rel="external">作者：网易AI研究院</a></p>
-<p><img src="http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png" alt=""></p>
-<p>　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。</p>
-<p>　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：</p>
-  <a id="more"></a>
-<h2 id="人工智能是公司的核心价值所在吗？"><a href="#人工智能是公司的核心价值所在吗？" class="headerlink" title="人工智能是公司的核心价值所在吗？"></a>人工智能是公司的核心价值所在吗？</h2><p>  　　投资公司Qualcomm Ventures的风险投资人Varun Jain坦言，“很多陷入资金困境的公司都会将自己包装成人工智能企业。”Varun Jain列举了从人工智能路由器到人工智能榨汁机等产品和设备。</p>
-<p>  　　Varun Jain解释称，在很多情况下，公司所宣传的人工智能仅仅是一个附加功能，而不是公司的核心价值。他指出，“传统的WiFi路由器可以使用人工智能技术来检测网络中的异常数据，但路由器的功能并不会有实质性的改变。”</p>
-<p>  　　相比之下，Qualcomm Ventures投资了Clarifai和Cruise Automation等真正的人工智能初创企业，而Cruise Automation已经被通用收购。Cruise Automation通过人工智能技术为自动驾驶汽车供电，而Clarifai则是利用先进的深度学习和计算机视觉技术来识别图像和视频中的特定物体。</p>
-<h2 id="技术团队有多可靠？"><a href="#技术团队有多可靠？" class="headerlink" title="　　技术团队有多可靠？"></a>　　技术团队有多可靠？</h2><p>  　　CRV公司的风险投资人Max Gazor指出，“具备先进人工智能技术的公司往往拥有顶尖的技术人才，他们或者来自业内先进研究实验室，或是来自诸如Google Brain或Facebook人工智能团队等知名行业组织。”</p>
-<p>  　　CRV对技术的追求直接体现在他们的投资行为中，他们投资的公司创始人普遍具有非凡的技术经验。初创企业Rethink Robotics创始人Rod Brooks是麻省理工学院人工智能实验室的创始主管，也是著名机器人公司iRobot的创始人。而Jibo的Cynthia Breazeal也曾在麻省理工大学媒体实验室成立过机器人小组，是一名世界知名的社交机器人专家。Pullstring公司的创始人Oren Jacob也是如此，他曾是皮克斯的首席技术官，自公司成立初期就与史蒂夫乔布斯共事。</p>
-<p>  　　而投资公司DCM Capital的创始人David Cheng则指出，“在整个行业生命周期的这一特定阶段，<strong>一个公司拥有一定数量的人工智能专家就能够获得开发技术的必要经验，从而开发真正的创新解决方案。</strong> 如果一个团队声称他们的产品使用了领先的人工智能技术却没有相应的团队，那么我们对此将持怀疑态度。”</p>
-<h2 id="能够有效解决客户的实际问题吗？"><a href="#能够有效解决客户的实际问题吗？" class="headerlink" title="　　能够有效解决客户的实际问题吗？"></a>　　能够有效解决客户的实际问题吗？</h2><p>  　　投资公司GE Ventures投资人Michael Dolbec指出，“就我个人而言，一个公司若是仅仅对人工智能夸夸其谈，而毫不涉及客户问题，那我就没有什么兴趣。我们投资的是宝贵的技术成果，而不是科学实验项目。”</p>
-<p>  　　每一位投资者对此都表示认同。</p>
-<p>  　　IA Ventures的Brad Gillespie补充称，“如果让我在二者中选择其一时，那么一个公司的业务专业知识将胜过其机器学习专业技能。”IA Ventures曾投资了Vectra Networks，这是一家由经验丰富业内专家领导的网络安全公司，专注于为客户解决重要问题，为安全分析师最大限度提高可用性。而Vectra Networks的竞争对手不断强调他们机器学习技术的复杂性，但客户的反应是“这些家伙很聪明，但他们并不理解我的业务是什么。他们的产品很花哨，但我并不明白它到底是什么。”</p>
-<p>  　　有效解决客户的业务痛点需要创始团队能够超越狭隘的技术方法，拥有解决特定业务的能力。投资公司Two Sigma Ventures的Colin Beirne指出，“当然，<strong>解决当今大多数困难问题需要不同技术的整合，而在特定业务领域使用人工智能能够在一定程度上降低学习理解的复杂性。</strong>”</p>
-<h2 id="是否有相关的，自有或可扩展的数据源？"><a href="#是否有相关的，自有或可扩展的数据源？" class="headerlink" title="　　是否有相关的，自有或可扩展的数据源？"></a>　　是否有相关的，自有或可扩展的数据源？</h2><p>  　　投资公司Qualcomm Ventures的Jain总习惯于这样问创始人，“你是如何获取数据的？你是依托大公司提供的数据，还是独立获取数据？”当然这两种方法都是可行的，但投资人更倾向于创业公司能够独立获取数据。</p>
-<p>  　　传统上。自动驾驶汽车会在郊区等封闭环境中进行测试。而Qualcomm所投资的Cruise Automation则通过在开放城市环境中操作测试车辆，整合人工干预的因素，从而获取更多驾驶数据。同样，Qualcomm所投资的Clarifai通过应用程序能够获取更多的数据，通过此也能够处理更多的业务数据。</p>
-<p>  　　投资者除了对数据源的独特性和合理性有要求，此外人工智能数据还必须要与其面对的问题密切相关。投资公司Battery Ventures的Dharmesh Thakker指出，“<strong>新一代人工智能技术往往取决于获取数据的复杂程度。诸如图像、音视频等非结构化数据处理要比普通文本困难的多。</strong>”在投资决策中，Dharmesh Thakker还会考虑目标公司处理静态数据和快速移动物体数据的能力。诸如自动驾驶汽车获取的实时图像等快速移动物体数据处理算法通常会复杂很多。</p>
-<p>  　　最后，创始团队还需要 <strong>证实其有根据自有数据不断改进产品性能的能力</strong>。Qualcomm的Jain会定期考察团队是否有“快速处理数据并不断优化的能力，从而使系统更加健壮。”</p>
-<h2 id="开发独有技术还是依靠开源产品"><a href="#开发独有技术还是依靠开源产品" class="headerlink" title="　　开发独有技术还是依靠开源产品"></a>　　开发独有技术还是依靠开源产品</h2><p>  　　投资公司Verizon Ventures的投资人Suresh Madhavan指出，相比于开发专有技术，依托开源框架往往就像是一种赠品，“<strong>开源的确能够让你分析解决一些表面问题，但无助于从根本上解决有难度的业务问题。</strong>”</p>
-<p>  　　DCM Ventures的Cheng也同意这一点。DCM的投资团队背后拥有一个由行业顾问和技术专家组成的强大网络。“（这些专家）帮我们审查团队技术、数据架构方式，并能够确定创业团队进行数据收集、存储、解析的根本方法。他们也帮助我们擦亮眼睛，找出滥竽充数者。”</p>
-<h2 id="产品是否有粘性？"><a href="#产品是否有粘性？" class="headerlink" title="　　产品是否有粘性？"></a>　　产品是否有粘性？</h2><p>  　　Sumant Mandal是投资公司March Capital的合伙人，也是The Hive的共同创始人，后者是一家专注于人工智能初创企业的孵化器。Mandal坦言，“<strong>对于人工智能初创企业来说， 如果效率不能提高5到10倍，那么就很难打入市场，从而为投资者带来价值。</strong>”Mandal建议初创企业需要考虑客户的收益。比如要将人工智能用于改进招聘流程，Mandal就建议初创团队要问自己，“如果我能够将相应效率提高5倍，那么能否让客户从雇员身上获得百倍收益？”</p>
-<p>  　　此外，Mandal还指出，<strong>价值提升必须要以客户可见的方式提供给客户，譬如以仪表盘或是真正有价值的情报等形式展现出来。</strong> Mandal警告称，虽然人工智能在网络安全领域的应用已经很多，但数据和相关人才的缺乏，导致“安全分析师并不需要过多的警报”。</p>
-<p>  　　而即便有一个较为理想的产品，仅仅为客户提供单一的解决方案也不是一个可行的商业模式。Woodside Capital的Kartik Gada建议创业公司要寻求收益以及客户的多元化。“你的收入是否稳健？是否常态化？你的客户是否需要相同或更多的解决方案？”</p>
-<h2 id="创业团队是否全面？"><a href="#创业团队是否全面？" class="headerlink" title="　　创业团队是否全面？"></a>　　创业团队是否全面？</h2><p>  　　最后一点，投资者倾向于寻求那些能够解决人工智能业务的多样化团队。投资公司Monsanto Growth Ventures的Kiersten Stead解释称，“多样化意味着团队包括业内专家、商业领袖以及销售精英，而不仅仅是工程技术人员。”</p>
-<p>  　　但是，Stead观察到，很多创业团队，特别是那些仅仅由人工智能研究人员组成的技术团队，并没有特定行业的相关经验，更容易失败。在农业技术开发和遗传育种方面尤为如此。</p>
-<p>  　　她强调，“人工智能技术团队在销售上有短板，反之亦然。我们会寻找行业经验丰富的人工智能企业创始人，他们往往有完整成熟的职业生涯，可与各类人组成一个多样化的团队。”人工智能企业往往会忽视销售和营销，但这对于成功非常重要。</p>
-<p>  　　投资公司Woodside Capital的Gada也警告称，“<strong>很多人工智能初创企业犯下的最大错误就是完全无视营销的重要性。很多客户根本不知道他们需要这些产品。</strong>”（晗冰）</p>
-<h2 id="AI研究院-企业做人工智能转型有四大关键要素"><a href="#AI研究院-企业做人工智能转型有四大关键要素" class="headerlink" title="AI研究院 | 企业做人工智能转型有四大关键要素"></a>AI研究院 | 企业做人工智能转型有四大关键要素</h2><p>  　　【AI研究院 | 网易智能工作室倾力打造的人工智能专业栏目，聚焦行业，深度分析，只为专业】</p>
-<p>  　　<img src="http://dingyue.nosdn.127.net/qvgJyuC8=PfZZvxXgv1ME7yu5vNchInjJQ74zChPxAvSr1486702463725compressflag.jpg" alt=""></p>
-<p>  　　网易智能讯 2月10日消息，在很多行业我们都已接近人工智能技术发展的临界点，包括自动驾驶汽车、蜂巢无人机、自动售货等。如今一个公司无论规模大小如何，都必须了解人工智能将怎样影响、甚至消灭某个行业，以及学会利用人工智能和机器学习（ML）。</p>
-<p>  　　对于企业来说这是一个至关重要的选择——是投身到人工智能领域还是保持现状等着被淘汰，前者可以更有效地帮助企业实现商业目标。人工智能—机器学习将令我们的日常生活更加美好高效，把现有工作提升到更加精确、有效的水平。</p>
-<p>  　　像优步、谷歌和Facebook这样的科技创新公司，通过收购和内部组织的转型，在人工智能领域进行了大胆尝试，使它成为一项战略重点。在2017年达沃斯论坛上，世界各国领导人探讨了人工智能对就业的影响，以及哪些行业适合应用这项技术。</p>
-<p>  　　事实上，根据互联网数据中心（IDC）的数据显示，到2020年，企业在人工智能方面的投入将从2016年的80亿美元飙升至470亿美元。另外，到2019年，将会有超过1.1亿个安装了嵌入式智能助手的设备走进美国家庭。</p>
-<p>  　　Intuit公司的人工智能转型始于4年前，当时业内都在探讨两个问题：金融软件的未来是什么；我们在帮助客户方面扮演怎样的角色。人工智能的趋势在当时是很明显的，包括工作的个性化、自动化、增强和速度等，这些都需要软件来进行辅助。近年来，随着人工智能技术的进步，我们对它的看法也作出了改变。</p>
-<p>  　　现在我们将人工智能看作一种为用户提供方便的技术。我们预计人工智能将创造新技术，例如以一种曾经无法想象的高科技方法为消费者处理税务、为小型企业完成账目记录等。但要实现这一目标并非易事。Intuit公司拥有30多种人工智能和机器学习模型，可以在实时体验中接触客户，而且我们还在不断作出新的尝试。我们在实验和成果中不断学习、发展和改进技术。</p>
-<p>  　　如果你的公司致力于通过人工智能打造能够满足消费者需求的产品和服务，那么这里有几个关键的问题需要考虑。</p>
-<p>  　　<strong>1.重视数据</strong></p>
-<p>  　　每一家公司的人工智能探索之旅都从数据开始。数据令机器学习和人工智能更强大。如果你一直在考虑如何利用数据，那么现在就可以开始制定和实施计划了。</p>
-<p>  　　在Intuit，我们几年前就已经转向了对数据的关注。我们在与业务部门同事进行沟通后制定了技术路线，充分了解了客户需求、行业趋势以及数据能够带来的客户利益。我们的Intuit Analytics Cloud云分析系统打破了一些障碍，让我们能够以更全面地认识产品产生的海量数据。在拥有人工智能或机器学习模型之前，我们就开始专注于数据分析和个性化的基础性工作。<strong>可靠、快速、准确的数据是人工智能—机器学习发展的催化剂。</strong></p>
-<p>  　　<strong>2.展望未来</strong></p>
-<p>  　　设想公司的未来是很重要的，同时也要观察人工智能将如何令你更加强大，或者改变你对研发工作的想法。我们在Intuit进行了一场活动，会见了各种各样的组织和个人，包括大学的学者专家、创业公司、风投公司等，探讨了人工智能和机器学习的未来蓝图，以及Intuit公司将如何适应这一转变。规模较小的公司同样可以在相应的资源范围内做出创新。</p>
-<p>  　　<strong>3.转变心态</strong></p>
-<p>  　　在开始阶段向业务部门和产品负责人解释投资人工智能的益处，可能是一件很有挑战性的事情。重要的是每个季度的客户利益需要体现在商业价值上，而不是单纯研究数据。例如，Intuit的税务分析系统就分析了3000万客户的纳税申报表，对分项扣除还是统一扣除作出相应建议，这可以节省40%的税收工作准备时间。这样一个甚至非数据专家都能理解的切实的商业成果。可以说，<strong>人工智能—机器学习是一段探索之旅。通过实际产生的影响来预估潜在的成果</strong>，这是很重要的。</p>
-<p>  　　4.成立团队，选择项目</p>
-<p>  　　要在企业中开始发展人工智能，先选择一个容易解决的业务问题，组件一支跨职能员工团队，包括数据科学家、工程师和质量监管人员，同时要注意及时更新团队。在团队中建立起能够理解实验价值的文化。珍惜从人工智能应用中得来的知识。另外，你的团队还应同时拥有专业知识和实战经验。千万不要认为只需要聘请专家。同时，在亟待解决的问题上还需要保持与其他行业科学家的互动，比如其他领域的博士等，他们天生具有好奇心，能够理解科学原理，并且有一套不同的解决方案。<strong>真正的人工智能—机器学习可以在应用数据科学方面带来重大成果。</strong> 不要低估了它的重要性，同时也要改变心态。</p>
-<p>  　　我们才刚刚到达人工智能和机器学习的起步阶段。<strong>在公司初创之时紧跟最先进的技术，将有助于你在未来发展中处于优势地位。</strong></p>
-<p>  　　（来源/VentureBeat 翻译/机器小易 审校/小ka）</p>
-<p>  　　注：本文为网易智能工作室稿件，转载需注明出处，否则追究其法律责任。</p>
-<h2 id="人工智能的迅速崛起需要警惕这四大风险"><a href="#人工智能的迅速崛起需要警惕这四大风险" class="headerlink" title="人工智能的迅速崛起需要警惕这四大风险"></a>人工智能的迅速崛起需要警惕这四大风险</h2><p><img src="http://dingyue.nosdn.127.net/ydgEN7xEoWpsGyUkJBKbgdXlwrf5u91jceEc1KE5IZXI=1484981995496compressflag.jpg" alt=""></p>
-<p>　　【网易智能讯 1月21日消息】大家可以想象一下，一名营销主管深夜翻看公司的幻灯片，该公司承诺利用人工智能（AI）自动化他的评分过程、优化他的广告开支方案、帮助增加他的营销开支回报率，他想要知道，哪里可能出现问题？</p>
-<p>的确有可能出现问题。尽管公司使用AI会让营销人员的工作变得更简单，但我们必须承认，AI的承诺往往言过其实。AI带来的好处是显而易见的，但也存在巨大风险。即使你找到最好的AI，并将其应用到你的营销技术堆栈中，依然存在影响你成功部署AI的风险。我并不担心这些风险，也不想将它们藏起来，我认为最好是直接面对它们，直至最终解决它们。</p>
-<p>AI主要存在四大类危险：</p>
-<p><strong>AI危险一：害怕失去工作</strong><br>这是最容易理解的AI危险，同时也是最容易解决的。人们经常害怕AI，因为他们担心AI会让人类变得多余，最终被拥有机器大脑的AI取代我们独特的技能。对于某些工作来说，这可能是真的。但我认为，AI带来的实际危险可能比人类预想的更低。AI还不够先进，也无法全面取代营销专家。如果营销人员学会有效地使用AI，它们反而会增强人类能力。也就是说，为了促使人们购买AI支持的技术，我们首先需要平抚人们对AI的恐惧。</p>
-<p><strong>AI危险二：错位的激励</strong><br>技术传道者有时候会深入企业内部，并利用让人惊叹的创意，阐述他们的产品如何改变每个人。但是有了AI和许多企业技术，这些热情常常会撞墙，因为这些墙将各个部门隔离开。事实证明，公司中拥有大量数据的人，往往不会与其他利益相关者分享数据。无论是出于隐私担忧、部门政策、个人冲突亦或是简单的流程偏差，比如障碍往往可能导致雄心勃勃的AI项目被搁置。</p>
-<p>为此，到目前为止，两类公司在部署AI时取得最大成功，一类是初创企业（公司规模较小，刚刚创建还没有僵化思维），一类是像谷歌和Facebook这样的大科技公司（其全部生命线都基于对数据的利用）。介于这两类极端公司之间的其他企业，几乎包括世界上所有公司，部署AI都会遇到更大阻碍。想要利用AI提高效率的营销人员需要意识到部门和监管问题，这些问题可能影响到他们。此外，数据价值链上的所有玩家都需要保持一致。</p>
-<p><strong>AI危险三：不可预测性</strong><br>这可能是AI固有的最大危险。所有AI项目都是不可预测的，因为它们正被用于解决未知问题。与传统软件开发不同，目前还没有标准的工程方法，可以通过分步获得可预知的AI结果。在这种情况下，将AI应用到营销数据中就像纯粹的科幻。我们不知道特定的数据集是否能解决特定的问题。就像无法预测科学实验的所有结果那样，AI也很难预测结果。这是有关软件开发的全新思维方式，但对任何营销领域或没有AI经验的人来说，这将是个巨大挑战。</p>
-<p><strong>AI危险四：人才匮乏</strong><br>这是AI带来的最后危险，阻碍你的团队引入足够的人才。不幸的是，当前AI领域存在巨大的技术鸿沟。AI领域的绝大多数人才都没有真正处理大规模行业数据的经验。而真正的专家还很少，最新统计显示，数据科学家的职位空缺高达1.6万个。这意味着，找到你需要的专业人士，并让他们帮助部署和执行AI驱动的营销计划非常困难。</p>
-<p>由于存在这些风险，你可以看到截止到目前许多AI实验都以失败告终。举例来说，麦肯锡最近做了一项研究，对石油和天然气钻探作业决策中的数据进行实时分析。麦肯锡研究的1家公司在离岸钻井仪器方面投入巨资，并通过RFID标签和内嵌传感器收集到大量数据。不幸的是，他们收集的数据中只有40%能传回到陆地数据中心，只有1%能真正进入数据库中，不到1%能被用于终端用户的产品中。最终，这些数据没有为人们的决策提供任何帮助。</p>
-<p>不幸的是，你可能发现同样大的阻力。在使用AI过程中，你会遇到强烈的文化阻碍。许多人不相信机器做出的决定，直到机器算法有机会证明自己的决定。营销高管们部署AI面对的挑战是，需要确保所有相关利益者支持他们。确保人们受到相关训练，确保他们对可能结果产生现实期待，并获得正确的激励奖励。</p>
-<p>只有做到这些，你才能开始意识到AI革命为营销领域带来的惊人好处。（小小）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html&quot;&gt;作者：网易AI研究院&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。&lt;/p&gt;
-&lt;p&gt;　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="理财" scheme="http://ipcreator.me/categories/%E7%90%86%E8%B4%A2/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
     
   </entry>
   
@@ -8197,7 +8467,7 @@ At this point you can add the tensorflow/examples/android directory as a new And
     <published>2017-01-20T12:31:06.000Z</published>
     <updated>2017-02-15T13:04:57.169Z</updated>
     
-    <content type="html"><![CDATA[<p>如何成为一名黑客<br>——Eric S. Raymond <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x65;&#x73;&#x72;&#64;&#116;&#x68;&#121;&#x72;&#x73;&#x75;&#115;&#46;&#x63;&#x6f;&#x6d;">&#x65;&#x73;&#x72;&#64;&#116;&#x68;&#121;&#x72;&#x73;&#x75;&#115;&#46;&#x63;&#x6f;&#x6d;</a><br><a href="http://translations.readthedocs.io/en/latest/hacker_howto.html" target="_blank" rel="external">Wang Dingwei <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#x77;&#x61;&#110;&#x67;&#100;&#x69;&#x6e;&#103;&#119;&#101;&#x69;&#56;&#50;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#x77;&#x61;&#110;&#x67;&#100;&#x69;&#x6e;&#103;&#119;&#101;&#x69;&#56;&#50;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a></a> 基于 Barret 的翻译更正而成。转载请注明出处。</p>
+    <content type="html"><![CDATA[<p>如何成为一名黑客<br>——Eric S. Raymond <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#101;&#x73;&#114;&#x40;&#116;&#104;&#x79;&#114;&#x73;&#117;&#x73;&#46;&#x63;&#x6f;&#109;">&#101;&#x73;&#114;&#x40;&#116;&#104;&#x79;&#114;&#x73;&#117;&#x73;&#46;&#x63;&#x6f;&#109;</a><br><a href="http://translations.readthedocs.io/en/latest/hacker_howto.html" target="_blank" rel="external">Wang Dingwei <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#x77;&#97;&#x6e;&#103;&#100;&#x69;&#x6e;&#x67;&#119;&#x65;&#105;&#56;&#50;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x77;&#97;&#x6e;&#103;&#100;&#x69;&#x6e;&#x67;&#119;&#x65;&#105;&#56;&#50;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a></a> 基于 Barret 的翻译更正而成。转载请注明出处。</p>
 <p>目录</p>
 <ol>
 <li>为什么会有这份文档？</li>
@@ -8742,7 +9012,7 @@ become the master.
     
     <summary type="html">
     
-      &lt;p&gt;如何成为一名黑客&lt;br&gt;——Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#64;&amp;#116;&amp;#x68;&amp;#121;&amp;#x72;&amp;#x73;&amp;#x75;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#64;&amp;#116;&amp;#x68;&amp;#121;&amp;#x72;&amp;#x73;&amp;#x75;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://translations.readthedocs.io/en/latest/hacker_howto.html&quot;&gt;Wang Dingwei &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#x77;&amp;#x61;&amp;#110;&amp;#x67;&amp;#100;&amp;#x69;&amp;#x6e;&amp;#103;&amp;#119;&amp;#101;&amp;#x69;&amp;#56;&amp;#50;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#x77;&amp;#x61;&amp;#110;&amp;#x67;&amp;#100;&amp;#x69;&amp;#x6e;&amp;#103;&amp;#119;&amp;#101;&amp;#x69;&amp;#56;&amp;#50;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;/a&gt; 基于 Barret 的翻译更正而成。转载请注明出处。&lt;/p&gt;
+      &lt;p&gt;如何成为一名黑客&lt;br&gt;——Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#58;&amp;#101;&amp;#x73;&amp;#114;&amp;#x40;&amp;#116;&amp;#104;&amp;#x79;&amp;#114;&amp;#x73;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#x73;&amp;#114;&amp;#x40;&amp;#116;&amp;#104;&amp;#x79;&amp;#114;&amp;#x73;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://translations.readthedocs.io/en/latest/hacker_howto.html&quot;&gt;Wang Dingwei &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#x77;&amp;#97;&amp;#x6e;&amp;#103;&amp;#100;&amp;#x69;&amp;#x6e;&amp;#x67;&amp;#119;&amp;#x65;&amp;#105;&amp;#56;&amp;#50;&amp;#x40;&amp;#x67;&amp;#109;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#x77;&amp;#97;&amp;#x6e;&amp;#103;&amp;#100;&amp;#x69;&amp;#x6e;&amp;#x67;&amp;#119;&amp;#x65;&amp;#105;&amp;#56;&amp;#50;&amp;#x40;&amp;#x67;&amp;#109;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;/a&gt; 基于 Barret 的翻译更正而成。转载请注明出处。&lt;/p&gt;
 &lt;p&gt;目录&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;为什么会有这份文档？&lt;/li&gt;
@@ -10187,7 +10457,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <updated>2017-02-15T13:06:15.488Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.catb.org/~esr/faqs/loginataka.html" target="_blank" rel="external">The Loginataka</a></p>
-<p>by Eric S. Raymond <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x65;&#x73;&#x72;&#x40;&#x74;&#x68;&#121;&#x72;&#115;&#117;&#x73;&#46;&#x63;&#111;&#109;">&#x65;&#x73;&#x72;&#x40;&#x74;&#x68;&#121;&#x72;&#115;&#117;&#x73;&#46;&#x63;&#111;&#109;</a></p>
+<p>by Eric S. Raymond <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#101;&#115;&#x72;&#x40;&#116;&#104;&#x79;&#114;&#115;&#117;&#x73;&#x2e;&#x63;&#x6f;&#109;">&#101;&#115;&#x72;&#x40;&#116;&#104;&#x79;&#114;&#115;&#117;&#x73;&#x2e;&#x63;&#x6f;&#109;</a></p>
 <p>  Speak, O Guru: How can I become a Unix Wizard?</p>
 <p>  O, Nobly Born: know that the Way to Wizardhood is long, and winding, and Fraught with Risks. Thou must Attune thyself with the Source, attaining the arcane Knowledge and Conversation of the System Libraries and Internals. Yea; and such an all-consuming Time and Energy Sink is this as to greatly Imperil thy Grade Point Average (if one thou hast), not to mention thy Sex Life (if one thou hast). But persevere, oh Larval One; rewards beyond the Dreams of Lusers await thee!</p>
   <a id="more"></a>
@@ -10256,7 +10526,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <summary type="html">
     
       &lt;p&gt;&lt;a href=&quot;http://www.catb.org/~esr/faqs/loginataka.html&quot;&gt;The Loginataka&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#x68;&amp;#121;&amp;#x72;&amp;#115;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&quot;&gt;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#x68;&amp;#121;&amp;#x72;&amp;#115;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#101;&amp;#115;&amp;#x72;&amp;#x40;&amp;#116;&amp;#104;&amp;#x79;&amp;#114;&amp;#115;&amp;#117;&amp;#x73;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#115;&amp;#x72;&amp;#x40;&amp;#116;&amp;#104;&amp;#x79;&amp;#114;&amp;#115;&amp;#117;&amp;#x73;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;  Speak, O Guru: How can I become a Unix Wizard?&lt;/p&gt;
 &lt;p&gt;  O, Nobly Born: know that the Way to Wizardhood is long, and winding, and Fraught with Risks. Thou must Attune thyself with the Source, attaining the arcane Knowledge and Conversation of the System Libraries and Internals. Yea; and such an all-consuming Time and Energy Sink is this as to greatly Imperil thy Grade Point Average (if one thou hast), not to mention thy Sex Life (if one thou hast). But persevere, oh Larval One; rewards beyond the Dreams of Lusers await thee!&lt;/p&gt;
     
@@ -10277,7 +10547,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <updated>2017-02-15T13:06:27.820Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.catb.org/~esr/faqs/things-every-hacker-once-knew/" target="_blank" rel="external">Things Every Hacker Once Knew</a></p>
-<p>by Eric S. Raymond <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x65;&#x73;&#x72;&#64;&#116;&#x68;&#x79;&#x72;&#115;&#x75;&#x73;&#x2e;&#99;&#x6f;&#x6d;">&#x65;&#x73;&#x72;&#64;&#116;&#x68;&#x79;&#x72;&#115;&#x75;&#x73;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p>by Eric S. Raymond <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x65;&#115;&#x72;&#x40;&#116;&#104;&#x79;&#x72;&#x73;&#117;&#x73;&#46;&#99;&#x6f;&#109;">&#x65;&#115;&#x72;&#x40;&#116;&#104;&#x79;&#x72;&#x73;&#117;&#x73;&#46;&#99;&#x6f;&#109;</a></p>
 <p>One fine day in January 2017 I was reminded of something I had half-noticed a few times over the previous decade. That is, younger hackers don’t know the bit structure of ASCII and the meaning of the odder control characters in it.</p>
 <p>This is knowledge every fledgling hacker used to absorb through their pores. It’s nobody’s fault this changed; the obsolescence of hardware terminals and the near-obsolescence of the RS-232 protocol is what did it. Tools generate culture; sometimes, when a tool becomes obsolete, a bit of cultural commonality quietly evaporates. It can be difficult to notice that this has happened.</p>
 <p>This document is a collection of facts about ASCII and related technologies, notably hardware serial terminals and RS-232 and modems. This is lore that was at one time near-universal and is no longer. It’s not likely to be directly useful today - until you trip over some piece of still-functioning technology where it’s relevant (like a GPS puck), or it makes sense of some old-fart war story. Even so, it’s good to know anyway, for cultural-literacy reasons.</p>
@@ -10400,7 +10670,7 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     <summary type="html">
     
       &lt;p&gt;&lt;a href=&quot;http://www.catb.org/~esr/faqs/things-every-hacker-once-knew/&quot;&gt;Things Every Hacker Once Knew&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#58;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#64;&amp;#116;&amp;#x68;&amp;#x79;&amp;#x72;&amp;#115;&amp;#x75;&amp;#x73;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#64;&amp;#116;&amp;#x68;&amp;#x79;&amp;#x72;&amp;#115;&amp;#x75;&amp;#x73;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#111;&amp;#58;&amp;#x65;&amp;#115;&amp;#x72;&amp;#x40;&amp;#116;&amp;#104;&amp;#x79;&amp;#x72;&amp;#x73;&amp;#117;&amp;#x73;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#x65;&amp;#115;&amp;#x72;&amp;#x40;&amp;#116;&amp;#104;&amp;#x79;&amp;#x72;&amp;#x73;&amp;#117;&amp;#x73;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;One fine day in January 2017 I was reminded of something I had half-noticed a few times over the previous decade. That is, younger hackers don’t know the bit structure of ASCII and the meaning of the odder control characters in it.&lt;/p&gt;
 &lt;p&gt;This is knowledge every fledgling hacker used to absorb through their pores. It’s nobody’s fault this changed; the obsolescence of hardware terminals and the near-obsolescence of the RS-232 protocol is what did it. Tools generate culture; sometimes, when a tool becomes obsolete, a bit of cultural commonality quietly evaporates. It can be difficult to notice that this has happened.&lt;/p&gt;
 &lt;p&gt;This document is a collection of facts about ASCII and related technologies, notably hardware serial terminals and RS-232 and modems. This is lore that was at one time near-universal and is no longer. It’s not likely to be directly useful today - until you trip over some piece of still-functioning technology where it’s relevant (like a GPS puck), or it makes sense of some old-fart war story. Even so, it’s good to know anyway, for cultural-literacy reasons.&lt;/p&gt;

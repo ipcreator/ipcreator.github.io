@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-git/</loc>
-    <lastmod>2017-02-22T08:00:24.670Z</lastmod>
+    <lastmod>2017-02-22T13:06:46.711Z</lastmod>
     <data>
         <display>
         <title>Git教程</title>
@@ -318,18 +318,14 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/20-open-source-projects-of-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/</loc>
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
         <display>
-        <title>机器学习年度 20 大开源项目花落谁家？（Python 版）</title>
-        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
+        <title>Awesome Deep Learning</title>
+        <pubTime>2017-02-19T15:56:00.000Z</pubTime>
         
-        <tag>AI</tag>
-         
-        <tag>Machine Learning</tag>
-         
-        <tag>Open Source</tag>
+        <tag>Deep Learning</tag>
          
          
            
@@ -386,14 +382,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/20-open-source-projects-of-machine-learning/</loc>
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
         <display>
-        <title>Awesome Deep Learning</title>
-        <pubTime>2017-02-19T15:56:00.000Z</pubTime>
+        <title>机器学习年度 20 大开源项目花落谁家？（Python 版）</title>
+        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
+         
+        <tag>Open Source</tag>
          
          
            
@@ -414,6 +414,30 @@
         <pubTime>2017-02-19T15:59:59.000Z</pubTime>
         
         <tag>AI</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProductAI/ai-on-terminal-of-google/</loc>
+    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    <data>
+        <display>
+        <title>谷歌发布全新轻型机器学习架构：可直接载于设备端的AI系统</title>
+        <pubTime>2017-02-19T15:59:56.000Z</pubTime>
+        
+        <tag>Google</tag>
+         
+        <tag>AI</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -472,30 +496,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProductAI/ai-on-terminal-of-google/</loc>
-    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
-    <data>
-        <display>
-        <title>谷歌发布全新轻型机器学习架构：可直接载于设备端的AI系统</title>
-        <pubTime>2017-02-19T15:59:56.000Z</pubTime>
-        
-        <tag>Google</tag>
-         
-        <tag>AI</tag>
-         
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/</loc>
     <lastmod>2017-02-19T06:03:00.875Z</lastmod>
     <data>
@@ -505,33 +505,9 @@
         
         <tag>AI</tag>
          
-        <tag>Deep Learning</tag>
-         
         <tag>Business</tag>
          
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</loc>
-    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
-    <data>
-        <display>
-        <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
-        <pubTime>2017-02-18T01:02:06.000Z</pubTime>
-        
-        <tag>Google</tag>
-         
-        <tag>AI</tag>
-         
-        <tag>Tensorflow</tag>
+        <tag>Deep Learning</tag>
          
          
            
@@ -574,6 +550,30 @@
         <tag>Big Data</tag>
          
         <tag>Data Mining</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</loc>
+    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
+    <data>
+        <display>
+        <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
+        <pubTime>2017-02-18T01:02:06.000Z</pubTime>
+        
+        <tag>Google</tag>
+         
+        <tag>AI</tag>
+         
+        <tag>Tensorflow</tag>
          
          
            
@@ -815,9 +815,9 @@
         
         <tag>AI</tag>
          
-        <tag>Tensorflow</tag>
-         
         <tag>Android</tag>
+         
+        <tag>Tensorflow</tag>
          
          
            
@@ -839,9 +839,9 @@
         
         <tag>AI</tag>
          
-        <tag>Tensorflow</tag>
-         
         <tag>Android</tag>
+         
+        <tag>Tensorflow</tag>
          
          
            
@@ -863,9 +863,9 @@
         
         <tag>AI</tag>
          
-        <tag>Tensorflow</tag>
-         
         <tag>Android</tag>
+         
+        <tag>Tensorflow</tag>
          
          
            
