@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/02/22/MyShare/my-translations/</loc>
+    
+    <lastmod>2017-02-23T14:43:27.831Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/MyShare/love-sentencns/</loc>
+    
+    <lastmod>2017-02-23T14:26:15.168Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/MyShare/love-words/</loc>
+    
+    <lastmod>2017-02-23T14:19:26.716Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/21/MyShare/beautiful-article-of-english/</loc>
+    
+    <lastmod>2017-02-23T14:05:29.273Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-git/</loc>
     
     <lastmod>2017-02-22T13:06:46.711Z</lastmod>
@@ -16,37 +44,9 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/21/MyShare/beautiful-article-of-english/</loc>
-    
-    <lastmod>2017-02-22T03:22:41.352Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/20/SmartAI/ProgramAI/my-views-of-learning-program/</loc>
     
     <lastmod>2017-02-22T03:11:00.085Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/22/MyShare/my-translations/</loc>
-    
-    <lastmod>2017-02-22T00:57:29.888Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/22/MyShare/love-words/</loc>
-    
-    <lastmod>2017-02-22T00:25:56.834Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/22/MyShare/love-sentencns/</loc>
-    
-    <lastmod>2017-02-22T00:16:25.321Z</lastmod>
     
   </url>
   
@@ -100,20 +100,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
@@ -128,7 +114,21 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/20-open-source-projects-of-machine-learning/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -149,14 +149,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Concepts/right-way-of-master-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProductAI/the-future-of-personal-terminal/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProductAI/the-future-of-personal-terminal/</loc>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Concepts/right-way-of-master-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
@@ -170,6 +170,13 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</loc>
+    
+    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tools/tools-of-python/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
@@ -178,13 +185,6 @@
   
   <url>
     <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Resources/big-data-resources/</loc>
-    
-    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
