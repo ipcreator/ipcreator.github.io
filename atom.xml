@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-02-25T10:31:12.325Z</updated>
+  <updated>2017-02-25T14:11:23.598Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -20,67 +20,24 @@
     <link href="http://ipcreator.me/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/"/>
     <id>http://ipcreator.me/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/</id>
     <published>2017-02-25T08:11:06.000Z</published>
-    <updated>2017-02-25T10:31:12.325Z</updated>
+    <updated>2017-02-25T14:11:23.598Z</updated>
     
     <content type="html"><![CDATA[<h2 id="GestureDetector"><a href="#GestureDetector" class="headerlink" title="GestureDetector"></a><a href="https://developer.android.com/reference/android/view/GestureDetector.html" target="_blank" rel="external">GestureDetector</a></h2><p><img src="http://okkntqe2h.bkt.clouddn.com/GestureDetector.png" alt=""></p>
 <p>public class GestureDetector<br>extends Object</p>
 <p>java.lang.Object<br>   ↳    android.view.GestureDetector</p>
-<p>Detects various gestures and events using the supplied MotionEvents. The <a href="https://developer.android.com/reference/android/view/GestureDetector.OnGestureListener.html" target="_blank" rel="external">GestureDetector.OnGestureListener</a> callback will notify users when <strong>a particular motion event</strong> has occurred. This class should only be used with <a href="https://developer.android.com/reference/android/view/MotionEvent.html" target="_blank" rel="external">MotionEvents</a> reported via touch (don’t use for trackball events). To use this class:</p>
-<p>Create an instance of the GestureDetector for your View<br>In the onTouchEvent(MotionEvent) method ensure you call onTouchEvent(MotionEvent). The methods defined in your callback will be executed when the events occur.<br>If listening for onContextClick(MotionEvent) you must call onGenericMotionEvent(MotionEvent) in onGenericMotionEvent(MotionEvent).</p>
-   <a id="more"></a>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Nested classes<br>interface    GestureDetector.OnContextClickListener<br>The listener that is used to notify when a context click occurs.<br>interface    GestureDetector.OnDoubleTapListener<br>The listener that is used to notify when a double-tap or a confirmed single-tap occur.<br>interface    GestureDetector.OnGestureListener<br>The listener that is used to notify when gestures occur.<br>class    GestureDetector.SimpleOnGestureListener<br>A convenience class to extend when you only want to listen for a subset of all the gestures.<br>Public constructors<br>GestureDetector(GestureDetector.OnGestureListener listener, Handler handler)<br>This constructor was deprecated in API level 3. Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener, android.os.Handler) instead.<br>GestureDetector(GestureDetector.OnGestureListener listener)<br>This constructor was deprecated in API level 3. Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener) instead.<br>GestureDetector(Context context, GestureDetector.OnGestureListener listener)<br>Creates a GestureDetector with the supplied listener.<br>GestureDetector(Context context, GestureDetector.OnGestureListener listener, Handler handler)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.<br>GestureDetector(Context context, GestureDetector.OnGestureListener listener, Handler handler, boolean unused)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.<br>Public methods<br>boolean    isLongpressEnabled()<br>boolean    onGenericMotionEvent(MotionEvent ev)<br>Analyzes the given generic motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.<br>boolean    onTouchEvent(MotionEvent ev)<br>Analyzes the given motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.<br>void    setContextClickListener(GestureDetector.OnContextClickListener onContextClickListener)<br>Sets the listener which will be called for context clicks.<br>void    setIsLongpressEnabled(boolean isLongpressEnabled)<br>Set whether longpress is enabled, if this is enabled when a user presses and holds down you get a longpress event and nothing further.<br>void    setOnDoubleTapListener(GestureDetector.OnDoubleTapListener onDoubleTapListener)<br>Sets the listener which will be called for double-tap and related gestures.<br>Inherited methods<br>From class java.lang.Object<br>Public constructors<br>GestureDetector</p>
-<p>Added in API level 1<br>GestureDetector (GestureDetector.OnGestureListener listener,<br>                Handler handler)<br>This constructor was deprecated in API level 3.<br>Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener, android.os.Handler) instead.</p>
-<p>Creates a GestureDetector with the supplied listener. This variant of the constructor should be used from a non-UI thread (as it allows specifying the Handler).</p>
-<p>Parameters<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>handler    Handler: the handler to use<br>Throws<br>NullPointerException    if either listener or handler is null.<br>GestureDetector</p>
-<p>Added in API level 1<br>GestureDetector (GestureDetector.OnGestureListener listener)<br>This constructor was deprecated in API level 3.<br>Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener) instead.</p>
-<p>Creates a GestureDetector with the supplied listener. You may only use this constructor from a UI thread (this is the usual situation).</p>
-<p>Parameters<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
-<p>Handler()<br>GestureDetector</p>
-<p>Added in API level 3<br>GestureDetector (Context context,<br>                GestureDetector.OnGestureListener listener)<br>Creates a GestureDetector with the supplied listener. You may only use this constructor from a Looper thread.</p>
-<p>Parameters<br>context    Context: the application’s context<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
-<p>Handler()<br>GestureDetector</p>
-<p>Added in API level 3<br>GestureDetector (Context context,<br>                GestureDetector.OnGestureListener listener,<br>                Handler handler)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.</p>
-<p>Parameters<br>context    Context: the application’s context<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>handler    Handler: the handler to use for running deferred listener events.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
-<p>Handler()<br>GestureDetector</p>
-<p>Added in API level 8<br>GestureDetector (Context context,<br>                GestureDetector.OnGestureListener listener,<br>                Handler handler,<br>                boolean unused)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.</p>
-<p>Parameters<br>context    Context: the application’s context<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>handler    Handler: the handler to use for running deferred listener events.<br>unused    boolean: currently not used.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
-<p>Handler()<br>Public methods<br>isLongpressEnabled</p>
-<p>Added in API level 1<br>boolean isLongpressEnabled ()<br>Returns<br>boolean    true if longpress is enabled, else false.<br>onGenericMotionEvent</p>
-<p>Added in API level 23<br>boolean onGenericMotionEvent (MotionEvent ev)<br>Analyzes the given generic motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.</p>
-<p>Parameters<br>ev    MotionEvent: The current motion event.<br>Returns<br>boolean    true if the GestureDetector.OnGestureListener consumed the event, else false.<br>onTouchEvent</p>
-<p>Added in API level 1<br>boolean onTouchEvent (MotionEvent ev)<br>Analyzes the given motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.</p>
-<p>Parameters<br>ev    MotionEvent: The current motion event.<br>Returns<br>boolean    true if the GestureDetector.OnGestureListener consumed the event, else false.<br>setContextClickListener</p>
-<p>Added in API level 23<br>void setContextClickListener (GestureDetector.OnContextClickListener onContextClickListener)<br>Sets the listener which will be called for context clicks.</p>
-<p>Parameters<br>onContextClickListener    GestureDetector.OnContextClickListener: the listener invoked for all the callbacks, or null to stop listening for context clicks.<br>setIsLongpressEnabled</p>
-<p>Added in API level 1<br>void setIsLongpressEnabled (boolean isLongpressEnabled)<br>Set whether longpress is enabled, if this is enabled when a user presses and holds down you get a longpress event and nothing further. If it’s disabled the user can press and hold down and then later moved their finger and you will get scroll events. By default longpress is enabled.</p>
-<p>Parameters<br>isLongpressEnabled    boolean: whether longpress should be enabled.<br>setOnDoubleTapListener</p>
-<p>Added in API level 3<br>void setOnDoubleTapListener (GestureDetector.OnDoubleTapListener onDoubleTapListener)<br>Sets the listener which will be called for double-tap and related gestures.</p>
-<p>Parameters<br>onDoubleTapListener    GestureDetector.OnDoubleTapListener: the listener invoked for all the callbacks, or null to stop listening for double-tap gestures.</p>
-<h2 id="GestureDetector-OnGestureListener"><a href="#GestureDetector-OnGestureListener" class="headerlink" title="[GestureDetector.OnGestureListener]"></a>[GestureDetector.OnGestureListener]</h2><p>public static interface GestureDetector.OnGestureListener</p>
-<p>android.view.GestureDetector.OnGestureListener<br>Known Indirect Subclasses<br>Gallery, GestureDetector.SimpleOnGestureListener</p>
-<p>The listener that is used to notify when gestures occur. If you want to listen for all the different gestures then implement this interface. If you only want to listen for a subset it might be easier to extend GestureDetector.SimpleOnGestureListener.</p>
-<p>Summary<br>Public methods<br>abstract boolean    onDown(MotionEvent e)<br>Notified when a tap occurs with the down MotionEvent that triggered it.<br>abstract boolean    onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY)<br>Notified of a fling event when it occurs with the initial on down MotionEvent and the matching up MotionEvent.<br>abstract void    onLongPress(MotionEvent e)<br>Notified when a long press occurs with the initial on down MotionEvent that trigged it.<br>abstract boolean    onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY)<br>Notified when a scroll occurs with the initial on down MotionEvent and the current move MotionEvent.<br>abstract void    onShowPress(MotionEvent e)<br>The user has performed a down MotionEvent and not performed a move or up yet.<br>abstract boolean    onSingleTapUp(MotionEvent e)<br>Notified when a tap occurs with the up MotionEvent that triggered it.<br>Public methods<br>onDown</p>
-<p>Added in API level 1<br>boolean onDown (MotionEvent e)<br>Notified when a tap occurs with the down MotionEvent that triggered it. This will be triggered immediately for every down event. All other events should be preceded by this.</p>
-<p>Parameters<br>e    MotionEvent: The down motion event.<br>Returns<br>boolean<br>onFling</p>
-<p>Added in API level 1<br><strong>boolean onFling (MotionEvent e1,<br>                MotionEvent e2,<br>                float velocityX,<br>                float velocityY)</strong><br>Notified of a fling event when it occurs with the initial on down MotionEvent and the matching up MotionEvent. The calculated velocity is supplied along the x and y axis in pixels per second.</p>
-<p>Parameters<br>e1    MotionEvent: The first down motion event that started the fling.<br>e2    MotionEvent: The move motion event that triggered the current onFling.<br>velocityX    float: The velocity of this fling measured in pixels per second along the x axis.<br>velocityY    float: The velocity of this fling measured in pixels per second along the y axis.<br>Returns<br><strong>boolean    true if the event is consumed, else false</strong><br>onLongPress</p>
-<p>Added in API level 1<br>void onLongPress (MotionEvent e)<br>Notified when a long press occurs with the initial on down MotionEvent that trigged it.</p>
-<p>Parameters<br>e    MotionEvent: The initial on down motion event that started the longpress.<br>onScroll</p>
-<p>Added in API level 1<br>boolean onScroll (MotionEvent e1,<br>                MotionEvent e2,<br>                float distanceX,<br>                float distanceY)<br>Notified when a scroll occurs with the initial on down MotionEvent and the current move MotionEvent. The distance in x and y is also supplied for convenience.</p>
-<p>Parameters<br>e1    MotionEvent: The first down motion event that started the scrolling.<br>e2    MotionEvent: The move motion event that triggered the current onScroll.<br>distanceX    float: The distance along the X axis that has been scrolled since the last call to onScroll. This is NOT the distance between e1 and e2.<br>distanceY    float: The distance along the Y axis that has been scrolled since the last call to onScroll. This is NOT the distance between e1 and e2.<br>Returns<br>boolean    true if the event is consumed, else false<br>onShowPress</p>
-<p>Added in API level 1<br>void onShowPress (MotionEvent e)<br>The user has performed a down MotionEvent and not performed a move or up yet. This event is commonly used to provide visual feedback to the user to let them know that their action has been recognized i.e. highlight an element.</p>
-<p>Parameters<br>e    MotionEvent: The down motion event<br>onSingleTapUp</p>
-<p>Added in API level 1<br>boolean onSingleTapUp (MotionEvent e)<br>Notified when a tap occurs with the up MotionEvent that triggered it.</p>
-<p>Parameters<br>e    MotionEvent: The up motion event that completed the first tap<br>Returns<br>boolean    true if the event is consumed, else false</p>
+<p>Detects various gestures and events using the supplied MotionEvents. The <a href="https://developer.android.com/reference/android/view/GestureDetector.OnGestureListener.html" target="_blank" rel="external">GestureDetector.OnGestureListener</a> callback will notify users when <strong>a particular motion event</strong> has occurred. This class should only be used with <a href="https://developer.android.com/reference/android/view/MotionEvent.html" target="_blank" rel="external">MotionEvents</a> reported via touch (don’t use for trackball events).</p>
+<p>To use this class:</p>
+<ul>
+<li>Create an instance of the GestureDetector for your View</li>
+<li>In the onTouchEvent(MotionEvent) method ensure you call onTouchEvent(MotionEvent). The methods defined in your callback will be executed when the events occur.</li>
+<li>If listening for onContextClick(MotionEvent) you must call onGenericMotionEvent(MotionEvent) in onGenericMotionEvent(MotionEvent).</li>
+</ul>
+<p>参考文章：<br><a href="http://blog.csdn.net/ztp800201/article/details/7410503" target="_blank" rel="external">Android - GestureDetector 实现界面左右滑动效果的优化</a><br><a href="http://blog.csdn.net/hzh_csdn/article/details/52317566" target="_blank" rel="external">Android GestureDetector简单手势检测（左右滑动、上下滑动）</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;GestureDetector&quot;&gt;&lt;a href=&quot;#GestureDetector&quot; class=&quot;headerlink&quot; title=&quot;GestureDetector&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://developer.android.com/reference/android/view/GestureDetector.html&quot;&gt;GestureDetector&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/GestureDetector.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;public class GestureDetector&lt;br&gt;extends Object&lt;/p&gt;
-&lt;p&gt;java.lang.Object&lt;br&gt;   ↳    android.view.GestureDetector&lt;/p&gt;
-&lt;p&gt;Detects various gestures and events using the supplied MotionEvents. The &lt;a href=&quot;https://developer.android.com/reference/android/view/GestureDetector.OnGestureListener.html&quot;&gt;GestureDetector.OnGestureListener&lt;/a&gt; callback will notify users when &lt;strong&gt;a particular motion event&lt;/strong&gt; has occurred. This class should only be used with &lt;a href=&quot;https://developer.android.com/reference/android/view/MotionEvent.html&quot;&gt;MotionEvents&lt;/a&gt; reported via touch (don’t use for trackball events). To use this class:&lt;/p&gt;
-&lt;p&gt;Create an instance of the GestureDetector for your View&lt;br&gt;In the onTouchEvent(MotionEvent) method ensure you call onTouchEvent(MotionEvent). The methods defined in your callback will be executed when the events occur.&lt;br&gt;If listening for onContextClick(MotionEvent) you must call onGenericMotionEvent(MotionEvent) in onGenericMotionEvent(MotionEvent).&lt;/p&gt;
+      &lt;h2 id=&quot;GestureDetector&quot;&gt;&lt;a href=&quot;#GestureDetector&quot; class=&quot;headerlink&quot; title=&quot;GestureDetector&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://developer.android.com/re
     
     </summary>
     
@@ -96,7 +53,7 @@
     <link href="http://ipcreator.me/2017/02/22/MyShare/my-translations/"/>
     <id>http://ipcreator.me/2017/02/22/MyShare/my-translations/</id>
     <published>2017-02-22T00:31:05.000Z</published>
-    <updated>2017-02-23T14:43:27.831Z</updated>
+    <updated>2017-02-25T14:30:01.752Z</updated>
     
     <content type="html"><![CDATA[<p>frome <a href="http://www.azquotes.com" target="_blank" rel="external">az quotes</a></p>
 <p><img src="http://www.azquotes.com/picture-quotes/quote-a-person-who-never-made-a-mistake-never-tried-anything-new-albert-einstein-8-72-86.jpg" alt=""></p>
@@ -109,7 +66,22 @@
 <p>I didn’t fail the test, I just found 100 ways to do it wrong.<br>——Benjamin Franklin</p>
 </blockquote>
 <p>我并没有失败，只是找到了100种错误的方法。<br>——本杰明 富兰克林</p>
+<p><img src="http://www.azquotes.com/picture-quotes/quote-don-t-find-fault-find-a-remedy-henry-ford-9-91-53.jpg" alt=""></p>
+<blockquote>
+<p>Don’t find fault, find a remedy.<br>——Henry Ford</p>
+</blockquote>
+<p>不要找错，寻求补救。<br>——亨利 福特</p>
    <a id="more"></a>
+<p><img src="http://izquotes.com/quotes-pictures/quote-life-is-not-easy-for-any-of-us-but-what-of-that-we-must-have-perseverance-and-above-all-marie-curie-45454.jpg" alt=""></p>
+<blockquote>
+<p>“Life is not easy for any of us. But what of that? We must have perseverance and above all confidence in ourselves. We must believe that we are gifted for something and that this thing must be attained.”<br>——Marie Curie</p>
+</blockquote>
+<p>生活对每人而言均不易，但那又如何？我们对自己必须要坚持不懈和充满信心，我们必须要相信自己在某些方面拥有天赋并且一定能够有所实现。<br>——玛丽·居里</p>
+<p><img src="http://izquotes.com/quotes-pictures/quote-it-is-godlike-ever-to-think-on-something-beautiful-and-on-something-new-democritus-49344.jpg" alt=""></p>
+<blockquote>
+<p>“It is godlike ever to think on something beautiful and on something new.”<br>——Democritus</p>
+</blockquote>
+<p>思考美丽的事物永远是神圣的，思考新事物也如此。<br> ——德谟克利特（古希腊哲学家）</p>
 <p> <img src="http://izquotes.com/quotes-pictures/quote-i-don-t-want-to-be-the-next-michael-jordan-i-only-want-to-be-kobe-bryant-kobe-bryant-26125.jpg" alt=""><br> “I don’t want to be the next Michael Jordan, I only want to be Kobe Bryant.”<br>——Kobe Bryant</p>
 <p>我不想成为下一个迈克尔 乔丹，我只想成为科比 布莱恩特<br>——科比 布莱恩特</p>
 <p><img src="http://izquotes.com/quotes-pictures/quote-if-somebody-says-no-to-you-or-if-you-get-cut-michael-jordan-was-cut-his-first-year-but-he-came-magic-johnson-95765.jpg" alt=""><br>“If somebody says no to you, or if you get cut, Michael Jordan was cut his first year, but he came back and he was the best ever. That is what you have to have. The attitude that I’m going to show everybody, I’m going to work hard to get better and better.”<br>——Magic Johnson</p>
@@ -139,6 +111,11 @@
 &lt;p&gt;I didn’t fail the test, I just found 100 ways to do it wrong.&lt;br&gt;——Benjamin Franklin&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我并没有失败，只是找到了100种错误的方法。&lt;br&gt;——本杰明 富兰克林&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.azquotes.com/picture-quotes/quote-don-t-find-fault-find-a-remedy-henry-ford-9-91-53.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don’t find fault, find a remedy.&lt;br&gt;——Henry Ford&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不要找错，寻求补救。&lt;br&gt;——亨利 福特&lt;/p&gt;
     
     </summary>
     
@@ -154,15 +131,17 @@
     <link href="http://ipcreator.me/2017/02/22/MyShare/love-sentencns/"/>
     <id>http://ipcreator.me/2017/02/22/MyShare/love-sentencns/</id>
     <published>2017-02-22T00:13:05.000Z</published>
-    <updated>2017-02-23T14:26:15.168Z</updated>
+    <updated>2017-02-25T14:32:02.673Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="http://news.iciba.com/study/oral/1575707.shtml" target="_blank" rel="external">BBC英语教学</a></p>
+    <content type="html"><![CDATA[<p><img src="http://cdn.iciba.com/news/word/big_20160828b.jpg" alt=""></p>
+<p>How deep I love you, the moon represents my heart.<br>你问我爱你有多深，月亮代表我的心。</p>
+   <a id="more"></a>
+<p><a href="http://news.iciba.com/study/oral/1575707.shtml" target="_blank" rel="external">BBC英语教学</a></p>
 <p><img src="http://cdn.iciba.com/news/2017/0210/20170210094146362.jpg" alt=""></p>
 <p>英国，不同地区的人们会用和动物有关的词汇来称呼他人。这些称呼十分有爱，也很友好。有些人认为这个称呼来源于 duke 公爵。</p>
 <p>Feifei<br>‘Hen’ is used in Glasgow – but only when talking to women. 在苏格兰格拉斯哥，人们会用 hen 来称呼女性。</p>
 <p>Neil<br>Alright, hen? And then we have ‘pet’…</p>
 <p>Feifei<br>‘Pet’ is used in the North East of England. 在英格兰纽卡斯尔，人们会互相称呼 pet。</p>
-   <a id="more"></a>
 <p><img src="http://cdn.iciba.com/news/word/big_20170223b.jpg" alt=""></p>
 <p>The happiness of life is made up of minute fractions – the little soon forgotten charities of a kiss, a smile, a kind look, a heartfelt compliment.</p>
 <p>生活中的快乐是由一些小片断组成——很快被遗忘的亲吻、微笑、关爱的眼神、由衷的赞美等小善举。</p>
@@ -195,12 +174,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;http://news.iciba.com/study/oral/1575707.shtml&quot;&gt;BBC英语教学&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://cdn.iciba.com/news/2017/0210/20170210094146362.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;英国，不同地区的人们会用和动物有关的词汇来称呼他人。这些称呼十分有爱，也很友好。有些人认为这个称呼来源于 duke 公爵。&lt;/p&gt;
-&lt;p&gt;Feifei&lt;br&gt;‘Hen’ is used in Glasgow – but only when talking to women. 在苏格兰格拉斯哥，人们会用 hen 来称呼女性。&lt;/p&gt;
-&lt;p&gt;Neil&lt;br&gt;Alright, hen? And then we have ‘pet’…&lt;/p&gt;
-&lt;p&gt;Feifei&lt;br&gt;‘Pet’ is used in the North East of England. 在英格兰纽卡斯尔，人们会互相称呼 pet。&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://cdn.iciba.com/news/word/big_20160828b.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;How deep I love you, the moon represents my heart.&lt;br&gt;你问我爱你有多深，月亮代表我的心。&lt;/p&gt;
     
     </summary>
     

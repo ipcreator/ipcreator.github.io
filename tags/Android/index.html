@@ -184,14 +184,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="GestureDetector"><a href="#GestureDetector" class="headerlink" title="GestureDetector"></a><a href="https://developer.android.com/reference/android/view/GestureDetector.html">GestureDetector</a></h2><p><img src="http://okkntqe2h.bkt.clouddn.com/GestureDetector.png" alt=""></p>
+        <h2 id="GestureDetector"><a href="#GestureDetector" class="headerlink" title="GestureDetector"></a><a href="https://developer.android.com/reference/android/view/GestureDetector.html" target="_blank" rel="external">GestureDetector</a></h2><p><img src="http://okkntqe2h.bkt.clouddn.com/GestureDetector.png" alt=""></p>
 <p>public class GestureDetector<br>extends Object</p>
 <p>java.lang.Object<br>   ↳    android.view.GestureDetector</p>
-<p>Detects various gestures and events using the supplied MotionEvents. The <a href="https://developer.android.com/reference/android/view/GestureDetector.OnGestureListener.html">GestureDetector.OnGestureListener</a> callback will notify users when <strong>a particular motion event</strong> has occurred. This class should only be used with <a href="https://developer.android.com/reference/android/view/MotionEvent.html">MotionEvents</a> reported via touch (don’t use for trackball events). To use this class:</p>
-<p>Create an instance of the GestureDetector for your View<br>In the onTouchEvent(MotionEvent) method ensure you call onTouchEvent(MotionEvent). The methods defined in your callback will be executed when the events occur.<br>If listening for onContextClick(MotionEvent) you must call onGenericMotionEvent(MotionEvent) in onGenericMotionEvent(MotionEvent).</p>
-        
-          <a class="article-more-a" href="/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/#more">more >></a>
-        
+<p>Detects various gestures and events using the supplied MotionEvents. The <a href="https://developer.android.com/reference/android/view/GestureDetector.OnGestureListener.html" target="_blank" rel="external">GestureDetector.OnGestureListener</a> callback will notify users when <strong>a particular motion event</strong> has occurred. This class should only be used with <a href="https://developer.android.com/reference/android/view/MotionEvent.html" target="_blank" rel="external">MotionEvents</a> reported via touch (don’t use for trackball events).</p>
+<p>To use this class:</p>
+<ul>
+<li>Create an instance of the GestureDetector for your View</li>
+<li>In the onTouchEvent(MotionEvent) method ensure you call onTouchEvent(MotionEvent). The methods defined in your callback will be executed when the events occur.</li>
+<li>If listening for onContextClick(MotionEvent) you must call onGenericMotionEvent(MotionEvent) in onGenericMotionEvent(MotionEvent).</li>
+</ul>
+<p>参考文章：<br><a href="http://blog.csdn.net/ztp800201/article/details/7410503" target="_blank" rel="external">Android - GestureDetector 实现界面左右滑动效果的优化</a><br><a href="http://blog.csdn.net/hzh_csdn/article/details/52317566" target="_blank" rel="external">Android GestureDetector简单手势检测（左右滑动、上下滑动）</a></p>
+
       
 
       
