@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-02-23T14:43:27.831Z</updated>
+  <updated>2017-02-25T10:31:12.325Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -14,6 +14,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GestureDetector</title>
+    <link href="http://ipcreator.me/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/"/>
+    <id>http://ipcreator.me/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/</id>
+    <published>2017-02-25T08:11:06.000Z</published>
+    <updated>2017-02-25T10:31:12.325Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="GestureDetector"><a href="#GestureDetector" class="headerlink" title="GestureDetector"></a><a href="https://developer.android.com/reference/android/view/GestureDetector.html" target="_blank" rel="external">GestureDetector</a></h2><p><img src="http://okkntqe2h.bkt.clouddn.com/GestureDetector.png" alt=""></p>
+<p>public class GestureDetector<br>extends Object</p>
+<p>java.lang.Object<br>   ↳    android.view.GestureDetector</p>
+<p>Detects various gestures and events using the supplied MotionEvents. The <a href="https://developer.android.com/reference/android/view/GestureDetector.OnGestureListener.html" target="_blank" rel="external">GestureDetector.OnGestureListener</a> callback will notify users when <strong>a particular motion event</strong> has occurred. This class should only be used with <a href="https://developer.android.com/reference/android/view/MotionEvent.html" target="_blank" rel="external">MotionEvents</a> reported via touch (don’t use for trackball events). To use this class:</p>
+<p>Create an instance of the GestureDetector for your View<br>In the onTouchEvent(MotionEvent) method ensure you call onTouchEvent(MotionEvent). The methods defined in your callback will be executed when the events occur.<br>If listening for onContextClick(MotionEvent) you must call onGenericMotionEvent(MotionEvent) in onGenericMotionEvent(MotionEvent).</p>
+   <a id="more"></a>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Nested classes<br>interface    GestureDetector.OnContextClickListener<br>The listener that is used to notify when a context click occurs.<br>interface    GestureDetector.OnDoubleTapListener<br>The listener that is used to notify when a double-tap or a confirmed single-tap occur.<br>interface    GestureDetector.OnGestureListener<br>The listener that is used to notify when gestures occur.<br>class    GestureDetector.SimpleOnGestureListener<br>A convenience class to extend when you only want to listen for a subset of all the gestures.<br>Public constructors<br>GestureDetector(GestureDetector.OnGestureListener listener, Handler handler)<br>This constructor was deprecated in API level 3. Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener, android.os.Handler) instead.<br>GestureDetector(GestureDetector.OnGestureListener listener)<br>This constructor was deprecated in API level 3. Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener) instead.<br>GestureDetector(Context context, GestureDetector.OnGestureListener listener)<br>Creates a GestureDetector with the supplied listener.<br>GestureDetector(Context context, GestureDetector.OnGestureListener listener, Handler handler)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.<br>GestureDetector(Context context, GestureDetector.OnGestureListener listener, Handler handler, boolean unused)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.<br>Public methods<br>boolean    isLongpressEnabled()<br>boolean    onGenericMotionEvent(MotionEvent ev)<br>Analyzes the given generic motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.<br>boolean    onTouchEvent(MotionEvent ev)<br>Analyzes the given motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.<br>void    setContextClickListener(GestureDetector.OnContextClickListener onContextClickListener)<br>Sets the listener which will be called for context clicks.<br>void    setIsLongpressEnabled(boolean isLongpressEnabled)<br>Set whether longpress is enabled, if this is enabled when a user presses and holds down you get a longpress event and nothing further.<br>void    setOnDoubleTapListener(GestureDetector.OnDoubleTapListener onDoubleTapListener)<br>Sets the listener which will be called for double-tap and related gestures.<br>Inherited methods<br>From class java.lang.Object<br>Public constructors<br>GestureDetector</p>
+<p>Added in API level 1<br>GestureDetector (GestureDetector.OnGestureListener listener,<br>                Handler handler)<br>This constructor was deprecated in API level 3.<br>Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener, android.os.Handler) instead.</p>
+<p>Creates a GestureDetector with the supplied listener. This variant of the constructor should be used from a non-UI thread (as it allows specifying the Handler).</p>
+<p>Parameters<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>handler    Handler: the handler to use<br>Throws<br>NullPointerException    if either listener or handler is null.<br>GestureDetector</p>
+<p>Added in API level 1<br>GestureDetector (GestureDetector.OnGestureListener listener)<br>This constructor was deprecated in API level 3.<br>Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener) instead.</p>
+<p>Creates a GestureDetector with the supplied listener. You may only use this constructor from a UI thread (this is the usual situation).</p>
+<p>Parameters<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
+<p>Handler()<br>GestureDetector</p>
+<p>Added in API level 3<br>GestureDetector (Context context,<br>                GestureDetector.OnGestureListener listener)<br>Creates a GestureDetector with the supplied listener. You may only use this constructor from a Looper thread.</p>
+<p>Parameters<br>context    Context: the application’s context<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
+<p>Handler()<br>GestureDetector</p>
+<p>Added in API level 3<br>GestureDetector (Context context,<br>                GestureDetector.OnGestureListener listener,<br>                Handler handler)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.</p>
+<p>Parameters<br>context    Context: the application’s context<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>handler    Handler: the handler to use for running deferred listener events.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
+<p>Handler()<br>GestureDetector</p>
+<p>Added in API level 8<br>GestureDetector (Context context,<br>                GestureDetector.OnGestureListener listener,<br>                Handler handler,<br>                boolean unused)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.</p>
+<p>Parameters<br>context    Context: the application’s context<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>handler    Handler: the handler to use for running deferred listener events.<br>unused    boolean: currently not used.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
+<p>Handler()<br>Public methods<br>isLongpressEnabled</p>
+<p>Added in API level 1<br>boolean isLongpressEnabled ()<br>Returns<br>boolean    true if longpress is enabled, else false.<br>onGenericMotionEvent</p>
+<p>Added in API level 23<br>boolean onGenericMotionEvent (MotionEvent ev)<br>Analyzes the given generic motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.</p>
+<p>Parameters<br>ev    MotionEvent: The current motion event.<br>Returns<br>boolean    true if the GestureDetector.OnGestureListener consumed the event, else false.<br>onTouchEvent</p>
+<p>Added in API level 1<br>boolean onTouchEvent (MotionEvent ev)<br>Analyzes the given motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.</p>
+<p>Parameters<br>ev    MotionEvent: The current motion event.<br>Returns<br>boolean    true if the GestureDetector.OnGestureListener consumed the event, else false.<br>setContextClickListener</p>
+<p>Added in API level 23<br>void setContextClickListener (GestureDetector.OnContextClickListener onContextClickListener)<br>Sets the listener which will be called for context clicks.</p>
+<p>Parameters<br>onContextClickListener    GestureDetector.OnContextClickListener: the listener invoked for all the callbacks, or null to stop listening for context clicks.<br>setIsLongpressEnabled</p>
+<p>Added in API level 1<br>void setIsLongpressEnabled (boolean isLongpressEnabled)<br>Set whether longpress is enabled, if this is enabled when a user presses and holds down you get a longpress event and nothing further. If it’s disabled the user can press and hold down and then later moved their finger and you will get scroll events. By default longpress is enabled.</p>
+<p>Parameters<br>isLongpressEnabled    boolean: whether longpress should be enabled.<br>setOnDoubleTapListener</p>
+<p>Added in API level 3<br>void setOnDoubleTapListener (GestureDetector.OnDoubleTapListener onDoubleTapListener)<br>Sets the listener which will be called for double-tap and related gestures.</p>
+<p>Parameters<br>onDoubleTapListener    GestureDetector.OnDoubleTapListener: the listener invoked for all the callbacks, or null to stop listening for double-tap gestures.</p>
+<h2 id="GestureDetector-OnGestureListener"><a href="#GestureDetector-OnGestureListener" class="headerlink" title="[GestureDetector.OnGestureListener]"></a>[GestureDetector.OnGestureListener]</h2><p>public static interface GestureDetector.OnGestureListener</p>
+<p>android.view.GestureDetector.OnGestureListener<br>Known Indirect Subclasses<br>Gallery, GestureDetector.SimpleOnGestureListener</p>
+<p>The listener that is used to notify when gestures occur. If you want to listen for all the different gestures then implement this interface. If you only want to listen for a subset it might be easier to extend GestureDetector.SimpleOnGestureListener.</p>
+<p>Summary<br>Public methods<br>abstract boolean    onDown(MotionEvent e)<br>Notified when a tap occurs with the down MotionEvent that triggered it.<br>abstract boolean    onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY)<br>Notified of a fling event when it occurs with the initial on down MotionEvent and the matching up MotionEvent.<br>abstract void    onLongPress(MotionEvent e)<br>Notified when a long press occurs with the initial on down MotionEvent that trigged it.<br>abstract boolean    onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY)<br>Notified when a scroll occurs with the initial on down MotionEvent and the current move MotionEvent.<br>abstract void    onShowPress(MotionEvent e)<br>The user has performed a down MotionEvent and not performed a move or up yet.<br>abstract boolean    onSingleTapUp(MotionEvent e)<br>Notified when a tap occurs with the up MotionEvent that triggered it.<br>Public methods<br>onDown</p>
+<p>Added in API level 1<br>boolean onDown (MotionEvent e)<br>Notified when a tap occurs with the down MotionEvent that triggered it. This will be triggered immediately for every down event. All other events should be preceded by this.</p>
+<p>Parameters<br>e    MotionEvent: The down motion event.<br>Returns<br>boolean<br>onFling</p>
+<p>Added in API level 1<br><strong>boolean onFling (MotionEvent e1,<br>                MotionEvent e2,<br>                float velocityX,<br>                float velocityY)</strong><br>Notified of a fling event when it occurs with the initial on down MotionEvent and the matching up MotionEvent. The calculated velocity is supplied along the x and y axis in pixels per second.</p>
+<p>Parameters<br>e1    MotionEvent: The first down motion event that started the fling.<br>e2    MotionEvent: The move motion event that triggered the current onFling.<br>velocityX    float: The velocity of this fling measured in pixels per second along the x axis.<br>velocityY    float: The velocity of this fling measured in pixels per second along the y axis.<br>Returns<br><strong>boolean    true if the event is consumed, else false</strong><br>onLongPress</p>
+<p>Added in API level 1<br>void onLongPress (MotionEvent e)<br>Notified when a long press occurs with the initial on down MotionEvent that trigged it.</p>
+<p>Parameters<br>e    MotionEvent: The initial on down motion event that started the longpress.<br>onScroll</p>
+<p>Added in API level 1<br>boolean onScroll (MotionEvent e1,<br>                MotionEvent e2,<br>                float distanceX,<br>                float distanceY)<br>Notified when a scroll occurs with the initial on down MotionEvent and the current move MotionEvent. The distance in x and y is also supplied for convenience.</p>
+<p>Parameters<br>e1    MotionEvent: The first down motion event that started the scrolling.<br>e2    MotionEvent: The move motion event that triggered the current onScroll.<br>distanceX    float: The distance along the X axis that has been scrolled since the last call to onScroll. This is NOT the distance between e1 and e2.<br>distanceY    float: The distance along the Y axis that has been scrolled since the last call to onScroll. This is NOT the distance between e1 and e2.<br>Returns<br>boolean    true if the event is consumed, else false<br>onShowPress</p>
+<p>Added in API level 1<br>void onShowPress (MotionEvent e)<br>The user has performed a down MotionEvent and not performed a move or up yet. This event is commonly used to provide visual feedback to the user to let them know that their action has been recognized i.e. highlight an element.</p>
+<p>Parameters<br>e    MotionEvent: The down motion event<br>onSingleTapUp</p>
+<p>Added in API level 1<br>boolean onSingleTapUp (MotionEvent e)<br>Notified when a tap occurs with the up MotionEvent that triggered it.</p>
+<p>Parameters<br>e    MotionEvent: The up motion event that completed the first tap<br>Returns<br>boolean    true if the event is consumed, else false</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;GestureDetector&quot;&gt;&lt;a href=&quot;#GestureDetector&quot; class=&quot;headerlink&quot; title=&quot;GestureDetector&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://developer.android.com/reference/android/view/GestureDetector.html&quot;&gt;GestureDetector&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/GestureDetector.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;public class GestureDetector&lt;br&gt;extends Object&lt;/p&gt;
+&lt;p&gt;java.lang.Object&lt;br&gt;   ↳    android.view.GestureDetector&lt;/p&gt;
+&lt;p&gt;Detects various gestures and events using the supplied MotionEvents. The &lt;a href=&quot;https://developer.android.com/reference/android/view/GestureDetector.OnGestureListener.html&quot;&gt;GestureDetector.OnGestureListener&lt;/a&gt; callback will notify users when &lt;strong&gt;a particular motion event&lt;/strong&gt; has occurred. This class should only be used with &lt;a href=&quot;https://developer.android.com/reference/android/view/MotionEvent.html&quot;&gt;MotionEvents&lt;/a&gt; reported via touch (don’t use for trackball events). To use this class:&lt;/p&gt;
+&lt;p&gt;Create an instance of the GestureDetector for your View&lt;br&gt;In the onTouchEvent(MotionEvent) method ensure you call onTouchEvent(MotionEvent). The methods defined in your callback will be executed when the events occur.&lt;br&gt;If listening for onContextClick(MotionEvent) you must call onGenericMotionEvent(MotionEvent) in onGenericMotionEvent(MotionEvent).&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>名人名言</title>
@@ -983,77 +1059,6 @@
   </entry>
   
   <entry>
-    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
-    <link href="http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/"/>
-    <id>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/</id>
-    <published>2017-02-19T15:59:59.000Z</published>
-    <updated>2017-02-19T06:03:00.875Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
-<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
-<p>作者：傅盛</p>
-<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
-<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
-<p>怎么思考呢?我讲几个关键点。</p>
-<a id="more"></a>
-<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
-<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
-<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
-<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
-<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
-<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
-<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
-<p>这才有了一句流行语——Welcome to the GPU world.</p>
-<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
-<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
-<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
-<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
-<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
-<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
-<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
-<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
-<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
-<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
-<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
-<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
-<p>为什么要异构?</p>
-<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
-<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
-<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
-<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
-<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
-<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
-<p>我认为，只要需求越多，它就会越来越准。</p>
-<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
-<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
-<p>漫漫长路，才刚刚开始。<br>End.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;作者：傅盛&lt;/p&gt;
-&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
-&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
-&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
-    
-      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
-    
-  </entry>
-  
-  <entry>
     <title>人工智能的黄金时代</title>
     <link href="http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/golden-age-of-artificial-intelligence/"/>
     <id>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/golden-age-of-artificial-intelligence/</id>
@@ -1221,6 +1226,77 @@
     
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
+    <link href="http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/"/>
+    <id>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/some-thoughts-of-fusheng/</id>
+    <published>2017-02-19T15:59:59.000Z</published>
+    <updated>2017-02-19T06:03:00.875Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
+<p>作者：傅盛</p>
+<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
+<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
+<p>怎么思考呢?我讲几个关键点。</p>
+<a id="more"></a>
+<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
+<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
+<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
+<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
+<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
+<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
+<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
+<p>这才有了一句流行语——Welcome to the GPU world.</p>
+<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
+<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
+<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
+<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
+<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
+<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
+<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
+<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
+<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
+<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
+<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
+<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
+<p>为什么要异构?</p>
+<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
+<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
+<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
+<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
+<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
+<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
+<p>我认为，只要需求越多，它就会越来越准。</p>
+<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
+<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
+<p>漫漫长路，才刚刚开始。<br>End.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;作者：傅盛&lt;/p&gt;
+&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
+&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
+&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
+    
+      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
     
   </entry>
   
@@ -4493,58 +4569,6 @@ new file:   source/slider.fa3fc2.js
   </entry>
   
   <entry>
-    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
-    <link href="http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</id>
-    <published>2017-02-18T01:02:06.000Z</published>
-    <updated>2017-02-19T06:02:30.218Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
-<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<a id="more"></a>
-<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
-<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
-<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
-<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
-<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
-<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
-<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
-<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
-<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
-<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
-<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
-<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
-<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
-<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
-<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
-<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
-<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
-<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
-<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
-<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
-<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python 资源大全中文版</title>
     <link href="http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tools/tools-of-python/"/>
     <id>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tools/tools-of-python/</id>
@@ -5654,6 +5678,58 @@ new file:   source/slider.fa3fc2.js
   </entry>
   
   <entry>
+    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
+    <link href="http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/"/>
+    <id>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</id>
+    <published>2017-02-18T01:02:06.000Z</published>
+    <updated>2017-02-19T06:02:30.218Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
+<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<a id="more"></a>
+<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
+<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
+<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
+<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
+<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
+<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
+<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
+<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
+<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
+<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
+<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
+<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
+<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
+<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
+<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
+<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
+<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
+<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
+<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
+<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
+<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
+    
+  </entry>
+  
+  <entry>
     <title>超智能体</title>
     <link href="http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Concepts/super-intelligence-individual/"/>
     <id>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Concepts/super-intelligence-individual/</id>
@@ -6118,92 +6194,6 @@ new file:   source/slider.fa3fc2.js
   </entry>
   
   <entry>
-    <title>Supercharging Android Apps With TensorFlow</title>
-    <link href="http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/supercharging-android-apps-with-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/supercharging-android-apps-with-tensorflow/</id>
-    <published>2017-02-17T02:26:06.000Z</published>
-    <updated>2017-02-17T15:10:29.777Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://jalammar.github.io/Supercharging-android-apps-using-tensorflow/" target="_blank" rel="external">J Alammar</a></p>
-<p>Supercharging Android Apps With TensorFlow (Google’s Open Source Machine Learning Library)<br>In November 2015, Google announced and open sourced TensorFlow, its latest and greatest machine learning library. This is a big deal for three reasons:</p>
-<ol>
-<li>Machine Learning expertise: Google is a dominant force in machine learning. Its prominence in search owes a lot to the strides it achieved in machine learning.</li>
-<li>Scalability: the announcement noted that TensorFlow was initially designed for internal use and that it’s already in production for some live product features.</li>
-<li>Ability to run on Mobile.</li>
-</ol>
-<p>This last reason is the operating reason for this post since we’ll be focusing on Android. If you examine the tensorflow repo on GitHub, you’ll find a little tensorflow/examples/android directory. I’ll try to shed some light on the Android TensorFlow example and some of the things going on under the hood.</p>
-  <a id="more"></a>
-<h2 id="A-Look-of-Recognition"><a href="#A-Look-of-Recognition" class="headerlink" title="A Look of Recognition"></a>A Look of Recognition</h2><p>The app glances out through your camera and tries to identify the objects it sees. Sometimes it does a good job, other times it can’t quite pin down the object, and at times it leads to thought provoking guesses! Overall, it feels pretty magical.</p>
-<p><img src="https://jalammar.github.io/images/android_tensorflow_classifier_results.jpg" alt=""><br>android_tensorflow_classifier_results.jpg</p>
-<p>The app accomplishes this feat using a bundled machine learning model running in TensorFlow on the device (no network calls to a backend service). The model is trained against millions of images so that it can look at the photos the camera feeds it and classify the object into its best guess (from the 1000 object classifications it knows). Along with its best guess, it shows a confidence score to indicate how sure it is about its guess.</p>
-<p>The Android example page gives you an idea on how to build the app, and ultimately culminates in producing this <a href="https://s3.amazonaws.com/jalammar.github.io/tensorflow_demo.apk" target="_blank" rel="external">APK</a> (I built and uploaded the APK to save you some time since the building process requires installing the Android NDK and Bazel, Google’s build tool).</p>
-<p>NOTE: Android 5.0 or later required since the example uses the Camera2 package introduced in Android 5.0.</p>
-<p>NOTE: if your device runs Android 6.0 or later, you have to install the app with the following command (It gives the app the appropriate permissions it needs to run):</p>
-<pre><code>adb install -r -g /path/to/apk.apk
-</code></pre><h2 id="App-Structure-Walkthrough"><a href="#App-Structure-Walkthrough" class="headerlink" title="App Structure Walkthrough"></a>App Structure Walkthrough</h2><p><img src="https://jalammar.github.io/images/android-tensorflow-app-structure_1.png" alt=""><br>android-tensorflow-app-structure_1.png</p>
-<p>The core TensorFlow engine is built with C++, but programmers can write their TensorFlow software in either C++ or Python. The Android TensorFlow example uses the C++ interface in the following manner:</p>
-<p>On startup, the app launches an Android activity (CameraActivity.java) which then starts a fragment (CameraConnectionFragment.java)<br>The fragment does some setup to basically start the camera and feed the incoming stream of images to an object it instantiates (TensorflowImageListener.java)<br>The listener consults the classifier (TensorflowClassifier.java) about each image it gets, and receives the classification and confidence score for each image.<br>The good thing is that most of this logic is in normal Android Java SDK territory – so this should be familiar to most Android devs. So where is the C++?<br><img src="https://jalammar.github.io/images/android-tensorflow-app-structure_2.png" alt=""><br>android-tensorflow-app-structure_2.png</p>
-<p>If you look closely at TensorflowClassifier, you may notice the following methods:</p>
-<pre><code>public native int initializeTensorflow( );
-
-private native String classifyImageBmp(Bitmap bitmap);
-</code></pre><p>The native keywords in these method signatures indicate that these methods are implemented in native C++ code. Look for them under the “android/jni” directory and true enough, you’ll find tensorflow_jni.cc</p>
-<pre><code>JNIEXPORT jint JNICALL
-TENSORFLOW_METHOD(initializeTensorflow)(...) {
-...
-}
-
-
-JNIEXPORT jstring JNICALL
-TENSORFLOW_METHOD(classifyImageBmp)(...) {
-...
-}
-</code></pre><p>JNI (short for Java Native Interface) is a way in which the Java parts of an Android app can communicate with the native C++ parts. So when we call classifyImageBmp(bitmap) in our Java code, it will actually invoke the C++ function exported in tensorflow_jni.cc and return the value it returns.</p>
-<p>A Bitmap file cannot directly be sent to TensorFlow as input. It has be transformed into an input tensor that we’d send in step #2 in the flow above. A tensor is an n-dimensional array of values, and is the motif TensorFlow uses to send data between all of its different parts/operations. This model expect a 3-dimensional array that supplies the Red/Green/Blue value of each pixel in the image. The dimensions are:</p>
-<ol>
-<li>X-index of the pixel</li>
-<li>Y-index of the pixel</li>
-<li>indication of which value this cell holds (0 for red, 1 for green, 2 for blue)<br>And the value of the cell would be the actual value of R or G or B channel for that pixel.<br><img src="https://jalammar.github.io/images/input_tensor.png" alt=""><br>input_tensor.png</li>
-</ol>
-<p>(This is somewhat oversimplified. I glanced over two things for simplicity’s sake. First is the conversion from the YUV format that the Android camera exports to the RGB format the model expects. Second is that the model actually takes a 4-dimensional tensor, but these three are the ones we care about)</p>
-<h2 id="The-Model"><a href="#The-Model" class="headerlink" title="The Model"></a>The Model</h2><p>As you read the example’s README.md, you’ll notice that it instructs you to download a zip file containing the TensorFlow model and add it to the assets directory. This zip file contains two files that are important for us:</p>
-<p>tensorflow_inception_graph.pb- At 54 MBs unzipped, this file constitutes the majority of the APK size (58 MBs). This is our trained machine learning model and where the magic comes from. It’s a pre-built TensorFlow Graph describing the exact operations needed to compute a classification from input image data. This Graph is serialized and encoded into binary with Google’s Protocol Buffers so it can be deserialized across different platforms (think of it as a binary-encoded JSON file).</p>
-<p>imagenet_comp_graph_label_strings.txt- this contains the 1000 classifications that the output of the model corresponds to (e.g. “vending machine”, “water bottle”, “coffee mug”). These classifications are defined by the ImageNet Large Scale Visual Recognition Challenge which the model was built to compete in.</p>
-<p>The model here is what’s known as a deep convolutional neural network. It is built in the Inception architecture described in Going Deeper with Convolutions. Convolutional neural networks are some of the most popular models in deep learning. They have been very successful in image recognition (so much so, that most highly ranked teams in the competition used them).</p>
-<p>The model is read from the file and fed into TensorFlow when the app starts up. This code is actually really interesting to read and see how to communicate with tensorflow (if you run the app with your device connected to your computer, you can see these helpful log messages printed in logcat).</p>
-<h2 id="Build-System"><a href="#Build-System" class="headerlink" title="Build System"></a>Build System</h2><p>The Android app example is not built the traditional Gradle way. Because the app has to contain NDK elements as well as TensorFlow itself, a more elaborate build system was utilized. The example is configured to be built with Google’s Bazel build system running from the TensorFlow root directory.</p>
-<p>The WORKSPACE file in the root directory specifies the main parameters of the project. The BUILD file in the Android directory instructs the build system to build the Java and C++ files of the app.</p>
-<h2 id="The-Possibilities"><a href="#The-Possibilities" class="headerlink" title="The Possibilities"></a>The Possibilities</h2><p><strong>Using a trained model in your app seems to be the lowest hanging fruit for mobile TensorFlow apps at the moment.</strong> While you can probably train a model on Android, mobile devices are not well suited for the intensive processing required by complex models with larger training sets.</p>
-<p>Want to learn more about machine learning? Consider checking out the Machine Learning course on Coursera. There’s also a good discussion in /r/MachineLearning here: In your experience, which machine learning course on Coursera (or other MOOC web site) was the best?.</p>
-<p>Want to comment? /r/androiddev, Hacker News.</p>
-<p>Written on January 6, 2016</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://jalammar.github.io/Supercharging-android-apps-using-tensorflow/&quot;&gt;J Alammar&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Supercharging Android Apps With TensorFlow (Google’s Open Source Machine Learning Library)&lt;br&gt;In November 2015, Google announced and open sourced TensorFlow, its latest and greatest machine learning library. This is a big deal for three reasons:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Machine Learning expertise: Google is a dominant force in machine learning. Its prominence in search owes a lot to the strides it achieved in machine learning.&lt;/li&gt;
-&lt;li&gt;Scalability: the announcement noted that TensorFlow was initially designed for internal use and that it’s already in production for some live product features.&lt;/li&gt;
-&lt;li&gt;Ability to run on Mobile.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This last reason is the operating reason for this post since we’ll be focusing on Android. If you examine the tensorflow repo on GitHub, you’ll find a little tensorflow/examples/android directory. I’ll try to shed some light on the Android TensorFlow example and some of the things going on under the hood.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
     <title>TensorFlow Android Camera Demo</title>
     <link href="http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/tensorflow-android-camera-demo/"/>
     <id>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/tensorflow-android-camera-demo/</id>
@@ -6287,6 +6277,92 @@ At this point you can add the tensorflow/examples/android directory as a new And
 &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description&quot;&gt;&lt;/a&gt;Description&lt;/h2&gt;&lt;p&gt;The demos in this folder are designed to give straightforward samples of using TensorFlow in mobile applications.&lt;/p&gt;
 &lt;p&gt;Inference is done using the TensorFlow Android Inference Interface, which may be built separately if you want a standalone library to drop into your existing application.&lt;/p&gt;
 &lt;p&gt;A device running Android 5.0 (API 21) or higher is required to run the demo.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Supercharging Android Apps With TensorFlow</title>
+    <link href="http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/supercharging-android-apps-with-tensorflow/"/>
+    <id>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/supercharging-android-apps-with-tensorflow/</id>
+    <published>2017-02-17T02:26:06.000Z</published>
+    <updated>2017-02-17T15:10:29.777Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://jalammar.github.io/Supercharging-android-apps-using-tensorflow/" target="_blank" rel="external">J Alammar</a></p>
+<p>Supercharging Android Apps With TensorFlow (Google’s Open Source Machine Learning Library)<br>In November 2015, Google announced and open sourced TensorFlow, its latest and greatest machine learning library. This is a big deal for three reasons:</p>
+<ol>
+<li>Machine Learning expertise: Google is a dominant force in machine learning. Its prominence in search owes a lot to the strides it achieved in machine learning.</li>
+<li>Scalability: the announcement noted that TensorFlow was initially designed for internal use and that it’s already in production for some live product features.</li>
+<li>Ability to run on Mobile.</li>
+</ol>
+<p>This last reason is the operating reason for this post since we’ll be focusing on Android. If you examine the tensorflow repo on GitHub, you’ll find a little tensorflow/examples/android directory. I’ll try to shed some light on the Android TensorFlow example and some of the things going on under the hood.</p>
+  <a id="more"></a>
+<h2 id="A-Look-of-Recognition"><a href="#A-Look-of-Recognition" class="headerlink" title="A Look of Recognition"></a>A Look of Recognition</h2><p>The app glances out through your camera and tries to identify the objects it sees. Sometimes it does a good job, other times it can’t quite pin down the object, and at times it leads to thought provoking guesses! Overall, it feels pretty magical.</p>
+<p><img src="https://jalammar.github.io/images/android_tensorflow_classifier_results.jpg" alt=""><br>android_tensorflow_classifier_results.jpg</p>
+<p>The app accomplishes this feat using a bundled machine learning model running in TensorFlow on the device (no network calls to a backend service). The model is trained against millions of images so that it can look at the photos the camera feeds it and classify the object into its best guess (from the 1000 object classifications it knows). Along with its best guess, it shows a confidence score to indicate how sure it is about its guess.</p>
+<p>The Android example page gives you an idea on how to build the app, and ultimately culminates in producing this <a href="https://s3.amazonaws.com/jalammar.github.io/tensorflow_demo.apk" target="_blank" rel="external">APK</a> (I built and uploaded the APK to save you some time since the building process requires installing the Android NDK and Bazel, Google’s build tool).</p>
+<p>NOTE: Android 5.0 or later required since the example uses the Camera2 package introduced in Android 5.0.</p>
+<p>NOTE: if your device runs Android 6.0 or later, you have to install the app with the following command (It gives the app the appropriate permissions it needs to run):</p>
+<pre><code>adb install -r -g /path/to/apk.apk
+</code></pre><h2 id="App-Structure-Walkthrough"><a href="#App-Structure-Walkthrough" class="headerlink" title="App Structure Walkthrough"></a>App Structure Walkthrough</h2><p><img src="https://jalammar.github.io/images/android-tensorflow-app-structure_1.png" alt=""><br>android-tensorflow-app-structure_1.png</p>
+<p>The core TensorFlow engine is built with C++, but programmers can write their TensorFlow software in either C++ or Python. The Android TensorFlow example uses the C++ interface in the following manner:</p>
+<p>On startup, the app launches an Android activity (CameraActivity.java) which then starts a fragment (CameraConnectionFragment.java)<br>The fragment does some setup to basically start the camera and feed the incoming stream of images to an object it instantiates (TensorflowImageListener.java)<br>The listener consults the classifier (TensorflowClassifier.java) about each image it gets, and receives the classification and confidence score for each image.<br>The good thing is that most of this logic is in normal Android Java SDK territory – so this should be familiar to most Android devs. So where is the C++?<br><img src="https://jalammar.github.io/images/android-tensorflow-app-structure_2.png" alt=""><br>android-tensorflow-app-structure_2.png</p>
+<p>If you look closely at TensorflowClassifier, you may notice the following methods:</p>
+<pre><code>public native int initializeTensorflow( );
+
+private native String classifyImageBmp(Bitmap bitmap);
+</code></pre><p>The native keywords in these method signatures indicate that these methods are implemented in native C++ code. Look for them under the “android/jni” directory and true enough, you’ll find tensorflow_jni.cc</p>
+<pre><code>JNIEXPORT jint JNICALL
+TENSORFLOW_METHOD(initializeTensorflow)(...) {
+...
+}
+
+
+JNIEXPORT jstring JNICALL
+TENSORFLOW_METHOD(classifyImageBmp)(...) {
+...
+}
+</code></pre><p>JNI (short for Java Native Interface) is a way in which the Java parts of an Android app can communicate with the native C++ parts. So when we call classifyImageBmp(bitmap) in our Java code, it will actually invoke the C++ function exported in tensorflow_jni.cc and return the value it returns.</p>
+<p>A Bitmap file cannot directly be sent to TensorFlow as input. It has be transformed into an input tensor that we’d send in step #2 in the flow above. A tensor is an n-dimensional array of values, and is the motif TensorFlow uses to send data between all of its different parts/operations. This model expect a 3-dimensional array that supplies the Red/Green/Blue value of each pixel in the image. The dimensions are:</p>
+<ol>
+<li>X-index of the pixel</li>
+<li>Y-index of the pixel</li>
+<li>indication of which value this cell holds (0 for red, 1 for green, 2 for blue)<br>And the value of the cell would be the actual value of R or G or B channel for that pixel.<br><img src="https://jalammar.github.io/images/input_tensor.png" alt=""><br>input_tensor.png</li>
+</ol>
+<p>(This is somewhat oversimplified. I glanced over two things for simplicity’s sake. First is the conversion from the YUV format that the Android camera exports to the RGB format the model expects. Second is that the model actually takes a 4-dimensional tensor, but these three are the ones we care about)</p>
+<h2 id="The-Model"><a href="#The-Model" class="headerlink" title="The Model"></a>The Model</h2><p>As you read the example’s README.md, you’ll notice that it instructs you to download a zip file containing the TensorFlow model and add it to the assets directory. This zip file contains two files that are important for us:</p>
+<p>tensorflow_inception_graph.pb- At 54 MBs unzipped, this file constitutes the majority of the APK size (58 MBs). This is our trained machine learning model and where the magic comes from. It’s a pre-built TensorFlow Graph describing the exact operations needed to compute a classification from input image data. This Graph is serialized and encoded into binary with Google’s Protocol Buffers so it can be deserialized across different platforms (think of it as a binary-encoded JSON file).</p>
+<p>imagenet_comp_graph_label_strings.txt- this contains the 1000 classifications that the output of the model corresponds to (e.g. “vending machine”, “water bottle”, “coffee mug”). These classifications are defined by the ImageNet Large Scale Visual Recognition Challenge which the model was built to compete in.</p>
+<p>The model here is what’s known as a deep convolutional neural network. It is built in the Inception architecture described in Going Deeper with Convolutions. Convolutional neural networks are some of the most popular models in deep learning. They have been very successful in image recognition (so much so, that most highly ranked teams in the competition used them).</p>
+<p>The model is read from the file and fed into TensorFlow when the app starts up. This code is actually really interesting to read and see how to communicate with tensorflow (if you run the app with your device connected to your computer, you can see these helpful log messages printed in logcat).</p>
+<h2 id="Build-System"><a href="#Build-System" class="headerlink" title="Build System"></a>Build System</h2><p>The Android app example is not built the traditional Gradle way. Because the app has to contain NDK elements as well as TensorFlow itself, a more elaborate build system was utilized. The example is configured to be built with Google’s Bazel build system running from the TensorFlow root directory.</p>
+<p>The WORKSPACE file in the root directory specifies the main parameters of the project. The BUILD file in the Android directory instructs the build system to build the Java and C++ files of the app.</p>
+<h2 id="The-Possibilities"><a href="#The-Possibilities" class="headerlink" title="The Possibilities"></a>The Possibilities</h2><p><strong>Using a trained model in your app seems to be the lowest hanging fruit for mobile TensorFlow apps at the moment.</strong> While you can probably train a model on Android, mobile devices are not well suited for the intensive processing required by complex models with larger training sets.</p>
+<p>Want to learn more about machine learning? Consider checking out the Machine Learning course on Coursera. There’s also a good discussion in /r/MachineLearning here: In your experience, which machine learning course on Coursera (or other MOOC web site) was the best?.</p>
+<p>Want to comment? /r/androiddev, Hacker News.</p>
+<p>Written on January 6, 2016</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://jalammar.github.io/Supercharging-android-apps-using-tensorflow/&quot;&gt;J Alammar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Supercharging Android Apps With TensorFlow (Google’s Open Source Machine Learning Library)&lt;br&gt;In November 2015, Google announced and open sourced TensorFlow, its latest and greatest machine learning library. This is a big deal for three reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Machine Learning expertise: Google is a dominant force in machine learning. Its prominence in search owes a lot to the strides it achieved in machine learning.&lt;/li&gt;
+&lt;li&gt;Scalability: the announcement noted that TensorFlow was initially designed for internal use and that it’s already in production for some live product features.&lt;/li&gt;
+&lt;li&gt;Ability to run on Mobile.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This last reason is the operating reason for this post since we’ll be focusing on Android. If you examine the tensorflow repo on GitHub, you’ll find a little tensorflow/examples/android directory. I’ll try to shed some light on the Android TensorFlow example and some of the things going on under the hood.&lt;/p&gt;
     
     </summary>
     
@@ -6413,71 +6489,6 @@ At this point you can add the tensorflow/examples/android directory as a new And
   </entry>
   
   <entry>
-    <title>Tensorflow 的入门与安装</title>
-    <link href="http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/</id>
-    <published>2017-02-17T01:56:06.000Z</published>
-    <updated>2017-02-17T01:59:11.229Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.leiphone.com/news/201702/I9mcLjB6pKjTf1Or.html" target="_blank" rel="external">作者：AI研习社</a></p>
-<blockquote>
-<p><strong>作为AI 领域最受关注和使用率最高的开源框架之一，TensorFlow 究竟是如何安装的呢？这篇汇总资料你不得不看！</strong></p>
-</blockquote>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a2d3a8ba7be.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>自2015年11月发布以来，谷歌旗下的机器学习开源框架TensorFlow已经在图像识别，大数据分析，语音识别和语义理解，机器翻译等各个领域得到了广泛应用，同时也得到了业内人士的普遍认可，成为了目前最受关注和使用率最高的开源框架之一。</p>
-<p>本文将重点整理TensorFlow框架的入门和安装教程。更多关于TensorFlow的深入介绍、应用项目以及各机器学习开源框架之间的对比等内容，请见雷锋网(公众号：雷锋网)的系列文章。</p>
-  <a id="more"></a>
-<p>下面是本文整理的资料内容：</p>
-<p>在安装之前，这里先列出一些对TensorFlow给出大略介绍的文章，其中包括一些重要的概念解释，TensorFlow的具体含义和优点，以及TensorFlow的基本工作原理等。</p>
-<ol>
-<li><p>《TensorFlow极速入门》<br>链接：<a href="http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html" target="_blank" rel="external">http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html</a><br>本文介绍了 graph 与 session 等基本组件，解释了 rank 和 shape 等基础数据结构概念，讲解了一些 variable 需要注意的地方并介绍了 placeholders 与 feed_dict 。最终以一个手写数字识别的实例将这些点串起来进行了具体说明。</p>
-</li>
-<li><p>《TensorFlow学习笔记1：入门》<br>链接：<a href="http://www.jeyzhang.com/tensorflow-learning-notes.html" target="_blank" rel="external">http://www.jeyzhang.com/tensorflow-learning-notes.html</a><br>本文与上一篇的行文思路基本一致，首先概括了TensorFlow的特性，然后介绍了graph、session、variable 等基本概念的含义，以具体代码的形式针对每个概念给出了进一步的解释。最后通过手写数字识别的实例将这些点串起来进行了具体说明。<br>需要指出的是，两篇文章覆盖的基础概念不尽相同，并且举例用的代码也不一样。</p>
-</li>
-<li><p>《TensorFlow入门》<br>链接：<a href="http://www.jianshu.com/p/6766fbcd43b9#" target="_blank" rel="external">http://www.jianshu.com/p/6766fbcd43b9#</a><br>与上面两篇不同，本文简单介绍了 TensorFlow 的含义、优点、安装和基本工作原理之后，直接通过代码示例的方式讲解了 TensorFlow 的简单用法，包括生成三维数据，然后用一个平面拟合它，以及通过 variable 实现一个简单的计数器等。</p>
-</li>
-</ol>
-<p>值得一提的是，以上第二和第三篇分别来自两个系列文章，这两个系列也都是关于 TensorFlow 入门和实践的优秀博客。第二篇的后续文章讲述了卷积神经网络（CNN）模型构建，以及利用 TensorFlow 生成词向量 (Word Embedding) 的具体过程。第三篇则实际上是基于斯坦福大学基于深度学习的自然语言处理课程的学习笔记，该系列其他的文章还讲述了循环神经网络（RNN）和 word2vec 模型等更深入的知识，感兴趣的读者可以从文章的作者页找到更多文章。</p>
-<p>上述文章都更倾向于 TensorFlow 的简单介绍了基础用法，但对于TensorFlow具体安装过程的讲述则不够细致。因此这里专门针对TensorFlow的安装过程推荐一篇教程。</p>
-<ol>
-<li>《真正从零开始，TensorFlow详细安装入门图文教程！》<br>链接：<a href="http://www.leiphone.com/news/201606/ORlQ7uK3TIW8xVGF.html" target="_blank" rel="external">http://www.leiphone.com/news/201606/ORlQ7uK3TIW8xVGF.html</a><br>上文来自雷锋网小编的亲身实践，真正做到了从零开始，详细介绍了在Linux环境下如何通过pip命令安装TensorFlow框架的完整流程，以及面对一些常见问题的处理办法。值得一提的是，本文在讲解完框架安装之后，还针对Komodo开发环境进行了简单介绍。</li>
-</ol>
-<p>经过了以上来自民间的实践教程之后，相信各位读者对TensorFlow的大致情况和具体安装方法已经有了自己的理解。下面对于那些想要更全面和深入地了解TensorFlow的读者，我们推荐几个官方的教程。</p>
-<ol>
-<li><p>谷歌官方入门教程<br>链接：<a href="https://www.tensorflow.org/get_started/" target="_blank" rel="external">https://www.tensorflow.org/get_started/</a></p>
-</li>
-<li><p>谷歌教程翻译<br><a href="https://github.com/jikexueyuanwiki/tensorflow-zh" target="_blank" rel="external">https://github.com/jikexueyuanwiki/tensorflow-zh</a></p>
-</li>
-</ol>
-<p>这里谷歌给出的入门教程内容十分丰富，除了最基本的安装、名词解释和代码示例之外，还给出了 API 接口的详细解释和说明。但考虑到内容全是英文，因此雷锋网在这里给出了国内志愿者对谷歌内容的中文翻译版，可以为那些英文不好的读者提供参考。</p>
-<ol>
-<li>TensorFlow中文社区<br><a href="http://www.tensorfly.cn/" target="_blank" rel="external">http://www.tensorfly.cn/</a><br>最后我们在这里推荐一个 TensorFlow 的中文社区，该网站几乎可以认为是 TensorFlow 的中文官网，除了上述谷歌官方教程的中文翻译之外，该网站还包括进阶指南、API中文手册、精华文章和TF社区等诸多板块。</li>
-</ol>
-<p>雷锋网版权文章，未经授权禁止转载。详情见转载须知。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.leiphone.com/news/201702/I9mcLjB6pKjTf1Or.html&quot;&gt;作者：AI研习社&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;作为AI 领域最受关注和使用率最高的开源框架之一，TensorFlow 究竟是如何安装的呢？这篇汇总资料你不得不看！&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;http://static.leiphone.com/uploads/new/article/740_740/201702/58a2d3a8ba7be.jpg?imageMogr2/format/jpg/quality/90&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;自2015年11月发布以来，谷歌旗下的机器学习开源框架TensorFlow已经在图像识别，大数据分析，语音识别和语义理解，机器翻译等各个领域得到了广泛应用，同时也得到了业内人士的普遍认可，成为了目前最受关注和使用率最高的开源框架之一。&lt;/p&gt;
-&lt;p&gt;本文将重点整理TensorFlow框架的入门和安装教程。更多关于TensorFlow的深入介绍、应用项目以及各机器学习开源框架之间的对比等内容，请见雷锋网(公众号：雷锋网)的系列文章。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
     <title>框架平台的综合对比</title>
     <link href="http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/platforms-of-tensorflow/"/>
     <id>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/platforms-of-tensorflow/</id>
@@ -6574,6 +6585,71 @@ At this point you can add the tensorflow/examples/android directory as a new And
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;http://static.leiphone.com/uploads/new/article/740_740/201702/58a3fff2bdea1.png?imageMogr2/format/jpg/quality/90&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;作为机器学习领域、尤其是 Python 生态圈最受欢迎的框架平台，TensorFlow 具有许多吸引开发者的优点。其中最显而易见的是谷歌的技术支持和完善的社区（庞大用户群）。这些都为 TensorFlow 的普及打下了基础。但是，开发者需要了解 Tensorflow 在技术上有哪些值得一提的优势，又有哪些不足，以便在处理特定任务时进行工具选择。而这些，必须要在与其他平台、框架的对比中才能凸显。顺便说一句老生常谈的话，&lt;strong&gt;没有万能的工具，只有在不同应用场景下最合适的选择。&lt;/strong&gt; 因此，雷锋网(公众号：雷锋网)整理了介绍 Tensorflow、Caffe、Microsoft Cognitive Toolkit （CNTK）、MXnet、Torch 等平台框架，以及对它们做横向对比的文章，供读者按图索骥。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tensorflow 的入门与安装</title>
+    <link href="http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/"/>
+    <id>http://ipcreator.me/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/</id>
+    <published>2017-02-17T01:56:06.000Z</published>
+    <updated>2017-02-17T01:59:11.229Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.leiphone.com/news/201702/I9mcLjB6pKjTf1Or.html" target="_blank" rel="external">作者：AI研习社</a></p>
+<blockquote>
+<p><strong>作为AI 领域最受关注和使用率最高的开源框架之一，TensorFlow 究竟是如何安装的呢？这篇汇总资料你不得不看！</strong></p>
+</blockquote>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a2d3a8ba7be.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>自2015年11月发布以来，谷歌旗下的机器学习开源框架TensorFlow已经在图像识别，大数据分析，语音识别和语义理解，机器翻译等各个领域得到了广泛应用，同时也得到了业内人士的普遍认可，成为了目前最受关注和使用率最高的开源框架之一。</p>
+<p>本文将重点整理TensorFlow框架的入门和安装教程。更多关于TensorFlow的深入介绍、应用项目以及各机器学习开源框架之间的对比等内容，请见雷锋网(公众号：雷锋网)的系列文章。</p>
+  <a id="more"></a>
+<p>下面是本文整理的资料内容：</p>
+<p>在安装之前，这里先列出一些对TensorFlow给出大略介绍的文章，其中包括一些重要的概念解释，TensorFlow的具体含义和优点，以及TensorFlow的基本工作原理等。</p>
+<ol>
+<li><p>《TensorFlow极速入门》<br>链接：<a href="http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html" target="_blank" rel="external">http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html</a><br>本文介绍了 graph 与 session 等基本组件，解释了 rank 和 shape 等基础数据结构概念，讲解了一些 variable 需要注意的地方并介绍了 placeholders 与 feed_dict 。最终以一个手写数字识别的实例将这些点串起来进行了具体说明。</p>
+</li>
+<li><p>《TensorFlow学习笔记1：入门》<br>链接：<a href="http://www.jeyzhang.com/tensorflow-learning-notes.html" target="_blank" rel="external">http://www.jeyzhang.com/tensorflow-learning-notes.html</a><br>本文与上一篇的行文思路基本一致，首先概括了TensorFlow的特性，然后介绍了graph、session、variable 等基本概念的含义，以具体代码的形式针对每个概念给出了进一步的解释。最后通过手写数字识别的实例将这些点串起来进行了具体说明。<br>需要指出的是，两篇文章覆盖的基础概念不尽相同，并且举例用的代码也不一样。</p>
+</li>
+<li><p>《TensorFlow入门》<br>链接：<a href="http://www.jianshu.com/p/6766fbcd43b9#" target="_blank" rel="external">http://www.jianshu.com/p/6766fbcd43b9#</a><br>与上面两篇不同，本文简单介绍了 TensorFlow 的含义、优点、安装和基本工作原理之后，直接通过代码示例的方式讲解了 TensorFlow 的简单用法，包括生成三维数据，然后用一个平面拟合它，以及通过 variable 实现一个简单的计数器等。</p>
+</li>
+</ol>
+<p>值得一提的是，以上第二和第三篇分别来自两个系列文章，这两个系列也都是关于 TensorFlow 入门和实践的优秀博客。第二篇的后续文章讲述了卷积神经网络（CNN）模型构建，以及利用 TensorFlow 生成词向量 (Word Embedding) 的具体过程。第三篇则实际上是基于斯坦福大学基于深度学习的自然语言处理课程的学习笔记，该系列其他的文章还讲述了循环神经网络（RNN）和 word2vec 模型等更深入的知识，感兴趣的读者可以从文章的作者页找到更多文章。</p>
+<p>上述文章都更倾向于 TensorFlow 的简单介绍了基础用法，但对于TensorFlow具体安装过程的讲述则不够细致。因此这里专门针对TensorFlow的安装过程推荐一篇教程。</p>
+<ol>
+<li>《真正从零开始，TensorFlow详细安装入门图文教程！》<br>链接：<a href="http://www.leiphone.com/news/201606/ORlQ7uK3TIW8xVGF.html" target="_blank" rel="external">http://www.leiphone.com/news/201606/ORlQ7uK3TIW8xVGF.html</a><br>上文来自雷锋网小编的亲身实践，真正做到了从零开始，详细介绍了在Linux环境下如何通过pip命令安装TensorFlow框架的完整流程，以及面对一些常见问题的处理办法。值得一提的是，本文在讲解完框架安装之后，还针对Komodo开发环境进行了简单介绍。</li>
+</ol>
+<p>经过了以上来自民间的实践教程之后，相信各位读者对TensorFlow的大致情况和具体安装方法已经有了自己的理解。下面对于那些想要更全面和深入地了解TensorFlow的读者，我们推荐几个官方的教程。</p>
+<ol>
+<li><p>谷歌官方入门教程<br>链接：<a href="https://www.tensorflow.org/get_started/" target="_blank" rel="external">https://www.tensorflow.org/get_started/</a></p>
+</li>
+<li><p>谷歌教程翻译<br><a href="https://github.com/jikexueyuanwiki/tensorflow-zh" target="_blank" rel="external">https://github.com/jikexueyuanwiki/tensorflow-zh</a></p>
+</li>
+</ol>
+<p>这里谷歌给出的入门教程内容十分丰富，除了最基本的安装、名词解释和代码示例之外，还给出了 API 接口的详细解释和说明。但考虑到内容全是英文，因此雷锋网在这里给出了国内志愿者对谷歌内容的中文翻译版，可以为那些英文不好的读者提供参考。</p>
+<ol>
+<li>TensorFlow中文社区<br><a href="http://www.tensorfly.cn/" target="_blank" rel="external">http://www.tensorfly.cn/</a><br>最后我们在这里推荐一个 TensorFlow 的中文社区，该网站几乎可以认为是 TensorFlow 的中文官网，除了上述谷歌官方教程的中文翻译之外，该网站还包括进阶指南、API中文手册、精华文章和TF社区等诸多板块。</li>
+</ol>
+<p>雷锋网版权文章，未经授权禁止转载。详情见转载须知。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.leiphone.com/news/201702/I9mcLjB6pKjTf1Or.html&quot;&gt;作者：AI研习社&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;作为AI 领域最受关注和使用率最高的开源框架之一，TensorFlow 究竟是如何安装的呢？这篇汇总资料你不得不看！&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://static.leiphone.com/uploads/new/article/740_740/201702/58a2d3a8ba7be.jpg?imageMogr2/format/jpg/quality/90&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;自2015年11月发布以来，谷歌旗下的机器学习开源框架TensorFlow已经在图像识别，大数据分析，语音识别和语义理解，机器翻译等各个领域得到了广泛应用，同时也得到了业内人士的普遍认可，成为了目前最受关注和使用率最高的开源框架之一。&lt;/p&gt;
+&lt;p&gt;本文将重点整理TensorFlow框架的入门和安装教程。更多关于TensorFlow的深入介绍、应用项目以及各机器学习开源框架之间的对比等内容，请见雷锋网(公众号：雷锋网)的系列文章。&lt;/p&gt;
     
     </summary>
     
@@ -7651,94 +7727,6 @@ At this point you can add the tensorflow/examples/android directory as a new And
   </entry>
   
   <entry>
-    <title>避免炒作，如何寻找有价值的人工智能初创企业？</title>
-    <link href="http://ipcreator.me/2017/02/13/SmartAI/BusinessAI/how-to-find-ai-start-up-firm/"/>
-    <id>http://ipcreator.me/2017/02/13/SmartAI/BusinessAI/how-to-find-ai-start-up-firm/</id>
-    <published>2017-02-13T00:58:06.000Z</published>
-    <updated>2017-02-16T00:04:56.474Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html" target="_blank" rel="external">作者：网易AI研究院</a></p>
-<p><img src="http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png" alt=""></p>
-<p>　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。</p>
-<p>　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：</p>
-  <a id="more"></a>
-<h2 id="人工智能是公司的核心价值所在吗？"><a href="#人工智能是公司的核心价值所在吗？" class="headerlink" title="人工智能是公司的核心价值所在吗？"></a>人工智能是公司的核心价值所在吗？</h2><p>  　　投资公司Qualcomm Ventures的风险投资人Varun Jain坦言，“很多陷入资金困境的公司都会将自己包装成人工智能企业。”Varun Jain列举了从人工智能路由器到人工智能榨汁机等产品和设备。</p>
-<p>  　　Varun Jain解释称，在很多情况下，公司所宣传的人工智能仅仅是一个附加功能，而不是公司的核心价值。他指出，“传统的WiFi路由器可以使用人工智能技术来检测网络中的异常数据，但路由器的功能并不会有实质性的改变。”</p>
-<p>  　　相比之下，Qualcomm Ventures投资了Clarifai和Cruise Automation等真正的人工智能初创企业，而Cruise Automation已经被通用收购。Cruise Automation通过人工智能技术为自动驾驶汽车供电，而Clarifai则是利用先进的深度学习和计算机视觉技术来识别图像和视频中的特定物体。</p>
-<h2 id="技术团队有多可靠？"><a href="#技术团队有多可靠？" class="headerlink" title="　　技术团队有多可靠？"></a>　　技术团队有多可靠？</h2><p>  　　CRV公司的风险投资人Max Gazor指出，“具备先进人工智能技术的公司往往拥有顶尖的技术人才，他们或者来自业内先进研究实验室，或是来自诸如Google Brain或Facebook人工智能团队等知名行业组织。”</p>
-<p>  　　CRV对技术的追求直接体现在他们的投资行为中，他们投资的公司创始人普遍具有非凡的技术经验。初创企业Rethink Robotics创始人Rod Brooks是麻省理工学院人工智能实验室的创始主管，也是著名机器人公司iRobot的创始人。而Jibo的Cynthia Breazeal也曾在麻省理工大学媒体实验室成立过机器人小组，是一名世界知名的社交机器人专家。Pullstring公司的创始人Oren Jacob也是如此，他曾是皮克斯的首席技术官，自公司成立初期就与史蒂夫乔布斯共事。</p>
-<p>  　　而投资公司DCM Capital的创始人David Cheng则指出，“在整个行业生命周期的这一特定阶段，<strong>一个公司拥有一定数量的人工智能专家就能够获得开发技术的必要经验，从而开发真正的创新解决方案。</strong> 如果一个团队声称他们的产品使用了领先的人工智能技术却没有相应的团队，那么我们对此将持怀疑态度。”</p>
-<h2 id="能够有效解决客户的实际问题吗？"><a href="#能够有效解决客户的实际问题吗？" class="headerlink" title="　　能够有效解决客户的实际问题吗？"></a>　　能够有效解决客户的实际问题吗？</h2><p>  　　投资公司GE Ventures投资人Michael Dolbec指出，“就我个人而言，一个公司若是仅仅对人工智能夸夸其谈，而毫不涉及客户问题，那我就没有什么兴趣。我们投资的是宝贵的技术成果，而不是科学实验项目。”</p>
-<p>  　　每一位投资者对此都表示认同。</p>
-<p>  　　IA Ventures的Brad Gillespie补充称，“如果让我在二者中选择其一时，那么一个公司的业务专业知识将胜过其机器学习专业技能。”IA Ventures曾投资了Vectra Networks，这是一家由经验丰富业内专家领导的网络安全公司，专注于为客户解决重要问题，为安全分析师最大限度提高可用性。而Vectra Networks的竞争对手不断强调他们机器学习技术的复杂性，但客户的反应是“这些家伙很聪明，但他们并不理解我的业务是什么。他们的产品很花哨，但我并不明白它到底是什么。”</p>
-<p>  　　有效解决客户的业务痛点需要创始团队能够超越狭隘的技术方法，拥有解决特定业务的能力。投资公司Two Sigma Ventures的Colin Beirne指出，“当然，<strong>解决当今大多数困难问题需要不同技术的整合，而在特定业务领域使用人工智能能够在一定程度上降低学习理解的复杂性。</strong>”</p>
-<h2 id="是否有相关的，自有或可扩展的数据源？"><a href="#是否有相关的，自有或可扩展的数据源？" class="headerlink" title="　　是否有相关的，自有或可扩展的数据源？"></a>　　是否有相关的，自有或可扩展的数据源？</h2><p>  　　投资公司Qualcomm Ventures的Jain总习惯于这样问创始人，“你是如何获取数据的？你是依托大公司提供的数据，还是独立获取数据？”当然这两种方法都是可行的，但投资人更倾向于创业公司能够独立获取数据。</p>
-<p>  　　传统上。自动驾驶汽车会在郊区等封闭环境中进行测试。而Qualcomm所投资的Cruise Automation则通过在开放城市环境中操作测试车辆，整合人工干预的因素，从而获取更多驾驶数据。同样，Qualcomm所投资的Clarifai通过应用程序能够获取更多的数据，通过此也能够处理更多的业务数据。</p>
-<p>  　　投资者除了对数据源的独特性和合理性有要求，此外人工智能数据还必须要与其面对的问题密切相关。投资公司Battery Ventures的Dharmesh Thakker指出，“<strong>新一代人工智能技术往往取决于获取数据的复杂程度。诸如图像、音视频等非结构化数据处理要比普通文本困难的多。</strong>”在投资决策中，Dharmesh Thakker还会考虑目标公司处理静态数据和快速移动物体数据的能力。诸如自动驾驶汽车获取的实时图像等快速移动物体数据处理算法通常会复杂很多。</p>
-<p>  　　最后，创始团队还需要 <strong>证实其有根据自有数据不断改进产品性能的能力</strong>。Qualcomm的Jain会定期考察团队是否有“快速处理数据并不断优化的能力，从而使系统更加健壮。”</p>
-<h2 id="开发独有技术还是依靠开源产品"><a href="#开发独有技术还是依靠开源产品" class="headerlink" title="　　开发独有技术还是依靠开源产品"></a>　　开发独有技术还是依靠开源产品</h2><p>  　　投资公司Verizon Ventures的投资人Suresh Madhavan指出，相比于开发专有技术，依托开源框架往往就像是一种赠品，“<strong>开源的确能够让你分析解决一些表面问题，但无助于从根本上解决有难度的业务问题。</strong>”</p>
-<p>  　　DCM Ventures的Cheng也同意这一点。DCM的投资团队背后拥有一个由行业顾问和技术专家组成的强大网络。“（这些专家）帮我们审查团队技术、数据架构方式，并能够确定创业团队进行数据收集、存储、解析的根本方法。他们也帮助我们擦亮眼睛，找出滥竽充数者。”</p>
-<h2 id="产品是否有粘性？"><a href="#产品是否有粘性？" class="headerlink" title="　　产品是否有粘性？"></a>　　产品是否有粘性？</h2><p>  　　Sumant Mandal是投资公司March Capital的合伙人，也是The Hive的共同创始人，后者是一家专注于人工智能初创企业的孵化器。Mandal坦言，“<strong>对于人工智能初创企业来说， 如果效率不能提高5到10倍，那么就很难打入市场，从而为投资者带来价值。</strong>”Mandal建议初创企业需要考虑客户的收益。比如要将人工智能用于改进招聘流程，Mandal就建议初创团队要问自己，“如果我能够将相应效率提高5倍，那么能否让客户从雇员身上获得百倍收益？”</p>
-<p>  　　此外，Mandal还指出，<strong>价值提升必须要以客户可见的方式提供给客户，譬如以仪表盘或是真正有价值的情报等形式展现出来。</strong> Mandal警告称，虽然人工智能在网络安全领域的应用已经很多，但数据和相关人才的缺乏，导致“安全分析师并不需要过多的警报”。</p>
-<p>  　　而即便有一个较为理想的产品，仅仅为客户提供单一的解决方案也不是一个可行的商业模式。Woodside Capital的Kartik Gada建议创业公司要寻求收益以及客户的多元化。“你的收入是否稳健？是否常态化？你的客户是否需要相同或更多的解决方案？”</p>
-<h2 id="创业团队是否全面？"><a href="#创业团队是否全面？" class="headerlink" title="　　创业团队是否全面？"></a>　　创业团队是否全面？</h2><p>  　　最后一点，投资者倾向于寻求那些能够解决人工智能业务的多样化团队。投资公司Monsanto Growth Ventures的Kiersten Stead解释称，“多样化意味着团队包括业内专家、商业领袖以及销售精英，而不仅仅是工程技术人员。”</p>
-<p>  　　但是，Stead观察到，很多创业团队，特别是那些仅仅由人工智能研究人员组成的技术团队，并没有特定行业的相关经验，更容易失败。在农业技术开发和遗传育种方面尤为如此。</p>
-<p>  　　她强调，“人工智能技术团队在销售上有短板，反之亦然。我们会寻找行业经验丰富的人工智能企业创始人，他们往往有完整成熟的职业生涯，可与各类人组成一个多样化的团队。”人工智能企业往往会忽视销售和营销，但这对于成功非常重要。</p>
-<p>  　　投资公司Woodside Capital的Gada也警告称，“<strong>很多人工智能初创企业犯下的最大错误就是完全无视营销的重要性。很多客户根本不知道他们需要这些产品。</strong>”（晗冰）</p>
-<h2 id="AI研究院-企业做人工智能转型有四大关键要素"><a href="#AI研究院-企业做人工智能转型有四大关键要素" class="headerlink" title="AI研究院 | 企业做人工智能转型有四大关键要素"></a>AI研究院 | 企业做人工智能转型有四大关键要素</h2><p>  　　【AI研究院 | 网易智能工作室倾力打造的人工智能专业栏目，聚焦行业，深度分析，只为专业】</p>
-<p>  　　<img src="http://dingyue.nosdn.127.net/qvgJyuC8=PfZZvxXgv1ME7yu5vNchInjJQ74zChPxAvSr1486702463725compressflag.jpg" alt=""></p>
-<p>  　　网易智能讯 2月10日消息，在很多行业我们都已接近人工智能技术发展的临界点，包括自动驾驶汽车、蜂巢无人机、自动售货等。如今一个公司无论规模大小如何，都必须了解人工智能将怎样影响、甚至消灭某个行业，以及学会利用人工智能和机器学习（ML）。</p>
-<p>  　　对于企业来说这是一个至关重要的选择——是投身到人工智能领域还是保持现状等着被淘汰，前者可以更有效地帮助企业实现商业目标。人工智能—机器学习将令我们的日常生活更加美好高效，把现有工作提升到更加精确、有效的水平。</p>
-<p>  　　像优步、谷歌和Facebook这样的科技创新公司，通过收购和内部组织的转型，在人工智能领域进行了大胆尝试，使它成为一项战略重点。在2017年达沃斯论坛上，世界各国领导人探讨了人工智能对就业的影响，以及哪些行业适合应用这项技术。</p>
-<p>  　　事实上，根据互联网数据中心（IDC）的数据显示，到2020年，企业在人工智能方面的投入将从2016年的80亿美元飙升至470亿美元。另外，到2019年，将会有超过1.1亿个安装了嵌入式智能助手的设备走进美国家庭。</p>
-<p>  　　Intuit公司的人工智能转型始于4年前，当时业内都在探讨两个问题：金融软件的未来是什么；我们在帮助客户方面扮演怎样的角色。人工智能的趋势在当时是很明显的，包括工作的个性化、自动化、增强和速度等，这些都需要软件来进行辅助。近年来，随着人工智能技术的进步，我们对它的看法也作出了改变。</p>
-<p>  　　现在我们将人工智能看作一种为用户提供方便的技术。我们预计人工智能将创造新技术，例如以一种曾经无法想象的高科技方法为消费者处理税务、为小型企业完成账目记录等。但要实现这一目标并非易事。Intuit公司拥有30多种人工智能和机器学习模型，可以在实时体验中接触客户，而且我们还在不断作出新的尝试。我们在实验和成果中不断学习、发展和改进技术。</p>
-<p>  　　如果你的公司致力于通过人工智能打造能够满足消费者需求的产品和服务，那么这里有几个关键的问题需要考虑。</p>
-<p>  　　<strong>1.重视数据</strong></p>
-<p>  　　每一家公司的人工智能探索之旅都从数据开始。数据令机器学习和人工智能更强大。如果你一直在考虑如何利用数据，那么现在就可以开始制定和实施计划了。</p>
-<p>  　　在Intuit，我们几年前就已经转向了对数据的关注。我们在与业务部门同事进行沟通后制定了技术路线，充分了解了客户需求、行业趋势以及数据能够带来的客户利益。我们的Intuit Analytics Cloud云分析系统打破了一些障碍，让我们能够以更全面地认识产品产生的海量数据。在拥有人工智能或机器学习模型之前，我们就开始专注于数据分析和个性化的基础性工作。<strong>可靠、快速、准确的数据是人工智能—机器学习发展的催化剂。</strong></p>
-<p>  　　<strong>2.展望未来</strong></p>
-<p>  　　设想公司的未来是很重要的，同时也要观察人工智能将如何令你更加强大，或者改变你对研发工作的想法。我们在Intuit进行了一场活动，会见了各种各样的组织和个人，包括大学的学者专家、创业公司、风投公司等，探讨了人工智能和机器学习的未来蓝图，以及Intuit公司将如何适应这一转变。规模较小的公司同样可以在相应的资源范围内做出创新。</p>
-<p>  　　<strong>3.转变心态</strong></p>
-<p>  　　在开始阶段向业务部门和产品负责人解释投资人工智能的益处，可能是一件很有挑战性的事情。重要的是每个季度的客户利益需要体现在商业价值上，而不是单纯研究数据。例如，Intuit的税务分析系统就分析了3000万客户的纳税申报表，对分项扣除还是统一扣除作出相应建议，这可以节省40%的税收工作准备时间。这样一个甚至非数据专家都能理解的切实的商业成果。可以说，<strong>人工智能—机器学习是一段探索之旅。通过实际产生的影响来预估潜在的成果</strong>，这是很重要的。</p>
-<p>  　　4.成立团队，选择项目</p>
-<p>  　　要在企业中开始发展人工智能，先选择一个容易解决的业务问题，组件一支跨职能员工团队，包括数据科学家、工程师和质量监管人员，同时要注意及时更新团队。在团队中建立起能够理解实验价值的文化。珍惜从人工智能应用中得来的知识。另外，你的团队还应同时拥有专业知识和实战经验。千万不要认为只需要聘请专家。同时，在亟待解决的问题上还需要保持与其他行业科学家的互动，比如其他领域的博士等，他们天生具有好奇心，能够理解科学原理，并且有一套不同的解决方案。<strong>真正的人工智能—机器学习可以在应用数据科学方面带来重大成果。</strong> 不要低估了它的重要性，同时也要改变心态。</p>
-<p>  　　我们才刚刚到达人工智能和机器学习的起步阶段。<strong>在公司初创之时紧跟最先进的技术，将有助于你在未来发展中处于优势地位。</strong></p>
-<p>  　　（来源/VentureBeat 翻译/机器小易 审校/小ka）</p>
-<p>  　　注：本文为网易智能工作室稿件，转载需注明出处，否则追究其法律责任。</p>
-<h2 id="人工智能的迅速崛起需要警惕这四大风险"><a href="#人工智能的迅速崛起需要警惕这四大风险" class="headerlink" title="人工智能的迅速崛起需要警惕这四大风险"></a>人工智能的迅速崛起需要警惕这四大风险</h2><p><img src="http://dingyue.nosdn.127.net/ydgEN7xEoWpsGyUkJBKbgdXlwrf5u91jceEc1KE5IZXI=1484981995496compressflag.jpg" alt=""></p>
-<p>　　【网易智能讯 1月21日消息】大家可以想象一下，一名营销主管深夜翻看公司的幻灯片，该公司承诺利用人工智能（AI）自动化他的评分过程、优化他的广告开支方案、帮助增加他的营销开支回报率，他想要知道，哪里可能出现问题？</p>
-<p>的确有可能出现问题。尽管公司使用AI会让营销人员的工作变得更简单，但我们必须承认，AI的承诺往往言过其实。AI带来的好处是显而易见的，但也存在巨大风险。即使你找到最好的AI，并将其应用到你的营销技术堆栈中，依然存在影响你成功部署AI的风险。我并不担心这些风险，也不想将它们藏起来，我认为最好是直接面对它们，直至最终解决它们。</p>
-<p>AI主要存在四大类危险：</p>
-<p><strong>AI危险一：害怕失去工作</strong><br>这是最容易理解的AI危险，同时也是最容易解决的。人们经常害怕AI，因为他们担心AI会让人类变得多余，最终被拥有机器大脑的AI取代我们独特的技能。对于某些工作来说，这可能是真的。但我认为，AI带来的实际危险可能比人类预想的更低。AI还不够先进，也无法全面取代营销专家。如果营销人员学会有效地使用AI，它们反而会增强人类能力。也就是说，为了促使人们购买AI支持的技术，我们首先需要平抚人们对AI的恐惧。</p>
-<p><strong>AI危险二：错位的激励</strong><br>技术传道者有时候会深入企业内部，并利用让人惊叹的创意，阐述他们的产品如何改变每个人。但是有了AI和许多企业技术，这些热情常常会撞墙，因为这些墙将各个部门隔离开。事实证明，公司中拥有大量数据的人，往往不会与其他利益相关者分享数据。无论是出于隐私担忧、部门政策、个人冲突亦或是简单的流程偏差，比如障碍往往可能导致雄心勃勃的AI项目被搁置。</p>
-<p>为此，到目前为止，两类公司在部署AI时取得最大成功，一类是初创企业（公司规模较小，刚刚创建还没有僵化思维），一类是像谷歌和Facebook这样的大科技公司（其全部生命线都基于对数据的利用）。介于这两类极端公司之间的其他企业，几乎包括世界上所有公司，部署AI都会遇到更大阻碍。想要利用AI提高效率的营销人员需要意识到部门和监管问题，这些问题可能影响到他们。此外，数据价值链上的所有玩家都需要保持一致。</p>
-<p><strong>AI危险三：不可预测性</strong><br>这可能是AI固有的最大危险。所有AI项目都是不可预测的，因为它们正被用于解决未知问题。与传统软件开发不同，目前还没有标准的工程方法，可以通过分步获得可预知的AI结果。在这种情况下，将AI应用到营销数据中就像纯粹的科幻。我们不知道特定的数据集是否能解决特定的问题。就像无法预测科学实验的所有结果那样，AI也很难预测结果。这是有关软件开发的全新思维方式，但对任何营销领域或没有AI经验的人来说，这将是个巨大挑战。</p>
-<p><strong>AI危险四：人才匮乏</strong><br>这是AI带来的最后危险，阻碍你的团队引入足够的人才。不幸的是，当前AI领域存在巨大的技术鸿沟。AI领域的绝大多数人才都没有真正处理大规模行业数据的经验。而真正的专家还很少，最新统计显示，数据科学家的职位空缺高达1.6万个。这意味着，找到你需要的专业人士，并让他们帮助部署和执行AI驱动的营销计划非常困难。</p>
-<p>由于存在这些风险，你可以看到截止到目前许多AI实验都以失败告终。举例来说，麦肯锡最近做了一项研究，对石油和天然气钻探作业决策中的数据进行实时分析。麦肯锡研究的1家公司在离岸钻井仪器方面投入巨资，并通过RFID标签和内嵌传感器收集到大量数据。不幸的是，他们收集的数据中只有40%能传回到陆地数据中心，只有1%能真正进入数据库中，不到1%能被用于终端用户的产品中。最终，这些数据没有为人们的决策提供任何帮助。</p>
-<p>不幸的是，你可能发现同样大的阻力。在使用AI过程中，你会遇到强烈的文化阻碍。许多人不相信机器做出的决定，直到机器算法有机会证明自己的决定。营销高管们部署AI面对的挑战是，需要确保所有相关利益者支持他们。确保人们受到相关训练，确保他们对可能结果产生现实期待，并获得正确的激励奖励。</p>
-<p>只有做到这些，你才能开始意识到AI革命为营销领域带来的惊人好处。（小小）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html&quot;&gt;作者：网易AI研究院&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。&lt;/p&gt;
-&lt;p&gt;　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="理财" scheme="http://ipcreator.me/categories/%E7%90%86%E8%B4%A2/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
-    
-  </entry>
-  
-  <entry>
     <title>这一年来，数据科学家都用了哪些算法玩转人工智能？</title>
     <link href="http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/Concepts/ai-and-algorithms/"/>
     <id>http://ipcreator.me/2017/02/13/SmartAI/ProgramAI/Concepts/ai-and-algorithms/</id>
@@ -7883,6 +7871,94 @@ At this point you can add the tensorflow/examples/android directory as a new And
       <category term="Open Source" scheme="http://ipcreator.me/tags/Open-Source/"/>
     
       <category term="Algorithm" scheme="http://ipcreator.me/tags/Algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>避免炒作，如何寻找有价值的人工智能初创企业？</title>
+    <link href="http://ipcreator.me/2017/02/13/SmartAI/BusinessAI/how-to-find-ai-start-up-firm/"/>
+    <id>http://ipcreator.me/2017/02/13/SmartAI/BusinessAI/how-to-find-ai-start-up-firm/</id>
+    <published>2017-02-13T00:58:06.000Z</published>
+    <updated>2017-02-16T00:04:56.474Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html" target="_blank" rel="external">作者：网易AI研究院</a></p>
+<p><img src="http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png" alt=""></p>
+<p>　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。</p>
+<p>　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：</p>
+  <a id="more"></a>
+<h2 id="人工智能是公司的核心价值所在吗？"><a href="#人工智能是公司的核心价值所在吗？" class="headerlink" title="人工智能是公司的核心价值所在吗？"></a>人工智能是公司的核心价值所在吗？</h2><p>  　　投资公司Qualcomm Ventures的风险投资人Varun Jain坦言，“很多陷入资金困境的公司都会将自己包装成人工智能企业。”Varun Jain列举了从人工智能路由器到人工智能榨汁机等产品和设备。</p>
+<p>  　　Varun Jain解释称，在很多情况下，公司所宣传的人工智能仅仅是一个附加功能，而不是公司的核心价值。他指出，“传统的WiFi路由器可以使用人工智能技术来检测网络中的异常数据，但路由器的功能并不会有实质性的改变。”</p>
+<p>  　　相比之下，Qualcomm Ventures投资了Clarifai和Cruise Automation等真正的人工智能初创企业，而Cruise Automation已经被通用收购。Cruise Automation通过人工智能技术为自动驾驶汽车供电，而Clarifai则是利用先进的深度学习和计算机视觉技术来识别图像和视频中的特定物体。</p>
+<h2 id="技术团队有多可靠？"><a href="#技术团队有多可靠？" class="headerlink" title="　　技术团队有多可靠？"></a>　　技术团队有多可靠？</h2><p>  　　CRV公司的风险投资人Max Gazor指出，“具备先进人工智能技术的公司往往拥有顶尖的技术人才，他们或者来自业内先进研究实验室，或是来自诸如Google Brain或Facebook人工智能团队等知名行业组织。”</p>
+<p>  　　CRV对技术的追求直接体现在他们的投资行为中，他们投资的公司创始人普遍具有非凡的技术经验。初创企业Rethink Robotics创始人Rod Brooks是麻省理工学院人工智能实验室的创始主管，也是著名机器人公司iRobot的创始人。而Jibo的Cynthia Breazeal也曾在麻省理工大学媒体实验室成立过机器人小组，是一名世界知名的社交机器人专家。Pullstring公司的创始人Oren Jacob也是如此，他曾是皮克斯的首席技术官，自公司成立初期就与史蒂夫乔布斯共事。</p>
+<p>  　　而投资公司DCM Capital的创始人David Cheng则指出，“在整个行业生命周期的这一特定阶段，<strong>一个公司拥有一定数量的人工智能专家就能够获得开发技术的必要经验，从而开发真正的创新解决方案。</strong> 如果一个团队声称他们的产品使用了领先的人工智能技术却没有相应的团队，那么我们对此将持怀疑态度。”</p>
+<h2 id="能够有效解决客户的实际问题吗？"><a href="#能够有效解决客户的实际问题吗？" class="headerlink" title="　　能够有效解决客户的实际问题吗？"></a>　　能够有效解决客户的实际问题吗？</h2><p>  　　投资公司GE Ventures投资人Michael Dolbec指出，“就我个人而言，一个公司若是仅仅对人工智能夸夸其谈，而毫不涉及客户问题，那我就没有什么兴趣。我们投资的是宝贵的技术成果，而不是科学实验项目。”</p>
+<p>  　　每一位投资者对此都表示认同。</p>
+<p>  　　IA Ventures的Brad Gillespie补充称，“如果让我在二者中选择其一时，那么一个公司的业务专业知识将胜过其机器学习专业技能。”IA Ventures曾投资了Vectra Networks，这是一家由经验丰富业内专家领导的网络安全公司，专注于为客户解决重要问题，为安全分析师最大限度提高可用性。而Vectra Networks的竞争对手不断强调他们机器学习技术的复杂性，但客户的反应是“这些家伙很聪明，但他们并不理解我的业务是什么。他们的产品很花哨，但我并不明白它到底是什么。”</p>
+<p>  　　有效解决客户的业务痛点需要创始团队能够超越狭隘的技术方法，拥有解决特定业务的能力。投资公司Two Sigma Ventures的Colin Beirne指出，“当然，<strong>解决当今大多数困难问题需要不同技术的整合，而在特定业务领域使用人工智能能够在一定程度上降低学习理解的复杂性。</strong>”</p>
+<h2 id="是否有相关的，自有或可扩展的数据源？"><a href="#是否有相关的，自有或可扩展的数据源？" class="headerlink" title="　　是否有相关的，自有或可扩展的数据源？"></a>　　是否有相关的，自有或可扩展的数据源？</h2><p>  　　投资公司Qualcomm Ventures的Jain总习惯于这样问创始人，“你是如何获取数据的？你是依托大公司提供的数据，还是独立获取数据？”当然这两种方法都是可行的，但投资人更倾向于创业公司能够独立获取数据。</p>
+<p>  　　传统上。自动驾驶汽车会在郊区等封闭环境中进行测试。而Qualcomm所投资的Cruise Automation则通过在开放城市环境中操作测试车辆，整合人工干预的因素，从而获取更多驾驶数据。同样，Qualcomm所投资的Clarifai通过应用程序能够获取更多的数据，通过此也能够处理更多的业务数据。</p>
+<p>  　　投资者除了对数据源的独特性和合理性有要求，此外人工智能数据还必须要与其面对的问题密切相关。投资公司Battery Ventures的Dharmesh Thakker指出，“<strong>新一代人工智能技术往往取决于获取数据的复杂程度。诸如图像、音视频等非结构化数据处理要比普通文本困难的多。</strong>”在投资决策中，Dharmesh Thakker还会考虑目标公司处理静态数据和快速移动物体数据的能力。诸如自动驾驶汽车获取的实时图像等快速移动物体数据处理算法通常会复杂很多。</p>
+<p>  　　最后，创始团队还需要 <strong>证实其有根据自有数据不断改进产品性能的能力</strong>。Qualcomm的Jain会定期考察团队是否有“快速处理数据并不断优化的能力，从而使系统更加健壮。”</p>
+<h2 id="开发独有技术还是依靠开源产品"><a href="#开发独有技术还是依靠开源产品" class="headerlink" title="　　开发独有技术还是依靠开源产品"></a>　　开发独有技术还是依靠开源产品</h2><p>  　　投资公司Verizon Ventures的投资人Suresh Madhavan指出，相比于开发专有技术，依托开源框架往往就像是一种赠品，“<strong>开源的确能够让你分析解决一些表面问题，但无助于从根本上解决有难度的业务问题。</strong>”</p>
+<p>  　　DCM Ventures的Cheng也同意这一点。DCM的投资团队背后拥有一个由行业顾问和技术专家组成的强大网络。“（这些专家）帮我们审查团队技术、数据架构方式，并能够确定创业团队进行数据收集、存储、解析的根本方法。他们也帮助我们擦亮眼睛，找出滥竽充数者。”</p>
+<h2 id="产品是否有粘性？"><a href="#产品是否有粘性？" class="headerlink" title="　　产品是否有粘性？"></a>　　产品是否有粘性？</h2><p>  　　Sumant Mandal是投资公司March Capital的合伙人，也是The Hive的共同创始人，后者是一家专注于人工智能初创企业的孵化器。Mandal坦言，“<strong>对于人工智能初创企业来说， 如果效率不能提高5到10倍，那么就很难打入市场，从而为投资者带来价值。</strong>”Mandal建议初创企业需要考虑客户的收益。比如要将人工智能用于改进招聘流程，Mandal就建议初创团队要问自己，“如果我能够将相应效率提高5倍，那么能否让客户从雇员身上获得百倍收益？”</p>
+<p>  　　此外，Mandal还指出，<strong>价值提升必须要以客户可见的方式提供给客户，譬如以仪表盘或是真正有价值的情报等形式展现出来。</strong> Mandal警告称，虽然人工智能在网络安全领域的应用已经很多，但数据和相关人才的缺乏，导致“安全分析师并不需要过多的警报”。</p>
+<p>  　　而即便有一个较为理想的产品，仅仅为客户提供单一的解决方案也不是一个可行的商业模式。Woodside Capital的Kartik Gada建议创业公司要寻求收益以及客户的多元化。“你的收入是否稳健？是否常态化？你的客户是否需要相同或更多的解决方案？”</p>
+<h2 id="创业团队是否全面？"><a href="#创业团队是否全面？" class="headerlink" title="　　创业团队是否全面？"></a>　　创业团队是否全面？</h2><p>  　　最后一点，投资者倾向于寻求那些能够解决人工智能业务的多样化团队。投资公司Monsanto Growth Ventures的Kiersten Stead解释称，“多样化意味着团队包括业内专家、商业领袖以及销售精英，而不仅仅是工程技术人员。”</p>
+<p>  　　但是，Stead观察到，很多创业团队，特别是那些仅仅由人工智能研究人员组成的技术团队，并没有特定行业的相关经验，更容易失败。在农业技术开发和遗传育种方面尤为如此。</p>
+<p>  　　她强调，“人工智能技术团队在销售上有短板，反之亦然。我们会寻找行业经验丰富的人工智能企业创始人，他们往往有完整成熟的职业生涯，可与各类人组成一个多样化的团队。”人工智能企业往往会忽视销售和营销，但这对于成功非常重要。</p>
+<p>  　　投资公司Woodside Capital的Gada也警告称，“<strong>很多人工智能初创企业犯下的最大错误就是完全无视营销的重要性。很多客户根本不知道他们需要这些产品。</strong>”（晗冰）</p>
+<h2 id="AI研究院-企业做人工智能转型有四大关键要素"><a href="#AI研究院-企业做人工智能转型有四大关键要素" class="headerlink" title="AI研究院 | 企业做人工智能转型有四大关键要素"></a>AI研究院 | 企业做人工智能转型有四大关键要素</h2><p>  　　【AI研究院 | 网易智能工作室倾力打造的人工智能专业栏目，聚焦行业，深度分析，只为专业】</p>
+<p>  　　<img src="http://dingyue.nosdn.127.net/qvgJyuC8=PfZZvxXgv1ME7yu5vNchInjJQ74zChPxAvSr1486702463725compressflag.jpg" alt=""></p>
+<p>  　　网易智能讯 2月10日消息，在很多行业我们都已接近人工智能技术发展的临界点，包括自动驾驶汽车、蜂巢无人机、自动售货等。如今一个公司无论规模大小如何，都必须了解人工智能将怎样影响、甚至消灭某个行业，以及学会利用人工智能和机器学习（ML）。</p>
+<p>  　　对于企业来说这是一个至关重要的选择——是投身到人工智能领域还是保持现状等着被淘汰，前者可以更有效地帮助企业实现商业目标。人工智能—机器学习将令我们的日常生活更加美好高效，把现有工作提升到更加精确、有效的水平。</p>
+<p>  　　像优步、谷歌和Facebook这样的科技创新公司，通过收购和内部组织的转型，在人工智能领域进行了大胆尝试，使它成为一项战略重点。在2017年达沃斯论坛上，世界各国领导人探讨了人工智能对就业的影响，以及哪些行业适合应用这项技术。</p>
+<p>  　　事实上，根据互联网数据中心（IDC）的数据显示，到2020年，企业在人工智能方面的投入将从2016年的80亿美元飙升至470亿美元。另外，到2019年，将会有超过1.1亿个安装了嵌入式智能助手的设备走进美国家庭。</p>
+<p>  　　Intuit公司的人工智能转型始于4年前，当时业内都在探讨两个问题：金融软件的未来是什么；我们在帮助客户方面扮演怎样的角色。人工智能的趋势在当时是很明显的，包括工作的个性化、自动化、增强和速度等，这些都需要软件来进行辅助。近年来，随着人工智能技术的进步，我们对它的看法也作出了改变。</p>
+<p>  　　现在我们将人工智能看作一种为用户提供方便的技术。我们预计人工智能将创造新技术，例如以一种曾经无法想象的高科技方法为消费者处理税务、为小型企业完成账目记录等。但要实现这一目标并非易事。Intuit公司拥有30多种人工智能和机器学习模型，可以在实时体验中接触客户，而且我们还在不断作出新的尝试。我们在实验和成果中不断学习、发展和改进技术。</p>
+<p>  　　如果你的公司致力于通过人工智能打造能够满足消费者需求的产品和服务，那么这里有几个关键的问题需要考虑。</p>
+<p>  　　<strong>1.重视数据</strong></p>
+<p>  　　每一家公司的人工智能探索之旅都从数据开始。数据令机器学习和人工智能更强大。如果你一直在考虑如何利用数据，那么现在就可以开始制定和实施计划了。</p>
+<p>  　　在Intuit，我们几年前就已经转向了对数据的关注。我们在与业务部门同事进行沟通后制定了技术路线，充分了解了客户需求、行业趋势以及数据能够带来的客户利益。我们的Intuit Analytics Cloud云分析系统打破了一些障碍，让我们能够以更全面地认识产品产生的海量数据。在拥有人工智能或机器学习模型之前，我们就开始专注于数据分析和个性化的基础性工作。<strong>可靠、快速、准确的数据是人工智能—机器学习发展的催化剂。</strong></p>
+<p>  　　<strong>2.展望未来</strong></p>
+<p>  　　设想公司的未来是很重要的，同时也要观察人工智能将如何令你更加强大，或者改变你对研发工作的想法。我们在Intuit进行了一场活动，会见了各种各样的组织和个人，包括大学的学者专家、创业公司、风投公司等，探讨了人工智能和机器学习的未来蓝图，以及Intuit公司将如何适应这一转变。规模较小的公司同样可以在相应的资源范围内做出创新。</p>
+<p>  　　<strong>3.转变心态</strong></p>
+<p>  　　在开始阶段向业务部门和产品负责人解释投资人工智能的益处，可能是一件很有挑战性的事情。重要的是每个季度的客户利益需要体现在商业价值上，而不是单纯研究数据。例如，Intuit的税务分析系统就分析了3000万客户的纳税申报表，对分项扣除还是统一扣除作出相应建议，这可以节省40%的税收工作准备时间。这样一个甚至非数据专家都能理解的切实的商业成果。可以说，<strong>人工智能—机器学习是一段探索之旅。通过实际产生的影响来预估潜在的成果</strong>，这是很重要的。</p>
+<p>  　　4.成立团队，选择项目</p>
+<p>  　　要在企业中开始发展人工智能，先选择一个容易解决的业务问题，组件一支跨职能员工团队，包括数据科学家、工程师和质量监管人员，同时要注意及时更新团队。在团队中建立起能够理解实验价值的文化。珍惜从人工智能应用中得来的知识。另外，你的团队还应同时拥有专业知识和实战经验。千万不要认为只需要聘请专家。同时，在亟待解决的问题上还需要保持与其他行业科学家的互动，比如其他领域的博士等，他们天生具有好奇心，能够理解科学原理，并且有一套不同的解决方案。<strong>真正的人工智能—机器学习可以在应用数据科学方面带来重大成果。</strong> 不要低估了它的重要性，同时也要改变心态。</p>
+<p>  　　我们才刚刚到达人工智能和机器学习的起步阶段。<strong>在公司初创之时紧跟最先进的技术，将有助于你在未来发展中处于优势地位。</strong></p>
+<p>  　　（来源/VentureBeat 翻译/机器小易 审校/小ka）</p>
+<p>  　　注：本文为网易智能工作室稿件，转载需注明出处，否则追究其法律责任。</p>
+<h2 id="人工智能的迅速崛起需要警惕这四大风险"><a href="#人工智能的迅速崛起需要警惕这四大风险" class="headerlink" title="人工智能的迅速崛起需要警惕这四大风险"></a>人工智能的迅速崛起需要警惕这四大风险</h2><p><img src="http://dingyue.nosdn.127.net/ydgEN7xEoWpsGyUkJBKbgdXlwrf5u91jceEc1KE5IZXI=1484981995496compressflag.jpg" alt=""></p>
+<p>　　【网易智能讯 1月21日消息】大家可以想象一下，一名营销主管深夜翻看公司的幻灯片，该公司承诺利用人工智能（AI）自动化他的评分过程、优化他的广告开支方案、帮助增加他的营销开支回报率，他想要知道，哪里可能出现问题？</p>
+<p>的确有可能出现问题。尽管公司使用AI会让营销人员的工作变得更简单，但我们必须承认，AI的承诺往往言过其实。AI带来的好处是显而易见的，但也存在巨大风险。即使你找到最好的AI，并将其应用到你的营销技术堆栈中，依然存在影响你成功部署AI的风险。我并不担心这些风险，也不想将它们藏起来，我认为最好是直接面对它们，直至最终解决它们。</p>
+<p>AI主要存在四大类危险：</p>
+<p><strong>AI危险一：害怕失去工作</strong><br>这是最容易理解的AI危险，同时也是最容易解决的。人们经常害怕AI，因为他们担心AI会让人类变得多余，最终被拥有机器大脑的AI取代我们独特的技能。对于某些工作来说，这可能是真的。但我认为，AI带来的实际危险可能比人类预想的更低。AI还不够先进，也无法全面取代营销专家。如果营销人员学会有效地使用AI，它们反而会增强人类能力。也就是说，为了促使人们购买AI支持的技术，我们首先需要平抚人们对AI的恐惧。</p>
+<p><strong>AI危险二：错位的激励</strong><br>技术传道者有时候会深入企业内部，并利用让人惊叹的创意，阐述他们的产品如何改变每个人。但是有了AI和许多企业技术，这些热情常常会撞墙，因为这些墙将各个部门隔离开。事实证明，公司中拥有大量数据的人，往往不会与其他利益相关者分享数据。无论是出于隐私担忧、部门政策、个人冲突亦或是简单的流程偏差，比如障碍往往可能导致雄心勃勃的AI项目被搁置。</p>
+<p>为此，到目前为止，两类公司在部署AI时取得最大成功，一类是初创企业（公司规模较小，刚刚创建还没有僵化思维），一类是像谷歌和Facebook这样的大科技公司（其全部生命线都基于对数据的利用）。介于这两类极端公司之间的其他企业，几乎包括世界上所有公司，部署AI都会遇到更大阻碍。想要利用AI提高效率的营销人员需要意识到部门和监管问题，这些问题可能影响到他们。此外，数据价值链上的所有玩家都需要保持一致。</p>
+<p><strong>AI危险三：不可预测性</strong><br>这可能是AI固有的最大危险。所有AI项目都是不可预测的，因为它们正被用于解决未知问题。与传统软件开发不同，目前还没有标准的工程方法，可以通过分步获得可预知的AI结果。在这种情况下，将AI应用到营销数据中就像纯粹的科幻。我们不知道特定的数据集是否能解决特定的问题。就像无法预测科学实验的所有结果那样，AI也很难预测结果。这是有关软件开发的全新思维方式，但对任何营销领域或没有AI经验的人来说，这将是个巨大挑战。</p>
+<p><strong>AI危险四：人才匮乏</strong><br>这是AI带来的最后危险，阻碍你的团队引入足够的人才。不幸的是，当前AI领域存在巨大的技术鸿沟。AI领域的绝大多数人才都没有真正处理大规模行业数据的经验。而真正的专家还很少，最新统计显示，数据科学家的职位空缺高达1.6万个。这意味着，找到你需要的专业人士，并让他们帮助部署和执行AI驱动的营销计划非常困难。</p>
+<p>由于存在这些风险，你可以看到截止到目前许多AI实验都以失败告终。举例来说，麦肯锡最近做了一项研究，对石油和天然气钻探作业决策中的数据进行实时分析。麦肯锡研究的1家公司在离岸钻井仪器方面投入巨资，并通过RFID标签和内嵌传感器收集到大量数据。不幸的是，他们收集的数据中只有40%能传回到陆地数据中心，只有1%能真正进入数据库中，不到1%能被用于终端用户的产品中。最终，这些数据没有为人们的决策提供任何帮助。</p>
+<p>不幸的是，你可能发现同样大的阻力。在使用AI过程中，你会遇到强烈的文化阻碍。许多人不相信机器做出的决定，直到机器算法有机会证明自己的决定。营销高管们部署AI面对的挑战是，需要确保所有相关利益者支持他们。确保人们受到相关训练，确保他们对可能结果产生现实期待，并获得正确的激励奖励。</p>
+<p>只有做到这些，你才能开始意识到AI革命为营销领域带来的惊人好处。（小小）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html&quot;&gt;作者：网易AI研究院&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。&lt;/p&gt;
+&lt;p&gt;　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="理财" scheme="http://ipcreator.me/categories/%E7%90%86%E8%B4%A2/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
     
   </entry>
   
@@ -16040,137 +16116,6 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
     
     
       <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>英语之美</title>
-    <link href="http://ipcreator.me/2016/12/31/MyShare/view-of-english/"/>
-    <id>http://ipcreator.me/2016/12/31/MyShare/view-of-english/</id>
-    <published>2016-12-30T16:02:05.000Z</published>
-    <updated>2017-02-21T23:44:07.430Z</updated>
-    
-    <content type="html"><![CDATA[<p>图文来源：<a href="http://news.iciba.com/views/dailysentence/daily.html#!/" target="_blank" rel="external">金山词霸</a> <a href="http://xue.youdao.com/sw/m/1304931?keyfrom=dict2.index" target="_blank" rel="external">英语功夫</a></p>
-<p><strong>自知者明  自胜者强</strong></p>
-<blockquote>
-<ul>
-<li>He who knows others is learned, and he who knows himself is wise.</li>
-<li>To conquer yourself is more powerful than to defeat other people.</li>
-</ul>
-</blockquote>
-<p><strong>学以致用 知行合一</strong></p>
-<blockquote>
-<ul>
-<li>Study serve the practical purpose.</li>
-<li>Knowledge is action, action is knowledge.</li>
-</ul>
-</blockquote>
-<p><strong>不忘初心 方得始终</strong></p>
-<blockquote>
-<ul>
-<li>Don’t forget why start off, otherwise it is difficult to achieve the ultimate goal.</li>
-</ul>
-</blockquote>
-<p><img src="http://cdn.iciba.com/news/word/big_20170218b.jpg" alt=""></p>
-<p>Many people start a career with a dream, then get busy forgetting it.<br>很多人一开始为了梦想而忙，后来忙得忘了梦想。</p>
-  <a id="more"></a>
-<p>  You are never too old to set another goal or to dream a new dream.</p>
-<p>  再设一个目标或拥有一个新梦想永远都不晚。</p>
-<p>  <img src="https://oimagea7.ydstatic.com/image?id=6034196847945444092&amp;product=dict&amp;_w=450&amp;_h=542&amp;originWidth=450&amp;originHeight=542" alt=""><br>  “Without purpose, the days would have ended, as such days always end, in disintegration.”<br>  – Explorer<br>  「少了目标，一天还是会结束，它总是以支离破碎的形式结束。」<br>  – 理查‧伯德 (探险家)</p>
-<p>  <img src="https://oimagea5.ydstatic.com/image?id=-8581314080288521671&amp;product=dict&amp;_w=422&amp;_h=801&amp;originWidth=422&amp;originHeight=801" alt=""><br>  “If you set your goals ridiculously high and it’s a failure, you will fail above everyone else’s success.”<br>– James Cameron, Filmmaker<br>「如果你把目标设的不可思议的高，然后失败了，你的失败也会是在别人的成功之上。」<br>– 詹姆斯·卡麦隆 (导演)</p>
-<p><img src="https://oimagea1.ydstatic.com/image?id=-7695275231959726851&amp;product=dict&amp;_w=447&amp;_h=795&amp;originWidth=447&amp;originHeight=795" alt=""><br>“Our plans miscarry because they have no aim. If one does not know to which port one is sailing, no wind is favorable.”<br>– Lucius Annaeus Seneca, Philosopher<br>「我们的计划不成功是因为没有目标，一个人若不知道他要航向哪个港口，没有风向会是顺风的。」<br>– 塞内卡 (哲学家)</p>
-<p><img src="https://oimagea4.ydstatic.com/image?id=-234138419591281972&amp;product=dict&amp;_w=605&amp;_h=701&amp;originWidth=605&amp;originHeight=701" alt=""></p>
-<p><img src="https://oimagea7.ydstatic.com/image?id=-6596642226613339853&amp;product=dict&amp;_w=608&amp;_h=854&amp;originWidth=608&amp;originHeight=854" alt=""></p>
-<p><img src="https://oimagec1.ydstatic.com/image?id=-5723311090119425446&amp;product=dict&amp;_w=607&amp;_h=844&amp;originWidth=607&amp;originHeight=844" alt=""></p>
-<p><img src="http://cdn.iciba.com/news/word/big_20170215b.jpg" alt=""><br>Be yourself, don’t change for anyone. If they don’t like you at your worst, then they don’t deserve you at your best.<br>勇敢的做自己，不要为任何人而改变。如果他们不能接受最差的你，也不配拥有最好的你。</p>
-<p><img src="http://cdn.iciba.com/news/word/big_20170216b.jpg" alt=""><br>Life is like angry birds.There are always several pigs laughing when you lose.<br>人生就像愤怒的小鸟，当你失败时，总有几头猪在笑！</p>
-<p><img src="http://cdn.iciba.com/news/word/big_20170221b.jpg" alt=""><br>A reader lives a thousand lives before he dies… The man who never reads lives only one.<br>阅读的人在临终前经历了一千个人生…… 从不阅读的人只经历一个人生。</p>
-<p><strong>“一日不读书，无人看得出；一周不读书，开始会爆粗；一月不读书，智商输给猪。”</strong></p>
-<h1 id="孔子语录英文版"><a href="#孔子语录英文版" class="headerlink" title="孔子语录英文版"></a><a href="http://xue.youdao.com/sw/m/1305739?keyfrom=dict2.index" target="_blank" rel="external">孔子语录英文版</a></h1><p><img src="https://oimagec5.ydstatic.com/image?id=-5119860809705078677&amp;product=dict&amp;_w=1000&amp;_h=365&amp;originWidth=1000&amp;originHeight=365" alt=""></p>
-<p>性相近也，习相远也。</p>
-<p>By nature, men are nearly alike; by practice, they get to be wide apart.</p>
-<p>过而不改，是谓过矣。</p>
-<p>Not to mend the fault one has made is to err indeed.</p>
-<p>己所不欲，勿施于人。</p>
-<p>What you do not want done to yourself, do not do to others.</p>
-<p>言必信，行必果。</p>
-<p>Keep what you say and carry out what you do.</p>
-<p><img src="https://oimageb8.ydstatic.com/image?id=-1835166686911985959&amp;product=dict&amp;_w=640&amp;_h=344&amp;originWidth=640&amp;originHeight=344" alt=""></p>
-<p>君子以文会友，以友辅仁。</p>
-<p>The superior man on grounds of culture meets with his friends, and by their friendship helps his virtue.</p>
-<p>三军可夺帅也，匹夫不可夺志也。</p>
-<p>The commander of the forces of a large State may be carried off, but the will of even a common man cannot be taken from him.</p>
-<p>后生可畏，焉知来者之不如今也？</p>
-<p>A youth is to be regarded with respect. How do you know that his future will not be equal to our present?</p>
-<p>有朋自远方来，不亦乐乎？</p>
-<p>Is it not delightful to have friends coming from distant quarters?</p>
-<p><img src="https://oimageb2.ydstatic.com/image?id=-8262356735949712465&amp;product=dict&amp;_w=1000&amp;_h=989&amp;originWidth=1000&amp;originHeight=989" alt=""></p>
-<p>人不知而不愠，不亦君子乎？</p>
-<p>Is he not a man of complete virtue, who feels no discomposure though men may take no note of him?</p>
-<p>父在，观其志。父没，观其行。三年无改于父之道，可谓孝矣。</p>
-<p>While a man’s father is alive, look at the bent of his will; when his father is dead, look at his conduct. If for three years he does not alter from the way of his father, he may be called filial.</p>
-<p>不患人之不己知，患不知人也。</p>
-<p>I will not be afflicted at men’s not knowing me; I will be afflicted that I do not know men.</p>
-<p>诗三百，一言以蔽之，曰：思无邪。</p>
-<p>In the Book of Poetry are three hundred pieces, but the design of them all may be embraced in one sentence– “Having no depraved thoughts.”</p>
-<p>关睢乐而不淫，哀而不伤。</p>
-<p>The Kwan Tsu is expressive of enjoyment without being licentious, and of grief without being hurtfully excessive.</p>
-<p><img src="https://oimagec7.ydstatic.com/image?id=-675694024399797857&amp;product=dict&amp;_w=368&amp;_h=373&amp;originWidth=368&amp;originHeight=373" alt=""></p>
-<p>父母在，不远游，游必有方。</p>
-<p>While his parents are alive, the son may not go abroad to a distance. If he does go abroad, he must have a fixed place to which he goes.</p>
-<p>德不孤，必有邻。</p>
-<p>Virtue is not left to stand alone. He who practices it will have neighbors.</p>
-<p>吾十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩。</p>
-<p>At fifteen I set my heart upon learning. At thirty, I planted my feet firm upon the ground. At forty, I no longer suffered from perplexities. At fifty, I knew what were the biddings of Heaven. At sixty, I heard them with docile ear. At seventy, I could follow the dictates of my own heart; for what I desired no longer overstepped the boundaries of right.</p>
-<p>贤哉回也!一箪食，一瓢饮，在陋巷，人不堪其忧，回也不改其乐。贤哉回也!</p>
-<p>Incomparable indeed was Hui! A handful of rice to eat, a gourdful of water to drink, living in a mean street. Others would have found it unendurable depressing, but to Hui’s cheerfulness it made no difference at all. Incomparable indeed was Hui.</p>
-<p>知者乐水，仁者乐山。知者动，仁者静。知者乐，仁者寿。</p>
-<p>The wise find pleasure in water; the virtuous find pleasure in hills. The wise are active; the virtuous are tranquil. The wise are joyful; the virtuous are long-lived.</p>
-<p><img src="https://oimageb2.ydstatic.com/image?id=5385143214236594374&amp;product=dict&amp;_w=640&amp;_h=641&amp;originWidth=640&amp;originHeight=641" alt=""></p>
-<p>逝者如斯夫，不舍昼夜。</p>
-<p>It passes on just like this, not ceasing day or night!</p>
-<p>食不厌精，脍不厌细。</p>
-<p>He did not dislike to have his rice finely cleaned, nor to have his minced meat cut quite small.</p>
-<p>非礼勿视，非礼勿听，非礼勿言，非礼勿动。</p>
-<p>Look not at what is contrary to propriety; listen not to what is contrary to propriety; speak not what is contrary to propriety; make no movement which is contrary to propriety.</p>
-<p>人无远虑，必有近忧。</p>
-<p>If a man take no thought about what is distant, he will find sorrow near at hand.</p>
-<p>君子有三戒。少之时，血气未定，戒之在色。及其壮也，血气方刚，戒之在斗。及其老也，血气既衰，戒之在得。</p>
-<p>There are three things which the superior man guards against. In youth, when the physical powers, are not yet settled, he guards against lust. When he is strong and the physical powers are full of vigor, he guards against quarrelsomeness. When he is old, and the animal powers are decayed, he guards against covetousness.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;图文来源：&lt;a href=&quot;http://news.iciba.com/views/dailysentence/daily.html#!/&quot;&gt;金山词霸&lt;/a&gt; &lt;a href=&quot;http://xue.youdao.com/sw/m/1304931?keyfrom=dict2.index&quot;&gt;英语功夫&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;自知者明  自胜者强&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;He who knows others is learned, and he who knows himself is wise.&lt;/li&gt;
-&lt;li&gt;To conquer yourself is more powerful than to defeat other people.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;学以致用 知行合一&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Study serve the practical purpose.&lt;/li&gt;
-&lt;li&gt;Knowledge is action, action is knowledge.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;不忘初心 方得始终&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Don’t forget why start off, otherwise it is difficult to achieve the ultimate goal.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;http://cdn.iciba.com/news/word/big_20170218b.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Many people start a career with a dream, then get busy forgetting it.&lt;br&gt;很多人一开始为了梦想而忙，后来忙得忘了梦想。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-    
-    
-      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
     
   </entry>
   

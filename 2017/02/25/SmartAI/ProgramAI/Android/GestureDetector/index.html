@@ -6,17 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ipcreator.me">
-  <title>IPCreator</title>
+  <title>GestureDetector | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="For life, growing up is the only password.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="IPCreator">
-<meta property="og:url" content="http://ipcreator.me/page/3/index.html">
+  <meta name="description" content="GestureDetector
+public class GestureDetectorextends Object
+java.lang.Object   ↳    android.view.GestureDetector
+Detects various gestures and events using the supplied MotionEvents. The GestureDetector">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GestureDetector">
+<meta property="og:url" content="http://ipcreator.me/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/index.html">
 <meta property="og:site_name" content="IPCreator">
-<meta property="og:description" content="For life, growing up is the only password.">
+<meta property="og:description" content="GestureDetector
+public class GestureDetectorextends Object
+java.lang.Object   ↳    android.view.GestureDetector
+Detects various gestures and events using the supplied MotionEvents. The GestureDetector">
+<meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/GestureDetector.png">
+<meta property="og:updated_time" content="2017-02-25T10:31:12.325Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IPCreator">
-<meta name="twitter:description" content="For life, growing up is the only password.">
+<meta name="twitter:title" content="GestureDetector">
+<meta name="twitter:description" content="GestureDetector
+public class GestureDetectorextends Object
+java.lang.Object   ↳    android.view.GestureDetector
+Detects various gestures and events using the supplied MotionEvents. The GestureDetector">
+<meta name="twitter:image" content="http://okkntqe2h.bkt.clouddn.com/GestureDetector.png">
   
   
     <link rel="icon" href="/img/personalphoto.jpg">
@@ -162,34 +174,77 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-SmartAI/ProgramAI/OpenSources/28-open-source-projects-of-machine-learning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-SmartAI/ProgramAI/Android/GestureDetector" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/19/SmartAI/ProgramAI/OpenSources/28-open-source-projects-of-machine-learning/">28款 GitHub 最流行的开源机器学习项目：TensorFlow 排榜首</a>
+    <h1 class="article-title" itemprop="name">
+      GestureDetector
     </h1>
   
 
         
-        <a href="/2017/02/19/SmartAI/ProgramAI/OpenSources/28-open-source-projects-of-machine-learning/" class="archive-article-date">
-  	<time datetime="2017-02-19T15:57:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-19</time>
+        <a href="/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/" class="archive-article-date">
+  	<time datetime="2017-02-25T08:11:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>作者：<a href="https://yq.aliyun.com/articles/30794?spm=5176.100239.blogcont30796.7.1WRiYX">云栖社区 readygo </a></p>
-<p>现在机器学习逐渐成为行业热门，经过二十几年的发展，机器学习得到了十分广泛的应用，如：数据挖掘、计算机视觉、自然语言处理、生物特征识别、搜索引擎、医学诊断、DNA序列测序、战略游戏和机器人等方面。 云栖社区特意翻译整理了目前GitHub上最受欢迎的28款开源的机器学习项目，以供开参考使用。</p>
-<p><img src="https://oss.aliyuncs.com/yqfiles/f7ee0537b3263e5874f6d0533a46422c61508308.png" alt=""></p>
-        
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/OpenSources/28-open-source-projects-of-machine-learning/#more">more >></a>
-        
+        <h2 id="GestureDetector"><a href="#GestureDetector" class="headerlink" title="GestureDetector"></a><a href="https://developer.android.com/reference/android/view/GestureDetector.html" target="_blank" rel="external">GestureDetector</a></h2><p><img src="http://okkntqe2h.bkt.clouddn.com/GestureDetector.png" alt=""></p>
+<p>public class GestureDetector<br>extends Object</p>
+<p>java.lang.Object<br>   ↳    android.view.GestureDetector</p>
+<p>Detects various gestures and events using the supplied MotionEvents. The <a href="https://developer.android.com/reference/android/view/GestureDetector.OnGestureListener.html" target="_blank" rel="external">GestureDetector.OnGestureListener</a> callback will notify users when <strong>a particular motion event</strong> has occurred. This class should only be used with <a href="https://developer.android.com/reference/android/view/MotionEvent.html" target="_blank" rel="external">MotionEvents</a> reported via touch (don’t use for trackball events). To use this class:</p>
+<p>Create an instance of the GestureDetector for your View<br>In the onTouchEvent(MotionEvent) method ensure you call onTouchEvent(MotionEvent). The methods defined in your callback will be executed when the events occur.<br>If listening for onContextClick(MotionEvent) you must call onGenericMotionEvent(MotionEvent) in onGenericMotionEvent(MotionEvent).</p>
+   <a id="more"></a>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Nested classes<br>interface    GestureDetector.OnContextClickListener<br>The listener that is used to notify when a context click occurs.<br>interface    GestureDetector.OnDoubleTapListener<br>The listener that is used to notify when a double-tap or a confirmed single-tap occur.<br>interface    GestureDetector.OnGestureListener<br>The listener that is used to notify when gestures occur.<br>class    GestureDetector.SimpleOnGestureListener<br>A convenience class to extend when you only want to listen for a subset of all the gestures.<br>Public constructors<br>GestureDetector(GestureDetector.OnGestureListener listener, Handler handler)<br>This constructor was deprecated in API level 3. Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener, android.os.Handler) instead.<br>GestureDetector(GestureDetector.OnGestureListener listener)<br>This constructor was deprecated in API level 3. Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener) instead.<br>GestureDetector(Context context, GestureDetector.OnGestureListener listener)<br>Creates a GestureDetector with the supplied listener.<br>GestureDetector(Context context, GestureDetector.OnGestureListener listener, Handler handler)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.<br>GestureDetector(Context context, GestureDetector.OnGestureListener listener, Handler handler, boolean unused)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.<br>Public methods<br>boolean    isLongpressEnabled()<br>boolean    onGenericMotionEvent(MotionEvent ev)<br>Analyzes the given generic motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.<br>boolean    onTouchEvent(MotionEvent ev)<br>Analyzes the given motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.<br>void    setContextClickListener(GestureDetector.OnContextClickListener onContextClickListener)<br>Sets the listener which will be called for context clicks.<br>void    setIsLongpressEnabled(boolean isLongpressEnabled)<br>Set whether longpress is enabled, if this is enabled when a user presses and holds down you get a longpress event and nothing further.<br>void    setOnDoubleTapListener(GestureDetector.OnDoubleTapListener onDoubleTapListener)<br>Sets the listener which will be called for double-tap and related gestures.<br>Inherited methods<br>From class java.lang.Object<br>Public constructors<br>GestureDetector</p>
+<p>Added in API level 1<br>GestureDetector (GestureDetector.OnGestureListener listener,<br>                Handler handler)<br>This constructor was deprecated in API level 3.<br>Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener, android.os.Handler) instead.</p>
+<p>Creates a GestureDetector with the supplied listener. This variant of the constructor should be used from a non-UI thread (as it allows specifying the Handler).</p>
+<p>Parameters<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>handler    Handler: the handler to use<br>Throws<br>NullPointerException    if either listener or handler is null.<br>GestureDetector</p>
+<p>Added in API level 1<br>GestureDetector (GestureDetector.OnGestureListener listener)<br>This constructor was deprecated in API level 3.<br>Use GestureDetector(android.content.Context, android.view.GestureDetector.OnGestureListener) instead.</p>
+<p>Creates a GestureDetector with the supplied listener. You may only use this constructor from a UI thread (this is the usual situation).</p>
+<p>Parameters<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
+<p>Handler()<br>GestureDetector</p>
+<p>Added in API level 3<br>GestureDetector (Context context,<br>                GestureDetector.OnGestureListener listener)<br>Creates a GestureDetector with the supplied listener. You may only use this constructor from a Looper thread.</p>
+<p>Parameters<br>context    Context: the application’s context<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
+<p>Handler()<br>GestureDetector</p>
+<p>Added in API level 3<br>GestureDetector (Context context,<br>                GestureDetector.OnGestureListener listener,<br>                Handler handler)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.</p>
+<p>Parameters<br>context    Context: the application’s context<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>handler    Handler: the handler to use for running deferred listener events.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
+<p>Handler()<br>GestureDetector</p>
+<p>Added in API level 8<br>GestureDetector (Context context,<br>                GestureDetector.OnGestureListener listener,<br>                Handler handler,<br>                boolean unused)<br>Creates a GestureDetector with the supplied listener that runs deferred events on the thread associated with the supplied Handler.</p>
+<p>Parameters<br>context    Context: the application’s context<br>listener    GestureDetector.OnGestureListener: the listener invoked for all the callbacks, this must not be null.<br>handler    Handler: the handler to use for running deferred listener events.<br>unused    boolean: currently not used.<br>Throws<br>NullPointerException    if listener is null.<br>See also:</p>
+<p>Handler()<br>Public methods<br>isLongpressEnabled</p>
+<p>Added in API level 1<br>boolean isLongpressEnabled ()<br>Returns<br>boolean    true if longpress is enabled, else false.<br>onGenericMotionEvent</p>
+<p>Added in API level 23<br>boolean onGenericMotionEvent (MotionEvent ev)<br>Analyzes the given generic motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.</p>
+<p>Parameters<br>ev    MotionEvent: The current motion event.<br>Returns<br>boolean    true if the GestureDetector.OnGestureListener consumed the event, else false.<br>onTouchEvent</p>
+<p>Added in API level 1<br>boolean onTouchEvent (MotionEvent ev)<br>Analyzes the given motion event and if applicable triggers the appropriate callbacks on the GestureDetector.OnGestureListener supplied.</p>
+<p>Parameters<br>ev    MotionEvent: The current motion event.<br>Returns<br>boolean    true if the GestureDetector.OnGestureListener consumed the event, else false.<br>setContextClickListener</p>
+<p>Added in API level 23<br>void setContextClickListener (GestureDetector.OnContextClickListener onContextClickListener)<br>Sets the listener which will be called for context clicks.</p>
+<p>Parameters<br>onContextClickListener    GestureDetector.OnContextClickListener: the listener invoked for all the callbacks, or null to stop listening for context clicks.<br>setIsLongpressEnabled</p>
+<p>Added in API level 1<br>void setIsLongpressEnabled (boolean isLongpressEnabled)<br>Set whether longpress is enabled, if this is enabled when a user presses and holds down you get a longpress event and nothing further. If it’s disabled the user can press and hold down and then later moved their finger and you will get scroll events. By default longpress is enabled.</p>
+<p>Parameters<br>isLongpressEnabled    boolean: whether longpress should be enabled.<br>setOnDoubleTapListener</p>
+<p>Added in API level 3<br>void setOnDoubleTapListener (GestureDetector.OnDoubleTapListener onDoubleTapListener)<br>Sets the listener which will be called for double-tap and related gestures.</p>
+<p>Parameters<br>onDoubleTapListener    GestureDetector.OnDoubleTapListener: the listener invoked for all the callbacks, or null to stop listening for double-tap gestures.</p>
+<h2 id="GestureDetector-OnGestureListener"><a href="#GestureDetector-OnGestureListener" class="headerlink" title="[GestureDetector.OnGestureListener]"></a>[GestureDetector.OnGestureListener]</h2><p>public static interface GestureDetector.OnGestureListener</p>
+<p>android.view.GestureDetector.OnGestureListener<br>Known Indirect Subclasses<br>Gallery, GestureDetector.SimpleOnGestureListener</p>
+<p>The listener that is used to notify when gestures occur. If you want to listen for all the different gestures then implement this interface. If you only want to listen for a subset it might be easier to extend GestureDetector.SimpleOnGestureListener.</p>
+<p>Summary<br>Public methods<br>abstract boolean    onDown(MotionEvent e)<br>Notified when a tap occurs with the down MotionEvent that triggered it.<br>abstract boolean    onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY)<br>Notified of a fling event when it occurs with the initial on down MotionEvent and the matching up MotionEvent.<br>abstract void    onLongPress(MotionEvent e)<br>Notified when a long press occurs with the initial on down MotionEvent that trigged it.<br>abstract boolean    onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY)<br>Notified when a scroll occurs with the initial on down MotionEvent and the current move MotionEvent.<br>abstract void    onShowPress(MotionEvent e)<br>The user has performed a down MotionEvent and not performed a move or up yet.<br>abstract boolean    onSingleTapUp(MotionEvent e)<br>Notified when a tap occurs with the up MotionEvent that triggered it.<br>Public methods<br>onDown</p>
+<p>Added in API level 1<br>boolean onDown (MotionEvent e)<br>Notified when a tap occurs with the down MotionEvent that triggered it. This will be triggered immediately for every down event. All other events should be preceded by this.</p>
+<p>Parameters<br>e    MotionEvent: The down motion event.<br>Returns<br>boolean<br>onFling</p>
+<p>Added in API level 1<br><strong>boolean onFling (MotionEvent e1,<br>                MotionEvent e2,<br>                float velocityX,<br>                float velocityY)</strong><br>Notified of a fling event when it occurs with the initial on down MotionEvent and the matching up MotionEvent. The calculated velocity is supplied along the x and y axis in pixels per second.</p>
+<p>Parameters<br>e1    MotionEvent: The first down motion event that started the fling.<br>e2    MotionEvent: The move motion event that triggered the current onFling.<br>velocityX    float: The velocity of this fling measured in pixels per second along the x axis.<br>velocityY    float: The velocity of this fling measured in pixels per second along the y axis.<br>Returns<br><strong>boolean    true if the event is consumed, else false</strong><br>onLongPress</p>
+<p>Added in API level 1<br>void onLongPress (MotionEvent e)<br>Notified when a long press occurs with the initial on down MotionEvent that trigged it.</p>
+<p>Parameters<br>e    MotionEvent: The initial on down motion event that started the longpress.<br>onScroll</p>
+<p>Added in API level 1<br>boolean onScroll (MotionEvent e1,<br>                MotionEvent e2,<br>                float distanceX,<br>                float distanceY)<br>Notified when a scroll occurs with the initial on down MotionEvent and the current move MotionEvent. The distance in x and y is also supplied for convenience.</p>
+<p>Parameters<br>e1    MotionEvent: The first down motion event that started the scrolling.<br>e2    MotionEvent: The move motion event that triggered the current onScroll.<br>distanceX    float: The distance along the X axis that has been scrolled since the last call to onScroll. This is NOT the distance between e1 and e2.<br>distanceY    float: The distance along the Y axis that has been scrolled since the last call to onScroll. This is NOT the distance between e1 and e2.<br>Returns<br>boolean    true if the event is consumed, else false<br>onShowPress</p>
+<p>Added in API level 1<br>void onShowPress (MotionEvent e)<br>The user has performed a down MotionEvent and not performed a move or up yet. This event is commonly used to provide visual feedback to the user to let them know that their action has been recognized i.e. highlight an element.</p>
+<p>Parameters<br>e    MotionEvent: The down motion event<br>onSingleTapUp</p>
+<p>Added in API level 1<br>boolean onSingleTapUp (MotionEvent e)<br>Notified when a tap occurs with the up MotionEvent that triggered it.</p>
+<p>Parameters<br>e    MotionEvent: The up motion event that completed the first tap<br>Returns<br>boolean    true if the event is consumed, else false</p>
+
       
 
       
@@ -202,15 +257,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Machine Learning</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Open Source</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
         		</li>
       		
 		</ul>
@@ -222,7 +269,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
         		</li>
       		
 		</ul>
@@ -230,18 +277,74 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/OpenSources/28-open-source-projects-of-machine-learning/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsElEQVR42u3aMW7DMAwF0Nz/0u0aIInzSZGBh+fJcF1ZT4OokHw84uvv6UqevF7P71RHeP3f4QsPDw/vYOrXQ1c/+fr+Nez1nU9Pkjnj4eHhbfM+Te76/nqZrpG9Jc7njIeHh3c33vWk88P0dfBI5oOHh4d3f975b//qCHh4eHj35PVSqFOp2DzYLOZa8PDw8E7353Ji4pf3K/U9PDw8vOPjb77hJoWu3jh5MHjzFTw8PLwFXr7h9poJekfk6lH7y0Lj4eHhrfHyoZPNPQ8PJy1c0Th4eHh4a7xkK8/x1YaA/MBdnjMeHh7eMi+fevVJtWA2VjzDw8PD26rLHx2v88lVk8VHDQF4eHh4C7z8A1ML1JtVL6jg4eHhbfBOGp6STbw3uTy9G6WA8fDw8BZ4vXJ+3liQZ1Z7mEJrFx4eHt4or1qC6jVszbYjlKMfHh4e3jEv2b7zd6ptUtUqfzl04eHh4S3wegPlB+XzNESvLPeorjQeHh7eEC/f3Htho5wpKTYr4OHh4W3w8vTryaE539ar7QVfggQeHh7eAq8KyJu0ploQeglcPDw8vG1evpVXwXkat/pO4a94eHh4o7xq6SvZpnvJ36lx3tT38PDw8EZ5yYbbayk4Tw0fpR7yeIKHh4c3xEsSu9XDbvXKA88XMB4eHt4aLy96JeWrfLq9Q3OhQQEPDw/vJ7zzclcvtORNBnh4eHj35PW25l5atrco0RLg4eHhjfJ6CYJmOrXVmlD9Fh4eHt42b6rolQeVPDGR3w9ceHh4eEVerxA1m4pNFqu5xHh4eHhrvPwz50X9PP1xEsbw8PDw7sPLN/1eOvikreHNczw8PLyb8ZIP95oSkvejJDIeHh7eGi8v5Fe37zy1kRyvy6UvPDw8vAVe+ed9MQxUg0S+NMP1PTw8PLzv1z8XIA0B0bIskAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/22/MyShare/my-translations/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">名人名言</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -249,609 +352,28 @@
 
 
   
-    <article id="post-SmartAI/ProgramAI/Concepts/white-paper-of-google-machine-learning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/19/SmartAI/ProgramAI/Concepts/white-paper-of-google-machine-learning/">谷歌机器学习白皮书全解析43条黄金法则</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/19/SmartAI/ProgramAI/Concepts/white-paper-of-google-machine-learning/" class="archive-article-date">
-  	<time datetime="2017-02-19T15:57:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>作者：<a href="http://www.leiphone.com/news/201701/FmC6Z2X6UeCvgGEV.html">雷锋网</a></p>
-<p>谷歌白皮书原文地址：<a href="http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf">http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf</a></p>
-<p>编者按：此白皮书为谷歌总结的机器学习（ML）最优实践方法，浓缩了其多年技术积累与经验，尤其是 Youtube、Google Play 和 Google+ 等平台背后的 ML 算法开发、维护经历。谷歌于白皮书中总结了四十三条 ML 黄金法则，旨在帮助已经掌握了基础知识的开发者少走弯路。鉴于其珍贵程度与技术性，雷锋网逐条做了严格尊重原文的翻译。若你已学习过机器学习课程，抑或有开发 ML 模型的经验，那么应当具备足够的背景知识理解这篇文章。</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58878244a09a3.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
-        
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/Concepts/white-paper-of-google-machine-learning/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Google</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Machine Learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/Concepts/white-paper-of-google-machine-learning/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="SmartAI/ProgramAI/Android/GestureDetector" data-title="GestureDetector" data-url="http://ipcreator.me/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
-    <article id="post-SmartAI/ProgramAI/Resources/awesome-machine-learning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/19/SmartAI/ProgramAI/Resources/awesome-machine-learning/">Awesome Machine Learning</a>
-    </h1>
-  
 
-        
-        <a href="/2017/02/19/SmartAI/ProgramAI/Resources/awesome-machine-learning/" class="archive-article-date">
-  	<time datetime="2017-02-19T15:56:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>作者：<a href="https://github.com/josephmisiti/awesome-machine-learning">Joseph Misiti/josephmisiti</a></p>
-<p>A curated list of awesome machine learning frameworks, libraries and software (by language). Inspired by awesome-php.</p>
 
-<p>If you want to contribute to this list (please do), send me a pull request or contact me <a href="https://twitter.com/josephmisiti">@josephmisiti</a><br>Also, a listed repository should be deprecated if:</p>
-
-<ul><br><li>Repository’s owner explicitly say that “this library is not maintained”.</li><br><li>Not committed for long time (2~3 years).</li><br></ul>
-
-<p>For a list of free machine learning books available for download, go <a href="https://github.com/josephmisiti/awesome-machine-learning/blob/master/books.md">here</a>.</p>
-
-<p>For a list of free-to-attend meetups and local events, go <a href="https://github.com/josephmisiti/awesome-machine-learning/blob/master/meetups.md">here</a>.</p>
-        
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/Resources/awesome-machine-learning/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Machine Learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/Resources/awesome-machine-learning/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-SmartAI/ProgramAI/Resources/awesome-deep-learning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/">Awesome Deep Learning</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/" class="archive-article-date">
-  	<time datetime="2017-02-19T15:56:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>作者：<a href="https://github.com/josephmisiti/awesome-deep-learning">Joseph Misiti/josephmisiti</a></p>
-<html lang="en" class=" is-u2f-enabled"><br><br>A curated list of awesome Deep Learning tutorials, projects and communities.<br><br>  <div id="readme" class="readme blob instapaper_body"><br>    <article class="markdown-body entry-content" itemprop="text"><h3><a id="user-content-free-online-books" class="anchor" href="#free-online-books" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Free Online Books</h3><br><br><ol><br><li> <a href="http://www.iro.umontreal.ca/%7Ebengioy/dlbook/">Deep Learning</a> by Yoshua Bengio, Ian Goodfellow and Aaron Courville  (01/01/2015)</li><br><li> <a href="http://neuralnetworksanddeeplearning.com/">Neural Networks and Deep Learning</a> by  Michael Nielsen (Dec 2014)</li><br><li> <a href="http://research.microsoft.com/pubs/209355/DeepLearning-NowPublishing-Vol7-SIG-039.pdf">Deep Learning</a> by Microsoft Research (2013) </li><br><li> <a href="http://deeplearning.net/tutorial/deeplearning.pdf">Deep Learning Tutorial</a> by LISA lab, University of Montreal (Jan 6 2015)</li><br></ol><br><br>
-        
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/">25个Java机器学习工具&amp;库</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/" class="archive-article-date">
-  	<time datetime="2017-02-19T15:50:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>转自：<a href="http://blog.csdn.net/xiexingshishu/article/details/50405531">CSDN</a></p>
-<p>本列表总结了25个Java机器学习工具&amp;库</p>
-        
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Machine Learning</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Open Source</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-SmartAI/ProgramAI/Tools/learn-journey-of-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-python/">Python教程</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-python/" class="archive-article-date">
-  	<time datetime="2017-02-19T06:14:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://www.python.org/static/img/python-logo@2x.png" alt=""></p>
-<p>作者：<a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000">廖雪峰</a></p>
-<p>这是小白的Python新手教程，具有如下特点：</p>
-<p><strong>中文，免费，零起点，完整示例，基于最新的Python 3版本。</strong></p>
-<p>Python是一种计算机程序设计语言。你可能已经听说过很多种流行的编程语言，比如非常难学的C语言，非常流行的Java语言，适合初学者的Basic语言，适合网页编程的JavaScript语言等等。</p>
-<p>那Python是一种什么语言？</p>
-<p>首先，我们普及一下编程语言的基础知识。用任何编程语言来开发程序，都是为了让计算机干活，比如下载一个MP3，编写一个文档等等，而计算机干活的CPU只认识机器指令，所以，尽管不同的编程语言差异极大，最后都得“翻译”成CPU可以执行的机器指令。而不同的编程语言，干同一个活，编写的代码量，差距也很大。</p>
-<p>比如，完成同一个任务，C语言要写1000行代码，Java只需要写100行，而Python可能只要20行。</p>
-<p>所以Python是一种相当高级的语言。</p>
-<p>你也许会问，代码少还不好？代码少的代价是运行速度慢，C程序运行1秒钟，Java程序可能需要2秒，而Python程序可能就需要10秒。</p>
-<p>那是不是越低级的程序越难学，越高级的程序越简单？表面上来说，是的，但是，在非常高的抽象计算中，高级的Python程序设计也是非常难学的，所以，高级程序语言不等于简单。</p>
-<p>但是，对于初学者和完成普通任务，Python语言是非常简单易用的。连Google都在大规模使用Python，你就不用担心学了会没用。</p>
-<p>用Python可以做什么？可以做日常任务，比如自动备份你的MP3；可以做网站，很多著名的网站包括YouTube就是Python写的；可以做网络游戏的后台，很多在线游戏的后台都是Python开发的。总之就是能干很多很多事啦。</p>
-<p>Python当然也有不能干的事情，比如写操作系统，这个只能用C语言写；写手机应用，只能用Swift/Objective-C（针对iPhone）和Java（针对Android）；写3D游戏，最好用C或C++。</p>
-<p>如果你是小白用户，满足以下条件：</p>
-<p>会使用电脑，但从来没写过程序；<br>还记得初中数学学的方程式和一点点代数知识；<br>想从编程小白变成专业的软件架构师；<br>每天能抽出半个小时学习。<br>不要再犹豫了，这个教程就是为你准备的！</p>
-<p>准备好了吗？</p>
-<p><img src="http://www.liaoxuefeng.com/files/attachments/00138676512923004999ceca5614eb2afc5c0efdd2e4640000/0" alt=""></p>
-        
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-python/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-python/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-SmartAI/ProgramAI/Tools/learn-journey-of-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-git/">Git教程</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-git/" class="archive-article-date">
-  	<time datetime="2017-02-19T06:09:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://okkntqe2h.bkt.clouddn.com/git-workflow-release-cycle-2feature.png" alt=""></p>
-<p>作者：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰</a></p>
-<p>史上最浅显易懂的Git教程！</p>
-<p>为什么要编写这个教程？因为我在学习Git的过程中，买过书，也在网上Google了一堆Git相关的文章和教程，但令人失望的是，这些教程不是难得令人发指，就是简单得一笔带过，或者，只支离破碎地介绍Git的某几个命令，还有直接从Git手册粘贴帮助文档的，总之，初学者很难找到一个由浅入深，学完后能立刻上手的Git教程。</p>
-<p>既然号称史上最浅显易懂的Git教程，那这个教程有什么让你怦然心动的特点呢？</p>
-<p>首先，本教程绝对面向初学者，没有接触过版本控制概念的读者也可以轻松入门，不必担心起步难度；</p>
-<p>其次，本教程实用性超强，边学边练，一点也不觉得枯燥。而且，你所学的Git命令是“充分且必要”的，掌握了这些东西，你就可以通过Git轻松地完成你的工作。</p>
-<p>文字+图片还看不明白？有视频！！！</p>
-<p>本教程只会让你成为Git用户，不会让你成为Git专家。很多Git命令只有那些专家才明白（事实上我也不明白，因为我不是Git专家），但我保证这些命令可能你一辈子都不会用到。既然Git是一个工具，就没必要把时间浪费在那些“高级”但几乎永远不会用到的命令上。一旦你真的非用不可了，到时候再自行Google或者请教专家也未迟。</p>
-<p>如果你是一个开发人员，想用上这个世界上目前最先进的分布式版本控制系统，那么，赶快开始学习吧！</p>
-        
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-git/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/19/SmartAI/ProgramAI/Tools/learn-journey-of-git/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-SmartAI/ProgramAI/Resources/basic-knowledge-of-scikit-learn" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/18/SmartAI/ProgramAI/Resources/basic-knowledge-of-scikit-learn/">Scikit-learn入门指南</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/18/SmartAI/ProgramAI/Resources/basic-knowledge-of-scikit-learn/" class="archive-article-date">
-  	<time datetime="2017-02-18T05:04:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>作者：<a href="http://www.leiphone.com/news/201701/ZJMTak4Y8ch3Nwd0.html">雷锋网 恒亮</a></p>
-<p>对Python语言有所了解的科研人员可能都知道SciPy——一个开源的基于Python的科学计算工具包。基于SciPy，目前开发者们针对不同的应用领域已经发展出了为数众多的分支版本，它们被统一称为Scikits，即SciPy工具包的意思。而在这些分支版本中，最有名，也是专门面向机器学习的一个就是Scikit-learn。</p>
-<p>Scikit-learn项目最早由数据科学家 David Cournapeau 在 2007 年发起，需要NumPy和SciPy等其他包的支持，是Python语言中专门针对机器学习应用而发展起来的一款开源框架。</p>
-<p>和其他众多的开源项目一样，Scikit-learn目前主要由社区成员自发进行维护。可能是由于维护成本的限制，Scikit-learn相比其他项目要显得更为保守。这主要体现在两个方面：一是Scikit-learn从来不做除机器学习领域之外的其他扩展，二是Scikit-learn从来不采用未经广泛验证的算法。</p>
-<p>本文将简单介绍Scikit-learn框架的六大功能，安装和运行Scikit-learn的大概步骤，同时为后续各更深入地学习Scikit-learn提供参考。原文来自infoworld网站的特约撰稿人Martin Heller，他曾在1986-2010年间做过长达20多年的数据库、通用软件和网页开发，具有丰富的开发经验。</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/588354590d9b4.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-        
-          <a class="article-more-a" href="/2017/02/18/SmartAI/ProgramAI/Resources/basic-knowledge-of-scikit-learn/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Machine Learning</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Scikit</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/18/SmartAI/ProgramAI/Resources/basic-knowledge-of-scikit-learn/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -883,8 +405,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

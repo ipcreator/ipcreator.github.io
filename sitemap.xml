@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/</loc>
+    
+    <lastmod>2017-02-25T10:31:12.325Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/22/MyShare/my-translations/</loc>
     
     <lastmod>2017-02-23T14:43:27.831Z</lastmod>
@@ -100,7 +107,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -114,13 +128,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/25-open-source-projects-of-machine-learning-java/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/OpenSources/20-open-source-projects-of-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
@@ -128,7 +135,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Resources/awesome-deep-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -149,14 +156,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProductAI/the-future-of-personal-terminal/</loc>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Concepts/right-way-of-master-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProgramAI/Concepts/right-way-of-master-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/SmartAI/ProductAI/the-future-of-personal-terminal/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
@@ -170,13 +177,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</loc>
-    
-    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tools/tools-of-python/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
@@ -185,6 +185,13 @@
   
   <url>
     <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Resources/big-data-resources/</loc>
+    
+    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/18/SmartAI/ProgramAI/Tensorflow/changes-by-google-tensorflow/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
