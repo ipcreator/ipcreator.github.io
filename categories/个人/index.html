@@ -164,19 +164,329 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-SmartAI/ProgramAI/Android/GestureDetector" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Program/Android/dynamic-load-android-dex-from-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/">GestureDetector</a>
+      <a class="article-title" href="/2017/02/26/Program/Android/dynamic-load-android-dex-from-meituan/">美团Android DEX自动拆包及动态加载简介</a>
     </h1>
   
 
         
-        <a href="/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/" class="archive-article-date">
+        <a href="/2017/02/26/Program/Android/dynamic-load-android-dex-from-meituan/" class="archive-article-date">
+  	<time datetime="2017-02-26T13:31:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://tech.meituan.com/mt-android-auto-split-dex.html">美团Android DEX自动拆包及动态加载简介</a><br>jianshuai xiaoyang ·2015-06-15 10:00</p>
+<p>概述</p>
+<p>作为一个android开发者，在开发应用时，随着业务规模发展到一定程度，不断地加入新功能、添加新的类库，代码在急剧的膨胀，相应的apk包的大小也急剧增加， 那么终有一天，你会不幸遇到这个错误：</p>
+<p>生成的apk在android 2.3或之前的机器上无法安装，提示INSTALL_FAILED_DEXOPT<br>方法数量过多，编译时出错，提示：<br> Conversion to Dalvik format failed:Unable to execute dex: method ID not in [0, 0xffff]: 65536</p>
+<p>而问题产生的具体原因如下：</p>
+<p>无法安装（Android 2.3 INSTALL_FAILED_DEXOPT）问题，是由dexopt的LinearAlloc限制引起的，在Android版本不同分别经历了4M/5M/8M/16M限制，目前主流4.2.x系统上可能都已到16M， 在Gingerbread或者以下系统LinearAllocHdr分配空间只有5M大小的， 高于Gingerbread的系统提升到了8M。Dalvik linearAlloc是一个固定大小的缓冲区。在应用的安装过程中，系统会运行一个名为dexopt的程序为该应用在当前机型中运行做准备。dexopt使用LinearAlloc来存储应用的方法信息。Android 2.2和2.3的缓冲区只有5MB，Android 4.x提高到了8MB或16MB。当方法数量过多导致超出缓冲区大小时，会造成dexopt崩溃。</p>
+<p>超过最大方法数限制的问题，是由于DEX文件格式限制，一个DEX文件中method个数采用使用原生类型short来索引文件中的方法，也就是4个字节共计最多表达65536个method，field/class的个数也均有此限制。对于DEX文件，则是将工程所需全部class文件合并且压缩到一个DEX文件期间，也就是Android打包的DEX过程中， 单个DEX文件可被引用的方法总数（自己开发的代码以及所引用的Android框架、类库的代码）被限制为65536；</p>
+        
+          <a class="article-more-a" href="/2017/02/26/Program/Android/dynamic-load-android-dex-from-meituan/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/26/Program/Android/dynamic-load-android-dex-from-meituan/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Program/Concepts/the-essence-of-mysql-index" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/26/Program/Concepts/the-essence-of-mysql-index/">MySQL索引原理及慢查询优化</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/26/Program/Concepts/the-essence-of-mysql-index/" class="archive-article-date">
+  	<time datetime="2017-02-26T13:27:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://tech.meituan.com/mysql-index.html">MySQL索引原理及慢查询优化</a></p>
+<p>NeverMore ·2014-06-30 18:35</p>
+<p>MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为绝大多数互联网公司的首选关系型数据库。虽然性能出色，但所谓“好马配好鞍”，如何能够更好的使用它，已经成为开发工程师的必修课，我们经常会从职位描述上看到诸如“精通MySQL”、“SQL语句优化”、“了解数据库原理”等要求。我们知道一般的应用系统，读写比例在10:1左右，而且插入操作和一般的更新操作很少出现性能问题，遇到最多的，也是最容易出问题的，还是一些复杂的查询操作，所以查询语句的优化显然是重中之重。</p>
+<p>本人从13年7月份起，一直在美团核心业务系统部做慢查询的优化工作，共计十余个系统，累计解决和积累了上百个慢查询案例。随着业务的复杂性提升，遇到的问题千奇百怪，五花八门，匪夷所思。本文旨在以开发工程师的角度来解释数据库索引的原理和如何优化慢查询。</p>
+        
+          <a class="article-more-a" href="/2017/02/26/Program/Concepts/the-essence-of-mysql-index/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/26/Program/Concepts/the-essence-of-mysql-index/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Program/Android/hot-update-of-android" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/26/Program/Android/hot-update-of-android/">Android热更新方案Robust</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/26/Program/Android/hot-update-of-android/" class="archive-article-date">
+  	<time datetime="2017-02-26T01:04:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原文作者：<a href="http://tech.meituan.com/android_robust.html">吴坤 张梦 定旭 晓阳</a></p>
+<p>美团•大众点评是中国最大的O2O交易平台，目前已拥有近6亿用户，合作各类商户达432万，订单峰值突破1150万单。美团App是平台主要的入口之一，O2O交易场景的复杂性决定了App稳定性要达到近乎苛刻的要求。用户到店消费买优惠券时死活下不了单，定外卖一个明显可用的红包怎么点也选不中，上了一个新活动用户一点就Crash……过去发生过的这些画面太美不敢想象。客户端相对Web版最大的短板就是有发版的概念，对线上事故很难有即时生效的解决方式，每次发版都如临深渊如履薄冰，毕竟就算再完善的开发测试流程也无法保证不会将Bug带到线上。</p>
+<p>从去年开始，Android平台出现了一些优秀的热更新方案，主要可以分为两类：一类是基于multidex的热更新框架，包括Nuwa、Tinker等；另一类就是native hook方案，如阿里开源的Andfix和Dexposed。这样客户端也有了实时修复线上问题的可能。但经过调研之后，我们发现上述方案或多或少都有一些问题，基于native hook的方案：需要针对dalvik虚拟机和art虚拟机做适配，需要考虑指令集的兼容问题，需要native代码支持，兼容性上会有一定的影响；基于Multidex的方案，需要反射更改DexElements，改变Dex的加载顺序，这使得patch需要在下次启动时才能生效，实时性就受到了影响，同时这种方案在android N [speed-profile]编译模式下可能会有问题，可以参考Android N混合编译与对热补丁影响解析。考虑到美团Android用户机型分布的碎片化，很难有一个方案能覆盖所有机型。</p>
+<p>去年底的Android Dev Summit上，Google高调发布了Android Studio 2.0，其中最重要的新特性Instant Run，实现了对代码修改的实时生效（热插拔）。我们在了解Instant Run原理之后，实现了一个兼容性更强的热更新方案，这就是产品化的hotpatch框架－－Robust。</p>
+        
+          <a class="article-more-a" href="/2017/02/26/Program/Android/hot-update-of-android/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/26/Program/Android/hot-update-of-android/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Program/Android/awesome-articles-of-android" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/26/Program/Android/awesome-articles-of-android/">Android经典原理文章</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/26/Program/Android/awesome-articles-of-android/" class="archive-article-date">
+  	<time datetime="2017-02-26T01:04:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023" target="_blank" rel="external">Android安全攻防战，反编译与混淆技术完全解析（上）</a><br> <a href="http://blog.csdn.net/guolin_blog/article/details/50451259" target="_blank" rel="external"> Android安全攻防战，反编译与混淆技术完全解析（下）</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/26/Program/Android/awesome-articles-of-android/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Program/Android/GestureDetector" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/25/Program/Android/GestureDetector/">GestureDetector</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/25/Program/Android/GestureDetector/" class="archive-article-date">
   	<time datetime="2017-02-25T08:11:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-25</time>
 </a>
         
@@ -229,7 +539,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/25/SmartAI/ProgramAI/Android/GestureDetector/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/25/Program/Android/GestureDetector/">展开全文 >></a>
         </p>
       
 
@@ -247,19 +557,19 @@
 
 
   
-    <article id="post-MyShare/my-translations" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-MyView/Diary/my-translations" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/22/MyShare/my-translations/">名人名言</a>
+      <a class="article-title" href="/2017/02/22/MyView/Diary/my-translations/">名人名言</a>
     </h1>
   
 
         
-        <a href="/2017/02/22/MyShare/my-translations/" class="archive-article-date">
+        <a href="/2017/02/22/MyView/Diary/my-translations/" class="archive-article-date">
   	<time datetime="2017-02-22T00:31:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-22</time>
 </a>
         
@@ -284,7 +594,7 @@
 </blockquote>
 <p>不要找错，寻求补救。<br>——亨利 福特</p>
         
-          <a class="article-more-a" href="/2017/02/22/MyShare/my-translations/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/22/MyView/Diary/my-translations/#more">more >></a>
         
       
 
@@ -319,487 +629,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/22/MyShare/my-translations/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-MyShare/love-sentencns" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/22/MyShare/love-sentencns/">爱句子</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/22/MyShare/love-sentencns/" class="archive-article-date">
-  	<time datetime="2017-02-22T00:13:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://cdn.iciba.com/news/word/big_20160828b.jpg" alt=""></p>
-<p>How deep I love you, the moon represents my heart.<br>你问我爱你有多深，月亮代表我的心。</p>
-        
-          <a class="article-more-a" href="/2017/02/22/MyShare/love-sentencns/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/22/MyShare/love-sentencns/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-MyShare/love-words" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/22/MyShare/love-words/">爱单词</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/22/MyShare/love-words/" class="archive-article-date">
-  	<time datetime="2017-02-21T23:44:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>图文来源：<a href="http://xue.youdao.com/sw/m/1309029?keyfrom=dict2.index">微信号 我爱背单词</a></p>
-<h2 id="predator"><a href="#predator" class="headerlink" title="predator"></a>predator</h2><p>英 [‘predətə]  美 [‘prɛdətɚ]<br>n. [动] 捕食者；[动] 食肉动物；掠夺者</p>
-<p><img src="http://okkntqe2h.bkt.clouddn.com/acer-predator-15-17-gaming-laptop-skylake-review-21.jpg" alt=""></p>
-<p><strong>词根</strong><br>词根： predator<br>adj.<br>predatory 掠夺的，掠夺成性的；食肉的；捕食生物的<br>n.<br>predation 捕食；掠夺</p>
-<p><strong>同近义词</strong><br>n. [动]捕食者；食肉动物；掠夺者<br>carnivore , reiver</p>
-        
-          <a class="article-more-a" href="/2017/02/22/MyShare/love-words/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/22/MyShare/love-words/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-MyShare/beautiful-article-of-english" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/21/MyShare/beautiful-article-of-english/">Beautiful articles of English</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/21/MyShare/beautiful-article-of-english/" class="archive-article-date">
-  	<time datetime="2017-02-21T12:25:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://okkntqe2h.bkt.clouddn.com/youthDev.jpg" alt=""></p>
-<p><a href="http://www.tingclass.net/show-6613-109419-1.html?sid=AZGF5i1d9MuL8E57a0CHYor0">Youth</a></p>
-<h2 id="001-青春"><a href="#001-青春" class="headerlink" title="001 青春"></a>001 青春</h2><p><a href="http://down010702.tingclass.net/lesson/shi0529/0001/1613/01-youth.mp3">http://down010702.tingclass.net/lesson/shi0529/0001/1613/01-youth.mp3</a></p>
-<p>Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life.</p>
-<p>青春不是年华，而是心境；青春不是桃面、丹唇、柔膝，而是深沉的意志，恢宏的想象，炙热的恋情；青春是生命的深泉在涌流。</p>
-        
-          <a class="article-more-a" href="/2017/02/21/MyShare/beautiful-article-of-english/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/21/MyShare/beautiful-article-of-english/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-SmartAI/ProgramAI/Tools/virtual-apk" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/20/SmartAI/ProgramAI/Tools/virtual-apk/">VirtualAPK 滴滴 Android 插件化的实践之路</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/20/SmartAI/ProgramAI/Tools/virtual-apk/" class="archive-article-date">
-  	<time datetime="2017-02-20T12:06:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>作者：<a href="http://mp.weixin.qq.com/s?__biz=MzIyNjcxODc3MA==&amp;mid=2247483684&amp;idx=1&amp;sn=c705424482f13941a9bcd6a5d6c24ed5&amp;chksm=e86d6479df1aed6f2f101a58ec7a5f839074b0209ce30c0f2d9d4e7bd2ac22937745b295c0d8#rd">singwhatiwanna DDApp</a></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在Android插件化技术日新月异的今天，开发并落地一款插件化框架到底是简单还是困难，这个问题不同人会有不同的答案。但是我相信，完成一个插件化框架的demo并不是多难的事，但是要开发一款完善的插件化框架却不是一件容易的事，尤其在国内，各大Rom厂商都对Android系统做了一定程度的定制，这进一步加剧了Android本身的碎片化问题。</p>
-<p>滴滴出行在插件化上的探索起步较晚，由于滴滴业务发展较快，业务迭代占据了大量的时间，这使得我们在2016年才开始研究这方面的技术。经过半年的开发、测试、适配和线上验证，目前我们推出了一款比较完善的插件化框架：VirtualAPK。之所以现在推出来，是因为VirtualAPK在我们内部已经得到了很好的验证，我们在迭代过程中不断地做机型适配和细节特性的支持，目前已经达到一个非常稳定的状况，足以支撑滴滴部分乃至全部业务的动态发版需求。目前滴滴出行最新版本（v5.0.4）上面，小巴和接送机业务均为插件，大家可以去体验。</p>
-        
-          <a class="article-more-a" href="/2017/02/20/SmartAI/ProgramAI/Tools/virtual-apk/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">VirtualAPK</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/20/SmartAI/ProgramAI/Tools/virtual-apk/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-MyShare/financial-philosophy." class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/20/MyShare/financial-philosophy./">理财理念</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/20/MyShare/financial-philosophy./" class="archive-article-date">
-  	<time datetime="2017-01-19T18:11:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>原文作者：李笑来 摘自<a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/B02.html">《新生————七年一辈子》</a></p>
-<blockquote>
-<ul>
-<li>越早越好</li>
-<li>从今天开始存钱</li>
-<li>躺着赚钱</li>
-<li>自由意志</li>
-<li>生活目标</li>
-<li>注重学识</li>
-<li>节省与否</li>
-<li>被动支出</li>
-<li>认识周期</li>
-<li>性格养成</li>
-<li>别做“险盲”</li>
-</ul>
-</blockquote>
-<div align="center"><br><img src="http://zhibimo.com/read/xiaolai/reborn-every-7-years/images/licai-8-44.jpg" width = "640" height = "536" alt="personal photo"><br> </div>
-        
-          <a class="article-more-a" href="/2017/01/20/MyShare/financial-philosophy./#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Growing Up</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/20/MyShare/financial-philosophy./">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-MyShare/sit-idle-and-enjoy-the-fruits" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/20/MyShare/sit-idle-and-enjoy-the-fruits/">坐享其成</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/20/MyShare/sit-idle-and-enjoy-the-fruits/" class="archive-article-date">
-  	<time datetime="2017-01-19T18:10:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://zhibimo.com/read/xiaolai/zuo-xiang-qi-cheng/">作者：李笑来</a></p>
-<blockquote>
-<p>坐享，也许是最简单的大脑锻炼方式，这也是人类莫名其妙地已经运用了两千五百年以上的大脑锻炼方式。已经有足够多的科学研究证明，它能使你的大脑皮层表面积加大，能使你的灰质变厚，它也能增强人们的免疫系统，它还能让人们摆脱抑郁症……<br>尽管简单，但也相当神奇。<br>虽然神奇，却又非常简单。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/01/20/MyShare/sit-idle-and-enjoy-the-fruits/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Growing Up</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/20/MyShare/sit-idle-and-enjoy-the-fruits/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/22/MyView/Diary/my-translations/">展开全文 >></a>
         </p>
       
 
@@ -819,7 +649,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/categories/个人/page/2/">2</a><a class="page-number" href="/categories/个人/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/categories/个人/page/5/">5</a><a class="extend next" rel="next" href="/categories/个人/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/categories/个人/page/2/">2</a><a class="page-number" href="/categories/个人/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/categories/个人/page/7/">7</a><a class="extend next" rel="next" href="/categories/个人/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -950,35 +780,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Program</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Google</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Share</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -986,7 +788,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+                <a href="javascript:void(0)" class="js-tag color2">Google</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Business</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -998,23 +812,51 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Product</a>
+                <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Business</a>
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Program</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Share</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1026,7 +868,31 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Java Script</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">File System</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1038,26 +904,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java Script</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Caffe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CNTK</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MXNet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Torch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Scikit</a>
               </li>
              
@@ -1066,23 +912,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Neural Network</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Neural Networks</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
               <li class="article-tag-list-item">

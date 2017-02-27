@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://ipcreator.me">
+  <title>Online Learning算法理论与实践 | IPCreator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="孔东营
+背景Online Learning是工业界比较常用的机器学习算法，在很多场景下都能有很好的效果。本文主要介绍Online Learning的基本原理和两种常用的Online Learning算法：FTRL（Follow The Regularized Leader）[1]和BPR（Bayesian Probit Regression）[2]，以及Online Learning在美团移动端推">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Online Learning算法理论与实践">
+<meta property="og:url" content="http://ipcreator.me/2017/02/26/BusinessAI/online-learning-in-meituan/index.html">
+<meta property="og:site_name" content="IPCreator">
+<meta property="og:description" content="孔东营
+背景Online Learning是工业界比较常用的机器学习算法，在很多场景下都能有很好的效果。本文主要介绍Online Learning的基本原理和两种常用的Online Learning算法：FTRL（Follow The Regularized Leader）[1]和BPR（Bayesian Probit Regression）[2]，以及Online Learning在美团移动端推">
+<meta property="og:image" content="http://tech.meituan.com/img/online-learning/online-learning-flow.png">
+<meta property="og:image" content="http://tech.meituan.com/img/online-learning/online-learning-model-flow.png">
+<meta property="og:image" content="http://tech.meituan.com/img/online-learning/bayesian-online-learning-flow.png">
+<meta property="og:image" content="http://tech.meituan.com/img/online-learning/online-learning-rerank.png">
+<meta property="og:image" content="http://tech.meituan.com/img/online-learning/online-learning-server.png">
+<meta property="og:image" content="http://tech.meituan.com/img/online-learning/online-learning-skip-above.png">
+<meta property="og:image" content="http://tech.meituan.com/img/online-learning/online-learning-feature.png">
+<meta property="og:image" content="http://tech.meituan.com/img/online-learning/online-learning-result.png">
+<meta property="og:image" content="http://tech.meituan.com/img/qrcode_for_gh.jpg">
+<meta property="og:updated_time" content="2017-02-26T14:18:45.317Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Online Learning算法理论与实践">
+<meta name="twitter:description" content="孔东营
+背景Online Learning是工业界比较常用的机器学习算法，在很多场景下都能有很好的效果。本文主要介绍Online Learning的基本原理和两种常用的Online Learning算法：FTRL（Follow The Regularized Leader）[1]和BPR（Bayesian Probit Regression）[2]，以及Online Learning在美团移动端推">
+<meta name="twitter:image" content="http://tech.meituan.com/img/online-learning/online-learning-flow.png">
+  
+  
+    <link rel="icon" href="/img/personalphoto.jpg">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.2d7529.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #4d4d4d"></div>
+<div class="intrude-less">
+
+
+
+
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/personalphoto.jpg" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">For life</a></h1>
+		</hgroup>
+		
+		<p class="header-subtitle">Growing up is the only password.</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/personalphoto.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">For life</h1>
+			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Growing up is the only password.<i class="icon icon-quo-right"></i></p>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/archives">归档</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-BusinessAI/online-learning-in-meituan" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Online Learning算法理论与实践
+    </h1>
+  
+
+        
+        <a href="/2017/02/26/BusinessAI/online-learning-in-meituan/" class="archive-article-date">
+  	<time datetime="2017-02-26T14:13:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://tech.meituan.com/online-learning.html" target="_blank" rel="external">孔东营</a></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="http://tech.meituan.com/img/online-learning/online-learning-flow.png" alt=""><br>Online Learning是工业界比较常用的机器学习算法，在很多场景下都能有很好的效果。本文主要介绍Online Learning的基本原理和两种常用的Online Learning算法：FTRL（Follow The Regularized Leader）[1]和BPR（Bayesian Probit Regression）[2]，以及Online Learning在美团移动端推荐重排序的应用。</p>
+<h2 id="什么是Online-Learning"><a href="#什么是Online-Learning" class="headerlink" title="什么是Online Learning"></a>什么是Online Learning</h2><p>准确地说，Online Learning并不是一种模型，而是一种模型的训练方法，Online Learning能够根据线上反馈数据，实时快速地进行模型调整，使得模型及时反映线上的变化，提高线上预测的准确率。Online Learning的流程包括：将模型的预测结果展现给用户，然后收集用户的反馈数据，再用来训练模型，形成闭环的系统。如上图所示：<br>   <a id="more"></a></p>
+<p>   Online Learning有点像自动控制系统，但又不尽相同，二者的区别是：Online Learning的优化目标是整体的损失函数最小化，而自动控制系统要求最终结果与期望值的偏差最小。</p>
+<p>   传统的训练方法，模型上线后，更新的周期会比较长（一般是一天，效率高的时候为一小时），这种模型上线后，一般是静态的（一段时间内不会改变），不会与线上的状况有任何互动，假设预测错了，只能在下一次更新的时候完成更正。Online Learning训练方法不同，会根据线上预测的结果动态调整模型。如果模型预测错误，会及时做出修正。因此，Online Learning能够更加及时地反映线上变化。</p>
+<p>   Online Learning的优化目标<br>   <img src="http://tech.meituan.com/img/online-learning/online-learning-model-flow.png" alt=""></p>
+<p>   如上图所示，Online Learning训练过程也需要优化一个目标函数（红框标注的），但是和其他的训练方法不同，Online Learning要求快速求出目标函数的最优解，最好是能有解析解。</p>
+<h2 id="怎样实现Online-Learning"><a href="#怎样实现Online-Learning" class="headerlink" title="怎样实现Online Learning"></a>怎样实现Online Learning</h2><p>   前面说到Online Learning要求快速求出目标函数的最优解。要满足这个要求，一般的做法有两种：Bayesian Online Learning和Follow The Regularized Leader。下面就详细介绍这两种做法的思路。</p>
+<p>   Bayesian Online Learning<br>   贝叶斯方法能够比较自然地导出Online Learning的训练方法：给定参数先验，根据反馈计算后验，将其作为下一次预测的先验，然后再根据反馈计算后验，如此进行下去，就是一个Online Learning的过程，如下图所示。<br>   <img src="http://tech.meituan.com/img/online-learning/bayesian-online-learning-flow.png" alt=""></p>
+<p>   举个例子， 我们做一个抛硬币实验，估算硬币正面的概率μμ。我们假设μμ的先验满足<br>   p(μ)=Beta(α,β)<br>   p(μ)=Beta⁡(α,β)</p>
+<p>   对于观测值Y＝1Y＝1，代表是正面，我们可以算的后验：<br>   p(μ|Y=1)=Beta(α+1,β)<br>   p(μ|Y=1)=Beta⁡(α+1,β)</p>
+<p>   对于观测值Y＝0Y＝0，代表是反面，我们可以算的后验：<br>   p(μ|Y=0)=Beta(α,β+1)<br>   p(μ|Y=0)=Beta⁡(α,β+1)</p>
+<p>   按照上面的Bayesian Online Learning流程，我们可以得到估算μμ的Online Learning算法：</p>
+<p>   初始化 αα,ββ<br>   for i = 0 … n</p>
+<p>   如果 YiYi是正面<br>   α=α+1α=α+1<br>   如果 YiYi是反面<br>   β=β+1β=β+1<br>   最终: μ∼Beta(α,β)μ∼Beta⁡(α,β)，可以取μμ的期望，μ=αα+βμ=αα+β<br>   假设抛了NN次硬币，正面出现HH次，反面出现TT次，按照上面的算法，可以算得：<br>   μ=α+Hα+β+N<br>   μ=α+Hα+β+N</p>
+<p>   和最大化似然函数：<br>   log[p(μ∣α,β)⋅p(Y=1∣μ)H⋅p(Y=0∣μ)T]<br>   log[p(μ∣α,β)⋅p(Y=1∣μ)H⋅p(Y=0∣μ)T]</p>
+<p>   得到的解是一样的。</p>
+<p>   上面的例子是针对离散分布的，我们可以再看一个连续分布的例子。</p>
+<p>   有一种测量仪器，测量的方差σ2σ2是已知的， 测量结果为：Y1,Y2,Y3,…,YnY1,Y2,Y3,…,Yn, 求真实值μμ的分布。<br>   仪器的方差是σ2σ2, 所以观测值Y满足高斯分布：<br>   p(Y∣μ)=N(Y∣μ,σ2)<br>   p(Y∣μ)=N(Y∣μ,σ2)</p>
+<p>   观测到 Y1,Y2,Y3,…,YnY1,Y2,Y3,…,Yn, 估计参数 μμ 。<br>   假设参数 μμ 满足高斯分布：<br>   p(μ)=N(μ∣m,v2)<br>   p(μ)=N(μ∣m,v2)</p>
+<p>   观测到YiYi, 可以计算的后验：<br>   p(μ∣Yi)=N(μ∣Yiv2+mσ2σ2+v2,σ2v2σ2+v2)<br>   p(μ∣Yi)=N(μ∣Yiv2+mσ2σ2+v2,σ2v2σ2+v2)</p>
+<p>   可以得到以下的Online Learning算法：</p>
+<p>   初始化 mm,v2v2<br>   for i = 0 … n</p>
+<p>   观测值为YiYi<br>   更新<br>   m=Yiv2+mσ2σ2+v2<br>   m=Yiv2+mσ2σ2+v2</p>
+<p>   v2=σ2v2σ2+v2<br>   v2=σ2v2σ2+v2<br>   上面的两个结果都是后验跟先验是同一分布的（一般取共轭先验，就会有这样的效果），这个后验很自然的作为后面参数估计的先验。假设后验分布和先验不一样，我们该怎么办呢？</p>
+<p>   举个例子：假设上面的测量仪器只能观测到YY，是大于0，还是小于0，即Yi∈{−1，1}Yi∈{−1，1},Yi=−1Yi=−1，代表观测值小于0，Yi=1Yi=1代表观测值大于0。<br>   此时，我们仍然可以计算后验分布：<br>   p(μ∣Yi＝1)=I(μ&gt;0)p(μ)∫+∞0p(μ)du<br>   p(μ∣Yi＝1)=I(μ&gt;0)p(μ)∫0+∞p(μ)du</p>
+<p>   p(μ∣Yi＝−1)=I(μ&lt;0)p(μ)∫0−∞p(μ)du<br>   p(μ∣Yi＝−1)=I(μ&lt;0)p(μ)∫−∞0p(μ)du</p>
+<p>   但是后验分布显然不是高斯分布（是截断高斯分布），这种情况下，我们可以用和上面分布KL距离最近的高斯分布代替。<br>   观测到Yi=1Yi=1<br>   KL(p(μ∣Yi=1)||N(μ∣m~,v~2))<br>   KL(p(μ∣Yi=1)||N(μ∣m~,v~2))</p>
+<p>   可以求得：<br>   m~=m+v⋅υ(mv)<br>   m~=m+v⋅υ(mv)</p>
+<p>   v~2=v2(1−ω(mv))<br>   v~2=v2(1−ω(mv))<br>   观测到Yi=−1Yi=−1<br>   KL(p(μ∣Yi=−1)||N(μ∣μ~,v~2))<br>   KL(p(μ∣Yi=−1)||N(μ∣μ~,v~2))</p>
+<p>   可以求得：<br>   m~=m−v⋅υ(−mv)<br>   m~=m−v⋅υ(−mv)</p>
+<p>   v~2=v2(1−ω(−mv))<br>   v~2=v2(1−ω(−mv))<br>   两者综合起来，可以求得：<br>   m~=m+Yiv⋅υ(Yimv)<br>   m~=m+Yiv⋅υ(Yimv)</p>
+<p>   v~2=v2(1−ω(Yimv))<br>   v~2=v2(1−ω(Yimv))</p>
+<p>   其中：<br>   υ(t)=ϕ(t)Φ(t)<br>   υ(t)=ϕ(t)Φ(t)</p>
+<p>   ϕ(t)=12πexp(−12t2)<br>   ϕ(t)=12πexp(−12t2)</p>
+<p>   Φ(t)=∫t−∞ϕ(t)dt<br>   Φ(t)=∫−∞tϕ(t)dt</p>
+<p>   ω(t)=υ(t)∗(t−υ(t))<br>   ω(t)=υ(t)∗(t−υ(t))<br>   有了后验我们可以得到Online Bayesian Learning流程：</p>
+<p>   初始化 mm,v2v2<br>   for i = 0 … n</p>
+<p>   观测值为YiYi<br>   更新</p>
+<p>   m=m+Yi⋅v⋅υ(Yi⋅mv)<br>   m=m+Yi⋅v⋅υ(Yi⋅mv)<br>   v2=v2(1−ω(Yi⋅mv))<br>   v2=v2(1−ω(Yi⋅mv))<br>   Bayesian Online Learning最常见的应用就是BPR（Bayesian Probit Regression）。</p>
+<p>   BPR<br>   在看Online BPR前，我们先了解以下Linear Gaussian System(具体可以参考[3]的4.4节)。<br>   xx是满足多维高斯分布：<br>   p(x)=N(x∣μx,Σx)<br>   p(x)=N(x∣μx,Σx)</p>
+<p>   yy是xx通过线性变换加入随机扰动ΣyΣy得到的变量：<br>   p(y∣x)=N(y∣Ax+b,Σy)<br>   p(y∣x)=N(y∣Ax+b,Σy)<br>   已知xx，我们可以得到yy的分布：</p>
+<p>   p(y)=N(y∣AμX+b,Σy+AΣxAT)<br>   p(y)=N(y∣AμX+b,Σy+AΣxAT)<br>   上面这个结论的具体的推导过程可以参考[3]的4.4节，这里我们直接拿来用。</p>
+<p>   我们可以假设特征权重 ww 满足独立高斯分布，即<br>   p(w)=N(w∣μ,Σ)<br>   p(w)=N(w∣μ,Σ)<br>   ：<br>   μ=[μ1,μ2,…,μD]T<br>   μ=[μ1,μ2,…,μD]T</p>
+<p>   Σ=⎡⎣⎢⎢⎢⎢⎢σ210⋮00σ22⋮0……⋱…00⋮σ2D⎤⎦⎥⎥⎥⎥⎥<br>   Σ=[σ120…00σ22…0⋮⋮⋱⋮00…σD2]<br>   YY是一维变量，是ww与特征向量xx的内积，加入方差为β2β2的扰动：</p>
+<p>   p(y∣w)=N(y∣xTw,β2)<br>   p(y∣w)=N(y∣xTw,β2)</p>
+<p>   根据上面的式子可以得出：<br>   p(y∣w)=N(y∣xTμ,xTΣx+β2)<br>   p(y∣w)=N(y∣xTμ,xTΣx+β2)</p>
+<p>   由于我们只能观测到YY，是大于0，还是小于0，即Yi∈{−1，1}Yi∈{−1，1},Yi=−1Yi=−1，代表观测值小于0，Yi=1Yi=1代表观测值大于0。</p>
+<p>   对于观测值，我们可以先用KL距离近似yy的分布，我们可以算出后验：<br>   p(y∣Yi)=N(y∣m~,v~2)<br>   p(y∣Yi)=N(y∣m~,v~2)</p>
+<p>   m~=xTμ+Yiυ(Yi⋅xTμxTΣx+β2−−−−−−−−−√)<br>   m~=xTμ+Yiυ(Yi⋅xTμxTΣx+β2)</p>
+<p>   v~2=(xTΣx+β2)(1−ω(Yi⋅xTμxTΣx+β2−−−−−−−−−√))<br>   v~2=(xTΣx+β2)(1−ω(Yi⋅xTμxTΣx+β2))</p>
+<p>   有了yy的近似分布，我们可以计算出后验：<br>   p(w∣y)∝p(y∣w)p(w)<br>   p(w∣y)∝p(y∣w)p(w)<br>   可以求得：<br>   p(wd∣y)=N(wd∣μ~d,σ~d)<br>   p(wd∣y)=N(wd∣μ~d,σ~d)</p>
+<p>   μ~d=μd+Yixi,d⋅σ2dxTΣx+β2−−−−−−−−−√⋅υ(Yi⋅xTμxTΣx+β2−−−−−−−−−√)<br>   μ~d=μd+Yixi,d⋅σd2xTΣx+β2⋅υ(Yi⋅xTμxTΣx+β2)<br>   σ~d=σd⋅[1−xi,d⋅σ2dxTΣx+β2ω(Yi⋅xTμxTΣx+β2−−−−−−−−−√)]<br>   σ~d=σd⋅[1−xi,d⋅σd2xTΣx+β2ω(Yi⋅xTμxTΣx+β2)]<br>   Online Bayesian Probit Regression 训练流程如下：</p>
+<p>   初始化 μ1μ1,σ21σ12, μ2μ2,σ22σ22 , … , μDμD,σ2DσD2<br>   for i = 1 … n</p>
+<p>   观测值为YiYi<br>   for d = 1 … D<br>   更新</p>
+<p>   μd=μd+Yixi,d⋅σ2dxTiΣxi+β2−−−−−−−−−√⋅υ⎛⎝⎜Yi⋅xTiμxTiΣxi+β2−−−−−−−−−√⎞⎠⎟<br>   μd=μd+Yixi,d⋅σd2xiTΣxi+β2⋅υ(Yi⋅xiTμxiTΣxi+β2)<br>   σd=σd⋅⎡⎣⎢1−xi,d⋅σ2dxTiΣxi+β2ω⎛⎝⎜Yi⋅xTiμxTiΣx+β2−−−−−−−−−√⎞⎠⎟⎤⎦⎥<br>   σd=σd⋅[1−xi,d⋅σd2xiTΣxi+β2ω(Yi⋅xiTμxiTΣx+β2)]<br>   FTRL<br>   除了Online Bayesian Learning，还有一种做法就是FTRL（Follow The Regularized Leader）。<br>   FTRL的网上资料很多，但是大部分介绍怎么样产生稀疏化解，而往往忽略了FTRL的基本原理。顾名思义，FTRL和稀疏化并没有关系，它只是一种做Online Learning的思想。</p>
+<p>   先说说FTL（Follow The Leader）算法，FTL思想就是每次找到让之前所有损失函数之和最小的参数。流程如下：</p>
+<p>   初始化 ww<br>   for t = 1 … n</p>
+<p>   损失函数 ftft<br>   更新</p>
+<p>   w=argminw∑i=1tfi(w)<br>   w=argminw∑i=1tfi(w)<br>   FTRL算法就是在FTL的优化目标的基础上，加入了正规化，防止过拟合：<br>   w=argminw∑i=1tfi(w)+R(w)<br>   w=argminw∑i=1tfi(w)+R(w)</p>
+<p>   其中，R(w)R(w)是正规化项。</p>
+<p>   FTRL算法的损失函数，一般也不是能够很快求解的，这种情况下，一般需要找一个代理的损失函数。</p>
+<p>   代理损失函数需要满足几个要求：</p>
+<p>   代理损失函数比较容易求解，最好是有解析解<br>   优化代理损失函数求的解，和优化原函数得到的解差距不能太大<br>   为了衡量条件2中的两个解的差距，这里需要引入regret的概念。</p>
+<p>   假设每一步用的代理函数是ht(w)ht(w)<br>   每次取</p>
+<p>   wt=argminwht−1(w)<br>   wt=argminwht−1(w)</p>
+<p>   Regrett=∑t=1Tft(wt)−∑t=1Tft(w∗)<br>   Regrett=∑t=1Tft(wt)−∑t=1Tft(w∗)<br>   其中w∗=argminw∑ti=1fi(w)w∗=argminw∑i=1tfi(w)，是原函数的最优解。就是我们每次代理函数求出解，离真正损失函数求出解的损失差距。当然这个损失必须满足一定的条件，Online Learning才可以有效，就是：</p>
+<p>   limt→∞Regrettt=0<br>   limt→∞Regrettt=0<br>   随着训练样本的增多，这两个优化目标优化出的参数的实际损失值差距越来越小。</p>
+<p>   代理函数 ht(w)ht(w) 应该该怎么选呢？<br>   如果ft(w)ft(w) 是凸函数，我们可以用下面的代理损失函数：</p>
+<p>   ht=∑i=1tgi⋅w+∑i=1t(12ηt−12ηt−1)||w−wt||2<br>   ht=∑i=1tgi⋅w+∑i=1t(12ηt−12ηt−1)||w−wt||2<br>   其中gigi 是fi(wi)fi(wi)次梯度（如果 fi(wi)fi(wi)是可导的，次梯度就是梯度）。ηtηt满足：<br>   ηt=α∑ti=1g2t−−−−−−−√<br>   ηt=α∑i=1tgt2<br>   为了产生稀疏的效果，我们也可以加入l1正规化：</p>
+<p>   ht=∑i=1tgi⋅w+∑i=1t(12ηt−12ηt−1)||w−wt||2＋λ1|w|<br>   ht=∑i=1tgi⋅w+∑i=1t(12ηt−12ηt−1)||w−wt||2＋λ1|w|</p>
+<p>   只要ft(w)ft(w) 是凸函数，上面的代理函数一定满足：</p>
+<p>   limt→∞Regrettt=0<br>   limt→∞Regrettt=0<br>   上面的式子我们可以得出ww的解析解：</p>
+<p>   wt+1,i={0−ηt(zt,i−sgn(zt,i)λ1))|zt,i|&lt;λ1otherwise<br>   wt+1,i={0|zt,i|&lt;λ1−ηt(zt,i−sgn(zt,i)λ1))otherwise<br>   其中<br>   zt,i=∑s=1tgs,i+∑s=1t(1ηt,i−1ηt−1,i)wt,i<br>   zt,i=∑s=1tgs,i+∑s=1t(1ηt,i−1ηt−1,i)wt,i<br>   可以得到FTRL的更新流程如下：</p>
+<p>   输入αα, λ1λ1<br>   初始化 w1…Nw1…N, z1..N=0z1..N=0 , n1..N=0n1..N=0<br>   for t = 1 … T</p>
+<p>   损失函数 ftft<br>   for i = 1 ..N</p>
+<p>   计算</p>
+<p>   gt,i=∂fi(wt−1)wt−1,i<br>   gt,i=∂fi(wt−1)wt−1,i<br>   zt+=gt,i+1α(ni+g2t,i−−−−−−−√−ni−−√)wt,i<br>   zt+=gt,i+1α(ni+gt,i2−ni)wt,i<br>   ni+=g2t,i<br>   ni+=gt,i2</p>
+<p>   更新</p>
+<p>   wt+1,i={0−ηt(zt,i−sgn(zt,i)λ1))|zt,i|&lt;λ1otherwise<br>   wt+1,i={0|zt,i|&lt;λ1−ηt(zt,i−sgn(zt,i)λ1))otherwise<br>   Online Learning实践<br>   前面讲了Online Learning的基本原理，这里以移动端推荐重排序为例，介绍一下Online Learning在实际中的应用。</p>
+<p>   推荐重排序介绍</p>
+<p>   目前的推荐系统，主要采用了两层架构，首先是触发层，会根据上下文条件和用户的历史行为，触发用户可能感兴趣的item，然后由排序模型对触发的item排序，如下图所示：<br>   <img src="http://tech.meituan.com/img/online-learning/online-learning-rerank.png" alt=""></p>
+<p>   推荐重排序既能融合不同触发策略，又能较大幅度提高推荐效果（我们这里主要是下单率）。在移动端，屏幕更加小，用户每次看到的item数目更加少，排序的作用更加突出。</p>
+<p>   美团重排序Online Learning架构</p>
+<p>   美团Online Learning架构如下图所示：<br>   <img src="http://tech.meituan.com/img/online-learning/online-learning-server.png" alt=""></p>
+<p>   线上的展示日志，点击日志和下单日志会写入不同的Kafka流。读取Kafka流，以HBase为中间缓存，完成label match（下单和点击对映到相应的展示日志），在做label match的过成中，会对把同一个session的日志放在一起，方便后面做skip above：</p>
+<p>   训练数据生成</p>
+<p>   移动端推荐的数据跟PC端不同，移动端一次会加载很多item，但是无法保证这些item会被用户看到。为了保证数据的准确性，我们采用了skip above的办法，如下图所示：<br>   <img src="http://tech.meituan.com/img/online-learning/online-learning-skip-above.png" alt=""></p>
+<p>   假设用户点击了第i个位置，我们保留从第1条到第i+2条数据作为训练数据，其他的丢弃。这样能够最大程度的保证训练样本中的数据是被用户看到的。</p>
+<p>   特征</p>
+<p>   用的特征如下图所示：<br>   <img src="http://tech.meituan.com/img/online-learning/online-learning-feature.png" alt=""></p>
+<p>   算法选择</p>
+<p>   我们尝试了FTRL和BPR效果，线下实验效果如下表：</p>
+<p>   算法       AUC         模型参数个数<br>   FTRL    0.8432    200W<br>   BPR    0.8441    1500W<br>   BPR的效果略好，但是我们线上选用了FTRL模型，主要原因是FTRL能够产生稀疏化的效果，训练出的模型会比较小。</p>
+<p>   模型训练</p>
+<p>   训练算法不断地从HBase中读取数据，完成模型地训练，训练模型放在Medis（美团内部地Redis）中，线上会用Medis中的模型预测下单率，根据预测的下单率，完成排序。</p>
+<p>   线上效果</p>
+<p>   上线后，最终的效果如下图所示，和base算法相比，下单率提高了5%。<br>   <img src="http://tech.meituan.com/img/online-learning/online-learning-result.png" alt=""></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>   [1] McMahan H B, Holt G, Sculley D, et al. Ad Click Prediction: a View from the Trenches. Proceedings of the 19th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD). 2013.<br>   [2] Graepel T, Candela J Q, Borchert T,et al. Web-Scale Bayesian Click-Through Rate Prediction for Sponsored Search Advertising in Microsoft’s Bing Search Engine. Proceedings of the 27th International Conference on Machine Learning ICML. 2010.<br>   [3] Murphy K P. Machine Learning: A Probabilistic Perspective. The MIT Press. 2012.</p>
+<p>   不想错过技术博客更新？想给文章评论、和作者互动？第一时间获取技术沙龙信息？</p>
+<p>   请关注我们的官方微信公众号“美团点评技术团队”。现在就拿出手机，扫一扫：<br>   <img src="http://tech.meituan.com/img/qrcode_for_gh.jpg" alt=""><br>   公众号二维码</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtUlEQVR42u3aQW4jMQwEwPz/09kHeEdukqLhADWnwE40Kh0kpqmfn/j5fXlePz9/8vTz0yfncS4/eHh4eOOpJ5N+HSGfRHVRzkvzNGc8PDy8bV510mfw+ThJ3pXwzuPg4eHhfQ9vshw5Pi/N8fDw8P4Krzet5L14eHh4f4WXR6hJMJGPk/zVh7IWPDw8vJiXd5G+5+eV/h4eHh7euKs+b4blJXheRhdmi4eHh7fA6zX7e8VuNdSottAelx4PDw/vKi+JYpNWVh4Kz+OJwiUDPDw8vAXeZKC8DZZf3qouXBRV4OHh4V3l9TbxBFktsqtNuKhthoeHh7fGmwS11SOhel1g1NnDw8PDW+ZVLw0kV0t7sUU+ZqG/h4eHh3eJl5en5wNgcgMqP4qaWQseHh7eAq9a5laPh14gWz2uosQFDw8Pb8ybRwN5pJt/m0ceb77Fw8PDW+BVU9CksK6+OFmsXjiCh4eHt8Gbb7iT42QSfBSiWzw8PLwF3uRi0yScnVCTywp4eHh4G7x5274XKOQt/+r/BBESDw8Pb8BLhs5fPIl959cFHhtgeHh4eFd5+TY9uS6QHxWT7PnNpSs8PDy8S7zq1lz9t7938PTihv+MgIeHh7fGy1+ZbPrVGDffw0d3yvDw8PAu8XqNpd4S5IV7Pn5hQfHw8PCu8qoHQB5P5AFHtWhO4gk8PDy8z/N6UUVvzEkY8aZwx8PDw/sIL284zcvl3sWCwoOHh4d3lfdbfKotrnzrzwvownGFh4eHt8Cb7LG9JlYexU4OrQtHCB4eHt6g8uy9clIQ96LeRzweHh7eGq9XBOe/U71wcCtewcPDw/tOXq9crrbier+Jh4eH9w286qR7+cCtHhYeHh7eHq/X+D/HuL0WWn54RCEyHh4e3gJvHq1Wy+VqOZ7jL6QXeHh4eKfnH7j+IhZjZbw8AAAAAElFTkSuQmCC" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/02/26/BusinessAI/ffm-learning-in-meituan/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          深入FFM原理与实践
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">外卖排序系统特征生产框架</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="BusinessAI/online-learning-in-meituan" data-title="Online Learning算法理论与实践" data-url="http://ipcreator.me/2017/02/26/BusinessAI/online-learning-in-meituan/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 For life
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+    
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','QVk44u3hiUx_EaM1x32V'); //�����Լ���
+</script>    
+    
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true,
+		showTags: true
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.2d7529.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Google</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Business</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Smart Phone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Machine Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Program</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Open Source</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Java Script</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">File System</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Scikit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Atom</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Neural Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Neural Networks</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/25870384/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>你的生命有什么可能</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://mt.sohu.com/20161026/n471374646.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>个体崛起的时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnfy.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>成为一个超级个体</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://gelonghui.com/p/101767.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人工智能的黄金时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都是工程师</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都能用英语</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>把时间当作朋友</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>七年就是一辈子</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://news.mbalib.com/story/12504" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>退休感言</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.360doc.com/content/14/1206/17/15680008_430856157.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>选择的智慧</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/6397275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>此生未完成</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/26422275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>向死而生</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">自知者明&lt;br&gt;自胜者强&lt;br&gt;不忘初心&lt;br&gt;方得始终</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

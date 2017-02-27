@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://ipcreator.me">
+  <title>实例详解机器学习如何解决问题 | IPCreator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="huawolf
+前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实例详解机器学习如何解决问题">
+<meta property="og:url" content="http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/index.html">
+<meta property="og:site_name" content="IPCreator">
+<meta property="og:description" content="huawolf
+前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在">
+<meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/model.png">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?h_{w}\left%20(%20x%20\right%20">
+<meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/deal_problem.png">
+<meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/model_merg.png">
+<meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/select_model.png">
+<meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/extract_fea.png">
+<meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/fea_list.png">
+<meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/gradient_descent.png">
+<meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/newton.png">
+<meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/coordinate_descent.jpg">
+<meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/underfitting_overfitting.png">
+<meta property="og:image" content="http://tech.meituan.com/img/qrcode_for_gh.jpg">
+<meta property="og:updated_time" content="2017-02-27T05:10:38.194Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="实例详解机器学习如何解决问题">
+<meta name="twitter:description" content="huawolf
+前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在">
+<meta name="twitter:image" content="http://tech.meituan.com/img/how_to_ml/model.png">
+  
+  
+    <link rel="icon" href="/img/personalphoto.jpg">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.2d7529.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #4d4d4d"></div>
+<div class="intrude-less">
+
+
+
+
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/personalphoto.jpg" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">For life</a></h1>
+		</hgroup>
+		
+		<p class="header-subtitle">Growing up is the only password.</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/personalphoto.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">For life</h1>
+			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Growing up is the only password.<i class="icon icon-quo-right"></i></p>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/archives">归档</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-BusinessAI/example-of-machine-learning-in-meituan" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      实例详解机器学习如何解决问题
+    </h1>
+  
+
+        
+        <a href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/" class="archive-article-date">
+  	<time datetime="2017-02-26T14:34:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://tech.meituan.com/mt-mlinaction-how-to-ml.html" target="_blank" rel="external">huawolf</a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在解决工业界问题的实战中所需的基本技术、经验和技巧。本文主要结合实际问题，概要地介绍机器学习解决实际问题的整个流程，包括对问题建模、准备训练数据、抽取特征、训练模型和优化模型等关键环节；另外几篇则会对这些关键环节进行更深入地介绍。</p>
+<p>下文分为1）机器学习的概述，2）对问题建模，3）准备训练数据，4）抽取特征，5）训练模型，6）优化模型，7）总结 共7个章节进行介绍。</p>
+<a id="more"></a>
+<p>机器学习的概述：</p>
+<h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><p>随着机器学习在实际工业领域中不断获得应用，这个词已经被赋予了各种不同含义。在本文中的“机器学习”含义与wikipedia上的解释比较契合，如下：<br>Machine learning is a scientific discipline that deals with the construction and study of algorithms that can learn from data.</p>
+<p>机器学习可以分为无监督学习（unsupervised learning）和有监督学习（supervised learning），在工业界中，有监督学习是更常见和更有价值的方式，下文中主要以这种方式展开介绍。如下图中所示，有监督的机器学习在解决实际问题时，有两个流程，一个是离线训练流程（蓝色箭头），包含数据筛选和清洗、特征抽取、模型训练和优化模型等环节；另一个流程则是应用流程（绿色箭头），对需要预估的数据，抽取特征，应用离线训练得到的模型进行预估，获得预估值作用在实际产品中。在这两个流程中，离线训练是最有技术挑战的工作（在线预估流程很多工作可以复用离线训练流程的工作），所以下文主要介绍离线训练流程。</p>
+<p><img src="http://tech.meituan.com/img/how_to_ml/model.png" alt=""><br>model</p>
+<h2 id="什么是模型（model）？"><a href="#什么是模型（model）？" class="headerlink" title="什么是模型（model）？"></a>什么是模型（model）？</h2><p>模型，是机器学习中的一个重要概念，简单的讲，指特征空间到输出空间的映射；一般由模型的假设函数和参数w组成（下面公式就是Logistic Regression模型的一种表达，在训练模型的章节做稍详细的解释）；一个模型的假设空间（hypothesis space），指给定模型所有可能w对应的输出空间组成的集合。工业界常用的模型有Logistic Regression（简称LR）、Gradient Boosting Decision Tree（简称GBDT）、Support Vector Machine（简称SVM）、Deep Neural Network（简称DNN）等。<br><img src="http://latex.codecogs.com/png.latex?h_{w}\left%20(%20x%20\right%20" alt="">=P\left%20(%20y=1|x;w%20\right%20)%20=\frac{1}{1+e^{-wx}})</p>
+<p>模型训练就是基于训练数据，获得一组参数w，使得特定目标最优，即获得了特征空间到输出空间的最优映射，具体怎么实现，见训练模型章节。</p>
+<h2 id="为什么要用机器学习解决问题？"><a href="#为什么要用机器学习解决问题？" class="headerlink" title="为什么要用机器学习解决问题？"></a>为什么要用机器学习解决问题？</h2><p>目前处于大数据时代，到处都有成T成P的数据，简单规则处理难以发挥这些数据的价值；<br>廉价的高性能计算，使得基于大规模数据的学习时间和代价降低；<br>廉价的大规模存储，使得能够更快地和代价更小地处理大规模数据；<br>存在大量高价值的问题，使得花大量精力用机器学习解决问题后，能获得丰厚收益。</p>
+<h2 id="机器学习应该用于解决什么问题？"><a href="#机器学习应该用于解决什么问题？" class="headerlink" title="机器学习应该用于解决什么问题？"></a>机器学习应该用于解决什么问题？</h2><p>目标问题需要价值巨大，因为机器学习解决问题有一定的代价；<br>目标问题有大量数据可用，有大量数据才能使机器学习比较好地解决问题（相对于简单规则或人工）；<br>目标问题由多种因素（特征）决定，机器学习解决问题的优势才能体现（相对于简单规则或人工）；<br>目标问题需要持续优化，因为机器学习可以基于数据自我学习和迭代，持续地发挥价值。</p>
+<h2 id="对问题建模"><a href="#对问题建模" class="headerlink" title="对问题建模"></a>对问题建模</h2><p>本文以DEAL（团购单）交易额预估问题为例（就是预估一个给定DEAL一段时间内卖了多少钱），介绍使用机器学习如何解决问题。首先需要：</p>
+<p>收集问题的资料，理解问题，成为这个问题的专家；<br>拆解问题，简化问题，将问题转化机器可预估的问题。<br>深入理解和分析DEAL交易额后，可以将它分解为如下图的几个问题：<br><img src="http://tech.meituan.com/img/how_to_ml/deal_problem.png" alt=""><br>deal_problem</p>
+<h2 id="单个模型？多个模型？如何来选择？"><a href="#单个模型？多个模型？如何来选择？" class="headerlink" title="单个模型？多个模型？如何来选择？"></a>单个模型？多个模型？如何来选择？</h2><p>按照上图进行拆解后，预估DEAL交易额就有2种可能模式，一种是直接预估交易额；另一种是预估各子问题，如建立一个用户数模型和建立一个访购率模型（访问这个DEAL的用户会购买的单子数），再基于这些子问题的预估值计算交易额。</p>
+<p>不同方式有不同优缺点，具体如下：<br>模式    缺点    优点<br>单模型    1. 预估难度大</p>
+<ol>
+<li>风险比较高    1. 理论上可以获得最优预估（实际上很难）</li>
+<li>一次解决问题<br>多模型    1. 可能产生积累误差</li>
+<li>训练和应用成本高    1. 单个子模型更容易实现比较准地预估</li>
+<li>可以调整子模型的融合方式，以达到最佳效果<br>选择哪种模式？<br>1）问题可预估的难度，难度大，则考虑用多模型；<br>2）问题本身的重要性，问题很重要，则考虑用多模型；<br>3）多个模型的关系是否明确，关系明确，则可以用多模型。<br>如果采用多模型，如何融合？<br>可以根据问题的特点和要求进行线性融合，或进行复杂的融合。以本文问题为例，至少可以有如下两种：<br><img src="http://tech.meituan.com/img/how_to_ml/model_merg.png" alt=""><br>model_merg</li>
+</ol>
+<h2 id="模型选择"><a href="#模型选择" class="headerlink" title="模型选择"></a>模型选择</h2><p>对于DEAL交易额这个问题，我们认为直接预估难度很大，希望拆成子问题进行预估，即多模型模式。那样就需要建立用户数模型和访购率模型，因为机器学习解决问题的方式类似，下文只以访购率模型为例。要解决访购率问题，首先要选择模型，我们有如下的一些考虑：</p>
+<p>主要考虑<br>1）选择与业务目标一致的模型；<br>2）选择与训练数据和特征相符的模型。</p>
+<p>训练数据少，High Level特征多，则使用“复杂”的非线性模型（流行的GBDT、Random Forest等）；<br>训练数据很大量，Low Level特征多，则使用“简单”的线性模型（流行的LR、Linear-SVM等）。<br>补充考虑<br>1）当前模型是否被工业界广泛使用；<br>2）当前模型是否有比较成熟的开源工具包（公司内或公司外）；<br>3）当前工具包能够的处理数据量能否满足要求；<br>4）自己对当前模型理论是否了解，是否之前用过该模型解决问题。<br>为实际问题选择模型，需要转化问题的业务目标为模型评价目标，转化模型评价目标为模型优化目标；根据业务的不同目标，选择合适的模型，具体关系如下：<br><img src="http://tech.meituan.com/img/how_to_ml/select_model.png" alt=""><br>select_model</p>
+<p>通常来讲，预估真实数值（回归）、大小顺序（排序）、目标所在的正确区间（分类）的难度从大到小，根据应用所需，尽可能选择难度小的目标进行。对于访购率预估的应用目标来说，我们至少需要知道大小顺序或真实数值，所以我们可以选择Area Under Curve（AUC）或Mean Absolute Error（MAE）作为评估目标，以Maximum likelihood为模型损失函数（即优化目标）。综上所述，我们选择spark版本 GBDT或LR，主要基于如下考虑：<br>1）可以解决排序或回归问题；<br>2）我们自己实现了算法，经常使用，效果很好；<br>3）支持海量数据；<br>4）工业界广泛使用。</p>
+<h2 id="准备训练数据"><a href="#准备训练数据" class="headerlink" title="准备训练数据"></a>准备训练数据</h2><p>深入理解问题，针对问题选择了相应的模型后，接下来则需要准备数据；数据是机器学习解决问题的根本，数据选择不对，则问题不可能被解决，所以准备训练数据需要格外的小心和注意：</p>
+<h3 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h3><p>待解决问题的数据本身的分布尽量一致；<br>训练集/测试集分布与线上预测环境的数据分布尽可能一致，这里的分布是指（x,y）的分布，不仅仅是y的分布；<br>y数据噪音尽可能小，尽量剔除y有噪音的数据；<br>非必要不做采样，采样常常可能使实际数据分布发生变化，但是如果数据太大无法训练或者正负比例严重失调（如超过100:1）,则需要采样解决。</p>
+<h3 id="常见问题及解决办法"><a href="#常见问题及解决办法" class="headerlink" title="常见问题及解决办法"></a>常见问题及解决办法</h3><p>待解决问题的数据分布不一致：<br>1）访购率问题中DEAL数据可能差异很大，如美食DEAL和酒店DEAL的影响因素或表现很不一致，需要做特别处理；要么对数据提前归一化，要么将分布不一致因素作为特征，要么对各类别DEAL单独训练模型。<br>数据分布变化了：<br>1）用半年前的数据训练模型，用来预测当前数据，因为数据分布随着时间可能变化了，效果可能很差。尽量用近期的数据训练，来预测当前数据，历史的数据可以做降权用到模型，或做transfer learning。<br>y数据有噪音：<br>1）在建立CTR模型时，将用户没有看到的Item作为负例，这些Item是因为用户没有看到才没有被点击，不一定是用户不喜欢而没有被点击，所以这些Item是有噪音的。可以采用一些简单规则，剔除这些噪音负例，如采用skip-above思想，即用户点过的Item之上，没有点过的Item作为负例（假设用户是从上往下浏览Item）。<br>采样方法有偏，没有覆盖整个集合：<br>1）访购率问题中，如果只取只有一个门店的DEAL进行预估，则对于多门店的DEAL无法很好预估。应该保证一个门店的和多个门店的DEAL数据都有；<br>2）无客观数据的二分类问题，用规则来获得正/负例，规则对正/负例的覆盖不全面。应该随机抽样数据，进行人工标注，以确保抽样数据和实际数据分布一致。</p>
+<h3 id="访购率问题的训练数据"><a href="#访购率问题的训练数据" class="headerlink" title="访购率问题的训练数据"></a>访购率问题的训练数据</h3><p>收集N个月的DEAL数据（x）及相应访购率（y）；<br>收集最近N个月，剔除节假日等非常规时间 （保持分布一致）；<br>只收集在线时长&gt;T 且 访问用户数 &gt; U的DEAL （减少y的噪音）；<br>考虑DEAL销量生命周期 （保持分布一致）；<br>考虑不同城市、不同商圈、不同品类的差别 （保持分布一致）。</p>
+<h2 id="抽取特征"><a href="#抽取特征" class="headerlink" title="抽取特征"></a>抽取特征</h2><p>完成数据筛选和清洗后，就需要对数据抽取特征，就是完成输入空间到特征空间的转换（见下图）。针对线性模型或非线性模型需要进行不同特征抽取，线性模型需要更多特征抽取工作和技巧，而非线性模型对特征抽取要求相对较低。<br><img src="http://tech.meituan.com/img/how_to_ml/extract_fea.png" alt=""><br>extract_fea</p>
+<p>通常，特征可以分为High Level与Low Level，High Level指含义比较泛的特征，Low Level指含义比较特定的特征，举例来说：</p>
+<pre><code>DEAL A1属于POIA，人均50以下，访购率高；
+DEAL A2属于POIA，人均50以上，访购率高；
+DEAL B1属于POIB，人均50以下，访购率高；
+DEAL B2属于POIB，人均50以上，访购率底；
+</code></pre><p>基于上面的数据，可以抽到两种特征，POI（门店）或人均消费；POI特征则是Low Level特征，人均消费则是High Level特征；假设模型通过学习，获得如下预估：</p>
+<p>如果DEALx 属于POIA（Low Level feature），访购率高；<br>如果DEALx 人均50以下（High Level feature），访购率高。<br>所以，总体上，Low Level 比较有针对性，单个特征覆盖面小（含有这个特征的数据不多），特征数量（维度）很大。High Level比较泛化，单个特征覆盖面大（含有这个特征的数据很多），特征数量（维度）不大。长尾样本的预测值主要受High Level特征影响。高频样本的预测值主要受Low Level特征影响。</p>
+<p>对于访购率问题，有大量的High Level或Low Level的特征，其中一些展示在下图：<br><img src="http://tech.meituan.com/img/how_to_ml/fea_list.png" alt=""><br>fea_list</p>
+<p>非线性模型的特征<br>1）可以主要使用High Level特征，因为计算复杂度大，所以特征维度不宜太高；<br>2）通过High Level非线性映射可以比较好地拟合目标。<br>线性模型的特征<br>1）特征体系要尽可能全面，High Level和Low Level都要有；<br>2）可以将High Level转换Low Level，以提升模型的拟合能力。</p>
+<h3 id="特征归一化"><a href="#特征归一化" class="headerlink" title="特征归一化"></a>特征归一化</h3><p>特征抽取后，如果不同特征的取值范围相差很大，最好对特征进行归一化，以取得更好的效果，常见的归一化方式如下：</p>
+<p>Rescaling<br>归一化到[0,1] 或 [-1，1]，用类似方式</p>
+<h3 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h3><p>特征抽取和归一化之后，如果发现特征太多，导致模型无法训练，或很容易导致模型过拟合，则需要对特征进行选择，挑选有价值的特征。</p>
+<p>Filter：<br>假设特征子集对模型预估的影响互相独立，选择一个特征子集，分析该子集和数据Label的关系，如果存在某种正相关，则认为该特征子集有效。衡量特征子集和数据Label关系的算法有很多，如Chi-square，Information Gain。<br>Wrapper：<br>选择一个特征子集加入原有特征集合，用模型进行训练，比较子集加入前后的效果，如果效果变好，则认为该特征子集有效，否则认为无效。<br>Embedded：<br>将特征选择和模型训练结合起来，如在损失函数中加入L1 Norm ，L2 Norm。</p>
+<h2 id="训练模型"><a href="#训练模型" class="headerlink" title="训练模型"></a>训练模型</h2><p>完成特征抽取和处理后，就可以开始模型训练了，下文以简单且常用的Logistic Regression模型（下称LR模型）为例，进行简单介绍。<br>设有m个（x,y）训练数据，其中x为特征向量，y为label，；w为模型中参数向量，即模型训练中需要学习的对象。<br>所谓训练模型，就是选定假说函数和损失函数，基于已有训练数据（x,y），不断调整w，使得损失函数最优，相应的w就是最终学习结果，也就得到相应的模型。</p>
+<p>###模型函数<br>1）假说函数，即假设x和y存在一种函数关系：</p>
+<p>2）损失函数，基于上述假设函数，构建模型损失函数（优化目标），在LR中通常以（x,y）的最大似然估计为目标：</p>
+<h3 id="优化算法"><a href="#优化算法" class="headerlink" title="优化算法"></a>优化算法</h3><p>梯度下降（Gradient Descent）<br>即w沿着损失函数的负梯度方向进行调整，示意图见下图，的梯度即一阶导数（见下式），梯度下降有多种类型，如随机梯度下降或批量梯度下降。</p>
+<p>随机梯度下降（Stochastic Gradient Descent），每一步随机选择一个样本，计算相应的梯度，并完成w的更新，如下式，</p>
+<p>批量梯度下降（Batch Gradient Descent）,每一步都计算训练数据中的所有样本对应的梯度，w沿着这个梯度方向迭代，即</p>
+<p>gradient_descent<br><img src="http://tech.meituan.com/img/how_to_ml/gradient_descent.png" alt=""><br>牛顿法（Newton’s Method）<br>牛顿法的基本思想是在极小点附近通过对目标函数做二阶Taylor展开，进而找到L(w)的极小点的估计值。形象地讲，在wk处做切线，该切线与L(w)=0的交点即为下一个迭代点wk+1（示意图如下）。w的更新公式如下，其中目标函数的二阶偏导数，即为大名鼎鼎的Hessian矩阵。</p>
+<p>拟牛顿法（Quasi-Newton Methods）：计算目标函数的二阶偏导数，难度较大，更为复杂的是目标函数的Hessian矩阵无法保持正定；不用二阶偏导数而构造出可以近似Hessian矩阵的逆的正定对称阵，从而在”拟牛顿”的条件下优化目标函数。<br>BFGS： 使用BFGS公式对H(w)进行近似，内存中需要放H(w),内存需要O(m2)级别；<br>L-BFGS：存储有限次数（如k次）的更新矩阵，用这些更新矩阵生成新的H(w),内存降至O(m)级别；<br>OWLQN: 如果在目标函数中引入L1正则化，需要引入虚梯度来解决目标函数不可导问题，OWLQN就是用来解决这个问题。<br><img src="http://tech.meituan.com/img/how_to_ml/newton.png" alt=""><br>newton<br>Coordinate Descent<br>对于w，每次迭代，固定其他维度不变，只对其一个维度进行搜索，确定最优下降方向（示意图如下），公式表达如下：<br><img src="http://tech.meituan.com/img/how_to_ml/coordinate_descent.jpg" alt=""><br>coordinate_descent</p>
+<h2 id="优化模型"><a href="#优化模型" class="headerlink" title="优化模型"></a>优化模型</h2><p>经过上文提到的数据筛选和清洗、特征设计和选择、模型训练，就得到了一个模型，但是如果发现效果不好？怎么办？<br>【首先】<br>反思目标是否可预估，数据和特征是否存在bug。<br>【然后】<br>分析一下模型是Overfitting还是Underfitting，从数据、特征和模型等环节做针对性优化。</p>
+<h3 id="Underfitting-amp-Overfitting"><a href="#Underfitting-amp-Overfitting" class="headerlink" title="Underfitting &amp; Overfitting"></a>Underfitting &amp; Overfitting</h3><p>所谓Underfitting，即模型没有学到数据内在关系，如下图左一所示，产生分类面不能很好的区分X和O两类数据；产生的深层原因，就是模型假设空间太小或者模型假设空间偏离。<br>所谓Overfitting，即模型过渡拟合了训练数据的内在关系，如下图右一所示，产生分类面过好地区分X和O两类数据，而真实分类面可能并不是这样，以至于在非训练数据上表现不好；产生的深层原因，是巨大的模型假设空间与稀疏的数据之间的矛盾。<br><img src="http://tech.meituan.com/img/how_to_ml/underfitting_overfitting.png" alt=""><br>underfitting_overfitting</p>
+<p>在实战中，可以基于模型在训练集和测试集上的表现来确定当前模型到底是Underfitting还是Overfitting，判断方式如下表：</p>
+<p>训练集表现    测试集表现    问题<br>&lt; 期望目标值    &lt; 期望目标值    Underfitting</p>
+<blockquote>
+<p>期望目标值    接近或略逊于训练集    合适<br>期望目标值    远差于训练集    Overfitting</p>
+<h3 id="怎么解决Underfitting和Overfitting问题？"><a href="#怎么解决Underfitting和Overfitting问题？" class="headerlink" title="怎么解决Underfitting和Overfitting问题？"></a>怎么解决Underfitting和Overfitting问题？</h3></blockquote>
+<p>问题    数据    特征    模型<br>Underfitting    清洗数据    1. 增加特征</p>
+<ol>
+<li>删除噪音特征    1. 调低正则项的惩罚参数</li>
+<li>换更“复杂”的模型（如把线性模型换为非线性模型）</li>
+<li>多个模型级联或组合<br>Overfitting    增加数据    1. 进行特征选择</li>
+<li>降维（如对特征进行聚类、主题模型进行处理等）</li>
+<li>提高正则项的惩罚参数</li>
+<li>减少训练迭代次数</li>
+<li>换更“简单”的模型（如把非线性模型换为线性模型）</li>
+<li><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>综上所述，机器学习解决问题涉及到问题建模、准备训练数据、抽取特征、训练模型和优化模型等关键环节，有如下要点：</li>
+</ol>
+<p>理解业务，分解业务目标，规划模型可预估的路线图。<br>数据：<br>y数据尽可能真实客观；<br>训练集/测试集分布与线上应用环境的数据分布尽可能一致。<br>特征：<br>利用Domain Knowledge进行特征抽取和选择；<br>针对不同类型的模型设计不同的特征。<br>模型：<br>针对不同业务目标、不同数据和特征，选择不同的模型；<br>如果模型不符合预期，一定检查一下数据、特征、模型等处理环节是否有bug；<br>考虑模型Underfitting和Qverfitting，针对性地优化。</p>
+<p>不想错过技术博客更新？想给文章评论、和作者互动？第一时间获取技术沙龙信息？</p>
+<p>请关注我们的官方微信公众号“美团点评技术团队”。现在就拿出手机，扫一扫：<br><img src="http://tech.meituan.com/img/qrcode_for_gh.jpg" alt=""><br>公众号二维码</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">![](http://latex.codecogs.com/png.latex?x^&#123;<span class="meta">%27</span>&#125;=\frac&#123;x-min(x)&#125;&#123;max(x)-min(x)&#125;)</div><div class="line"></div><div class="line">![](http://latex.codecogs.com/png.latex?h<span class="number">_</span>&#123;w&#125;\left<span class="meta">%20</span>(<span class="meta">%20x</span><span class="meta">%20</span>\right<span class="meta">%20</span>)=P\left<span class="meta">%20</span>(<span class="meta">%20y</span>=<span class="number">1</span>|x;w<span class="meta">%20</span>\right<span class="meta">%20</span>)<span class="meta">%20</span>=\frac&#123;<span class="number">1</span>&#125;&#123;<span class="number">1</span>+e^&#123;-wx&#125;&#125;)</div><div class="line">![](http://latex.codecogs.com/png.latex?L\left<span class="meta">%20</span>(<span class="meta">%20w</span><span class="meta">%20</span><span class="meta">%20</span>\right<span class="meta">%20</span>)=\sum<span class="number">_</span>&#123;i=<span class="number">1</span>&#125;^&#123;m&#125;y^&#123;(i)&#125;logh<span class="number">_</span>&#123;w&#125;(x^&#123;(i)&#125;)+(<span class="number">1</span>-y^&#123;(i)&#125;)log(<span class="number">1</span>-h<span class="number">_</span>&#123;w&#125;(x^&#123;(i)&#125;)))</div><div class="line">![](http://latex.codecogs.com/png.latex?L^&#123;<span class="meta">%27</span>&#125;\left<span class="meta">%20</span>(<span class="meta">%20w</span>\right<span class="meta">%20</span>)=\sum<span class="number">_</span>&#123;i=<span class="number">1</span>&#125;^&#123;m&#125;(y^&#123;(i)&#125;-h<span class="number">_</span>&#123;w&#125;(x^&#123;(i)&#125;))x^&#123;(i)&#125;)</div><div class="line">![](http://latex.codecogs.com/png.latex?w:=w+\eta<span class="meta">%20L</span>^&#123;<span class="meta">%27</span>&#125;(w)=w+\eta<span class="meta">%20</span>(y^&#123;(i)&#125;-h<span class="number">_</span>&#123;w&#125;(x^&#123;(i)&#125;))x^&#123;(i)&#125;)</div><div class="line">![](http://latex.codecogs.com/png.latex?w:=w+\eta<span class="meta">%20L</span>^&#123;<span class="meta">%27</span>&#125;(w)=w+\eta<span class="meta">%20</span>\sum<span class="number">_</span>&#123;i=<span class="number">1</span>&#125;^&#123;m&#125;(y^&#123;(i)&#125;-h<span class="number">_</span>&#123;w&#125;(x^&#123;(i)&#125;))x^&#123;(i)&#125;)</div><div class="line">![](http://latex.codecogs.com/png.latex?w:=w-\frac&#123;L^&#123;<span class="meta">%27</span>&#125;(w)&#125;&#123;L^&#123;<span class="meta">%27</span><span class="meta">%27</span>&#125;(w)&#125;=w-H^&#123;-<span class="number">1</span>&#125;L^&#123;<span class="meta">%27</span>&#125;(w))</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACt0lEQVR42u3awU4DMQwEUP7/p+GKBC0zdgJFentCbUnz9rBxx357i6/3T9fnVx69+/x/n6/59fr6jYcvPDw8vMXWny/dbujRdyU36NHtyPeMh4eHd5vXbiW/QckmEmpySODh4eG9Mi/Z6PPX20IcDw8P77/z2kMi2goeHh7ev+K1EWp+MCRrzoKMw1kLHh4eXszLu0iv8/eV/h4eHh7euquehA5JlLBvaw13i4eHh3eBlz9w9wX3bKCqLZfx8PDwbvPyADcfwEqK8s0YVlF84+Hh4V3jtQ/6Wck7GyCYDRkM63o8PDy8eIVZOdsOSyXrJDeuLrvx8PDwjvLygjUflmoL4v2xUXTt8PDw8K7x8pZV28SadfzbaPibrAUPDw/vEG/2gG4L31mQsYmAozMKDw8P7ygvL7vzR3l+2LShQ5S14OHh4R3inQpbkzJ69vnZ0EDxiwEPDw9vwcuHpdqwoM1aN0FwNFOGh4eHt+DlpNnXz0YK8sbbMCzGw8PDW/P2xfRmHOHUClHWgoeHh7fm5SVpfgC05fLs7CrCCDw8PLxrvPxBv4kGNiV4sto3WQseHh7eBV5bLreHRBs05Kv98DoeHh7eBd5+66dS5DawwMPDw/srXj501UYVp8rx9hvx8PDwbvM2oUMSHCRFcF7Wt+/i4eHh3eMV01hPF2pbXO2xdOD0w8PDwzvKy0PbWWs/33oeatTjqnh4eHi/wpsFEGePjfbQwsPDw7vHey+vtrBOjoqz7bRoXBUPDw9vwZsFELMGf1IWz9ppBy48PDy8kjcrcPNRgLMxcf0DAA8PD+8ar51Tmg0NnI0eikgCDw8P7wV4eXTbRsCrYyCfjMDDw8P7dd4sINiHxfXRgoeHh3eNl/xzHsK2ZXceXtSNMTw8PLxbPffm533wmaQ9NruhVy48PDy89PoAUtgr8LGLda4AAAAASUVORK5CYII=" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          聊聊clean code
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">机器学习中的数据清洗与特征处理综述</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="BusinessAI/example-of-machine-learning-in-meituan" data-title="实例详解机器学习如何解决问题" data-url="http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 For life
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+    
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','QVk44u3hiUx_EaM1x32V'); //�����Լ���
+</script>    
+    
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true,
+		showTags: true
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.2d7529.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Google</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Business</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Smart Phone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Machine Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Program</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Open Source</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Java Script</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">File System</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Scikit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Atom</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Neural Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Neural Networks</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/25870384/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>你的生命有什么可能</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://mt.sohu.com/20161026/n471374646.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>个体崛起的时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnfy.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>成为一个超级个体</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://gelonghui.com/p/101767.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人工智能的黄金时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都是工程师</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都能用英语</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>把时间当作朋友</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>七年就是一辈子</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://news.mbalib.com/story/12504" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>退休感言</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.360doc.com/content/14/1206/17/15680008_430856157.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>选择的智慧</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/6397275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>此生未完成</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/26422275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>向死而生</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">自知者明&lt;br&gt;自胜者强&lt;br&gt;不忘初心&lt;br&gt;方得始终</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://ipcreator.me">
+  <title>Things Every Hacker Once Knew | IPCreator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Things Every Hacker Once Knew
+by Eric S. Raymond &amp;#x65;&amp;#115;&amp;#114;&amp;#64;&amp;#116;&amp;#104;&amp;#121;&amp;#x72;&amp;#x73;&amp;#117;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;
+One fine day in January 2017 I was reminded of something I had">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Things Every Hacker Once Knew">
+<meta property="og:url" content="http://ipcreator.me/2017/01/20/Program/Concepts/things-every-hacker-once-knew/index.html">
+<meta property="og:site_name" content="IPCreator">
+<meta property="og:description" content="Things Every Hacker Once Knew
+by Eric S. Raymond &amp;#x65;&amp;#115;&amp;#114;&amp;#64;&amp;#116;&amp;#104;&amp;#121;&amp;#x72;&amp;#x73;&amp;#117;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;
+One fine day in January 2017 I was reminded of something I had">
+<meta property="og:updated_time" content="2017-02-15T13:06:27.820Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Things Every Hacker Once Knew">
+<meta name="twitter:description" content="Things Every Hacker Once Knew
+by Eric S. Raymond &amp;#x65;&amp;#115;&amp;#114;&amp;#64;&amp;#116;&amp;#104;&amp;#121;&amp;#x72;&amp;#x73;&amp;#117;&amp;#115;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;
+One fine day in January 2017 I was reminded of something I had">
+  
+  
+    <link rel="icon" href="/img/personalphoto.jpg">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.2d7529.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #4d4d4d"></div>
+<div class="intrude-less">
+
+
+
+
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/personalphoto.jpg" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">For life</a></h1>
+		</hgroup>
+		
+		<p class="header-subtitle">Growing up is the only password.</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/personalphoto.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">For life</h1>
+			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Growing up is the only password.<i class="icon icon-quo-right"></i></p>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/archives">归档</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-Program/Concepts/things-every-hacker-once-knew" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Things Every Hacker Once Knew
+    </h1>
+  
+
+        
+        <a href="/2017/01/20/Program/Concepts/things-every-hacker-once-knew/" class="archive-article-date">
+  	<time datetime="2017-01-20T11:16:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.catb.org/~esr/faqs/things-every-hacker-once-knew/" target="_blank" rel="external">Things Every Hacker Once Knew</a></p>
+<p>by Eric S. Raymond <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x65;&#115;&#114;&#64;&#116;&#104;&#121;&#x72;&#x73;&#117;&#115;&#46;&#x63;&#x6f;&#x6d;">&#x65;&#115;&#114;&#64;&#116;&#104;&#121;&#x72;&#x73;&#117;&#115;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p>One fine day in January 2017 I was reminded of something I had half-noticed a few times over the previous decade. That is, younger hackers don’t know the bit structure of ASCII and the meaning of the odder control characters in it.</p>
+<p>This is knowledge every fledgling hacker used to absorb through their pores. It’s nobody’s fault this changed; the obsolescence of hardware terminals and the near-obsolescence of the RS-232 protocol is what did it. Tools generate culture; sometimes, when a tool becomes obsolete, a bit of cultural commonality quietly evaporates. It can be difficult to notice that this has happened.</p>
+<p>This document is a collection of facts about ASCII and related technologies, notably hardware serial terminals and RS-232 and modems. This is lore that was at one time near-universal and is no longer. It’s not likely to be directly useful today - until you trip over some piece of still-functioning technology where it’s relevant (like a GPS puck), or it makes sense of some old-fart war story. Even so, it’s good to know anyway, for cultural-literacy reasons.</p>
+<p>One thing this collection has that tends to be indefinite in the minds of older hackers is calendar dates. Those of us who lived through all this tend to have remembered order and dependencies but not exact timing; here, I did the research to pin a lot of that down. I’ve noticed that people have a tendency to retrospectively back-date the technologies that interest them, so even if you did live through the era it describes you might get a few surprises from reading this.</p>
+<p>There are lots of references to Unix in here because I am mainly attempting to educate younger open-source hackers working on Unix-derived systems such as Linux and the BSDs. If those terms mean nothing to you, the rest of this document probably won’t either.</p>
+  <a id="more"></a>
+<h2 id="Hardware-context"><a href="#Hardware-context" class="headerlink" title="Hardware context"></a>Hardware context</h2><p>Nowadays, when two computers talk to each other, it’s usually via TCP/IP over some physical layer you seldom need to care much about. And a “terminal” is actually a “terminal emulator”, a piece of software that manages part of your display and itself speaks TCP/IP.</p>
+<p>Before ubiquitous TCP/IP and bit-mapped displays things were very different. For most hackers that transition took place within a few years of 1992 - perhaps somewhat earlier if you had access to then-expensive workstation hardware.</p>
+<p>Before then there were video display terminals - VDTs for short. In the mid-1970s these had displaced an earlier generation of printing terminals derived from really old technology called a “teletype”, which had evolved around 1900 from Victorian telegraph networks. The very earliest versions of Unix in the late 1960s were written for these printing terminals, in particular for the Teletype Model 33 (aka ASR-33); the “tty” that shows up in Unix device names was a then-common abbreviation for “teletype”.</p>
+<p>In those pre-Internet days computers didn’t talk to each other much, and the way teletypes and terminals talked to computers was a hardware protocol called “RS-232” (or, if you’re being pedantic, “EIA RS-232C”) [1]. Before USB, when people spoke of a “serial” link, they meant RS-232, and sometimes referred to the equipment that spoke it as “serial terminals”.</p>
+<p>RS-232 had a very long service life; it was developed in the early 1960s, not originally for computer use but as a way for teletypewriters to talk to modems. Though it has passed out of general use and is no longer common knowledge, it’s not quite dead even today.<br>I’ve been simplifying a bit here. There were other things besides RS-232 and serial terminals going on, notably on IBM mainframes. But they’ve left many fewer traces in current technology and its folklore. This is because the lineage of modern Unix passes back through a now-forgotten hardware category called a “minicomputer”, especially minicomputers made by the Digital Equipment Corporation. ASCII, RS-232 and serial terminals were part of the technology cluster around minicomputers - as was, for that matter, Unix itself.</p>
+<p>Minicomputers were wiped out by workstations and workstations by descendants of the IBM PC, but hackers old enough to remember the minicomputer era (mid-1960s to mid-1980s) tend still to get a bit misty-eyed about the DEC hardware they cut their teeth on.</p>
+<p>Often, however, nostalgia obscures how very underpowered those machines were. For example: a DEC VAX 11-780 minicomputer in the mid-1980s, used for timesharing and often supporting a dozen simultaneous users, had less than 1/1000 the processing power and less than 1/5000 times as much storage available as a low-end smartphone does in 2017.</p>
+<p>In fact, until well into the 1980s microcomputers ran slowly enough (and had poor enough RF shielding) that this was common knowledge: you could put an AM radio next to one and get a clue when it was doing something unusual, because either fundamentals or major subharmonics of the clock frequencies were in the range of human audibility. Nothing has run that slowly since the turn of the 21st century.</p>
+<h2 id="The-strange-afterlife-of-the-Hayes-smartmodem"><a href="#The-strange-afterlife-of-the-Hayes-smartmodem" class="headerlink" title="The strange afterlife of the Hayes smartmodem"></a>The strange afterlife of the Hayes smartmodem</h2><p>About those modems: the word is a portmanteau for “modulator/demodulator”. Modems allowed digital signals to pass over copper phone wires - ridiculously slowly by today’s standards, but that’s how we did our primitive wide-area networking in pre-Internet times. It was not generally known back then that modems had first been invented in the late 1950s for use in military communications, notably the SAGE air-defense network; we just took them for granted.</p>
+<p>Today modems that speak over copper or optical fiber are embedded invisibly in the Internet access point in your basement; other varieties perform over-the-air signal handling for smartphones and tablets. A variety every hacker used to know about (and most of us owned) was the “outboard” modem, a separate box wired to your computer and your telephone line.</p>
+<p>Inboard modems (expansion cards for your computer) were also known, but never sold as well because being located inside the case made them vulnerable to RF noise, and the blinkenlights on an outboard were useful for diagnosing problems. Also, most hackers learned to interpret (at least to some extent) modem song - the beeping and whooshing noises the outboards made while attempting to establish a connection. The happy song of a successful connect was identifiably different from various sad songs of synchronization failure.</p>
+<p>These old-fashioned modems were, by today’s standards, unbelievably slow. Modem speeds increased from 110 bits per second back at the beginning of interactive computing to 56 kilobits per second just before the technology was effectively wiped out by wide-area Internet around the end of the 1990s, which brought in speeds of a megabit per second and more (20 times faster). For the longest stable period of modem technology after 1970, about 1984 to 1991, typical speed was 9600bps. This has left some traces; it’s why surviving serial-protocol equipment tends to default to a speed of 9600bps.</p>
+<p>There was a line of modems called “Hayes Smartmodems” that could be told to dial a number, or set parameters such as line speed, with command codes sent to the modem over its serial link from the machine. Every hacker used to know the “AT” prefix used for commands and that, for example, ATDT followed by a phone number would dial the number. Other modem manufacturers copied the Hayes command set and variants of it became near universal after 1981.</p>
+<p>What was not commonly known then is that the “AT” prefix had a helpful special property. That bit sequence (1+0 1000 0010 1+0 0010 1010 1+, where the plus suffix indicates one or more repetitions of the preceding bit) has a shape that makes it as easy as possible for a receiver to recognize it even if the receiver doesn’t know the transmit-line speed; this, in turn, makes it possible to automatically synchronize to that speed [2].</p>
+<p>That property is still useful, and thus in 2017 the AT convention has survived in some interesting places. AT commands have been found to perform control functions on 3G and 4G cellular modems used in smartphones. On one widely deployed variety, “AT+QLINUXCMD=” is a prefix that passes commands to an instance of Linux running in firmware on the chip itself (separately from whatever OS might be running visibly on the phone).</p>
+<h2 id="Preserving-core-values"><a href="#Preserving-core-values" class="headerlink" title="Preserving core values"></a>Preserving core values</h2><p>From about 1955 to 1975 - before semiconductors - the dominant technology in computer memory used tiny magnetic doughnuts strung on copper wires. The doughnuts were known as “ferrite cores” and main memory thus known as “core memory” or “core”.</p>
+<p>Unix terminology was formed in the early 1970s, and compounds like “in core” and “core dump” survived into the semiconductor era. Until as late as around 1990 it could still be assumed that every hacker knew from where these terms derived; even microcomputer hackers for which memory had always been semiconductor RAM tended to pick up this folklore rapidly on contact with Unix.</p>
+<p>After 2000, however, as multiprocessor systems became increasingly common even on desktops, “core” increasingly took on a conflicting meaning as shorthand for “processor core”. In 2017 “core” can still mean either thing, but the reason for the older usage is no longer generally understood and idioms like “in core” may be fading.</p>
+<h2 id="36-bit-machines-and-the-persistence-of-octal"><a href="#36-bit-machines-and-the-persistence-of-octal" class="headerlink" title="36-bit machines and the persistence of octal"></a>36-bit machines and the persistence of octal</h2><p>There’a a power-of-two size hierarchy in memory units that we now think of as normal - 8 bit bytes, 16 or 32 or 64-bit words. But this did not become effectively universal until after 1983. There was an earlier tradition of designing computer architectures with 36-bit words.<br>There was a time when 36-bit machines loomed large in hacker folklore and some of the basics about them were ubiquitous common knowledge, though cultural memory of this era began to fade in the early 1990s. Two of the best-known 36-bitters were the DEC PDP-10 and the Symbolics 3600 Lisp machine. The cancellation of the PDP-10 in ‘83 proved to be the death knell for this class of machine, though the 3600 fought a rear-guard action for a decade afterwards.</p>
+<p>Hexadecimal is a natural way to represent raw memory contents on machines with the power-of-two size hierarchy. But octal (base-8) representations of machine words were common on 36-bit machines, related to the fact that a 36-bit word naturally divides into 12 3-bit fields naturally represented as octal. In fact, back then we generally assumed you could tell which of the 32- or 36-bit phyla a machine belonged in by whether you could see digits greater than 7 in a memory dump.</p>
+<p>Here are a few things every hacker used to know that related to these machines:</p>
+<p>36 bits was long enough to represent positive and negative integers to an accuracy of ten decimal digits, as was expected on mechanical calculators of the era. Standardization on 32 bits was unsuccessfully resisted by numerical analysts and people in scientific computing, who really missed that last 4 bits of accuracy.</p>
+<p>A “character” might be 9 bits on these machines, with 4 packed to a word. Consequently, keyboards designed for them might have both a meta key to assert bit 8 and a now-extinct extra modifier key (usually but not always called “Super”) that asserted bit 9. Sometimes this selected a tier of non-ASCII characters including Greek letters and mathematical symbols.</p>
+<p>It used also to be generally known that 36-bit architectures explained some unfortunate features of the C language. The original Unix machine, the PDP-7, featured 18-bit words corresponding to half-words on larger 36-bit computers. These were more naturally represented as six octal (3-bit) digits.</p>
+<p>The immediate ancestor of C was an interpreted language written on the PDP-7 and named B. In it, a numeric literal beginning with 0 was interpreted as octal.</p>
+<p>The PDP-7’s successor, and the first workhorse Unix machine was the PDP-11 (first shipped in 1970). It had 16-bit words - but, due to some unusual peculiarities of the instruction set, octal made more sense for its machine code as well. C, first implemented on the PDP-11, thus inherited the B octal syntax. And extended it: when an in-string backslash has a following digit, that was expected to lead an octal literal.</p>
+<p>The Interdata 32, VAX, and other later Unix platforms didn’t have those peculiarities; their opcodes expessed more naturally in hex. But C was never adjusted to prefer hex, and the surprising interpretation of leading 0 wasn’t removed.</p>
+<p>Because many later languages (Java, Python, etc) copied C’s low-level lexical rules for compatibility reasons, the relatively useless and sometimes dangerous octal syntax besets computing platforms for which three-bit opcode fields are wildly inappropriate, and may never be entirely eradicated [3].</p>
+<p>The PDP-11 was so successful that architectures strongly influenced by it (notably, including Intel [4] and ARM microprocessors) eventually took over the world, killing off 36-bit machines.</p>
+<h2 id="RS232-and-its-discontents"><a href="#RS232-and-its-discontents" class="headerlink" title="RS232 and its discontents"></a>RS232 and its discontents</h2><p>A TCP/IP link generally behaves like a clean stream of 8-bit bytes (formally, octets). You get your data as fast as the network can run, and error detection/correction is done somewhere down below the layer you can see.</p>
+<p>RS-232 was not like that. Two devices speaking it had to agree on a common line speed - also on how the byte framing works (the latter is why you’ll see references to “stop bits” in related documentation). Finally, error detection and correction was done in-stream, sort of. RS232 devices almost always spoke ASCII, and used the fact that ASCII only filled 7 bits. The top bit might be, but was not always, used as a parity bit for error detection. If not used, the top bit could carry data.</p>
+<p>You had to set your equipment at both ends for a specific combination of all of these. After about 1984 anything other than “8N1” - eight bits, no parity, one stop bit - became increasingly rare. Before that, all kinds of weird combinations were in use. Even parity (“E”) was more common than odd (“O”) and 1 stop bit more common than 2, but you could see anything come down a wire. And if you weren’t properly set up for it, all you got was “baud barf” - random 8-bit garbage rather than the character data you were expecting.</p>
+<p>This, in particular, is one reason the API for the POSIX/Unix terminal interface, termios(3), has a lot of complicated options with no obvious modern-day function. It had to be able to manipulate all these settings, and more.</p>
+<p>Another consequence was that passing binary data over an RS-232 link wouldn’t work if parity was enabled - the high bits would get clobbered. Other now-forgotten wide-area network protocols reacted even worse, treating in-band characters with 0x80 on as control codes with results ranging from amusing to dire. We had a term, “8-bit clean”, for networks and software that didn’t clobber the 0x80 bit. And we needed that term…</p>
+<p>Even the RS-232 physical connector varied. Standard RS-232 as defined in 1962 used a roughly D-shaped shell with 25 physical pins (DB-25), way more than the physical protocol actually required (you can support a minimal version with just three wires, and this was actually common). Twenty years later, after the IBM PC-AT introduced it in 1984, most manufacturers switched to using a smaller DB-9 connector (which is technically a DE-9 but almost nobody ever called it that). If you look at a PC with a serial port it is most likely to be a DB-9; confusingly, DB-25 came to be used for printer parallel ports (which originally had a very different connector) before those too were obsolesced by USB and Ethernet.</p>
+<p>Anybody who worked with this stuff had to keep around a bunch of specialized hardware - gender changers, DB-25-to-DB-9 adapters (and the reverse), breakout boxes, null modems, and other stuff I won’t describe in detail because it’s left no traces in today’s tech. Hackers of a certain age still tend to have these things cluttering their toolboxes or gathering dust in a closet somewhere.</p>
+<p>The main reason to still care about any of this (other than understanding greybeard war stories) is that some kinds of sensor and control equipment, routers, and IoT devices still speak RS-232, often wrapped inside a USB emulation. The most common devices that do this are probably GPS sensors designed to talk to computers (as opposed to handheld GPSes or car-navigation systems).</p>
+<p>Because of devices like GPSes, you may still occasionally need to know what an RS-232 “handshake line” is. These were originally used to communicate with modems; a terminal, for example, could change the state of the DTR (Data Terminal Ready) line to indicate that it was ready to receive, initiate, or continue a modem session.</p>
+<p>Later, handshake lines were used for other equipment-specific kinds of out-of-band signals. The most commonly re-used lines were DCD (data carrier detect) and RI (Ring Indicator).</p>
+<p>Three-wire versions of RS-232 omitted these handshake lines entirely. A chronic source of frustration was equipment at one end of your link that failed to supply an out-of-band signal that the equipment at the other end needed. The modern version of this is GPSes that fail to supply their 1PPS (a high-precision top-of-second pulse) over one of the handshake lines.</p>
+<p>Another significant problem was that an RS-232 device not actually sending data was undetectable without analog-level monitoring equipment. You couldn’t tell a working but silent device from one that had come unplugged or suffered a connection fault in its wiring. This caused no end of complications when troubleshooting and is a major reason USB was able to displace RS-232 after 1994.<br>A trap for the unwary that opened up after about the year 2000 is that peripheral connectors labeled RS232 could have one of two different sets of voltage levels. If they’re pins or sockets in a DB9 or DB25 shell, the voltage swing between 1 and 0 bits can be as much as 50 volts, and is usually about 26. Bare connectors on a circuit board, or chip pins, increasingly came to use what’s called “TTL serial” - same signalling with a swing of 3.3 or (less often) 5 volts. You can’t wire standard RS232 to TTL serial directly; the link needs a device called a “level shifter”. If you connect without one, components on the TTL side will get fried.</p>
+<p>RS-232 passed out of common knowledge in the mid- to late 1990s, but didn’t finally disappear from general-purpose computers until around 2010. Standard RS-232 is still widely used on industrial controllers and in some niche applications, including point-of-sale systems and diagnostic consoles on commercial-grade routers. The TTL serial variant is often used on maker devices.</p>
+<h2 id="UUCP-and-BBSes-the-forgotten-pre-Internets"><a href="#UUCP-and-BBSes-the-forgotten-pre-Internets" class="headerlink" title="UUCP and BBSes, the forgotten pre-Internets"></a>UUCP and BBSes, the forgotten pre-Internets</h2><p>Every hacker over a certain age remembers either UUCP or the BBS scene. Many participated in both. In those days access to to the “real” net (ARPANET, which became Internet) was difficult if you weren’t affiliated with one of a select group of federal agencies, military contractors, or university research labs. So we made do with what we had, which was modems and the telephone network.</p>
+<p>UUCP stands for Unix to Unix Copy Program. Between its escape from Bell Labs in 1979 and the mass-market Internet explosion of the mid-1990s, it provided slow but very low-cost networking among Unix sites using modems and the phone network.</p>
+<p>UUCP was a store-and-forward system originally intended for propagating software updates, but its major uses rapidly became email and a thing called USENET (launched 1981) that was the ur-ancestor of Stack Overflow and other modern web fora. It supported topic groups for messages which, propagated from their point of origin through UUCP, would eventually flood to the whole network.</p>
+<p>In part, UUCP and USENET were a hack around the two-tier rate structure that then existed for phone calls, with “local” being flat-rate monthly and “long-distance” being expensively metered by the minute. UUCP traffic could be relayed across long distances by local hops.<br>A direct descendant of USENET still exists, as Google Groups [5], but was much more central to the hacker culture before cheap Internet. Open source as we now know it germinated in USENET groups dedicated to sharing source code. Several conventions still in use today, like having project metadata files named README and NEWS and INSTALL, originated there in the early 1980s.</p>
+<p>Two key dates in USENET history were universally known. One was the Great Renaming in 1987, when the name hierarchy of USENET topic groups was reorganized. The other was the “September that never ended” in 1993, when the AOL commercial timesharing services gave its users access to USENET. The resulting vast flood of newbies proved difficult to acculturate.</p>
+<p>UUCP explains a quirk you may run across in old mailing-list archives: the bang-path address. UUCP links were point-to-point and you had to actually specify the route of your mail through the UUCP network; this led to people publishing addresses of the form “…!bigsite!foovax!barbox!user”, presuming that people who wanted to reach them would know how to reach bigsite.</p>
+<p>UUCP was notoriously difficult to configure, enough so that people who knew how often put that skill on their CVs in the justified expectation that it could land them a job.</p>
+<p>Meanwhile, in the microcomputer world, a different kind of store-and-forward evolved - the BBS (Bulletin-Board System). This was software running on a computer (after 1991 usually an MS-DOS machine) with one (or, rarely, more) attached modems that could accept incoming phone calls. Users (typically, just one user at a time!) would access the BBS using a their own modem and a terminal program; the BBS software would allow them to leave messages for each other, upload and download files, and sometimes play games.</p>
+<p>The first BBS, patterned after the community notice-board in a supermarket, was fielded in Chicago in 1978. Over the next eighteen years over a hundred thousand BBSes flashed in and out of existence, typically operated out of the sysop’s bedroom or garage with a spare computer.</p>
+<p>From 1984 the BBS culture evolved a primitive form of internetworking called “FidoNet” that supported cross-site email and a forum system broadly resembling USENET.</p>
+<p>During a very brief period after 1990, just before mass-market Internet, software with BBS-like capabilities but supporting multiple simultaneous modem users (and often offeing USENET access) got written for low-cost Unix systems. The end-stage BBSes, when they survived, moved to the Web and dropped modem access. The history of cellar.org chronicles this period.</p>
+<p>A handful of BBSes are still run by nostalgicists, and some artifacts from the culture are still preserved. But, like the UUCP network, the BBS culture as a whole collapsed when inexpensive Internet became widely available.</p>
+<p>Almost the only cultural memory of BBSes is around a family of file-transfer protocols - XMODEM, YMODEM, and ZMODEM - developed and used on BBSes. For hackers of that day who did not cut their teeth on minicomputers with native TCP/IP, these were a first introduction to concepts like packetization, error detection, and retransmission. To this day, hardware from at least one commercial router vendor accepts software patches by XMODEM upload through a serial port.</p>
+<p>Also roughly contemporaneous with USENET and the BBS culture, and also destroyed or absorbed by cheap Internet, were some commercial timesharing services supporting dialup access by modem, of which the best known were AOL (America Online) CompuServe, and GEnie. These provided BBS-like facilities. Every hacker knew of these, though few used them. They have left no traces at all in today’s hacker culture.<br>Terminal confusion</p>
+<p>The software terminal emulators on modern Unix systems are the near-end - and probably final - manifestations of a long and rather confused history. It began with early displays sometimes called “glass TTYs” because they emulated teletypes - but less expensively, because they didn’t require consumables like paper. The phrase “dumb terminal” is equivalent. The first of these was shipped in 1969. The best-remembered of them is probably still the ADM-3 from 1975.</p>
+<p>The very earliest VDTs, like the ASR-33, could form only upper-case letters. An interesting hangover from that these devices was that, even though most VDTs made after 1975 could form lower-case letters, for many years afterwards Unix and Linux responded to an all-upper-case login by switching to an mode which upcased all input. If you created an account with an all-upper-case login name and a mixed-case password, hilarity ensued. If the password was also upper-case the hilarity was less desparate but still confusing for the user.<br>The classic “smart terminal” VDT designs that have left a mark on later computing appeared during a relatively short period beginning in 1975. Devices like the Lear-Siegler ADM-3A (1976) and the DEC VT-100 (1978) inherited the 80-character line width of punched cards (longer than the 72-character line length of teletypes) and supported as many lines as could fit on an approximately 4:3 screen; they are the reason your software terminal emulator has a 24x80 or 25x80 default size.</p>
+<p>These terminals were called “smart” because they could interpret control codes to do things like addressing the cursor to any point on the screen in order to produce truly 2-dimensional displays [6]. The ability to do bold, underline or reverse-video highlighting also rapidly became common. Colored text and backgrounds, however, only became available a few years before VDTs were obsolesced; before that displays were monochromatic. Some had crude, low-resolution dot graphics; a few types supported black-and-white vector graphics.<br>Early VDTs used a crazy variety of control codes. One of the principal relics of this era is the Unix terminfo database, which tracked these codes so terminal-using applications could do abstracted operations like “move the cursor” without being restricted to working with just one terminal type. The curses(3) library still used with software terminal emulators was originally intended to make this sort of thing easier.</p>
+<p>After 1979 there was an ANSI standard for terminal control codes, based on the DEC VT-100 (being supported in the IBM PC’s original screen driver gave it a boost) [7]. By the early 1990s ANSI conformance was close to universal in VDTs, which is why that’s what your software terminal emulator does.</p>
+<p>This whole technology category was rapidly wiped out in general-purpose computing, like dinosaurs after the Alvarez strike, when bit-mapped color displays on personal computers that could match the dot pitch of a monochrome VDT became relatively inexpensive, around 1992. The legacy VDT hardware lingered longest in dedicated point-of-sale systems, remaining not uncommon until as late as 2010 or so.<br>It’s not true, as is sometime suggested, that heritage from the VDT era explains the Unix command line - that actually predated VDTs, going back to the last generation of printing terminals in the late 1960s and early 1970s. Every hacker once knew that this is why we often speak of of “printing” output when we mean sending it to standard output that is normally connected to a terminal emulator.<br>What the VDT era does explain is some of our heritage games (see next section) and a few surviving utility programs like vi(1), top(1) and mutt(1). These are what advanced visual interfaces looked like in the VDT era, before bitmapped displays.</p>
+<h2 id="Games-before-GUIs"><a href="#Games-before-GUIs" class="headerlink" title="Games before GUIs"></a>Games before GUIs</h2><p>Before bit-mapped color displays became common and made graphics-intensive games the norm, there was a vigorous tradition of games that required only textual interfaces or the character-cell graphics on a VDT.</p>
+<p>Every hacker once knew what the phrase “You are in a maze of twisty little passages, all alike” meant, and often used variants about confusing situations in real life (For example, “You are in a maze of twisty little technical standards, all different”). It was from the very first dungeon-crawling adventure game, Colossal Cave Adventure (1976). People who knew this game from its beginnings often thought of it as ADVENT, after its 6-character filename on the PDP-10 where it first ran.</p>
+<p>ADVENT had a direct successor that was even more popular - Zork, first released in 1979 by hackers at MIT and later successfully commercialized. This game is why every hacker once knew that a zorkmid was the currency of the Great Underground Empire, and that if you wander around in dark places without your lantern lit you might be eaten by a grue.</p>
+<p>There was a another family of games that took a different, more visual approach to dungeon-crawling. They are generally called “roguelikes”, after one of the earliest widely-distributed games in this group, Rogue from 1980. They featured top-down, maplike views of dungeon levels through which the player would wander battling monsters and seeking treasure.</p>
+<p>The most widely played games in this group were Hack (1982) and Nethack (1987). Nethack is a notable for having been one of the earliest programs in which the development group was consciously organized as a distributed collaboration over the Internet; at the time, this was a sufficiently novel idea to be advertised in the project’s name.</p>
+<p>These games gradually passed out of universal common knowledge after the mid-1990s, but they retain devoted minority followings today. Their fans accurately point out that the primitive state of interface design encouraged concentration on plot and story values, leading to a surprisingly rich imaginative experience.</p>
+<h2 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h2><p>ASCII, the American Standard Code for Information Interchange, evolved in the early 1960s out of a family of character codes used on teletypes.<br>ASCII, unlike a lot of other early character encodings, is likely to live forever - because by design the low 127 code points of Unicode are ASCII. If you know what UTF-8 is (and you should) every ASCII file is correct UTF-8 as well.<br>The following table describes ASCII-1967, the version in use today.<br>Dec Hex    Dec Hex    Dec Hex  Dec Hex  Dec Hex  Dec Hex   Dec Hex   Dec Hex<br>  0 00 NUL  16 10 DLE  32 20    48 30 0  64 40 @  80 50 P   96 60 `  112 70 p<br>  1 01 SOH  17 11 DC1  33 21 !  49 31 1  65 41 A  81 51 Q   97 61 a  113 71 q<br>  2 02 STX  18 12 DC2  34 22 “  50 32 2  66 42 B  82 52 R   98 62 b  114 72 r<br>  3 03 ETX  19 13 DC3  35 23 #  51 33 3  67 43 C  83 53 S   99 63 c  115 73 s<br>  4 04 EOT  20 14 DC4  36 24 $  52 34 4  68 44 D  84 54 T  100 64 d  116 74 t<br>  5 05 ENQ  21 15 NAK  37 25 %  53 35 5  69 45 E  85 55 U  101 65 e  117 75 u<br>  6 06 ACK  22 16 SYN  38 26 &amp;  54 36 6  70 46 F  86 56 V  102 66 f  118 76 v<br>  7 07 BEL  23 17 ETB  39 27 ‘  55 37 7  71 47 G  87 57 W  103 67 g  119 77 w<br>  8 08 BS   24 18 CAN  40 28 (  56 38 8  72 48 H  88 58 X  104 68 h  120 78 x<br>  9 09 HT   25 19 EM   41 29 )  57 39 9  73 49 I  89 59 Y  105 69 i  121 79 y<br> 10 0A LF   26 1A SUB  42 2A *  58 3A :  74 4A J  90 5A Z  106 6A j  122 7A z<br> 11 0B VT   27 1B ESC  43 2B +  59 3B ;  75 4B K  91 5B [  107 6B k  123 7B {<br> 12 0C FF   28 1C FS   44 2C ,  60 3C &lt;  76 4C L  92 5C \  108 6C l  124 7C |<br> 13 0D CR   29 1D GS   45 2D -  61 3D =  77 4D M  93 5D ]  109 6D m  125 7D }<br> 14 0E SO   30 1E RS   46 2E .  62 3E &gt;  78 4E N  94 5E ^  110 6E n  126 7E ~<br> 15 0F SI   31 1F US   47 2F /  63 3F ?  79 4F O  95 5F _  111 6F o  127 7F DEL</p>
+<p>It used to be common knowledge that the original 1963 ASCII had been sightly different. It lacked tilde and vertical bar; 5E was an up-arrow rather than a caret, and 5F was a left arrow rather than underscore. Some early adopters (notably DEC) held to the 1963 version.<br>If you learned your chops after 1990 or so, the mysterious part of this is likely the control characters, code points 0-31. You probably know that C uses NUL as a string terminator. Others, notably LF = Line Feed and HT = Horizontal Tab, show up in plain text. But what about the rest?</p>
+<p>Many of these are remnants from teletype protocols that have either been dead for a very long time or, if still live, are completely unknown in computing circles. A few had conventional meanings that were half-forgotten even before Internet times. A very few are still used in binary data protocols today.</p>
+<p>Here’s a tour of the meanings these had in older computing, or retain today. If you feel an urge to send me more, remember that the emphasis here is on what was common knowledge back in the day. If I don’t know it now, we probably didn’t generally know it then.</p>
+<p>NUL (Null)<br>Survives as the string terminator in C.</p>
+<p>SOH (Start of Heading)<br>Rarely used (as Ctrl-A) as a section divider in otherwise textual formats. Some versions of Unix mailbox format used it as a message divider. One very old version-control system (SCCS) did something similar.</p>
+<p>STX (Start of Text), ETX (End of Text)<br>Very rarely used as packet or control-sequence delimiters. You will probably never see this, and the only place I’ve ever seen it was on a non-Unix OS in the early 1980s. ETX is Ctrl-C, which is a SIGINT interrupt character on Unix systems, but that has nothing to do with its ASCII meaning per se and probably derives from abbreviating the word “Cancel”.</p>
+<p>EOT (End of Transmission)<br>As Ctrl-D, the way you type “End of file” to a Unix terminal.</p>
+<p>ENQ (Enquiry)<br>In the days of hardware serial terminals, there was a convention that if a computer sent ENQ to a terminal, it should reply with terminal type identification. While this was not universal, it at least gave computers a fighting chance of autoconfiguring what capabilities it could assume the terminal to have.</p>
+<p>ACK (Acknowledge)<br>It used to be common for wire protocols written in ASCII to use ENQ/ACK as a handshake, sometimes with NAK as a failure indication. Hackers used to use ACK in speech as “I hear you” and were a bit put out when this convention was disrupted in the 1980s by Bill The Cat’s “Ack! Thppt!”</p>
+<p>BEL (Bell)<br>Make the bell ring on the teletype - an attention signal. This often worked on VDTs as well, but is no longer reliably the default on software terminal emulators. Some map it to a visual indication like flashing the title bar.</p>
+<p>BS (Backspace)<br>Still does what it says on the tin, though there has been some historical confusion over whether the backspace key on a keyboard should behave like BS (nondestructive cursor move) or DEL (backspace and delete). Never used in textual data protocols.</p>
+<p>HT (Horizontal tab)<br>Still does what it says on the tin. Sometimes used as a field separator in Unix textual file formats, but this is now old-fashioned and declining in usage.</p>
+<p>LF (Line Feed)<br>The Unix textual end-of-line. Printing terminals interpreted it as “scroll down one line”; the Unix tty driver would normally wedge in a CR right after it on output.</p>
+<p>VT (Vertical Tab)<br>In the days of printing terminals this often caused them to scroll down a configurable number of lines. VDTs had any number of possible behaviors; at least some pre-ANSI ones interpreted VT as “scroll up one line”. The only reason anybody remembers this one at all is that it persisted in Unix definitions of what a whitespace character is, even though it’s now extinct in the wild.</p>
+<p>FF (Form Feed)<br>Eject the current page from your printing terminal. Many VDTs interpreted this as a “clear screen” instruction. Software terminal emulators sometimes still do.</p>
+<p>CR (Carriage Return)<br>It is now possible that the reader has never seen a typewriter, so this needs explanation: “carriage return” is the operation of moving your print head or cursor to the left margin. Windows, other non-Unix operating systems, and some Internet protocols (such as SMTP) tend to use CR-LF as a line terminator, rather than bare LF. Pre-Unix MacOS used a bare CR.</p>
+<p>SO (Shift Out), SI (Shift In)<br>Escapes to and from an alternate character set. Unix software used to emit them to drive pre-ANSI VDTs that interpreted them that way, but native Unix usage is rare to nonexistent.</p>
+<p>DLE (Data Link Escape)<br>Sometimes used as a packet-framing character in binary protocols. That is, a packet starts with a DLE, ends with a DLE, and if one of the interior data bytes matches DLE it is doubled.</p>
+<p>DC[1234] (Device Control [1234])<br>Never to my knowledge used specially after teletypes. However: there was a common software flow-control protocol, used over ASCII but separate from it, in which XOFF (DC3) was used as a request to pause transmission and XON (DC1) was used as a request to resume transmission. As Ctrl-S and Ctrl-Q these were implemented in the Unix terminal driver and long outlived their origin in the Model 33 Teletype. And not just Unix; this was implemented in CP/M and DOS, too.</p>
+<p>NAK (Negative Acknowledge)<br>Never to my knowledge used specially after teletypes, but it would have been unsurprising to anybody if a device-control protocol used it as a negative response to ENQ.</p>
+<p>SYN (Synchronous Idle)<br>Never to my knowledge used specially after teletypes. Be careful not to confuse this with the SYN (synchronization) packet used in TCP/IP’s SYN SYN-ACK initialization sequence.</p>
+<p>ETB (End of Transmission Block)<br>Never to my knowledge used specially after teletypes.</p>
+<p>CAN (Cancel), EM (End of Medium)<br>Never to my knowledge used specially after teletypes.</p>
+<p>SUB (Substitute)<br>DOS and Windows use Ctrl-Z (SUB) as an end-of-file character; this is unrelated to its ASCII meaning. It was common knowledge then that this use of ^Z had been inherited from a now largely forgotten earlier OS called CP/M (1974), and into CP/M from earlier DEC minicomputer OSes such as RSX-11 (1972).</p>
+<p>ESC (Escape)<br>Still commonly used as a control-sequence introducer. This usage is especially associated with the control sequences recognized by VT100 and ANSI-standard VDTs, and today by essentially all software terminal emulators<br>[FGRU]S ({Field|Group|Record|Unit} Separator)<br>Never to my knowledge used specially after teletypes. FS, as Ctrl-\, sends SIGQUIT under some Unixes, but this has nothing to do with ASCII. Ctrl-] (GS) is the exit character from telnet, but this also has nothing to do with its ASCII meaning.</p>
+<p>DEL (Delete)<br>Usually an input character meaning “backspace and delete”. Under older Unix variants, sometimes a SIGINT interrupt character.<br>Not all of these were so well known that any hacker could instantly map from mnemonic to binary, or vice-versa. The well-known set was roughly NUL, BEL, BS, HT, LF, FF, CR, ESC, and DEL.<br>There are a few other bits of ASCII lore worth keeping in mind…<br>The Control modifier on your keyboard basically clears the top three bits of whatever character you type, leaving the bottom five and mapping it to the 0..31 range. So, for example, Ctrl-SPACE, Ctrl-@, and Ctrl-` all mean the same thing: NUL.<br>A Meta or Alt key on a VDT added 128 to the ASCII keycode for whatever it’s modifying (probably - on a few machines with peculiar word lengths they did different things). Software terminal emulators have more variable behavior; many of them now simply insert an ESC before the modified key, which Emacs treats as equivalent to adding 128.<br>Very old keyboards used to do Shift just by toggling the 32 or 16 bit, depending on the key; this is why the relationship between small and capital letters in ASCII is so regular, and the relationship between numbers and symbols, and some pairs of symbols, is sort of regular if you squint at it. The ASR-33, which was an all-uppercase terminal, even let you generate some punctuation characters it didn’t have keys for by shifting the 16 bit; thus, for example, Shift-K (0x4B) became a [ (0x5B)</p>
+<h2 id="Key-dates"><a href="#Key-dates" class="headerlink" title="Key dates"></a>Key dates</h2><p>These are dates that every hacker knew were important at the time, or shortly afterwards. I’ve tried to concentrate on milestones for which the date - or the milestone itself - seems to have later passed out of folk memory.<br>1961<br>MIT takes delivery of a PDP-1. The first recognizable ancestor of the hacker culture of today rapidly coalesces around it.<br>1969<br>Ken Thompson begins work on what will become Unix. First commercial VDT ships; it’s a glass TTY. First packets exchanged on the ARPANET, the direct ancestor of today’s Internet.<br>1970<br>DEC PDP-11 first ships; architectural descendants of this machine, including later Intel microprocessors, will come to dominate computing.<br>1973<br>Interdata 32 ships; the long 32-bit era begins [8]. Unix Edition 5 (not yet on the Interdata) escapes Bell Labs to take root at a number of educational institutions. The XEROX Alto pioneers the “workstation” - a networked personal computer with a high-resolution display and a mouse.<br>1975<br>First Altair 8800 ships. Beginning of heroic age of microcomputers. First 24x80 and 25x80 “smart” (addressable-cursor) VDTs. ARPANET declared “operational”, begins to spread to major universities.<br>1976<br>“Lions’ Commentary on UNIX 6th Edition, with Source Code” released. First look into the Unix kernel source for most hackers, and was a huge deal in those pre-open-source days.<br>1977<br>Unix ported to the Interdata. First version with a kernel written largely in C rather than machine-dependent assembler.<br>1978<br>First BBS launched - CBBS, in Chicago.<br>1981<br>First IBM PC ships. End of the heroic age of micros. TCP/IP is implemented on a VAX-11/780 under 4.1BSD Unix; ARPANET and Unix cultures begin to merge.<br>1982<br>Sun Microsystems founded. Era of commercial Unix workstations begins.<br>1983<br>PDP-10 canceled. This is effectively the end of 36-bit architectures anywhere outside of deep mainframe country, though Symbolics Lisp machines hold out a while longer. ARPANET, undergoing some significant technical changes, becomes Internet.<br>1984<br>AT&amp;T begins a largely botched attempt to commercialize Unix, clamping down on access to source code. In the BBS world, FidoNet is invented.<br>1985<br>RMS published GNU Manifesto. This is also roughly the year the C language became the dominant lingua franca of both systems and applications programming, eventually displacing earlier compiled language so completely that they are almost forgotten.<br>1986<br>Intel 386 ships; end of the line for 8- and 16-bit PCs. Consumer-grade hardware in this class wouldn’t be generally available until around 1989, but after that would rapidly surpass earlier 32-bit minicomputers in and workstations capability.<br>1991<br>Linux and the World Wide Web are (separately) launched.<br>1992<br>Bit-mapped color displays with a dot pitch matching that of a monochrome VDT (and a matching ability to display crisp text at 80x25) ship on consumer-grade PCs. Bottom falls out of the VDT market.<br>1993<br>Linux gets TCP/IP capability, moves from hobbyist’s toy to serious OS. America OnLine offers USENET access to its uses; “September That Never Ended” begins.<br>1994<br>Mass-market Internet takes off in the U.S. USB promulgated.<br>1995-1996<br>Peak years of UUCP/USENET and the BBS culture, then collapse under pressure from mass-market Internet.<br>1997<br>I first give the “Cathedral and Bazaar” talk.<br>1999<br>Peak year of the dot-com bubble. End of workstation era: Market for Suns and other proprietary Unix workstations collapses under pressure from Linux running on PCs.<br>2005<br>Major manufacturers cease production of cathode-ray tubes in favor of flat-panel displays. Flat-panels have been ubiquitous on new hardware since about 2003. There is a brief window until about 2007 during which high-end CRTs no longer in production still exceed the resolution of flat-panel displays and are still sought after. Also in 2005, AOL drops USENET support and Endless September ends.<br>2007-2008<br>64-bit transition in mass market PCs. The 32-bit era ends. The first smartphones ship.</p>
+<h2 id="Request-to-contributors"><a href="#Request-to-contributors" class="headerlink" title="Request to contributors"></a>Request to contributors</h2><p>A lot of people reading this have been seized by the urge to send me some bit of lore or trivia for inclusion. Thank you, but bear in mind that the most important choice is what to leave out. Here are some guidelines:</p>
+<p>I’m trying to describe common knowledge at the time. That means not every bit of fascinating but obscure trivia belongs here.<br>Anything from a tech generation before early minis - in particular the era of mainframes, punched cards, and paper tape - is out of scope. I gotta draw the line somewhere, and it’s there.</p>
+<p>Stories about isolated survivals of old tech today are not interesting if the tech wasn’t once common knowledge.<br>Please do not send me timeline entries for dates which you think are important unless you think the date has been generally been forgotten, or is in serious danger of same.</p>
+<p>Supporting this work<br>If you enjoyed this, please contribute at my Patreon page so I won’t be forced to get a $DAYJOB and no longer have time to think up or write things like this document. I work on a lot of more serious projects too, including critical network infrastructure. So give generously; the civilization you save could be your own.</p>
+<h2 id="Related-Reading"><a href="#Related-Reading" class="headerlink" title="Related Reading"></a>Related Reading</h2><p><a href="http://www.catb.org/~esr/faqs/hacker-howto.html" target="_blank" rel="external">How To Become A Hacker</a><br><a href="http://www.catb.org/esr/structure-packing/" target="_blank" rel="external">The Lost Art of C Structure Packing</a></p>
+<h2 id="Change-history"><a href="#Change-history" class="headerlink" title="Change history"></a>Change history</h2><p>1.0: 2017-01-26<br>Initial version.<br>1.1: 2017-01-27<br>Pin down the date DB-9 came in. Added a minor section on the persistence of octal. More on the afterlife of RS-232.<br>1.2: 2017-01-29<br>More about the persistence of octal. Mention current-loop ASR-33s. 36-bit machines and their lingering influence. Explain ASCII shift. A bit more about ASCII-1963. Some error correction.<br>1.3: 2017-01-30<br>Added “Key dates” and “Request to contributors”.<br>1.4: 2017-02-03<br>The curious survival of the Hayes AT command set.<br>1.5: 2017-02-04<br>TTL in serial and maker devices. The AT Hayes prefix explained. UUCP and long distance rates. Reference to space-cadet keyboard removed, as it turned out to ship a 32-bit word. Improved description of ASCII shift.<br>1.6: 2017-02-08<br>How VDTs explain some heritage programs, and how bitmapped displays eventually obsolesced them. Explain why the ADM-3 was called “dumb” even though it was smart.<br>1.7: 2017-02-09<br>The BBS subculture. XMODEM/YMODEM/ZMODEM. Commercial timesharing. Two dates in USENET history.<br>1.8: 2017-02-14<br>Heritage games. The legacy of all-uppercase terminals. Where README came from. What “core” is. The ARPANET. Monitoring your computer with a radio.</p>
+<ol>
+<li>Actually, there was an even older style of tty interface called “current loop” that the ASR-33 originally used; in the 1970s dual-mode ASR-33s that could also speak RS-232 began to ship, and RS-232 eventually replaced current loop entirely.</li>
+<li>A full explanation of the magic of the AT prefix can be found at <a href="http://esr.ibiblio.org/?p=7333&amp;cpage=1#comment-1802568" target="_blank" rel="external">http://esr.ibiblio.org/?p=7333&amp;cpage=1#comment-1802568</a></li>
+<li>Python 3 and Perl 6 have at least gotten rid of the dangerous leading-0-for-octal syntax, but Go kept it</li>
+<li>Early Intel microprocessors weren’t much like the 11, but the 80286 and later converged with it in important ways.</li>
+<li>The old free-floating USENET still exists too, but Google Groups is where you can find what has been preserved of the historical USENET archives.</li>
+<li>Confusingly, the ADM-3A (which could address any screen cell) was described in marketing copy as a “dumb” terminal, not a “smart” one. This is because there was a rival definition of “smart” as capable of doing local editing of the screen without involving the remote computer, like an IBM 3270. But since minicomputers never used that capability this definition was never live in the Unix world, and has mostly faded out of use.</li>
+<li>It was not commonly known that the VT100 was designed to fit a 1976 stanfard called ECMA-48; ANSI simply adopted it.</li>
+<li>There were a few 32-bit minis before the Interdata, but they seem to have been designed for real-time or other non-timesharing uses.</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Program</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACu0lEQVR42u3awW7rMAwEwP7/T7fXPrQOdkmpyAPGpyJ1bI0OIkPy4yO+Pr9d3z95/d+n+5/ueXry0xOOXXh4eHiLpf+8EsDrO/MNekK+3tCnleDh4eHd5j2dqMmjk+c8vj4IQnmQwMPDw3tnXn6gJ0f5LDDg4eHh/V+8NjC0n7cpOB4eHt7f85JiRFuGSL7Vln0v1lrw8PDwYl7eRXqfv6/09/Dw8PDWXfU2tZ09IVnPcLV4eHh4F3j5gXsgbV0PHAybZ3h4eHjXePuf+vmi87ZWW+z45Tl4eHh4F3jty1pAHhKSVLsdJsDDw8M7y9v/+J8NAcyGserWGh4eHt4FXjs60B7reZhJtiAJZnUbDA8PD2/EawcF8hDyehH70kYbqPDw8PD2vH1ynBcmZun7aiQLDw8P7wKvffEsDMzu348d4OHh4d3g5T/+82CwKWrMChDRoAAeHh7eNV6bIreDU7PCx6oYgYeHh3eNNysHtA2tU22wqIyCh4eH9ye8zUNvpMttY+yf7+Lh4eFd4+WH8uygT+5sx6eiRBwPDw/vAi8PA/niNmlxu6Ht2/Hw8PBu8Nr0uoWtxqfiUDG8FQ8PDy9Yc154PVuQbRPrWdEEDw8P7wavLRO0Bdl2CCA/9IuggoeHh3eBN0uX83vaJDsfPijSejw8PLyjvE3pdl/C2JeAi6ItHh4e3lFefhC3Df5ZeWJWCI5Gr/Dw8PCO8mYdszztfs3ebOXjyvHw8PCO8j7La3bcb4q/eW78y6bg4eHhXeC1R23SxMqT8nz7ikbX7MLDw8Mrefkr80b+PpDk7LrWgoeHh3eIlzeukk3ZHPqnwhgeHh7e+/A2ZYJTwwRFqo2Hh4f3NrwbRYdN+BlOIuDh4eEteLOl5MWLBJBvdxGW8PDw8C7w6p/3owGsPHjMEvpz1Qs8PDy8F2v7AnzXIha7dNuaAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/01/20/Program/Concepts/the-art-of-unix-programming/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          The Art of Unix Programming
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/20/Program/Concepts/teach-yourself-programming-in-ten-years/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Teach Yourself Programming in Ten Years</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Program/Concepts/things-every-hacker-once-knew" data-title="Things Every Hacker Once Knew" data-url="http://ipcreator.me/2017/01/20/Program/Concepts/things-every-hacker-once-knew/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 For life
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+    
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','QVk44u3hiUx_EaM1x32V'); //�����Լ���
+</script>    
+    
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true,
+		showTags: true
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.2d7529.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Google</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Business</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Smart Phone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Machine Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Program</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Open Source</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Java Script</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">File System</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Scikit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Atom</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Neural Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Neural Networks</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/25870384/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>你的生命有什么可能</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://mt.sohu.com/20161026/n471374646.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>个体崛起的时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnfy.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>成为一个超级个体</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://gelonghui.com/p/101767.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人工智能的黄金时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都是工程师</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都能用英语</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>把时间当作朋友</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>七年就是一辈子</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://news.mbalib.com/story/12504" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>退休感言</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.360doc.com/content/14/1206/17/15680008_430856157.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>选择的智慧</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/6397275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>此生未完成</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/26422275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>向死而生</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">自知者明&lt;br&gt;自胜者强&lt;br&gt;不忘初心&lt;br&gt;方得始终</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

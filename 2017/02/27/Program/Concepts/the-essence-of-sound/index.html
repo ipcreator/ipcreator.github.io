@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://ipcreator.me">
+  <title>多媒体技术基础之---重新认识声音 | IPCreator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="wjlkoorey
+声音一个最基本的常识就是“它是一种能量”，初中物理课上我们也学过声音的三要素分别是音色、音调和响度。    音色：简单理解，就是一种声音的固有特征。比如，电子琴和小提琴发出的声音是有明显区别的，笛子和古筝也有各自的声音特征。有些声音模仿秀的选手可以通过训练，达到模仿不同人或者不同乐器的效果。   音调：也就是我们所说的频率，单位是赫兹Hz，频率越高听起来越刺耳、越尖锐，频率越低">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多媒体技术基础之---重新认识声音">
+<meta property="og:url" content="http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-sound/index.html">
+<meta property="og:site_name" content="IPCreator">
+<meta property="og:description" content="wjlkoorey
+声音一个最基本的常识就是“它是一种能量”，初中物理课上我们也学过声音的三要素分别是音色、音调和响度。    音色：简单理解，就是一种声音的固有特征。比如，电子琴和小提琴发出的声音是有明显区别的，笛子和古筝也有各自的声音特征。有些声音模仿秀的选手可以通过训练，达到模仿不同人或者不同乐器的效果。   音调：也就是我们所说的频率，单位是赫兹Hz，频率越高听起来越刺耳、越尖锐，频率越低">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/10/23069658_138409370409ZO.png">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/10/23069658_1384093724q0YL.png">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/10/23069658_13840939771O1F.jpg">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/10/23069658_1384094004w8fw.jpg">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/10/23069658_1384094029b5Cz.jpg">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/10/23069658_138409406581r9.jpg">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/10/23069658_1384094084gcI8.jpg">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/24/23069658_13853074187WTO.jpg">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/24/23069658_13853074737dQd.gif">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/24/23069658_13853075854iMV.jpg">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/24/23069658_138530762766Px.jpg">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/24/23069658_1385307678NQug.jpg">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/24/23069658_138530769878Ug.jpg">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201311/30/23069658_1385809025K33k.jpg">
+<meta property="og:updated_time" content="2017-02-27T03:36:29.623Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="多媒体技术基础之---重新认识声音">
+<meta name="twitter:description" content="wjlkoorey
+声音一个最基本的常识就是“它是一种能量”，初中物理课上我们也学过声音的三要素分别是音色、音调和响度。    音色：简单理解，就是一种声音的固有特征。比如，电子琴和小提琴发出的声音是有明显区别的，笛子和古筝也有各自的声音特征。有些声音模仿秀的选手可以通过训练，达到模仿不同人或者不同乐器的效果。   音调：也就是我们所说的频率，单位是赫兹Hz，频率越高听起来越刺耳、越尖锐，频率越低">
+<meta name="twitter:image" content="http://blog.chinaunix.net/attachment/201311/10/23069658_138409370409ZO.png">
+  
+  
+    <link rel="icon" href="/img/personalphoto.jpg">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.2d7529.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #4d4d4d"></div>
+<div class="intrude-less">
+
+
+
+
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/personalphoto.jpg" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">For life</a></h1>
+		</hgroup>
+		
+		<p class="header-subtitle">Growing up is the only password.</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/personalphoto.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">For life</h1>
+			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Growing up is the only password.<i class="icon icon-quo-right"></i></p>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/ipcreator" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/AndyWang18/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="douban" target="_blank" href="https://www.douban.com/people/1390598/" title="douban"><i class="icon-douban"></i></a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/archives">归档</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-Program/Concepts/the-essence-of-sound" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      多媒体技术基础之---重新认识声音
+    </h1>
+  
+
+        
+        <a href="/2017/02/27/Program/Concepts/the-essence-of-sound/" class="archive-article-date">
+  	<time datetime="2017-02-27T03:25:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.chinaunix.net/uid-23069658-id-3995439.html" target="_blank" rel="external">wjlkoorey</a></p>
+<p>声音一个最基本的常识就是“它是一种能量”，初中物理课上我们也学过声音的三要素分别是音色、音调和响度。<br>    音色：简单理解，就是一种声音的固有特征。比如，电子琴和小提琴发出的声音是有明显区别的，笛子和古筝也有各自的声音特征。有些声音模仿秀的选手可以通过训练，达到模仿不同人或者不同乐器的效果。<br>   音调：也就是我们所说的频率，单位是赫兹Hz，频率越高听起来越刺耳、越尖锐，频率越低听起来越低沉、越浑厚。医学研究表明，人的听觉系统能察觉的最低频率为20Hz，最高为20000Hz，超出这个范围人类一般就听不到了。其实现实生活中根本就不存在完全能听到20Hz~20kHz这样的人，并且随着年龄的增长、体质的变化，人能听到的声音只会是这个区间的一个子集。<br><img src="http://blog.chinaunix.net/attachment/201311/10/23069658_138409370409ZO.png" alt=""></p>
+   <a id="more"></a>
+<p>人对不同频率、不同分贝的声音的生理反应也是有差别的，正如我们中医里提到的“五音”(角、徵、宫、商、羽)和身体脏腑(心、肝、脾、肺、肾)以及对人心神(喜、怒、忧、思、悲)的影响是一样的。</p>
+<p><img src="http://blog.chinaunix.net/attachment/201311/10/23069658_1384093724q0YL.png" alt=""></p>
+<p>例如“宫”调，风格悠扬沉静、淳厚庄重，根据五音通五脏的理论，宫调入脾，对消化系统的作用比较明显。这就是为什么很多古代电视或者电影里，皇庭寿宴席的时候一般都是奏宫乐。如果对中华文化感兴趣的朋友肯定注意到，我们古代繁体字的药材的“藥”和音乐的“樂”的字根是一样的，可见老祖宗造字时并不是瞎画的，这说明声音的确还是可以治病。现在精通音律的老师傅是越来越少了。感慨一句，中华文明，博大精深，后继者何也？呜呼。。。扯远了，收一下。</p>
+<pre><code>而人一般能发出的声音频率也是男女有别，大致范围如下：
+</code></pre><p>低音<br>中音<br>高音<br>男<br>82 Hz～392Hz<br>123 Hz～493Hz<br>164 Hz～698Hz<br>女<br>220 Hz～1.1kHz</p>
+<p>响度：就是声音的大小，一般用“分贝”来表示，单位是dB，这个参数说明了声音所携带的能量的大小，声音越大，在相同传播介质里所能传递的距离就远。</p>
+<p> 在物理世界里，我们的声音在传输过程中都是连续，像下面这个样子：<br> <img src="http://blog.chinaunix.net/attachment/201311/10/23069658_13840939771O1F.jpg" alt=""></p>
+<p>可是如果要让计算机来处理它，就牵扯到我们经常说的数字化了。关于声音在数字化过程中有三个核心步骤：采样、量化和编码。</p>
+<p>采样：在模拟声音的时间轴上周期性地取点，将时域连续的模拟信号变成离散信号的过程就叫做采样。每秒钟的采样点越多，数字化之后的声音就越接近原模拟声音。每秒钟的采样次数就叫做采样频率，根据奈奎斯特定律，采样频率fs和被采样声音的最高频率fmax的关系如下：</p>
+<p>fs≥2fmax</p>
+<pre><code>PS：有些地方把声音的频谱范围也叫做声音的带宽，指的是声音从最低频率到最高频率之间的宽度。
+</code></pre><p><img src="http://blog.chinaunix.net/attachment/201311/10/23069658_1384094004w8fw.jpg" alt=""></p>
+<p>量化：用于表示在采样点所获取的声音能量值。量化就是将空域连续的模拟信号转换成离散信号的过程。量化精度越高，所能表示的声音采样范围就越大，量化误差就也越小，相应地，所占用的存储空间也就越大。简而言之，就是对于采样所得到的样本点，我们打算用几位二进制数来表示它。例如，如果是8bit的量化精度，那么我们最多能表示的采样点就只有256个；如果是16bit，最多能表示的采样点就可以多达65536个。<br><img src="http://blog.chinaunix.net/attachment/201311/10/23069658_1384094029b5Cz.jpg" alt=""></p>
+<p>编码：对于经过采样量化后的数据按一定的算法进行编码处理。在计算机里最接近模拟声音的编码方式就是PCM脉冲编码方式。那么对于上述量化结果，我们发现这段音频采样点的量化空间最多也就是11个，我们用4bit就可以完全表示它们了。所以量化精度就是4bit，可表示的样本空间是[0~15]，因此，上述编码序列就是{3，5，6，7，8，5，4，8，10，8，5，1，1，2，5}。</p>
+<p> 当然，真正到了量化阶段时又分均匀量化和非均匀量化，量化的同时就自动编码成PCM格式的数据了。通常意义来说，量化和编码都是同时进行的。</p>
+<p>ITU-T建议的G.711是最早公布的语音编码标准，它规定了A律13折线和u律15折线PCM编码的两种方案。这里就不再继续展开了，都是数学层面的东东，不纠结。中国和欧洲采用的A律13折线的PCM编码方式，北美和日本采用的是u律15折线的PCM编码方式。</p>
+<p>在计算机里我们就认为PCM就是数字音频信号的原始无损格式，其存储方式通常是.wav文件，即wav格式的音频文件就是原始的未经任何压缩处理的数字音频文件，这样的文件大部分情况下都来自于录音设备。如果你使用音频格式转换工具将mp3转成wav的话，那么很不幸的是你的这个wav并不是无损格式的文件，因为mp3格式的文件是对原始wav文件经过有损压缩后得来的，而这个过程不是可逆的，即mp3转成的wav只有原始wav的部分信息。但从人的听觉系统来说，一般人是分辨不出来其中的差别，除非用专业发烧级音响设备，再加上一双有着专业特性的耳朵，区别还是很明显的。</p>
+<p> 例如，我们手头现在有款奥林巴斯的LS-14专业数码录音笔，我们将采样频率设为44100Hz，量化精度为16bit，采用双声道的模式进行音频录制，每秒钟所产生的数据量为44100x16x2=176400 bit，那么3分钟将会产生的声音数据约为30.28MB。显然，这个结果显然不太令人满意，接下来就有了各种音频压缩算法的出现，也就是多媒体技术术语里所说的编码器，其实就是压缩算法而已。目的只有一个：在高保真原有音质的前提下，最大限度地对数字化之后的PCM编码文件进行压缩，以降低其所占的磁盘空间。整个过程可以描述如下：<br> <img src="http://blog.chinaunix.net/attachment/201311/10/23069658_138409406581r9.jpg" alt=""></p>
+<p>幸运的是，现在PCM编码方式已经固化在很多音频设备的DSP芯片里了，不需要我们关心。一种编码算法一定对应一种相应的解码算法才行，不然编来有毛用。我们可以看到，整个过程中PCM编码格式充当了各种编解码器之间转换的中间桥梁，这也就是为什么我们说PCM格式的声音文是计算机里的“模拟文件”的原因了。不管是不同音频压缩格式之间的互相转换，还是最终输送给数模转换器的格式都是PCM格式。<br><img src="http://blog.chinaunix.net/attachment/201311/10/23069658_1384094084gcI8.jpg" alt=""><br>上面几种格式里有个flac和其他几种格式有着本质的区别，flac是无损压缩格式，和它齐名还有家喻户晓的ape格式。什么意思？无损格式的音频文件是在对原始wav文件压缩是没有删减过滤它的任何信息的情况下，完全通过算法活生生的把wav文件的体重给减了下来，而且flac和ape可以完整还原原始wav的所有信息，一个毫毛都不差。ape的压缩比高达55%。这和那些有损压缩的mp3、ogg、aac等是没法相比的，因为人家是无损的，就这么简单。有些人喜欢听CD，而另外一些人则喜欢听mp3，其实他们根本就不是一个级别的，也没有可比性的。最后，献上天王的一首单曲以飨各位看官肯花宝贵的时间听我在这里唧唧歪歪的大半天，配上森海或者AKG的耳机好好享受一下生活吧(不敢保证每个人能都听到那种感觉，毕竟人家mp3也不是盖的)。</p>
+<p>   人生不止眼前的代码和BUG，还有耳朵与音乐。</p>
+<p>   附件：<a href="http://dl.vmall.com/c0qe0zv7zm" target="_blank" rel="external">Billie.Jean-ape</a>和<a href="http://dl.vmall.com/c0ub3dwmx4" target="_blank" rel="external">Billie.Jean-mp3</a></p>
+<h2 id="多媒体技术基础之—Come-on！来点儿音乐吧"><a href="#多媒体技术基础之—Come-on！来点儿音乐吧" class="headerlink" title="多媒体技术基础之—Come on！来点儿音乐吧"></a><a href="http://blog.chinaunix.net/uid-23069658-id-4008256.html" target="_blank" rel="external">多媒体技术基础之—Come on！来点儿音乐吧</a></h2><p>其实要说在Linux系统下播放音乐，确实是一件让人非常抓狂的事情，抛开各种音频格式的商业授权不说，即使提供给你相应的解码库，能玩儿得转的人那又是少之又少。可能有些盆友说ubuntu这方面确实做得不错，一旦默认安装好，几乎不用装任何其他东西，常见的是音频文件都可以正常播放了。因为我天生就有股喜欢折腾的劲儿，所以关于ubuntu确实不怎么感冒，只能说萝卜白菜各有所爱吧。今天我们以wav文件(也就是上一篇博文所提到的PCM格式的音频文件)为例，看看在Linux下怎么播放它，顺便会简单介绍一下Linux系统的音频驱动框架的基础知识。<br>   说到Linux系统下的音频系统驱动框架，最常见的有OSS和ALSA。我们先来简单了解一下这两个框架，以及它们的历史渊源。<br>   OSS全称是Open Sound System，叫做开放式音频系统，最早是Unix系统上一种统一的音频接口。这种基于文件系统的统一访问方式，就意味着对声音的操作完全可以像对普通文件那样执行open，read，write和close等操作，这也正是得益于文件系统的强大有力支撑。OSS中，主要提供了一下几种音频设备的抽象设备文件：<br>   /dev/mixer：用来访问声卡中内置的混音器mixer，用于调整音量大小和选择音源；<br>    /dev/dsp、/dev/audio：读这个设备就相当于录音，写这个设备就相当于放音。/dev/dsp与/dev/audio的主要区别在于所采样的PCM编码方式的不同，/dev/audio使用的是μ律编码(存在这个设备文件的目的主要是为了与SunOS兼容，所以在非SunOS系统中尽量不要使用)，而/dev/dsp使用8-bit（无符号）的线性编码；<br>   /dev/sequencer、/dev/sequencer2：主要用于访问声卡内置的，或者连接在MIDI接口的合成器synthesizer。<br>    还有其他的诸如/dev/adsp、/dev/dmmidi、/dev/midi等等，一些不常用的就先不管了。看一下我的CentOS 5.3内核版本2.6.21系统中的音频设备文件：<br><img src="http://blog.chinaunix.net/attachment/201311/24/23069658_13853074187WTO.jpg" alt=""><br>   我们可以直接使用Unix/Linux的命令来放音和录音，例如，命令cat /dev/dsp &gt;xyz 可用来录音，录音的结果放在xyz文件中；命令cat xyz &gt;/dev/dsp播放声音文件xyz。当然，我们还可以通过open、close、read、write、ioctl等这些文件的操作函数直接控制这些设备，达到对声音应用程序级别的访问与控制。那么这么看来OSS应该还算比较完美了，Linux下的声音编程应该没有难度才对，怎么会说Linux下声音变成是一件很头疼的事儿呢？<br>    其实OSS自从诞生到OSSv3版及其之前，都是Linux的原始声音系统，并集成在内核代码里。当OSS被4Front Technologies收购后，于2002年OSSv4作为商业软件的出现时，它的命运就被我们接下来要介绍的ALSA给改写了。其实严格意义上来说，商业化不是导致OSS没落的根本原因，也有技术层面的因素在，比如OSS的混音功能。由于先天的设计缺陷，OSS对混音的支持非常糟糕，由于当时的声卡本身是支持多路输出的混合，所以OSS就偷懒了，将混音的任务交给了声卡，所以那个年代的程序猿们为了操作混音器，代码里充斥着大量的ioctl函数，现在看起来相当难受。<br>   ALSA全称是Advanced Linux Sound Architecture，叫做Linux系统下的高级音频架构，它主要为声卡提供的驱动组件，以替代原先的 OSS。这个项目最早始于1998年Gravis Ultrasound所开发的驱动，它一直作为一个单独的软件包开发，直到2002年他被引进入Linux内核的开发版本(2.5.4-2.5.5)。自从2.6版本开始ALSA成为Linux内核中默认的标准音频驱动程序集，而OSS则被标记为废弃。所以，现在看来OSS被ALSA替代，闭源和商业化都只是外因，内因还是其设计的缺陷。虽然2007年4Front又宣布OSSv4重新在GPL协议下重新开源，但已经人去楼空秋已暮了，现在ALSA对OSS的支持也比较好了，不知道OSS还能否王者归来。其实这些都不重要，对于开发者来说，简单、便捷、高效、实用才是王道，优美的框架结构，完善的文档支持强过口水战百倍。<br>目前ALSA已经成为Linux系统里主流的音频系统框架，在2.6.21的内核里已经看不到OSS的影子了。在内核设备驱动层面，ALSA提供了alsa-driver，同时在应用层，ALSA也为我们提供了alsa-lib，应用程序只要调用alsa-lib所提供的API，就可以完成对底层音频硬件的控制：<br><img src="http://blog.chinaunix.net/attachment/201311/24/23069658_13853074737dQd.gif" alt=""><br>    上图向我们展示了ALSA的一个简单的结构，用户空间的alsa-lib对应用程序提供统一的API接口，这样可以隐藏了驱动层的实现细节，简化了应用程序的实现难度。内核空间中，alsa-soc其实是对alsa-driver的进一步封装，针对嵌入式设备提供了一些列增强的功能，通常也被叫做ASoC，即Alsa-soc的缩写，像Android系统中底层就用了ASoC。想了解ALSA更多细节的盆友可以访问他们的官网：<a href="http://www.alsa-project.org/main/index.php/Main_Page" target="_blank" rel="external">http://www.alsa-project.org/main/index.php/Main_Page</a></p>
+<pre><code>下面，我们首先看一下OSS下如何播放wav文件：
+</code></pre><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line">点击(此处)折叠或打开</div><div class="line"><span class="comment">/*playsound.c*/</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/stat.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;linux/soundcard.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> AUDIO_DEVICE <span class="meta-string">"/dev/dsp"</span></span></div><div class="line"></div><div class="line"><span class="keyword">int</span> play_sound(<span class="keyword">char</span> *filename,<span class="keyword">int</span> rate,<span class="keyword">int</span> bits)&#123;</div><div class="line">        <span class="keyword">struct</span> stat stat_buf;</div><div class="line">        <span class="keyword">unsigned</span> <span class="keyword">char</span> *buf = NULL;</div><div class="line">        <span class="keyword">int</span> result,arg,status,handler,fd;</div><div class="line"></div><div class="line">        fd = <span class="built_in">open</span>(filename,O_RDONLY);</div><div class="line">        <span class="built_in">if</span>(fd&lt;<span class="number">0</span>)</div><div class="line">        <span class="built_in">return</span> <span class="number">-1</span>;</div><div class="line"></div><div class="line">        <span class="built_in">if</span>(fstat(fd,&amp;stat_buf))</div><div class="line">        &#123;</div><div class="line">                <span class="built_in">close</span>(fd);</div><div class="line">                <span class="built_in">return</span> <span class="number">-1</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="built_in">if</span>(!stat_buf.st_size)</div><div class="line">        &#123;</div><div class="line">                <span class="built_in">close</span>(fd);</div><div class="line">                <span class="built_in">return</span> <span class="number">-1</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        buf=malloc(stat_buf.st_size);</div><div class="line">        <span class="built_in">if</span>(!buf)&#123;</div><div class="line">                <span class="built_in">close</span>(fd);</div><div class="line">                <span class="built_in">return</span> <span class="number">-1</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="built_in">if</span>(<span class="built_in">read</span>(fd,buf,stat_buf.st_size)&lt;<span class="number">0</span>)&#123;</div><div class="line">                free(buf);</div><div class="line">                <span class="built_in">close</span>(fd);</div><div class="line">                <span class="built_in">return</span> <span class="number">-1</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        handler = <span class="built_in">open</span>(AUDIO_DEVICE,O_WRONLY);</div><div class="line">        <span class="built_in">if</span>(<span class="number">-1</span> == handler)&#123;</div><div class="line">                <span class="built_in">return</span> <span class="number">-1</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        arg = rate*<span class="number">2</span>;</div><div class="line">        status = ioctl(handler,SOUND_PCM_WRITE_RATE,&amp;arg);</div><div class="line">        <span class="built_in">if</span>(<span class="number">-1</span> == status)</div><div class="line">                <span class="built_in">return</span> <span class="number">-1</span>;</div><div class="line"></div><div class="line">        arg = bits;</div><div class="line">        status = ioctl(handler,SOUND_PCM_WRITE_BITS,&amp;arg);</div><div class="line">        <span class="built_in">if</span>(<span class="number">-1</span> == status)</div><div class="line">                <span class="built_in">return</span> <span class="number">-1</span>;</div><div class="line"></div><div class="line">        result = <span class="built_in">write</span>(handler,buf,stat_buf.st_size);</div><div class="line">        <span class="built_in">if</span>(<span class="number">-1</span> == result)</div><div class="line">                <span class="built_in">return</span> <span class="number">-1</span>;</div><div class="line"></div><div class="line">        free(buf);</div><div class="line">        <span class="built_in">close</span>(fd);</div><div class="line">        <span class="built_in">close</span>(handler);</div><div class="line">        <span class="built_in">return</span> result;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc,<span class="keyword">char</span>** argv)&#123;</div><div class="line">        play_sound(argv[<span class="number">1</span>],atoi(argv[<span class="number">2</span>]),atoi(argv[<span class="number">3</span>]));</div><div class="line">        <span class="built_in">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>因为只是演示用，所以错误判断就少了一些。另外，为了让我们的播放程序自动获得音频文件的参数，诸如采样率，量化精度等，我又提供了一个shell脚本player：<br>点击(此处)折叠或打开</p>
+<p>#!/bin/sh<br>[ “$#” -eq 0 ] &amp;&amp; {<br>echo “Usage: $0 filename”<br>exit<br>}<br>BITS=<code>file $1 | cut -d&#39; &#39; -f9</code><br>RATE=<code>file $1 | cut -d&#39; &#39; -f12</code></p>
+<p>echo “Playing…$(file $1)”<br>./playsound $1 $RATE $BITS<br>    将上述C文件编译，然后，在命令行之./player 文件名，不出意外的话就可以听到声音了，只可惜没办法演示这个过程：<br><img src="http://blog.chinaunix.net/attachment/201311/24/23069658_13853075854iMV.jpg" alt=""><br>   我的系统确实可以听到，但是声音比较小，如果你在命令行执行amixer的话，应该可以看到下面的输出信息：<br><img src="http://blog.chinaunix.net/attachment/201311/24/23069658_138530762766Px.jpg" alt=""><br>   我的声卡音量居然只有75%(因为我用的虚拟机)，然后一句“amixer set Master 100%”命令下去，再重新播放声音，应该就很happy了。<br><img src="http://blog.chinaunix.net/attachment/201311/24/23069658_1385307678NQug.jpg" alt=""><br>    其实大家可能有点疑惑，不是前面介绍了半天ALSA的好处了，怎么用OSS来示范，是不是专拣软柿子捏啊。再说了，现在很多人的系统几乎都不支持OSS了，上面的代码有毛用。其实我也很不甘心，所以又重新装了CentOS6.3的虚拟系统，用ALSA的API再来播一下wav看得行不，经过N个小时的折腾，皇天不负有心人—It’s OK！(新手入门，大家来找BUG吧 :) )<br>   内核版本2.6.32，看一下/dev目录下确实没有dsp和mixer设备文件了，取而代之的/dev/snd目录。在centos5.3里我们也见到过这个目录，但当时还只是试用阶段，现在alsa已经完全扶正了：<br><img src="http://blog.chinaunix.net/attachment/201311/24/23069658_138530769878Ug.jpg" alt=""><br>播放代码如下：<br>点击(此处)折叠或打开<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/stat.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;linux/soundcard.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;alsa/asoundlib.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="meta">#define ALSA_MAX_BUF_SIZE 65535</span></div><div class="line"></div><div class="line"><span class="built_in">int</span> play_sound(char* filename,<span class="built_in">int</span> rate,<span class="built_in">int</span> bits,<span class="built_in">int</span> channel,<span class="built_in">int</span> order)</div><div class="line">&#123;</div><div class="line">        long loops<span class="comment">;</span></div><div class="line">        <span class="built_in">int</span> rc,size,dir<span class="comment">;</span></div><div class="line">        snd_pcm_t *handle<span class="comment">;</span></div><div class="line">        snd_pcm_hw_params_t *params<span class="comment">;</span></div><div class="line">        snd_pcm_uframes_t frames,periodsize<span class="comment">;</span></div><div class="line">        snd_mixer_t *mixer<span class="comment">;</span></div><div class="line">        snd_mixer_elem_t *pcm_element<span class="comment">;</span></div><div class="line"></div><div class="line">        char *buffer<span class="comment">;</span></div><div class="line">        unsigned <span class="built_in">int</span> val<span class="comment">;</span></div><div class="line">        FILE *fp = fopen(filename,<span class="string">"rb"</span>)<span class="comment">;</span></div><div class="line">        rc = snd_pcm_open(&amp;handle,<span class="string">"default"</span>,SND_PCM_STREAM_PLAYBACK,<span class="number">0</span>)<span class="comment">;</span></div><div class="line"></div><div class="line">        snd_pcm_hw_params_alloca(&amp;params)<span class="comment">;</span></div><div class="line">        snd_pcm_hw_params_any(handle,params)<span class="comment">;</span></div><div class="line">        snd_pcm_hw_params_set_access(handle,params,SND_PCM_ACCESS_RW_INTERLEAVED)<span class="comment">;</span></div><div class="line">        <span class="keyword">switch</span>(order)&#123;</div><div class="line">                <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">                        snd_pcm_hw_params_set_format(handle,params,SND_PCM_FORMAT_S16_LE)<span class="comment">;</span></div><div class="line">                        <span class="built_in">break</span><span class="comment">;</span></div><div class="line">                <span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">                        snd_pcm_hw_params_set_format(handle,params,SND_PCM_FORMAT_S16_BE)<span class="comment">;</span></div><div class="line">                        <span class="built_in">break</span><span class="comment">;</span></div><div class="line">                defualt:</div><div class="line">                        <span class="built_in">break</span><span class="comment">;</span></div><div class="line">        &#125;</div><div class="line">        snd_pcm_hw_params_set_channels(handle,params,channel)<span class="comment">;</span></div><div class="line"></div><div class="line">        val = rate<span class="comment">;</span></div><div class="line">        snd_pcm_hw_params_set_rate_near(handle,params,&amp;val,<span class="number">0</span>)<span class="comment">;</span></div><div class="line">        snd_pcm_hw_params_get_buffer_size_max(params,&amp;frames)<span class="comment">;</span></div><div class="line">        frames = frames &lt; ALSA_MAX_BUF_SIZE? frames:ALSA_MAX_BUF_SIZE<span class="comment">;</span></div><div class="line">        rc = snd_pcm_hw_params_set_buffer_size_near(handle,params,&amp;frames)<span class="comment">;</span></div><div class="line">        snd_pcm_hw_params_get_period_size_min(params,&amp;periodsize,<span class="literal">NULL</span>)<span class="comment">;</span></div><div class="line">        <span class="keyword">if</span>(!periodsize)&#123;</div><div class="line">                periodsize=size/<span class="number">4</span><span class="comment">;</span></div><div class="line">        &#125;</div><div class="line">        rc = snd_pcm_hw_params_set_period_size_near(handle,params,&amp;periodsize,<span class="literal">NULL</span>)<span class="comment">;</span></div><div class="line">        rc = snd_pcm_hw_params(handle,params)<span class="comment">;</span></div><div class="line"></div><div class="line">        snd_mixer_open(&amp;mixer,<span class="number">0</span>)<span class="comment">;</span></div><div class="line">        snd_mixer_attach(mixer,<span class="string">"default"</span>)<span class="comment">;</span></div><div class="line">        snd_mixer_selem_register(mixer,<span class="literal">NULL</span>,<span class="literal">NULL</span>)<span class="comment">;</span></div><div class="line">        snd_mixer_load(mixer)<span class="comment">;</span></div><div class="line">        <span class="keyword">for</span>(pcm_element = snd_mixer_first_elem(mixer)<span class="comment">;pcm_element;pcm_element=snd_mixer_elem_next(pcm_element))</span></div><div class="line">        &#123;</div><div class="line">                <span class="keyword">if</span>(snd_mixer_elem_get_type(pcm_element)==SND_MIXER_ELEM_SIMPLE &amp;&amp; snd_mixer_selem_is_active(pcm_element))</div><div class="line">                &#123;</div><div class="line">                        <span class="keyword">if</span>(!strcmp(snd_mixer_selem_get_name(pcm_element),<span class="string">"Master"</span>))</div><div class="line">                        &#123;</div><div class="line">                                snd_mixer_selem_set_playback_volume_range(pcm_element,<span class="number">0</span>,<span class="number">100</span>)<span class="comment">;</span></div><div class="line">                                snd_mixer_selem_set_playback_volume_all(pcm_element,(long)<span class="number">100</span>)<span class="comment">;</span></div><div class="line">                        &#125;</div><div class="line">                &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        buffer = (char*)malloc(size)<span class="comment">;</span></div><div class="line">        <span class="keyword">while</span>(<span class="number">1</span>)</div><div class="line">        &#123;</div><div class="line">                rc = fread(buffer,<span class="number">1</span>,size,fp)<span class="comment">;</span></div><div class="line">                <span class="keyword">if</span>(<span class="number">0</span>== rc)</div><div class="line">                        <span class="built_in">break</span><span class="comment">;</span></div><div class="line">                <span class="keyword">while</span>((rc = snd_pcm_writei(handle,buffer,size))&lt;<span class="number">0</span>)</div><div class="line">                &#123;</div><div class="line">                        usleep(<span class="number">200</span>)<span class="comment">;</span></div><div class="line">                        <span class="keyword">if</span>(-EPIPE == rc)</div><div class="line">                                snd_pcm_prepare(handle)<span class="comment">;</span></div><div class="line">                        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="number">0</span> &gt; rc)</div><div class="line">                                printf(<span class="string">"error fomr writei\n"</span>)<span class="comment">;</span></div><div class="line">                &#125;</div><div class="line">        &#125;</div><div class="line">        snd_pcm_drain(handle)<span class="comment">;</span></div><div class="line">        snd_pcm_close(handle)<span class="comment">;</span></div><div class="line">        free(buffer)<span class="comment">;</span></div><div class="line">        snd_mixer_close(mixer)<span class="comment">;</span></div><div class="line">        fclose(fp)<span class="comment">;</span></div><div class="line">        <span class="keyword">return</span> <span class="number">0</span><span class="comment">;</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">int</span> main(<span class="built_in">int</span> argc,char** argv)&#123;</div><div class="line">        play_sound(argv[<span class="number">1</span>],atoi(argv[<span class="number">2</span>]),atoi(argv[<span class="number">3</span>]),atoi(argv[<span class="number">4</span>]),atoi(argv[<span class="number">5</span>]))<span class="comment">;</span></div><div class="line">        <span class="keyword">return</span> <span class="number">0</span><span class="comment">;</span></div><div class="line">&#125;</div><div class="line">   然后将player脚本也对应修改一下：   </div><div class="line">点击(此处)折叠或打开</div><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">[ <span class="string">"$#"</span> -eq <span class="number">0</span> ] &amp;&amp; &#123;</div><div class="line">echo <span class="string">"Usage: $0 filename"</span></div><div class="line"><span class="keyword">exit</span></div><div class="line">&#125;</div><div class="line">ORDER=`file $1 | cut -d<span class="string">' '</span> -f3`</div><div class="line">BITS=`file $1 | cut -d<span class="string">' '</span> -f9`</div><div class="line">CHANNEL=`file $1 | cut -d<span class="string">' '</span> -f11`</div><div class="line">RATE=`file $1 | cut -d<span class="string">' '</span> -f12`</div><div class="line"><span class="meta">#channel</span></div><div class="line"><span class="keyword">if</span> [ <span class="string">"$CHANNEL"</span> == <span class="string">"stereo"</span> ]<span class="comment">; then</span></div><div class="line">CHANNEL=<span class="number">2</span></div><div class="line"><span class="keyword">else</span></div><div class="line">CHANNEL=<span class="number">1</span></div><div class="line">fi</div><div class="line"><span class="meta">#platform-byte-order</span></div><div class="line"><span class="keyword">if</span> [ <span class="string">"$ORDER"</span> == <span class="string">"(little-endian)"</span> ]<span class="comment">; then</span></div><div class="line">ORDER=<span class="number">1</span></div><div class="line"><span class="keyword">else</span></div><div class="line">ORDER=<span class="number">2</span></div><div class="line">fi</div><div class="line">echo <span class="string">"Playing...$(file $1)"</span></div><div class="line">./playsound $1 $RATE $BITS $CHANNEL $ORDER</div></pre></td></tr></table></figure></p>
+<p> 编译C文件时，由于我们用了alsa库，所以gcc的编译选项要加上-lasound才可以。如果播放时声音很小，可以用amixer来调节音量。如果不幸的是你系统里找不到amixer命令的话，就用yum install alsa-utils或者下载alsa源码来安装吧。</p>
+<p> 附件是测试用的音频文件，另外，后面我会将完整支持OSS和ALSA两种架构的最终播放代码放在github上，有需要的盆友到时候可以拿去鼓捣鼓捣，今天就先到这里吧。</p>
+<p> 附件:<a href="http://www.kuaipan.cn/file/id_32913876282507542.htm" target="_blank" rel="external">news.wav</a></p>
+<h2 id="CentOS6-4完全安装FFmpeg手记"><a href="#CentOS6-4完全安装FFmpeg手记" class="headerlink" title="CentOS6.4完全安装FFmpeg手记 "></a><a href="http://blog.chinaunix.net/uid-23069658-id-4018842.html" target="_blank" rel="external">CentOS6.4完全安装FFmpeg手记 </a></h2><p> 鼓捣媒体的人对FFmpeg应该不会陌生，它不仅功能强大，结构优美，灵活、易扩展，也是很其他多媒体播放器的基础，例如VLC，Mplayer等等，还有好多商业播放器都用了ffmpeg，但这些商业软件却没有遵守GPL公约，所以它们都被钉在了ffmpeg官网的“耻辱柱”上。关于ffmpeg还有一点题外话，那就是有一个叫做libav的开源项目。libav是从ffmpeg分化出来的一个项目，而这个项目诞生的原因和技术本身并没有任何关系，最大的分歧在于ffmpeg内部有一帮人对于ffmpeg项目的管理方式觉得不happy了，所以他们就自立门户，成立了libav这个项目。有意思的是libav官网的logo和ffmpeg官网的logo有点“小过节”，libav把ffmpeg官网那个偏着脑袋的logo给端正了，至于他们想传达的意义我觉得每个人都应该有自己的理解和认识。好了，开场预热就到这里，该干活了。<br>   CentOS6.4的内核版本2.6.32-358，GCC版本是4.4.7，安装ffmpeg的版本是1.2，ffmpeg官网最新的版本是2.1，看着版本号差异挺大，其实从1.2到2.1中间仅隔了一个2.0版，是2013年7月10号刚发布。<br>   安装前的准备工作当然是先安装各种工具：</p>
+<p>点击(此处)折叠或打开<br>[root@localhost src]# pwd<br>/usr/local/src<br>[root@localhost src]# yum install automake autoconf make gcc gcc-c++ libtool zlib zlib-devel curl curl-devel alsa-lib alsa-lib-devel gettext gettext-devel expat expat-devel<br>   ffmpeg作为一个多媒体框架和平台，最大的优势就在于可以很灵活地支持多种编解码和其他特性，只要第三方外部库支撑都可以做到。本次安装下列第三包依赖包：<br>   faac：全称是Free Advanced Audio Coder，是MPEG-4和MPEG-2 AAC的一款常用的开源编解码器；<br>   lame：一款常见的mp3的开源编解码器；<br>   libass：先说一下ASS/SSA，其全称是Advanced Substation Alpha/Substation Alpha，是一种功能极为强大的字幕格式，主要用在视频文件里显示字幕。而libASS是一个轻量级的对ASS/SSA格式字幕进行渲染的函数库，使用C编写,效率非常高；<br>   libdc1394：这是面向高级语言编程接口的一个库，主要提供了对符合IEEE 1394规范的数码摄录设备的一组操作接口。符合1395规范的数码相机标准的全称是1394-based Digital Camera Specifications，简称为IIDC或DCAM。安装dc1394需要先安装raw1394；<br>   libfreetype2：freetype是一个用C语言实现的一个字体光栅化库，它可以用来将字符栅格化并映射成位图以及提供其他字体相关业务的支持。freetype提供了一个简单、易用并统一的接口来访问字体文件的内容。freetype不仅被自由桌面系统软件所使用，同时它也是现代视频游戏广泛使用的栅格化引擎；<br>   libvorbis：这个库主要用于处理ogg格式的音频文件，而ogg全称是ogg vorbis，一种类似mp3的音频压缩格式。不同于mp3的是ogg完全免费、开放和没有专利限制的。ogg文件格式可以不断地进行大小和音质的改良，而不影响旧有的编码器或播放器，主要由Xiph.org基金会开发；<br>   libtheora：theora也是Xiph.org基金会开发，是一种有损的影像压缩格式；<br>   openssl：这个就不多说了，很多安全框架的基础；<br>   rtmpdump：一个开源的rtmp格式的流媒体库，RTMP(Real Time Messaging Protocol)是Adobe Systems公司为它自家的flash播放器和服务器之间音频、视频和数据传输开发的一种开放的传输协议；<br>   speex：speex是一套主要针对语音的开源免费、无专利保护的音频压缩格式，致力于通过提供一个可以替代高性能语音编解码来降低语音应用输入门槛。相对于其它编解码器，speex非常适合网络应用，因为它专为2-44kpbs语音码流所设计，所以在网络应用上有着自己独特的优势；<br>   twolame：一个开源的mp2格式的编解码库；<br>   vo-aacenc：AAC格式的常用的音频编码器；<br>   xvidcore：是一个开放源代码的MPEG-4视频编解码器；<br>   x264：目前最流行，最常见的H.264视频格式的一个开源的编解码器；</p>
+<p>   将需要的软件包全部下载后，剩下的事儿就非常简单：“三大步”—configure &amp;&amp; make &amp;&amp; make install<br>   安装顺序如下：faac、lame、libtheora(需要先安装libogg)、libvorbis、vo-aacenc、xvidcore、x264、libdc1394(需要先安装libraw1394)、libass(需要先依次安装libfreetype2、fribidi和fonconfig)、openssl、librtmp、libspeex、twolame、yasm，最后安装ffmpeg。</p>
+<p>   在通过源码包安装上述软件时，如果在configure阶段没有用–prefix指定安装目录，默认情况下安装的顶级目录是/usr/local，可执行程序会被安装到/usr/local/bin，动态库被安装到/usr/local/lib，头文件在/usr/local/include等等。这样会有一个小小的麻烦，例如当先安装libogg后，再安装libtheora时，你有可能会收到如下的错误提示信息：<br>checking pkg-config is at least version 0.9.0… yes<br>checking for OGG… no<br>checking for Ogg… no<br><strong><em> Could not run Ogg test program, checking why…
+</em></strong> The test program compiled, but did not run. This usually means<br><strong><em> that the run-time linker is not finding Ogg or finding the wrong
+</em></strong> version of Ogg. If it is not finding Ogg, you’ll need to set your<br><strong><em> LD_LIBRARY_PATH environment variable, or edit /etc/ld.so.conf to point
+</em></strong> to the installed location  Also, make sure you have run ldconfig if that<br><em>*</em> is required on your system</p>
+<hr>
+<p><strong><em> If you have an old version installed, it is best to remove it, although
+</em></strong> you may also be able to get things to work by modifying LD_LIBRARY_PATH<br>configure: error:<br>    libogg is required to build this package!<br>    please see <a href="http://www.xiph.org/" target="_blank" rel="external">http://www.xiph.org/</a> for how to<br>    obtain a copy.</p>
+<p>   明明安装了ogg但theora却认为咱们没安装。原因在哪里，当然是动态库的查找路径了，想了解详情的童鞋请移步这里。我的解决办法是在 /etc/ld.so.conf.d/目录下创建一个名为local-libraries.conf的文件，内容很简单，只有一行：</p>
+<p>点击(此处)折叠或打开<br>[root@localhost src]# cat /etc/ld.so.conf.d/local-libraries.conf<br>/usr/local/lib<br>[root@localhost src]#</p>
+<p>   然后执行ldconfig -v，然后再安装libtheora就很happy了。<br>   当然还没完，当你在安装libass时，当你把所有依赖包都先安装之后，在configure阶段，它总会提醒你说：<br>Package requirements (freetype2 &gt;= 9.10.3) were not met</p>
+<p>   任凭你怎么执行ldconfig都没用。不过你要是注意到错误提示信息其实问题的解决也就挺简单，在configure阶段在探测依赖包时用到了一个叫做pkg-config的工具，它会自动去查找当前系统是否支持某些类型的动态库文件，主要是通过一个<em>.pc文件。而一些标准so库源码包里都会提供一个这样的文件以便pkg-config来用，而问题就在pkg-config查找</em>.pc文件的路径上。关于这个工具更多细节就不展开了，感兴趣的朋友可以去google一下。这里我的解决办法是：</p>
+<p>点击(此处)折叠或打开<br>[root@localhost libass-0.10.1]# export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH<br>    然后安装libass时也就很happy了。<br>    最后，在安装ffmpeg前需要先安装yasm，版本至少1.2.0以上。</p>
+<pre><code>下面是我的安装ffmpeg时相关软件包的配置情况，以便各位参考：
+</code></pre><p>1 faac<br>[root@localhost faac]#./bootstrap<br>[root@localhost faac]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost faac]#make &amp;&amp; make install</p>
+<p>2 lame<br>[root@localhost lame-3.98.4]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost lame-3.98.4]#make &amp;&amp; make install</p>
+<p>3 libogg<br>[root@localhost libogg-1.3.0]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost libogg-1.3.0]#make &amp;&amp; make install</p>
+<p>4 libtheora<br>[root@localhost libtheora-1.1.1]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost libtheora-1.1.1]#ldconfig -v<br>[root@localhost libtheora-1.1.1]#make &amp;&amp; make install</p>
+<p>5 libvorbis<br>[root@localhost libvorbis-1.3.3]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost libvorbis-1.3.3]#make &amp;&amp; make install</p>
+<p>6 vo-aacenc<br>[root@localhost vo-aacenc-0.1.2]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost vo-aacenc-0.1.2]#make &amp;&amp; make install</p>
+<p>7 xvidcore<br>[root@localhost xvidcore-1.3.2]#./configure –prefix=/usr/local/<br>[root@localhost xvidcore-1.3.2]#make &amp;&amp; make install</p>
+<p>8 yasm<br>[root@localhost yasm-1.2.0]#./configure –prefix=/usr/local/<br>[root@localhost yasm-1.2.0]#make &amp;&amp; make install</p>
+<p>9 x264<br>[root@localhost x264-snapshot-20130505-2245]#./configure –prefix=/usr/local/ –enable-shared –enable-pic<br>[root@localhost x264-snapshot-20130505-2245]#make &amp;&amp; make install</p>
+<p>10 libraw1394<br>[root@localhost libraw1394-2.0.5]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost libraw1394-2.0.5]#make &amp;&amp; make install</p>
+<p>11 libdc1394<br>[root@localhost libdc1394-2.2.1]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost libdc1394-2.2.1]#make &amp;&amp; make install</p>
+<p>12 libfreetype<br>[root@localhost libfreetype2-master]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost libfreetype2-master]#make &amp;&amp; make install</p>
+<p>13 fribidi<br>[root@localhost fribidi-0.19.4]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost fribidi-0.19.4]#make &amp;&amp; make install</p>
+<p>14 fonconfig<br>[root@localhost fontconfig-2.9.0]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost fontconfig-2.9.0]#make &amp;&amp; make install</p>
+<p>15 libass<br>[root@localhost libass-0.10.1]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost libass-0.10.1]#make &amp;&amp; make install (xuyao )</p>
+<p>16 openssl<br>[root@localhost openssl-1.0.1c]#./config –prefix=/usr/local/ –openssldir=/usr/local/openssl threads zlib-dynamic shared<br>[root@localhost openssl-1.0.1c]#make &amp;&amp; make install</p>
+<p>17 librtmp<br>[root@localhost rtmpdump-2.3]#make SYS=posix<br>[root@localhost rtmpdump-2.3]#make install</p>
+<p>18 libspeex<br>[root@localhost speex-1.2rc1]#./configure –prefix=/usr/local/ –enable-shared –enable-sse<br>[root@localhost speex-1.2rc1]#make &amp;&amp; make install</p>
+<p>19 twolame<br>[root@localhost twolame-0.3.13]#./configure –prefix=/usr/local/ –enable-shared<br>[root@localhost twolame-0.3.13]#make &amp;&amp; make install</p>
+<p>20 FFmpeg<br>[root@localhost ffmpeg-1.2]#./configure –prefix=/usr/local/ –enable-gpl –enable-version3 –enable-nonfree –enable-shared –enable-zlib –enable-bzlib –enable-libfaac –enable-libmp3lame –enable-libtheora –enable-libvo-aacenc –enable-libvorbis –enable-libx264 –enable-libxvid –enable-pic –enable-pthreads –enable-libdc1394 –enable-libass –enable-pic –enable-openssl –enable-libtwolame –enable-libspeex –enable-librtmp –enable-libfreetype<br>[root@localhost ffmpeg-1.2]#make &amp;&amp; make install</p>
+<pre><code>安装完成后，测试一下：
+</code></pre><p><img src="http://blog.chinaunix.net/attachment/201311/30/23069658_1385809025K33k.jpg" alt=""><br>   为了方便各位测试，本文中用到的所有软件包已经放在网盘里，有需要的朋友请到<a href="http://dl.vmall.com/c0xhuwtm1m" target="_blank" rel="external">这里</a>下载。 </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Multimedia</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACt0lEQVR42u3aUW5iMQwFUPa/6c4Chpde2zGi0nlfFYKQk0pJuPbrFT8/x+fp/efX/x/hPP7TmBcePDw8vIWpJ6SnMXPYeYGShXgzNzw8PLw1XrKJJwfAeWkme3hvPnh4eHjfw8svx8m2ni8cHh4e3t/lnSc6CREmY+Lh4eF9kncrQs1DjYT00awFDw8Pr1axiib9PX+v1Pfw8PDwxlX184abRBXVy3E1wvhltnh4eHgLvHzDTajVq3lvzGrLAh4eHt4Gbx6nnoe7e0hcC47x8PDwWuPMmwPmrVd5gFtuJsDDw8Nb5uWlpvz91ZJYtQjXjCHw8PDwBrzqFTmZXH4w5GFxcmUv1O7w8PDwLvFubfrJBT2ZVm+B3oyMh4eH9xFe8uO/t33nF+tJy1d5nfDw8PBiXjLdaojQW4hqdS76GYCHh4e3zOtdeSdBbS8mLp94eHh4eFd5+dTnxa3qRK+FEXh4eHgLvKTsFBXpixfi5OLeawKLThU8PDy8Aa8auU6KWJPGherxgIeHh7fByzfo6padhx29zT26iOPh4eEt85Jwtlo2q8YNk1LZm2/Hw8PDW+P1imG9Vq1yR1irqvXqnVF4eHh4Ma9aWOo1CpwXaNLE8LhYeHh4eGu8ahtWtRWgOrlJ01XUNICHh4c34OUFsDyGmDQK5MdJHp3g4eHhbfBGDUwxY772F/5XeHh4eAu83vbdizCqbVj5YuHh4eF9hpd/IA8s8nj31uGEh4eHt837KT75CPPQNl+4x8/i4eHhLfAme+zGpOeH1rUjBA8PD28hfk2uzneXstfChYeHh7fH623K8xh3I4zAw8PD+zZe3nCQvNJrDihctfHw8PC+kleNIfKweBIx4+Hh4W3zqhffvNA1KaHlrQyP34KHh4e3wCv/vC8Wt6oHRjWkuNaehYeHh/f7t/wDXkdK38IpL0kAAAAASUVORK5CYII=" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/27/Program/Concepts/the-essence-of-video/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">多媒体技术基础之---视频</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Program/Concepts/the-essence-of-sound" data-title="多媒体技术基础之---重新认识声音" data-url="http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-sound/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 For life
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+    
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','QVk44u3hiUx_EaM1x32V'); //�����Լ���
+</script>    
+    
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true,
+		showTags: true
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.2d7529.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Google</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Business</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Smart Phone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Machine Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Program</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Open Source</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Java Script</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">File System</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Scikit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Atom</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Neural Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Neural Networks</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/25870384/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>你的生命有什么可能</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://mt.sohu.com/20161026/n471374646.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>个体崛起的时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnfy.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>成为一个超级个体</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://gelonghui.com/p/101767.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人工智能的黄金时代</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都是工程师</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>人人都能用英语</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>把时间当作朋友</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>七年就是一辈子</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://news.mbalib.com/story/12504" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>退休感言</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.360doc.com/content/14/1206/17/15680008_430856157.shtml" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>选择的智慧</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/6397275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>此生未完成</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://book.douban.com/subject/26422275/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>向死而生</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">自知者明&lt;br&gt;自胜者强&lt;br&gt;不忘初心&lt;br&gt;方得始终</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

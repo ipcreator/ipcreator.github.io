@@ -164,202 +164,127 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-SmartAI/ProgramAI/Tensorflow/applications-of-tensorflow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Program/Android/GestureDetector" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/applications-of-tensorflow/">TensorFlow的技术应用</a>
+      <a class="article-title" href="/2017/02/25/Program/Android/GestureDetector/">GestureDetector</a>
     </h1>
   
 
         
-        <a href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/applications-of-tensorflow/" class="archive-article-date">
-  	<time datetime="2017-02-17T02:06:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-17</time>
+        <a href="/2017/02/25/Program/Android/GestureDetector/" class="archive-article-date">
+  	<time datetime="2017-02-25T08:11:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://www.leiphone.com/news/201702/pwAazPPM6idKOeSZ.html">作者：AI研习社</a></p>
+        <h2 id="GestureDetector"><a href="#GestureDetector" class="headerlink" title="GestureDetector"></a><a href="https://developer.android.com/reference/android/view/GestureDetector.html" target="_blank" rel="external">GestureDetector</a></h2><p><img src="http://okkntqe2h.bkt.clouddn.com/GestureDetector.png" alt=""></p>
+<p>public class GestureDetector<br>extends Object</p>
+<p>java.lang.Object<br>   ↳    android.view.GestureDetector</p>
+<p>Detects various gestures and events using the supplied MotionEvents. The <a href="https://developer.android.com/reference/android/view/GestureDetector.OnGestureListener.html" target="_blank" rel="external">GestureDetector.OnGestureListener</a> callback will notify users when <strong>a particular motion event</strong> has occurred. This class should only be used with <a href="https://developer.android.com/reference/android/view/MotionEvent.html" target="_blank" rel="external">MotionEvents</a> reported via touch (don’t use for trackball events).</p>
+<p>To use this class:</p>
+<ul>
+<li>Create an instance of the GestureDetector for your View</li>
+<li>In the onTouchEvent(MotionEvent) method ensure you call onTouchEvent(MotionEvent). The methods defined in your callback will be executed when the events occur.</li>
+<li>If listening for onContextClick(MotionEvent) you must call onGenericMotionEvent(MotionEvent) in onGenericMotionEvent(MotionEvent).</li>
+</ul>
+<p>参考文章：<br><a href="http://blog.csdn.net/ztp800201/article/details/7410503" target="_blank" rel="external">Android - GestureDetector 实现界面左右滑动效果的优化</a><br><a href="http://blog.csdn.net/hzh_csdn/article/details/52317566" target="_blank" rel="external">Android GestureDetector简单手势检测（左右滑动、上下滑动）</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/25/Program/Android/GestureDetector/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-MyView/Diary/my-translations" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/22/MyView/Diary/my-translations/">名人名言</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/22/MyView/Diary/my-translations/" class="archive-article-date">
+  	<time datetime="2017-02-22T00:31:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>frome <a href="http://www.azquotes.com">az quotes</a></p>
+<p><img src="http://www.azquotes.com/picture-quotes/quote-a-person-who-never-made-a-mistake-never-tried-anything-new-albert-einstein-8-72-86.jpg" alt=""></p>
 <blockquote>
-<p><strong>通过一些TensorFlow实际应用，让大家对TensorFlow有理性和感性的双层认知。</strong></p>
+<p>A person who never made a mistake never tried anything new.<br>——Albert Einstein</p>
 </blockquote>
-<p>随着谷歌2015年发布开源人工系统TensorFlow，让本就如火如荼的深度学习再添一把火，截至现在，TensorFlow已经历了多个版本演进，功能不断完善，AI开发者也能灵活自如的运用TensorFlow解决一些实际问题，下面雷锋网(公众号：雷锋网)会对一些比较实用的TensorFlow应用做相关整理，让大家对TensorFlow有理性和感性的双层认知。</p>
-        
-          <a class="article-more-a" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/applications-of-tensorflow/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Tensorflow</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/applications-of-tensorflow/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-SmartAI/ProgramAI/Tensorflow/platforms-of-tensorflow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/platforms-of-tensorflow/">框架平台的综合对比</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/platforms-of-tensorflow/" class="archive-article-date">
-  	<time datetime="2017-02-17T01:56:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://www.leiphone.com/news/201702/H164EWZE7w9wu6UM.html">作者：AI研习社</a></p>
+<p>从不犯错的人也从不尝试新事物。<br>——艾尔伯特 爱因斯坦</p>
+<p><img src="http://www.azquotes.com/picture-quotes/quote-i-didn-t-fail-the-test-i-just-found-100-ways-to-do-it-wrong-benjamin-franklin-10-19-28.jpg" alt=""></p>
 <blockquote>
-<p><strong>TensorFlow 与其他平台、框架对比，具有哪些优点及劣势？</strong></p>
+<p>I didn’t fail the test, I just found 100 ways to do it wrong.<br>——Benjamin Franklin</p>
 </blockquote>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a3fff2bdea1.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>作为机器学习领域、尤其是 Python 生态圈最受欢迎的框架平台，TensorFlow 具有许多吸引开发者的优点。其中最显而易见的是谷歌的技术支持和完善的社区（庞大用户群）。这些都为 TensorFlow 的普及打下了基础。但是，开发者需要了解 Tensorflow 在技术上有哪些值得一提的优势，又有哪些不足，以便在处理特定任务时进行工具选择。而这些，必须要在与其他平台、框架的对比中才能凸显。顺便说一句老生常谈的话，<strong>没有万能的工具，只有在不同应用场景下最合适的选择。</strong> 因此，雷锋网(公众号：雷锋网)整理了介绍 Tensorflow、Caffe、Microsoft Cognitive Toolkit （CNTK）、MXnet、Torch 等平台框架，以及对它们做横向对比的文章，供读者按图索骥。</p>
-        
-          <a class="article-more-a" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/platforms-of-tensorflow/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Tensorflow</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/platforms-of-tensorflow/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/">Tensorflow 的入门与安装</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/" class="archive-article-date">
-  	<time datetime="2017-02-17T01:56:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://www.leiphone.com/news/201702/I9mcLjB6pKjTf1Or.html">作者：AI研习社</a></p>
+<p>我并没有失败，只是找到了100种错误的方法。<br>——本杰明 富兰克林</p>
+<p><img src="http://www.azquotes.com/picture-quotes/quote-don-t-find-fault-find-a-remedy-henry-ford-9-91-53.jpg" alt=""></p>
 <blockquote>
-<p><strong>作为AI 领域最受关注和使用率最高的开源框架之一，TensorFlow 究竟是如何安装的呢？这篇汇总资料你不得不看！</strong></p>
+<p>Don’t find fault, find a remedy.<br>——Henry Ford</p>
 </blockquote>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a2d3a8ba7be.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>自2015年11月发布以来，谷歌旗下的机器学习开源框架TensorFlow已经在图像识别，大数据分析，语音识别和语义理解，机器翻译等各个领域得到了广泛应用，同时也得到了业内人士的普遍认可，成为了目前最受关注和使用率最高的开源框架之一。</p>
-<p>本文将重点整理TensorFlow框架的入门和安装教程。更多关于TensorFlow的深入介绍、应用项目以及各机器学习开源框架之间的对比等内容，请见雷锋网(公众号：雷锋网)的系列文章。</p>
+<p>不要找错，寻求补救。<br>——亨利 福特</p>
         
-          <a class="article-more-a" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/22/MyView/Diary/my-translations/#more">more >></a>
         
       
 
@@ -373,11 +298,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Tensorflow</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
         		</li>
       		
 		</ul>
@@ -389,7 +310,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
         		</li>
       		
 		</ul>
@@ -398,7 +319,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/setup-of-tensorflow/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/22/MyView/Diary/my-translations/">展开全文 >></a>
         </p>
       
 
@@ -416,34 +337,30 @@
 
 
   
-    <article id="post-SmartAI/ProgramAI/Tensorflow/history-of-tensorflow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-MyView/Diary/love-sentencns" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/history-of-tensorflow/">Tensorflow的迭代更新</a>
+      <a class="article-title" href="/2017/02/22/MyView/Diary/love-sentencns/">爱句子</a>
     </h1>
   
 
         
-        <a href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/history-of-tensorflow/" class="archive-article-date">
-  	<time datetime="2017-02-17T01:49:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-17</time>
+        <a href="/2017/02/22/MyView/Diary/love-sentencns/" class="archive-article-date">
+  	<time datetime="2017-02-22T00:13:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://www.leiphone.com/news/201702/mCdH02cb8MWBaiAs.html">作者：AI研习社</a></p>
-<blockquote>
-<p><strong>谷歌于2015年11月发布了全新人工智能系统TensorFlow，距今已有15个月时间，在这期间发生了哪些变化？</strong></p>
-</blockquote>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a3d3459f765.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>谷歌于2015年11月发布了全新人工智能系统TensorFlow。该系统可被用于语音识别或照片识别等多项机器深度学习领域，主要针对2011年开发的深度学习基础架构DistBelief进行了各方面的改进，它可在小到一部智能手机、大到数千台数据中心服务器的各种设备上运行。</p>
+        <p><img src="http://cdn.iciba.com/news/word/big_20160828b.jpg" alt=""></p>
+<p>How deep I love you, the moon represents my heart.<br>你问我爱你有多深，月亮代表我的心。</p>
         
-          <a class="article-more-a" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/history-of-tensorflow/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/22/MyView/Diary/love-sentencns/#more">more >></a>
         
       
 
@@ -457,11 +374,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Tensorflow</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
         		</li>
       		
 		</ul>
@@ -473,7 +386,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
         		</li>
       		
 		</ul>
@@ -482,7 +395,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/17/SmartAI/ProgramAI/Tensorflow/history-of-tensorflow/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/22/MyView/Diary/love-sentencns/">展开全文 >></a>
         </p>
       
 
@@ -500,32 +413,33 @@
 
 
   
-    <article id="post-SmartAI/ProgramAI/Concepts/ai-vs-machine-learning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-MyView/Diary/love-words" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/15/SmartAI/ProgramAI/Concepts/ai-vs-machine-learning/">人工智能 VS 机器学习</a>
+      <a class="article-title" href="/2017/02/22/MyView/Diary/love-words/">爱单词</a>
     </h1>
   
 
         
-        <a href="/2017/02/15/SmartAI/ProgramAI/Concepts/ai-vs-machine-learning/" class="archive-article-date">
-  	<time datetime="2017-02-15T14:49:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-15</time>
+        <a href="/2017/02/22/MyView/Diary/love-words/" class="archive-article-date">
+  	<time datetime="2017-02-21T23:44:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://dy.163.com/v2/article/detail/CBLFGEEV0511CUKV.html">作者：网易AI研究院</a></p>
- <div align="center"><br><img src="http://dingyue.nosdn.127.net/FvoCteXeaxOQg4IblKLzFzKWGzhz86zMvylL6jsI6tLsx1485348908493compressflag.jpg" width = "839" height = "416" ><br> </div>
-
-<p>  对于企业而言，该投资人工智能还是机器学习呢？国外媒体发表Avanade高级总监贾马尔·赫瓦贾（Jamal Khawaja）的文章对这一问题进行了深入解析。</p>
+        <p>图文来源：<a href="http://xue.youdao.com/sw/m/1309029?keyfrom=dict2.index">微信号 我爱背单词</a></p>
+<h2 id="predator"><a href="#predator" class="headerlink" title="predator"></a>predator</h2><p>英 [‘predətə]  美 [‘prɛdətɚ]<br>n. [动] 捕食者；[动] 食肉动物；掠夺者</p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/acer-predator-15-17-gaming-laptop-skylake-review-21.jpg" alt=""></p>
+<p><strong>词根</strong><br>词根： predator<br>adj.<br>predatory 掠夺的，掠夺成性的；食肉的；捕食生物的<br>n.<br>predation 捕食；掠夺</p>
+<p><strong>同近义词</strong><br>n. [动]捕食者；食肉动物；掠夺者<br>carnivore , reiver</p>
         
-          <a class="article-more-a" href="/2017/02/15/SmartAI/ProgramAI/Concepts/ai-vs-machine-learning/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/22/MyView/Diary/love-words/#more">more >></a>
         
       
 
@@ -539,11 +453,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Machine Learning</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
         		</li>
       		
 		</ul>
@@ -555,7 +465,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
         		</li>
       		
 		</ul>
@@ -564,7 +474,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/15/SmartAI/ProgramAI/Concepts/ai-vs-machine-learning/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/22/MyView/Diary/love-words/">展开全文 >></a>
         </p>
       
 
@@ -582,31 +492,33 @@
 
 
   
-    <article id="post-SmartAI/ProgramAI/Tools/techniques-of-atom-editor" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-MyView/Diary/beautiful-article-of-english" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/15/SmartAI/ProgramAI/Tools/techniques-of-atom-editor/">Atom编辑器入门到精通</a>
+      <a class="article-title" href="/2017/02/21/MyView/Diary/beautiful-article-of-english/">Beautiful articles of English</a>
     </h1>
   
 
         
-        <a href="/2017/02/15/SmartAI/ProgramAI/Tools/techniques-of-atom-editor/" class="archive-article-date">
-  	<time datetime="2017-02-15T13:38:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-15</time>
+        <a href="/2017/02/21/MyView/Diary/beautiful-article-of-english/" class="archive-article-date">
+  	<time datetime="2017-02-21T12:25:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>原文作者：<a href="http://blog.csdn.net/u010494080/article/details/50372857">PeterHo</a></p>
-<p>Atom是GitHub推出的一款编辑器, 被称为21世纪的黑客编辑器. 其主要的特点是现代, 易用, 可定制.</p>
-<p><img src="https://raw.githubusercontent.com/PeterHo/images/master/blog/editor/atom/atom_1/first-launch.png" alt=""></p>
+        <p><img src="http://okkntqe2h.bkt.clouddn.com/youthDev.jpg" alt=""></p>
+<p><a href="http://www.tingclass.net/show-6613-109419-1.html?sid=AZGF5i1d9MuL8E57a0CHYor0">Youth</a></p>
+<h2 id="001-青春"><a href="#001-青春" class="headerlink" title="001 青春"></a>001 青春</h2><p><a href="http://down010702.tingclass.net/lesson/shi0529/0001/1613/01-youth.mp3">http://down010702.tingclass.net/lesson/shi0529/0001/1613/01-youth.mp3</a></p>
+<p>Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life.</p>
+<p>青春不是年华，而是心境；青春不是桃面、丹唇、柔膝，而是深沉的意志，恢宏的想象，炙热的恋情；青春是生命的深泉在涌流。</p>
         
-          <a class="article-more-a" href="/2017/02/15/SmartAI/ProgramAI/Tools/techniques-of-atom-editor/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/21/MyView/Diary/beautiful-article-of-english/#more">more >></a>
         
       
 
@@ -620,7 +532,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Atom</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
         		</li>
       		
 		</ul>
@@ -632,7 +544,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
         		</li>
       		
 		</ul>
@@ -641,7 +553,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/15/SmartAI/ProgramAI/Tools/techniques-of-atom-editor/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/21/MyView/Diary/beautiful-article-of-english/">展开全文 >></a>
         </p>
       
 
@@ -659,34 +571,31 @@
 
 
   
-    <article id="post-SmartAI/ProgramAI/Concepts/ppt-of-andrew-ng" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Program/Android/virtual-apk" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/14/SmartAI/ProgramAI/Concepts/ppt-of-andrew-ng/">吴恩达 NIPS 2016：利用深度学习开发人工智能应用的基本要点</a>
+      <a class="article-title" href="/2017/02/20/Program/Android/virtual-apk/">VirtualAPK 滴滴 Android 插件化的实践之路</a>
     </h1>
   
 
         
-        <a href="/2017/02/14/SmartAI/ProgramAI/Concepts/ppt-of-andrew-ng/" class="archive-article-date">
-  	<time datetime="2017-02-14T06:39:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-14</time>
+        <a href="/2017/02/20/Program/Android/virtual-apk/" class="archive-article-date">
+  	<time datetime="2017-02-20T12:06:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>作者：<a href="http://www.leiphone.com/news/201612/PTmKczqq5XWr2n8c.html">雷锋网 亚峰</a></p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/58477a0d1235f.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>雷锋网(公众号：雷锋网)按：为了方便读者学习和收藏，雷锋网特地把吴恩达教授在NIPS 2016大会中的PPT做为中文版，由三川和亚峰联合编译并制作。</p>
-<p>今日，在第 30 届神经信息处理系统大会（NIPS 2016）中，百度首席科学家吴恩达教授发表演讲：《利用深度学习开发人工智能应用的基本要点（Nuts and Bolts of Building Applications using Deep Learning）》。</p>
-<p>此外，吴恩达教授曾在今年 9 月 24/25 日也发表过同为《Nuts and Bolts of Applying Deep Learning》的演讲(1小时20分钟)，以下是 YouTube 链接：</p>
-<p><a href="https://www.youtube.com/watch?v=F1ka6a13S9I">https://www.youtube.com/watch?v=F1ka6a13S9I</a></p>
+        <p>作者：<a href="http://mp.weixin.qq.com/s?__biz=MzIyNjcxODc3MA==&amp;mid=2247483684&amp;idx=1&amp;sn=c705424482f13941a9bcd6a5d6c24ed5&amp;chksm=e86d6479df1aed6f2f101a58ec7a5f839074b0209ce30c0f2d9d4e7bd2ac22937745b295c0d8#rd">singwhatiwanna DDApp</a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在Android插件化技术日新月异的今天，开发并落地一款插件化框架到底是简单还是困难，这个问题不同人会有不同的答案。但是我相信，完成一个插件化框架的demo并不是多难的事，但是要开发一款完善的插件化框架却不是一件容易的事，尤其在国内，各大Rom厂商都对Android系统做了一定程度的定制，这进一步加剧了Android本身的碎片化问题。</p>
+<p>滴滴出行在插件化上的探索起步较晚，由于滴滴业务发展较快，业务迭代占据了大量的时间，这使得我们在2016年才开始研究这方面的技术。经过半年的开发、测试、适配和线上验证，目前我们推出了一款比较完善的插件化框架：VirtualAPK。之所以现在推出来，是因为VirtualAPK在我们内部已经得到了很好的验证，我们在迭代过程中不断地做机型适配和细节特性的支持，目前已经达到一个非常稳定的状况，足以支撑滴滴部分乃至全部业务的动态发版需求。目前滴滴出行最新版本（v5.0.4）上面，小巴和接送机业务均为插件，大家可以去体验。</p>
         
-          <a class="article-more-a" href="/2017/02/14/SmartAI/ProgramAI/Concepts/ppt-of-andrew-ng/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/20/Program/Android/virtual-apk/#more">more >></a>
         
       
 
@@ -700,11 +609,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">VirtualAPK</a>
         		</li>
       		
 		</ul>
@@ -716,7 +621,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
         		</li>
       		
 		</ul>
@@ -725,89 +630,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/14/SmartAI/ProgramAI/Concepts/ppt-of-andrew-ng/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-SmartAI/ProgramAI/Resources/pytorch-of-facebook" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/14/SmartAI/ProgramAI/Resources/pytorch-of-facebook/">Facebook 发布开源框架 PyTorch</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/14/SmartAI/ProgramAI/Resources/pytorch-of-facebook/" class="archive-article-date">
-  	<time datetime="2017-02-14T05:11:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>作者：<a href="http://www.leiphone.com/news/201701/Tb4KueUFvTWNUPRb.html">雷锋网 三川</a></p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/5881deecab918.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>本周，Facebook 的 AI 研究团队发布了一个 Python 工具包，专门针对 GPU 加速的深度神经网络（DNN）编程。它有望辅助、或在一定程度上替代，现有的 Python 数学、统计库（比如 NumPy）。它实现了机器学习框架 Torch 在 Python 语言环境的执行。开发团队表示，除 Facebook之外，它还已经被推特、卡内基梅隆大学和 Salesforce 等机构采用。</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/5881df38d336d.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-        
-          <a class="article-more-a" href="/2017/02/14/SmartAI/ProgramAI/Resources/pytorch-of-facebook/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Open Source</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/14/SmartAI/ProgramAI/Resources/pytorch-of-facebook/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/20/Program/Android/virtual-apk/">展开全文 >></a>
         </p>
       
 
@@ -827,7 +650,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
     </nav>
   
 
@@ -959,35 +782,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Program</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Google</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Share</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -995,7 +790,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+                <a href="javascript:void(0)" class="js-tag color2">Google</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Business</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1007,23 +814,51 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Product</a>
+                <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Business</a>
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Program</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Share</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1035,7 +870,31 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Java Script</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">File System</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1047,26 +906,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java Script</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Caffe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CNTK</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MXNet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Torch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Scikit</a>
               </li>
              
@@ -1075,23 +914,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Neural Network</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Neural Networks</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
               <li class="article-tag-list-item">
