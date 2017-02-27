@@ -185,6 +185,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="http://tech.meituan.com/mt-mlinaction-how-to-ml.html">huawolf</a></p>
+<p><img src="http://tech.meituan.com/img/how_to_ml/extract_fea.png" alt=""></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在解决工业界问题的实战中所需的基本技术、经验和技巧。本文主要结合实际问题，概要地介绍机器学习解决实际问题的整个流程，包括对问题建模、准备训练数据、抽取特征、训练模型和优化模型等关键环节；另外几篇则会对这些关键环节进行更深入地介绍。</p>
 <p>下文分为1）机器学习的概述，2）对问题建模，3）准备训练数据，4）抽取特征，5）训练模型，6）优化模型，7）总结 共7个章节进行介绍。</p>
         
@@ -419,7 +420,6 @@
       
         <p><a href="http://tech.meituan.com/online-learning.html">孔东营</a></p>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="http://tech.meituan.com/img/online-learning/online-learning-flow.png" alt=""><br>Online Learning是工业界比较常用的机器学习算法，在很多场景下都能有很好的效果。本文主要介绍Online Learning的基本原理和两种常用的Online Learning算法：FTRL（Follow The Regularized Leader）[1]和BPR（Bayesian Probit Regression）[2]，以及Online Learning在美团移动端推荐重排序的应用。</p>
-<h2 id="什么是Online-Learning"><a href="#什么是Online-Learning" class="headerlink" title="什么是Online Learning"></a>什么是Online Learning</h2><p>准确地说，Online Learning并不是一种模型，而是一种模型的训练方法，Online Learning能够根据线上反馈数据，实时快速地进行模型调整，使得模型及时反映线上的变化，提高线上预测的准确率。Online Learning的流程包括：将模型的预测结果展现给用户，然后收集用户的反馈数据，再用来训练模型，形成闭环的系统。如上图所示：<br>
         
           <a class="article-more-a" href="/2017/02/26/BusinessAI/online-learning-in-meituan/#more">more >></a>
         
@@ -496,7 +496,6 @@
       
         <p><a href="http://tech.meituan.com/feature_pipeline.html">海文</a></p>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="http://tech.meituan.com/img/feature_pipeline/001.png" alt=""><br>外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。</p>
-<p>外卖排序系统使用GBDT（Gradient Boosting Decision Tree）树模型，比较复杂。受限于计算能力，除了上下文特征（如时间、地域、终端类型、距离等）之外，目前使用的主要是一些宽泛的统计特征，比如商家销量、商家单均价、用户的品类偏好等。这些特征的生产流程包括：离线的统计、离线到在线的同步、在线的加载等。<br><img src="http://tech.meituan.com/img/feature_pipeline/002.png" alt=""><br>   图2 特征生产流程<br>
         
           <a class="article-more-a" href="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/#more">more >></a>
         
@@ -572,6 +571,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="http://tech.meituan.com/deeplearning_application.html">文竹 李彪 晓明</a></p>
+<p>   <img src="http://tech.meituan.com/img/deeplearning_application/clicknet_framework.png" alt=""></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>近年来，深度学习在语音、图像、自然语言处理等领域取得非常突出的成果，成了最引人注目的技术热点之一。美团点评这两年在深度学习方面也进行了一些探索，其中在自然语言处理领域，我们将深度学习技术应用于文本分析、语义匹配、搜索引擎的排序模型等；在计算机视觉领域，我们将其应用于文字识别、目标检测、图像分类、图像质量排序等。下面我们就以语义匹配、图像质量排序及文字识别这三个应用场景为例，来详细介绍美团点评在深度学习技术及应用方面的经验和方法论。</p>
         
           <a class="article-more-a" href="/2017/02/26/BusinessAI/deep-learning-in-meituan/#more">more >></a>
@@ -760,11 +760,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -792,23 +792,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -816,7 +800,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -832,10 +832,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
@@ -845,6 +841,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -872,11 +872,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -900,15 +900,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
               </li>
             
             <div class="clearfix"></div>

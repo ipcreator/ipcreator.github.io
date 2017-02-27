@@ -9,25 +9,22 @@
   <title>多媒体技术基础之---色彩空间 | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="wjlkoorey
-上一篇博文里，我们已经了解到图像是如何数字化的，但是关于数字图像的存储和显示问题还没提到，但在了解数字图像的存储和显示之前，我们先得弄明白数字图像里一个让很多人迷糊的概念：色彩空间。有的技术文献里也将其表述为颜色模型、颜色空间等，说的都是同一个东西。
- 关于色彩空间，我们最熟悉的就是RGB了，即数字图像的每个像素点用3字节表示，每个字节分别表示该像素点红、绿和蓝色的分量，根据视">
+上一篇博文里，我们已经了解到图像是如何数字化的，但是关于数字图像的存储和显示问题还没提到，但在了解数字图像的存储和显示之前，我们先得弄明白数字图像里一个让很多人迷糊的概念：色彩空间。有的技术文献里也将其表述为颜色模型、颜色空间等，说的都是同一个东西。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多媒体技术基础之---色彩空间">
 <meta property="og:url" content="http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="wjlkoorey
-上一篇博文里，我们已经了解到图像是如何数字化的，但是关于数字图像的存储和显示问题还没提到，但在了解数字图像的存储和显示之前，我们先得弄明白数字图像里一个让很多人迷糊的概念：色彩空间。有的技术文献里也将其表述为颜色模型、颜色空间等，说的都是同一个东西。
- 关于色彩空间，我们最熟悉的就是RGB了，即数字图像的每个像素点用3字节表示，每个字节分别表示该像素点红、绿和蓝色的分量，根据视">
+上一篇博文里，我们已经了解到图像是如何数字化的，但是关于数字图像的存储和显示问题还没提到，但在了解数字图像的存储和显示之前，我们先得弄明白数字图像里一个让很多人迷糊的概念：色彩空间。有的技术文献里也将其表述为颜色模型、颜色空间等，说的都是同一个东西。">
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201401/9/23069658_13892831996lzw.jpg">
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201401/9/23069658_1389283153zz4y.jpg">
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201401/9/23069658_1389283170pck1.jpg">
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201401/12/23069658_13895334419ukt.jpg">
-<meta property="og:updated_time" content="2017-02-27T03:03:37.736Z">
+<meta property="og:updated_time" content="2017-02-27T05:40:39.898Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多媒体技术基础之---色彩空间">
 <meta name="twitter:description" content="wjlkoorey
-上一篇博文里，我们已经了解到图像是如何数字化的，但是关于数字图像的存储和显示问题还没提到，但在了解数字图像的存储和显示之前，我们先得弄明白数字图像里一个让很多人迷糊的概念：色彩空间。有的技术文献里也将其表述为颜色模型、颜色空间等，说的都是同一个东西。
- 关于色彩空间，我们最熟悉的就是RGB了，即数字图像的每个像素点用3字节表示，每个字节分别表示该像素点红、绿和蓝色的分量，根据视">
+上一篇博文里，我们已经了解到图像是如何数字化的，但是关于数字图像的存储和显示问题还没提到，但在了解数字图像的存储和显示之前，我们先得弄明白数字图像里一个让很多人迷糊的概念：色彩空间。有的技术文献里也将其表述为颜色模型、颜色空间等，说的都是同一个东西。">
 <meta name="twitter:image" content="http://blog.chinaunix.net/attachment/201401/9/23069658_13892831996lzw.jpg">
   
   
@@ -196,6 +193,7 @@
       
         <p><a href="http://blog.chinaunix.net/uid-23069658-id-4075912.html" target="_blank" rel="external">wjlkoorey</a></p>
 <p>上一篇博文里，我们已经了解到图像是如何数字化的，但是关于数字图像的存储和显示问题还没提到，但在了解数字图像的存储和显示之前，我们先得弄明白数字图像里一个让很多人迷糊的概念：色彩空间。有的技术文献里也将其表述为颜色模型、颜色空间等，说的都是同一个东西。<br><img src="http://blog.chinaunix.net/attachment/201401/9/23069658_13892831996lzw.jpg" alt=""></p>
+   <a id="more"></a>
 <p> 关于色彩空间，我们最熟悉的就是RGB了，即数字图像的每个像素点用3字节表示，每个字节分别表示该像素点红、绿和蓝色的分量，根据视觉三原色理论，那么这个像素点的最终颜色也就确定了下来。刚开始的时候，确实使用3个字节（3<em>8位）来分别表示一个像素里面的Red,Green和Blue的发光强度数值，后来又增加了一字节用于表示透明度，也就是在Photoshop里经常看到的Alpha值。前三个字节只表示红绿蓝三基色的值，最后一个字节表示前面三种基色叠加结果的透明度的值。在这个前提下，假如我们有一副1440</em>900分辨率的一张图片，按照RGB的方式，每个像素点用4字节表示，则这幅图片将占：1440<em>900</em>4= 5184000Byte=5MB左右的存储空间；如果是3320*1876分辨率的一张照片则高达24MB。当然，这个体积对目前的存储系统来说已经不是什么大问题了，但对我们目前的网络带宽还是提出了非常严峻的挑战。再进一步，如果我们要制作视频，按照电影理论：每秒钟至少24帧图像连续播放，人的视觉才不会感觉停留和卡顿。依然以1440×900解析率的片源为例，每秒钟的数据量则高达120MB字节！！！每秒啊，这是什么概念，如果是90分钟的总播放时长，你能想象要占多少存储空间？耗费多少网络带宽么？关于视频先搁置起来，以后再细说。</p>
 <p> 那如何在尽量不降低图片质量的情况下，如何才能最大限度的减小文件数据呢？当然，大家肯定想到应该是各种图像压缩算法该登场了。确实没错，但经过前人的实践证明，在采用RGB颜色模型记录数字图像时，无论采用何种算法，整体压缩比非常的不理想，因为原始数据确实太大了。这时候，英国著名科学家Iain Ainsworth经过大量科学研究得出了一条结论：The human visual system (HVS) is less sensitive to colour than to luminance (brightness)。也就是说 <strong>人类视觉系统对亮度的感觉比对颜色更加敏感。利用这一特性，将图像的亮度信息和颜色信息分离，并使用不同长度的bit位进行存储，这样可以在对主观感觉影响很小的前提下，更加有效的存储图像数据</strong> 因此，另一种颜色空间模型—YUV及其它的各种裂变体就如雨后春笋般遍地而生了。估计当年很多人和我一样，在学计算机多媒体信息处理这门课时，看到这个概念和后面的各种变种，那真是一个头，两个大。不过今天，我力争用最少的语言，最直白的逻辑来向大家阐述清楚这个概念。</p>
 <p>   说到YUV色彩空间，从它衍生出的其他几种颜色空间经常会让人产生混淆，最常见的就是YUV经常和YCbCr混用，还有YPbPr的出现让本来就已经很“混乱”的家族又变成了一锅浆糊。下面我们就来一一了解谈谈这几种东东。</p>
@@ -474,11 +472,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -506,23 +504,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -530,7 +512,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -546,10 +544,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
@@ -559,6 +553,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -586,11 +584,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -614,15 +612,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
               </li>
             
             <div class="clearfix"></div>

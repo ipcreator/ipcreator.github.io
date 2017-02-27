@@ -9,27 +9,24 @@
   <title>小议Linux系统下的文件系统 | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="wjlkoorey
-更多参考： 戏说文件系统之ext2【上】 戏说文件系统之ext2【下】 戏说文件系统之ext2【续】戏说文件系统之ext3【上】 
 Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的新手们就会被文件系统这个概念弄得晕头转向，恰好我当年正好属于后者。
-从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的">
+从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的一种新型的日志文件系统)，那个年代经常听到说“我要把C盘格式化成ntfs格式，D盘格式化成fat32格式”。一到Linux下，很多入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小议Linux系统下的文件系统">
 <meta property="og:url" content="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="wjlkoorey
-更多参考： 戏说文件系统之ext2【上】 戏说文件系统之ext2【下】 戏说文件系统之ext2【续】戏说文件系统之ext3【上】 
 Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的新手们就会被文件系统这个概念弄得晕头转向，恰好我当年正好属于后者。
-从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的">
+从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的一种新型的日志文件系统)，那个年代经常听到说“我要把C盘格式化成ntfs格式，D盘格式化成fat32格式”。一到Linux下，很多入">
 <meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/linux%E7%9B%AE%E5%BD%95.png">
 <meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/Linux%E4%B8%8D%E5%90%8C%E7%9A%84%E5%8F%91%E8%A1%8C%E7%89%88%E9%83%BD%E5%AD%98%E5%9C%A8%E5%A6%82%E4%B8%8B%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.jpg">
 <meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/VFS%E6%9D%A5%E5%B1%8F%E8%94%BD%E4%B8%8B%E5%B1%82%E5%90%84%E7%A7%8D%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82%E5%92%8C%E5%B7%AE%E5%BC%82.jpg">
-<meta property="og:updated_time" content="2017-02-27T01:48:25.789Z">
+<meta property="og:updated_time" content="2017-02-27T05:38:05.833Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小议Linux系统下的文件系统">
 <meta name="twitter:description" content="wjlkoorey
-更多参考： 戏说文件系统之ext2【上】 戏说文件系统之ext2【下】 戏说文件系统之ext2【续】戏说文件系统之ext3【上】 
 Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的新手们就会被文件系统这个概念弄得晕头转向，恰好我当年正好属于后者。
-从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的">
+从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的一种新型的日志文件系统)，那个年代经常听到说“我要把C盘格式化成ntfs格式，D盘格式化成fat32格式”。一到Linux下，很多入">
 <meta name="twitter:image" content="http://okkntqe2h.bkt.clouddn.com/linux%E7%9B%AE%E5%BD%95.png">
   
   
@@ -197,11 +194,11 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="http://blog.chinaunix.net/uid-23069658-id-3437835.html" target="_blank" rel="external">wjlkoorey</a></p>
-<h3 id="更多参考："><a href="#更多参考：" class="headerlink" title="更多参考："></a>更多参考：</h3><p><a href="http://blog.chinaunix.net/uid-23069658-id-3468489.html" target="_blank" rel="external"> 戏说文件系统之ext2【上】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3475672.html" target="_blank" rel="external"> 戏说文件系统之ext2【下】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3499922.html" target="_blank" rel="external"> 戏说文件系统之ext2【续】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3529783.html" target="_blank" rel="external">戏说文件系统之ext3【上】 </a></p>
 <p>Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的新手们就会被文件系统这个概念弄得晕头转向，恰好我当年正好属于后者。</p>
 <p>从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的一种新型的日志文件系统)，那个年代经常听到说“我要把C盘格式化成ntfs格式，D盘格式化成fat32格式”。一到Linux下，很多入门Linux的书籍中当牵扯到文件系统这个术语时，二话不说，不管三七二十一就给出了下面这个图，然后逐一解释一下每个目录是拿来干啥的、里面会放什么类型的文件就完事儿了，弄得初学者经常“丈二和尚摸不着头脑”。难道这就是Linux下的文件系统。而且新手一直被“灌输”一个思想：Linux下一切都是文件，不再像Windows那样用扩展名来为文件分类等等。这就让那些喜欢刨根问底的fresh-fish很是不爽，他们本着对学术的严谨、技术的狂热的态度，一心想弄明白：到底什么才是文件系统。本文的目的就是和大家分享一下我当初是如何学习Linux的文件系统的，也算是一个“老”油条的一些心得吧。</p>
 <p><img src="http://okkntqe2h.bkt.clouddn.com/linux%E7%9B%AE%E5%BD%95.png" alt=""></p>
    <a id="more"></a>
+<h3 id="更多参考："><a href="#更多参考：" class="headerlink" title="更多参考："></a>更多参考：</h3><p>   <a href="http://blog.chinaunix.net/uid-23069658-id-3468489.html" target="_blank" rel="external"> 戏说文件系统之ext2【上】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3475672.html" target="_blank" rel="external"> 戏说文件系统之ext2【下】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3499922.html" target="_blank" rel="external"> 戏说文件系统之ext2【续】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3529783.html" target="_blank" rel="external">戏说文件系统之ext3【上】 </a></p>
 <p>“文件系统”的主语是“文件”，那么文件系统的意思就是“用于管理文件的(管理)系统”，而这套管理系统所管理的对象当然就是文件了。在大多数操作系统里，“文件是数据的集合”这个基本点是一致的，而这些数据最终都是存储在存储介质里，如硬盘、光盘、U盘等。</p>
 <p>另一方面，用户在管理数据时也是文件为基本单位，他们所关心的问题是：<br>1、我的文件在什么地方放着？<br>2、我如何将数据存入某个文件？<br>3、如何从文件里将数据读出来？<br>3、不再需要的文件怎么将其删除？</p>
 <p>简而言之，文件系统就是一套用于定义文件的命名和组织数据的规范，其根本目的是便对文件进行查询和存取。</p>
@@ -479,11 +476,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -511,23 +508,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -535,7 +516,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -551,10 +548,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
@@ -564,6 +557,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -591,11 +588,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -619,15 +616,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
               </li>
             
             <div class="clearfix"></div>

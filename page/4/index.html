@@ -164,6 +164,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-BusinessAI/framework-of-get-features-in-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/">外卖排序系统特征生产框架</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/" class="archive-article-date">
+  	<time datetime="2017-02-26T14:04:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://tech.meituan.com/feature_pipeline.html">海文</a></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="http://tech.meituan.com/img/feature_pipeline/001.png" alt=""><br>外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。</p>
+        
+          <a class="article-more-a" href="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-BusinessAI/deep-learning-in-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -185,6 +261,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="http://tech.meituan.com/deeplearning_application.html">文竹 李彪 晓明</a></p>
+<p>   <img src="http://tech.meituan.com/img/deeplearning_application/clicknet_framework.png" alt=""></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>近年来，深度学习在语音、图像、自然语言处理等领域取得非常突出的成果，成了最引人注目的技术热点之一。美团点评这两年在深度学习方面也进行了一些探索，其中在自然语言处理领域，我们将深度学习技术应用于文本分析、语义匹配、搜索引擎的排序模型等；在计算机视觉领域，我们将其应用于文字识别、目标检测、图像分类、图像质量排序等。下面我们就以语义匹配、图像质量排序及文字识别这三个应用场景为例，来详细介绍美团点评在深度学习技术及应用方面的经验和方法论。</p>
         
           <a class="article-more-a" href="/2017/02/26/BusinessAI/deep-learning-in-meituan/#more">more >></a>
@@ -341,8 +418,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://tech.meituan.com/mysql-index.html">MySQL索引原理及慢查询优化</a></p>
-<p>NeverMore ·2014-06-30 18:35</p>
+        <p><a href="http://tech.meituan.com/mysql-index.html">NeverMore</a></p>
 <p>MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为绝大多数互联网公司的首选关系型数据库。虽然性能出色，但所谓“好马配好鞍”，如何能够更好的使用它，已经成为开发工程师的必修课，我们经常会从职位描述上看到诸如“精通MySQL”、“SQL语句优化”、“了解数据库原理”等要求。我们知道一般的应用系统，读写比例在10:1左右，而且插入操作和一般的更新操作很少出现性能问题，遇到最多的，也是最容易出问题的，还是一些复杂的查询操作，所以查询语句的优化显然是重中之重。</p>
 <p>本人从13年7月份起，一直在美团核心业务系统部做慢查询的优化工作，共计十余个系统，累计解决和积累了上百个慢查询案例。随着业务的复杂性提升，遇到的问题千奇百怪，五花八门，匪夷所思。本文旨在以开发工程师的角度来解释数据库索引的原理和如何优化慢查询。</p>
         
@@ -460,79 +536,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/02/26/Program/Android/history-of-v4-and-v7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Program/Android/awesome-articles-of-android" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/Program/Android/awesome-articles-of-android/">Android经典原理文章</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/26/Program/Android/awesome-articles-of-android/" class="archive-article-date">
-  	<time datetime="2017-02-26T01:04:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023" target="_blank" rel="external">Android安全攻防战，反编译与混淆技术完全解析（上）</a><br> <a href="http://blog.csdn.net/guolin_blog/article/details/50451259" target="_blank" rel="external"> Android安全攻防战，反编译与混淆技术完全解析（下）</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/Program/Android/awesome-articles-of-android/">展开全文 >></a>
         </p>
       
 
@@ -762,11 +765,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -794,23 +797,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -818,7 +805,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -834,10 +837,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
@@ -847,6 +846,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -874,11 +877,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -902,15 +905,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
               </li>
             
             <div class="clearfix"></div>

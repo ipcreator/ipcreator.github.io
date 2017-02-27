@@ -9,15 +9,13 @@
   <title>外卖排序系统特征生产框架 | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="海文
-背景外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。
-外卖排序系统使用GBDT（Gradie">
+背景外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="外卖排序系统特征生产框架">
 <meta property="og:url" content="http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="海文
-背景外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。
-外卖排序系统使用GBDT（Gradie">
+背景外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。">
 <meta property="og:image" content="http://tech.meituan.com/img/feature_pipeline/001.png">
 <meta property="og:image" content="http://tech.meituan.com/img/feature_pipeline/002.png">
 <meta property="og:image" content="http://tech.meituan.com/img/feature_pipeline/003.png">
@@ -30,12 +28,11 @@
 <meta property="og:image" content="http://tech.meituan.com/img/feature_pipeline/010.png">
 <meta property="og:image" content="http://tech.meituan.com/img/feature_pipeline/011.png">
 <meta property="og:image" content="http://tech.meituan.com/img/qrcode_for_gh.jpg">
-<meta property="og:updated_time" content="2017-02-26T14:11:46.340Z">
+<meta property="og:updated_time" content="2017-02-27T05:43:35.136Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="外卖排序系统特征生产框架">
 <meta name="twitter:description" content="海文
-背景外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。
-外卖排序系统使用GBDT（Gradie">
+背景外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。">
 <meta name="twitter:image" content="http://tech.meituan.com/img/feature_pipeline/001.png">
   
   
@@ -204,7 +201,8 @@
       
         <p><a href="http://tech.meituan.com/feature_pipeline.html" target="_blank" rel="external">海文</a></p>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="http://tech.meituan.com/img/feature_pipeline/001.png" alt=""><br>外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。</p>
-<p>外卖排序系统使用GBDT（Gradient Boosting Decision Tree）树模型，比较复杂。受限于计算能力，除了上下文特征（如时间、地域、终端类型、距离等）之外，目前使用的主要是一些宽泛的统计特征，比如商家销量、商家单均价、用户的品类偏好等。这些特征的生产流程包括：离线的统计、离线到在线的同步、在线的加载等。<br><img src="http://tech.meituan.com/img/feature_pipeline/002.png" alt=""><br>   图2 特征生产流程<br>   <a id="more"></a></p>
+   <a id="more"></a>
+<p>外卖排序系统使用GBDT（Gradient Boosting Decision Tree）树模型，比较复杂。受限于计算能力，除了上下文特征（如时间、地域、终端类型、距离等）之外，目前使用的主要是一些宽泛的统计特征，比如商家销量、商家单均价、用户的品类偏好等。这些特征的生产流程包括：离线的统计、离线到在线的同步、在线的加载等。<br><img src="http://tech.meituan.com/img/feature_pipeline/002.png" alt=""><br>   图2 特征生产流程</p>
 <p>   如上图，目前外卖排序的特征生产流程主要有：</p>
 <p>   特征统计：基于基础数据表（如曝光表、点击表、订单表等），统计若干时段内特定维度的总量、分布等，如商家月均销量、用户不同品类下单占比。统计结果存储于Hive表。这部分工作，简单的可基于ETL，复杂的可基于Spark。产出的特征可供离线训练和线上预测，本文主要围绕线上展开。<br>   特征推送：Hive表里的数据需要存入KV，以便线上实时使用。这一步，首先要将Hive表里的记录映射成POJO类（称为Domain类），然后将其序列化，最后将序列化串存入KV。这部分工作比较单一，基于MapReduce实现。<br>   特征获取：在线服务根据需求，从KV中取出数据，并反序列化为Domain对象。<br>   特征加载：针对模型所需特征列表，取得对应的Domain对象。这步通过调用特征获取实现。<br>   前两步为离线操作，后两步为在线操作。特征同步由离线推送和在线获取共同完成。离线生产流程是一个周期性的Pipeline，目前是以天为周期。</p>
 <p>   为此，我们设计了一套通用的框架，基于此框架，只需要简单的配置和少量代码开发，就可以新增一组特征。下文将详细介绍框架的各个部分。</p>
@@ -504,11 +502,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -536,23 +534,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -560,7 +542,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -576,10 +574,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
@@ -589,6 +583,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -616,11 +614,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,15 +642,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
               </li>
             
             <div class="clearfix"></div>

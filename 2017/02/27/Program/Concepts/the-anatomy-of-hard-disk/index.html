@@ -9,13 +9,16 @@
   <title>硬盘的存储原理和内部架构 | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="wjlkoorey
+
 本来想写个文件系统的专题，结果发现对硬盘的内部架构和存储原理还是比较模糊，因为不了解“一点”硬盘的存储原理对文件系统的认识老是感觉镜花水月，不踏实。经过搜集整理资料就由了本文的问世。借用Bean_lee兄一句话：成果和荣耀归于前辈。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="硬盘的存储原理和内部架构">
 <meta property="og:url" content="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="wjlkoorey
+
 本来想写个文件系统的专题，结果发现对硬盘的内部架构和存储原理还是比较模糊，因为不了解“一点”硬盘的存储原理对文件系统的认识老是感觉镜花水月，不踏实。经过搜集整理资料就由了本文的问世。借用Bean_lee兄一句话：成果和荣耀归于前辈。">
+<meta property="og:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_13533340196613.jpg">
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_135333387102xH.jpg">
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_1353333877zG6U.jpg">
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_13533338896Qgs.jpg">
@@ -25,12 +28,13 @@
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_1353334399LCDw.jpg">
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_1353333904wZ21.jpg">
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_1353334783PHx3.gif">
-<meta property="og:updated_time" content="2017-02-27T01:15:25.145Z">
+<meta property="og:updated_time" content="2017-02-27T05:39:34.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="硬盘的存储原理和内部架构">
 <meta name="twitter:description" content="wjlkoorey
+
 本来想写个文件系统的专题，结果发现对硬盘的内部架构和存储原理还是比较模糊，因为不了解“一点”硬盘的存储原理对文件系统的认识老是感觉镜花水月，不踏实。经过搜集整理资料就由了本文的问世。借用Bean_lee兄一句话：成果和荣耀归于前辈。">
-<meta name="twitter:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_135333387102xH.jpg">
+<meta name="twitter:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_13533340196613.jpg">
   
   
     <link rel="icon" href="/img/personalphoto.jpg">
@@ -197,6 +201,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="http://blog.chinaunix.net/uid-23069658-id-3413957.html" target="_blank" rel="external">wjlkoorey</a></p>
+<p><img src="http://blog.chinaunix.net/attachment/201211/19/23069658_13533340196613.jpg" alt=""></p>
 <p>本来想写个文件系统的专题，结果发现对硬盘的内部架构和存储原理还是比较模糊，因为不了解“一点”硬盘的存储原理对文件系统的认识老是感觉镜花水月，不踏实。经过搜集整理资料就由了本文的问世。借用Bean_lee兄一句话：成果和荣耀归于前辈。</p>
    <a id="more"></a>
 <p>首先，让我们看一下硬盘的发展史：<br>1956年9月13日，IBM的IBM 350 RAMAC(Random Access Method of Accounting and Control)是现代硬盘的雏形，整个硬盘需要50个直径为24英寸表面涂有磁浆的盘片，它相当于两个冰箱的体积，不过其存储容量只有5MB。<br>1971年，IBM开始采用一种名叫Merlin的技术生产硬盘，这种技术据称能使硬盘头更好地在盘片上索引。<br>1973年，IBM 3340问世，主流采用采用红色。这个大家伙每平方英寸存储1.7MB的数据，在当时已经创了一个纪录。许多公司共享这些系统，需要时按照时间和存储空间租用它。租赁价值为7.81美元每兆，这个价格比当时汽油的价格还贵38%。它拥有“温彻斯特”这个绰号，也就是我们现在所熟知的“温氏架构”。来源于它两个30MB的存储单元，恰好是当时出名的“温彻斯特来福枪”的口径和填弹量。至此，硬盘的基本架构被确立。<br>1979年，IBM发明了Thin Film磁头，使硬盘的数据定位更加准确，因此使得硬盘的密度大幅提升。<br>1980年，两位前IBM员工创立的公司开发出5.25英寸规格的5MB硬盘，这是首款面向台式机的产品，而该公司正是希捷公司（Seagate）公司。<br>1982年，日立发布了全球首款容量超过1GB的硬盘。这就是容量为1.2GB的H-8598硬盘。这块硬盘拥有10片14英寸盘片，两个读写磁头。<br>1980年代末，IBM推出MR（Magneto Resistive磁阻）技术令磁头灵敏度大大提升，使盘片的存储密度较之前的20Mbpsi（bit/每平方英寸）提高了数十倍，该技术为硬盘容量的巨大提升奠定了基础。1991年，IBM应用该技术推出了首款3.5英寸的1GB硬盘。<br>1970年到1991年，硬盘碟片的存储密度以每年25%~30%的速度增长；从1991年开始增长到60%～80%；至今，速度提升到100%甚至是200%。从1997年开始的惊人速度提升得益于IBM的GMR（Giant Magneto Resistive，巨磁阻）技术，它使磁头灵敏度进一步提升，进而提高了存储密度。<br>1993年，康诺（Conner Peripherals）推出了CP30344硬盘容量是340MB。<br>1995年，为了配合Intel的LX芯片组，昆腾与Intel携手发布UDMA 33接口—EIDE标准将原来接口数据传输率从16.6MB/s提升到了33MB/s。同年，希捷开发出液态轴承（FDB，Fluid Dynamic Bearing）马达。所谓的FDB就是指将陀螺仪上的技术引进到硬盘生产中，用厚度相当于头发直径十分之一的油膜取代金属轴承，减轻了硬盘噪音与发热量。<br>1996年，希捷收购康诺（Conner Peripherals）<br>1998年2月，UDMA 66规格面世。<br>2000年10月，迈拓（Maxtor）收购昆腾。<br>2003年1月，日立宣布完成20.5亿美元的收购IBM硬盘事业部计划，并成立日立环球存储科技公司（Hitachi Global StorageTechnologies, Hitachi GST）。<br>2005年日立环储和希捷都宣布了将开始大量采用磁盘垂直写入技术（perpendicular recording），该原理是将平行于盘片的磁场方向改变为垂直（90度），更充分地利用的存储空间。<br>2005年12月21日，希捷宣布收购迈拓（Maxtor）。<br>2007年1月，日立环球存储科技宣布将会发售全球首只1Terabyte的硬盘，比原先的预定时间迟了一年多。硬盘的售价为399美元，平均每美分可以购得27.5MB硬盘空间。<br>2011年3月，西部数据以43亿美元的价格，收购日立环球存储科技。<br>2011年4月，希捷宣布与三星强化策略伙伴关系。</p>
@@ -500,11 +505,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -532,23 +537,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -556,7 +545,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -572,10 +577,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
@@ -585,6 +586,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -612,11 +617,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -640,15 +645,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
               </li>
             
             <div class="clearfix"></div>

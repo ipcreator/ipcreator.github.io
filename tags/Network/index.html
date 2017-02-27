@@ -269,8 +269,6 @@
         <p><img src="https://www.ibm.com/developerworks/cn/linux/l-linux-networking-stack/figure2.gif" alt=""></p>
 <p>Linux的整个网络协议栈都构建与Linux Kernel中，整个栈也是严格按照分层的思想来设计的，整个栈共分为五层，分别是 ：</p>
 <p>1． 系统调用接口层，实质是一个面向用户空间应用程序的接口调用库，向用户空间应用程序提供使用网络服务的接口。<br>2． 协议无关的接口层，就是SOCKET层，这一层的目的是屏蔽底层的不同协议（更准确的来说主要是TCP与UDP，当然还包括RAW IP， SCTP等），以便与系统调用层之间的接口可以简单，统一。简单的说，不管我们应用层使用什么协议，都要通过系统调用接口来建立一个SOCKET，这个SOCKET其实是一个巨大的sock结构，它和下面一层的网络协议层联系起来，屏蔽了不同的网络协议的不同，只把数据部分呈献给应用层（通过系统调用接口来呈献）。<br>3． 网络协议实现层，毫无疑问，这是整个协议栈的核心。这一层主要实现各种网络协议，最主要的当然是IP，ICMP，ARP，RARP，TCP，UDP等。这一层包含了很多设计的技巧与算法，相当的不错。<br>4． 与具体设备无关的驱动接口层，这一层的目的主要是为了统一不同的接口卡的驱动程序与网络协议层的接口，它将各种不同的驱动程序的功能统一抽象为几个特殊的动作，如open，close，init等，这一层可以屏蔽底层不同的驱动程序。<br>5． 驱动程序层，这一层的目的就很简单了，就是建立与硬件的接口层。<br>可以看到，Linux网络协议栈是一个严格分层的结构，其中的每一层都执行相对独立的功能，结构非常清晰。<br>其中的两个“无关”层的设计非常棒，通过这两个“无关”层，其协议栈可以非常轻松的进行扩展。在我们自己的软件设计中，可以吸收这种设计方法。</p>
-<p><a href="https://www.ibm.com/developerworks/cn/linux/l-linux-networking-stack/">Linux 网络栈剖析</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3280895.html">Linux网络编程：原始套接字的魔力【上】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3283534.html">Linux网络编程：原始套接字的魔力【下】 </a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3293289.html">Linux网络编程：原始套接字的魔力【续】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3297286.html">揭开网络编程常见API的面纱【上】 </a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3300460.html">揭开网络编程常见API的面纱【下】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3276167.html">Linux网络编程：基于UDP的程序开发回顾篇 </a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3273673.html">Linux网络编程：基于TCP的程序开发回顾篇 </a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3271110.html">Linux环境下网络编程杂谈 </a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3141409.html"> linux 内核网络，数据接收流程图</a><br><a href="http://blog.csdn.net/echoisland/article/details/6993756"> linux 内核网络,数据发送流程图</a></p>
-<p><a href="http://blog.chinaunix.net/uid-23069658-id-3245853.html">(十六)洞悉linux下的Netfilter&amp;iptables：开发自己的hook函数【实战】(下)</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3243434.html">(十五)洞悉linux下的Netfilter&amp;iptables：开发自己的hook函数【实战】(上)</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3230608.html">(十四)洞悉linux下的Netfilter&amp;iptables：开发一个match模块【实战】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3225602.html">(十三)洞悉linux下的Netfilter&amp;iptables：为防火墙增添功能模块【实战】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3223404.html">(十二)洞悉linux下的Netfilter&amp;iptables：iptables命令行工具源码解析【下】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3222686.html">(十一)洞悉linux下的Netfilter&amp;iptables：iptables命令行工具源码解析【上】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3211992.html">(十)洞悉linux下的Netfilter&amp;iptables：网络地址转换原理之SNAT</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3210931.html">(九)洞悉linux下的Netfilter&amp;iptables：网络地址转换原理之DNAT</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3188216.html">(八)洞悉linux下的Netfilter&amp;iptables：状态防火墙</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3175235.html">(七)洞悉linux下的Netfilter&amp;iptables：如何理解连接跟踪机制？【下】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3173360.html">(六)洞悉linux下的Netfilter&amp;iptables：如何理解连接跟踪机制？【中】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3169450.html">(五)洞悉linux下的Netfilter&amp;iptables：如何理解连接跟踪机制？【上】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3166140.html">(四)洞悉linux下的Netfilter&amp;iptables：包过滤子系统iptable_filter</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3163999.html">(三)洞悉linux下的Netfilter&amp;iptables：内核中的rule，match和target</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3162264.html">(二)洞悉linux下的Netfilter&amp;iptables：内核中的ip_tables小觑</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3160506.html">(一)洞悉linux下的Netfilter&amp;iptables：什么是Netfilter？</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3141413.html">Linux Netfilter实现机制和扩展技术 </a></p>
         
           <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-network-programming/#more">more >></a>
         
@@ -458,11 +456,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,23 +488,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -514,7 +496,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -530,10 +528,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
@@ -543,6 +537,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -570,11 +568,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -598,15 +596,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
               </li>
             
             <div class="clearfix"></div>

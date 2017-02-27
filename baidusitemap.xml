@@ -4,8 +4,68 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Android/awesome-articles-of-android/</loc>
+    <lastmod>2017-02-27T06:24:14.661Z</lastmod>
+    <data>
+        <display>
+        <title>Android安全攻防战，反编译与混淆技术完全解析</title>
+        <pubTime>2017-02-27T05:57:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/26/BusinessAI/online-learning-in-meituan/</loc>
+    <lastmod>2017-02-27T05:44:04.666Z</lastmod>
+    <data>
+        <display>
+        <title>Online Learning算法理论与实践</title>
+        <pubTime>2017-02-26T14:13:06.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/</loc>
+    <lastmod>2017-02-27T05:43:35.136Z</lastmod>
+    <data>
+        <display>
+        <title>外卖排序系统特征生产框架</title>
+        <pubTime>2017-02-26T14:04:06.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/</loc>
-    <lastmod>2017-02-27T05:10:38.194Z</lastmod>
+    <lastmod>2017-02-27T05:43:01.735Z</lastmod>
     <data>
         <display>
         <title>实例详解机器学习如何解决问题</title>
@@ -17,6 +77,148 @@
            
              
               <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/26/BusinessAI/deep-learning-in-meituan/</loc>
+    <lastmod>2017-02-27T05:42:03.853Z</lastmod>
+    <data>
+        <display>
+        <title>深度学习在美团点评的应用</title>
+        <pubTime>2017-02-26T13:56:06.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/</loc>
+    <lastmod>2017-02-27T05:40:54.717Z</lastmod>
+    <data>
+        <display>
+        <title>MySQL索引原理及慢查询优化</title>
+        <pubTime>2017-02-26T13:27:05.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
+    <lastmod>2017-02-27T05:40:39.898Z</lastmod>
+    <data>
+        <display>
+        <title>多媒体技术基础之---色彩空间</title>
+        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
+        
+        <tag>Multimedia</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-network-programming/</loc>
+    <lastmod>2017-02-27T05:40:24.268Z</lastmod>
+    <data>
+        <display>
+        <title>Linux网络编程</title>
+        <pubTime>2017-02-27T02:11:06.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Network</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/</loc>
+    <lastmod>2017-02-27T05:39:34.066Z</lastmod>
+    <data>
+        <display>
+        <title>硬盘的存储原理和内部架构</title>
+        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
+        
+        <tag>File System</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
+    <lastmod>2017-02-27T05:39:04.098Z</lastmod>
+    <data>
+        <display>
+        <title>显示卡的“心脏” GPU工作原理介绍</title>
+        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
+        
+        <tag>GPU</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
+    <lastmod>2017-02-27T05:38:05.833Z</lastmod>
+    <data>
+        <display>
+        <title>小议Linux系统下的文件系统</title>
+        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
+        
+        <tag>File System</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -87,26 +289,6 @@
            
              
               <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/</loc>
-    <lastmod>2017-02-27T03:50:54.950Z</lastmod>
-    <data>
-        <display>
-        <title>MySQL索引原理及慢查询优化</title>
-        <pubTime>2017-02-26T13:27:05.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
           
         </display>
     </data>
@@ -711,9 +893,9 @@
         <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
         <pubTime>2017-02-19T15:59:59.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>AI</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>Business</tag>
          
@@ -790,26 +972,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/26/Program/Android/awesome-articles-of-android/</loc>
-    <lastmod>2017-02-27T03:37:06.835Z</lastmod>
-    <data>
-        <display>
-        <title>Android经典原理文章</title>
-        <pubTime>2017-02-26T01:04:05.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-sound/</loc>
     <lastmod>2017-02-27T03:36:29.623Z</lastmod>
     <data>
@@ -858,48 +1020,6 @@
         <pubTime>2017-02-27T03:04:06.000Z</pubTime>
         
         <tag>Multimedia</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
-    <lastmod>2017-02-27T03:03:37.736Z</lastmod>
-    <data>
-        <display>
-        <title>多媒体技术基础之---色彩空间</title>
-        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
-        
-        <tag>Multimedia</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-network-programming/</loc>
-    <lastmod>2017-02-27T02:57:25.029Z</lastmod>
-    <data>
-        <display>
-        <title>Linux网络编程</title>
-        <pubTime>2017-02-27T02:11:06.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>Network</tag>
          
          
            
@@ -967,66 +1087,6 @@
            
              
               <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
-    <lastmod>2017-02-27T01:48:25.789Z</lastmod>
-    <data>
-        <display>
-        <title>小议Linux系统下的文件系统</title>
-        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
-        
-        <tag>File System</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/</loc>
-    <lastmod>2017-02-27T01:15:25.145Z</lastmod>
-    <data>
-        <display>
-        <title>硬盘的存储原理和内部架构</title>
-        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
-        
-        <tag>File System</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
-    <lastmod>2017-02-27T01:04:45.652Z</lastmod>
-    <data>
-        <display>
-        <title>显示卡的“心脏” GPU工作原理介绍</title>
-        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
-        
-        <tag>GPU</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -1144,66 +1204,6 @@
         <display>
         <title>深入FFM原理与实践</title>
         <pubTime>2017-02-26T14:20:06.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/online-learning-in-meituan/</loc>
-    <lastmod>2017-02-26T14:18:45.317Z</lastmod>
-    <data>
-        <display>
-        <title>Online Learning算法理论与实践</title>
-        <pubTime>2017-02-26T14:13:06.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/</loc>
-    <lastmod>2017-02-26T14:11:46.340Z</lastmod>
-    <data>
-        <display>
-        <title>外卖排序系统特征生产框架</title>
-        <pubTime>2017-02-26T14:04:06.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/deep-learning-in-meituan/</loc>
-    <lastmod>2017-02-26T14:01:16.325Z</lastmod>
-    <data>
-        <display>
-        <title>深度学习在美团点评的应用</title>
-        <pubTime>2017-02-26T13:56:06.000Z</pubTime>
         
         <tag>Deep Learning</tag>
          
@@ -1506,6 +1506,26 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Resources/awesome-deep-learning/</loc>
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    <data>
+        <display>
+        <title>Awesome Deep Learning</title>
+        <pubTime>2017-02-19T15:56:00.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
@@ -1513,9 +1533,31 @@
         <title>深度学习框架太抽象？其实不外乎这五大核心组件</title>
         <pubTime>2017-02-19T15:57:20.000Z</pubTime>
         
+        <tag>AI</tag>
+         
         <tag>Deep Learning</tag>
          
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    <data>
+        <display>
+        <title>李开复：AI 创业的十个真相</title>
+        <pubTime>2017-02-19T15:59:58.000Z</pubTime>
+        
         <tag>AI</tag>
+         
+        <tag>Business</tag>
          
          
            
@@ -1578,72 +1620,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    <data>
-        <display>
-        <title>李开复：AI 创业的十个真相</title>
-        <pubTime>2017-02-19T15:59:58.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-        <tag>Business</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Resources/awesome-deep-learning/</loc>
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    <data>
-        <display>
-        <title>Awesome Deep Learning</title>
-        <pubTime>2017-02-19T15:56:00.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
-    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
-    <data>
-        <display>
-        <title>智能手机 + 机器学习 = 个人终端的未来</title>
-        <pubTime>2017-02-19T15:58:06.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-        <tag>Smart Phone</tag>
-         
-        <tag>Machine Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     <data>
@@ -1690,6 +1666,52 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
+    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    <data>
+        <display>
+        <title>智能手机 + 机器学习 = 个人终端的未来</title>
+        <pubTime>2017-02-19T15:58:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Smart Phone</tag>
+         
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/18/Program/Resources/big-data-resources/</loc>
+    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
+    <data>
+        <display>
+        <title>大数据/数据挖掘/推荐系统/机器学习相关资源</title>
+        <pubTime>2017-02-18T04:23:06.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>Data Mining</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     <data>
@@ -1722,28 +1744,6 @@
         <pubTime>2017-02-18T01:02:06.000Z</pubTime>
         
         <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/Resources/big-data-resources/</loc>
-    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
-    <data>
-        <display>
-        <title>大数据/数据挖掘/推荐系统/机器学习相关资源</title>
-        <pubTime>2017-02-18T04:23:06.000Z</pubTime>
-        
-        <tag>Big Data</tag>
-         
-        <tag>Data Mining</tag>
          
          
            
@@ -2223,9 +2223,9 @@
         <title>大数据深度学习下车辆厂牌型号识别</title>
         <pubTime>2017-02-13T06:30:01.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>AI</tag>
+         
+        <tag>Deep Learning</tag>
          
          
            
@@ -2619,9 +2619,9 @@
         <title>吴恩达 NIPS 2016：利用深度学习开发人工智能应用的基本要点</title>
         <pubTime>2017-02-14T06:39:06.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>AI</tag>
+         
+        <tag>Deep Learning</tag>
          
          
            

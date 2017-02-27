@@ -2,9 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Android/awesome-articles-of-android/</loc>
+    
+    <lastmod>2017-02-27T06:24:14.661Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/26/BusinessAI/online-learning-in-meituan/</loc>
+    
+    <lastmod>2017-02-27T05:44:04.666Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/</loc>
+    
+    <lastmod>2017-02-27T05:43:35.136Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/</loc>
     
-    <lastmod>2017-02-27T05:10:38.194Z</lastmod>
+    <lastmod>2017-02-27T05:43:01.735Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/26/BusinessAI/deep-learning-in-meituan/</loc>
+    
+    <lastmod>2017-02-27T05:42:03.853Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/</loc>
+    
+    <lastmod>2017-02-27T05:40:54.717Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
+    
+    <lastmod>2017-02-27T05:40:39.898Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-network-programming/</loc>
+    
+    <lastmod>2017-02-27T05:40:24.268Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/</loc>
+    
+    <lastmod>2017-02-27T05:39:34.066Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
+    
+    <lastmod>2017-02-27T05:39:04.098Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
+    
+    <lastmod>2017-02-27T05:38:05.833Z</lastmod>
     
   </url>
   
@@ -26,13 +96,6 @@
     <loc>http://ipcreator.me/2017/02/13/Program/Resources/ai-and-machine-learning-need-more-open-sources/</loc>
     
     <lastmod>2017-02-27T03:51:39.014Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/</loc>
-    
-    <lastmod>2017-02-27T03:50:54.950Z</lastmod>
     
   </url>
   
@@ -268,13 +331,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/26/Program/Android/awesome-articles-of-android/</loc>
-    
-    <lastmod>2017-02-27T03:37:06.835Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-sound/</loc>
     
     <lastmod>2017-02-27T03:36:29.623Z</lastmod>
@@ -296,20 +352,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
-    
-    <lastmod>2017-02-27T03:03:37.736Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-network-programming/</loc>
-    
-    <lastmod>2017-02-27T02:57:25.029Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-linux-library/</loc>
     
     <lastmod>2017-02-27T02:37:50.307Z</lastmod>
@@ -327,27 +369,6 @@
     <loc>http://ipcreator.me/2017/02/22/MyView/Diary/love-sentencns/</loc>
     
     <lastmod>2017-02-27T01:49:54.249Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
-    
-    <lastmod>2017-02-27T01:48:25.789Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/</loc>
-    
-    <lastmod>2017-02-27T01:15:25.145Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
-    
-    <lastmod>2017-02-27T01:04:45.652Z</lastmod>
     
   </url>
   
@@ -390,27 +411,6 @@
     <loc>http://ipcreator.me/2017/02/26/BusinessAI/ffm-learning-in-meituan/</loc>
     
     <lastmod>2017-02-26T14:23:22.429Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/online-learning-in-meituan/</loc>
-    
-    <lastmod>2017-02-26T14:18:45.317Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/</loc>
-    
-    <lastmod>2017-02-26T14:11:46.340Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/deep-learning-in-meituan/</loc>
-    
-    <lastmod>2017-02-26T14:01:16.325Z</lastmod>
     
   </url>
   
@@ -513,7 +513,21 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Resources/awesome-deep-learning/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -534,27 +548,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Resources/awesome-deep-learning/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
@@ -569,6 +562,20 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/18/Program/Resources/big-data-resources/</loc>
+    
+    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
@@ -577,13 +584,6 @@
   
   <url>
     <loc>http://ipcreator.me/2017/02/18/Program/Resources/tools-of-python/</loc>
-    
-    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/Resources/big-data-resources/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     

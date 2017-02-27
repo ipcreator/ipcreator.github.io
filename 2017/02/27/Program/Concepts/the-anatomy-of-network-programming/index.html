@@ -39,7 +39,7 @@
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201208/3/23069658_134400554217ZM.jpg">
 <meta property="og:image" content="http://blog.csdn.net/images/blog_csdn_net/cz_hyf/receive.gif">
 <meta property="og:image" content="http://blog.csdn.net/images/blog_csdn_net/cz_hyf/send.gif">
-<meta property="og:updated_time" content="2017-02-27T02:57:25.029Z">
+<meta property="og:updated_time" content="2017-02-27T05:40:24.268Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux网络编程">
 <meta name="twitter:description" content="Linux的整个网络协议栈都构建与Linux Kernel中，整个栈也是严格按照分层的思想来设计的，整个栈共分为五层，分别是 ：
@@ -213,9 +213,9 @@
         <p><img src="https://www.ibm.com/developerworks/cn/linux/l-linux-networking-stack/figure2.gif" alt=""></p>
 <p>Linux的整个网络协议栈都构建与Linux Kernel中，整个栈也是严格按照分层的思想来设计的，整个栈共分为五层，分别是 ：</p>
 <p>1． 系统调用接口层，实质是一个面向用户空间应用程序的接口调用库，向用户空间应用程序提供使用网络服务的接口。<br>2． 协议无关的接口层，就是SOCKET层，这一层的目的是屏蔽底层的不同协议（更准确的来说主要是TCP与UDP，当然还包括RAW IP， SCTP等），以便与系统调用层之间的接口可以简单，统一。简单的说，不管我们应用层使用什么协议，都要通过系统调用接口来建立一个SOCKET，这个SOCKET其实是一个巨大的sock结构，它和下面一层的网络协议层联系起来，屏蔽了不同的网络协议的不同，只把数据部分呈献给应用层（通过系统调用接口来呈献）。<br>3． 网络协议实现层，毫无疑问，这是整个协议栈的核心。这一层主要实现各种网络协议，最主要的当然是IP，ICMP，ARP，RARP，TCP，UDP等。这一层包含了很多设计的技巧与算法，相当的不错。<br>4． 与具体设备无关的驱动接口层，这一层的目的主要是为了统一不同的接口卡的驱动程序与网络协议层的接口，它将各种不同的驱动程序的功能统一抽象为几个特殊的动作，如open，close，init等，这一层可以屏蔽底层不同的驱动程序。<br>5． 驱动程序层，这一层的目的就很简单了，就是建立与硬件的接口层。<br>可以看到，Linux网络协议栈是一个严格分层的结构，其中的每一层都执行相对独立的功能，结构非常清晰。<br>其中的两个“无关”层的设计非常棒，通过这两个“无关”层，其协议栈可以非常轻松的进行扩展。在我们自己的软件设计中，可以吸收这种设计方法。</p>
-<p><a href="https://www.ibm.com/developerworks/cn/linux/l-linux-networking-stack/" target="_blank" rel="external">Linux 网络栈剖析</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3280895.html" target="_blank" rel="external">Linux网络编程：原始套接字的魔力【上】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3283534.html" target="_blank" rel="external">Linux网络编程：原始套接字的魔力【下】 </a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3293289.html" target="_blank" rel="external">Linux网络编程：原始套接字的魔力【续】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3297286.html" target="_blank" rel="external">揭开网络编程常见API的面纱【上】 </a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3300460.html" target="_blank" rel="external">揭开网络编程常见API的面纱【下】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3276167.html" target="_blank" rel="external">Linux网络编程：基于UDP的程序开发回顾篇 </a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3273673.html" target="_blank" rel="external">Linux网络编程：基于TCP的程序开发回顾篇 </a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3271110.html" target="_blank" rel="external">Linux环境下网络编程杂谈 </a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3141409.html" target="_blank" rel="external"> linux 内核网络，数据接收流程图</a><br><a href="http://blog.csdn.net/echoisland/article/details/6993756" target="_blank" rel="external"> linux 内核网络,数据发送流程图</a></p>
-<p><a href="http://blog.chinaunix.net/uid-23069658-id-3245853.html" target="_blank" rel="external">(十六)洞悉linux下的Netfilter&amp;iptables：开发自己的hook函数【实战】(下)</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3243434.html" target="_blank" rel="external">(十五)洞悉linux下的Netfilter&amp;iptables：开发自己的hook函数【实战】(上)</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3230608.html" target="_blank" rel="external">(十四)洞悉linux下的Netfilter&amp;iptables：开发一个match模块【实战】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3225602.html" target="_blank" rel="external">(十三)洞悉linux下的Netfilter&amp;iptables：为防火墙增添功能模块【实战】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3223404.html" target="_blank" rel="external">(十二)洞悉linux下的Netfilter&amp;iptables：iptables命令行工具源码解析【下】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3222686.html" target="_blank" rel="external">(十一)洞悉linux下的Netfilter&amp;iptables：iptables命令行工具源码解析【上】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3211992.html" target="_blank" rel="external">(十)洞悉linux下的Netfilter&amp;iptables：网络地址转换原理之SNAT</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3210931.html" target="_blank" rel="external">(九)洞悉linux下的Netfilter&amp;iptables：网络地址转换原理之DNAT</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3188216.html" target="_blank" rel="external">(八)洞悉linux下的Netfilter&amp;iptables：状态防火墙</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3175235.html" target="_blank" rel="external">(七)洞悉linux下的Netfilter&amp;iptables：如何理解连接跟踪机制？【下】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3173360.html" target="_blank" rel="external">(六)洞悉linux下的Netfilter&amp;iptables：如何理解连接跟踪机制？【中】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3169450.html" target="_blank" rel="external">(五)洞悉linux下的Netfilter&amp;iptables：如何理解连接跟踪机制？【上】</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3166140.html" target="_blank" rel="external">(四)洞悉linux下的Netfilter&amp;iptables：包过滤子系统iptable_filter</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3163999.html" target="_blank" rel="external">(三)洞悉linux下的Netfilter&amp;iptables：内核中的rule，match和target</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3162264.html" target="_blank" rel="external">(二)洞悉linux下的Netfilter&amp;iptables：内核中的ip_tables小觑</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3160506.html" target="_blank" rel="external">(一)洞悉linux下的Netfilter&amp;iptables：什么是Netfilter？</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3141413.html" target="_blank" rel="external">Linux Netfilter实现机制和扩展技术 </a></p>
    <a id="more"></a>
+<h3 id="更多参考："><a href="#更多参考：" class="headerlink" title="更多参考："></a>更多参考：</h3><p>   <a href="https://www.ibm.com/developerworks/cn/linux/l-linux-networking-stack/" target="_blank" rel="external">Linux 网络栈剖析</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3280895.html" target="_blank" rel="external">Linux网络编程：原始套接字的魔力【上】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3283534.html" target="_blank" rel="external">Linux网络编程：原始套接字的魔力【下】 </a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3293289.html" target="_blank" rel="external">Linux网络编程：原始套接字的魔力【续】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3297286.html" target="_blank" rel="external">揭开网络编程常见API的面纱【上】 </a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3300460.html" target="_blank" rel="external">揭开网络编程常见API的面纱【下】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3276167.html" target="_blank" rel="external">Linux网络编程：基于UDP的程序开发回顾篇 </a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3273673.html" target="_blank" rel="external">Linux网络编程：基于TCP的程序开发回顾篇 </a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3271110.html" target="_blank" rel="external">Linux环境下网络编程杂谈 </a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3141409.html" target="_blank" rel="external"> linux 内核网络，数据接收流程图</a><br>   <a href="http://blog.csdn.net/echoisland/article/details/6993756" target="_blank" rel="external"> linux 内核网络,数据发送流程图</a></p>
+<p>   <a href="http://blog.chinaunix.net/uid-23069658-id-3245853.html" target="_blank" rel="external">(十六)洞悉linux下的Netfilter&amp;iptables：开发自己的hook函数【实战】(下)</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3243434.html" target="_blank" rel="external">(十五)洞悉linux下的Netfilter&amp;iptables：开发自己的hook函数【实战】(上)</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3230608.html" target="_blank" rel="external">(十四)洞悉linux下的Netfilter&amp;iptables：开发一个match模块【实战】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3225602.html" target="_blank" rel="external">(十三)洞悉linux下的Netfilter&amp;iptables：为防火墙增添功能模块【实战】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3223404.html" target="_blank" rel="external">(十二)洞悉linux下的Netfilter&amp;iptables：iptables命令行工具源码解析【下】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3222686.html" target="_blank" rel="external">(十一)洞悉linux下的Netfilter&amp;iptables：iptables命令行工具源码解析【上】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3211992.html" target="_blank" rel="external">(十)洞悉linux下的Netfilter&amp;iptables：网络地址转换原理之SNAT</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3210931.html" target="_blank" rel="external">(九)洞悉linux下的Netfilter&amp;iptables：网络地址转换原理之DNAT</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3188216.html" target="_blank" rel="external">(八)洞悉linux下的Netfilter&amp;iptables：状态防火墙</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3175235.html" target="_blank" rel="external">(七)洞悉linux下的Netfilter&amp;iptables：如何理解连接跟踪机制？【下】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3173360.html" target="_blank" rel="external">(六)洞悉linux下的Netfilter&amp;iptables：如何理解连接跟踪机制？【中】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3169450.html" target="_blank" rel="external">(五)洞悉linux下的Netfilter&amp;iptables：如何理解连接跟踪机制？【上】</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3166140.html" target="_blank" rel="external">(四)洞悉linux下的Netfilter&amp;iptables：包过滤子系统iptable_filter</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3163999.html" target="_blank" rel="external">(三)洞悉linux下的Netfilter&amp;iptables：内核中的rule，match和target</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3162264.html" target="_blank" rel="external">(二)洞悉linux下的Netfilter&amp;iptables：内核中的ip_tables小觑</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3160506.html" target="_blank" rel="external">(一)洞悉linux下的Netfilter&amp;iptables：什么是Netfilter？</a><br>   <a href="http://blog.chinaunix.net/uid-23069658-id-3141413.html" target="_blank" rel="external">Linux Netfilter实现机制和扩展技术 </a></p>
 <h2 id="协议简介"><a href="#协议简介" class="headerlink" title="协议简介"></a>协议简介</h2><p>虽然对于网络的正式介绍一般都参考了 OSI（Open Systems Interconnection）模型，但是本文对 Linux 中基本网络栈的介绍分为四层的 Internet 模型（如图 1 所示）。<br><img src="https://www.ibm.com/developerworks/cn/linux/l-linux-networking-stack/figure1.gif" alt=""><br>图 1. 网络栈的 Internet 模型<br>网络栈的 Internet 模型<br>这个栈的最底部是链路层。链路层是指提供对物理层访问的设备驱动程序，这可以是各种介质，例如串口链路或以太网设备。链路层上面是网络层，它负责将报文定向到目标位置。再上一层称为传输层，负责端到端的通信（例如，在一台主机内部）。尽管网络层负责管理主机之间的通信，但是传输层需要负责管理主机内部各端之间的通信。最后一层是应用层，它通常是一个语义层，能够理解要传输的数据。例如，超文本传输协议（HTTP）就负责传输服务器和客户机之间对 Web 内容的请求与响应。<br>实际来说，网络栈的各个层次有一些更为人所熟知的名字。在链路层上，可以找到以太网，这是最常用的一种高速介质。更早的链路层协议包括一些串口协议，例如 SLIP（Serial Line Internet Protocol）、CSLIP（Compressed SLIP）和PPP（Point-to-Point Protocol）。最常见的网络层协议是 IP（Internet Protocol），但是网络层中还存在一些满足其他需求的协议，例如 ICMP（Internet Control Message Protocol）和ARP（ Address Resolution Protocol）。在传输层上是 TCP（Transmission Control Protocol）和 UDP（User Datagram Protocol）。最后，应用层中包含很多大家都非常熟悉的协议，包括标准的 Web 协议 HTTP 和电子邮件协议 SMTP（Simple Mail Transfer Protocol）。</p>
 <h2 id="核心网络架构"><a href="#核心网络架构" class="headerlink" title="核心网络架构"></a>核心网络架构</h2><p>现在继续了解 Linux 网络栈的架构以及如何实现这种 Internet 模型。图 2 提供了 Linux 网络栈的高级视图。最上面是用户空间层，或称为应用层，其中定义了网络栈的用户。底部是物理设备，提供了对网络的连接能力（串口或诸如以太网之类的高速网络）。中间是内核空间，即网络子系统，也是本文介绍的重点。流经网络栈内部的是 socket 缓冲区（sk_buffs），它负责在源和汇点之间传递报文数据。您很快就将看到 sk_buff 的结构。<br><img src="https://www.ibm.com/developerworks/cn/linux/l-linux-networking-stack/figure2.gif" alt=""><br>图 2. Linux 高级网络栈架构<br>Linux 高级网络栈架构<br>首先，让我们来快速浏览一下 Linux 网络子系统的核心元素，后续章节中会更详细进行介绍。顶部（请参阅图 2）是系统调用接口。它简单地为用户空间的应用程序提供了一种访问内核网络子系统的方法。位于其下面的是一个协议无关层，它提供了一种通用方法来使用底层传输层协议。然后是实际协议，在 Linux 中包括内嵌的协议 TCP、UDP，当然还有 IP。然后是另外一个协议无关层，提供了与各个设备驱动程序通信的通用接口，最下面是设备驱动程序本身。</p>
 <h2 id="系统调用接口"><a href="#系统调用接口" class="headerlink" title="系统调用接口"></a>系统调用接口</h2><p>系统调用接口可以从两个角度进行描述。用户发起网络调用时，通过系统调用接口进入内核的过程应该是多路的。最后调用 ./net/socket.c 中的 sys_socketcall 结束该过程，然后进一步将调用分路发送到指定目标。系统调用接口的另一种描述是使用普通文件操作作为网络 I/O。例如，典型的读写操作可以在网络 socket 上执行（socket 使用一个文件描述符表示，与一个普通文件一样）。因此，尽管有很多操作是网络专用的（使用 socket 调用创建一个 socket，使用 connect 调用连接一个收信方，等等），但是也有一些标准的文件操作可以应用于网络对象，就像操作普通文件一样。最后，系统调用接口提供了在用户空间应用程序和内核之间转移控制的方法。</p>
@@ -529,11 +529,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -561,23 +561,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -585,7 +569,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -601,10 +601,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
@@ -614,6 +610,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -641,11 +641,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -669,15 +669,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
               </li>
             
             <div class="clearfix"></div>

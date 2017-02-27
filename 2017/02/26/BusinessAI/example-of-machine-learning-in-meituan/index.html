@@ -9,13 +9,16 @@
   <title>实例详解机器学习如何解决问题 | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="huawolf
-前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在">
+
+前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实例详解机器学习如何解决问题">
 <meta property="og:url" content="http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="huawolf
-前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在">
+
+前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习">
+<meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/extract_fea.png">
 <meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/model.png">
 <meta property="og:image" content="http://latex.codecogs.com/png.latex?h_{w}\left%20(%20x%20\right%20">
 <meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/deal_problem.png">
@@ -28,12 +31,13 @@
 <meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/coordinate_descent.jpg">
 <meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/underfitting_overfitting.png">
 <meta property="og:image" content="http://tech.meituan.com/img/qrcode_for_gh.jpg">
-<meta property="og:updated_time" content="2017-02-27T05:10:38.194Z">
+<meta property="og:updated_time" content="2017-02-27T05:43:01.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实例详解机器学习如何解决问题">
 <meta name="twitter:description" content="huawolf
-前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在">
-<meta name="twitter:image" content="http://tech.meituan.com/img/how_to_ml/model.png">
+
+前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习">
+<meta name="twitter:image" content="http://tech.meituan.com/img/how_to_ml/extract_fea.png">
   
   
     <link rel="icon" href="/img/personalphoto.jpg">
@@ -200,6 +204,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="http://tech.meituan.com/mt-mlinaction-how-to-ml.html" target="_blank" rel="external">huawolf</a></p>
+<p><img src="http://tech.meituan.com/img/how_to_ml/extract_fea.png" alt=""></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在解决工业界问题的实战中所需的基本技术、经验和技巧。本文主要结合实际问题，概要地介绍机器学习解决实际问题的整个流程，包括对问题建模、准备训练数据、抽取特征、训练模型和优化模型等关键环节；另外几篇则会对这些关键环节进行更深入地介绍。</p>
 <p>下文分为1）机器学习的概述，2）对问题建模，3）准备训练数据，4）抽取特征，5）训练模型，6）优化模型，7）总结 共7个章节进行介绍。</p>
 <a id="more"></a>
@@ -266,8 +271,7 @@ DEAL B2属于POIB，人均50以上，访购率底；
 <li>降维（如对特征进行聚类、主题模型进行处理等）</li>
 <li>提高正则项的惩罚参数</li>
 <li>减少训练迭代次数</li>
-<li>换更“简单”的模型（如把非线性模型换为线性模型）</li>
-<li><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>综上所述，机器学习解决问题涉及到问题建模、准备训练数据、抽取特征、训练模型和优化模型等关键环节，有如下要点：</li>
+<li>换更“简单”的模型（如把非线性模型换为线性模型）<br>4.<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>综上所述，机器学习解决问题涉及到问题建模、准备训练数据、抽取特征、训练模型和优化模型等关键环节，有如下要点：</li>
 </ol>
 <p>理解业务，分解业务目标，规划模型可预估的路线图。<br>数据：<br>y数据尽可能真实客观；<br>训练集/测试集分布与线上应用环境的数据分布尽可能一致。<br>特征：<br>利用Domain Knowledge进行特征抽取和选择；<br>针对不同类型的模型设计不同的特征。<br>模型：<br>针对不同业务目标、不同数据和特征，选择不同的模型；<br>如果模型不符合预期，一定检查一下数据、特征、模型等处理环节是否有bug；<br>考虑模型Underfitting和Qverfitting，针对性地优化。</p>
 <p>不想错过技术博客更新？想给文章评论、和作者互动？第一时间获取技术沙龙信息？</p>
@@ -367,11 +371,11 @@ DEAL B2属于POIB，人均50以上，访购率底；
   
 <nav id="article-nav">
   
-    <a href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          聊聊clean code
+          Android硬件加速原理与实现简介
         
       </div>
     </a>
@@ -541,11 +545,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color4">Deep Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -573,23 +577,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Growing Up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Management</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -597,7 +585,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Management</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Share</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -613,10 +617,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Education</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">VirtualAPK</a>
               </li>
              
@@ -626,6 +626,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Education</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -653,11 +657,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -681,15 +685,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
               </li>
             
             <div class="clearfix"></div>
