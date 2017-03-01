@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/learn-journey-of-git/</loc>
+    
+    <lastmod>2017-03-01T11:06:58.928Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/</loc>
+    
+    <lastmod>2017-03-01T10:30:35.885Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/20/MyView/Diary/my-views-of-learning-program/</loc>
+    
+    <lastmod>2017-02-28T23:19:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Android/awesome-articles-of-android/</loc>
     
     <lastmod>2017-02-27T06:24:14.661Z</lastmod>
@@ -324,13 +345,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/20/MyView/Diary/my-views-of-learning-program/</loc>
-    
-    <lastmod>2017-02-27T03:40:16.598Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-sound/</loc>
     
     <lastmod>2017-02-27T03:36:29.623Z</lastmod>
@@ -457,13 +471,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/learn-journey-of-git/</loc>
-    
-    <lastmod>2017-02-22T13:06:46.711Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/20/Program/Concepts/learn-journey-of-javascript/</loc>
     
     <lastmod>2017-02-22T06:31:57.155Z</lastmod>
@@ -513,6 +520,13 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Resources/20-open-source-projects-of-machine-learning/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/Resources/awesome-deep-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
@@ -541,20 +555,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Resources/20-open-source-projects-of-machine-learning/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/19/BusinessAI/ai-on-terminal-of-google/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
@@ -569,14 +569,21 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/Resources/big-data-resources/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/Resources/big-data-resources/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     

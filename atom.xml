@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-02-27T06:24:14.661Z</updated>
+  <updated>2017-03-01T10:30:35.885Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Coding心得</title>
+    <link href="http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/"/>
+    <id>http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/</id>
+    <published>2017-12-31T15:59:06.000Z</published>
+    <updated>2017-03-01T10:30:35.885Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/thanks.png" alt=""></p>
+<p>站在巨人的肩上，才有可能在有限的时间里取得最大的成绩…</p>
+ <a id="more"></a>
+<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><p><img src="http://okkntqe2h.bkt.clouddn.com/nougat_bg.jpg" alt=""><br><a href="https://developer.android.com/index.html" target="_blank" rel="external">Android</a>——See what’s new with Android - from phones to watches and more.<br><a href="http://blog.csdn.net/guolin_blog" target="_blank" rel="external">郭霖的专栏</a>——每当你在感叹，如果有这样一个东西就好了的时候，请注意，其实这是你的机会<br><a href="http://blog.csdn.net/luoshengyang" target="_blank" rel="external">老罗的Android之旅</a>——爱生活，爱Android</p>
+<h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><p><img src="https://camo.githubusercontent.com/ee91ac3c9f5ad840ebf70b54284498fe0e6ddb92/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f7472616e73702e706e67" alt=""><br><a href="https://www.tensorflow.org/" target="_blank" rel="external">TensorFlow</a>——An open-source software library for Machine Intelligence<br><a href="https://github.com/tensorflow/tensorflow" target="_blank" rel="external">tensorflow</a><br><a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples" target="_blank" rel="external">tensorflow examples</a><br><a href="https://github.com/miyosuda/TensorFlowAndroidDemo" target="_blank" rel="external">TensorFlowAndroidDemo</a><br><a href="https://github.com/miyosuda/TensorFlowAndroidMNIST" target="_blank" rel="external">TensorFlowAndroidMNIST</a><br><a href="http://wiki.jikexueyuan.com/project/tensorflow-zh/" target="_blank" rel="external">TensorFlow 官方文档中文版</a><br><a href="https://github.com/tobegit3hub/deep_recommend_system" target="_blank" rel="external">deep_recommend_system</a><br><a href="https://github.com/FishermanZzhang/ID-Card_with_TensorFlow_Opencv_in_Android" target="_blank" rel="external">ID-Card_with_TensorFlow_Opencv_in_Android</a><br><a href="https://github.com/natanielruiz/android-yolo" target="_blank" rel="external">android-yolo</a>——Real-time object detection on Android using the YOLO network with TensorFlow<br><a href="https://github.com/dongchangzhang/NewFeelings" target="_blank" rel="external">NewFeelings</a>——Android平台相册应用，使用Google开源机器学习框架tensorflow处理图片以提供更好的图片浏览体验<br><a href="https://github.com/aerdy/Android-Tensorflow-Sample" target="_blank" rel="external">TensorFlow Android Camera Demo</a></p>
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><p><img src="http://okkntqe2h.bkt.clouddn.com/github-logo.jpg" alt=""><br><a href="https://github.com/" target="_blank" rel="external">Github</a><br><a href="https://coding.net/" target="_blank" rel="external">Coding</a><br><a href="http://stackoverflow.com/" target="_blank" rel="external">Stack Overflow</a><br><a href="http://www.google.com/ncr" target="_blank" rel="external">Google</a><br><a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" target="_blank" rel="external">English</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a><br><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="external">Python教程</a><br><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">hexo-theme-yilia</a><br><a href="https://atom.io/" target="_blank" rel="external">atom</a>——A hackable text editor<br>for the 21st Century</p>
+<h2 id="Open-Source"><a href="#Open-Source" class="headerlink" title="Open Source"></a>Open Source</h2><p><img src="http://okkntqe2h.bkt.clouddn.com/Example1.gif" alt=""><br><a href="https://github.com/airbnb/lottie-android" target="_blank" rel="external">lottie-android</a><br><a href="https://github.com/zhongyao/Android-Universal-Image-Loader" target="_blank" rel="external">Android-Universal-Image-Loader</a><br><a href="https://github.com/koral--/android-gif-drawable" target="_blank" rel="external">android-gif-drawable</a><br><a href="https://github.com/wasabeef/awesome-android-ui" target="_blank" rel="external">awesome-android-ui</a><br><a href="https://github.com/Trinea/android-open-project" target="_blank" rel="external">android-open-project</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/thanks.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;站在巨人的肩上，才有可能在有限的时间里取得最大的成绩…&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Growing Up" scheme="http://ipcreator.me/tags/Growing-Up/"/>
+    
+  </entry>
   
   <entry>
     <title>Android安全攻防战，反编译与混淆技术完全解析</title>
@@ -2775,7 +2805,7 @@ public void thisIsSuper() {
     <link href="http://ipcreator.me/2017/02/20/MyView/Diary/my-views-of-learning-program/"/>
     <id>http://ipcreator.me/2017/02/20/MyView/Diary/my-views-of-learning-program/</id>
     <published>2017-02-20T03:28:06.000Z</published>
-    <updated>2017-02-27T03:40:16.598Z</updated>
+    <updated>2017-02-28T23:19:40.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/Hello%20World%20Program%20in%20Eight%20Different%20Popular%20Programming%20Languages.jpg" alt=""></p>
 <p>作者：<a href="http://ipcreator.me">IPCreator</a></p>
@@ -2801,7 +2831,7 @@ public void thisIsSuper() {
 </blockquote>
  <a id="more"></a>
 <blockquote>
-<p>RTFC Read the fucking code.<br>RTFM Read the fucking manual.<br>STFW Search the fucking Web.<br>Read  the article word by word.<br>Code can talk, let the code talk.<br>Keep code  simple and reusable.<br>Keep hungry, Keep foolish.<br>Keep healthy and sustainable.<br>Less  is  more, slow is quick.<br>Don’t Reinvent the Wheel.<br>Use is the best way of learning English , so is programming.<br>Master the essence of  things, including languages (English/C/C++/JAVA/PYTHON/JS…)，<br>platforms(Arena/Android/Tensor…)，tools(gcc/make/gradle/git…),etc<br>We make good habits first, then habits make us.<br>Success is a habit, so is happiness.</p>
+<p>Dreams cann’t measured by S/A/B/C/D degree、money and position.<br>Great mind thinks alike.<br>RTFC Read the fucking code.<br>RTFM Read the fucking manual.<br>STFW Search the fucking Web.<br>Read  the article word by word.<br>Code can talk, let the code talk.<br>A good name tells the truth.<br>Keep code  simple and reusable.<br>Keep hungry, Keep foolish.<br>Keep healthy and sustainable.<br>Less  is  more, slow is quick.<br>Don’t Reinvent the Wheel.<br>Use is the best way of learning English , so is programming.<br>Master the essence of  things, including languages (English/C/C++/JAVA/PYTHON/JS…)，<br>platforms(Arena/Android/Tensor…)，tools(gcc/make/gradle/git…),etc<br>We make good habits first, then habits make us.<br>Success is a habit, so is happiness.</p>
 </blockquote>
 <h2 id="The-true-joy-of-life-is-the-trip"><a href="#The-true-joy-of-life-is-the-trip" class="headerlink" title="The true joy of life is the trip."></a>The true joy of life is the trip.</h2><h2 id="The-station-is-only-a-dream-It-constantly-outdistances-us"><a href="#The-station-is-only-a-dream-It-constantly-outdistances-us" class="headerlink" title="The station is only a dream. It constantly outdistances us."></a>The station is only a dream. It constantly outdistances us.</h2><blockquote>
 <p>Happy is a duty.</p>
@@ -3039,77 +3069,6 @@ public void thisIsSuper() {
   </entry>
   
   <entry>
-    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
-    <link href="http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/"/>
-    <id>http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/</id>
-    <published>2017-02-19T15:59:59.000Z</published>
-    <updated>2017-02-27T03:43:44.623Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
-<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
-<p>作者：傅盛</p>
-<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
-<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
-<p>怎么思考呢?我讲几个关键点。</p>
-<a id="more"></a>
-<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
-<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
-<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
-<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
-<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
-<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
-<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
-<p>这才有了一句流行语——Welcome to the GPU world.</p>
-<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
-<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
-<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
-<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
-<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
-<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
-<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
-<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
-<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
-<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
-<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
-<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
-<p>为什么要异构?</p>
-<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
-<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
-<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
-<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
-<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
-<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
-<p>我认为，只要需求越多，它就会越来越准。</p>
-<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
-<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
-<p>漫漫长路，才刚刚开始。<br>End.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;作者：傅盛&lt;/p&gt;
-&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
-&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
-&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
-    
-      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
-    
-  </entry>
-  
-  <entry>
     <title>人工智能的黄金时代</title>
     <link href="http://ipcreator.me/2017/02/19/BusinessAI/golden-age-of-artificial-intelligence/"/>
     <id>http://ipcreator.me/2017/02/19/BusinessAI/golden-age-of-artificial-intelligence/</id>
@@ -3277,6 +3236,77 @@ public void thisIsSuper() {
     
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
+    <link href="http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/"/>
+    <id>http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/</id>
+    <published>2017-02-19T15:59:59.000Z</published>
+    <updated>2017-02-27T03:43:44.623Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
+<p>作者：傅盛</p>
+<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
+<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
+<p>怎么思考呢?我讲几个关键点。</p>
+<a id="more"></a>
+<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
+<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
+<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
+<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
+<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
+<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
+<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
+<p>这才有了一句流行语——Welcome to the GPU world.</p>
+<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
+<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
+<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
+<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
+<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
+<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
+<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
+<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
+<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
+<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
+<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
+<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
+<p>为什么要异构?</p>
+<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
+<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
+<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
+<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
+<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
+<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
+<p>我认为，只要需求越多，它就会越来越准。</p>
+<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
+<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
+<p>漫漫长路，才刚刚开始。<br>End.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;作者：傅盛&lt;/p&gt;
+&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
+&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
+&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
+    
+      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
     
   </entry>
   
@@ -5794,7 +5824,7 @@ public void thisIsSuper() {
     <link href="http://ipcreator.me/2017/02/19/Program/Concepts/learn-journey-of-git/"/>
     <id>http://ipcreator.me/2017/02/19/Program/Concepts/learn-journey-of-git/</id>
     <published>2017-02-19T06:09:06.000Z</published>
-    <updated>2017-02-22T13:06:46.711Z</updated>
+    <updated>2017-03-01T11:06:58.928Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/git-workflow-release-cycle-2feature.png" alt=""></p>
 <p>作者：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰</a></p>
@@ -6158,6 +6188,8 @@ new file:   source/slider.fa3fc2.js
 <p>$ git add _config.yml</p>
 <p>$ git commit -m “restore color”<br>[master 1acf4a2] restore color<br> 1 file changed, 4 insertions(+), 4 deletions(-)</p>
 <p>$ git push -u yilia master<br>Counting objects: 3, done.<br>Delta compression using up to 8 threads.<br>Compressing objects: 100% (3/3), done.<br>Writing objects: 100% (3/3), 329 bytes | 0 bytes/s, done.<br>Total 3 (delta 2), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (2/2), completed with 2 local objects.<br>Branch master set up to track remote branch master from yilia.<br>To github.com:ipcreator/hexo-theme-yilia.git<br>   2547415..1acf4a2  master -&gt; master</p>
+<h2 id="Coding-net实践"><a href="#Coding-net实践" class="headerlink" title="Coding.net实践"></a>Coding.net实践</h2><p>一、先在coding.net新建一个仓库<br>二、使用gitclone方法新建一个本地库<br>三、将要上传的文件拷贝到本地库<br>四、先在本地add和commit<br>五、提交到远程库</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git clone</div><div class="line"><span class="variable">$ </span>git status</div><div class="line"><span class="variable">$ </span>git add .</div><div class="line"><span class="variable">$ </span>git commit -m <span class="string">"First commit"</span></div><div class="line"><span class="variable">$ </span>git push</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
@@ -9705,94 +9737,6 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
   </entry>
   
   <entry>
-    <title>避免炒作，如何寻找有价值的人工智能初创企业？</title>
-    <link href="http://ipcreator.me/2017/02/13/BusinessAI/how-to-find-ai-start-up-firm/"/>
-    <id>http://ipcreator.me/2017/02/13/BusinessAI/how-to-find-ai-start-up-firm/</id>
-    <published>2017-02-13T00:58:06.000Z</published>
-    <updated>2017-02-27T03:43:35.604Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html" target="_blank" rel="external">作者：网易AI研究院</a></p>
-<p><img src="http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png" alt=""></p>
-<p>　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。</p>
-<p>　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：</p>
-  <a id="more"></a>
-<h2 id="人工智能是公司的核心价值所在吗？"><a href="#人工智能是公司的核心价值所在吗？" class="headerlink" title="人工智能是公司的核心价值所在吗？"></a>人工智能是公司的核心价值所在吗？</h2><p>  　　投资公司Qualcomm Ventures的风险投资人Varun Jain坦言，“很多陷入资金困境的公司都会将自己包装成人工智能企业。”Varun Jain列举了从人工智能路由器到人工智能榨汁机等产品和设备。</p>
-<p>  　　Varun Jain解释称，在很多情况下，公司所宣传的人工智能仅仅是一个附加功能，而不是公司的核心价值。他指出，“传统的WiFi路由器可以使用人工智能技术来检测网络中的异常数据，但路由器的功能并不会有实质性的改变。”</p>
-<p>  　　相比之下，Qualcomm Ventures投资了Clarifai和Cruise Automation等真正的人工智能初创企业，而Cruise Automation已经被通用收购。Cruise Automation通过人工智能技术为自动驾驶汽车供电，而Clarifai则是利用先进的深度学习和计算机视觉技术来识别图像和视频中的特定物体。</p>
-<h2 id="技术团队有多可靠？"><a href="#技术团队有多可靠？" class="headerlink" title="　　技术团队有多可靠？"></a>　　技术团队有多可靠？</h2><p>  　　CRV公司的风险投资人Max Gazor指出，“具备先进人工智能技术的公司往往拥有顶尖的技术人才，他们或者来自业内先进研究实验室，或是来自诸如Google Brain或Facebook人工智能团队等知名行业组织。”</p>
-<p>  　　CRV对技术的追求直接体现在他们的投资行为中，他们投资的公司创始人普遍具有非凡的技术经验。初创企业Rethink Robotics创始人Rod Brooks是麻省理工学院人工智能实验室的创始主管，也是著名机器人公司iRobot的创始人。而Jibo的Cynthia Breazeal也曾在麻省理工大学媒体实验室成立过机器人小组，是一名世界知名的社交机器人专家。Pullstring公司的创始人Oren Jacob也是如此，他曾是皮克斯的首席技术官，自公司成立初期就与史蒂夫乔布斯共事。</p>
-<p>  　　而投资公司DCM Capital的创始人David Cheng则指出，“在整个行业生命周期的这一特定阶段，<strong>一个公司拥有一定数量的人工智能专家就能够获得开发技术的必要经验，从而开发真正的创新解决方案。</strong> 如果一个团队声称他们的产品使用了领先的人工智能技术却没有相应的团队，那么我们对此将持怀疑态度。”</p>
-<h2 id="能够有效解决客户的实际问题吗？"><a href="#能够有效解决客户的实际问题吗？" class="headerlink" title="　　能够有效解决客户的实际问题吗？"></a>　　能够有效解决客户的实际问题吗？</h2><p>  　　投资公司GE Ventures投资人Michael Dolbec指出，“就我个人而言，一个公司若是仅仅对人工智能夸夸其谈，而毫不涉及客户问题，那我就没有什么兴趣。我们投资的是宝贵的技术成果，而不是科学实验项目。”</p>
-<p>  　　每一位投资者对此都表示认同。</p>
-<p>  　　IA Ventures的Brad Gillespie补充称，“如果让我在二者中选择其一时，那么一个公司的业务专业知识将胜过其机器学习专业技能。”IA Ventures曾投资了Vectra Networks，这是一家由经验丰富业内专家领导的网络安全公司，专注于为客户解决重要问题，为安全分析师最大限度提高可用性。而Vectra Networks的竞争对手不断强调他们机器学习技术的复杂性，但客户的反应是“这些家伙很聪明，但他们并不理解我的业务是什么。他们的产品很花哨，但我并不明白它到底是什么。”</p>
-<p>  　　有效解决客户的业务痛点需要创始团队能够超越狭隘的技术方法，拥有解决特定业务的能力。投资公司Two Sigma Ventures的Colin Beirne指出，“当然，<strong>解决当今大多数困难问题需要不同技术的整合，而在特定业务领域使用人工智能能够在一定程度上降低学习理解的复杂性。</strong>”</p>
-<h2 id="是否有相关的，自有或可扩展的数据源？"><a href="#是否有相关的，自有或可扩展的数据源？" class="headerlink" title="　　是否有相关的，自有或可扩展的数据源？"></a>　　是否有相关的，自有或可扩展的数据源？</h2><p>  　　投资公司Qualcomm Ventures的Jain总习惯于这样问创始人，“你是如何获取数据的？你是依托大公司提供的数据，还是独立获取数据？”当然这两种方法都是可行的，但投资人更倾向于创业公司能够独立获取数据。</p>
-<p>  　　传统上。自动驾驶汽车会在郊区等封闭环境中进行测试。而Qualcomm所投资的Cruise Automation则通过在开放城市环境中操作测试车辆，整合人工干预的因素，从而获取更多驾驶数据。同样，Qualcomm所投资的Clarifai通过应用程序能够获取更多的数据，通过此也能够处理更多的业务数据。</p>
-<p>  　　投资者除了对数据源的独特性和合理性有要求，此外人工智能数据还必须要与其面对的问题密切相关。投资公司Battery Ventures的Dharmesh Thakker指出，“<strong>新一代人工智能技术往往取决于获取数据的复杂程度。诸如图像、音视频等非结构化数据处理要比普通文本困难的多。</strong>”在投资决策中，Dharmesh Thakker还会考虑目标公司处理静态数据和快速移动物体数据的能力。诸如自动驾驶汽车获取的实时图像等快速移动物体数据处理算法通常会复杂很多。</p>
-<p>  　　最后，创始团队还需要 <strong>证实其有根据自有数据不断改进产品性能的能力</strong>。Qualcomm的Jain会定期考察团队是否有“快速处理数据并不断优化的能力，从而使系统更加健壮。”</p>
-<h2 id="开发独有技术还是依靠开源产品"><a href="#开发独有技术还是依靠开源产品" class="headerlink" title="　　开发独有技术还是依靠开源产品"></a>　　开发独有技术还是依靠开源产品</h2><p>  　　投资公司Verizon Ventures的投资人Suresh Madhavan指出，相比于开发专有技术，依托开源框架往往就像是一种赠品，“<strong>开源的确能够让你分析解决一些表面问题，但无助于从根本上解决有难度的业务问题。</strong>”</p>
-<p>  　　DCM Ventures的Cheng也同意这一点。DCM的投资团队背后拥有一个由行业顾问和技术专家组成的强大网络。“（这些专家）帮我们审查团队技术、数据架构方式，并能够确定创业团队进行数据收集、存储、解析的根本方法。他们也帮助我们擦亮眼睛，找出滥竽充数者。”</p>
-<h2 id="产品是否有粘性？"><a href="#产品是否有粘性？" class="headerlink" title="　　产品是否有粘性？"></a>　　产品是否有粘性？</h2><p>  　　Sumant Mandal是投资公司March Capital的合伙人，也是The Hive的共同创始人，后者是一家专注于人工智能初创企业的孵化器。Mandal坦言，“<strong>对于人工智能初创企业来说， 如果效率不能提高5到10倍，那么就很难打入市场，从而为投资者带来价值。</strong>”Mandal建议初创企业需要考虑客户的收益。比如要将人工智能用于改进招聘流程，Mandal就建议初创团队要问自己，“如果我能够将相应效率提高5倍，那么能否让客户从雇员身上获得百倍收益？”</p>
-<p>  　　此外，Mandal还指出，<strong>价值提升必须要以客户可见的方式提供给客户，譬如以仪表盘或是真正有价值的情报等形式展现出来。</strong> Mandal警告称，虽然人工智能在网络安全领域的应用已经很多，但数据和相关人才的缺乏，导致“安全分析师并不需要过多的警报”。</p>
-<p>  　　而即便有一个较为理想的产品，仅仅为客户提供单一的解决方案也不是一个可行的商业模式。Woodside Capital的Kartik Gada建议创业公司要寻求收益以及客户的多元化。“你的收入是否稳健？是否常态化？你的客户是否需要相同或更多的解决方案？”</p>
-<h2 id="创业团队是否全面？"><a href="#创业团队是否全面？" class="headerlink" title="　　创业团队是否全面？"></a>　　创业团队是否全面？</h2><p>  　　最后一点，投资者倾向于寻求那些能够解决人工智能业务的多样化团队。投资公司Monsanto Growth Ventures的Kiersten Stead解释称，“多样化意味着团队包括业内专家、商业领袖以及销售精英，而不仅仅是工程技术人员。”</p>
-<p>  　　但是，Stead观察到，很多创业团队，特别是那些仅仅由人工智能研究人员组成的技术团队，并没有特定行业的相关经验，更容易失败。在农业技术开发和遗传育种方面尤为如此。</p>
-<p>  　　她强调，“人工智能技术团队在销售上有短板，反之亦然。我们会寻找行业经验丰富的人工智能企业创始人，他们往往有完整成熟的职业生涯，可与各类人组成一个多样化的团队。”人工智能企业往往会忽视销售和营销，但这对于成功非常重要。</p>
-<p>  　　投资公司Woodside Capital的Gada也警告称，“<strong>很多人工智能初创企业犯下的最大错误就是完全无视营销的重要性。很多客户根本不知道他们需要这些产品。</strong>”（晗冰）</p>
-<h2 id="AI研究院-企业做人工智能转型有四大关键要素"><a href="#AI研究院-企业做人工智能转型有四大关键要素" class="headerlink" title="AI研究院 | 企业做人工智能转型有四大关键要素"></a>AI研究院 | 企业做人工智能转型有四大关键要素</h2><p>  　　【AI研究院 | 网易智能工作室倾力打造的人工智能专业栏目，聚焦行业，深度分析，只为专业】</p>
-<p>  　　<img src="http://dingyue.nosdn.127.net/qvgJyuC8=PfZZvxXgv1ME7yu5vNchInjJQ74zChPxAvSr1486702463725compressflag.jpg" alt=""></p>
-<p>  　　网易智能讯 2月10日消息，在很多行业我们都已接近人工智能技术发展的临界点，包括自动驾驶汽车、蜂巢无人机、自动售货等。如今一个公司无论规模大小如何，都必须了解人工智能将怎样影响、甚至消灭某个行业，以及学会利用人工智能和机器学习（ML）。</p>
-<p>  　　对于企业来说这是一个至关重要的选择——是投身到人工智能领域还是保持现状等着被淘汰，前者可以更有效地帮助企业实现商业目标。人工智能—机器学习将令我们的日常生活更加美好高效，把现有工作提升到更加精确、有效的水平。</p>
-<p>  　　像优步、谷歌和Facebook这样的科技创新公司，通过收购和内部组织的转型，在人工智能领域进行了大胆尝试，使它成为一项战略重点。在2017年达沃斯论坛上，世界各国领导人探讨了人工智能对就业的影响，以及哪些行业适合应用这项技术。</p>
-<p>  　　事实上，根据互联网数据中心（IDC）的数据显示，到2020年，企业在人工智能方面的投入将从2016年的80亿美元飙升至470亿美元。另外，到2019年，将会有超过1.1亿个安装了嵌入式智能助手的设备走进美国家庭。</p>
-<p>  　　Intuit公司的人工智能转型始于4年前，当时业内都在探讨两个问题：金融软件的未来是什么；我们在帮助客户方面扮演怎样的角色。人工智能的趋势在当时是很明显的，包括工作的个性化、自动化、增强和速度等，这些都需要软件来进行辅助。近年来，随着人工智能技术的进步，我们对它的看法也作出了改变。</p>
-<p>  　　现在我们将人工智能看作一种为用户提供方便的技术。我们预计人工智能将创造新技术，例如以一种曾经无法想象的高科技方法为消费者处理税务、为小型企业完成账目记录等。但要实现这一目标并非易事。Intuit公司拥有30多种人工智能和机器学习模型，可以在实时体验中接触客户，而且我们还在不断作出新的尝试。我们在实验和成果中不断学习、发展和改进技术。</p>
-<p>  　　如果你的公司致力于通过人工智能打造能够满足消费者需求的产品和服务，那么这里有几个关键的问题需要考虑。</p>
-<p>  　　<strong>1.重视数据</strong></p>
-<p>  　　每一家公司的人工智能探索之旅都从数据开始。数据令机器学习和人工智能更强大。如果你一直在考虑如何利用数据，那么现在就可以开始制定和实施计划了。</p>
-<p>  　　在Intuit，我们几年前就已经转向了对数据的关注。我们在与业务部门同事进行沟通后制定了技术路线，充分了解了客户需求、行业趋势以及数据能够带来的客户利益。我们的Intuit Analytics Cloud云分析系统打破了一些障碍，让我们能够以更全面地认识产品产生的海量数据。在拥有人工智能或机器学习模型之前，我们就开始专注于数据分析和个性化的基础性工作。<strong>可靠、快速、准确的数据是人工智能—机器学习发展的催化剂。</strong></p>
-<p>  　　<strong>2.展望未来</strong></p>
-<p>  　　设想公司的未来是很重要的，同时也要观察人工智能将如何令你更加强大，或者改变你对研发工作的想法。我们在Intuit进行了一场活动，会见了各种各样的组织和个人，包括大学的学者专家、创业公司、风投公司等，探讨了人工智能和机器学习的未来蓝图，以及Intuit公司将如何适应这一转变。规模较小的公司同样可以在相应的资源范围内做出创新。</p>
-<p>  　　<strong>3.转变心态</strong></p>
-<p>  　　在开始阶段向业务部门和产品负责人解释投资人工智能的益处，可能是一件很有挑战性的事情。重要的是每个季度的客户利益需要体现在商业价值上，而不是单纯研究数据。例如，Intuit的税务分析系统就分析了3000万客户的纳税申报表，对分项扣除还是统一扣除作出相应建议，这可以节省40%的税收工作准备时间。这样一个甚至非数据专家都能理解的切实的商业成果。可以说，<strong>人工智能—机器学习是一段探索之旅。通过实际产生的影响来预估潜在的成果</strong>，这是很重要的。</p>
-<p>  　　4.成立团队，选择项目</p>
-<p>  　　要在企业中开始发展人工智能，先选择一个容易解决的业务问题，组件一支跨职能员工团队，包括数据科学家、工程师和质量监管人员，同时要注意及时更新团队。在团队中建立起能够理解实验价值的文化。珍惜从人工智能应用中得来的知识。另外，你的团队还应同时拥有专业知识和实战经验。千万不要认为只需要聘请专家。同时，在亟待解决的问题上还需要保持与其他行业科学家的互动，比如其他领域的博士等，他们天生具有好奇心，能够理解科学原理，并且有一套不同的解决方案。<strong>真正的人工智能—机器学习可以在应用数据科学方面带来重大成果。</strong> 不要低估了它的重要性，同时也要改变心态。</p>
-<p>  　　我们才刚刚到达人工智能和机器学习的起步阶段。<strong>在公司初创之时紧跟最先进的技术，将有助于你在未来发展中处于优势地位。</strong></p>
-<p>  　　（来源/VentureBeat 翻译/机器小易 审校/小ka）</p>
-<p>  　　注：本文为网易智能工作室稿件，转载需注明出处，否则追究其法律责任。</p>
-<h2 id="人工智能的迅速崛起需要警惕这四大风险"><a href="#人工智能的迅速崛起需要警惕这四大风险" class="headerlink" title="人工智能的迅速崛起需要警惕这四大风险"></a>人工智能的迅速崛起需要警惕这四大风险</h2><p><img src="http://dingyue.nosdn.127.net/ydgEN7xEoWpsGyUkJBKbgdXlwrf5u91jceEc1KE5IZXI=1484981995496compressflag.jpg" alt=""></p>
-<p>　　【网易智能讯 1月21日消息】大家可以想象一下，一名营销主管深夜翻看公司的幻灯片，该公司承诺利用人工智能（AI）自动化他的评分过程、优化他的广告开支方案、帮助增加他的营销开支回报率，他想要知道，哪里可能出现问题？</p>
-<p>的确有可能出现问题。尽管公司使用AI会让营销人员的工作变得更简单，但我们必须承认，AI的承诺往往言过其实。AI带来的好处是显而易见的，但也存在巨大风险。即使你找到最好的AI，并将其应用到你的营销技术堆栈中，依然存在影响你成功部署AI的风险。我并不担心这些风险，也不想将它们藏起来，我认为最好是直接面对它们，直至最终解决它们。</p>
-<p>AI主要存在四大类危险：</p>
-<p><strong>AI危险一：害怕失去工作</strong><br>这是最容易理解的AI危险，同时也是最容易解决的。人们经常害怕AI，因为他们担心AI会让人类变得多余，最终被拥有机器大脑的AI取代我们独特的技能。对于某些工作来说，这可能是真的。但我认为，AI带来的实际危险可能比人类预想的更低。AI还不够先进，也无法全面取代营销专家。如果营销人员学会有效地使用AI，它们反而会增强人类能力。也就是说，为了促使人们购买AI支持的技术，我们首先需要平抚人们对AI的恐惧。</p>
-<p><strong>AI危险二：错位的激励</strong><br>技术传道者有时候会深入企业内部，并利用让人惊叹的创意，阐述他们的产品如何改变每个人。但是有了AI和许多企业技术，这些热情常常会撞墙，因为这些墙将各个部门隔离开。事实证明，公司中拥有大量数据的人，往往不会与其他利益相关者分享数据。无论是出于隐私担忧、部门政策、个人冲突亦或是简单的流程偏差，比如障碍往往可能导致雄心勃勃的AI项目被搁置。</p>
-<p>为此，到目前为止，两类公司在部署AI时取得最大成功，一类是初创企业（公司规模较小，刚刚创建还没有僵化思维），一类是像谷歌和Facebook这样的大科技公司（其全部生命线都基于对数据的利用）。介于这两类极端公司之间的其他企业，几乎包括世界上所有公司，部署AI都会遇到更大阻碍。想要利用AI提高效率的营销人员需要意识到部门和监管问题，这些问题可能影响到他们。此外，数据价值链上的所有玩家都需要保持一致。</p>
-<p><strong>AI危险三：不可预测性</strong><br>这可能是AI固有的最大危险。所有AI项目都是不可预测的，因为它们正被用于解决未知问题。与传统软件开发不同，目前还没有标准的工程方法，可以通过分步获得可预知的AI结果。在这种情况下，将AI应用到营销数据中就像纯粹的科幻。我们不知道特定的数据集是否能解决特定的问题。就像无法预测科学实验的所有结果那样，AI也很难预测结果。这是有关软件开发的全新思维方式，但对任何营销领域或没有AI经验的人来说，这将是个巨大挑战。</p>
-<p><strong>AI危险四：人才匮乏</strong><br>这是AI带来的最后危险，阻碍你的团队引入足够的人才。不幸的是，当前AI领域存在巨大的技术鸿沟。AI领域的绝大多数人才都没有真正处理大规模行业数据的经验。而真正的专家还很少，最新统计显示，数据科学家的职位空缺高达1.6万个。这意味着，找到你需要的专业人士，并让他们帮助部署和执行AI驱动的营销计划非常困难。</p>
-<p>由于存在这些风险，你可以看到截止到目前许多AI实验都以失败告终。举例来说，麦肯锡最近做了一项研究，对石油和天然气钻探作业决策中的数据进行实时分析。麦肯锡研究的1家公司在离岸钻井仪器方面投入巨资，并通过RFID标签和内嵌传感器收集到大量数据。不幸的是，他们收集的数据中只有40%能传回到陆地数据中心，只有1%能真正进入数据库中，不到1%能被用于终端用户的产品中。最终，这些数据没有为人们的决策提供任何帮助。</p>
-<p>不幸的是，你可能发现同样大的阻力。在使用AI过程中，你会遇到强烈的文化阻碍。许多人不相信机器做出的决定，直到机器算法有机会证明自己的决定。营销高管们部署AI面对的挑战是，需要确保所有相关利益者支持他们。确保人们受到相关训练，确保他们对可能结果产生现实期待，并获得正确的激励奖励。</p>
-<p>只有做到这些，你才能开始意识到AI革命为营销领域带来的惊人好处。（小小）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html&quot;&gt;作者：网易AI研究院&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。&lt;/p&gt;
-&lt;p&gt;　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="理财" scheme="http://ipcreator.me/categories/%E7%90%86%E8%B4%A2/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
-    
-  </entry>
-  
-  <entry>
     <title>这一年来，数据科学家都用了哪些算法玩转人工智能？</title>
     <link href="http://ipcreator.me/2017/02/13/Program/Concepts/ai-and-algorithms/"/>
     <id>http://ipcreator.me/2017/02/13/Program/Concepts/ai-and-algorithms/</id>
@@ -9937,6 +9881,94 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
       <category term="Open Source" scheme="http://ipcreator.me/tags/Open-Source/"/>
     
       <category term="Algorithm" scheme="http://ipcreator.me/tags/Algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>避免炒作，如何寻找有价值的人工智能初创企业？</title>
+    <link href="http://ipcreator.me/2017/02/13/BusinessAI/how-to-find-ai-start-up-firm/"/>
+    <id>http://ipcreator.me/2017/02/13/BusinessAI/how-to-find-ai-start-up-firm/</id>
+    <published>2017-02-13T00:58:06.000Z</published>
+    <updated>2017-02-27T03:43:35.604Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html" target="_blank" rel="external">作者：网易AI研究院</a></p>
+<p><img src="http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png" alt=""></p>
+<p>　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。</p>
+<p>　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：</p>
+  <a id="more"></a>
+<h2 id="人工智能是公司的核心价值所在吗？"><a href="#人工智能是公司的核心价值所在吗？" class="headerlink" title="人工智能是公司的核心价值所在吗？"></a>人工智能是公司的核心价值所在吗？</h2><p>  　　投资公司Qualcomm Ventures的风险投资人Varun Jain坦言，“很多陷入资金困境的公司都会将自己包装成人工智能企业。”Varun Jain列举了从人工智能路由器到人工智能榨汁机等产品和设备。</p>
+<p>  　　Varun Jain解释称，在很多情况下，公司所宣传的人工智能仅仅是一个附加功能，而不是公司的核心价值。他指出，“传统的WiFi路由器可以使用人工智能技术来检测网络中的异常数据，但路由器的功能并不会有实质性的改变。”</p>
+<p>  　　相比之下，Qualcomm Ventures投资了Clarifai和Cruise Automation等真正的人工智能初创企业，而Cruise Automation已经被通用收购。Cruise Automation通过人工智能技术为自动驾驶汽车供电，而Clarifai则是利用先进的深度学习和计算机视觉技术来识别图像和视频中的特定物体。</p>
+<h2 id="技术团队有多可靠？"><a href="#技术团队有多可靠？" class="headerlink" title="　　技术团队有多可靠？"></a>　　技术团队有多可靠？</h2><p>  　　CRV公司的风险投资人Max Gazor指出，“具备先进人工智能技术的公司往往拥有顶尖的技术人才，他们或者来自业内先进研究实验室，或是来自诸如Google Brain或Facebook人工智能团队等知名行业组织。”</p>
+<p>  　　CRV对技术的追求直接体现在他们的投资行为中，他们投资的公司创始人普遍具有非凡的技术经验。初创企业Rethink Robotics创始人Rod Brooks是麻省理工学院人工智能实验室的创始主管，也是著名机器人公司iRobot的创始人。而Jibo的Cynthia Breazeal也曾在麻省理工大学媒体实验室成立过机器人小组，是一名世界知名的社交机器人专家。Pullstring公司的创始人Oren Jacob也是如此，他曾是皮克斯的首席技术官，自公司成立初期就与史蒂夫乔布斯共事。</p>
+<p>  　　而投资公司DCM Capital的创始人David Cheng则指出，“在整个行业生命周期的这一特定阶段，<strong>一个公司拥有一定数量的人工智能专家就能够获得开发技术的必要经验，从而开发真正的创新解决方案。</strong> 如果一个团队声称他们的产品使用了领先的人工智能技术却没有相应的团队，那么我们对此将持怀疑态度。”</p>
+<h2 id="能够有效解决客户的实际问题吗？"><a href="#能够有效解决客户的实际问题吗？" class="headerlink" title="　　能够有效解决客户的实际问题吗？"></a>　　能够有效解决客户的实际问题吗？</h2><p>  　　投资公司GE Ventures投资人Michael Dolbec指出，“就我个人而言，一个公司若是仅仅对人工智能夸夸其谈，而毫不涉及客户问题，那我就没有什么兴趣。我们投资的是宝贵的技术成果，而不是科学实验项目。”</p>
+<p>  　　每一位投资者对此都表示认同。</p>
+<p>  　　IA Ventures的Brad Gillespie补充称，“如果让我在二者中选择其一时，那么一个公司的业务专业知识将胜过其机器学习专业技能。”IA Ventures曾投资了Vectra Networks，这是一家由经验丰富业内专家领导的网络安全公司，专注于为客户解决重要问题，为安全分析师最大限度提高可用性。而Vectra Networks的竞争对手不断强调他们机器学习技术的复杂性，但客户的反应是“这些家伙很聪明，但他们并不理解我的业务是什么。他们的产品很花哨，但我并不明白它到底是什么。”</p>
+<p>  　　有效解决客户的业务痛点需要创始团队能够超越狭隘的技术方法，拥有解决特定业务的能力。投资公司Two Sigma Ventures的Colin Beirne指出，“当然，<strong>解决当今大多数困难问题需要不同技术的整合，而在特定业务领域使用人工智能能够在一定程度上降低学习理解的复杂性。</strong>”</p>
+<h2 id="是否有相关的，自有或可扩展的数据源？"><a href="#是否有相关的，自有或可扩展的数据源？" class="headerlink" title="　　是否有相关的，自有或可扩展的数据源？"></a>　　是否有相关的，自有或可扩展的数据源？</h2><p>  　　投资公司Qualcomm Ventures的Jain总习惯于这样问创始人，“你是如何获取数据的？你是依托大公司提供的数据，还是独立获取数据？”当然这两种方法都是可行的，但投资人更倾向于创业公司能够独立获取数据。</p>
+<p>  　　传统上。自动驾驶汽车会在郊区等封闭环境中进行测试。而Qualcomm所投资的Cruise Automation则通过在开放城市环境中操作测试车辆，整合人工干预的因素，从而获取更多驾驶数据。同样，Qualcomm所投资的Clarifai通过应用程序能够获取更多的数据，通过此也能够处理更多的业务数据。</p>
+<p>  　　投资者除了对数据源的独特性和合理性有要求，此外人工智能数据还必须要与其面对的问题密切相关。投资公司Battery Ventures的Dharmesh Thakker指出，“<strong>新一代人工智能技术往往取决于获取数据的复杂程度。诸如图像、音视频等非结构化数据处理要比普通文本困难的多。</strong>”在投资决策中，Dharmesh Thakker还会考虑目标公司处理静态数据和快速移动物体数据的能力。诸如自动驾驶汽车获取的实时图像等快速移动物体数据处理算法通常会复杂很多。</p>
+<p>  　　最后，创始团队还需要 <strong>证实其有根据自有数据不断改进产品性能的能力</strong>。Qualcomm的Jain会定期考察团队是否有“快速处理数据并不断优化的能力，从而使系统更加健壮。”</p>
+<h2 id="开发独有技术还是依靠开源产品"><a href="#开发独有技术还是依靠开源产品" class="headerlink" title="　　开发独有技术还是依靠开源产品"></a>　　开发独有技术还是依靠开源产品</h2><p>  　　投资公司Verizon Ventures的投资人Suresh Madhavan指出，相比于开发专有技术，依托开源框架往往就像是一种赠品，“<strong>开源的确能够让你分析解决一些表面问题，但无助于从根本上解决有难度的业务问题。</strong>”</p>
+<p>  　　DCM Ventures的Cheng也同意这一点。DCM的投资团队背后拥有一个由行业顾问和技术专家组成的强大网络。“（这些专家）帮我们审查团队技术、数据架构方式，并能够确定创业团队进行数据收集、存储、解析的根本方法。他们也帮助我们擦亮眼睛，找出滥竽充数者。”</p>
+<h2 id="产品是否有粘性？"><a href="#产品是否有粘性？" class="headerlink" title="　　产品是否有粘性？"></a>　　产品是否有粘性？</h2><p>  　　Sumant Mandal是投资公司March Capital的合伙人，也是The Hive的共同创始人，后者是一家专注于人工智能初创企业的孵化器。Mandal坦言，“<strong>对于人工智能初创企业来说， 如果效率不能提高5到10倍，那么就很难打入市场，从而为投资者带来价值。</strong>”Mandal建议初创企业需要考虑客户的收益。比如要将人工智能用于改进招聘流程，Mandal就建议初创团队要问自己，“如果我能够将相应效率提高5倍，那么能否让客户从雇员身上获得百倍收益？”</p>
+<p>  　　此外，Mandal还指出，<strong>价值提升必须要以客户可见的方式提供给客户，譬如以仪表盘或是真正有价值的情报等形式展现出来。</strong> Mandal警告称，虽然人工智能在网络安全领域的应用已经很多，但数据和相关人才的缺乏，导致“安全分析师并不需要过多的警报”。</p>
+<p>  　　而即便有一个较为理想的产品，仅仅为客户提供单一的解决方案也不是一个可行的商业模式。Woodside Capital的Kartik Gada建议创业公司要寻求收益以及客户的多元化。“你的收入是否稳健？是否常态化？你的客户是否需要相同或更多的解决方案？”</p>
+<h2 id="创业团队是否全面？"><a href="#创业团队是否全面？" class="headerlink" title="　　创业团队是否全面？"></a>　　创业团队是否全面？</h2><p>  　　最后一点，投资者倾向于寻求那些能够解决人工智能业务的多样化团队。投资公司Monsanto Growth Ventures的Kiersten Stead解释称，“多样化意味着团队包括业内专家、商业领袖以及销售精英，而不仅仅是工程技术人员。”</p>
+<p>  　　但是，Stead观察到，很多创业团队，特别是那些仅仅由人工智能研究人员组成的技术团队，并没有特定行业的相关经验，更容易失败。在农业技术开发和遗传育种方面尤为如此。</p>
+<p>  　　她强调，“人工智能技术团队在销售上有短板，反之亦然。我们会寻找行业经验丰富的人工智能企业创始人，他们往往有完整成熟的职业生涯，可与各类人组成一个多样化的团队。”人工智能企业往往会忽视销售和营销，但这对于成功非常重要。</p>
+<p>  　　投资公司Woodside Capital的Gada也警告称，“<strong>很多人工智能初创企业犯下的最大错误就是完全无视营销的重要性。很多客户根本不知道他们需要这些产品。</strong>”（晗冰）</p>
+<h2 id="AI研究院-企业做人工智能转型有四大关键要素"><a href="#AI研究院-企业做人工智能转型有四大关键要素" class="headerlink" title="AI研究院 | 企业做人工智能转型有四大关键要素"></a>AI研究院 | 企业做人工智能转型有四大关键要素</h2><p>  　　【AI研究院 | 网易智能工作室倾力打造的人工智能专业栏目，聚焦行业，深度分析，只为专业】</p>
+<p>  　　<img src="http://dingyue.nosdn.127.net/qvgJyuC8=PfZZvxXgv1ME7yu5vNchInjJQ74zChPxAvSr1486702463725compressflag.jpg" alt=""></p>
+<p>  　　网易智能讯 2月10日消息，在很多行业我们都已接近人工智能技术发展的临界点，包括自动驾驶汽车、蜂巢无人机、自动售货等。如今一个公司无论规模大小如何，都必须了解人工智能将怎样影响、甚至消灭某个行业，以及学会利用人工智能和机器学习（ML）。</p>
+<p>  　　对于企业来说这是一个至关重要的选择——是投身到人工智能领域还是保持现状等着被淘汰，前者可以更有效地帮助企业实现商业目标。人工智能—机器学习将令我们的日常生活更加美好高效，把现有工作提升到更加精确、有效的水平。</p>
+<p>  　　像优步、谷歌和Facebook这样的科技创新公司，通过收购和内部组织的转型，在人工智能领域进行了大胆尝试，使它成为一项战略重点。在2017年达沃斯论坛上，世界各国领导人探讨了人工智能对就业的影响，以及哪些行业适合应用这项技术。</p>
+<p>  　　事实上，根据互联网数据中心（IDC）的数据显示，到2020年，企业在人工智能方面的投入将从2016年的80亿美元飙升至470亿美元。另外，到2019年，将会有超过1.1亿个安装了嵌入式智能助手的设备走进美国家庭。</p>
+<p>  　　Intuit公司的人工智能转型始于4年前，当时业内都在探讨两个问题：金融软件的未来是什么；我们在帮助客户方面扮演怎样的角色。人工智能的趋势在当时是很明显的，包括工作的个性化、自动化、增强和速度等，这些都需要软件来进行辅助。近年来，随着人工智能技术的进步，我们对它的看法也作出了改变。</p>
+<p>  　　现在我们将人工智能看作一种为用户提供方便的技术。我们预计人工智能将创造新技术，例如以一种曾经无法想象的高科技方法为消费者处理税务、为小型企业完成账目记录等。但要实现这一目标并非易事。Intuit公司拥有30多种人工智能和机器学习模型，可以在实时体验中接触客户，而且我们还在不断作出新的尝试。我们在实验和成果中不断学习、发展和改进技术。</p>
+<p>  　　如果你的公司致力于通过人工智能打造能够满足消费者需求的产品和服务，那么这里有几个关键的问题需要考虑。</p>
+<p>  　　<strong>1.重视数据</strong></p>
+<p>  　　每一家公司的人工智能探索之旅都从数据开始。数据令机器学习和人工智能更强大。如果你一直在考虑如何利用数据，那么现在就可以开始制定和实施计划了。</p>
+<p>  　　在Intuit，我们几年前就已经转向了对数据的关注。我们在与业务部门同事进行沟通后制定了技术路线，充分了解了客户需求、行业趋势以及数据能够带来的客户利益。我们的Intuit Analytics Cloud云分析系统打破了一些障碍，让我们能够以更全面地认识产品产生的海量数据。在拥有人工智能或机器学习模型之前，我们就开始专注于数据分析和个性化的基础性工作。<strong>可靠、快速、准确的数据是人工智能—机器学习发展的催化剂。</strong></p>
+<p>  　　<strong>2.展望未来</strong></p>
+<p>  　　设想公司的未来是很重要的，同时也要观察人工智能将如何令你更加强大，或者改变你对研发工作的想法。我们在Intuit进行了一场活动，会见了各种各样的组织和个人，包括大学的学者专家、创业公司、风投公司等，探讨了人工智能和机器学习的未来蓝图，以及Intuit公司将如何适应这一转变。规模较小的公司同样可以在相应的资源范围内做出创新。</p>
+<p>  　　<strong>3.转变心态</strong></p>
+<p>  　　在开始阶段向业务部门和产品负责人解释投资人工智能的益处，可能是一件很有挑战性的事情。重要的是每个季度的客户利益需要体现在商业价值上，而不是单纯研究数据。例如，Intuit的税务分析系统就分析了3000万客户的纳税申报表，对分项扣除还是统一扣除作出相应建议，这可以节省40%的税收工作准备时间。这样一个甚至非数据专家都能理解的切实的商业成果。可以说，<strong>人工智能—机器学习是一段探索之旅。通过实际产生的影响来预估潜在的成果</strong>，这是很重要的。</p>
+<p>  　　4.成立团队，选择项目</p>
+<p>  　　要在企业中开始发展人工智能，先选择一个容易解决的业务问题，组件一支跨职能员工团队，包括数据科学家、工程师和质量监管人员，同时要注意及时更新团队。在团队中建立起能够理解实验价值的文化。珍惜从人工智能应用中得来的知识。另外，你的团队还应同时拥有专业知识和实战经验。千万不要认为只需要聘请专家。同时，在亟待解决的问题上还需要保持与其他行业科学家的互动，比如其他领域的博士等，他们天生具有好奇心，能够理解科学原理，并且有一套不同的解决方案。<strong>真正的人工智能—机器学习可以在应用数据科学方面带来重大成果。</strong> 不要低估了它的重要性，同时也要改变心态。</p>
+<p>  　　我们才刚刚到达人工智能和机器学习的起步阶段。<strong>在公司初创之时紧跟最先进的技术，将有助于你在未来发展中处于优势地位。</strong></p>
+<p>  　　（来源/VentureBeat 翻译/机器小易 审校/小ka）</p>
+<p>  　　注：本文为网易智能工作室稿件，转载需注明出处，否则追究其法律责任。</p>
+<h2 id="人工智能的迅速崛起需要警惕这四大风险"><a href="#人工智能的迅速崛起需要警惕这四大风险" class="headerlink" title="人工智能的迅速崛起需要警惕这四大风险"></a>人工智能的迅速崛起需要警惕这四大风险</h2><p><img src="http://dingyue.nosdn.127.net/ydgEN7xEoWpsGyUkJBKbgdXlwrf5u91jceEc1KE5IZXI=1484981995496compressflag.jpg" alt=""></p>
+<p>　　【网易智能讯 1月21日消息】大家可以想象一下，一名营销主管深夜翻看公司的幻灯片，该公司承诺利用人工智能（AI）自动化他的评分过程、优化他的广告开支方案、帮助增加他的营销开支回报率，他想要知道，哪里可能出现问题？</p>
+<p>的确有可能出现问题。尽管公司使用AI会让营销人员的工作变得更简单，但我们必须承认，AI的承诺往往言过其实。AI带来的好处是显而易见的，但也存在巨大风险。即使你找到最好的AI，并将其应用到你的营销技术堆栈中，依然存在影响你成功部署AI的风险。我并不担心这些风险，也不想将它们藏起来，我认为最好是直接面对它们，直至最终解决它们。</p>
+<p>AI主要存在四大类危险：</p>
+<p><strong>AI危险一：害怕失去工作</strong><br>这是最容易理解的AI危险，同时也是最容易解决的。人们经常害怕AI，因为他们担心AI会让人类变得多余，最终被拥有机器大脑的AI取代我们独特的技能。对于某些工作来说，这可能是真的。但我认为，AI带来的实际危险可能比人类预想的更低。AI还不够先进，也无法全面取代营销专家。如果营销人员学会有效地使用AI，它们反而会增强人类能力。也就是说，为了促使人们购买AI支持的技术，我们首先需要平抚人们对AI的恐惧。</p>
+<p><strong>AI危险二：错位的激励</strong><br>技术传道者有时候会深入企业内部，并利用让人惊叹的创意，阐述他们的产品如何改变每个人。但是有了AI和许多企业技术，这些热情常常会撞墙，因为这些墙将各个部门隔离开。事实证明，公司中拥有大量数据的人，往往不会与其他利益相关者分享数据。无论是出于隐私担忧、部门政策、个人冲突亦或是简单的流程偏差，比如障碍往往可能导致雄心勃勃的AI项目被搁置。</p>
+<p>为此，到目前为止，两类公司在部署AI时取得最大成功，一类是初创企业（公司规模较小，刚刚创建还没有僵化思维），一类是像谷歌和Facebook这样的大科技公司（其全部生命线都基于对数据的利用）。介于这两类极端公司之间的其他企业，几乎包括世界上所有公司，部署AI都会遇到更大阻碍。想要利用AI提高效率的营销人员需要意识到部门和监管问题，这些问题可能影响到他们。此外，数据价值链上的所有玩家都需要保持一致。</p>
+<p><strong>AI危险三：不可预测性</strong><br>这可能是AI固有的最大危险。所有AI项目都是不可预测的，因为它们正被用于解决未知问题。与传统软件开发不同，目前还没有标准的工程方法，可以通过分步获得可预知的AI结果。在这种情况下，将AI应用到营销数据中就像纯粹的科幻。我们不知道特定的数据集是否能解决特定的问题。就像无法预测科学实验的所有结果那样，AI也很难预测结果。这是有关软件开发的全新思维方式，但对任何营销领域或没有AI经验的人来说，这将是个巨大挑战。</p>
+<p><strong>AI危险四：人才匮乏</strong><br>这是AI带来的最后危险，阻碍你的团队引入足够的人才。不幸的是，当前AI领域存在巨大的技术鸿沟。AI领域的绝大多数人才都没有真正处理大规模行业数据的经验。而真正的专家还很少，最新统计显示，数据科学家的职位空缺高达1.6万个。这意味着，找到你需要的专业人士，并让他们帮助部署和执行AI驱动的营销计划非常困难。</p>
+<p>由于存在这些风险，你可以看到截止到目前许多AI实验都以失败告终。举例来说，麦肯锡最近做了一项研究，对石油和天然气钻探作业决策中的数据进行实时分析。麦肯锡研究的1家公司在离岸钻井仪器方面投入巨资，并通过RFID标签和内嵌传感器收集到大量数据。不幸的是，他们收集的数据中只有40%能传回到陆地数据中心，只有1%能真正进入数据库中，不到1%能被用于终端用户的产品中。最终，这些数据没有为人们的决策提供任何帮助。</p>
+<p>不幸的是，你可能发现同样大的阻力。在使用AI过程中，你会遇到强烈的文化阻碍。许多人不相信机器做出的决定，直到机器算法有机会证明自己的决定。营销高管们部署AI面对的挑战是，需要确保所有相关利益者支持他们。确保人们受到相关训练，确保他们对可能结果产生现实期待，并获得正确的激励奖励。</p>
+<p>只有做到这些，你才能开始意识到AI革命为营销领域带来的惊人好处。（小小）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html&quot;&gt;作者：网易AI研究院&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。&lt;/p&gt;
+&lt;p&gt;　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="理财" scheme="http://ipcreator.me/categories/%E7%90%86%E8%B4%A2/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
     
   </entry>
   
@@ -14145,106 +14177,6 @@ I also disagree that good mathematicians tend to be bad teachers. Having enjoyed
 &lt;p&gt;在生命的最后日子里，于娟完全放下了生死，放下了名利权情，赤裸裸的去反思和写作。所有的浮躁沉淀了，所有的伪装剥离了，所有的喧嚣远去了，所有的执着放下了。只有一个普通的女子，普通的女儿、妻子、母亲对生命最单纯的感悟。在这个故事里，很多读者看到的不是于娟，而是自己。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://img3.doubanio.com/lpic/s6343233.jpg&quot; width = &quot;303&quot; height = &quot;438&quot; alt=&quot;personal photo&quot;&gt;&lt;br&gt; &lt;/div&gt;
-    
-    </summary>
-    
-      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-    
-    
-      <category term="Growing Up" scheme="http://ipcreator.me/tags/Growing-Up/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>选择的智慧</title>
-    <link href="http://ipcreator.me/2017/01/17/MyShare/wisdom-of-choose/"/>
-    <id>http://ipcreator.me/2017/01/17/MyShare/wisdom-of-choose/</id>
-    <published>2017-01-17T01:12:06.000Z</published>
-    <updated>2017-02-27T03:46:19.044Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.360doc.com/content/14/1206/17/15680008_430856157.shtml" target="_blank" rel="external">李开复写《给中国学生的第六封信》——选择的智慧</a></p>
-<blockquote>
-<p><strong>有勇气来改变可以改变的事情，有胸怀来接受不可改变的事情，有智慧来分辨两者的不同。</strong></p>
-</blockquote>
-<div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/201301170535101.jpg" width="402" height="603" alt="personal photo"><br> </div>
-
- <a id="more"></a>
-<p> “‘有勇气来改变可以改变的事情’代表了用西方式的积极进取的心态，以永不放弃、永不消沉的主动人生态度，鼓励我们靠自己的努力达到目的。<br>“‘有胸怀来接受不可改变的事情’代表了用中国式的谦恭谨让的度量来培养自己的修养，学会承认和接受真实的、不完美甚至不公正的世界。<br>有智慧来分辨两者的不同，可是，智慧从哪里来呢？”<br>其实，“有智慧来分辨两者的不同”就是要求我们使用自己的智慧，主动发现并选择最完整、最均衡的状态，并通过这一选择获得成功。<br>这里所说的“智 慧”，既是甄别、判断的智慧，也是权衡、折中的智慧，但从根本上讲，它更是在选择中孕育又在选择中升华的最高智慧——我也把它称作“选择成功”的智慧。</p>
-<p>中国的青年学生虽然有幸出生在能够自由选择的时代，但时代并没有传授他们选择的智慧。<br>我能帮你做的不是选择，因为你自身的问题只有自己最清楚，自己的未来也只有自己最在意。<br>我能做的只是传授给你选择的智慧，帮你聆听自己心底里最真实的声音，帮助你做出智慧的选择</p>
-<p>选择成功的智慧共有八种：</p>
-<ul>
-<li>用中庸拒绝极端</li>
-<li>用理智分析情景</li>
-<li>用务实发挥影响</li>
-<li>用冷静掌控抉择</li>
-<li>用自觉端正态度</li>
-<li>用学习积累经验</li>
-<li>用勇气放弃包袱</li>
-<li>用真心追随智慧</li>
-</ul>
-<p>中庸告诉我们的最重要的一点，就是要避免并拒绝极端和片面。<br>比如说，我认为最重要的积极主动，如果做到了极端，就变成了霸道，喜欢对别人颐指气使，横行跋扈。<br>还有我提出与人相处最重要的同理心，如果做到了极端， 就变成了盲从，失去了自己的选择，什么事都没有主见。<br>极端的自信就成了自傲，极端的勇气就成了愚勇，极端的胸怀就是懦弱，极端的 自省就会变成自卑。</p>
-<p>自信、自省、勇气、胸怀，积极、同理心六种态度都是成功的必备要素，也都是成功者需要具备的优点。但是，一旦将其中某一种态度发展到极端，优点就会立刻演变为缺点。下面的图显示的就是这六种成功者必须的态度，和它们发展到极端的后果：<br>内圈代表完整、均衡的状态，外圈代表极端、片面的行为。第一个智慧的真谛就是：我们必须用中庸的思想指导自己，把自己的态度限制在完整、均衡的范畴内，兼顾自信和自省、勇气和胸怀、积极和同理心等各方面因素，时刻防止自己在其中某一方面有过于偏激的表现。</p>
- <div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/47809276_1.jpg" width="560" height="387" alt="personal photo"><br> </div>
-
-<p> 沉默是金和口无遮拦都不可取，那么我们怎么达到“中庸式的智慧沟通”呢？记得我刚进入苹果公司开始我的第一份工 作时，公司里有一位经理叫西恩，大家都知道他是一个非常有才华的人，尤其在开会的时候，<br> 他得体的言辞完美地展现出他过人的才学、情商与口才，足以让在场的 所有人钦佩不已。有一天，我鼓足勇气去向西恩讨教有效沟通的秘诀。<br> 西恩说：“我的秘诀其实很简单：我并不总是抢着发言；当我不懂或不确定时，我的嘴闭得紧 紧的；但是，当我有好的意见时，我绝不错过良机——如果不让我发言，我就不让会议结束。”<br> 我问他：“如果别人都抢着讲话，你怎么发言呢？”西恩说：“我会 先用肢体语言告诉别人：下一个该轮到我发言啦！例如，我会举起手，发出特殊的声响（如清嗓子声），或者用目光要求主持人让我发言。<br> 但是，如果其他人的确霸 占了所有的发言机会，我就等发言人调整呼吸时，迅速接上话头。”我又问他：“如果你懂得不多，但是别人向你咨询呢？”<br> 西恩说：“我会先看看有没有比我懂得 更多的人帮我回答。如果有，我会巧妙地把回答的机会‘让’给他；如果没有，我会说‘我不知道，但是我会去查’，等会开完后，我一定去把问题查清楚。”<br> 跟他 的一席话让我学到了很多东西——只要把握好说话的度，选择好说话的时机，就可以得到周围人的尊敬，而且，别人也会从你的话语中了解到你是一个渊博而谦逊的 人。</p>
-<p>“我不同意我的老板，我该站起来发言吗？”</p>
-<p>我的回答是：“这要看情形而定。首先，你的老板是一个愿意接纳异议的人吗？如果不是，那么你千万不要乱发言，但是，你可以开始物色一个新 工作和新老板了！<br>如果他能够接受异议，那么，在老板还没做出最后的决定时，不要怕提出异议；但同时也要考虑到，如果是当众发言，自己的话就必须有一定的技 巧，应当顾虑到老板的面子。<br>老板一旦做出了决定，我们无论有无异议，都必须支持和贯彻，有不同意的地方只可以私下与老板沟通。”</p>
-<p>在这样一个具体的例子里，我们必须学会用智慧甄别各种复杂的情况，并从不同候选方案中择善而从的方法，这样才能找到提出异议的最佳途径。这个例子中的选择过程也可以用计算机流程图直观地表示出来：</p>
- <div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/47809276_2.jpg" width="600" height="358" alt="personal photo"><br> </div>
-
-<p> 一个出色领导总是拥有上述的六种领导力，并且会理智地分析当前的情景，以便决定运用其中的哪一种。例如，<br> 假设员工表现不佳或 员工是新手，在公司遇到重大危机时，对员工就应该采用指挥、命令的方式；<br> 如果企业需要改变方向，或员工因为不理解方向而士气不高，而你又是一个值得信任的 领导者，那就应该采用宏观掌控的方法；<br> 如果你发现员工对工作得心应手，部门协调没有问题，那就应该注重和谐合作；<br> 当你发现员工知识渊博，或你对结果不确定 的时候，就应该选择民主自由的方式；<br> 如果员工能力很高又是专家，或具备了积极自主的态度，就应该采用授权负责的方式；<br> 如果员工很有动力，愿意把工作做好， 但是经验不足，同时企业并没有处于危机时刻，那应该尽量指导培养。<br> 最好的领导是拥有这六种看起来相互矛盾的领导力，并且用智慧根据不同的情景正确选择的 人。</p>
-<p>人生中的绝大多数选择都不是非黑即白、非此即彼的事情。大家要学会在最合适的时候对最合适的人用最合适的方法，要学会在做出决定前用理智全面衡 量各种因素的利弊以及自己的能力和倾向。<br>这些东西并不能靠简单的公式来决定。读者应该凭借自己的智慧，选择最适合自己的成功之路。</p>
-<p>史蒂芬·柯维在其所著的《高效能人士的七个习惯》一书中，把所有值得关注的事情称为“关注圈”，把能够发挥影响的事情称为“影响圈”。<br>在整个关注圈中，根据自主程度的高低，人生面临的问题可分为三类：</p>
-<ol>
-<li>可直接影响的问题：对于这种问题，解决之道在于用正确的态度执行。这是我们绝对做得到的，也是最核心的“影响圈”。</li>
-<li>可间接影响的问题：有赖改进发挥影响力的方法来加以解决，如借助人际关系、团队合作和沟通能力来解决。这是最值得我们努力争取的“影响圈”。</li>
-<li><p>无能为力的问题：需要以平和的态度和胸怀，接纳这些问题。纵使有再多不满，也要泰然处之，如此才不至于让问题征服了我们。</p>
-<div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/47809276_3.jpg" width="404" height="392" alt="personal photo"><br></div>
-
-<p>碰到问题时，你只要耐心地将它分解开，看看哪些部分是你可以影响的，哪些部分是你可以关注但却无法影响的。然后，去努力争取那些可以 “间接影响”的问题，让它们变成可“直接影响”的，同时把全部心力投入自己的影响圈——你可以在这样的过程中不断获得进步，这反过来又可以让你进一步扩大 自己的影响圈。<br>解决问题的第一步都要从自己的影响圈开始：先影响自己，再影响别人，最后才有可能影响环境。虽然我们不能改变风，但我们可以调整船帆。<br>人在挫折中学到的 东西会远远多于在成功中学到的。希望你在经过这一次不幸后能够成为一个更成熟、更成功的人。<br>专注于你能够改变的事情，可能最后连当初不能改变的事情也改变了。</p>
-<p>在抉择前“重重”思考，抉择后“轻轻”放下。</p>
-<p>所谓“重重”思考，就是要培养客观的、精准的判断力。每一个重要的抉择可能都与你自己的前途密切相关，但你在抉择和判断时，一定要避免先入为主的思维定式，要避免自己的主观倾向影响判断的精准和客观。<br>我们该如何做出客观、精准的抉择呢？我给大家提供三个建议：</p>
-<ol>
-<li>第一、把影响你抉择的因素罗列成一张“利弊对照表”。</li>
-<li>第二、学会用概率论的方法看问题。</li>
-<li>第三、当自己不确定时，学会谋之于众。</li>
-</ol>
-<p>在利弊对照表中写出每个因素的利益和弊端，然后借助该表客观地分析，哪些利益和弊端对你来说最为重要？这些因素是否符合你的价值观和理想？当你面前摆了这样一张客观而详尽的利弊对照表时，主观因素就不容易影响你的判断力了。<br>借助这样一份利弊对照表，我很快就做出了客观而明智的决定——回中国工作。因为综合考虑各种利弊因素后，回中国工作最能发挥我自身的特长，也最符合我个人的价值观和理想。</p>
-<div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/47809276_4.jpg" width="546" height="289" alt="personal photo"><br></div>
-
-<p>我们应当学会分析一件事情“可改变的概率”或“可能发生的概 率”。对于发生概率小的事情，在做之前一定要有失败的心理准备。另一方面，也不要等到事情成功的概率达到100%时才去做，因为即便做成了这种事情，也没 有什么值得骄傲的。<br>做概率分析时，可以列出“最好的可能”和“最坏的打算”，以帮助自己综合考量。例如，上面提到的“回中国建立研究院”的工作，我有100%的把 握，可以把研究院办得与其他任何公司在中国建立的研究院一样好——这是最坏的打算；我有40%的把握，可以做出世界一流的研究机构来——这是最好的可能。<br>用这样的方法考虑到两个极端后，我马上就会明白，即便出现最坏的情况，我和公司也可以坦然接受。因此，我选择回中国工作就成了一件顺理成章的事。<br>许多抉择并没有这么好的“后路”，在这种时候，我们既要谨慎地评估风险因素，也要在适当的时候有勇气挑战自己。美国前国务卿鲍威尔曾在阐 述“领导力”时指出：“当你自估的成功概率达到40~70%，你就该去做这件事了。也许你会失败，但拖延或等待的代价往往是更大的。”</p>
-<p>多征求别人的意见总是好的。那些更有经验的人可以用他们多年的积累为我们指引方向，那些聪明绝顶的人可以用他们的智商启发我们的思路，那些懂得人际关系的人可以用他们的情商帮助我们有效沟通……</p>
-<p>最终的决定权在你自己，即便你采纳了别人的意见，你也不可以就此将责任推卸给他人。<br>所谓“轻轻”放下，就是说我们在做出抉择后，应当坦然面对可能发生的任何结果，既不要因为抉择正确而欣喜若狂，也不要因为抉择失误而悔恨终生。</p>
-<p>无论你的抉择正确与否，无论它的结果如何，已经做出的决定就无法收回了，你只有坦然接受它，或者在今后想办法补救。对于已经发生的事情， 或者自己已经无法控制的事情，任何担忧或悔恨都是多余的。<br>与其把时间花在无谓的焦虑上，倒不如把这些东西“轻轻”放下，然后一身轻松地去做自己应该做的 事。</p>
-<p>人贵有自知之明。这实际上是说，社会生活中的每个人都应当对自己的素质、潜能、特长、缺陷、 经验等各种基本能力有一个清醒的认识，对自己在社会工作生活中可能扮演的角色有一个明确的定位。<br>心理学上把这种有自知之明的能力称为“自觉”，这通常包括 察觉自己的情绪对言行的影响，了解并正确评估自己的资质、能力与局限，相信自己的价值和能力等几个方面。</p>
-<p>有自觉的人能够针对自己做出最具有智慧的选择，选择做自己能够胜任的工作，选择做能够得到满足感的工作等等。要做一个自觉的人，既不会对自己的 能力判断过高，也不会轻易低估自己的潜能。对自己判断过高的人往往容易浮躁、冒进，不善于和他人合作，在事业遭到挫折时心理落差较大，难以平静对待客观事 实；<br>低估了自己潜能的人，则会在工作中畏首畏尾、踟蹰不前，没有承担责任和肩负重担的勇气，也没有主动请缨的积极性。无论是上述哪一种情况，个人的潜力都 不能得到充分的发挥，个人事业也不可能取得最大的成功。</p>
-</li>
-</ol>
-<p>有自觉的人在工作遇到挫折的时候不会轻言失败，在工作取得成绩时也不会沾沾自喜。认识自我，准确定位自我价值的能力不仅仅可以帮助个人找到自己合适的空间及发展方向，也可以帮助企业建立起各司其职、协同工作的优秀团队。有自觉的人的抉择让他人更愿意信任。</p>
-<p>很多人只是从来没有考虑过要 了解自己。确定计划和原则时，必须完全基于对自己的了解。最关键的是，一定要清楚自己对什么事情最感兴趣。制定了一个计划以后，也许随着时间的推移，会有 某种程度上的修改，但始终要明确自己的大方向。<br>所以我觉得更难的一点是，能经常以旁观者的目光审视自己，看一下自己哪方面做得好，需要保持，哪方面做得 差，需要更加努力，哪方面走入了歧途，需要改正。</p>
-<p>西方有一则寓言，说的是一个年轻人向一个年长的智者请教智慧的秘诀。年轻人问：“智慧从哪里来？”智者说：“正确的选择。”年轻人又问：“正确的选择从哪里来？”智者说：“经验。”年轻人进一步追问：“经验从哪里来？”智者说：“错误的选择。”<br>不要畏惧失败。每一个失 败不是惩罚，而是一个学习的经验。</p>
-<p>学习经验不是一蹴而就的事情，有时候要经历漫长的过程。英文中有一句名言：“旅途本身就是收获（The journey is the reward）。”很多时候，你的收获并不一定是每件事的成功，而是你在走向成功的旅途中经历的一切。旅途中的每一次正确的或是错误的选择都会让你学到新 的知识、获取新的教训，并以此调整自己的自觉，掌握正确的选择方法。</p>
-<p>创新固然重要，但有用的创新更重要。<br>在整个学习的过程中，无论是错误的选择，还是失败的经历，它们都可以成为印刻在我们心底，能够随时拿出来比较、借鉴的“模板 （Template）”。当我们面临新的抉择时，我们就会使用过去积累的“模板”来比较、分析各种不同情况下成功的概率，以权衡利弊，做出正确的抉择。</p>
-<p>当新的机会摆在面前的时候，敢于放弃已经获得的一切，这需要相当大的勇气。有时，你在还没有找到“新的机会”之前，就必须放弃你已经拥有的东西，那就需要更多的勇气了。<br>这种眼前的利益往往是阻碍你获得更大成功的根源。当新的机会到来时，勇于放弃已经获得的东西并不是功亏一篑，更不是半途而 废，这是为了谋求新的发展空间。如果你在适当的时候勇敢地——当然也应该是有智慧地——放弃已经拥有但可能成为前进障碍的东西，你多半会惊讶地发现，自己 抛开的不过是一把虽能遮风挡雨，但又会阻碍视线的雨伞，自己因此而看到的却是无比广阔、无比壮丽的江山图景！</p>
-<p>当苹果电脑的一 位副总裁对我说“你要选择终身写些没有人读得懂的论文，还是要选择改变世界”时，我毫不犹豫地选择了改变世界。我的感觉就像是获得了自由。<br>如果我只对我拥有的东西依依不舍，那么我将错过这个“once in a lifetime”的机会。于是，就像我在“追随我新的抉择”中所说的：“我有选择的权利——我选择了Google。我选择了中国。我要做有影响力的事 ——在中国，我能更多地帮助中国的青年，做最有影响力的事。我要成为最好的自己——在Google，我能经过学习新的创新模式，成为最好的自己。”同时， 我放弃了在微软的人脉，放弃了继续与比尔·盖茨工作的机会，放弃了那安稳的工作，放弃了那“世界第一大IT公司”的荣誉。</p>
-<p>我人生中这几次勇于放弃的经历，都使我更加清楚自己的追求和兴趣所在，也使我更有激情去从事自己喜爱的事业。放弃意味着失去，但失去的是那些自己缺乏激情的东西，得到的却是自己主动追寻的事业。</p>
-<p>最后一个可以帮助你做出正确抉择的“智囊”就是你内心深处的价值观、理想和兴趣了。<br><strong>价值观就是每个人判断是非、善恶的信念体系（What is right？），理想就是我们对自己人生目标的基本设计（What do I want my life to be?），而兴趣则是我们每个人最喜欢、最热爱的事情（What do I love doing?）。</strong><br>这三者共同构成了我们内心深处最为真实的声音。有关如何找到自己的价值观、理想和兴趣，读者可以参看《做最好的自己》一书中的相关章节。</p>
-<p><strong>你的价值观是你判断“是非”的准绳，你的理想和兴趣是你辨别“方向”的指南针——它们都是你心底里最真实、最“自我” 的东西，还有什么是比这些更重要，更精确的判断依据呢？</strong></p>
-<p>我建议大家应该通过自己正确的价值观和理想来寻找最为完整、最为均衡的人生状态。任何一个高尚的人，一个有远大理想的人都必然会在积极追寻成功 的道路上运用自己最高的智慧：<br>因为拥有了正确的价值观和远大的理想，他在面临困难和挑战时就必然会听从自己的真心、用冷静的心态权衡各种利弊，他也必然会 在一次又一次或是成功、或是失败的抉择中不断积累经验完善自我……<br>这样的人最能理解完整与均衡的真谛，这样的人最懂得使用自己的“选择”的权利来赢得真正 的成功。</p>
-<p><strong>融会中西，均衡发展</strong><br>在今天这个<strong>信息化</strong>、<strong>全球化</strong>的时代里，只有融会中西才能成为真正有价值的<strong>国际化</strong>人才。<br>中国人讲求纪律与服从、重视谦虚和毅力以及西方人强调创意与个性，鼓励积极与勇气的 特长</p>
-<p>大部分中国青年和美国青年的优势可以用下表来概括。既需要西方的科技和理性，也需要东方的心胸与美德。</p>
-  <div align="center"><br><img src="http://okkntqe2h.bkt.clouddn.com/47809276_5.jpg" width="546" height="289" alt="personal photo"><br> </div>
-
-<p> 一个人甚至要同时具备多种看似相互矛盾的品质，才能在复杂的境遇中因具体情景不同而运用正确的一种。<br> 用智慧在各种看似矛盾的因素之间主动选择“完整”和“均衡”，这是“选择成功”的最大秘诀。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.360doc.com/content/14/1206/17/15680008_430856157.shtml&quot;&gt;李开复写《给中国学生的第六封信》——选择的智慧&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;有勇气来改变可以改变的事情，有胸怀来接受不可改变的事情，有智慧来分辨两者的不同。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/201301170535101.jpg&quot; width = &quot;402&quot; height = &quot;603&quot; alt=&quot;personal photo&quot;&gt;&lt;br&gt; &lt;/div&gt;
     
     </summary>
     

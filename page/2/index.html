@@ -164,6 +164,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Program/Concepts/the-anatomy-of-linux-library" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/27/Program/Concepts/the-anatomy-of-linux-library/">Linux系统中“动态库”和“静态库”那点事儿</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/27/Program/Concepts/the-anatomy-of-linux-library/" class="archive-article-date">
+  	<time datetime="2017-02-27T02:24:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.chinaunix.net/uid-23069658-id-3142046.html">wjlkoorey </a></p>
+<p>更多参考：<a href="http://blog.chinaunix.net/uid-23069658-id-3981406.html">深入理解C语言的函数调用过程 </a></p>
+<p>今天我们主要来说说Linux系统下基于动态库(.so)和静态(.a)的程序那些猫腻。在这之前，我们需要了解一下源代码到可执行程序之间到底发生了什么神奇而美妙的事情。</p>
+<p>在Linux操作系统中，普遍使用ELF格式作为可执行程序或者程序生成过程中的中间格式。<strong>ELF（Executable and Linking Format，可执行连接格式）</strong> 是UNIX系统实验室（USL）作为应用程序二进制接口（Application BinaryInterface，ABI）而开发和发布的。工具接口标准委员会（TIS）选择了正在发展中的ELF标准作为工作在32位Intel体系上不同操作系统之间可移植的二进制文件格式。本文不对ELF文件格式及其组成做太多解释，以免冲淡本文的主题，大家只要知道这么个概念就行。以后再详解Linux中的ELF格式。源代码到可执行程序的转换时需要经历如下图所示的过程：<br><img src="http://hi.csdn.net/attachment/201203/12/0_1331537030mwmn.gif" alt=""></p>
+        
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-linux-library/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Network</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-linux-library/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Program/Concepts/the-anatomy-of-network-programming" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -555,87 +637,9 @@
 
 
   
-    <article id="post-Program/Concepts/the-anatomy-of-cpu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/27/Program/Concepts/the-anatomy-of-cpu/">CPU的内部架构和工作原理</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/27/Program/Concepts/the-anatomy-of-cpu/" class="archive-article-date">
-  	<time datetime="2017-02-27T00:06:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://blog.chinaunix.net/uid-23069658-id-3563960.html">wjlkoorey</a></p>
-<p><strong>更多参考</strong><br><a href="http://blog.csdn.net/yang_yulei/article/details/22529437"> 处理器体系结构（了解CPU的基本运行原理）——《深入理解计算机系统》</a><br><a href="http://blog.csdn.net/yang_yulei/article/details/22613327">CPU的实模式与保护模式（简介）</a></p>
-<p>一直以来，总以为CPU内部真是如当年学习《计算机组成原理》时书上所介绍的那样，是各种逻辑门器件的组合。当看到纳米技术时就想，真的可以把那些器件做的那么小么？直到看了<a href="http://v.youku.com/v_show/id_XMjQyMDAyMTUy.html">Intel CPU制作流程</a>及<a href="http://v.youku.com/v_show/id_XMzcyODU1NDIw.html">AMD芯片的制作流程</a>的介绍不禁感慨，原来科技是如此的发达。</p>
-<p>本文我们以Intel为例对CPU的工作原理做简单介绍，仅仅是简单介绍，那么AMD，ARM，MIPS甚至PowerPC你应该会触类旁通才对。</p>
-        
-          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-cpu/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CPU</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-cpu/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
