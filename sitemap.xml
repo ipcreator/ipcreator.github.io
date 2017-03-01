@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/learn-journey-of-git/</loc>
+    <loc>http://ipcreator.me/2017/03/01/MyView/Diary/Tech/android-emulator-system-sound/</loc>
     
-    <lastmod>2017-03-01T11:06:58.928Z</lastmod>
+    <lastmod>2017-03-01T13:18:17.855Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/</loc>
     
-    <lastmod>2017-03-01T10:30:35.885Z</lastmod>
+    <lastmod>2017-03-01T13:09:14.962Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/learn-journey-of-git/</loc>
+    
+    <lastmod>2017-03-01T11:06:58.928Z</lastmod>
     
   </url>
   
@@ -520,7 +527,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Resources/20-open-source-projects-of-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Resources/25-open-source-projects-of-machine-learning-java/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -541,21 +555,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/Resources/20-open-source-projects-of-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Resources/25-open-source-projects-of-machine-learning-java/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ai-on-terminal-of-google/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
@@ -569,14 +576,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ai-on-terminal-of-google/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/Resources/tools-of-python/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
@@ -590,7 +597,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/Resources/tools-of-python/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
