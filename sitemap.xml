@@ -2,9 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/</loc>
+    
+    <lastmod>2017-03-03T12:30:12.689Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/</loc>
+    
+    <lastmod>2017-03-03T12:28:44.577Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/MyView/Diary/Tech/my-favor-music-player/</loc>
+    
+    <lastmod>2017-03-03T12:28:12.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/Program/Concepts/how-to-write-singe-instance/</loc>
+    
+    <lastmod>2017-03-03T01:28:44.188Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/Program/Resources/tips-of-androidstudio/</loc>
+    
+    <lastmod>2017-03-03T00:45:28.726Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/22/MyView/Diary/love-words/</loc>
     
-    <lastmod>2017-03-02T11:43:44.556Z</lastmod>
+    <lastmod>2017-03-02T23:24:04.931Z</lastmod>
     
   </url>
   
@@ -12,13 +47,6 @@
     <loc>http://ipcreator.me/2017/01/03/MyView/my-resume/</loc>
     
     <lastmod>2017-03-02T10:13:23.725Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/</loc>
-    
-    <lastmod>2017-03-02T09:53:13.367Z</lastmod>
     
   </url>
   
@@ -513,7 +541,21 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Resources/20-open-source-projects-of-machine-learning/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Resources/25-open-source-projects-of-machine-learning-java/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -534,21 +576,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Resources/25-open-source-projects-of-machine-learning-java/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Resources/20-open-source-projects-of-machine-learning/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
@@ -562,9 +590,16 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/18/Program/Resources/tools-of-python/</loc>
+    
+    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
   </url>
   
@@ -577,13 +612,6 @@
   
   <url>
     <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
-    
-    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/Resources/tools-of-python/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     

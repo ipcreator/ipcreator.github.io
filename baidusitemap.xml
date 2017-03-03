@@ -4,8 +4,108 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/</loc>
+    <lastmod>2017-03-03T12:30:12.689Z</lastmod>
+    <data>
+        <display>
+        <title>Thanks to...</title>
+        <pubTime>2017-12-31T15:59:06.000Z</pubTime>
+        
+        <tag>Growing Up</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/</loc>
+    <lastmod>2017-03-03T12:28:44.577Z</lastmod>
+    <data>
+        <display>
+        <title>Dev Bugs</title>
+        <pubTime>2017-12-31T14:59:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/MyView/Diary/Tech/my-favor-music-player/</loc>
+    <lastmod>2017-03-03T12:28:12.825Z</lastmod>
+    <data>
+        <display>
+        <title>RollPlayer</title>
+        <pubTime>2017-03-03T01:42:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/Program/Concepts/how-to-write-singe-instance/</loc>
+    <lastmod>2017-03-03T01:28:44.188Z</lastmod>
+    <data>
+        <display>
+        <title>如何正确地写出单例模式</title>
+        <pubTime>2017-03-03T00:31:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/Program/Resources/tips-of-androidstudio/</loc>
+    <lastmod>2017-03-03T00:45:28.726Z</lastmod>
+    <data>
+        <display>
+        <title>AndroidStudio技巧</title>
+        <pubTime>2017-03-03T00:31:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/22/MyView/Diary/love-words/</loc>
-    <lastmod>2017-03-02T11:43:44.556Z</lastmod>
+    <lastmod>2017-03-02T23:24:04.931Z</lastmod>
     <data>
         <display>
         <title>爱单词</title>
@@ -37,26 +137,6 @@
            
              
               <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/</loc>
-    <lastmod>2017-03-02T09:53:13.367Z</lastmod>
-    <data>
-        <display>
-        <title>Thanks to...</title>
-        <pubTime>2017-12-31T15:59:06.000Z</pubTime>
-        
-        <tag>Growing Up</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -1504,6 +1584,30 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Resources/20-open-source-projects-of-machine-learning/</loc>
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习年度 20 大开源项目花落谁家？（Python 版）</title>
+        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
+         
+        <tag>Open Source</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
@@ -1514,6 +1618,32 @@
         <tag>AI</tag>
          
         <tag>Business</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Resources/25-open-source-projects-of-machine-learning-java/</loc>
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    <data>
+        <display>
+        <title>25个Java机器学习工具&库</title>
+        <pubTime>2017-02-19T15:50:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
+         
+        <tag>Open Source</tag>
+         
+        <tag>Java</tag>
          
          
            
@@ -1568,66 +1698,14 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Resources/25-open-source-projects-of-machine-learning-java/</loc>
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    <data>
-        <display>
-        <title>25个Java机器学习工具&库</title>
-        <pubTime>2017-02-19T15:50:06.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-        <tag>Machine Learning</tag>
-         
-        <tag>Open Source</tag>
-         
-        <tag>Java</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Resources/20-open-source-projects-of-machine-learning/</loc>
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习年度 20 大开源项目花落谁家？（Python 版）</title>
-        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-        <tag>Machine Learning</tag>
-         
-        <tag>Open Source</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     <data>
         <display>
-        <title>智能手机 + 机器学习 = 个人终端的未来</title>
-        <pubTime>2017-02-19T15:58:06.000Z</pubTime>
+        <title>技术大牛带你走向机器学习“正道”</title>
+        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
         
         <tag>AI</tag>
-         
-        <tag>Smart Phone</tag>
          
         <tag>Machine Learning</tag>
          
@@ -1666,16 +1744,38 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     <data>
         <display>
-        <title>技术大牛带你走向机器学习“正道”</title>
-        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
+        <title>智能手机 + 机器学习 = 个人终端的未来</title>
+        <pubTime>2017-02-19T15:58:06.000Z</pubTime>
         
         <tag>AI</tag>
          
+        <tag>Smart Phone</tag>
+         
         <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/18/Program/Resources/tools-of-python/</loc>
+    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
+    <data>
+        <display>
+        <title>Python 资源大全中文版</title>
+        <pubTime>2017-02-18T01:02:06.000Z</pubTime>
+        
+        <tag>Python</tag>
          
          
            
@@ -1722,26 +1822,6 @@
         <tag>Google</tag>
          
         <tag>Tensorflow</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/Resources/tools-of-python/</loc>
-    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
-    <data>
-        <display>
-        <title>Python 资源大全中文版</title>
-        <pubTime>2017-02-18T01:02:06.000Z</pubTime>
-        
-        <tag>Python</tag>
          
          
            
