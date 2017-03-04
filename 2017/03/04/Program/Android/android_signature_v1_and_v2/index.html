@@ -6,62 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ipcreator.me">
-  <title>成长之我见 | IPCreator</title>
+  <title>APK Signature Scheme v2 | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本概念
-
-什么是爱？
-
-陪伴就是爱
-
-什么是幸福？
-
-健康、充实、知足和感恩
-
-什么是成功？
-
-按自己的意愿过一生">
+  <meta name="description" content="Android 7.0 introduces APK Signature Scheme v2, a new app-signing scheme that offers faster app install times and more protection against unauthorized alterations to APK files. By default, Android S">
 <meta property="og:type" content="article">
-<meta property="og:title" content="成长之我见">
-<meta property="og:url" content="http://ipcreator.me/2017/01/06/MyView/my-view-of-growing-up/index.html">
+<meta property="og:title" content="APK Signature Scheme v2">
+<meta property="og:url" content="http://ipcreator.me/2017/03/04/Program/Android/android_signature_v1_and_v2/index.html">
 <meta property="og:site_name" content="IPCreator">
-<meta property="og:description" content="基本概念
-
-什么是爱？
-
-陪伴就是爱
-
-什么是幸福？
-
-健康、充实、知足和感恩
-
-什么是成功？
-
-按自己的意愿过一生">
-<meta property="og:image" content="http://ipcreator.me/\img\how-to-control-your-emotion.jpg">
-<meta property="og:image" content="http://ipcreator.me/\img\big-city.jpg">
-<meta property="og:image" content="http://ipcreator.me/\img\contact-quick-search-demo.png">
-<meta property="og:image" content="http://ipcreator.me/\img\contact-smart-group-demo.png">
-<meta property="og:image" content="http://ipcreator.me/\img\junior-management.png">
-<meta property="og:image" content="http://ipcreator.me/\img\management-training.png">
-<meta property="og:image" content="http://ipcreator.me/\img\leadship-training.png">
-<meta property="og:updated_time" content="2017-03-03T23:01:26.137Z">
+<meta property="og:description" content="Android 7.0 introduces APK Signature Scheme v2, a new app-signing scheme that offers faster app install times and more protection against unauthorized alterations to APK files. By default, Android S">
+<meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/signature.png">
+<meta property="og:updated_time" content="2017-03-04T14:03:17.625Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="成长之我见">
-<meta name="twitter:description" content="基本概念
-
-什么是爱？
-
-陪伴就是爱
-
-什么是幸福？
-
-健康、充实、知足和感恩
-
-什么是成功？
-
-按自己的意愿过一生">
-<meta name="twitter:image" content="http://ipcreator.me/\img\how-to-control-your-emotion.jpg">
+<meta name="twitter:title" content="APK Signature Scheme v2">
+<meta name="twitter:description" content="Android 7.0 introduces APK Signature Scheme v2, a new app-signing scheme that offers faster app install times and more protection against unauthorized alterations to APK files. By default, Android S">
+<meta name="twitter:image" content="http://okkntqe2h.bkt.clouddn.com/signature.png">
   
   
     <link rel="icon" href="/img/personalphoto.jpg">
@@ -207,168 +165,56 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MyView/my-view-of-growing-up" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Program/Android/android_signature_v1_and_v2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      成长之我见
+      APK Signature Scheme v2
     </h1>
   
 
         
-        <a href="/2017/01/06/MyView/my-view-of-growing-up/" class="archive-article-date">
-  	<time datetime="2017-01-06T05:53:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-06</time>
+        <a href="/2017/03/04/Program/Android/android_signature_v1_and_v2/" class="archive-article-date">
+  	<time datetime="2017-03-04T05:30:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3>基本概念</h3>
-
-<p>什么是爱？</p>
+        <p><img src="http://okkntqe2h.bkt.clouddn.com/signature.png" alt=""></p>
+<p><a href="https://developer.android.com/about/versions/nougat/android-7.0.html#scoped_directory_access" target="_blank" rel="external"></a></p>
+<p>Android 7.0 introduces APK Signature Scheme v2, a new app-signing scheme that offers faster app install times and more protection against unauthorized alterations to APK files. By default, Android Studio 2.2 and the Android Plugin for Gradle 2.2 sign your app using both APK Signature Scheme v2 and the traditional signing scheme, which uses JAR signing.</p>
+ <a id="more"></a>
+<p>Although we recommend applying APK Signature Scheme v2 to your app, this new scheme is not mandatory. If your app doesn’t build properly when using APK Signature Scheme v2, you can disable the new scheme. The disabling process causes Android Studio 2.2 and the Android Plugin for Gradle 2.2 to sign your app using only the traditional signing scheme. To sign with only the traditional scheme, open the module-level build.gradle file, then add the line v2SigningEnabled false to your release signing configuration:</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class">android </span>&#123;</div><div class="line">    ...</div><div class="line">    <span class="class">defaultConfig </span>&#123; ... &#125;</div><div class="line">    <span class="class">signingConfigs </span>&#123;</div><div class="line">      <span class="class">release </span>&#123;</div><div class="line">        storeFile file(<span class="string">"myreleasekey.keystore"</span>)</div><div class="line">        storePassword <span class="string">"password"</span></div><div class="line">        keyAlias <span class="string">"MyReleaseKey"</span></div><div class="line">        keyPassword <span class="string">"password"</span></div><div class="line">        v2SigningEnabled false</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
 <blockquote>
-<p><strong>陪伴就是爱</strong></p>
+<p>Caution: If you sign your app using APK Signature Scheme v2 and make further changes to the app, the app’s signature is invalidated. For this reason, use tools such as zipalign before signing your app using APK Signature Scheme v2, not after.</p>
 </blockquote>
-<p>什么是幸福？</p>
-<blockquote>
-<p><strong>健康、充实、知足和感恩</strong></p>
-</blockquote>
-<p>什么是成功？</p>
-<blockquote>
-<p><strong>按自己的意愿过一生</strong></p>
-</blockquote>
-<a id="more"></a>
-<p>什么是思维升级？</p>
-<blockquote>
-<p><strong>技术/法律–&gt;商业思维</strong></p>
-</blockquote>
-<p>什么是自由？</p>
-<blockquote>
-<p><strong>自由=能力-欲望<br>参考阅读：<a href="https://book.douban.com/subject/25765450/" target="_blank" rel="external">《如何控制自己的情绪》</a></strong></p>
-</blockquote>
-<div align="center"><br><img src="\img\how-to-control-your-emotion.jpg" width="315" height="423" alt="personal photo"><br> </div>
-
-
-<p>如何避免被洗脑？</p>
-<blockquote>
+<p> For more information, read the Android Studio documents that describe how to <a href="https://developer.android.com/studio/publish/app-signing.html#release-mode" target="_blank" rel="external">sign an app</a> in Android Studio and how to <a href="https://developer.android.com/studio/build/build-variants.html#signing" target="_blank" rel="external">configure the build file for signing apps</a> using the Android Plugin for Gradle.</p>
+<p> <a href="http://www.jianshu.com/p/3a179acc7c4a" target="_blank" rel="external">APK Signature Scheme v2</a></p>
+<h2 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h2><p>老司机要开车了，你准备好了吗？<br>Android Studio 2.2 最近发布了许多新增功能和改进功能（详情请戳这里）<br>对于Android开发者来说，我想大家应该都知道，在 Android 7.0 Nougat 中引入了全新的 APK Signature Scheme v2，所以我大致总结一下，我们开发者需要了解的新的打包的方式和签名步骤。</p>
+<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p>用于验证 APK 完整性的 APK 加密签名现在直接位于 ZIP Central Directory 前面。<br>在 v1 中，签名通过整个 APK 文件的二进制内容进行计算并验证，而不是通过归档中每个文件的已解压文件内容。<br>可同时通过 v1 和 v2 签名对 APK 进行签署，以使其仍能向后兼容以前的 Android 版本。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>为什么谷歌要做这个事情呢？第一点毋庸置疑，肯定是处于安全性的考虑，之前的校验方式开发者可以在打包之后对apk做很多处理，第二为了性能考虑，安装校验的时候不需要再解压缩校验，从而提升安装速度（说句玩笑话，个人感觉没什么鸟用，也不需要关系）</p>
+<h2 id="那么问题来了"><a href="#那么问题来了" class="headerlink" title="那么问题来了"></a>那么问题来了</h2><p>全新的签名给我们程序员带来的麻烦却很大：</p>
 <ol>
-<li>事情本身是否符合常识和逻辑</li>
-<li>事情及对方的利益立场是什么</li>
+<li>由于在 v1 中仅验证未解压的文件内容，因此，在 APK 签署后可进行许多修改 - 可以移动甚至重新压缩文件。事实上，编译过程中要用到的 zipalign 工具就是这么做的，它用于根据正确的字节限制调整 ZIP 条目，以改进运行时性能。而且我们也可以利用这个东西，在打包之后修改META-INF目录下面的内容，或者修改Zip的注释来实现多渠道的打包，在v1签名中都可以校验通过</li>
+<li>v2 签名将验证归档中的所有字节，而不是单个 ZIP 条目，因此，在签署后无法再运行 zipalign。正因如此，现在，在编译过程中，Google将压缩、调整和签署合并成一步完成。</li>
+<li>如有任何自定义任务篡改 APK 文件或对其进行后处理（无论以任何方式），那么v2 签名会有作废的风险，从而导致您的 APK 与 Android 7.0 及更高版本不兼容。</li>
 </ol>
-</blockquote>
-<p>独立判断能力的重要性</p>
-<blockquote>
-<p>美国的卡耐基说：<a href="https://www.zhihu.com/question/30479212?sort=created" target="_blank" rel="external">成功来自于85%的人脉关系，15%的专业知识</a><br>中国的李笑来说：<a href="http://www.timetimetime.net/yuedu/31.html" target="_blank" rel="external">学习重要，还是经营人脉重要？</a><br>我的个人逻辑，分阶段调节不同比例，如：成长初级阶段（学校/应届生等）个人/人脉比例85/15，中级阶段（主管/经理等）50/50，高级阶段（总监/副总裁等）15/85</p>
-</blockquote>
-<h3>为什么系列</h3>
-
-
-<p>为什么要努力？</p>
-<blockquote>
-<p><strong>拥有更多选择的自由</strong></p>
-</blockquote>
-<p>为什么要读书？</p>
-<blockquote>
-<p><strong>开启心智，增长见识</strong></p>
-</blockquote>
-<p>为什么要留在大城市？</p>
-<blockquote>
-<p><strong>见识<br>参考阅读：<a href="http://www.360doc.com/content/13/1216/18/535749_337664024.shtml" target="_blank" rel="external">《罗振宇：拒绝逃离北上广 见识决定命运》</a></strong></p>
-</blockquote>
-<div align="center"><br><img src="\img\big-city.jpg" width="320" height="200" alt="personal photo"><br> </div>
-
-
-<h3>痛点系列</h3>
-
-
-<p>功名VS幸福<br>应试VS素质<br>理论VS实践<br>抽象VS具体<br>宏观VS微观<br>说说VS执行</p>
-<h2 id="创新"><a href="#创新" class="headerlink" title="创新"></a>创新</h2><h3>基本概念</h3>
-
-<p>什么是创新？</p>
-<blockquote>
-<p><strong>你无我有、你有我优、你优我快</strong></p>
-</blockquote>
-<p>什么是体验？</p>
-<blockquote>
-<p><strong>用起来很爽，很智能非常快</strong></p>
-</blockquote>
-<!-- more -->
-<h3>快速智能示例一</h3>
-
-<p>支持联系人拼音首字母键盘定位，智能屏蔽无数据按键</p>
-<div align="center"><br><img src="\img\contact-quick-search-demo.png" width="302" height="401" alt="personal photo"><br> </div>
-
-<h3>快速智能示例二</h3><br>支持联系人分组一键群发短信，智能屏蔽呼出按钮，以防用户误操作<br><div align="center"><br><img src="\img\contact-smart-group-demo.png" width="302" height="401" alt="personal photo"><br> </div><br><br> ## 管理<br> <h3>基本概念</h3>
-
-<p> 什么是管理？</p>
-<blockquote>
-<p><strong>管事理人</strong></p>
-</blockquote>
-<p> 什么是领导？</p>
-<blockquote>
-<p><strong>让追随者“升官发财”</strong></p>
-</blockquote>
- <!-- more -->
-<p> 什么是狼性？</p>
-<blockquote>
-<p><strong>以结果为导向，多为成功找方法</strong></p>
-</blockquote>
- <h3>自我</h3><br> &gt;<strong>自知者明、自胜者强、自律者自由</strong><br><br> <h3>主管</h3><br> 参考阅读：<a href="http://www.mtplearning.com/ppkcxq?product_id=29" target="_blank" rel="external">JMT主管管理技能培训</a><br><br> <div align="center"><br> <img src="\img\junior-management.png" width="398" height="512" alt="personal photo"><br>  </div><br><br> <h3>中层</h3><br> 参考阅读：<a href="http://www.mtplearning.com/ppkcxq?product_id=36" target="_blank" rel="external">MTP管理才能发展培训</a><br><br> <div align="center"><br> <img src="\img\management-training.png" width="398" height="512" alt="personal photo"><br>  </div><br><br> <h3>高层</h3><br> 参考阅读：<a href="http://www.mtplearning.com/ppkcxq?product_id=35" target="_blank" rel="external">LTP领导力训练</a><br><br> <div align="center"><br> <img src="\img\leadship-training.png" width="398" height="512" alt="personal photo"><br>  </div><br><br> 关于分享<br>  &gt;柳传志给杨元庆写过这样一封信：你最初是小鸡，你长成大鸡的时候没有人佩服你，当你长成火鸡的时候，也没有人佩服你，只有你变成鸵鸟的时候，别人才会佩服你，因为你比别人都大。所以，你的分享不会带来任何好处，只会给你带来不必要的管理困扰。<br> 参考阅读：<a href="http://www.iheima.com/news/2013/0416/38212.shtml" target="_blank" rel="external">王治全反思：被我“毁掉”的兄弟！</a><br><br> 关于黑天鹅<br> &gt;塔勒布在他后一本书《反脆弱》中给出的应对之道——黑天鹅的出现，和观察者有关。一只被喂养了很久的火鸡，它会觉得屠夫很爱它，对它来说，它在感恩节被宰杀就是一个黑天鹅事件，但这不会让屠夫吃惊。所以，塑造新的思维模式的办法就是，不要成为火鸡。应对科技挑战的最佳解决方式，就是让自己成为一家科技公司。<br> 参考阅读：<a href="http://www.tmtpost.com/2564668.html" target="_blank" rel="external">刘湘明：应对科技挑战的最佳方式，就是让自己成为一家科技公司</a><br><br> 关于“推销”<br> &gt;李笑来《新生——七年就是一辈子》之第19章节“<a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/A16.html" target="_blank" rel="external">如何克制自己的“推销”欲望</a>”<br> 推销知识很难的更深层次的原因在于：<br> - 仅仅说是肯定没用的，得做，不然说没分量；<br> - 做都不一定是有用的，得有改变，没改变不算数；<br> - 有改变也不一定够，得有看得见的改变，看不见还是没分量；<br> - 有看得见的改变还是不一定成功，因为对方可能并不服气；<br> - 改变太大了也不行，因为对方一看，吓倒了，直接放弃了……<br><br> &gt;真的感谢互联网，它给了我们另外一个可以分享的通道。自从我开始写博客之后，之前此类的烦恼彻底消失了。<br> 有分享欲望的时候，可以喷在网上，又由于没有了特定的对象，反倒没有了“获取认可”的压力，分享变成了一个纯粹开心的行为。<br> 能否有因获得认可而产生的快乐，只取决于两个因素，<br> 1. 我是否真的真诚（这个不用提）;<br> 2. 我是否运气好，消息能传递给那些能理解我的人（我好像这方面运气一直都不错）……<br><br> &gt;于是，整个人就感觉少了很大一个负担，<br> 1. 该干嘛就去干嘛，说那么多有什么用？<br> 2. 做了，就有变化，有变化，自己先开心，别人看不看得到其实并不重要罢？<br> 3. 少说导致更专注，更专注导致变化最大化，有时候吓到别人，也怪不得自己罢？<br><br><br> ## 专利<br><br> <h3>基本概念</h3>
-
-<p> 什么是专利？</p>
-<blockquote>
-<p><strong>专有的权利</strong></p>
-</blockquote>
-<p> 什么是专利的价值？</p>
-<blockquote>
-<p><strong>风险控制、增值经营、竞争超越</strong><br> 参考阅读：<a href="http://finance.sina.com.cn/leadership/mroll/20130205/123414508677.shtml" target="_blank" rel="external">现代公司法务的核心商业价值构建</a></p>
-</blockquote>
-<p> 什么是好的专利？</p>
-<blockquote>
-<p><strong>能带来价值的专利</strong><br> 参考阅读：<a href="http://www.chinaipmagazine.com/journal-show.asp?id=2197" target="_blank" rel="external">移动互联时代的知识产权新特征</a></p>
-</blockquote>
-<p> 什么是好的专利布局？</p>
-<blockquote>
-<p><strong>产出更多更高价值专利的挖掘和扩展</strong></p>
-</blockquote>
- <!-- more -->
-<p> 如何有效实施专利布局？</p>
-<blockquote>
-<p><strong><a href="https://ipcreator.github.io/2017/01/31/my-article-for-newspaper/" target="_blank" rel="external">五位一体/沙漠寻路/三步六法</a></strong></p>
-</blockquote>
+<h2 id="解决途径"><a href="#解决途径" class="headerlink" title="解决途径"></a>解决途径</h2><ol>
+<li>如果我们选择手动签名（比如使用命令行）那么 Android SDK 中提供了一个名为 apksigner 的新工具，该工具可同时提供 v1 和 v2 APK 签署与验证。请注意，如果您使用 v2 签名，则在运行 apksigner之前，必须先运行 zipalign。</li>
+<li>来自 JDK 的 jarsigner 工具与 Android v2 签名不兼容，因此，如果您要保留 v2 签名，您不能用它来重新签署 APK。</li>
+<li>如果我们还想使用之前的打包方式，不做修改，那么Google也是为我们提供了配置方法的用来关闭v2签名：<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">v1SigningEnabled</span> <span class="literal">false</span></div><div class="line">v2SigningEnabled <span class="literal">false</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>虽然说现在Google有提供方法来关闭v2校验，但是我相信，一旦等到这种方式成熟之后，它会成为一个必需品，毕竟安全第一嘛，我们还是要接纳新事物的，好了，大概就讲这么多，有需要的可以看看。</p>
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您的打赏！<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://okkntqe2h.bkt.clouddn.com/alipay_cr.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -379,7 +225,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Growing Up</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
         		</li>
       		
 		</ul>
@@ -391,7 +237,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -446,7 +292,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3ay1LDMAwFUP7/p8MM20B6JYVC7ONVh0ldnyyEHv74iNfxtc6fz8+cnzyvn/Y5P3PzwsDAeCzjuFzJgXqHvv5ufjYMDIx9GEmQvf6Z5LjX4TvfDQMDAyNJB69/Pj/0JA3FwMDAaG7XSvX+LOBiYGA8ipGXoHkRm7fV3lqLY2BgPJAxGQz89uc3zTcwMDD+MeMort4O1cOVT4WBgbE0o5rSzS9JXKeVVWShbsbAwHgso1pezhPKZMBQHUtgYGCszagevddEm4TaZE8MDIx9GL3rEdVDT4agL5JXDAyMDRjV5loeLhPY/MVhYGCszZg015JLXfnFr8l1DQwMjB0YydHnITUJ7r0wjYGBsSojCVv5ULNXuObBN7ozgoGBsSijWoK+f/D5Iq3EwMBYmpGXpnkBORkVVNNHDAyMfRi9RG0SiO9tz2FgYOzA6A0p88Fnci0seUGFASoGBsZCjHmDPi9f8ysU5QEqBgbG0ozqEXvpWhJGq4OBF7fbMDAwFmJU2/d5+ToBR2NLDAyMjRnVdLDZDmu9oMKdEQwMjIUYyaa3zUiLbbh5gw8DA2MNxlFceUBM/tIbFZTvaGBgYDycMblUWr1yUU0B8+YdBgbGDoxekJ0Xq71GXvO/BwYGxhKMZOve57w8rha93wRcDAyM7RnVpLA31MxfBwYGBsY8XesdOtkNAwNjT0aviK129fKUsTxAxcDAWJrRa5P1EsQ8fbyr6MXAwHg44xOm+PUbbOMrHAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtUlEQVR42u3a0U7DMAwFUP7/p0HidbS9tuMB0unThLo2J5MSc+OPj/j6/L5ePyd3vt7/+XJdPfnqzsMXHh4eXmvoV1cy0IR99a0Edj9xD1OAh4eHt8bLN4P7x90/LdkMJt/Cw8PD+2u8+9I2WqbjJycbAx4eHt5/4U3Cgrx8/7WNAQ8PDy/m5a+8ByfPrBbib8pa8PDw8GLe5ADstz6/6XwPDw8Pr7V895b1U5vKZLR4eHh4G7ze4VYeOuTrdhIEV6NePDw8vPfz8gapalmcB7jVxqzovwE8PDy8AS8ZRF7sTqYs2TDKd+Lh4eEt8HqF7IS6Fzo8hBF4eHh4h3j50KvLdO+Yv1pwP/wMeHh4eAu8aqg6yjyCqHd+zIaHh4e3zauW0b1F+dSx2T3+MmvBw8PDW+D1CuK81K5GHnn5/jA1eHh4eMu83hFUL0qoFvF5C8IPMS4eHh7eGu/UedroLK4VXjT3PTw8PLwWr1cWn0qO8+FOpgAPDw/vLC95XLVpYNLINWnbikpqPDw8vEO86j//k1aqs9Px8DPg4eHhvZGXBwpJi8AknJ0Ex3h4eHgbvI3mp2oJnhTWvUMyPDw8vG1esgHkIUUO6B28Vd+Fh4eHd4qXl6T5K6ubSrUdoTCJeHh4eGu8eRtWbym/j3TnjQt4eHh4G7z8qh78V0PYectCIcbFw8PDG/CSF1QPvfLFuocpRM94eHh4C7z8pl58kLdMVcvrfLLw8PDwzvIm4UL+9yp4MpXHTtjw8PDwWgFEL96dNFf1oopqCIKHh4c351U3g2qwe/+EXkCcTDceHh7eNq+6GfSGvreDFVqv8PDw8P4hbx7R/umNAQ8PDy8YXB7d5k0A1WOzh/4IPDw8vAVeNYyYbCTVMCJvyTqWteDh4eGlb4yK2mqJPC/NJ1ODh4eHd5T3BYdW+T5aJAFbAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -460,18 +306,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/01/10/MyView/my-book-list/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          IPCreator的书单
+          Dev Bugs
         
       </div>
     </a>
   
   
-    <a href="/2017/01/05/MyView/my-article-for-newspaper/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">酷派集团：“五位一体”高效管理7000件专利申请</div>
+    <a href="/2017/03/03/MyView/Diary/Tech/my-favor-music-player/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">RollPlayer</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -485,7 +331,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="MyView/my-view-of-growing-up" data-title="成长之我见" data-url="http://ipcreator.me/2017/01/06/MyView/my-view-of-growing-up/"></div>
+	<div class="ds-thread" data-thread-key="Program/Android/android_signature_v1_and_v2" data-title="APK Signature Scheme v2" data-url="http://ipcreator.me/2017/03/04/Program/Android/android_signature_v1_and_v2/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
