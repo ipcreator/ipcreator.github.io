@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/</loc>
+    
+    <lastmod>2017-03-05T02:49:05.046Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/MyView/Diary/love-sentencns/</loc>
+    
+    <lastmod>2017-03-05T01:56:32.401Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/MyView/Diary/love-words/</loc>
+    
+    <lastmod>2017-03-05T01:53:25.189Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/</loc>
+    
+    <lastmod>2017-03-04T23:10:25.646Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/03/04/Program/Android/android_signature_v1_and_v2/</loc>
     
     <lastmod>2017-03-04T14:03:17.625Z</lastmod>
@@ -9,30 +37,9 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/</loc>
-    
-    <lastmod>2017-03-04T14:00:17.584Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/22/MyView/Diary/love-words/</loc>
-    
-    <lastmod>2017-03-04T05:44:42.739Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/01/06/MyView/my-view-of-growing-up/</loc>
     
     <lastmod>2017-03-03T23:01:26.137Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/</loc>
-    
-    <lastmod>2017-03-03T23:00:32.166Z</lastmod>
     
   </url>
   
@@ -415,13 +422,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/22/MyView/Diary/love-sentencns/</loc>
-    
-    <lastmod>2017-02-27T01:49:54.249Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-cpu/</loc>
     
     <lastmod>2017-02-27T00:44:31.430Z</lastmod>
@@ -548,7 +548,21 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/Resources/25-open-source-projects-of-machine-learning-java/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Resources/awesome-deep-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -563,20 +577,6 @@
   
   <url>
     <loc>http://ipcreator.me/2017/02/19/Program/Resources/20-open-source-projects-of-machine-learning/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Resources/awesome-deep-learning/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -604,6 +604,13 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
+    
+    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/18/Program/Resources/big-data-resources/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
@@ -612,13 +619,6 @@
   
   <url>
     <loc>http://ipcreator.me/2017/02/18/Program/Resources/tools-of-python/</loc>
-    
-    <lastmod>2017-02-19T06:02:30.218Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     

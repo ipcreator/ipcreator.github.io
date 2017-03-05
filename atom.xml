@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-03-03T23:00:32.166Z</updated>
+  <updated>2017-03-04T23:10:25.646Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/"/>
     <id>http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/</id>
     <published>2017-12-31T15:59:06.000Z</published>
-    <updated>2017-03-03T23:00:32.166Z</updated>
+    <updated>2017-03-04T23:10:25.646Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/thanks.png" alt=""></p>
 <p>Standing on Shoulders of Giants</p>
@@ -30,6 +30,7 @@
 <p> 学之者不如好之者，好之者不如乐之者，兴趣是最好的老师<br> 化整为零，先易后难，循序渐进，各个击破，坚持是成功的密码，自胜者强</p>
 <p> 若贪多求快，则欲速不达<br> 若聚焦极致，则迎刃而解</p>
 <p> 别急，慢慢来，一切都来得及<br> 架构思考、动手实践、检索分析、复盘总结、循环递进</p>
+<p> 保持节奏感、创造成就感</p>
 <h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><p><img src="http://okkntqe2h.bkt.clouddn.com/nougat_bg.jpg" alt=""><br><a href="https://developer.android.com/index.html" target="_blank" rel="external">Android</a>——See what’s new with Android - from phones to watches and more.<br><a href="http://blog.csdn.net/guolin_blog" target="_blank" rel="external">郭霖的专栏</a>——每当你在感叹，如果有这样一个东西就好了的时候，请注意，其实这是你的机会<br><a href="http://blog.csdn.net/luoshengyang" target="_blank" rel="external">老罗的Android之旅</a>——爱生活，爱Android<br><a href="http://hukai.me/" target="_blank" rel="external">胡凯</a><br><a href="http://blog.csdn.net/eclipsexys" target="_blank" rel="external">eclipse_xu</a><br><a href="http://hukai.me/android-training-course-in-chinese/index.html" target="_blank" rel="external">Android官方培训课程中文版(v0.9.7)</a><br><a href="http://blog.csdn.net/aqi00/article/details/50012511" target="_blank" rel="external">湖前琴亭</a>——好好做技术，认真写博文<br><a href="https://book.douban.com/subject/26855851/" target="_blank" rel="external">Android群英传</a>——神兵利器<br><a href="https://book.douban.com/subject/26644935/" target="_blank" rel="external">Android源码设计模式解析与实战</a><br><a href="https://book.douban.com/subject/26915433/" target="_blank" rel="external">第一行代码：Android（第2版）</a><br><a href="https://book.douban.com/subject/19986441/" target="_blank" rel="external">Android系统源代码情景分析</a></p>
 <h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><p><img src="https://camo.githubusercontent.com/ee91ac3c9f5ad840ebf70b54284498fe0e6ddb92/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f7472616e73702e706e67" alt=""><br><a href="https://www.tensorflow.org/" target="_blank" rel="external">TensorFlow</a>——An open-source software library for Machine Intelligence<br><a href="https://github.com/tensorflow/tensorflow" target="_blank" rel="external">tensorflow</a><br><a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples" target="_blank" rel="external">tensorflow examples</a><br><a href="https://github.com/miyosuda/TensorFlowAndroidDemo" target="_blank" rel="external">TensorFlowAndroidDemo</a><br><a href="https://github.com/miyosuda/TensorFlowAndroidMNIST" target="_blank" rel="external">TensorFlowAndroidMNIST</a><br><a href="http://wiki.jikexueyuan.com/project/tensorflow-zh/" target="_blank" rel="external">TensorFlow 官方文档中文版</a><br><a href="https://github.com/tobegit3hub/deep_recommend_system" target="_blank" rel="external">deep_recommend_system</a><br><a href="https://github.com/FishermanZzhang/ID-Card_with_TensorFlow_Opencv_in_Android" target="_blank" rel="external">ID-Card_with_TensorFlow_Opencv_in_Android</a><br><a href="https://github.com/natanielruiz/android-yolo" target="_blank" rel="external">android-yolo</a>——Real-time object detection on Android using the YOLO network with TensorFlow<br><a href="https://github.com/dongchangzhang/NewFeelings" target="_blank" rel="external">NewFeelings</a>——Android平台相册应用，使用Google开源机器学习框架tensorflow处理图片以提供更好的图片浏览体验<br><a href="https://github.com/aerdy/Android-Tensorflow-Sample" target="_blank" rel="external">TensorFlow Android Camera Demo</a><br><a href="https://book.douban.com/subject/26708119/" target="_blank" rel="external">机器学习</a><br><a href="https://book.douban.com/subject/26838557/" target="_blank" rel="external">智能时代</a>——大数据与智能革命重新定义未来<br><a href="https://book.douban.com/subject/10750155/" target="_blank" rel="external">数学之美</a><br><a href="https://book.douban.com/subject/19949020/" target="_blank" rel="external">程序员的数学</a>——编程的基础是计算机科学，而计算机科学的基础是数学。<br><a href="https://book.douban.com/subject/26593822/" target="_blank" rel="external">程序员的数学 2概率统计</a><br><a href="https://book.douban.com/subject/26740548/" target="_blank" rel="external">程序员的数学 3线性代数</a></p>
 <h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><p><img src="http://okkntqe2h.bkt.clouddn.com/github-logo.jpg" alt=""><br><a href="https://github.com/" target="_blank" rel="external">Github</a><br><a href="https://coding.net/" target="_blank" rel="external">Coding</a><br><a href="http://stackoverflow.com/" target="_blank" rel="external">Stack Overflow</a><br><a href="http://www.qiniu.com/pricing" target="_blank" rel="external">七牛</a><br><a href="http://www.google.com/ncr" target="_blank" rel="external">Google</a><br><a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" target="_blank" rel="external">English</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a><br><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="external">Python教程</a><br><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">hexo-theme-yilia</a><br><a href="https://atom.io/" target="_blank" rel="external">atom</a>——A hackable text editor for the 21st Century<br><a href="https://book.douban.com/subject/10794788/" target="_blank" rel="external">鸟哥的Linux私房菜（第三版）</a><br><a href="https://book.douban.com/subject/5333562/" target="_blank" rel="external">深入理解计算机系统</a><br><a href="大话数据结构"></a><br><a href="大话设计模式"></a><br><a href="https://book.douban.com/subject/26829016/" target="_blank" rel="external">Python编程：从入门到实践</a><br><a href="https://book.douban.com/subject/25708312/" target="_blank" rel="external">C++ Primer 中文版（第 5 版）</a><br><a href="https://book.douban.com/subject/2130190/" target="_blank" rel="external">Java编程思想 （第4版）</a><br><a href="https://book.douban.com/subject/1139336/" target="_blank" rel="external">C程序设计语言</a></p>
@@ -58,15 +59,18 @@
     <link href="http://ipcreator.me/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/"/>
     <id>http://ipcreator.me/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/</id>
     <published>2017-12-31T14:59:06.000Z</published>
-    <updated>2017-03-04T14:00:17.584Z</updated>
+    <updated>2017-03-05T02:49:05.046Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/wiseman.jpeg" alt=""></p>
 <p>什么是智者？就是一个坑不跌两回呗</p>
 <p>The wiser man doesn’t fall into the same pit twice.</p>
+<p>基础不牢、地动山摇</p>
+<p> Without a solid foundation, the earth will shake.</p>
  <a id="more"></a>
 <h2 id="安装Apache服务器"><a href="#安装Apache服务器" class="headerlink" title="安装Apache服务器"></a>安装Apache服务器</h2><p> 一句话，通过官方网站和集成包，最为简单快捷<br> <a href="https://www.apachefriends.org/zh_cn/index.html" target="_blank" rel="external">XAMPP Apache + MariaDB + PHP + Perl</a></p>
 <h2 id="上传文件到7牛，删除后服务器未能及时刷新"><a href="#上传文件到7牛，删除后服务器未能及时刷新" class="headerlink" title="上传文件到7牛，删除后服务器未能及时刷新"></a>上传文件到7牛，删除后服务器未能及时刷新</h2><p>如果调试需要，只能重命名后再上传，更换新的路径</p>
 <h2 id="JAVA中，字符串拼接尽量使用StringBuilder的append方法"><a href="#JAVA中，字符串拼接尽量使用StringBuilder的append方法" class="headerlink" title="JAVA中，字符串拼接尽量使用StringBuilder的append方法"></a>JAVA中，字符串拼接尽量使用StringBuilder的append方法</h2><p>效率测试可参看<a href="http://www.cnblogs.com/focusj/archive/2011/02/16/2057630.html" target="_blank" rel="external">java五种拼接字符串的方法</a></p>
+<h2 id="“”和null的差别"><a href="#“”和null的差别" class="headerlink" title="“”和null的差别"></a>“”和null的差别</h2><p>s是一个String类的引用，null表示它不指向任何字符串对象，””表示s指向一个长度为0的字符串对象。如果调用s.length()之类的方法，s为null时会抛出NullPointerException，而””则能进行正常的计算。  </p>
 <h2 id="模拟器离线"><a href="#模拟器离线" class="headerlink" title="模拟器离线"></a>模拟器离线</h2><p>通过DDMS的File Explorer查看文件提示<br>com.android.ddmlib.AdbCommandRejectedException: device offline</p>
 <p>【解决办法】在cmd下输入：<br>Step1：  adb kill-server<br>Step2： adb start-server<br>或者打开进程管理器，把adb关掉，再重启adb。</p>
 <h2 id="button透明"><a href="#button透明" class="headerlink" title="button透明"></a>button透明</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">半透明&lt;Button android:<span class="built_in">background</span>=<span class="string">"#11000000"</span>  /&gt;</div><div class="line">透明&lt;Button android:<span class="built_in">background</span>=<span class="string">"#00000000"</span> /&gt;</div></pre></td></tr></table></figure>
@@ -82,6 +86,8 @@
       &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/wiseman.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;什么是智者？就是一个坑不跌两回呗&lt;/p&gt;
 &lt;p&gt;The wiser man doesn’t fall into the same pit twice.&lt;/p&gt;
+&lt;p&gt;基础不牢、地动山摇&lt;/p&gt;
+&lt;p&gt; Without a solid foundation, the earth will shake.&lt;/p&gt;
     
     </summary>
     
@@ -2446,11 +2452,12 @@ public void thisIsSuper() {
     <link href="http://ipcreator.me/2017/02/22/MyView/Diary/love-sentencns/"/>
     <id>http://ipcreator.me/2017/02/22/MyView/Diary/love-sentencns/</id>
     <published>2017-02-22T00:13:05.000Z</published>
-    <updated>2017-02-27T01:49:54.249Z</updated>
+    <updated>2017-03-05T01:56:32.401Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://cdn.iciba.com/news/word/big_20160828b.jpg" alt=""></p>
 <p>How deep I love you, the moon represents my heart.<br>你问我爱你有多深，月亮代表我的心。</p>
    <a id="more"></a>
+<p><img src="http://cdn.iciba.com/news/word/big_20170305b.jpg" alt=""><br>Your present circumstances don’t determine where you can go; they merely determine where you start.<br>你目前的处境并不决定你的未来，它只决定你的起点。</p>
 <p><a href="http://news.iciba.com/study/oral/1575707.shtml" target="_blank" rel="external">BBC英语教学</a></p>
 <p><img src="http://cdn.iciba.com/news/2017/0210/20170210094146362.jpg" alt=""></p>
 <p>英国，不同地区的人们会用和动物有关的词汇来称呼他人。这些称呼十分有爱，也很友好。有些人认为这个称呼来源于 duke 公爵。</p>
@@ -2463,7 +2470,7 @@ public void thisIsSuper() {
 <blockquote>
 <p>词霸小编: 快乐似蒲公英的种子飘落在任意角落，你需要的只是一双发现它的眼睛……【词汇扩充】heartfelt adj. 衷心的，真诚的。如 heartfelt thanks 由衷的感谢。同义词为：sincere。</p>
 </blockquote>
-<h2 id="实用口语：与老外见面的10大经典句，有你讲过的吗？"><a href="#实用口语：与老外见面的10大经典句，有你讲过的吗？" class="headerlink" title="实用口语：与老外见面的10大经典句，有你讲过的吗？"></a>实用口语：与老外见面的10大经典句，有你讲过的吗？</h2><p><a href="http://xue.youdao.com/sw/m/1309085?keyfrom=dict2.index" target="_blank" rel="external">lavaFOX看电影学英语</a></p>
+<h2 id="与老外见面的10大经典句"><a href="#与老外见面的10大经典句" class="headerlink" title="与老外见面的10大经典句"></a>与老外见面的10大经典句</h2><p><a href="http://xue.youdao.com/sw/m/1309085?keyfrom=dict2.index" target="_blank" rel="external">lavaFOX看电影学英语</a></p>
 <p><img src="https://oimageb6.ydstatic.com/image?id=-2459576666684072041&amp;product=dict&amp;_w=440&amp;_h=440&amp;originWidth=440&amp;originHeight=440" alt=""></p>
 <p>1.Welcome to China! Welcome to our city!</p>
 <p>欢迎到中国来！欢迎到我们的城市来！</p>
@@ -2601,7 +2608,7 @@ public void thisIsSuper() {
     <link href="http://ipcreator.me/2017/02/22/MyView/Diary/love-words/"/>
     <id>http://ipcreator.me/2017/02/22/MyView/Diary/love-words/</id>
     <published>2017-02-21T23:44:05.000Z</published>
-    <updated>2017-03-04T05:44:42.739Z</updated>
+    <updated>2017-03-05T01:53:25.189Z</updated>
     
     <content type="html"><![CDATA[<p>图文来源：<a href="http://xue.youdao.com/sw/m/1309029?keyfrom=dict2.index" target="_blank" rel="external">微信号 我爱背单词</a></p>
 <h2 id="predator"><a href="#predator" class="headerlink" title="predator"></a>predator</h2><p>英 [‘predətə]  美 [‘prɛdətɚ]<br>n. [动] 捕食者；[动] 食肉动物；掠夺者</p>
@@ -2613,6 +2620,12 @@ public void thisIsSuper() {
 <p><strong>双语例句</strong><br>Insane pumpkin carving of the Predator.<br>疯狂的南瓜雕刻——食肉动物。</p>
 <p>Some residents and experts said the predator may be a bear, a wayward panther or cougar, or even a wolf because 3-inch paw tracks were found at the scene.<br>一些居民和专家认为这种食肉动物可能是一只熊，一头任性的豹子或狮子，抑或是一头狼，因为在现场发现了3英寸长的爪迹。</p>
 <p>But just like Dutch in Predator before the final battle, you have to be able to answer only one question about your target before you start: where they are.<br>但就像一战之前的荷兰掠夺者一样，在开始工作之前你必须能够回答实现目标的唯一问题：他们在哪里？</p>
+<h2 id="manifest"><a href="#manifest" class="headerlink" title="manifest"></a>manifest</h2><p>英 [‘mænɪfest]  美 [‘mænɪfɛst]<br>vt. 证明，表明；显示<br>vi. 显示，出现<br>n. 载货单，货单；旅客名单<br>adj. 显然的，明显的；明白的</p>
+<p><strong>词根</strong><br>manifest<br>adv.<br>manifestly 显然地；明白地<br>n.<br>manifestation 表现；显示；示威运动</p>
+<p><strong>短语</strong><br>Manifest Destiny 昭昭天命 ; 昭昭天命 ; 天定命运 ; 宿命<br>cargo manifest 载货清单 ; 货物舱单 ; 货物清单 ; 载货详细登记单<br>transhipment manifest 转运仓单 ; 转运仓单<br>Manifest information 舱单信息<br>Manifest Discrepancy 舱单数据不符 ; 舱复数据不符<br>manifest freight 快运货物<br>manifest content 显性内容 ; 显性梦境 ; 外显内容 ; 梦境<br>OUTWARD MANIFEST 出口舱单 ; 出口货物舱单 ; 出口货物清单 ; 出口舱单<br>manifest dream 显性梦 ; 梦现</p>
+<p><strong>双语例句</strong><br>Fear was manifest on her face.<br>她脸上显露出惧怕的神情。<br>《新英汉大辞典》<br>So, all of those dependencies have to appear on one line in the manifest file.<br>因此，所有这些依赖项在清单文件中必须出现在一行。<br>www.ibm.com<br>If anything fails, then you might have left out some files in the cache manifest.<br>如果出现任何失败，那么您可能在缓存清单中遗漏了一些文件。</p>
+<h2 id="magnificent"><a href="#magnificent" class="headerlink" title="magnificent"></a>magnificent</h2><p>What a magnificent future!<br>我们来看一下 magnificent 这个单词地道的英文解释：<br>If you say that something or someone is magnificent, you mean that you think they are extremely good, beautiful, or impressive.</p>
+<p><img src="https://oimagec4.ydstatic.com/image?id=-6041413388494002595&amp;product=dict&amp;_w=990&amp;_h=4053&amp;originWidth=990&amp;originHeight=4053" alt=""></p>
 <h2 id="mandatory"><a href="#mandatory" class="headerlink" title="mandatory"></a>mandatory</h2><p>英 [‘mændət(ə)rɪ]  美 [‘mændətɔri]<br>adj. 强制的；托管的；命令的<br>n. 受托者（等于mandatary）</p>
 <p><strong>词根</strong><br>mandate<br>n.<br>mandate 授权；命令，指令；委托管理；受命进行的工作<br>mandatary 受托者；代理人<br>mandator 命令者；委托人，托管人<br>mandamus 命令书；书面训令<br>vt.<br>mandate 授权；托管<br>mandamus 发训令（过去式mandamused，过去分词mandamused，现在分词mandamusing，第三人称单数mandamuses）</p>
 <p><strong>短语</strong><br>mandatory plan 指令性计划 ; 强制性计划 ; 指令性打算 ; 指令性<br>mandatory offer 强制要约 ; 强制性要约 ; 强制性收购建议 ; 强制性收购<br>Mandatory Lock 强制锁 ; 强制性锁 ; 强制性的锁<br>mandatory retention 必须保持 ; 强制保持<br>mandatory rule 法定规范 ; 强制性规则 ; 强制规定 ; 强制性规范<br>MANDATORY FIELD 必选项目 ; 必填字段 ; 必须填写<br>Mandatory insurance 强制保险 ; 政策性保险 ; 法定保险 ; 强制保险<br>Mandatory Prewash 强制预洗<br>mandatory legislation 强迫性法规 ; 强制性法律</p>

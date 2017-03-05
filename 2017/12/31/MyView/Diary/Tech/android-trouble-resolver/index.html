@@ -9,19 +9,25 @@
   <title>Dev Bugs | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="什么是智者？就是一个坑不跌两回呗
-The wiser man doesn’t fall into the same pit twice.">
+The wiser man doesn’t fall into the same pit twice.
+基础不牢、地动山摇
+ Without a solid foundation, the earth will shake.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dev Bugs">
 <meta property="og:url" content="http://ipcreator.me/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="什么是智者？就是一个坑不跌两回呗
-The wiser man doesn’t fall into the same pit twice.">
+The wiser man doesn’t fall into the same pit twice.
+基础不牢、地动山摇
+ Without a solid foundation, the earth will shake.">
 <meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/wiseman.jpeg">
-<meta property="og:updated_time" content="2017-03-04T14:00:17.584Z">
+<meta property="og:updated_time" content="2017-03-05T02:49:05.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dev Bugs">
 <meta name="twitter:description" content="什么是智者？就是一个坑不跌两回呗
-The wiser man doesn’t fall into the same pit twice.">
+The wiser man doesn’t fall into the same pit twice.
+基础不牢、地动山摇
+ Without a solid foundation, the earth will shake.">
 <meta name="twitter:image" content="http://om8nmvpn9.bkt.clouddn.com/wiseman.jpeg">
   
   
@@ -191,10 +197,13 @@ The wiser man doesn’t fall into the same pit twice.">
         <p><img src="http://om8nmvpn9.bkt.clouddn.com/wiseman.jpeg" alt=""></p>
 <p>什么是智者？就是一个坑不跌两回呗</p>
 <p>The wiser man doesn’t fall into the same pit twice.</p>
+<p>基础不牢、地动山摇</p>
+<p> Without a solid foundation, the earth will shake.</p>
  <a id="more"></a>
 <h2 id="安装Apache服务器"><a href="#安装Apache服务器" class="headerlink" title="安装Apache服务器"></a>安装Apache服务器</h2><p> 一句话，通过官方网站和集成包，最为简单快捷<br> <a href="https://www.apachefriends.org/zh_cn/index.html" target="_blank" rel="external">XAMPP Apache + MariaDB + PHP + Perl</a></p>
 <h2 id="上传文件到7牛，删除后服务器未能及时刷新"><a href="#上传文件到7牛，删除后服务器未能及时刷新" class="headerlink" title="上传文件到7牛，删除后服务器未能及时刷新"></a>上传文件到7牛，删除后服务器未能及时刷新</h2><p>如果调试需要，只能重命名后再上传，更换新的路径</p>
 <h2 id="JAVA中，字符串拼接尽量使用StringBuilder的append方法"><a href="#JAVA中，字符串拼接尽量使用StringBuilder的append方法" class="headerlink" title="JAVA中，字符串拼接尽量使用StringBuilder的append方法"></a>JAVA中，字符串拼接尽量使用StringBuilder的append方法</h2><p>效率测试可参看<a href="http://www.cnblogs.com/focusj/archive/2011/02/16/2057630.html" target="_blank" rel="external">java五种拼接字符串的方法</a></p>
+<h2 id="“”和null的差别"><a href="#“”和null的差别" class="headerlink" title="“”和null的差别"></a>“”和null的差别</h2><p>s是一个String类的引用，null表示它不指向任何字符串对象，””表示s指向一个长度为0的字符串对象。如果调用s.length()之类的方法，s为null时会抛出NullPointerException，而””则能进行正常的计算。  </p>
 <h2 id="模拟器离线"><a href="#模拟器离线" class="headerlink" title="模拟器离线"></a>模拟器离线</h2><p>通过DDMS的File Explorer查看文件提示<br>com.android.ddmlib.AdbCommandRejectedException: device offline</p>
 <p>【解决办法】在cmd下输入：<br>Step1：  adb kill-server<br>Step2： adb start-server<br>或者打开进程管理器，把adb关掉，再重启adb。</p>
 <h2 id="button透明"><a href="#button透明" class="headerlink" title="button透明"></a>button透明</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">半透明&lt;Button android:<span class="built_in">background</span>=<span class="string">"#11000000"</span>  /&gt;</div><div class="line">透明&lt;Button android:<span class="built_in">background</span>=<span class="string">"#00000000"</span> /&gt;</div></pre></td></tr></table></figure>
