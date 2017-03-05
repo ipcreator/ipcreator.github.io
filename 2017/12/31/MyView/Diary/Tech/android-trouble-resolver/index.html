@@ -21,7 +21,7 @@ The wiser man doesn’t fall into the same pit twice.
 基础不牢、地动山摇
  Without a solid foundation, the earth will shake.">
 <meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/wiseman.jpeg">
-<meta property="og:updated_time" content="2017-03-05T02:49:05.046Z">
+<meta property="og:updated_time" content="2017-03-05T12:07:33.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dev Bugs">
 <meta name="twitter:description" content="什么是智者？就是一个坑不跌两回呗
@@ -208,6 +208,11 @@ The wiser man doesn’t fall into the same pit twice.
 <p>【解决办法】在cmd下输入：<br>Step1：  adb kill-server<br>Step2： adb start-server<br>或者打开进程管理器，把adb关掉，再重启adb。</p>
 <h2 id="button透明"><a href="#button透明" class="headerlink" title="button透明"></a>button透明</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">半透明&lt;Button android:<span class="built_in">background</span>=<span class="string">"#11000000"</span>  /&gt;</div><div class="line">透明&lt;Button android:<span class="built_in">background</span>=<span class="string">"#00000000"</span> /&gt;</div></pre></td></tr></table></figure>
 <p><strong>原理</strong>：颜色和不透明度 (alpha) 值以十六进制表示法表示。任何一种颜色的值范围都是 0 到 255（00 到 ff）。对于 alpha，00 表示完全透明，ff 表示完全不透明。表达式顺序是“aabbggrr”，其中“aa=alpha”（00 到 ff）；“bb=blue”（00 到 ff）；“gg=green”（00 到 ff)；“rr=red”（00 到 ff）。所以要实现半透明只需将‘bb’,‘gg’,‘rr’的值都设为‘00’，只调节‘aa’的值（00到方法）就可以控制不同的透明度。</p>
+<h2 id="按钮点击效果变化"><a href="#按钮点击效果变化" class="headerlink" title="按钮点击效果变化"></a>按钮点击效果变化</h2><p><a href="http://blog.csdn.net/jiaruihua_blog/article/details/12615267" target="_blank" rel="external"> android selector 背景选择器的使用， button （未点击，点击，选中保持状态）效果实现</a><br><a href="http://blog.sina.com.cn/s/blog_777c69930100zij8.html" target="_blank" rel="external">Android Button、ImageView等自定义选中、按下、未选中等效果</a></p>
+<h2 id="android获取string-xml的值"><a href="#android获取string-xml的值" class="headerlink" title="android获取string.xml的值"></a>android获取string.xml的值</h2><p>更多参考：<a href="http://blog.sina.com.cn/s/blog_618199e601011bst.html" target="_blank" rel="external">android获取string.xml的值</a><br>获取string.xml文件里面的值有几个不同的地方。<br>1.在AndroidManifest.xml与layout等xml文件里:<br>android:text=”@string/resource_name”</p>
+<p>2.在activity里：<br>方法一:this.getString(R.string.resource_name);<br>方法二:getResources().getString(R.string.resource_name);</p>
+<p>3.在其他java文件（必须有Context或pplication）<br>方法一: context.getString(R.string.resource_name);<br>方法二: application.getString(R.string.resource_name);</p>
+<h2 id="Android-Button、ImageView等自定义选中、按下、未选中等效果"><a href="#Android-Button、ImageView等自定义选中、按下、未选中等效果" class="headerlink" title="Android Button、ImageView等自定义选中、按下、未选中等效果"></a>Android Button、ImageView等自定义选中、按下、未选中等效果</h2><p><a href="http://blog.sina.com.cn/s/blog_777c69930100zij8.html" target="_blank" rel="external">原文</a><br>方法：自定义状态效果可以通过代码实现，也可以通过xml定义style实现。<br><a href="http://blog.csdn.net/jiaruihua_blog/article/details/12615267" target="_blank" rel="external"> android selector 背景选择器的使用， button （未点击，点击，选中保持状态）效果实现</a></p>
 <h2 id="升级到AndroidStudio2-3之后，添加ListView控件，程序异常"><a href="#升级到AndroidStudio2-3之后，添加ListView控件，程序异常" class="headerlink" title="升级到AndroidStudio2.3之后，添加ListView控件，程序异常"></a>升级到AndroidStudio2.3之后，添加ListView控件，程序异常</h2><p><strong>原因</strong>：ListView控件使用了MATCH_PARENT，而该属性在ConstraintLayout布局中是不支持的<br>Exception raised during rendering: MATCH_PARENT is not supported in ConstraintLayout (Details)   Tip: Try to refresh the layout.  </p>
 <p><strong>解决方案</strong>：去除该属性，或者改成LinearLayout<br><strong>提前检测</strong>：通过“Design”预览，看能否正常显示出来，如果不能，详细分析其警告信息</p>
 <h2 id="新建资源文件目录问题"><a href="#新建资源文件目录问题" class="headerlink" title="新建资源文件目录问题"></a>新建资源文件目录问题</h2><p>res目录下，新建layout目录文件，不能解析控件，在layout目录下，也不能新建目录，提示其只支持xml文件</p>
@@ -316,8 +321,8 @@ The wiser man doesn’t fall into the same pit twice.
     </a>
   
   
-    <a href="/2017/03/04/Program/Android/android_signature_v1_and_v2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">APK Signature Scheme v2</div>
+    <a href="/2017/12/31/MyView/Diary/Tech/java-trouble-solver/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java tips</div>
       <i class="icon-circle-right"></i>
     </a>
   

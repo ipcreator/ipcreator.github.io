@@ -164,6 +164,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Program/Android/awesome-articles-of-android" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/27/Program/Android/awesome-articles-of-android/">Android安全攻防战，反编译与混淆技术完全解析</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/27/Program/Android/awesome-articles-of-android/" class="archive-article-date">
+  	<time datetime="2017-02-27T05:57:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023">Android安全攻防战，反编译与混淆技术完全解析（上）</a><br> <a href="http://blog.csdn.net/guolin_blog/article/details/50451259"> Android安全攻防战，反编译与混淆技术完全解析（下）</a></p>
+<p> <img src="http://img.blog.csdn.net/20160312190016290" alt=""></p>
+<p> 之前一直有犹豫过要不要写这篇文章，毕竟去反编译人家的程序并不是什么值得骄傲的事情。不过单纯从技术角度上来讲，掌握反编译功能确实是一项非常有用的技能，可能平常不太会用得到，但是一旦真的需要用到的了，而你却不会的话，那就非常头疼了。另外既然别人可以反编译程序，我们当然有理由应该对程序进行一定程度的保护，因此代码混淆也是我们必须要掌握的一项技术。那么最近的两篇文章我们就围绕反编译和混淆这两个主题来进行一次完全解析。</p>
+        
+          <a class="article-more-a" href="/2017/02/27/Program/Android/awesome-articles-of-android/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/27/Program/Android/awesome-articles-of-android/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Program/Android/the-essence-of-hardware-accelarate-in-android" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -546,89 +623,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/02/26/Program/Android/hot-update-of-android/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Program/Android/GestureDetector" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/25/Program/Android/GestureDetector/">GestureDetector</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/25/Program/Android/GestureDetector/" class="archive-article-date">
-  	<time datetime="2017-02-25T08:11:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="GestureDetector"><a href="#GestureDetector" class="headerlink" title="GestureDetector"></a><a href="https://developer.android.com/reference/android/view/GestureDetector.html" target="_blank" rel="external">GestureDetector</a></h2><p><img src="http://okkntqe2h.bkt.clouddn.com/GestureDetector.png" alt=""></p>
-<p>public class GestureDetector<br>extends Object</p>
-<p>java.lang.Object<br>   ↳    android.view.GestureDetector</p>
-<p>Detects various gestures and events using the supplied MotionEvents. The <a href="https://developer.android.com/reference/android/view/GestureDetector.OnGestureListener.html" target="_blank" rel="external">GestureDetector.OnGestureListener</a> callback will notify users when <strong>a particular motion event</strong> has occurred. This class should only be used with <a href="https://developer.android.com/reference/android/view/MotionEvent.html" target="_blank" rel="external">MotionEvents</a> reported via touch (don’t use for trackball events).</p>
-<p>To use this class:</p>
-<ul>
-<li>Create an instance of the GestureDetector for your View</li>
-<li>In the onTouchEvent(MotionEvent) method ensure you call onTouchEvent(MotionEvent). The methods defined in your callback will be executed when the events occur.</li>
-<li>If listening for onContextClick(MotionEvent) you must call onGenericMotionEvent(MotionEvent) in onGenericMotionEvent(MotionEvent).</li>
-</ul>
-<p>参考文章：<br><a href="http://blog.csdn.net/ztp800201/article/details/7410503" target="_blank" rel="external">Android - GestureDetector 实现界面左右滑动效果的优化</a><br><a href="http://blog.csdn.net/hzh_csdn/article/details/52317566" target="_blank" rel="external">Android GestureDetector简单手势检测（左右滑动、上下滑动）</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人/" class="article-tag-list-link color3">个人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/25/Program/Android/GestureDetector/">展开全文 >></a>
         </p>
       
 

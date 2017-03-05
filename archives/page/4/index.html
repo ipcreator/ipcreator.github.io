@@ -164,6 +164,161 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Program/Concepts/start-up-of-linux" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/27/Program/Concepts/start-up-of-linux/">从头构建自己的Linux系统</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/27/Program/Concepts/start-up-of-linux/" class="archive-article-date">
+  	<time datetime="2017-02-27T02:03:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.chinaunix.net/uid-23069658-id-3343885.html">wjlkoorey</a></p>
+<p><img src="http://blog.chinaunix.net/attachment/201303/23/23069658_1364022276448d.gif" alt=""></p>
+<p>在博文“<a href="http://blog.chinaunix.net/uid-23069658-id-3142047.html">Linux系统启动过程分析</a>”中我们了解了linux系统的启动流程，今天我们就来手动一步一步从头来构建一个最小的linux系统，然后用模拟器将其加载起来。常见的模拟器有Qemu、Bochs、VMWare、VPC、Virtual Box和Xen等，以及特殊的模拟UML(User-Mode-Linux)，这里我们选择用VMWare。</p>
+        
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/start-up-of-linux/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/start-up-of-linux/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Program/Concepts/the-anatomy-of-file-system" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/">小议Linux系统下的文件系统</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/" class="archive-article-date">
+  	<time datetime="2017-02-27T01:14:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.chinaunix.net/uid-23069658-id-3437835.html">wjlkoorey</a></p>
+<p>Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的新手们就会被文件系统这个概念弄得晕头转向，恰好我当年正好属于后者。</p>
+<p>从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的一种新型的日志文件系统)，那个年代经常听到说“我要把C盘格式化成ntfs格式，D盘格式化成fat32格式”。一到Linux下，很多入门Linux的书籍中当牵扯到文件系统这个术语时，二话不说，不管三七二十一就给出了下面这个图，然后逐一解释一下每个目录是拿来干啥的、里面会放什么类型的文件就完事儿了，弄得初学者经常“丈二和尚摸不着头脑”。难道这就是Linux下的文件系统。而且新手一直被“灌输”一个思想：Linux下一切都是文件，不再像Windows那样用扩展名来为文件分类等等。这就让那些喜欢刨根问底的fresh-fish很是不爽，他们本着对学术的严谨、技术的狂热的态度，一心想弄明白：到底什么才是文件系统。本文的目的就是和大家分享一下我当初是如何学习Linux的文件系统的，也算是一个“老”油条的一些心得吧。</p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/linux%E7%9B%AE%E5%BD%95.png" alt=""></p>
+        
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">File System</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Program/Concepts/the-anatomy-of-GPU" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -225,6 +380,83 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-GPU/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Program/Concepts/the-anatomy-of-hard-disk" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/">硬盘的存储原理和内部架构</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/" class="archive-article-date">
+  	<time datetime="2017-02-27T00:58:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.chinaunix.net/uid-23069658-id-3413957.html">wjlkoorey</a></p>
+<p><img src="http://blog.chinaunix.net/attachment/201211/19/23069658_13533340196613.jpg" alt=""></p>
+<p>本来想写个文件系统的专题，结果发现对硬盘的内部架构和存储原理还是比较模糊，因为不了解“一点”硬盘的存储原理对文件系统的认识老是感觉镜花水月，不踏实。经过搜集整理资料就由了本文的问世。借用Bean_lee兄一句话：成果和荣耀归于前辈。</p>
+        
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">File System</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/">展开全文 >></a>
         </p>
       
 
@@ -397,249 +629,9 @@
 
 
   
-    <article id="post-Program/Android/the-essence-of-hardware-accelarate-in-android" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/">Android硬件加速原理与实现简介</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/" class="archive-article-date">
-  	<time datetime="2017-02-26T14:57:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://tech.meituan.com/hardware-accelerate.html">子健</a></p>
-<p>在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。</p>
-<p>本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。</p>
-        
-          <a class="article-more-a" href="/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CPU</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">GPU</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-BusinessAI/example-of-machine-learning-in-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/">实例详解机器学习如何解决问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/" class="archive-article-date">
-  	<time datetime="2017-02-26T14:34:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://tech.meituan.com/mt-mlinaction-how-to-ml.html">huawolf</a></p>
-<p><img src="http://tech.meituan.com/img/how_to_ml/extract_fea.png" alt=""></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在解决工业界问题的实战中所需的基本技术、经验和技巧。本文主要结合实际问题，概要地介绍机器学习解决实际问题的整个流程，包括对问题建模、准备训练数据、抽取特征、训练模型和优化模型等关键环节；另外几篇则会对这些关键环节进行更深入地介绍。</p>
-<p>下文分为1）机器学习的概述，2）对问题建模，3）准备训练数据，4）抽取特征，5）训练模型，6）优化模型，7）总结 共7个章节进行介绍。</p>
-        
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-BusinessAI/data-clean-and-remark-feature-in-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/">机器学习中的数据清洗与特征处理综述</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/" class="archive-article-date">
-  	<time datetime="2017-02-26T14:24:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://tech.meituan.com/machinelearning-data-feature-process.html">caohao</a></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>随着美团交易规模的逐步增大，积累下来的业务数据和交易数据越来越多，这些数据是美团做为一个团购平台最宝贵的财富。通过对这些数据的分析和挖掘，不仅能给美团业务发展方向提供决策支持，也为业务的迭代指明了方向。目前在美团的团购系统中大量地应用到了机器学习和数据挖掘技术，例如个性化推荐、筛选排序、搜索排序、用户建模等等，为公司创造了巨大的价值。</p>
-<p>本文主要介绍在美团的推荐与个性化团队实践中的数据清洗与特征挖掘方法。主要内容已经在内部公开课”机器学习InAction系列”讲过，本博客的内容主要是讲座内容的提炼和总结。</p>
-        
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/page/5/">5</a><a class="page-number" href="/archives/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/22/">22</a><a class="extend next" rel="next" href="/archives/page/5/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/archives/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/page/5/">5</a><a class="page-number" href="/archives/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/23/">23</a><a class="extend next" rel="next" href="/archives/page/5/">Next &raquo;</a>
     </nav>
   
 
