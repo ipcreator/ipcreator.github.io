@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="咖啡需要慢慢品，Java也如此…">
 <meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/JAVA.jpg">
-<meta property="og:updated_time" content="2017-03-05T13:10:07.338Z">
+<meta property="og:updated_time" content="2017-03-06T08:47:04.076Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java tips">
 <meta name="twitter:description" content="咖啡需要慢慢品，Java也如此…">
@@ -188,8 +188,10 @@
         <p><img src="http://om8nmvpn9.bkt.clouddn.com/JAVA.jpg" alt=""></p>
 <p>咖啡需要慢慢品，Java也如此…</p>
  <a id="more"></a>
-<p> <a href="http://blog.csdn.net/fengyuzhengfan/article/details/38082999" target="_blank" rel="external">Java中static作用及用法详解</a></p>
-<h2 id="static表示不要实例化就可以使用"><a href="#static表示不要实例化就可以使用" class="headerlink" title="static表示不要实例化就可以使用"></a>static表示不要实例化就可以使用</h2><p> static是静态修饰符，静态就是指在编译后所分配的内存会一直存在，直到程序退出内存才会释放这个空间，也就是只要程序在运行，那么这块内存就会一直存在。这样做有什么意义呢？在Java程序里面，所有的东西都是对象，而对象的抽象就是类，对于一个类而言，如果要使用他的成员，那么普通情况下必须先实例化对象后，通过对象的引用才能够访问这些成员，但是用static修饰的成员可以通过类名加“.”进行直接访问。static对象可以在它的任何对象创建之前访问，无需引用任何对象。</p>
+<h2 id="Digester解析xml文件"><a href="#Digester解析xml文件" class="headerlink" title="Digester解析xml文件"></a><a href="http://blog.csdn.net/caihaijiang/article/details/5944955" target="_blank" rel="external">Digester解析xml文件</a></h2><p><a href="https://www.ibm.com/developerworks/cn/xml/dm-1208gub/#ibm-pcon" target="_blank" rel="external">Java 处理 XML 的三种主流技术及介绍</a></p>
+<p>DOM 易于上手，程序易于理解，但缺点在于占用内存大，不适合于解析较大的 XML 文件； SAX 基于事件模型占用系统资源少，能够胜任较大的 XML 文件解析，但解析过程较为繁琐查找元素不方便； Digester/JAXB 基于上述两种技术衍生而来。</p>
+<p>Digester 就是一种用来把一个 XML 转化为一个与该 XML 结构类似的 JavaBean。你可以把 XML 根元素想象成一个 JavaBean， 该根元素的 attribute 就是这个 JavaBean 的各种 Field，当该根元素有其他子 tag 时，又要把这个子 tag 想象成一个个新的 XML，将其视为一个新的 JavaBean， 并作为一个 Field 加入到父 Bean 当中，然后以此类推，通过循环的方式将整个 XML 进行解析。</p>
+<h2 id="Java中static作用及用法详解"><a href="#Java中static作用及用法详解" class="headerlink" title="Java中static作用及用法详解"></a><a href="http://blog.csdn.net/fengyuzhengfan/article/details/38082999" target="_blank" rel="external">Java中static作用及用法详解</a></h2><h2 id="static表示不要实例化就可以使用"><a href="#static表示不要实例化就可以使用" class="headerlink" title="static表示不要实例化就可以使用"></a>static表示不要实例化就可以使用</h2><p> static是静态修饰符，静态就是指在编译后所分配的内存会一直存在，直到程序退出内存才会释放这个空间，也就是只要程序在运行，那么这块内存就会一直存在。这样做有什么意义呢？在Java程序里面，所有的东西都是对象，而对象的抽象就是类，对于一个类而言，如果要使用他的成员，那么普通情况下必须先实例化对象后，通过对象的引用才能够访问这些成员，但是用static修饰的成员可以通过类名加“.”进行直接访问。static对象可以在它的任何对象创建之前访问，无需引用任何对象。</p>
 <p>用public修饰的static成员变量和成员方法本质是全局变量和全局方法，当声明它类的对象市，不生成static变量的副本，而是类的所有实例共享同一个static变量。</p>
 <p>用static修饰的代码块表示静态代码块，当Java虚拟机（JVM）加载类时，就会执行该代码块</p>
 <p>static代码块也叫静态代码块，是在类中独立于类成员的static语句块，可以有多个，位置可以随便放，它不在任何的方法体内，JVM加载类时会执行这些静态的代码块，如果static代码块有多个，JVM将按照它们在类中出现的先后顺序依次执行它们，每个代码块只会被执行一次。</p>
