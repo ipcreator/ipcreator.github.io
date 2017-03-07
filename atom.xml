@@ -59,7 +59,7 @@
     <link href="http://ipcreator.me/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/"/>
     <id>http://ipcreator.me/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/</id>
     <published>2017-12-31T14:59:06.000Z</published>
-    <updated>2017-03-07T07:50:57.490Z</updated>
+    <updated>2017-03-07T14:49:48.608Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/wiseman.jpeg" alt=""></p>
 <p>什么是智者？就是一个坑不跌两回呗</p>
@@ -67,6 +67,13 @@
 <p>基础不牢、地动山摇</p>
 <p> Without a solid foundation, the earth will shake.</p>
  <a id="more"></a>
+<h2 id="Android-Studio-之-JNI-开发详解"><a href="#Android-Studio-之-JNI-开发详解" class="headerlink" title="Android Studio 之 JNI 开发详解"></a><a href="http://www.jianshu.com/p/bc2b46381d88" target="_blank" rel="external">Android Studio 之 JNI 开发详解</a></h2><p> <strong>什么是NDK？</strong><br>NDK全称是Native Development Kit，NDK提供了一系列的工具，帮助开发者快速开发C（或C++）的动态库，并能自动将so和java应用一起打包成apk。NDK集成了交叉编译器（交叉编译器需要UNIX或LINUX系统环境），并提供了相应的mk文件隔离CPU、平台、ABI等差异，开发人员只需要简单修改mk文件（指出“哪些文件需要编译”、“编译特性要求”等），就可以创建出so。</p>
+<p> <strong>为什么使用NDK？</strong><br>1.)代码的保护。由于apk的java层代码很容易被反编译，而C/C++库反汇难度较大。<br>2.)可以方便地使用现存的开源库。大部分现存的开源库都是用C/C++代码编写的。<br>3.)提高程序的执行效率。将要求高性能的应用逻辑使用C开发，从而提高应用程序的执行效率。<br>4.)便于移植。用C/C++写得库可以方便在其他的嵌入式平台上再次使用。</p>
+<p> <strong>什么是JNI？</strong><br>JNI全称为：Java Native Interface。JNI 是本地编程接口，它使得在 Java 虚拟机内部运行的 Java 代码能够与用其它语言(如 C、C++)编写的代码进行交互。</p>
+<p> <strong>为什么使用JNI？</strong><br>JNI的目的是使java方法能够调用c实现的一些函数。</p>
+<p> <strong>安卓中的so文件是什么？</strong><br>Android中用到的so文件是一个c++的函数库。在android的JNI中，要先将相应的C语言打包成so库，然后导入到lib文件夹中供java调用。</p>
+<p>编译运行前，别忘了把打开了\app\build\intermediates\classes\debug\的Terminal命令行工具关掉，否则占用这个文件夹会导致编译不成功。因为编译的时候，会把build里的东西全部删除再重新生成，如果占用的话，删除不了就会出错。</p>
+<p><a href="https://developer.android.com/studio/projects/add-native-code.html" target="_blank" rel="external">向您的项目添加 C 和 C++ 代码</a></p>
 <h2 id="从当前的activity获得根视图"><a href="#从当前的activity获得根视图" class="headerlink" title="从当前的activity获得根视图"></a>从当前的activity获得根视图</h2><p> getWindow().getDecorView()</p>
 <h2 id="无标题风格"><a href="#无标题风格" class="headerlink" title="无标题风格"></a>无标题风格</h2><p> 在指定的activity中设定 android:theme=”@style/Theme.AppCompat.Light.NoActionBar”</p>
 <p><a href="http://m.2cto.com/kf/201607/524895.html" target="_blank" rel="external">Android实现无标题栏全屏的三种方法</a><br><a href="http://blog.csdn.net/rodulf/article/details/53785632" target="_blank" rel="external">You need to use a Theme.AppCompat theme (or descendant) with this activity.</a></p>
@@ -2943,7 +2950,7 @@ public void thisIsSuper() {
     <link href="http://ipcreator.me/2017/02/22/MyView/Diary/love-words/"/>
     <id>http://ipcreator.me/2017/02/22/MyView/Diary/love-words/</id>
     <published>2017-02-21T23:44:05.000Z</published>
-    <updated>2017-03-07T07:51:01.726Z</updated>
+    <updated>2017-03-07T14:01:18.395Z</updated>
     
     <content type="html"><![CDATA[<p>图文来源：<a href="http://xue.youdao.com/sw/m/1309029?keyfrom=dict2.index" target="_blank" rel="external">微信号 我爱背单词</a></p>
 <h2 id="predator"><a href="#predator" class="headerlink" title="predator"></a>predator</h2><p>英 [‘predətə]  美 [‘prɛdətɚ]<br>n. [动] 捕食者；[动] 食肉动物；掠夺者</p>
@@ -2955,6 +2962,7 @@ public void thisIsSuper() {
 <p><strong>双语例句</strong><br>Insane pumpkin carving of the Predator.<br>疯狂的南瓜雕刻——食肉动物。</p>
 <p>Some residents and experts said the predator may be a bear, a wayward panther or cougar, or even a wolf because 3-inch paw tracks were found at the scene.<br>一些居民和专家认为这种食肉动物可能是一只熊，一头任性的豹子或狮子，抑或是一头狼，因为在现场发现了3英寸长的爪迹。</p>
 <p>But just like Dutch in Predator before the final battle, you have to be able to answer only one question about your target before you start: where they are.<br>但就像一战之前的荷兰掠夺者一样，在开始工作之前你必须能够回答实现目标的唯一问题：他们在哪里？</p>
+<h2 id="deprecated"><a href="#deprecated" class="headerlink" title="deprecated"></a>deprecated</h2><p>英 [ˈdeprəkeɪtɪd]  美 [‘dɛprə,ketɪd]<br>v. 不赞成；弃用；不宜用（deprecate的过去式及过去分词形式）</p>
 <h2 id="decor"><a href="#decor" class="headerlink" title="decor"></a>decor</h2><p>英 [‘deɪkɔː; ‘de-]  美 [de’kɔr]<br>n. 装饰，布置</p>
 <h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><p>英 [‘sɒlvə]  美 [‘sɑlvɚ]<br>n. 解决者；[计] 解算机；[数] 求解程序</p>
 <h2 id="resolver"><a href="#resolver" class="headerlink" title="resolver"></a>resolver</h2><p>英 [riː’zɒlvə]  美<br>n. 溶剂；[电子] 分解器；下决心者</p>
