@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-03-06T12:36:47.835Z</updated>
+  <updated>2017-03-09T03:28:24.155Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -16,11 +16,72 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Thinking in Java</title>
+    <link href="http://ipcreator.me/2017/03/09/Program/Java/thinking-in-java/"/>
+    <id>http://ipcreator.me/2017/03/09/Program/Java/thinking-in-java/</id>
+    <published>2017-03-08T23:30:06.000Z</published>
+    <updated>2017-03-09T03:28:24.155Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://img3.doubanio.com/lpic/s27243455.jpg" alt=""><br>本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在Bruce Eckel的文字亲和力和小而直接的编程示例面前也会化解于无形。从Java的基础语法到最高级特性（深入的面向对象概念、多线程、自动项目构建、单元测试和调试等），本书都能逐步指导你轻松掌握。<br>从本书获得的各项大奖以及来自世界各地的读者评论中，不难看出这是一本经典之作。本书的作者拥有多年教学经验，对C、C++以及Java语言都有独到、深入的见解，以通俗易懂及小而直接的示例解释了一个个晦涩抽象的概念。本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、Java I/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书。<br><a href="https://book.douban.com/subject/2130190/" target="_blank" rel="external">]第4版</a>特点：<br>适合初学者与专业人员的经典的面向对象叙述方式，为更新的Java SE5/6增加了新的示例和章节。<br> 测验框架显示程序输出。</p>
+ <a id="more"></a>
+<p>作者简介  · · · · · ·<br>Bruce Eckel是MindView公司（www.MindView.net）的总裁，该公司向客户提供软件咨询和培训。他是C++标准委员会拥有表决权的成员之一，拥有应用物理学学士和计算机工程硕士学位。除本书外，他还是《C++编程思想》的作者，并与人合著了《C++编程思想 第2卷》（这两本书的英文影印版及中文版均已由机械工业出版社引进出版）及其他著作。他已经发表了150多篇论文，还经常参加世界各地的研讨会并进行演讲。</p>
+<p>目录  · · · · · ·<br>读者评论<br>前言<br>简介</p>
+<p>第1章 对象导论<br>1.1 抽象过程<br>1.2 每个对象都有一个接口<br>1.3 每个对象都提供服务<br>1.4 被隐藏的具体实现<br>1.5 复用具体实现<br>1.6 继承<br>1.6.1 “是一个”（is-a）与“像是一个”（is-like-a）关系<br>1.7 伴随多态的可互换对象<br>1.8 单根继承结构<br>1.9 容器<br>1.9.1 参数化类型（范型）<br>1.10 对象的创建和生命期<br>1.11 异常处理：处理错误<br>1.12 并发编程<br>1.13 Java与Internet<br>1.13.1 Web是什么<br>1.13.2 客户端编程<br>1.13.3 服务器端编程<br>1.22 总结</p>
+<p>第2章 一切都是对象<br>2.1 用引用操纵对象<br>2.2 必须由你创建所有对象<br>2.2.1 存储到什么地方<br>2.2.2 特例：基本类型<br>2.2.3 Java中的数组<br>2.3 永远不需要销毁对象<br>2.3.1 作用域<br>2.3.2 对象的作用域<br>2.4 创建新的数据类型：类<br>2.4.1 域和方法<br>2.4.2 基本成员默认值<br>2.5 方法、参数和返回值<br>2.5.1 参数列表<br>2.6 构建一个Java程序<br>2.6.1 名字可见性<br>2.6.2 运用其他构件<br>2.6.3 static 关键字<br>2.7 你的第一个Java程序<br>编译和运行<br>2.8 注释和嵌入式文档<br>2.8.1 注释文档<br>2.8.2 语法<br>2.8.3 嵌入式HTML<br>2.8.4 一些标签示例<br>2.8.5 文档示例<br>2.9 编码风格<br>2.10 总结<br>2.11 练习</p>
+<p>第3章 操作符<br>3.1 更简单的打印语句<br>3.2 使用Java操作符<br>3.3 优先级<br>3.4 赋值<br>3.4.1 方法调用中的别名问题<br>3.5 算术操作符<br>3.5.1 一元加、减操作符<br>3.6 自动递增和递减<br>3.7 关系操作符<br>3.7.1 测试对象的等价性<br>3.8 逻辑操作符<br>3.8.1 短路<br>3.9 直接常量<br>3.9.1 指数记数法<br>3.10 按位操作符<br>3.11 移位操作符<br>3.12 三元操作符 if-else<br>3.13 字符串操作符 + 和 +=<br>3.14 使用操作符时常犯的错误<br>3.15 类型转换操作符<br>3.15.1 截尾和舍入<br>3.15.2提升<br>3.16 Java没有“sizeof”<br>3.17 操作符小结<br>3.18 总结</p>
+<p>第4章 控制执行流程<br>4.1 true和false<br>4.2 if-else<br>4.3 迭代<br>4.3.1 do-while<br>4.3.2 for<br>4.3.3 逗号操作符<br>4.4 Foreach语法<br>4.5 return<br>4.6 break和 continue<br>4.7 臭名昭著的“goto”<br>4.8 switch<br>4.9 总结</p>
+<p>第5章 初始化与清理<br>5.1 用构造器确保初始化<br>5.2 方法重载<br>5.2.1 区分重载方法<br>5.2.2 涉及基本类型的重载<br>5.2.3 以返回值区分重载方法<br>5.3 缺省构造器<br>5.4 this关键字<br>5.4.1 在构造器中调用构造器<br>5.4.2 static的含义<br>5.5 清理：终结处理和垃圾回收<br>5.5.1 finalize()的用途何在<br>5.5.2 你必须实施清理<br>5.5.3 终结条件<br>5.5.4 垃圾回收器如何工作<br>5.6 成员初始化<br>5.6.1 指定初始化<br>5.7 构造器初始化<br>5.7.1 初始化顺序<br>5.7.2. 静态数据的初始化<br>5.7.3. 显式的静态初始化<br>5.7.4. 非静态实例初始化<br>5.8 数组初始化<br>5.8.1 可变参数列表<br>5.9 枚举类型<br>5.10 总结</p>
+<p>第6章 访问权限控制<br>第7章 复用类<br>第8章 多态<br>第9章 接口<br>第10章 内部类<br>第11章 持有对象<br>第12章 通过异常处理错误<br>第13章 字符串<br>第14章 类型信息<br>第15章 泛型<br>第16章 数组<br>第17章 容器深入研究<br>第18章 Java I/O系统<br>第19章 枚举类型<br>第20章 注解<br>第21章 并发<br>第22章 图形化用户界面</p>
+<p>附录A 补充材料<br>可下载的补充材料<br>Thinking in C：Java的基础<br>Java编程思想 研讨课<br>Hands-on Java研讨课CD<br>Thinking in Objects研讨课<br>Thinking in Enterprise Java<br>Thinking in Patterns(with Java)<br>Thinking in Patterns研讨课<br>设计咨询与复审</p>
+<p>附录B 资源<br>软件<br>编辑器与IDE<br>书籍<br>分析与设计<br>Python<br>我的著作列表<br>索引</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://img3.doubanio.com/lpic/s27243455.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在Bruce Eckel的文字亲和力和小而直接的编程示例面前也会化解于无形。从Java的基础语法到最高级特性（深入的面向对象概念、多线程、自动项目构建、单元测试和调试等），本书都能逐步指导你轻松掌握。&lt;br&gt;从本书获得的各项大奖以及来自世界各地的读者评论中，不难看出这是一本经典之作。本书的作者拥有多年教学经验，对C、C++以及Java语言都有独到、深入的见解，以通俗易懂及小而直接的示例解释了一个个晦涩抽象的概念。本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、Java I/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书。&lt;br&gt;&lt;a href=&quot;https://book.douban.com/subject/2130190/&quot;&gt;]第4版&lt;/a&gt;特点：&lt;br&gt;适合初学者与专业人员的经典的面向对象叙述方式，为更新的Java SE5/6增加了新的示例和章节。&lt;br&gt; 测验框架显示程序输出。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git automatically</title>
+    <link href="http://ipcreator.me/2017/03/09/Program/Windows/auto-git-daily/"/>
+    <id>http://ipcreator.me/2017/03/09/Program/Windows/auto-git-daily/</id>
+    <published>2017-03-08T23:30:06.000Z</published>
+    <updated>2017-03-09T06:04:57.778Z</updated>
+    
+    <content type="html"><![CDATA[<p>能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…</p>
+ <a id="more"></a>
+ <figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line">@<span class="built_in">title</span> auto update blog articles and git push</div><div class="line"></div><div class="line"><span class="built_in">set</span> fileSource=D:\IPCreatorBlog\source</div><div class="line"><span class="built_in">set</span> fileDestination=C:\IPCreatorBlogGit\blog\source</div><div class="line"><span class="built_in">set</span> gitDir=C:\IPCreatorBlogGit\blog</div><div class="line"></div><div class="line"><span class="built_in">cls</span></div><div class="line"></div><div class="line"><span class="built_in">cd</span> <span class="variable">%fileDestination%</span></div><div class="line"><span class="built_in">rd</span> /s/q <span class="variable">%fileDestination%</span></div><div class="line"><span class="built_in">Xcopy</span> /e <span class="variable">%fileSource%</span> <span class="variable">%fileDestination%</span></div><div class="line"></div><div class="line"><span class="built_in">cd</span> <span class="variable">%gitDir%</span></div><div class="line">git add -v .</div><div class="line">git commit -m "Update blog daily"</div><div class="line">git push</div><div class="line"></div><div class="line"><span class="built_in">pause</span></div></pre></td></tr></table></figure>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> user<span class="title">@LAPTOP-082RQVIH</span> MINGW<span class="number">64</span> /<span class="keyword">c</span>/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git config --<span class="keyword">global</span> <span class="keyword">alias</span>.blog '<span class="title">!git</span> <span class="keyword">add</span> . &amp;&amp; git commit -m <span class="string">"blog update"</span> &amp;&amp; git push'**                                                                                                                          </div><div class="line">user<span class="title">@LAPTOP-082RQVIH</span> MINGW<span class="number">64</span> /<span class="keyword">c</span>/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git blog**</div><div class="line">On branch master</div><div class="line">Your branch is up-<span class="keyword">to</span>-date with 'origin/master'.</div><div class="line">nothing <span class="keyword">to</span> commit, working tree clean</div></pre></td></tr></table></figure>
+<p> 更多参考：<br> <a href="https://www.zybuluo.com/yangfch3/note/338252" target="_blank" rel="external">Windows批处理(cmd/bat)使用小记</a><br> <a href="http://xstarcd.github.io/wiki/windows/windows_cmd_summary_commands.html" target="_blank" rel="external">批处理常用命令总结 - 批处理命令简介</a><br> <a href="https://segmentfault.com/q/1010000000263597" target="_blank" rel="external">Git批处理脚本</a><br> <a href="https://www.zhihu.com/question/38962022" target="_blank" rel="external">请问如何写一个批处理自动打开 gitbash，然后自动执行一系列git命令（windows平台）？</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Thanks to...</title>
-    <link href="http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/"/>
-    <id>http://ipcreator.me/2017/12/31/MyView/Diary/special-thanks/</id>
-    <published>2017-12-31T15:59:06.000Z</published>
-    <updated>2017-03-06T12:36:47.835Z</updated>
+    <link href="http://ipcreator.me/2017/03/08/Program/special-thanks/"/>
+    <id>http://ipcreator.me/2017/03/08/Program/special-thanks/</id>
+    <published>2017-03-08T15:59:06.000Z</published>
+    <updated>2017-03-08T23:17:11.106Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/thanks.png" alt=""></p>
 <p>Standing on Shoulders of Giants</p>
@@ -55,11 +116,58 @@
   </entry>
   
   <entry>
+    <title>Billy Lynn&#39;s Long Halftime Walk</title>
+    <link href="http://ipcreator.me/2017/03/08/MyView/Movie/billy-lynn&#39;s-long-halftime-walk/"/>
+    <id>http://ipcreator.me/2017/03/08/MyView/Movie/billy-lynn&#39;s-long-halftime-walk/</id>
+    <published>2017-03-08T15:30:06.000Z</published>
+    <updated>2017-03-09T03:12:19.139Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2391542403.jpg" alt=""></p>
+<p>比利·林恩的中场战事的剧情简介  ·  ·  ·  ·  ·  ·</p>
+<p>　　伊拉克战争时期，来自美国德州的19岁技术兵比利·林恩（乔·阿尔文 Joe Alwyn 饰）因为一段偶然拍摄的视频而家喻户晓。那是一次规模不大却激烈非常的遭遇战，战斗中林恩所在的B班班长（范·迪塞尔 Vin Diesel 饰）遭到当地武装分子的伏击和劫持，而林恩为了营救班长不惜铤而走险冲锋陷阵。视频公布于世让他成为全美民众所崇拜的英雄，然而却鲜有人理解他和战友们所经历的一切。为了安葬班长，B班得到了短暂的休假，因此他们得以受邀参加一场在德州举行的橄榄球比赛。林恩的姐姐因某事件深感愧疚，她希望弟弟能借此机缘回归普通生活。而周围的经纪人、球迷、大老板、普通民众则对战争、卫国、士兵有着各种各样想当然的理解。球场上的庆典盛大开幕，林恩和战友们的心却愈加沉重与焦躁……<br>　　本片根据作家本·方丹（Ben Fountain）的同名小说改编。</p>
+<a id="more"></a>
+<p>导演: 李安<br>编剧: 让-克里斯托弗·卡斯特里 / 本·方丹<br>主演: 乔·阿尔文 / 加内特·赫德兰 / 克里斯汀·斯图尔特 / 范·迪塞尔 / 李淳 / 麦肯兹·利 / 史蒂夫·马丁 / 克里斯·塔克 / 本·普拉特 / 阿图罗·卡斯特罗 / 亚斯特罗 / 博·纳普 / 伊斯梅尔·克鲁兹·科尔多瓦 / 巴尼·哈里斯 / 布鲁斯·麦金农<br>类型: 剧情 / 战争<br>制片国家/地区: 美国 / 英国 / 中国大陆<br>语言: 英语<br>上映日期: 2016-11-11(美国/中国大陆) / 2016-10-15(纽约电影节)<br>片长: 110分钟(中国大陆) / 113分钟<br>又名: 半场无战事 / 比利·林恩漫长的中场休息 / 比利·林漫长的中场行走 / 中场休息<br>IMDb链接: <a href="http://www.imdb.com/title/tt2513074" target="_blank" rel="external">tt2513074</a></p>
+<p><a href="https://www.douban.com/people/pinkonion/" target="_blank" rel="external">水木丁 </a><br>不要随便对经历过苦难的人说“我能理解你的心情。”，因为你理解不了。也不要对他们说”我懂你的感受”，因为你感受不到。比利从遥远的敌国，回到自己的祖国，他从前是一个普通人家的不引人注目的男孩，他的内心也许是孤独的。但是他现在成为了整个美国家喻户晓的英雄，他终于被人看见了，人人都知道他的名字，可他的孤独没有消失，反而膨胀起来，变成了和他的名气一样的大的东西。荣誉，爱情，金钱……在短短的几个小时之内一一从他身边经过，但是他感到的却是越来越孤独，人人觉得自己懂他，他们赞扬他，评价他，定义他，人人看到他站在眼前，但是没有谁真的能体会他的感受，人人在看他这他，却没有人看得到，他的悲伤那么大。（写下这句话，真是好想配张搞笑的图片，配合一下我们这个荒唐的人生啊）。用他自己的话来讲，人们在赞扬你生命中最惨的一天，那感觉真是……</p>
+<p><a href="https://www.douban.com/people/54332107/" target="_blank" rel="external">Prufrock的情歌</a></p>
+<p>一些小数据：<br>美国17%的流浪人口是退役军人。<br>曾在伊拉克和阿富汗服役的160万退役军人中，有45%正在申请残疾补助。33%已确认具有和役期相关的残疾。<br>这些军人里，20%左右被确诊患有PTSD或抑郁症，剩下的80%里有许多人不愿意进医院，不愿意看心理医生，不愿意承认自己”有问题“。</p>
+<p><a href="https://www.douban.com/people/wangranran/" target="_blank" rel="external">惘然 </a></p>
+<p>版权归作者所有，任何形式转载请联系作者。<br>作者：惘然（来自豆瓣）<br>来源：<a href="https://movie.douban.com/review/8165734/" target="_blank" rel="external">https://movie.douban.com/review/8165734/</a></p>
+<p>电影有些情节很讽刺，比如比利·林恩对着国旗敬礼，看台上的大银幕对着他，他泪流满面。现场观众一定被他的爱国情怀所感染了。可实际上，李安的镜头一转，还是处男的比利·林恩脑海中正在想象和刚刚认识的啦啦队女孩在自家的床上翻云覆雨。<br>电影有些情节很无奈，比如比利·林恩说：“有人来表扬你这辈子最惨的一天”。他成为英雄是因为一段战场上舍身救队长的视频。那一天他为了救队长与敌人近身肉搏，终于把敌人杀了。然后一回头，早已中枪的队长也已经咽气。没有什么胜利可言，大家都一败涂地。<br>电影有些情节很伤感，比如比利·林恩对那个主动投怀送抱，对他表现出各种不舍的啦啦队女孩佐恩深情地说：“我差点带着你跑掉！”<br>结果佐恩的反应是：“你怎么可以说这种话？怎么可以说不回伊拉克，你是英雄啊！”<br>于是比利·林恩只能表示自己其实是开的一个玩笑。佐恩这才心满意足离去。<br>哪怕是对你说“我爱你”的人，有可能爱的也只是他们想要的那个你。</p>
+<p>《比利·林恩的中场战事》甚至几乎没有设置悬念，不走大片惯有的逻辑。就像李安说的：“观众一开始就知道他不可能不回去（伊拉克）的，可是我们还是要思索这个问题，想知道他发生了什么。基本上他的决定不是决定，而是一个了解，对他命运本身的了解。”<br>比利·林恩最后对开车来想接他去找心理医生努力让他留在美国的姐姐说：“我想这就是我的命运”。<br>所以这就是一部非常李安的电影。<br>我们当然知道高伟同最后会办喜宴，李安想要拍出的是他发生了什么。<br>我们当然知道王佳芝一定会放了易先生，李安想要拍出的是她发生了什么。<br>我们当然知道比利·林恩还是要回到战场……李安从来拍的不只是故事，而是情绪，而是一个个鲜活饱满，甚至矛盾重重，但却是真实的人。<br>是他们的选择，和他们的别无选择。</p>
+<p><a href="https://www.douban.com/people/dreamfox/" target="_blank" rel="external">乌鸦火堂</a></p>
+<p>现在正在打仗吗？跟我无关。<br>我管你是什么战争英雄还是什么高级人物，我们所关心的，就是作为老板的我，能不能挣到更多钱。作为制片人的我，能不能接到下一单有噱头的生意。作为工作人员的我，能不能顺利让中场秀顺利结束。作为粉丝的我，能不能看到真命天女，能不能让我支持的球队获胜。<br>你们从哪来，回哪儿去吧，该干什么干什么</p>
+<p>版权归作者所有，任何形式转载请联系作者。<br>作者：乌鸦火堂（来自豆瓣）<br>来源：<a href="https://movie.douban.com/review/8173028/" target="_blank" rel="external">https://movie.douban.com/review/8173028/</a></p>
+<p>战争与表演，你都无法左右<br>中国有句俗语：“用得着你，你就是孙猴子；用不着你，你就是猴孙子。”<br>不比二战时期美国民众群情激昂，不比越战时期一边倒的反对。如今这个时代，美国人的危机感不在强烈，“战争英雄”这个头衔已经好久不见了。<br>你之所以上战场，就是因为你是一名士兵，你救人，是你应该的。我之所以揍你，就是你们装逼，阻碍我们的工作。<br>总之，他们不该在这里出现<br>就像比利·林恩，之所以参军，是因为给姐姐报仇，而不得不入伍。电影开场悍马车中，几位都将自己入伍的原因说了一遍，理由五花八门，但没有一个是传统意义上的那种“热血青年”。</p>
+<p><img src="https://img1.doubanio.com/view/thing_review/large/public/p361769.jpg" alt=""></p>
+<p><img src="https://img3.doubanio.com/view/thing_review/large/public/p361770.jpg" alt=""></p>
+<p><img src="https://img3.doubanio.com/view/thing_review/large/public/p361773.jpg" alt=""></p>
+<p><img src="https://img3.doubanio.com/view/thing_review/large/public/p361775.jpg" alt=""></p>
+<p><img src="https://img3.doubanio.com/view/thing_review/large/public/p361774.jpg" alt=""></p>
+<p><img src="https://img1.doubanio.com/view/thing_review/large/public/p361777.jpg" alt=""></p>
+<p><img src="https://img1.doubanio.com/view/thing_review/large/public/p361779.jpg" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2391542403.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;比利·林恩的中场战事的剧情简介  ·  ·  ·  ·  ·  ·&lt;/p&gt;
+&lt;p&gt;　　伊拉克战争时期，来自美国德州的19岁技术兵比利·林恩（乔·阿尔文 Joe Alwyn 饰）因为一段偶然拍摄的视频而家喻户晓。那是一次规模不大却激烈非常的遭遇战，战斗中林恩所在的B班班长（范·迪塞尔 Vin Diesel 饰）遭到当地武装分子的伏击和劫持，而林恩为了营救班长不惜铤而走险冲锋陷阵。视频公布于世让他成为全美民众所崇拜的英雄，然而却鲜有人理解他和战友们所经历的一切。为了安葬班长，B班得到了短暂的休假，因此他们得以受邀参加一场在德州举行的橄榄球比赛。林恩的姐姐因某事件深感愧疚，她希望弟弟能借此机缘回归普通生活。而周围的经纪人、球迷、大老板、普通民众则对战争、卫国、士兵有着各种各样想当然的理解。球场上的庆典盛大开幕，林恩和战友们的心却愈加沉重与焦躁……&lt;br&gt;　　本片根据作家本·方丹（Ben Fountain）的同名小说改编。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="Movie" scheme="http://ipcreator.me/tags/Movie/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Dev Bugs</title>
-    <link href="http://ipcreator.me/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/"/>
-    <id>http://ipcreator.me/2017/12/31/MyView/Diary/Tech/android-trouble-resolver/</id>
-    <published>2017-12-31T14:59:06.000Z</published>
-    <updated>2017-03-07T14:49:48.608Z</updated>
+    <link href="http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/"/>
+    <id>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</id>
+    <published>2017-03-08T14:59:06.000Z</published>
+    <updated>2017-03-09T02:53:52.896Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/wiseman.jpeg" alt=""></p>
 <p>什么是智者？就是一个坑不跌两回呗</p>
@@ -67,7 +175,39 @@
 <p>基础不牢、地动山摇</p>
 <p> Without a solid foundation, the earth will shake.</p>
  <a id="more"></a>
-<h2 id="Android-Studio-之-JNI-开发详解"><a href="#Android-Studio-之-JNI-开发详解" class="headerlink" title="Android Studio 之 JNI 开发详解"></a><a href="http://www.jianshu.com/p/bc2b46381d88" target="_blank" rel="external">Android Studio 之 JNI 开发详解</a></h2><p> <strong>什么是NDK？</strong><br>NDK全称是Native Development Kit，NDK提供了一系列的工具，帮助开发者快速开发C（或C++）的动态库，并能自动将so和java应用一起打包成apk。NDK集成了交叉编译器（交叉编译器需要UNIX或LINUX系统环境），并提供了相应的mk文件隔离CPU、平台、ABI等差异，开发人员只需要简单修改mk文件（指出“哪些文件需要编译”、“编译特性要求”等），就可以创建出so。</p>
+<h2 id="解析网络数据"><a href="#解析网络数据" class="headerlink" title="解析网络数据"></a>解析网络数据</h2><p><a href="http://www.open-open.com/jsoup/" target="_blank" rel="external">jsoup Cookbook(中文版)</a><br><a href="https://jsoup.org/download" target="_blank" rel="external">Download jsoup</a></p>
+<h2 id="Android图片缩放-压缩总结-inSampleSize-Matrix比较"><a href="#Android图片缩放-压缩总结-inSampleSize-Matrix比较" class="headerlink" title="Android图片缩放,压缩总结(inSampleSize,Matrix比较)"></a><a href="http://blog.csdn.net/roby1818/article/details/51801748" target="_blank" rel="external">Android图片缩放,压缩总结(inSampleSize,Matrix比较)</a></h2><p> Android中经常会遇到需要对图片进行缩放及压缩的操作,下面列出3种图片缩放方法:</p>
+<p>一.图片缩放</p>
+<p>1.inSampleSize(采样率)</p>
+<p>优点:效率较高,解析速度快</p>
+<p>缺点:采样率inSampleSize的取值只能是2的次方数(例如:inSampleSize=15,实际取值为8;inSampleSize=17,实际取值为16;实际取值会往2的次方结算),因此该方法不能精确的指定图片的大小</p>
+<p>2.Matrix</p>
+<p>优点:可以精确地指定图片的缩放大小</p>
+<p>缺点:是在原bitmap的基础之上生成的,占内存,效率低.</p>
+<p>3.ThumbnailUtils</p>
+<p>2.2新加的类,实际上是将上述两种方法进行结合并做了封装.</p>
+<p>二.图片压缩</p>
+<p>往往图片压缩是为了节省网络流量,进行网络传输,一般需要将图片压缩成byte[] 数组.</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">public</span> static <span class="keyword">byte[] </span><span class="keyword">BitmapToByte(Bitmap </span><span class="keyword">bitmap) </span>&#123;  </div><div class="line">    <span class="keyword">ByteArrayOutputStream </span><span class="keyword">baos </span>= new <span class="keyword">ByteArrayOutputStream(); </span> </div><div class="line">    <span class="keyword">bitmap.compress(CompressFormat.PNG, </span><span class="number">80</span>, <span class="keyword">baos);//其中80参数表示要压缩的比例 </span> </div><div class="line">    return <span class="keyword">baos.toByteArray(); </span> </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h3 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h3><p>自己先构想好，树形结构，嵌套/复用，图形化工具验证辅助<br>知其然，知其所以然</p>
+<h2 id="Hello-World-Program-in-Eight-Different-Popular-Programming-Languages"><a href="#Hello-World-Program-in-Eight-Different-Popular-Programming-Languages" class="headerlink" title="Hello World Program in Eight Different Popular Programming Languages"></a><a href="http://www.thecrazyprogrammer.com/2014/07/hello-world-program-in-eight-different-popular-programming-languages.html" target="_blank" rel="external">Hello World Program in Eight Different Popular Programming Languages</a></h2><p>This fact is true that Hello World program is the first program that a programmer writes when he/she start learning a new programming language. Today I thought that I should share the hello world program in different languages. A video is also added for easy understanding of the programs. Let’s take a look on these programs.</p>
+<h2 id="Android-Studio-之-JNI-开发详解"><a href="#Android-Studio-之-JNI-开发详解" class="headerlink" title="Android Studio 之 JNI 开发详解"></a><a href="http://www.jianshu.com/p/bc2b46381d88" target="_blank" rel="external">Android Studio 之 JNI 开发详解</a></h2><p> <a href="http://www.jianshu.com/p/2690c9964110" target="_blank" rel="external">使用Android Studio 进行NDK开发和调试</a><br><a href="http://blog.csdn.net/roby1818/article/details/51841104" target="_blank" rel="external">Jni接口-深入研究参数的传递</a><br>在app level的build.gradle中添加com.android.tools.build:gradle-experimental依赖。<br>在./app/build.gradle中添加gradle-experimental依赖</p>
+<pre><code>dependencies {
+    compile &apos;com.android.tools.build:gradle-experimental:0.7.0&apos;
+}
+</code></pre><p>再次在testJni()方法上按快捷键Alt +　Enter并回车</p>
+<pre><code>#include &lt;jni.h&gt;
+
+JNIEXPORT jstring JNICALL
+Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
+    // TODO
+    return (*env)-&gt;NewStringUTF(env, &quot;returnValue&quot;);
+}
+</code></pre><p>你会发现成功自动生成JNI方法了。</p>
+<p>副作用</p>
+<p>这种方式有个副作用是 Run app 时可能会报错</p>
+<p>此时，只要将gradle-experimental依赖注释掉即可正常运行，同时会保持自动生成代码的功能，直到关闭工程。<br>这样我们在需要自动生成代码的时候，将gradle-experimental依赖再次打开即可。</p>
+<p> <strong>什么是NDK？</strong><br>NDK全称是Native Development Kit，NDK提供了一系列的工具，帮助开发者快速开发C（或C++）的动态库，并能自动将so和java应用一起打包成apk。NDK集成了交叉编译器（交叉编译器需要UNIX或LINUX系统环境），并提供了相应的mk文件隔离CPU、平台、ABI等差异，开发人员只需要简单修改mk文件（指出“哪些文件需要编译”、“编译特性要求”等），就可以创建出so。</p>
 <p> <strong>为什么使用NDK？</strong><br>1.)代码的保护。由于apk的java层代码很容易被反编译，而C/C++库反汇难度较大。<br>2.)可以方便地使用现存的开源库。大部分现存的开源库都是用C/C++代码编写的。<br>3.)提高程序的执行效率。将要求高性能的应用逻辑使用C开发，从而提高应用程序的执行效率。<br>4.)便于移植。用C/C++写得库可以方便在其他的嵌入式平台上再次使用。</p>
 <p> <strong>什么是JNI？</strong><br>JNI全称为：Java Native Interface。JNI 是本地编程接口，它使得在 Java 虚拟机内部运行的 Java 代码能够与用其它语言(如 C、C++)编写的代码进行交互。</p>
 <p> <strong>为什么使用JNI？</strong><br>JNI的目的是使java方法能够调用c实现的一些函数。</p>
@@ -122,6 +262,7 @@
 <li>内部的URI，比如你可以通过ContentResolver来获取</li>
 <li>外部URL(流) 对于Android所支持的的媒体格式列表</li>
 </ol>
+<p><a href="http://www.jianshu.com/p/a00389c04887" target="_blank" rel="external">Android小项目之“音乐播放器”</a><br>设置播放器的监听器：<br>MediaPlayer提供了一些设置不同监听器的方法来更好地对播放器的工作状态进行监听，以期及时处理各种情况，<br>如： setOnCompletionListener(MediaPlayer.OnCompletionListener listener)、<br>setOnErrorListener(MediaPlayer.OnErrorListener listener)等,设置播放器时需要考虑到播放器可能出现的情况设置好监听和处理逻辑，以保持播放器的健壮性。</p>
 <h2 id="安装Apache服务器"><a href="#安装Apache服务器" class="headerlink" title="安装Apache服务器"></a>安装Apache服务器</h2><p> 一句话，通过官方网站和集成包，最为简单快捷<br> <a href="https://www.apachefriends.org/zh_cn/index.html" target="_blank" rel="external">XAMPP Apache + MariaDB + PHP + Perl</a></p>
 <h2 id="上传文件到7牛，删除后服务器未能及时刷新"><a href="#上传文件到7牛，删除后服务器未能及时刷新" class="headerlink" title="上传文件到7牛，删除后服务器未能及时刷新"></a>上传文件到7牛，删除后服务器未能及时刷新</h2><p>如果调试需要，只能重命名后再上传，更换新的路径</p>
 <h2 id="JAVA中，字符串拼接尽量使用StringBuilder的append方法"><a href="#JAVA中，字符串拼接尽量使用StringBuilder的append方法" class="headerlink" title="JAVA中，字符串拼接尽量使用StringBuilder的append方法"></a>JAVA中，字符串拼接尽量使用StringBuilder的append方法</h2><p>效率测试可参看<a href="http://www.cnblogs.com/focusj/archive/2011/02/16/2057630.html" target="_blank" rel="external">java五种拼接字符串的方法</a></p>
@@ -160,10 +301,10 @@
   
   <entry>
     <title>Java tips</title>
-    <link href="http://ipcreator.me/2017/12/31/MyView/Diary/Tech/java-trouble-solver/"/>
-    <id>http://ipcreator.me/2017/12/31/MyView/Diary/Tech/java-trouble-solver/</id>
-    <published>2017-12-31T13:59:06.000Z</published>
-    <updated>2017-03-06T08:47:04.076Z</updated>
+    <link href="http://ipcreator.me/2017/03/08/Program/Java/java-trouble-solver/"/>
+    <id>http://ipcreator.me/2017/03/08/Program/Java/java-trouble-solver/</id>
+    <published>2017-03-08T13:59:06.000Z</published>
+    <updated>2017-03-08T23:17:16.182Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/JAVA.jpg" alt=""></p>
 <p>咖啡需要慢慢品，Java也如此…</p>
@@ -493,10 +634,10 @@
   
   <entry>
     <title>RollPlayer</title>
-    <link href="http://ipcreator.me/2017/03/03/MyView/Diary/Tech/my-favor-music-player/"/>
-    <id>http://ipcreator.me/2017/03/03/MyView/Diary/Tech/my-favor-music-player/</id>
+    <link href="http://ipcreator.me/2017/03/03/Program/Android/my-favor-music-player/"/>
+    <id>http://ipcreator.me/2017/03/03/Program/Android/my-favor-music-player/</id>
     <published>2017-03-03T01:42:06.000Z</published>
-    <updated>2017-03-03T12:28:12.825Z</updated>
+    <updated>2017-03-03T12:30:30.261Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/music.png" alt=""></p>
 <p>做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.</p>
@@ -572,10 +713,10 @@
   
   <entry>
     <title>AndroidStudio技巧</title>
-    <link href="http://ipcreator.me/2017/03/03/Program/Resources/tips-of-androidstudio/"/>
-    <id>http://ipcreator.me/2017/03/03/Program/Resources/tips-of-androidstudio/</id>
+    <link href="http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/"/>
+    <id>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</id>
     <published>2017-03-03T00:31:06.000Z</published>
-    <updated>2017-03-03T00:45:28.726Z</updated>
+    <updated>2017-03-09T01:44:51.153Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.codeceo.com/article/android-studio-skills.html" target="_blank" rel="external">提高效率的 Android Studio 技巧汇总</a></p>
 <p><img src="http://static.codeceo.com/images/2015/08/android-studio-logo.png" alt=""></p>
@@ -588,6 +729,11 @@
 <p><strong>shift+f11</strong></p>
 <p>显示有哪些书签。</p>
 <p><img src="http://static.codeceo.com/images/2015/11/6d48930da07ca6c8858aad67e9be48c1.gif" alt=""></p>
+<p>ctrl+/ 注释一行代码<br>ctrl+shift+/注释代码块<br>ctrl+b查看声明<br>ctrl+f查找<br>ctrl+r替换<br>ctrl+shif+f 全路径查找<br>ctrl+shift+r 全路径替换</p>
+<p>ctrl+number-minus 代码折叠<br>ctrl+number-plus代码展开<br>ctrl+shift+minus折叠窗口内所有代码<br>ctrl+shift+plus展开窗口内所有代码</p>
+<p>ctrl+o复写方法<br>ctrl+alt+o清除无效包引用</p>
+<p>ctrl+alt+l 格式化代码</p>
+<p><strong>ctrl + h</strong><br>显示大纲</p>
 <h2 id="The-File-Structure-Popup"><a href="#The-File-Structure-Popup" class="headerlink" title="The File Structure Popup"></a>The File Structure Popup</h2><p><strong>ctrl+f12</strong></p>
 <p>此快捷键可以调出当前文件的大纲，并通过模糊匹配快速跳转至指定的方法。<br>勾选上“show anonymous classes”后其功能相当于Eclipse中的ctrl+o</p>
 <p><img src="http://static.codeceo.com/images/2015/11/b9a22088dd4c98e411f2a2b1329fee16.gif" alt=""></p>
@@ -763,8 +909,8 @@
   
   <entry>
     <title>Android模拟器影响系统音量的解决方法</title>
-    <link href="http://ipcreator.me/2017/03/01/MyView/Diary/Tech/android-emulator-system-sound/"/>
-    <id>http://ipcreator.me/2017/03/01/MyView/Diary/Tech/android-emulator-system-sound/</id>
+    <link href="http://ipcreator.me/2017/03/01/Program/Android/android-emulator-system-sound/"/>
+    <id>http://ipcreator.me/2017/03/01/Program/Android/android-emulator-system-sound/</id>
     <published>2017-03-01T13:06:06.000Z</published>
     <updated>2017-03-01T13:18:17.855Z</updated>
     
@@ -2713,8 +2859,8 @@ public void thisIsSuper() {
   
   <entry>
     <title>名人名言</title>
-    <link href="http://ipcreator.me/2017/02/22/MyView/Diary/my-translations/"/>
-    <id>http://ipcreator.me/2017/02/22/MyView/Diary/my-translations/</id>
+    <link href="http://ipcreator.me/2017/02/22/MyView/English/my-translations/"/>
+    <id>http://ipcreator.me/2017/02/22/MyView/English/my-translations/</id>
     <published>2017-02-22T00:31:05.000Z</published>
     <updated>2017-02-25T14:30:01.752Z</updated>
     
@@ -2791,8 +2937,8 @@ public void thisIsSuper() {
   
   <entry>
     <title>爱句子</title>
-    <link href="http://ipcreator.me/2017/02/22/MyView/Diary/love-sentencns/"/>
-    <id>http://ipcreator.me/2017/02/22/MyView/Diary/love-sentencns/</id>
+    <link href="http://ipcreator.me/2017/02/22/MyView/English/love-sentencns/"/>
+    <id>http://ipcreator.me/2017/02/22/MyView/English/love-sentencns/</id>
     <published>2017-02-22T00:13:05.000Z</published>
     <updated>2017-03-05T01:56:32.401Z</updated>
     
@@ -2947,8 +3093,8 @@ public void thisIsSuper() {
   
   <entry>
     <title>爱单词</title>
-    <link href="http://ipcreator.me/2017/02/22/MyView/Diary/love-words/"/>
-    <id>http://ipcreator.me/2017/02/22/MyView/Diary/love-words/</id>
+    <link href="http://ipcreator.me/2017/02/22/MyView/English/love-words/"/>
+    <id>http://ipcreator.me/2017/02/22/MyView/English/love-words/</id>
     <published>2017-02-21T23:44:05.000Z</published>
     <updated>2017-03-07T14:01:18.395Z</updated>
     
@@ -3107,8 +3253,8 @@ public void thisIsSuper() {
   
   <entry>
     <title>Beautiful articles of English</title>
-    <link href="http://ipcreator.me/2017/02/21/MyView/Diary/beautiful-article-of-english/"/>
-    <id>http://ipcreator.me/2017/02/21/MyView/Diary/beautiful-article-of-english/</id>
+    <link href="http://ipcreator.me/2017/02/21/MyView/English/beautiful-article-of-english/"/>
+    <id>http://ipcreator.me/2017/02/21/MyView/English/beautiful-article-of-english/</id>
     <published>2017-02-21T12:25:05.000Z</published>
     <updated>2017-02-23T14:05:29.273Z</updated>
     
@@ -3621,14 +3767,15 @@ public void thisIsSuper() {
   
   <entry>
     <title>Coding心得</title>
-    <link href="http://ipcreator.me/2017/02/20/MyView/Diary/my-views-of-learning-program/"/>
-    <id>http://ipcreator.me/2017/02/20/MyView/Diary/my-views-of-learning-program/</id>
+    <link href="http://ipcreator.me/2017/02/20/Program/my-views-of-learning-program/"/>
+    <id>http://ipcreator.me/2017/02/20/Program/my-views-of-learning-program/</id>
     <published>2017-02-20T03:28:06.000Z</published>
-    <updated>2017-03-05T23:01:48.563Z</updated>
+    <updated>2017-03-09T02:54:44.041Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/Hello%20World%20Program%20in%20Eight%20Different%20Popular%20Programming%20Languages.jpg" alt=""></p>
 <p>作者：<a href="http://ipcreator.me">IPCreator</a></p>
-<h2 id="Skill-is-acquired-through-correct-and-repetitive-practice-and-practice-makes-perfect"><a href="#Skill-is-acquired-through-correct-and-repetitive-practice-and-practice-makes-perfect" class="headerlink" title="Skill is acquired through correct and repetitive practice, and practice makes perfect."></a>Skill is acquired through correct and repetitive practice, and practice makes perfect.</h2><blockquote>
+<h2 id="Skill-is-acquired-through-correct-and-repetitive-practice-and-practice-makes-perfect"><a href="#Skill-is-acquired-through-correct-and-repetitive-practice-and-practice-makes-perfect" class="headerlink" title="Skill is acquired through correct and repetitive practice, and practice makes perfect."></a>Skill is acquired through correct and repetitive practice, and practice makes perfect.</h2> <a id="more"></a>
+<blockquote>
 <ol>
 <li>不放过任何一个err，每成功解决一个error就意味着自己的经验库又append一个案例；</li>
 <li>理不顺想不通的时候，成长的时刻到了，坚持、坚持再坚持，成就感与困难度成正比；</li>
@@ -3647,31 +3794,8 @@ public void thisIsSuper() {
 <li>程序员人生的梦想和快乐简单易实现，成为其中一员才能真正感同身受…</li>
 <li>有劲、有趣和有用，正常可持续，Kick-off &amp; Keep-going</li>
 </ol>
-</blockquote>
- <a id="more"></a>
-<blockquote>
 <p>Dreams cann’t measured by S/A/B/C/D degree、money and position.<br>Great mind thinks alike.<br>RTFC Read the fucking code.<br>RTFM Read the fucking manual.<br>STFW Search the fucking Web.<br>Read  the article word by word.<br>Code can talk, let the code talk.<br>A good name tells the truth.<br>Keep code  simple and reusable.<br>Keep hungry, Keep foolish.<br>Keep healthy and sustainable.<br>Less  is  more, slow is quick.<br>Don’t Reinvent the Wheel.<br>Use is the best way of learning English , so is programming.<br>Master the essence of  things, including languages (English/C/C++/JAVA/PYTHON/JS…)，<br>platforms(Arena/Android/Tensor…)，tools(gcc/make/gradle/git…),etc<br>We make good habits first, then habits make us.<br>Success is a habit, so is happiness.</p>
 </blockquote>
-<h2 id="The-true-joy-of-life-is-the-trip"><a href="#The-true-joy-of-life-is-the-trip" class="headerlink" title="The true joy of life is the trip."></a>The true joy of life is the trip.</h2><h2 id="The-station-is-only-a-dream-It-constantly-outdistances-us"><a href="#The-station-is-only-a-dream-It-constantly-outdistances-us" class="headerlink" title="The station is only a dream. It constantly outdistances us."></a>The station is only a dream. It constantly outdistances us.</h2><blockquote>
-<p>Happy is a duty.</p>
-</blockquote>
-<ul>
-<li><strong>做自己，过自己的人生，为自己的梦想而拼搏</strong></li>
-<li><strong>任何选择都会有风险，不选择就是最大的风险</strong></li>
-<li><strong>任何选择都会有得失，值不值在于在于如何衡量人生</strong></li>
-<li><strong>有得必有失，反之亦然，有失必有得，得失平衡</strong></li>
-<li><strong>快不快乐，首要是：弄清楚自己想要什么</strong></li>
-<li><strong>充不充实，关键是：是否朝着既定目标前行</strong></li>
-<li><strong>成与不成，秘诀是：自知自胜、贵在坚持</strong></li>
-<li><strong>幸不幸福，基础是：健康、家人、事业</strong></li>
-<li><strong>先让自己变得有价值，做出有价值的产品，再谈其它</strong></li>
-<li><strong>先提高审美和技能，再欣赏、模仿和创新</strong></li>
-</ul>
-<blockquote>
-<p><strong>很多恐惧和担忧来自想象，源自眼界/无知和缺乏目标/信念/经验/技能…</strong><br>Success is a habit, so do failure. The way leading to success is commitment.<br>-Q:这么做有用吗？ 这么坚持有意义吗？…<br>-A:你做了没有？坚持了没有？为什么没用？为什么没坚持？…<br><strong>成长的人从自身找原因，为成功找方法</strong><br><strong>逃避的人从外界找理由，为失败找借口</strong></p>
-</blockquote>
-<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h3 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h3><p>自己先构想好，树形结构，嵌套/复用，图形化工具验证辅助<br>知其然，知其所以然</p>
-<h2 id="Hello-World-Program-in-Eight-Different-Popular-Programming-Languages"><a href="#Hello-World-Program-in-Eight-Different-Popular-Programming-Languages" class="headerlink" title="Hello World Program in Eight Different Popular Programming Languages"></a><a href="http://www.thecrazyprogrammer.com/2014/07/hello-world-program-in-eight-different-popular-programming-languages.html" target="_blank" rel="external">Hello World Program in Eight Different Popular Programming Languages</a></h2><p>This fact is true that Hello World program is the first program that a programmer writes when he/she start learning a new programming language. Today I thought that I should share the hello world program in different languages. A video is also added for easy understanding of the programs. Let’s take a look on these programs.</p>
 <p><strong>Hello World Program in Java</strong></p>
 <figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> <span class="title">HelloWorld</span></div><div class="line">&#123;  </div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params">String args[]</span>)</span></div><div class="line">        &#123;</div><div class="line">           System.<span class="keyword">out</span>.println(“Hello World”);</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>Hello World Program in C</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line">main()</div><div class="line">&#123;</div><div class="line">    <span class="built_in">printf</span>(“Hello World”);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -3799,26 +3923,7 @@ public void thisIsSuper() {
     
       &lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/Hello%20World%20Program%20in%20Eight%20Different%20Popular%20Programming%20Languages.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;作者：&lt;a href=&quot;http://ipcreator.me&quot;&gt;IPCreator&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Skill-is-acquired-through-correct-and-repetitive-practice-and-practice-makes-perfect&quot;&gt;&lt;a href=&quot;#Skill-is-acquired-through-correct-and-repetitive-practice-and-practice-makes-perfect&quot; class=&quot;headerlink&quot; title=&quot;Skill is acquired through correct and repetitive practice, and practice makes perfect.&quot;&gt;&lt;/a&gt;Skill is acquired through correct and repetitive practice, and practice makes perfect.&lt;/h2&gt;&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;不放过任何一个err，每成功解决一个error就意味着自己的经验库又append一个案例；&lt;/li&gt;
-&lt;li&gt;理不顺想不通的时候，成长的时刻到了，坚持、坚持再坚持，成就感与困难度成正比；&lt;/li&gt;
-&lt;li&gt;官网+stackflow+github+google还解决不了的时候，暂时放一放，持续关注思考，直至惊喜发生；&lt;/li&gt;
-&lt;li&gt;换位常识思考，如果你是设计者，你会怎么设计，为什么这样设计？&lt;/li&gt;
-&lt;li&gt;尽量不要复制粘贴，要逐字阅读，逐个输入，对开发而言，thinking与coding相辅相成，缺一不可；&lt;/li&gt;
-&lt;li&gt;知其然还要知其所以然，不要浮于表面，浅尝则止，运行/部署成功不等于你掌握了每个环节的原理；&lt;/li&gt;
-&lt;li&gt;慢工出细活，慢就是快，防火胜于救火，先打好基础（概念、框架、原理等），高手都重视内功；&lt;/li&gt;
-&lt;li&gt;专而精，精而深，通过一个突破口（语言、框架、平台），抓住本质量（通俗易懂，能重建和迁移），再融会贯通，一通百通；&lt;/li&gt;
-&lt;li&gt;coding只是解决问题的一种方式，不要重复发明轮子，要open和share，不要敝扫自珍，因为每个人都能掌握相应的技能，只是时间早晚而已；&lt;/li&gt;
-&lt;li&gt;创新整合也是一种行之有效的商业途径，不要为了技术而技术，为了创新而创新，商业思维很重要；&lt;/li&gt;
-&lt;li&gt;从战略上来说，我们大部分都只是用别人开发出来的工具（类似于厨具）开发产品（类似于菜品）而已；&lt;/li&gt;
-&lt;li&gt;阅读代码（类似于品尝他人菜品）、模仿创新（借鉴改造）、原创分享（晋级高级厨师）；&lt;/li&gt;
-&lt;li&gt;道理都懂，为什么难以坚持？没有尝到甜头或者没有吃到苦头，又或者只是懒惰；&lt;/li&gt;
-&lt;li&gt;35岁以后能否再编程？取决于：以前的编程模式是否健康可持续？是否为自己实现创新产品和服务(而不只是为了挣钱)；&lt;/li&gt;
-&lt;li&gt;程序员人生的梦想和快乐简单易实现，成为其中一员才能真正感同身受…&lt;/li&gt;
-&lt;li&gt;有劲、有趣和有用，正常可持续，Kick-off &amp;amp; Keep-going&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;h2 id=&quot;Skill-is-acquired-through-correct-and-repetitive-practice-and-practice-makes-perfect&quot;&gt;&lt;a href=&quot;#Skill-is-acquired-through-correct-and-repetitive-practice-and-practice-makes-perfect&quot; class=&quot;headerlink&quot; title=&quot;Skill is acquired through correct and repetitive practice, and practice makes perfect.&quot;&gt;&lt;/a&gt;Skill is acquired through correct and repetitive practice, and practice makes perfect.&lt;/h2&gt;
     
     </summary>
     
@@ -3885,77 +3990,6 @@ public void thisIsSuper() {
     
     
       <category term="Java Script" scheme="http://ipcreator.me/tags/Java-Script/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
-    <link href="http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/"/>
-    <id>http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/</id>
-    <published>2017-02-19T15:59:59.000Z</published>
-    <updated>2017-02-27T03:43:44.623Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
-<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
-<p>作者：傅盛</p>
-<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
-<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
-<p>怎么思考呢?我讲几个关键点。</p>
-<a id="more"></a>
-<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
-<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
-<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
-<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
-<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
-<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
-<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
-<p>这才有了一句流行语——Welcome to the GPU world.</p>
-<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
-<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
-<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
-<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
-<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
-<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
-<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
-<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
-<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
-<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
-<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
-<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
-<p>为什么要异构?</p>
-<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
-<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
-<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
-<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
-<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
-<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
-<p>我认为，只要需求越多，它就会越来越准。</p>
-<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
-<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
-<p>漫漫长路，才刚刚开始。<br>End.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;作者：傅盛&lt;/p&gt;
-&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
-&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
-&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
-    
-      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
     
   </entry>
   
@@ -4127,6 +4161,77 @@ public void thisIsSuper() {
     
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
+    <link href="http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/"/>
+    <id>http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/</id>
+    <published>2017-02-19T15:59:59.000Z</published>
+    <updated>2017-02-27T03:43:44.623Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
+<p>作者：傅盛</p>
+<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
+<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
+<p>怎么思考呢?我讲几个关键点。</p>
+<a id="more"></a>
+<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
+<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
+<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
+<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
+<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
+<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
+<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
+<p>这才有了一句流行语——Welcome to the GPU world.</p>
+<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
+<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
+<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
+<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
+<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
+<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
+<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
+<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
+<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
+<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
+<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
+<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
+<p>为什么要异构?</p>
+<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
+<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
+<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
+<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
+<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
+<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
+<p>我认为，只要需求越多，它就会越来越准。</p>
+<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
+<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
+<p>漫漫长路，才刚刚开始。<br>End.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;作者：傅盛&lt;/p&gt;
+&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
+&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
+&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
+    
+      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
     
   </entry>
   
@@ -4454,8 +4559,8 @@ public void thisIsSuper() {
   
   <entry>
     <title>机器学习年度 20 大开源项目花落谁家？（Python 版）</title>
-    <link href="http://ipcreator.me/2017/02/19/Program/Resources/20-open-source-projects-of-machine-learning/"/>
-    <id>http://ipcreator.me/2017/02/19/Program/Resources/20-open-source-projects-of-machine-learning/</id>
+    <link href="http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/"/>
+    <id>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</id>
     <published>2017-02-19T15:57:06.000Z</published>
     <updated>2017-02-19T06:03:00.878Z</updated>
     
@@ -4708,8 +4813,8 @@ public void thisIsSuper() {
   
   <entry>
     <title>28款 GitHub 最流行的开源机器学习项目：TensorFlow 排榜首</title>
-    <link href="http://ipcreator.me/2017/02/19/Program/Resources/28-open-source-projects-of-machine-learning/"/>
-    <id>http://ipcreator.me/2017/02/19/Program/Resources/28-open-source-projects-of-machine-learning/</id>
+    <link href="http://ipcreator.me/2017/02/19/Program/TensorFlow/28-open-source-projects-of-machine-learning/"/>
+    <id>http://ipcreator.me/2017/02/19/Program/TensorFlow/28-open-source-projects-of-machine-learning/</id>
     <published>2017-02-19T15:57:05.000Z</published>
     <updated>2017-02-19T06:03:00.879Z</updated>
     
@@ -5276,8 +5381,8 @@ public void thisIsSuper() {
   
   <entry>
     <title>Awesome Machine Learning</title>
-    <link href="http://ipcreator.me/2017/02/19/Program/Resources/awesome-machine-learning/"/>
-    <id>http://ipcreator.me/2017/02/19/Program/Resources/awesome-machine-learning/</id>
+    <link href="http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-machine-learning/"/>
+    <id>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-machine-learning/</id>
     <published>2017-02-19T15:56:06.000Z</published>
     <updated>2017-02-19T06:03:00.883Z</updated>
     
@@ -6296,8 +6401,8 @@ public void thisIsSuper() {
   
   <entry>
     <title>Awesome Deep Learning</title>
-    <link href="http://ipcreator.me/2017/02/19/Program/Resources/awesome-deep-learning/"/>
-    <id>http://ipcreator.me/2017/02/19/Program/Resources/awesome-deep-learning/</id>
+    <link href="http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/"/>
+    <id>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/</id>
     <published>2017-02-19T15:56:00.000Z</published>
     <updated>2017-02-19T06:03:00.878Z</updated>
     
@@ -6321,8 +6426,8 @@ public void thisIsSuper() {
   
   <entry>
     <title>25个Java机器学习工具&amp;库</title>
-    <link href="http://ipcreator.me/2017/02/19/Program/Resources/25-open-source-projects-of-machine-learning-java/"/>
-    <id>http://ipcreator.me/2017/02/19/Program/Resources/25-open-source-projects-of-machine-learning-java/</id>
+    <link href="http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/"/>
+    <id>http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/</id>
     <published>2017-02-19T15:50:06.000Z</published>
     <updated>2017-02-19T06:03:00.878Z</updated>
     
@@ -7036,8 +7141,8 @@ new file:   source/slider.fa3fc2.js
   
   <entry>
     <title>Scikit-learn入门指南</title>
-    <link href="http://ipcreator.me/2017/02/18/Program/Resources/basic-knowledge-of-scikit-learn/"/>
-    <id>http://ipcreator.me/2017/02/18/Program/Resources/basic-knowledge-of-scikit-learn/</id>
+    <link href="http://ipcreator.me/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/"/>
+    <id>http://ipcreator.me/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/</id>
     <published>2017-02-18T05:04:06.000Z</published>
     <updated>2017-02-19T06:02:30.217Z</updated>
     
@@ -7111,8 +7216,8 @@ new file:   source/slider.fa3fc2.js
   
   <entry>
     <title>大数据/数据挖掘/推荐系统/机器学习相关资源</title>
-    <link href="http://ipcreator.me/2017/02/18/Program/Resources/big-data-resources/"/>
-    <id>http://ipcreator.me/2017/02/18/Program/Resources/big-data-resources/</id>
+    <link href="http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/"/>
+    <id>http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/</id>
     <published>2017-02-18T04:23:06.000Z</published>
     <updated>2017-02-19T06:02:30.218Z</updated>
     
@@ -7401,61 +7506,9 @@ new file:   source/slider.fa3fc2.js
   </entry>
   
   <entry>
-    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
-    <link href="http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</id>
-    <published>2017-02-18T01:02:06.000Z</published>
-    <updated>2017-02-19T06:02:30.218Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
-<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<a id="more"></a>
-<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
-<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
-<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
-<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
-<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
-<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
-<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
-<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
-<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
-<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
-<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
-<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
-<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
-<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
-<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
-<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
-<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
-<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
-<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
-<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
-<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python 资源大全中文版</title>
-    <link href="http://ipcreator.me/2017/02/18/Program/Resources/tools-of-python/"/>
-    <id>http://ipcreator.me/2017/02/18/Program/Resources/tools-of-python/</id>
+    <link href="http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/"/>
+    <id>http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/</id>
     <published>2017-02-18T01:02:06.000Z</published>
     <updated>2017-02-19T06:02:30.218Z</updated>
     
@@ -8562,6 +8615,58 @@ new file:   source/slider.fa3fc2.js
   </entry>
   
   <entry>
+    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
+    <link href="http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/"/>
+    <id>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</id>
+    <published>2017-02-18T01:02:06.000Z</published>
+    <updated>2017-02-19T06:02:30.218Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
+<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<a id="more"></a>
+<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
+<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
+<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
+<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
+<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
+<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
+<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
+<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
+<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
+<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
+<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
+<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
+<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
+<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
+<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
+<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
+<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
+<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
+<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
+<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
+<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
+    
+  </entry>
+  
+  <entry>
     <title>超智能体</title>
     <link href="http://ipcreator.me/2017/02/18/Program/Concepts/super-intelligence-individual/"/>
     <id>http://ipcreator.me/2017/02/18/Program/Concepts/super-intelligence-individual/</id>
@@ -9633,8 +9738,8 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
   
   <entry>
     <title>Atom编辑器入门到精通</title>
-    <link href="http://ipcreator.me/2017/02/15/Program/Resources/techniques-of-atom-editor/"/>
-    <id>http://ipcreator.me/2017/02/15/Program/Resources/techniques-of-atom-editor/</id>
+    <link href="http://ipcreator.me/2017/02/15/Program/techniques-of-atom-editor/"/>
+    <id>http://ipcreator.me/2017/02/15/Program/techniques-of-atom-editor/</id>
     <published>2017-02-15T13:38:06.000Z</published>
     <updated>2017-02-15T14:34:03.978Z</updated>
     
@@ -9814,8 +9919,8 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
   
   <entry>
     <title>Facebook 发布开源框架 PyTorch</title>
-    <link href="http://ipcreator.me/2017/02/14/Program/Resources/pytorch-of-facebook/"/>
-    <id>http://ipcreator.me/2017/02/14/Program/Resources/pytorch-of-facebook/</id>
+    <link href="http://ipcreator.me/2017/02/14/Program/TensorFlow/pytorch-of-facebook/"/>
+    <id>http://ipcreator.me/2017/02/14/Program/TensorFlow/pytorch-of-facebook/</id>
     <published>2017-02-14T05:11:06.000Z</published>
     <updated>2017-02-16T01:00:02.364Z</updated>
     
@@ -11147,8 +11252,8 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
   
   <entry>
     <title>这一年来，数据科学家都用了哪些算法玩转人工智能？</title>
-    <link href="http://ipcreator.me/2017/02/13/Program/Resources/benchmark-of-machine-learning/"/>
-    <id>http://ipcreator.me/2017/02/13/Program/Resources/benchmark-of-machine-learning/</id>
+    <link href="http://ipcreator.me/2017/02/13/Program/TensorFlow/benchmark-of-machine-learning/"/>
+    <id>http://ipcreator.me/2017/02/13/Program/TensorFlow/benchmark-of-machine-learning/</id>
     <published>2017-02-13T00:40:06.000Z</published>
     <updated>2017-02-27T03:51:39.021Z</updated>
     
@@ -11265,8 +11370,8 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
   
   <entry>
     <title>人工智能和机器学习的进步 需要一个更加开源的世界</title>
-    <link href="http://ipcreator.me/2017/02/13/Program/Resources/ai-and-machine-learning-need-more-open-sources/"/>
-    <id>http://ipcreator.me/2017/02/13/Program/Resources/ai-and-machine-learning-need-more-open-sources/</id>
+    <link href="http://ipcreator.me/2017/02/13/Program/TensorFlow/ai-and-machine-learning-need-more-open-sources/"/>
+    <id>http://ipcreator.me/2017/02/13/Program/TensorFlow/ai-and-machine-learning-need-more-open-sources/</id>
     <published>2017-02-13T00:33:06.000Z</published>
     <updated>2017-02-27T03:51:39.014Z</updated>
     
@@ -11341,8 +11446,8 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
   
   <entry>
     <title>Google 开源项目风格指南 (中文版)</title>
-    <link href="http://ipcreator.me/2017/02/12/Program/Resources/google-styleguide/"/>
-    <id>http://ipcreator.me/2017/02/12/Program/Resources/google-styleguide/</id>
+    <link href="http://ipcreator.me/2017/02/12/Program/google-styleguide/"/>
+    <id>http://ipcreator.me/2017/02/12/Program/google-styleguide/</id>
     <published>2017-02-12T04:10:06.000Z</published>
     <updated>2017-02-15T12:20:26.050Z</updated>
     
@@ -11659,7 +11764,7 @@ TENSORFLOW_METHOD(classifyImageBmp)(...) {
     <published>2017-01-20T12:31:06.000Z</published>
     <updated>2017-02-15T13:04:57.169Z</updated>
     
-    <content type="html"><![CDATA[<p>如何成为一名黑客<br>——Eric S. Raymond <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x65;&#x73;&#x72;&#x40;&#x74;&#x68;&#121;&#114;&#x73;&#x75;&#x73;&#46;&#x63;&#x6f;&#109;">&#x65;&#x73;&#x72;&#x40;&#x74;&#x68;&#121;&#114;&#x73;&#x75;&#x73;&#46;&#x63;&#x6f;&#109;</a><br><a href="http://translations.readthedocs.io/en/latest/hacker_howto.html" target="_blank" rel="external">Wang Dingwei <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x77;&#x61;&#x6e;&#x67;&#100;&#105;&#x6e;&#x67;&#x77;&#x65;&#x69;&#x38;&#50;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x77;&#x61;&#x6e;&#x67;&#100;&#105;&#x6e;&#x67;&#x77;&#x65;&#x69;&#x38;&#50;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a></a> 基于 Barret 的翻译更正而成。转载请注明出处。</p>
+    <content type="html"><![CDATA[<p>如何成为一名黑客<br>——Eric S. Raymond <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x65;&#115;&#114;&#x40;&#116;&#104;&#x79;&#x72;&#115;&#117;&#x73;&#x2e;&#x63;&#x6f;&#x6d;">&#x65;&#115;&#114;&#x40;&#116;&#104;&#x79;&#x72;&#115;&#117;&#x73;&#x2e;&#x63;&#x6f;&#x6d;</a><br><a href="http://translations.readthedocs.io/en/latest/hacker_howto.html" target="_blank" rel="external">Wang Dingwei <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x77;&#x61;&#x6e;&#x67;&#x64;&#105;&#110;&#103;&#119;&#101;&#105;&#x38;&#x32;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#x77;&#x61;&#x6e;&#x67;&#x64;&#105;&#110;&#103;&#119;&#101;&#105;&#x38;&#x32;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a></a> 基于 Barret 的翻译更正而成。转载请注明出处。</p>
 <p>目录</p>
 <ol>
 <li>为什么会有这份文档？</li>
@@ -12204,7 +12309,7 @@ become the master.
     
     <summary type="html">
     
-      &lt;p&gt;如何成为一名黑客&lt;br&gt;——Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#x68;&amp;#121;&amp;#114;&amp;#x73;&amp;#x75;&amp;#x73;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#x65;&amp;#x73;&amp;#x72;&amp;#x40;&amp;#x74;&amp;#x68;&amp;#121;&amp;#114;&amp;#x73;&amp;#x75;&amp;#x73;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://translations.readthedocs.io/en/latest/hacker_howto.html&quot;&gt;Wang Dingwei &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#116;&amp;#x6f;&amp;#58;&amp;#x77;&amp;#x61;&amp;#x6e;&amp;#x67;&amp;#100;&amp;#105;&amp;#x6e;&amp;#x67;&amp;#x77;&amp;#x65;&amp;#x69;&amp;#x38;&amp;#50;&amp;#64;&amp;#x67;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#x77;&amp;#x61;&amp;#x6e;&amp;#x67;&amp;#100;&amp;#105;&amp;#x6e;&amp;#x67;&amp;#x77;&amp;#x65;&amp;#x69;&amp;#x38;&amp;#50;&amp;#64;&amp;#x67;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;/a&gt; 基于 Barret 的翻译更正而成。转载请注明出处。&lt;/p&gt;
+      &lt;p&gt;如何成为一名黑客&lt;br&gt;——Eric S. Raymond &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#115;&amp;#114;&amp;#x40;&amp;#116;&amp;#104;&amp;#x79;&amp;#x72;&amp;#115;&amp;#117;&amp;#x73;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#x65;&amp;#115;&amp;#114;&amp;#x40;&amp;#116;&amp;#104;&amp;#x79;&amp;#x72;&amp;#115;&amp;#117;&amp;#x73;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://translations.readthedocs.io/en/latest/hacker_howto.html&quot;&gt;Wang Dingwei &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x77;&amp;#x61;&amp;#x6e;&amp;#x67;&amp;#x64;&amp;#105;&amp;#110;&amp;#103;&amp;#119;&amp;#101;&amp;#105;&amp;#x38;&amp;#x32;&amp;#x40;&amp;#103;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#x77;&amp;#x61;&amp;#x6e;&amp;#x67;&amp;#x64;&amp;#105;&amp;#110;&amp;#103;&amp;#119;&amp;#101;&amp;#105;&amp;#x38;&amp;#x32;&amp;#x40;&amp;#103;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;/a&gt; 基于 Barret 的翻译更正而成。转载请注明出处。&lt;/p&gt;
 &lt;p&gt;目录&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;为什么会有这份文档？&lt;/li&gt;
@@ -13128,352 +13233,6 @@ become the master.
       <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
     
       <category term="Education" scheme="http://ipcreator.me/tags/Education/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Great hacker, Want to start a startup?</title>
-    <link href="http://ipcreator.me/2017/01/20/Program/Concepts/want-to-start-a-startup-great-hacker/"/>
-    <id>http://ipcreator.me/2017/01/20/Program/Concepts/want-to-start-a-startup-great-hacker/</id>
-    <published>2017-01-20T11:37:06.000Z</published>
-    <updated>2017-02-15T13:07:10.397Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.paulgraham.com/gh.html" target="_blank" rel="external">Paul Graham</a> July 2004</p>
-<p><img src="http://ep.yimg.com/ca/I/paulgraham_2202_9271894" alt=""></p>
-<p>(This essay is derived from a talk at Oscon 2004.)</p>
-<p>A few months ago I finished a new book, and in reviews I keep noticing words like “provocative’’ and “controversial.’’ To say nothing of “idiotic.’’</p>
-<p>I didn’t mean to make the book controversial. I was trying to make it efficient. I didn’t want to waste people’s time telling them things they already knew. It’s more efficient just to give them the diffs. But I suppose that’s bound to yield an alarming book.</p>
- <a id="more"></a>
-<p>Edisons</p>
-<p>There’s no controversy about which idea is most controversial: the suggestion that variation in wealth might not be as big a problem as we think.</p>
-<p>I didn’t say in the book that variation in wealth was in itself a good thing. I said in some situations it might be a sign of good things. A throbbing headache is not a good thing, but it can be a sign of a good thing– for example, that you’re recovering consciousness after being hit on the head.</p>
-<p>Variation in wealth can be a sign of variation in productivity. (In a society of one, they’re identical.) And that is almost certainly a good thing: if your society has no variation in productivity, it’s probably not because everyone is Thomas Edison. It’s probably because you have no Thomas Edisons.</p>
-<p>In a low-tech society you don’t see much variation in productivity. If you have a tribe of nomads collecting sticks for a fire, how much more productive is the best stick gatherer going to be than the worst? A factor of two? Whereas when you hand people a complex tool like a computer, the variation in what they can do with it is enormous.</p>
-<p>That’s not a new idea. Fred Brooks wrote about it in 1974, and the study he quoted was published in 1968. But I think he underestimated the variation between programmers. He wrote about productivity in lines of code: the best programmers can solve a given problem in a tenth the time. But what if the problem isn’t given? In programming, as in many fields, the hard part isn’t solving problems, but deciding what problems to solve. Imagination is hard to measure, but in practice it dominates the kind of productivity that’s measured in lines of code.</p>
-<p>Productivity varies in any field, but there are few in which it varies so much. The variation between programmers is so great that it becomes a difference in kind. I don’t think this is something intrinsic to programming, though. In every field, technology magnifies differences in productivity. I think what’s happening in programming is just that we have a lot of technological leverage. But in every field the lever is getting longer, so the variation we see is something that more and more fields will see as time goes on. And the success of companies, and countries, will depend increasingly on how they deal with it.</p>
-<p>If variation in productivity increases with technology, then the contribution of the most productive individuals will not only be disproportionately large, but will actually grow with time. When you reach the point where 90% of a group’s output is created by 1% of its members, you lose big if something (whether Viking raids, or central planning) drags their productivity down to the average.</p>
-<p>If we want to get the most out of them, we need to understand these especially productive people. What motivates them? What do they need to do their jobs? How do you recognize them? How do you get them to come and work for you? And then of course there’s the question, how do you become one?</p>
-<p>More than Money</p>
-<p>I know a handful of super-hackers, so I sat down and thought about what they have in common. Their defining quality is probably that they really love to program. Ordinary programmers write code to pay the bills. Great hackers think of it as something they do for fun, and which they’re delighted to find people will pay them for.</p>
-<p>Great programmers are sometimes said to be indifferent to money. This isn’t quite true. It is true that all they really care about is doing interesting work. But if you make enough money, you get to work on whatever you want, and for that reason hackers are attracted by the idea of making really large amounts of money. But as long as they still have to show up for work every day, they care more about what they do there than how much they get paid for it.</p>
-<p>Economically, this is a fact of the greatest importance, because it means you don’t have to pay great hackers anything like what they’re worth. A great programmer might be ten or a hundred times as productive as an ordinary one, but he’ll consider himself lucky to get paid three times as much. As I’ll explain later, this is partly because great hackers don’t know how good they are. But it’s also because money is not the main thing they want.</p>
-<p>What do hackers want? Like all craftsmen, hackers like good tools. In fact, that’s an understatement. Good hackers find it unbearable to use bad tools. They’ll simply refuse to work on projects with the wrong infrastructure.</p>
-<p>At a startup I once worked for, one of the things pinned up on our bulletin board was an ad from IBM. It was a picture of an AS400, and the headline read, I think, “hackers despise it.’’ [1]</p>
-<p>When you decide what infrastructure to use for a project, you’re not just making a technical decision. You’re also making a social decision, and this may be the more important of the two. For example, if your company wants to write some software, it might seem a prudent choice to write it in Java. But when you choose a language, you’re also choosing a community. The programmers you’ll be able to hire to work on a Java project won’t be as smart as the ones you could get to work on a project written in Python. And the quality of your hackers probably matters more than the language you choose. Though, frankly, the fact that good hackers prefer Python to Java should tell you something about the relative merits of those languages.</p>
-<p>Business types prefer the most popular languages because they view languages as standards. They don’t want to bet the company on Betamax. The thing about languages, though, is that they’re not just standards. If you have to move bits over a network, by all means use TCP/IP. But a programming language isn’t just a format. A programming language is a medium of expression.</p>
-<p>I’ve read that Java has just overtaken Cobol as the most popular language. As a standard, you couldn’t wish for more. But as a medium of expression, you could do a lot better. Of all the great programmers I can think of, I know of only one who would voluntarily program in Java. And of all the great programmers I can think of who don’t work for Sun, on Java, I know of zero.</p>
-<p>Great hackers also generally insist on using open source software. Not just because it’s better, but because it gives them more control. Good hackers insist on control. This is part of what makes them good hackers: when something’s broken, they need to fix it. You want them to feel this way about the software they’re writing for you. You shouldn’t be surprised when they feel the same way about the operating system.</p>
-<p>A couple years ago a venture capitalist friend told me about a new startup he was involved with. It sounded promising. But the next time I talked to him, he said they’d decided to build their software on Windows NT, and had just hired a very experienced NT developer to be their chief technical officer. When I heard this, I thought, these guys are doomed. One, the CTO couldn’t be a first rate hacker, because to become an eminent NT developer he would have had to use NT voluntarily, multiple times, and I couldn’t imagine a great hacker doing that; and two, even if he was good, he’d have a hard time hiring anyone good to work for him if the project had to be built on NT. [2]</p>
-<p>The Final Frontier</p>
-<p>After software, the most important tool to a hacker is probably his office. Big companies think the function of office space is to express rank. But hackers use their offices for more than that: they use their office as a place to think in. And if you’re a technology company, their thoughts are your product. So making hackers work in a noisy, distracting environment is like having a paint factory where the air is full of soot.</p>
-<p>The cartoon strip Dilbert has a lot to say about cubicles, and with good reason. All the hackers I know despise them. The mere prospect of being interrupted is enough to prevent hackers from working on hard problems. If you want to get real work done in an office with cubicles, you have two options: work at home, or come in early or late or on a weekend, when no one else is there. Don’t companies realize this is a sign that something is broken? An office environment is supposed to be something that helps you work, not something you work despite.</p>
-<p>Companies like Cisco are proud that everyone there has a cubicle, even the CEO. But they’re not so advanced as they think; obviously they still view office space as a badge of rank. Note too that Cisco is famous for doing very little product development in house. They get new technology by buying the startups that created it– where presumably the hackers did have somewhere quiet to work.</p>
-<p>One big company that understands what hackers need is Microsoft. I once saw a recruiting ad for Microsoft with a big picture of a door. Work for us, the premise was, and we’ll give you a place to work where you can actually get work done. And you know, Microsoft is remarkable among big companies in that they are able to develop software in house. Not well, perhaps, but well enough.</p>
-<p>If companies want hackers to be productive, they should look at what they do at home. At home, hackers can arrange things themselves so they can get the most done. And when they work at home, hackers don’t work in noisy, open spaces; they work in rooms with doors. They work in cosy, neighborhoody places with people around and somewhere to walk when they need to mull something over, instead of in glass boxes set in acres of parking lots. They have a sofa they can take a nap on when they feel tired, instead of sitting in a coma at their desk, pretending to work. There’s no crew of people with vacuum cleaners that roars through every evening during the prime hacking hours. There are no meetings or, God forbid, corporate retreats or team-building exercises. And when you look at what they’re doing on that computer, you’ll find it reinforces what I said earlier about tools. They may have to use Java and Windows at work, but at home, where they can choose for themselves, you’re more likely to find them using Perl and Linux.</p>
-<p>Indeed, these statistics about Cobol or Java being the most popular language can be misleading. What we ought to look at, if we want to know what tools are best, is what hackers choose when they can choose freely– that is, in projects of their own. When you ask that question, you find that open source operating systems already have a dominant market share, and the number one language is probably Perl.</p>
-<p>Interesting</p>
-<p>Along with good tools, hackers want interesting projects. What makes a project interesting? Well, obviously overtly sexy applications like stealth planes or special effects software would be interesting to work on. But any application can be interesting if it poses novel technical challenges. So it’s hard to predict which problems hackers will like, because some become interesting only when the people working on them discover a new kind of solution. Before ITA (who wrote the software inside Orbitz), the people working on airline fare searches probably thought it was one of the most boring applications imaginable. But ITA made it interesting by redefining the problem in a more ambitious way.</p>
-<p>I think the same thing happened at Google. When Google was founded, the conventional wisdom among the so-called portals was that search was boring and unimportant. But the guys at Google didn’t think search was boring, and that’s why they do it so well.</p>
-<p>This is an area where managers can make a difference. Like a parent saying to a child, I bet you can’t clean up your whole room in ten minutes, a good manager can sometimes redefine a problem as a more interesting one. Steve Jobs seems to be particularly good at this, in part simply by having high standards. There were a lot of small, inexpensive computers before the Mac. He redefined the problem as: make one that’s beautiful. And that probably drove the developers harder than any carrot or stick could.</p>
-<p>They certainly delivered. When the Mac first appeared, you didn’t even have to turn it on to know it would be good; you could tell from the case. A few weeks ago I was walking along the street in Cambridge, and in someone’s trash I saw what appeared to be a Mac carrying case. I looked inside, and there was a Mac SE. I carried it home and plugged it in, and it booted. The happy Macintosh face, and then the finder. My God, it was so simple. It was just like … Google.</p>
-<p>Hackers like to work for people with high standards. But it’s not enough just to be exacting. You have to insist on the right things. Which usually means that you have to be a hacker yourself. I’ve seen occasional articles about how to manage programmers. Really there should be two articles: one about what to do if you are yourself a programmer, and one about what to do if you’re not. And the second could probably be condensed into two words: give up.</p>
-<p>The problem is not so much the day to day management. Really good hackers are practically self-managing. The problem is, if you’re not a hacker, you can’t tell who the good hackers are. A similar problem explains why American cars are so ugly. I call it the design paradox. You might think that you could make your products beautiful just by hiring a great designer to design them. But if you yourself don’t have good taste, how are you going to recognize a good designer? By definition you can’t tell from his portfolio. And you can’t go by the awards he’s won or the jobs he’s had, because in design, as in most fields, those tend to be driven by fashion and schmoozing, with actual ability a distant third. There’s no way around it: you can’t manage a process intended to produce beautiful things without knowing what beautiful is. American cars are ugly because American car companies are run by people with bad taste.</p>
-<p>Many people in this country think of taste as something elusive, or even frivolous. It is neither. To drive design, a manager must be the most demanding user of a company’s products. And if you have really good taste, you can, as Steve Jobs does, make satisfying you the kind of problem that good people like to work on.</p>
-<p>Nasty Little Problems</p>
-<p>It’s pretty easy to say what kinds of problems are not interesting: those where instead of solving a few big, clear, problems, you have to solve a lot of nasty little ones. One of the worst kinds of projects is writing an interface to a piece of software that’s full of bugs. Another is when you have to customize something for an individual client’s complex and ill-defined needs. To hackers these kinds of projects are the death of a thousand cuts.</p>
-<p>The distinguishing feature of nasty little problems is that you don’t learn anything from them. Writing a compiler is interesting because it teaches you what a compiler is. But writing an interface to a buggy piece of software doesn’t teach you anything, because the bugs are random. [3] So it’s not just fastidiousness that makes good hackers avoid nasty little problems. It’s more a question of self-preservation. Working on nasty little problems makes you stupid. Good hackers avoid it for the same reason models avoid cheeseburgers.</p>
-<p>Of course some problems inherently have this character. And because of supply and demand, they pay especially well. So a company that found a way to get great hackers to work on tedious problems would be very successful. How would you do it?</p>
-<p>One place this happens is in startups. At our startup we had Robert Morris working as a system administrator. That’s like having the Rolling Stones play at a bar mitzvah. You can’t hire that kind of talent. But people will do any amount of drudgery for companies of which they’re the founders. [4]</p>
-<p>Bigger companies solve the problem by partitioning the company. They get smart people to work for them by establishing a separate R&amp;D department where employees don’t have to work directly on customers’ nasty little problems. [5] In this model, the research department functions like a mine. They produce new ideas; maybe the rest of the company will be able to use them.</p>
-<p>You may not have to go to this extreme. Bottom-up programming suggests another way to partition the company: have the smart people work as toolmakers. If your company makes software to do x, have one group that builds tools for writing software of that type, and another that uses these tools to write the applications. This way you might be able to get smart people to write 99% of your code, but still keep them almost as insulated from users as they would be in a traditional research department. The toolmakers would have users, but they’d only be the company’s own developers. [6]</p>
-<p>If Microsoft used this approach, their software wouldn’t be so full of security holes, because the less smart people writing the actual applications wouldn’t be doing low-level stuff like allocating memory. Instead of writing Word directly in C, they’d be plugging together big Lego blocks of Word-language. (Duplo, I believe, is the technical term.)</p>
-<p>Clumping</p>
-<p>Along with interesting problems, what good hackers like is other good hackers. Great hackers tend to clump together– sometimes spectacularly so, as at Xerox Parc. So you won’t attract good hackers in linear proportion to how good an environment you create for them. The tendency to clump means it’s more like the square of the environment. So it’s winner take all. At any given time, there are only about ten or twenty places where hackers most want to work, and if you aren’t one of them, you won’t just have fewer great hackers, you’ll have zero.</p>
-<p>Having great hackers is not, by itself, enough to make a company successful. It works well for Google and ITA, which are two of the hot spots right now, but it didn’t help Thinking Machines or Xerox. Sun had a good run for a while, but their business model is a down elevator. In that situation, even the best hackers can’t save you.</p>
-<p>I think, though, that all other things being equal, a company that can attract great hackers will have a huge advantage. There are people who would disagree with this. When we were making the rounds of venture capital firms in the 1990s, several told us that software companies didn’t win by writing great software, but through brand, and dominating channels, and doing the right deals.</p>
-<p>They really seemed to believe this, and I think I know why. I think what a lot of VCs are looking for, at least unconsciously, is the next Microsoft. And of course if Microsoft is your model, you shouldn’t be looking for companies that hope to win by writing great software. But VCs are mistaken to look for the next Microsoft, because no startup can be the next Microsoft unless some other company is prepared to bend over at just the right moment and be the next IBM.</p>
-<p>It’s a mistake to use Microsoft as a model, because their whole culture derives from that one lucky break. Microsoft is a bad data point. If you throw them out, you find that good products do tend to win in the market. What VCs should be looking for is the next Apple, or the next Google.</p>
-<p>I think Bill Gates knows this. What worries him about Google is not the power of their brand, but the fact that they have better hackers. [7]</p>
-<p>Recognition</p>
-<p>So who are the great hackers? How do you know when you meet one? That turns out to be very hard. Even hackers can’t tell. I’m pretty sure now that my friend Trevor Blackwell is a great hacker. You may have read on Slashdot how he made his own Segway. The remarkable thing about this project was that he wrote all the software in one day (in Python, incidentally).</p>
-<p>For Trevor, that’s par for the course. But when I first met him, I thought he was a complete idiot. He was standing in Robert Morris’s office babbling at him about something or other, and I remember standing behind him making frantic gestures at Robert to shoo this nut out of his office so we could go to lunch. Robert says he misjudged Trevor at first too. Apparently when Robert first met him, Trevor had just begun a new scheme that involved writing down everything about every aspect of his life on a stack of index cards, which he carried with him everywhere. He’d also just arrived from Canada, and had a strong Canadian accent and a mullet.</p>
-<p>The problem is compounded by the fact that hackers, despite their reputation for social obliviousness, sometimes put a good deal of effort into seeming smart. When I was in grad school I used to hang around the MIT AI Lab occasionally. It was kind of intimidating at first. Everyone there spoke so fast. But after a while I learned the trick of speaking fast. You don’t have to think any faster; just use twice as many words to say everything.</p>
-<p>With this amount of noise in the signal, it’s hard to tell good hackers when you meet them. I can’t tell, even now. You also can’t tell from their resumes. It seems like the only way to judge a hacker is to work with him on something.</p>
-<p>And this is the reason that high-tech areas only happen around universities. The active ingredient here is not so much the professors as the students. Startups grow up around universities because universities bring together promising young people and make them work on the same projects. The smart ones learn who the other smart ones are, and together they cook up new projects of their own.</p>
-<p>Because you can’t tell a great hacker except by working with him, hackers themselves can’t tell how good they are. This is true to a degree in most fields. I’ve found that people who are great at something are not so much convinced of their own greatness as mystified at why everyone else seems so incompetent.</p>
-<p>But it’s particularly hard for hackers to know how good they are, because it’s hard to compare their work. This is easier in most other fields. In the hundred meters, you know in 10 seconds who’s fastest. Even in math there seems to be a general consensus about which problems are hard to solve, and what constitutes a good solution. But hacking is like writing. Who can say which of two novels is better? Certainly not the authors.</p>
-<p>With hackers, at least, other hackers can tell. That’s because, unlike novelists, hackers collaborate on projects. When you get to hit a few difficult problems over the net at someone, you learn pretty quickly how hard they hit them back. But hackers can’t watch themselves at work. So if you ask a great hacker how good he is, he’s almost certain to reply, I don’t know. He’s not just being modest. He really doesn’t know.</p>
-<p>And none of us know, except about people we’ve actually worked with. Which puts us in a weird situation: we don’t know who our heroes should be. The hackers who become famous tend to become famous by random accidents of PR. Occasionally I need to give an example of a great hacker, and I never know who to use. The first names that come to mind always tend to be people I know personally, but it seems lame to use them. So, I think, maybe I should say Richard Stallman, or Linus Torvalds, or Alan Kay, or someone famous like that. But I have no idea if these guys are great hackers. I’ve never worked with them on anything.</p>
-<p>If there is a Michael Jordan of hacking, no one knows, including him.</p>
-<p>Cultivation</p>
-<p>Finally, the question the hackers have all been wondering about: how do you become a great hacker? I don’t know if it’s possible to make yourself into one. But it’s certainly possible to do things that make you stupid, and if you can make yourself stupid, you can probably make yourself smart too.</p>
-<p>The key to being a good hacker may be to work on what you like. When I think about the great hackers I know, one thing they have in common is the extreme difficulty of making them work on anything they don’t want to. I don’t know if this is cause or effect; it may be both.</p>
-<p>To do something well you have to love it. So to the extent you can preserve hacking as something you love, you’re likely to do it well. Try to keep the sense of wonder you had about programming at age 14. If you’re worried that your current job is rotting your brain, it probably is.</p>
-<p>The best hackers tend to be smart, of course, but that’s true in a lot of fields. Is there some quality that’s unique to hackers? I asked some friends, and the number one thing they mentioned was curiosity. I’d always supposed that all smart people were curious– that curiosity was simply the first derivative of knowledge. But apparently hackers are particularly curious, especially about how things work. That makes sense, because programs are in effect giant descriptions of how things work.</p>
-<p>Several friends mentioned hackers’ ability to concentrate– their ability, as one put it, to “tune out everything outside their own heads.’’ I’ve certainly noticed this. And I’ve heard several hackers say that after drinking even half a beer they can’t program at all. So maybe hacking does require some special ability to focus. Perhaps great hackers can load a large amount of context into their head, so that when they look at a line of code, they see not just that line but the whole program around it. John McPhee wrote that Bill Bradley’s success as a basketball player was due partly to his extraordinary peripheral vision. “Perfect’’ eyesight means about 47 degrees of vertical peripheral vision. Bill Bradley had 70; he could see the basket when he was looking at the floor. Maybe great hackers have some similar inborn ability. (I cheat by using a very dense language, which shrinks the court.)</p>
-<p>This could explain the disconnect over cubicles. Maybe the people in charge of facilities, not having any concentration to shatter, have no idea that working in a cubicle feels to a hacker like having one’s brain in a blender. (Whereas Bill, if the rumors of autism are true, knows all too well.)</p>
-<p>One difference I’ve noticed between great hackers and smart people in general is that hackers are more politically incorrect. To the extent there is a secret handshake among good hackers, it’s when they know one another well enough to express opinions that would get them stoned to death by the general public. And I can see why political incorrectness would be a useful quality in programming. Programs are very complex and, at least in the hands of good programmers, very fluid. In such situations it’s helpful to have a habit of questioning assumptions.</p>
-<p>Can you cultivate these qualities? I don’t know. But you can at least not repress them. So here is my best shot at a recipe. If it is possible to make yourself into a great hacker, the way to do it may be to make the following deal with yourself: you never have to work on boring projects (unless your family will starve otherwise), and in return, you’ll never allow yourself to do a half-assed job. All the great hackers I know seem to have made that deal, though perhaps none of them had any choice in the matter.</p>
-<p>Notes</p>
-<p>[1] In fairness, I have to say that IBM makes decent hardware. I wrote this on an IBM laptop.</p>
-<p>[2] They did turn out to be doomed. They shut down a few months later.</p>
-<p>[3] I think this is what people mean when they talk about the “meaning of life.” On the face of it, this seems an odd idea. Life isn’t an expression; how could it have meaning? But it can have a quality that feels a lot like meaning. In a project like a compiler, you have to solve a lot of problems, but the problems all fall into a pattern, as in a signal. Whereas when the problems you have to solve are random, they seem like noise.</p>
-<p>[4] Einstein at one point worked designing refrigerators. (He had equity.)</p>
-<p>[5] It’s hard to say exactly what constitutes research in the computer world, but as a first approximation, it’s software that doesn’t have users.</p>
-<p>I don’t think it’s publication that makes the best hackers want to work in research departments. I think it’s mainly not having to have a three hour meeting with a product manager about problems integrating the Korean version of Word 13.27 with the talking paperclip.</p>
-<p>[6] Something similar has been happening for a long time in the construction industry. When you had a house built a couple hundred years ago, the local builders built everything in it. But increasingly what builders do is assemble components designed and manufactured by someone else. This has, like the arrival of desktop publishing, given people the freedom to experiment in disastrous ways, but it is certainly more efficient.</p>
-<p>[7] Google is much more dangerous to Microsoft than Netscape was. Probably more dangerous than any other company has ever been. Not least because they’re determined to fight. On their job listing page, they say that one of their “core values’’ is “Don’t be evil.’’ From a company selling soybean oil or mining equipment, such a statement would merely be eccentric. But I think all of us in the computer world recognize who that is a declaration of war on.</p>
-<p>Thanks to Jessica Livingston, Robert Morris, and Sarah Harlin for reading earlier versions of this talk.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/gh.html&quot;&gt;Paul Graham&lt;/a&gt; July 2004&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ep.yimg.com/ca/I/paulgraham_2202_9271894&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;(This essay is derived from a talk at Oscon 2004.)&lt;/p&gt;
-&lt;p&gt;A few months ago I finished a new book, and in reviews I keep noticing words like “provocative’’ and “controversial.’’ To say nothing of “idiotic.’’&lt;/p&gt;
-&lt;p&gt;I didn’t mean to make the book controversial. I was trying to make it efficient. I didn’t want to waste people’s time telling them things they already knew. It’s more efficient just to give them the diffs. But I suppose that’s bound to yield an alarming book.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Undergraduation, Want to start a startup?</title>
-    <link href="http://ipcreator.me/2017/01/20/Program/Concepts/want-to-start-a-startup-undergraduate/"/>
-    <id>http://ipcreator.me/2017/01/20/Program/Concepts/want-to-start-a-startup-undergraduate/</id>
-    <published>2017-01-20T11:37:06.000Z</published>
-    <updated>2017-02-16T00:13:17.299Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.paulgraham.com/college.html" target="_blank" rel="external">Paul Graham</a> July 2004</p>
-<p><img src="http://ep.yimg.com/ca/I/paulgraham_2202_8990551" alt=""></p>
-<p>March 2005</p>
-<p>(Parts of this essay began as replies to students who wrote to me with questions.)</p>
-<p>Recently I’ve had several emails from computer science undergrads asking what to do in college. I might not be the best source of advice, because I was a philosophy major in college. But I took so many CS classes that most CS majors thought I was one. I was certainly a hacker, at least.</p>
- <a id="more"></a>
-<p>Hacking</p>
-<p>What should you do in college to become a good hacker? There are two main things you can do: become very good at programming, and learn a lot about specific, cool problems. These turn out to be equivalent, because each drives you to do the other.</p>
-<p>The way to be good at programming is to work (a) a lot (b) on hard problems. And the way to make yourself work on hard problems is to work on some very engaging project.</p>
-<p>Odds are this project won’t be a class assignment. My friend Robert learned a lot by writing network software when he was an undergrad. One of his projects was to connect Harvard to the Arpanet; it had been one of the original nodes, but by 1984 the connection had died. [1] Not only was this work not for a class, but because he spent all his time on it and neglected his studies, he was kicked out of school for a year. [2] It all evened out in the end, and now he’s a professor at MIT. But you’ll probably be happier if you don’t go to that extreme; it caused him a lot of worry at the time.</p>
-<p>Another way to be good at programming is to find other people who are good at it, and learn what they know. Programmers tend to sort themselves into tribes according to the type of work they do and the tools they use, and some tribes are smarter than others. Look around you and see what the smart people seem to be working on; there’s usually a reason.</p>
-<p>Some of the smartest people around you are professors. So one way to find interesting work is to volunteer as a research assistant. Professors are especially interested in people who can solve tedious system-administration type problems for them, so that is a way to get a foot in the door. What they fear are flakes and resume padders. It’s all too common for an assistant to result in a net increase in work. So you have to make it clear you’ll mean a net decrease.</p>
-<p>Don’t be put off if they say no. Rejection is almost always less personal than the rejectee imagines. Just move on to the next. (This applies to dating too.)</p>
-<p>Beware, because although most professors are smart, not all of them work on interesting stuff. Professors have to publish novel results to advance their careers, but there is more competition in more interesting areas of research. So what less ambitious professors do is turn out a series of papers whose conclusions are novel because no one else cares about them. You’re better off avoiding these.</p>
-<p>I never worked as a research assistant, so I feel a bit dishonest recommending that route. I learned to program by writing stuff of my own, particularly by trying to reverse-engineer Winograd’s SHRDLU. I was as obsessed with that program as a mother with a new baby.</p>
-<p>Whatever the disadvantages of working by yourself, the advantage is that the project is all your own. You never have to compromise or ask anyone’s permission, and if you have a new idea you can just sit down and start implementing it.</p>
-<p>In your own projects you don’t have to worry about novelty (as professors do) or profitability (as businesses do). All that matters is how hard the project is technically, and that has no correlation to the nature of the application. “Serious” applications like databases are often trivial and dull technically (if you ever suffer from insomnia, try reading the technical literature about databases) while “frivolous” applications like games are often very sophisticated. I’m sure there are game companies out there working on products with more intellectual content than the research at the bottom nine tenths of university CS departments.</p>
-<p>If I were in college now I’d probably work on graphics: a network game, for example, or a tool for 3D animation. When I was an undergrad there weren’t enough cycles around to make graphics interesting, but it’s hard to imagine anything more fun to work on now.</p>
-<p>Math</p>
-<p>When I was in college, a lot of the professors believed (or at least wished) that computer science was a branch of math. This idea was strongest at Harvard, where there wasn’t even a CS major till the 1980s; till then one had to major in applied math. But it was nearly as bad at Cornell. When I told the fearsome Professor Conway that I was interested in AI (a hot topic then), he told me I should major in math. I’m still not sure whether he thought AI required math, or whether he thought AI was nonsense and that majoring in something rigorous would cure me of such stupid ambitions.</p>
-<p>In fact, the amount of math you need as a hacker is a lot less than most university departments like to admit. I don’t think you need much more than high school math plus a few concepts from the theory of computation. (You have to know what an n^2 algorithm is if you want to avoid writing them.) Unless you’re planning to write math applications, of course. Robotics, for example, is all math.</p>
-<p>But while you don’t literally need math for most kinds of hacking, in the sense of knowing 1001 tricks for differentiating formulas, math is very much worth studying for its own sake. It’s a valuable source of metaphors for almost any kind of work.[3] I wish I’d studied more math in college for that reason.</p>
-<p>Like a lot of people, I was mathematically abused as a child. I learned to think of math as a collection of formulas that were neither beautiful nor had any relation to my life (despite attempts to translate them into “word problems”), but had to be memorized in order to do well on tests.</p>
-<p>One of the most valuable things you could do in college would be to learn what math is really about. This may not be easy, because a lot of good mathematicians are bad teachers. And while there are many popular books on math, few seem good. The best I can think of are W. W. Sawyer’s. And of course Euclid. [4]</p>
-<p>Everything</p>
-<p>Thomas Huxley said “Try to learn something about everything and everything about something.” Most universities aim at this ideal.</p>
-<p>But what’s everything? To me it means, all that people learn in the course of working honestly on hard problems. All such work tends to be related, in that ideas and techniques from one field can often be transplanted successfully to others. Even others that seem quite distant. For example, I write essays the same way I write software: I sit down and blow out a lame version 1 as fast as I can type, then spend several weeks rewriting it.</p>
-<p>Working on hard problems is not, by itself, enough. Medieval alchemists were working on a hard problem, but their approach was so bogus that there was little to learn from studying it, except possibly about people’s ability to delude themselves. Unfortunately the sort of AI I was trying to learn in college had the same flaw: a very hard problem, blithely approached with hopelessly inadequate techniques. Bold? Closer to fraudulent.</p>
-<p>The social sciences are also fairly bogus, because they’re so much influenced by intellectual fashions. If a physicist met a colleague from 100 years ago, he could teach him some new things; if a psychologist met a colleague from 100 years ago, they’d just get into an ideological argument. Yes, of course, you’ll learn something by taking a psychology class. The point is, you’ll learn more by taking a class in another department.</p>
-<p>The worthwhile departments, in my opinion, are math, the hard sciences, engineering, history (especially economic and social history, and the history of science), architecture, and the classics. A survey course in art history may be worthwhile. Modern literature is important, but the way to learn about it is just to read. I don’t know enough about music to say.</p>
-<p>You can skip the social sciences, philosophy, and the various departments created recently in response to political pressures. Many of these fields talk about important problems, certainly. But the way they talk about them is useless. For example, philosophy talks, among other things, about our obligations to one another; but you can learn more about this from a wise grandmother or E. B. White than from an academic philosopher.</p>
-<p>I speak here from experience. I should probably have been offended when people laughed at Clinton for saying “It depends on what the meaning of the word ‘is’ is.” I took about five classes in college on what the meaning of “is” is.</p>
-<p>Another way to figure out which fields are worth studying is to create the dropout graph. For example, I know many people who switched from math to computer science because they found math too hard, and no one who did the opposite. People don’t do hard things gratuitously; no one will work on a harder problem unless it is proportionately (or at least log(n)) more rewarding. So probably math is more worth studying than computer science. By similar comparisons you can make a graph of all the departments in a university. At the bottom you’ll find the subjects with least intellectual content.</p>
-<p>If you use this method, you’ll get roughly the same answer I just gave.</p>
-<p>Language courses are an anomaly. I think they’re better considered as extracurricular activities, like pottery classes. They’d be far more useful when combined with some time living in a country where the language is spoken. On a whim I studied Arabic as a freshman. It was a lot of work, and the only lasting benefits were a weird ability to identify semitic roots and some insights into how people recognize words.</p>
-<p>Studio art and creative writing courses are wildcards. Usually you don’t get taught much: you just work (or don’t work) on whatever you want, and then sit around offering “crits” of one another’s creations under the vague supervision of the teacher. But writing and art are both very hard problems that (some) people work honestly at, so they’re worth doing, especially if you can find a good teacher.</p>
-<p>Jobs</p>
-<p>Of course college students have to think about more than just learning. There are also two practical problems to consider: jobs, and graduate school.</p>
-<p>In theory a liberal education is not supposed to supply job training. But everyone knows this is a bit of a fib. Hackers at every college learn practical skills, and not by accident.</p>
-<p>What you should learn to get a job depends on the kind you want. If you want to work in a big company, learn how to hack Blub on Windows. If you want to work at a cool little company or research lab, you’ll do better to learn Ruby on Linux. And if you want to start your own company, which I think will be more and more common, master the most powerful tools you can find, because you’re going to be in a race against your competitors, and they’ll be your horse.</p>
-<p>There is not a direct correlation between the skills you should learn in college and those you’ll use in a job. You should aim slightly high in college.</p>
-<p>In workouts a football player may bench press 300 pounds, even though he may never have to exert anything like that much force in the course of a game. Likewise, if your professors try to make you learn stuff that’s more advanced than you’ll need in a job, it may not just be because they’re academics, detached from the real world. They may be trying to make you lift weights with your brain.</p>
-<p>The programs you write in classes differ in three critical ways from the ones you’ll write in the real world: they’re small; you get to start from scratch; and the problem is usually artificial and predetermined. In the real world, programs are bigger, tend to involve existing code, and often require you to figure out what the problem is before you can solve it.</p>
-<p>You don’t have to wait to leave (or even enter) college to learn these skills. If you want to learn how to deal with existing code, for example, you can contribute to open-source projects. The sort of employer you want to work for will be as impressed by that as good grades on class assignments.</p>
-<p>In existing open-source projects you don’t get much practice at the third skill, deciding what problems to solve. But there’s nothing to stop you starting new projects of your own. And good employers will be even more impressed with that.</p>
-<p>What sort of problem should you try to solve? One way to answer that is to ask what you need as a user. For example, I stumbled on a good algorithm for spam filtering because I wanted to stop getting spam. Now what I wish I had was a mail reader that somehow prevented my inbox from filling up. I tend to use my inbox as a todo list. But that’s like using a screwdriver to open bottles; what one really wants is a bottle opener.</p>
-<p>Grad School</p>
-<p>What about grad school? Should you go? And how do you get into a good one?</p>
-<p>In principle, grad school is professional training in research, and you shouldn’t go unless you want to do research as a career. And yet half the people who get PhDs in CS don’t go into research. I didn’t go to grad school to become a professor. I went because I wanted to learn more.</p>
-<p>So if you’re mainly interested in hacking and you go to grad school, you’ll find a lot of other people who are similarly out of their element. And if half the people around you are out of their element in the same way you are, are you really out of your element?</p>
-<p>There’s a fundamental problem in “computer science,” and it surfaces in situations like this. No one is sure what “research” is supposed to be. A lot of research is hacking that had to be crammed into the form of an academic paper to yield one more quantum of publication.</p>
-<p>So it’s kind of misleading to ask whether you’ll be at home in grad school, because very few people are quite at home in computer science. The whole field is uncomfortable in its own skin. So the fact that you’re mainly interested in hacking shouldn’t deter you from going to grad school. Just be warned you’ll have to do a lot of stuff you don’t like.</p>
-<p>Number one will be your dissertation. Almost everyone hates their dissertation by the time they’re done with it. The process inherently tends to produce an unpleasant result, like a cake made out of whole wheat flour and baked for twelve hours. Few dissertations are read with pleasure, especially by their authors.</p>
-<p>But thousands before you have suffered through writing a dissertation. And aside from that, grad school is close to paradise. Many people remember it as the happiest time of their lives. And nearly all the rest, including me, remember it as a period that would have been, if they hadn’t had to write a dissertation. [5]</p>
-<p>The danger with grad school is that you don’t see the scary part upfront. PhD programs start out as college part 2, with several years of classes. So by the time you face the horror of writing a dissertation, you’re already several years in. If you quit now, you’ll be a grad-school dropout, and you probably won’t like that idea. When Robert got kicked out of grad school for writing the Internet worm of 1988, I envied him enormously for finding a way out without the stigma of failure.</p>
-<p>On the whole, grad school is probably better than most alternatives. You meet a lot of smart people, and your glum procrastination will at least be a powerful common bond. And of course you have a PhD at the end. I forgot about that. I suppose that’s worth something.</p>
-<p>The greatest advantage of a PhD (besides being the union card of academia, of course) may be that it gives you some baseline confidence. For example, the Honeywell thermostats in my house have the most atrocious UI. My mother, who has the same model, diligently spent a day reading the user’s manual to learn how to operate hers. She assumed the problem was with her. But I can think to myself “If someone with a PhD in computer science can’t understand this thermostat, it must be badly designed.”</p>
-<p>If you still want to go to grad school after this equivocal recommendation, I can give you solid advice about how to get in. A lot of my friends are CS professors now, so I have the inside story about admissions. It’s quite different from college. At most colleges, admissions officers decide who gets in. For PhD programs, the professors do. And they try to do it well, because the people they admit are going to be working for them.</p>
-<p>Apparently only recommendations really matter at the best schools. Standardized tests count for nothing, and grades for little. The essay is mostly an opportunity to disqualify yourself by saying something stupid. The only thing professors trust is recommendations, preferably from people they know. [6]</p>
-<p>So if you want to get into a PhD program, the key is to impress your professors. And from my friends who are professors I know what impresses them: not merely trying to impress them. They’re not impressed by students who get good grades or want to be their research assistants so they can get into grad school. They’re impressed by students who get good grades and want to be their research assistants because they’re genuinely interested in the topic.</p>
-<p>So the best thing you can do in college, whether you want to get into grad school or just be good at hacking, is figure out what you truly like. It’s hard to trick professors into letting you into grad school, and impossible to trick problems into letting you solve them. College is where faking stops working. From this point, unless you want to go work for a big company, which is like reverting to high school, the only way forward is through doing what you love.</p>
-<p>Notes</p>
-<p>[1] No one seems to have minded, which shows how unimportant the Arpanet (which became the Internet) was as late as 1984.</p>
-<p>[2] This is why, when I became an employer, I didn’t care about GPAs. In fact, we actively sought out people who’d failed out of school. We once put up posters around Harvard saying “Did you just get kicked out for doing badly in your classes because you spent all your time working on some project of your own? Come work for us!” We managed to find a kid who had been, and he was a great hacker.</p>
-<p>When Harvard kicks undergrads out for a year, they have to get jobs. The idea is to show them how awful the real world is, so they’ll understand how lucky they are to be in college. This plan backfired with the guy who came to work for us, because he had more fun than he’d had in school, and made more that year from stock options than any of his professors did in salary. So instead of crawling back repentant at the end of the year, he took another year off and went to Europe. He did eventually graduate at about 26.</p>
-<p>[3] Eric Raymond says the best metaphors for hackers are in set theory, combinatorics, and graph theory.</p>
-<p>Trevor Blackwell reminds you to take math classes intended for math majors. “‘Math for engineers’ classes sucked mightily. In fact any ‘x for engineers’ sucks, where x includes math, law, writing and visual design.”</p>
-<p>[4] Other highly recommended books: What is Mathematics?, by Courant and Robbins; Geometry and the Imagination by Hilbert and Cohn-Vossen. And for those interested in graphic design, Byrne’s Euclid.</p>
-<p>[5] If you wanted to have the perfect life, the thing to do would be to go to grad school, secretly write your dissertation in the first year or two, and then just enjoy yourself for the next three years, dribbling out a chapter at a time. This prospect will make grad students’ mouths water, but I know of no one who’s had the discipline to pull it off.</p>
-<p>[6] One professor friend says that 15-20% of the grad students they admit each year are “long shots.” But what he means by long shots are people whose applications are perfect in every way, except that no one on the admissions committee knows the professors who wrote the recommendations.</p>
-<p>So if you want to get into grad school in the sciences, you need to go to college somewhere with real research professors. Otherwise you’ll seem a risky bet to admissions committees, no matter how good you are.</p>
-<p>Which implies a surprising but apparently inevitable consequence: little liberal arts colleges are doomed. Most smart high school kids at least consider going into the sciences, even if they ultimately choose not to. Why go to a college that limits their options?</p>
-<p>Thanks to Trevor Blackwell, Alex Lewin, Jessica Livingston, Robert Morris, Eric Raymond, and several anonymous CS professors for reading drafts of this, and to the students whose questions began it.</p>
-<pre><code>Joel Spolsky: [Advice for Computer Science College Students](http://www.joelonsoftware.com/articles/CollegeAdvice.html)
-Eric Raymond: [How to Become a Hacker](http://www.catb.org/~esr/faqs/hacker-howto.html)
-</code></pre><h2 id="More-Advice-for-Undergrads"><a href="#More-Advice-for-Undergrads" class="headerlink" title="More Advice for Undergrads"></a>More Advice for Undergrads</h2><pre><code>I asked several friends who were professors and/or eminent hackers what they thought of Undergraduation. Their comments were so good that I thought I&apos;d just give them directly to you. I&apos;ve given them all codenames for now, since some may want to remain anonymous.
-
-NT:
-
-The one thing that I felt was missing from your essay was a statement supporting or dispelling the notion that CS is for loners. I disagree with this notion. I love hacking, but I love it even more when it&apos;s a shared experience. The hard problems seem just a bit more surmountable when there&apos;s two of you.
-
-Of course, Fred Brooks&apos;s law about adding manpower comes into play eventually. The rule: work in small groups with good people. Stay away from large bureaucratic organizations where status reports are more important than thinking outside the box. There are many individual aspects to CS, just like art. But, being an individual doesn&apos;t mean that the machine takes the place of good friends, colleagues, and mentors.
-
-TO:
-
-I think you should say &quot;College is where faking starts to stop working.&quot;
-
-FS:
-
-Math is more difficult than CS, no question. However, it is not at all clear to me that math has as much intellectual content as CS. The math hills are individually harder to climb, but CS is a bigger piece of landscape. (Formally, CS has to encompass reasoning about stateful objects with histories. There are important ways in which this is more difficult and general than pure axiomatic systems.)
-
-Empirically, I don&apos;t think the difference between math and CS is very useful for predicting how interesting and effective a thinker will come out the other end. So, while I agree with the spirit of your &quot;dropout graph&quot; heuristic, I think math and CS are an unhelpful choice to explain it with. Much better to note that both are hard subjects with real content, and contrast them with some sort of blatant basket-weaving like political science or (urgh) &quot;ethnic studies.&quot;
-
-&quot;They may be trying to make you lift weights with your brain.&quot; Indeed; I think pure mathematics makes excellent weightlifting.
-
-SA:
-
-The problem with graphics as an application is that doing a decent 3D game has a large component of movie making in it. You need motion capture and an art department for all the textures and backgrounds. Nobody will be impressed with pink cubes and green spheres bouncing around on the screen. I think the technology has pretty much surpassed anyone&apos;s ability to do anything simple and cool with it.
-
-DF:
-
-I found, when I was studying mathematics, that 2 things were true: (1) the teacher was not too good and (2) the book was not too good. So I would always buy a half-dozen books on the topic and try to get the full picture by reading the same sections in each book. The combination helped me understand much more than the sum of the content. Also, I was never opposed to reading something as much as 10 times until I squeezed everything out of it.
-
-I have found mathematics and especially formal logic to be an indispensible tool for structuring ideas. It was like Latin for me. Latin was this very clean natural language and logic was this very clean formal language. I had to teach it to myself because the logic course I had was the first 30 pages of Mendelsohn. When you want to say something unequivocally, describing formally is a good first start.
-
-When you want to understand, for example, the excitement of monads, understanding logic and some category theory helps. Category theory is also quite pretty. It simply says that everything has to be described in terms of function composition and this operator has to satisfy certain properties.
-
-If you think of logic as something alive, which allows you to prove theorems, it is fascinating. Just think about it: prove theorems by computer. It is mind-boggling. It will not likely lead to a start-up being successful, but what a moment when you prove a theorem without heuristics, etc.
-
-I have insisted that all my graduate students minor in logic, so that should say something.
-
-ML:
-
-The real reason to study math is not that it&apos;s useful but that it&apos;s cool. This should be all the reason a would-be hacker needs. Also, with its emphasis on rigor and abstraction, it&apos;s cool in a lot of the same ways as programming at its best. The fact that it&apos;s occasionally useful as well is just lagniappe.
-
-I also disagree that good mathematicians tend to be bad teachers. Having enjoyed the privilege of an expensive education, I am of the opinion that the very best mathematicians are usually (certainly not always) rather good teachers and are sometimes extraordinarily good. The real reason it is hard to learn what math is about is that mathematical understanding requires new and difficult (at least at first) ways of thinking. Cookbook calculus courses sidestep these difficulties and therefore teach little of value. Really understanding calculus was hard for Newton and is hard today.
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/college.html&quot;&gt;Paul Graham&lt;/a&gt; July 2004&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ep.yimg.com/ca/I/paulgraham_2202_8990551&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;March 2005&lt;/p&gt;
-&lt;p&gt;(Parts of this essay began as replies to students who wrote to me with questions.)&lt;/p&gt;
-&lt;p&gt;Recently I’ve had several emails from computer science undergrads asking what to do in college. I might not be the best source of advice, because I was a philosophy major in college. But I took so many CS classes that most CS majors thought I was one. I was certainly a hacker, at least.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
-    
-      <category term="Education" scheme="http://ipcreator.me/tags/Education/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Loginataka</title>
-    <link href="http://ipcreator.me/2017/01/20/Program/Concepts/the-loginataka/"/>
-    <id>http://ipcreator.me/2017/01/20/Program/Concepts/the-loginataka/</id>
-    <published>2017-01-20T11:31:06.000Z</published>
-    <updated>2017-02-15T13:06:15.488Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.catb.org/~esr/faqs/loginataka.html" target="_blank" rel="external">The Loginataka</a></p>
-<p>by Eric S. Raymond <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x65;&#x73;&#114;&#x40;&#x74;&#104;&#x79;&#x72;&#x73;&#117;&#x73;&#46;&#x63;&#111;&#109;">&#x65;&#x73;&#114;&#x40;&#x74;&#104;&#x79;&#x72;&#x73;&#117;&#x73;&#46;&#x63;&#111;&#109;</a></p>
-<p>  Speak, O Guru: How can I become a Unix Wizard?</p>
-<p>  O, Nobly Born: know that the Way to Wizardhood is long, and winding, and Fraught with Risks. Thou must Attune thyself with the Source, attaining the arcane Knowledge and Conversation of the System Libraries and Internals. Yea; and such an all-consuming Time and Energy Sink is this as to greatly Imperil thy Grade Point Average (if one thou hast), not to mention thy Sex Life (if one thou hast). But persevere, oh Larval One; rewards beyond the Dreams of Lusers await thee!</p>
-  <a id="more"></a>
-<p>  Speak, O Guru: What books should I study? Are the O’Reilly “Nutshell” guides a good place to start?</p>
-<p>  O, Nobly Born: know that the Nutshell Guides are but the outermost Portal of the True Enlightenment. Worthy are they (and praise to the Name of O’Reilly, whose books show forth the Hacker Spirit in numerous pleasing ways), but the Nutshell Guides are only the Beginning of the Road.</p>
-<p>  If thou desirest with True Desire to tread the Path of Wizardly Wisdom, first learn the elementary Postures of Kernighan &amp; Pike’s The Unix Programming Environment; then, absorb the mantic puissance of March Rochkind’s Advanced Unix Programming and W. Richard Stevens’s Advanced Programming In The Unix Environment.</p>
-<p>  Immerse thyself, then, in the Pure Light of Maurice J. Bach’s The Design Of The Unix Operating System. Neglect not the Berkelian Way; study also The Design and Implementation Of The 4.4BSD Operating System by Kirk McKusick, Keith Bostic et. al.</p>
-<p>  For useful hints, tips, and tricks, see Unix Power Tools, Tim O’Reilly, ed. Consider also the dark Wisdom to be gained from contemplation of the dread Portable C And Unix Systems Programming, e’en though it hath flowed from the keyboard of the mad and doomed Malvernite whom the world of unknowing Man misnames “J. E. Lapin”.</p>
-<p>  These tomes shall instruct thy Left Brain in the Nature of the Unix System; to Feed the other half of thy Head, O Nobly Born, embrace also the Lore of its Nurture. Don Libes’s and Sandy Ressler’s Life With Unix will set thy Feet unerringly upon that Path; take as thy Travelling Companion the erratic but illuminating compendium called The New Hacker’s Dictionary (Eric S. Raymond, ed., with Guy L. Steele Jr.).</p>
-<p>  (In this wise shalt thou travel the Way of the Camel.)</p>
-<p>  Speak, O Guru: To attain Mastery, how many Kernels do I need to take apart and reassemble?</p>
-<p>  O Nobly Born: this question reveals that indeed thou hast touched upon an Ineffable Truth about Unix — that thou canst not Plumb its Mysteries by mere Study but must become One with it through Practice. The true Way to the Knowledge of the Source is not the timid and footling way of the Student, but the Divine Foolery of the Hacker. Hack, then; strive against Mighty Problems, have joy in thy Striving, and let the Crashes fall where they may (maintaining the while, for the Good of thy Karma, a Rigorous Backup Policy).</p>
-<p>  In this day of Boot-Time Autoconfiguration and Dynamically Loadable Device Drivers, reassembling a Kernel is no longer the daunting Test and Seal of Mastery that once it was. However, writing and verifying thine own Device Driver for some piece of Exotic Hardware is still a worthy challenge to thy Budding Guruhood. Indeed, such Challenge may be found the Crafting of any Program sufficiently Powerful to Extend or Compete with the Tools now available in Open Source.</p>
-<p>  Therefore: seek thee out the Open Source Unixes: OpenBSD, FreeBSD, NetBSD, and most Especially Linux in many of its Incarnations. Join the Wizards and Aspirants to Wizardhood who Labor Unceasingly to Improve these. Commune with them in their Great Work, their unceasing Extension and Reinvention of Unix. In this wise may thou become one among the Mighty.</p>
-<p>  Speak, O Guru: Some there are who claim that the sole Path to Wizardry and the proper Way of every Right-Thinking Hacker is to rewrite the Unix Kernel from Scratch. Is this not Sacrilege?</p>
-<p>  Sacrilege, O Nobly Born? Nay! Certainly the Kernel Source is the Inmost Mystery of Unix — but there is a Mystery beyond that Mystery. The Nature of Unix inhereth not in any one Version but in the Design Tradition of which all Unixes are Evolving Parts.</p>
-<p>  The Rite of the Rewrite is not the only Path to Mastery, but it is perhaps the highest and most Sacred of all Paths. Few indeed are those who, travelling it, have crossed the dark and yawning Abyss of Implementation to Delivery. Many, yea, many in truth stagnate yet in the Desert of Delay, or linger ever in the ghastly limbo called Perpetual Beta.</p>
-<p>  (In this wise shalt thou travel the Way of the Lion.)</p>
-<p>  Speak, O Guru: What, then, is the True Path to Wizardhood?</p>
-<p>  O Nobly Born: learn, and seek within thyself. Cultivate the cunning of the Serpent and the courage of the Tiger; sup deeply from the Wisdom of those who came before thee. Hack, and hack again; grow, by trial and by error. Post thy best hacks to the Net and gain in Repute thereby. Also, O Nobly Born, be thou grave and courteous in thy speech; be helpful to those less than thee, quick to succour and slow to flame.</p>
-<p>  If thou dost these things faithfully, if thou travellest with high heart and pure intention, soon shall thy callow Newbiehood be shed. By degrees imperceptible to thyself shalt thou gain Power and Wisdom, Striving and Doing all the while. Gradually shall thy Puissance unfold and deepen.</p>
-<p>  O Nobly Born, if thou dost all these things, thy Wizardhood shall surely come upon thee; but not of a sudden, and not until after thy arrogant Mind hath more than half Forgotten that such was its Aim. For know this — you may not by thyself in Pride claim the Mantle of Wizardry; that way lies only Bogosity without End.</p>
-<p>  Rather must you Become, and Become, and Become, until Hackers respect thy Power, and other Wizards hail thee as a Brother or Sister in Wisdom, and you wake up and realize that the Mantle hath lain unknown upon thy Shoulders since you knew not when.</p>
-<p>  (In this wise shalt thou travel the Way of the Child.)</p>
-<p>  Hear, O nobly born: Techniques can be taught, but the Way of the Hacker cannot be taught. Skills can be acquired, but the Way of the Hacker is not a checklist of skills. Programming can be accomplished, but the Way of the Hacker is not a place at which you can stop and say “I have arrived!”</p>
-<p>  Hear, O nobly born: The Way of the Hacker is a posture of mind; he who seeks a teacher of the Way knows it not, but he is only looking for a mirror. All those competent to teach the Way know that it cannot be taught, only pursued with joyous labor and by emulation of the great hackers of the past.</p>
-<p>  Hear, O nobly born: Great were the hackers of the past! Subtle and deep in their thinking, shaggy-bearded and with thunder on their brows! You may seek to become as them, but it will not suffice you to grow a beard.</p>
-<p>  Hear, O Nobly Born: The center of the mystery is the act of coding. You have a keyboard before you; pursue the Way through work.</p>
-<p>  SHANTIH! SHANTIH! SHANTIH!</p>
-<p>  Annotations:</p>
-<p>  Most of this (up to “(In this wise shalt thou travel the Way of the Child.)”) was originally a Usenet response to some eager newbie questions; it appears that I wrote it on 21 November 1992 in response to a post by one Ade Barkah. After ten years, I guess it’s time to draw aside the veil of those mysteries. The remainder I wrote in 2010 after I was actually asked to give an answer in the style of the Loginataka.</p>
-<p>  For those of you who are not native English speakers, the entirety is written in imitation of the Early Modern English of the late 1500s and early 1600s, the language of the King James Bible. The influence of the King James Bible is such that its dialect has retained connotations of majesty, solemnity, and religious authority. Holy scriptures from other languages are, therefore, often translated into a KJB-like pseudo-archaic English rather than following modern usage.</p>
-<p>  Parts of this border on obsolescence now. Portable C And Unix Systems Programming has been out of print for a long time, but the Lovecraft joke was too funny to lose. Life With Unix is history, too, but the other references are still good. In 1998 I changed references to “freeware” and “free software” to “open source”. Otherwise changes have been pretty minor.</p>
-<p>  <strong>“Loginataka”  </strong><br>  The title of the document is a play on the name of the Tripitaka, an early compilation of Buddhist scriptures.</p>
-<pre><code>**&quot;Oh Nobly Born:&quot;  **
-</code></pre><p>  The formulaic use of the salutation is intended to be reminiscent of the Bardo Thödöl — the Tibetan Book Of The Dead.</p>
-<pre><code>**&quot;the Name of O&apos;Reilly&quot;  **
-</code></pre><p>  A phrase rich with meaning in the clan system of old Scotland and Ireland. It might refer to the reputation of the clan O’Reilly, or to the person of the clan chief. The implied image is of Tim O’Reilly, be-tartaned, surrounded by louring Celts bristling with weapons. It’s worth noting that O’Reilly and Associates was pretty new at the game when I wrote this; it was over the following five years that they built up their remarkable reputation as friends of the hacker community.</p>
-<pre><code>**&quot;attaining the arcane Knowledge and Conversation&quot;  **
-</code></pre><p>  This is a reference to the occultism of Alesteir Crowley. He wrote of attaining the “Knowledge and Conversation of the Holy Guardian Angel” as the central aim of Thelemic mysticism, and added that he had chosen that term for it because it was the most absurd locution he could think of.</p>
-<pre><code>**&quot;the Pure Light&quot;  **
-</code></pre><p>  In Buddhist mysticism, the Pure Light of the Void (“void” being the usual English translation of Sanskrit sunyata) is a frequent metaphor for the wisdom that comes from realizing the emptiness of all things.</p>
-<pre><code>**&quot;the Berkelian Way&quot;  **
-</code></pre><p>  If you caught the previous reference to sunyata, you might also recall that Bishop Berkeley famously denied the existence of objective reality.</p>
-<pre><code>**&quot;the mad and doomed Malvernite&quot;  **
-</code></pre><p>  This is a play on H.P. Lovecraft’s “mad and doomed Arab”, Abdul al-Hazred, the author of the Necronomicon. And the actual doomed Malvernite was…er…me, in 1987. The “world of unknowing man misnames” because I wrote the book, but was pressured into allowing it to be published under a corporate pseudonym.</p>
-<pre><code>**&quot;feed the other half of thy head&quot;  **
-</code></pre><p>  Cue Grace Slick, in the last lines of Jefferson Airplane’s White Rabbit, a song about a hallucinogenic drug experience: “Remember…what the dormouse said! FEED YOUR HEAD! FEED YOUR HEAD!”</p>
-<pre><code>**&quot;the Way of the Camel&quot;  **
-</code></pre><p>  The references to the Ways of the Camel, Lion, and Child are to a mystical rant in Nietzsche’s Thus Spoke Zarathustra.</p>
-<pre><code>**&quot;Divine Foolery of the Hacker&quot;  **
-</code></pre><p>  The image of the Fool of God is a pervasive one in world mysticism. I was thinking here especially of the Fool card in the Rider-Waite Tarot, showing a clown walking or capering at the edge of a precipice.</p>
-<pre><code>**&quot;Great Work&quot;  **
-</code></pre><p>  In alchemy, the production of the Philosopher’s Stone that could transmute lead to gold, confer immortality. In some mystical interpretations of alchemy, the transmutation of the adept’s own soul. Modern Hermetic occultism generalizes the second meaning.</p>
-<pre><code>**&quot;Desert of Delay&quot;  **
-</code></pre><p>  This part is intended to recall the landscapes in Bunyan’s moral allegory Pilgrim’s Progress.</p>
-<pre><code>**&quot;cunning of the Serpent and the courage of the Tiger&quot;  **
-</code></pre><p>  In the New Testament of the Christian Bible, Matthew 10:16 exhorts Christians to be as cunning as serpents and as harmless as doves. This in turn refers to the “cunning of the serpent” in the Old Testament Book of Genesis.</p>
-<pre><code>**&quot;if thou travellest with high heart and pure intention&quot;  **
-</code></pre><p>  In the Egyptian Book Of The Dead, “I have travelled here with high heart and pure intention” is part of the ritual one must speak to pass the Weigher of Souls.</p>
-<pre><code>**&quot;Shantih!&quot;  **
-</code></pre><p>  “Shanti!” is Sanskrit and means “Peace!” I deliberately used the older transliteration “Shantih!” because it’s found at the end of T.S. Eliot’s poem The Wasteland. The threefold repetition is a form of invocatory magic closely equivalent to the Catholic ritual blessing “Peace be with you!”</p>
-<p>  If you found this entertaining, you would probably also enjoy Rootless Root: <a href="http://www.catb.org/~esr/writings/unix-koans" target="_blank" rel="external">The Unix Koans of Master Foo.</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.catb.org/~esr/faqs/loginataka.html&quot;&gt;The Loginataka&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;by Eric S. Raymond &lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#x65;&amp;#x73;&amp;#114;&amp;#x40;&amp;#x74;&amp;#104;&amp;#x79;&amp;#x72;&amp;#x73;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&quot;&gt;&amp;#x65;&amp;#x73;&amp;#114;&amp;#x40;&amp;#x74;&amp;#104;&amp;#x79;&amp;#x72;&amp;#x73;&amp;#117;&amp;#x73;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;  Speak, O Guru: How can I become a Unix Wizard?&lt;/p&gt;
-&lt;p&gt;  O, Nobly Born: know that the Way to Wizardhood is long, and winding, and Fraught with Risks. Thou must Attune thyself with the Source, attaining the arcane Knowledge and Conversation of the System Libraries and Internals. Yea; and such an all-consuming Time and Energy Sink is this as to greatly Imperil thy Grade Point Average (if one thou hast), not to mention thy Sex Life (if one thou hast). But persevere, oh Larval One; rewards beyond the Dreams of Lusers await thee!&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
     
   </entry>
   

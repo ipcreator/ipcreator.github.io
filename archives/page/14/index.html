@@ -164,6 +164,255 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Program/TensorFlow/how-to-train-deep-neural-network" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/14/Program/TensorFlow/how-to-train-deep-neural-network/">如何训练深度神经网络？老司机的 15 点建议</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/14/Program/TensorFlow/how-to-train-deep-neural-network/" class="archive-article-date">
+  	<time datetime="2017-02-13T23:54:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作者：<a href="http://www.leiphone.com/news/201701/gOwAU7YFQkJcFkVB.html">雷锋网</a></p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/587f11cbe835b.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>本文为印度深度学习专家、创业者 Rishabh Shukla 在 GitHub 上发表的长博文，总结了他过去的开发经验，旨在给新入门的开发者提供指导。雷锋网做了不改变原意的编译。</p>
+<p>在深度学习领域，为了高效训练深度神经网络，有些实践方法被过来人强烈推荐。</p>
+<p>在这篇博文中，我会覆盖几种最常使用的实践方法，从高品质训练数据的重要性、超参数（hyperparameters）到更快创建 DNN（深度神经网络） 原型模型的一般性建议。这些推荐方法中的大多数，已被学术界的研究所证实，并在论文中展示了相关实验、数学证据，比如 Efficient BackProp(Yann LeCun et al.) 和 Practical Recommendations for Deep Architectures(Yoshua Bengio)。</p>
+        
+          <a class="article-more-a" href="/2017/02/14/Program/TensorFlow/how-to-train-deep-neural-network/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Neural Network</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/14/Program/TensorFlow/how-to-train-deep-neural-network/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Program/Concepts/brain-and-chips" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/14/Program/Concepts/brain-and-chips/">脑芯编：窥脑究竟，织网造芯</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/14/Program/Concepts/brain-and-chips/" class="archive-article-date">
+  	<time datetime="2017-02-13T23:14:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作者：<a href="http://www.leiphone.com/news/201612/E4eY2HYElJIC0be5.html">雷锋网：本文作者痴笑，矽说（微信号：silicon_talks）主笔。</a></p>
+<p>你信不信有一天，硅工造的芯片会写诗？</p>
+<p>如果信，<br>那说好的“诗三百，一言以蔽之，思无邪”，<br>还真的是“无邪”么？<br>如果不信，请读下面这一首：<br><img src="http://static.leiphone.com/uploads/new/article/740_740/201612/584fd23f4a433.png?imageMogr2/format/jpg/quality/90" alt=""><br>脑芯编：窥脑究竟，织网造芯（一）</p>
+<p>如果要给这诗一个赏析，大概可以是一个忧伤的故事。</p>
+<p>天边云的变换复杂，而我却是半梦半醒，我在想一个人，想第一次和他相见，想他的风流倜傥，想他的英雄飒爽。<br>如果你是个文科生，或许你会嘲笑这首连平仄都不满足的劣质诗歌，韵脚也押的有些蹩脚，故事更是为赋新词强说愁。</p>
+<p>如果你是理科男，或许对这种思春的小情怀不以为然。</p>
+<p>不过，那是因为你们并没有看懂这首诗。</p>
+<p>因为这诗暗藏了一个密码，藏着人工智能遇到摩尔定律后蹭出的火花。</p>
+<p>另外，这诗不是人工智能的产物，只是矽说在这个人工智能横行的年代里特有的小情怀。</p>
+<p>但可能在不远的将来，人工智能将会开车，会翻译，会调情，也会写下更美的篇章。想解开这个人工智能与集成电路的秘密？关注雷锋网(公众号：雷锋网)后期更新，我们一句一句地读下去。</p>
+        
+          <a class="article-more-a" href="/2017/02/14/Program/Concepts/brain-and-chips/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/14/Program/Concepts/brain-and-chips/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-BusinessAI/google-raisr" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/13/BusinessAI/google-raisr/">Google RAISR技术落地应用 可节约75%流量</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/13/BusinessAI/google-raisr/" class="archive-article-date">
+  	<time datetime="2017-02-13T06:30:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://dy.163.com/v2/article/detail/CB0RI9DI0511CUKV.html">作者：网易AI研究院</a></p>
+<p><img src="http://dingyue.nosdn.127.net/UaNmJZxUHa7whiaTEF=QBFNOYzjbosm=TAWB5N0XSsBgL1484657007496compressflag.jpg" alt=""></p>
+<p>谷歌在11月推出了一项新技术 <strong>RAISR，全称为“Rapid and Accurate Image Super-Resolution”，意即“快速、精确的超解析度技术”。RAISR利用机器学习将低分辨率图像转化为高分辨率图像。</strong></p>
+<p>RAISR首先制作较小版本的图像，使用传统方法将至拉伸，然后将拉伸后的模糊图像同原本的高分辨率图像进行对比。算法习得两者之间的差异，这允许它在保留图像的底层结构之上构建信息。</p>
+        
+          <a class="article-more-a" href="/2017/02/13/BusinessAI/google-raisr/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Google</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/13/BusinessAI/google-raisr/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-BusinessAI/recognize-license-number-of-car" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -407,265 +656,6 @@
 
 
   
-    <article id="post-Program/TensorFlow/quick-learning-of-tensorflow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/13/Program/TensorFlow/quick-learning-of-tensorflow/">TensorFlow极速入门</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/13/Program/TensorFlow/quick-learning-of-tensorflow/" class="archive-article-date">
-  	<time datetime="2017-02-13T01:20:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html">AI研习社</a></p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/589ee26746f0a.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>目前，深度学习已经广泛应用于各个领域，很多童鞋想要一探究竟，这里抛砖引玉的介绍下最火的深度学习开源框架tensorflow。</p>
-<p>雷锋网按：本文原载于Qunar技术沙龙，原作者已授权雷锋网发布。作者孟晓龙，2016年加入Qunar，目前在去哪儿网机票事业部担任算法工程师。热衷于深度学习技术的探索，对新事物有着强烈的好奇心。</p>
-        
-          <a class="article-more-a" href="/2017/02/13/Program/TensorFlow/quick-learning-of-tensorflow/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Tensorflow</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/13/Program/TensorFlow/quick-learning-of-tensorflow/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Program/TensorFlow/simple-understanding-of-tensorflow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/13/Program/TensorFlow/simple-understanding-of-tensorflow/">TensorFlow基本用法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/13/Program/TensorFlow/simple-understanding-of-tensorflow/" class="archive-article-date">
-  	<time datetime="2017-02-13T01:10:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://yjango.gitbooks.io/superorganism/content/tensorflowji_ben_yong_fa.html">yjango</a></p>
-<p><img src="https://yjango.gitbooks.io/superorganism/content/T1m6Z_B5KT1RXrhCrK.jpg" alt=""></p>
-<p>目前主流的TensorFlow。用tensorflow这样工具的原因是：它允许我们用计算图（Computational Graphs）的方式建立网络。同时又可以非常方便的对网络进行操作。下面就是对计算图的直观讲解。</p>
-<p>注：看完这部分内容的人，可以紧接着实现一个神经网络：<a href="https://yjango.gitbooks.io/superorganism/content/dai_ma_yan_shi.html">代码演示LV1</a>。</p>
-        
-          <a class="article-more-a" href="/2017/02/13/Program/TensorFlow/simple-understanding-of-tensorflow/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Tensorflow</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/13/Program/TensorFlow/simple-understanding-of-tensorflow/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Program/Concepts/ai-and-algorithms" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/13/Program/Concepts/ai-and-algorithms/">这一年来，数据科学家都用了哪些算法玩转人工智能？</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/13/Program/Concepts/ai-and-algorithms/" class="archive-article-date">
-  	<time datetime="2017-02-13T00:58:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://dy.163.com/v2/article/detail/CCBLQGO50511CUKV.html">作者：刘志勇</a></p>
-<p> 在“数据为王”的今天，越来越多的人对数据科学产生了兴趣。数据科学家离不开算法的使用，那么，数据科学家最常用的算法，都是哪些呢？</p>
-<p> 　　最近，著名的资料探勘信息网站KDnuggets策划了十大算法调查，这次调查对数据科学家常用的算法进行排名，并发现最“产业”和最“学术”的算法，还对这些算法在过去5年间（2011~2016）的变化，做了一番详细的介绍。</p>
-<p> 　　这次调查结果，是基于844名受访者投票整理出来。</p>
-<p> 　　KDnuggets总结出十大算法及其投票份额如下：</p>
- <div align="center"><br><img src="http://dingyue.nosdn.127.net/XxbMqsswitgYGAfXTPRKrIW4J7xo9xrldOfRmWTK4cRxm1486093692046.jpg" width = "483" height = "379" ><br> </div>
-
-<p> 　　图1：数据科学家使用的十大算法和方法。</p>
-<p> 　　请参阅文末的所有算法和方法的完整列表。</p>
-        
-          <a class="article-more-a" href="/2017/02/13/Program/Concepts/ai-and-algorithms/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Machine Learning</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Open Source</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/13/Program/Concepts/ai-and-algorithms/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/archives/page/13/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/12/">12</a><a class="page-number" href="/archives/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/archives/page/15/">15</a><a class="page-number" href="/archives/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/23/">23</a><a class="extend next" rel="next" href="/archives/page/15/">Next &raquo;</a>
@@ -847,19 +837,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Share</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Innovation</a>
+                <a href="javascript:void(0)" class="js-tag color2">Open Source</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Atom</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -875,10 +869,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Open Source</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
               </li>
              
@@ -887,19 +877,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java Script</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -911,11 +897,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
+                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Multimedia</a>
+                <a href="javascript:void(0)" class="js-tag color5">Unix</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -927,10 +913,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Atom</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Neural Network</a>
               </li>
              
@@ -939,15 +921,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Movie</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Patent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Big Data</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Data Mining</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Internet</a>
               </li>
             
             <div class="clearfix"></div>
