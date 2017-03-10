@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="咖啡需要慢慢品，Java也如此…">
 <meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/JAVA.jpg">
-<meta property="og:updated_time" content="2017-03-08T23:17:16.182Z">
+<meta property="og:updated_time" content="2017-03-09T13:26:49.648Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java tips">
 <meta name="twitter:description" content="咖啡需要慢慢品，Java也如此…">
@@ -188,6 +188,9 @@
         <p><img src="http://om8nmvpn9.bkt.clouddn.com/JAVA.jpg" alt=""></p>
 <p>咖啡需要慢慢品，Java也如此…</p>
  <a id="more"></a>
+<h2 id="Java核心技术点之注解"><a href="#Java核心技术点之注解" class="headerlink" title="Java核心技术点之注解"></a><a href="http://www.importnew.com/23816.html" target="_blank" rel="external">Java核心技术点之注解</a></h2><p> 关于注解有点我们需要明确的是，作为描述代码本身的一种元数据，注解是一种”被动“的信息。也就是说，必须由编译器或虚拟机来“主动”解析它，它才能发挥自己的作用。</p>
+<p> 注解是描述Java代码的代码，它能够被编译器解析，注解处理工具在运行时也能够解析注解。我们在Java源文件中使用注释，是为了以后我们或他人再来读这段代码时，能够更好地理解它。Javadoc工具可以解析我们在源代码中为类、方法、变量等添加的描述信息，并根据这些描述信息自动生成一个HTML文档，这些自动生成的文档即可作为API帮助文档。只要我们为类、方法等添加的描述信息符合Javadoc要求的语法，我们就能够使用Javadoc工具根据我们的描述信息自动生成一个帮助文档。而注解比java注释和Javadoc要强大得多，它们三者之间的重大的区别在于，Java注释和Javadoc描述所发挥的作用仅仅到编译时就止步了，而注解直到运行时都能够发挥作用。</p>
+<p>我们知道，使用“transient”关键字可以告诉编译器这个域不可序列化。相比于用”transient“这样的关键字修饰一个属性，注解为我们提供了为类/方法/属性/变量添加描述信息的更通用的方式，而这些描述信息对于开发者、自动化工具、Java编译器和Java运行时来说都是有意义的，也就是说他们都能“读懂”注解信息。”transient“关键字是一个修饰符，而注解也是一种修饰符。除了传递信息，我们也可以使用注解生成代码。我们可以使用注解，然后让注解解析工具来解析它们，以此来生成一些”模板化“的代码。比如Hibernate、Spring、Axis这些框架大量使用了注解，来避免一些重复的工作。</p>
 <h2 id="Digester解析xml文件"><a href="#Digester解析xml文件" class="headerlink" title="Digester解析xml文件"></a><a href="http://blog.csdn.net/caihaijiang/article/details/5944955" target="_blank" rel="external">Digester解析xml文件</a></h2><p><a href="https://www.ibm.com/developerworks/cn/xml/dm-1208gub/#ibm-pcon" target="_blank" rel="external">Java 处理 XML 的三种主流技术及介绍</a></p>
 <p>DOM 易于上手，程序易于理解，但缺点在于占用内存大，不适合于解析较大的 XML 文件； SAX 基于事件模型占用系统资源少，能够胜任较大的 XML 文件解析，但解析过程较为繁琐查找元素不方便； Digester/JAXB 基于上述两种技术衍生而来。</p>
 <p>Digester 就是一种用来把一个 XML 转化为一个与该 XML 结构类似的 JavaBean。你可以把 XML 根元素想象成一个 JavaBean， 该根元素的 attribute 就是这个 JavaBean 的各种 Field，当该根元素有其他子 tag 时，又要把这个子 tag 想象成一个个新的 XML，将其视为一个新的 JavaBean， 并作为一个 Field 加入到父 Bean 当中，然后以此类推，通过循环的方式将整个 XML 进行解析。</p>

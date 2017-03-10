@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://ipcreator.me/2017/03/09/Program/Windows/auto-git-daily/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…">
-<meta property="og:updated_time" content="2017-03-09T06:04:57.778Z">
+<meta property="og:updated_time" content="2017-03-09T06:34:20.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git automatically">
 <meta name="twitter:description" content="能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…">
@@ -187,7 +187,7 @@
  <a id="more"></a>
  <figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line">@<span class="built_in">title</span> auto update blog articles and git push</div><div class="line"></div><div class="line"><span class="built_in">set</span> fileSource=D:\IPCreatorBlog\source</div><div class="line"><span class="built_in">set</span> fileDestination=C:\IPCreatorBlogGit\blog\source</div><div class="line"><span class="built_in">set</span> gitDir=C:\IPCreatorBlogGit\blog</div><div class="line"></div><div class="line"><span class="built_in">cls</span></div><div class="line"></div><div class="line"><span class="built_in">cd</span> <span class="variable">%fileDestination%</span></div><div class="line"><span class="built_in">rd</span> /s/q <span class="variable">%fileDestination%</span></div><div class="line"><span class="built_in">Xcopy</span> /e <span class="variable">%fileSource%</span> <span class="variable">%fileDestination%</span></div><div class="line"></div><div class="line"><span class="built_in">cd</span> <span class="variable">%gitDir%</span></div><div class="line">git add -v .</div><div class="line">git commit -m "Update blog daily"</div><div class="line">git push</div><div class="line"></div><div class="line"><span class="built_in">pause</span></div></pre></td></tr></table></figure>
 <figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> user<span class="title">@LAPTOP-082RQVIH</span> MINGW<span class="number">64</span> /<span class="keyword">c</span>/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git config --<span class="keyword">global</span> <span class="keyword">alias</span>.blog '<span class="title">!git</span> <span class="keyword">add</span> . &amp;&amp; git commit -m <span class="string">"blog update"</span> &amp;&amp; git push'**                                                                                                                          </div><div class="line">user<span class="title">@LAPTOP-082RQVIH</span> MINGW<span class="number">64</span> /<span class="keyword">c</span>/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git blog**</div><div class="line">On branch master</div><div class="line">Your branch is up-<span class="keyword">to</span>-date with 'origin/master'.</div><div class="line">nothing <span class="keyword">to</span> commit, working tree clean</div></pre></td></tr></table></figure>
-<p> 更多参考：<br> <a href="https://www.zybuluo.com/yangfch3/note/338252" target="_blank" rel="external">Windows批处理(cmd/bat)使用小记</a><br> <a href="http://xstarcd.github.io/wiki/windows/windows_cmd_summary_commands.html" target="_blank" rel="external">批处理常用命令总结 - 批处理命令简介</a><br> <a href="https://segmentfault.com/q/1010000000263597" target="_blank" rel="external">Git批处理脚本</a><br> <a href="https://www.zhihu.com/question/38962022" target="_blank" rel="external">请问如何写一个批处理自动打开 gitbash，然后自动执行一系列git命令（windows平台）？</a></p>
+<p> 更多参考：<br> <a href="https://www.zybuluo.com/yangfch3/note/338252" target="_blank" rel="external">Windows批处理(cmd/bat)使用小记</a><br> <a href="http://xstarcd.github.io/wiki/windows/windows_cmd_summary_commands.html" target="_blank" rel="external">批处理常用命令总结 - 批处理命令简介</a><br> <a href="https://segmentfault.com/q/1010000000263597" target="_blank" rel="external">Git批处理脚本</a><br> <a href="https://www.zhihu.com/question/38962022" target="_blank" rel="external">请问如何写一个批处理自动打开 gitbash，然后自动执行一系列git命令（windows平台）？</a><br> <a href="https://docs.google.com/document/d/1IjrCvTqL3J92DPXNzkCPYRi6Ftb2v6aCbncpxh9ozy4/edit" target="_blank" rel="external">Chrome-启动参数</a></p>
 
       
 
@@ -282,18 +282,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/09/Program/Java/thinking-in-java/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/09/Program/codota-ai-programming/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Thinking in Java
+          codota——find the right code
         
       </div>
     </a>
   
   
-    <a href="/2017/03/08/Program/special-thanks/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Thanks to...</div>
+    <a href="/2017/03/09/Program/Java/thinking-in-java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Thinking in Java</div>
       <i class="icon-circle-right"></i>
     </a>
   
