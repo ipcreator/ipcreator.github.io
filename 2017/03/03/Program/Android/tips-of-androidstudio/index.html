@@ -26,7 +26,7 @@
 <meta property="og:image" content="http://static.codeceo.com/images/2015/11/4e600b142e3e4d86398b7b4db66db33f.gif">
 <meta property="og:image" content="http://static.codeceo.com/images/2015/11/3a824abd46773ba887c577f4cff1ff0c.gif">
 <meta property="og:image" content="http://static.codeceo.com/images/2015/11/2f68ddf53a1e6506c42e84b766ab6005.gif">
-<meta property="og:updated_time" content="2017-03-10T02:07:01.008Z">
+<meta property="og:updated_time" content="2017-03-10T07:42:45.822Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AndroidStudio技巧">
 <meta name="twitter:description" content="提高效率的 Android Studio 技巧汇总
@@ -203,6 +203,8 @@
 <p>工欲善其事必先利其器，磨刀不误砍柴工</p>
  <a id="more"></a>
 <h2 id="使用Gradle设置layout子目录"><a href="#使用Gradle设置layout子目录" class="headerlink" title="使用Gradle设置layout子目录"></a>使用Gradle设置layout子目录</h2><figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">sourceSets &#123;</div><div class="line">    main &#123;</div><div class="line">        jni.srcDirs = [<span class="symbol">'src</span>/main/jni',]</div><div class="line">        res.srcDirs = [<span class="symbol">'src</span>/main/res',</div><div class="line">                       <span class="symbol">'src</span>/main/res/layout/activity',</div><div class="line">                      <span class="symbol">'src</span>/main/res/layout/fragment',</div><div class="line">                       <span class="symbol">'src</span>/main/res/layout/item']</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Ctrl-O"><a href="#Ctrl-O" class="headerlink" title="Ctrl+O"></a>Ctrl+O</h2><p>You may easily override methods of the base class by pressing Ctrl+O (Code | Override Methods).</p>
+<h2 id="Ctrl-I"><a href="#Ctrl-I" class="headerlink" title="Ctrl+I"></a>Ctrl+I</h2><p>To implement methods of the interfaces that the current class implements (or of the abstract base class), use Ctrl+I (Code | Implement methods).</p>
 <h2 id="Android-studio-插件安装"><a href="#Android-studio-插件安装" class="headerlink" title="Android studio 插件安装"></a><a href="http://blog.csdn.net/aaawqqq/article/details/50772720" target="_blank" rel="external">Android studio 插件安装</a></h2><p>安装插件的入口有两个地方:<br>1) Preferences  &gt;  Plugins   选择  Browse repositories 联网安装插件<br>2)启动界面的configure选项  -&gt;  plugins  -&gt; 弹出plugins 菜单</p>
 <h2 id="添加依赖库"><a href="#添加依赖库" class="headerlink" title="添加依赖库"></a>添加依赖库</h2><p>A、在build.Gradle文件中手工添加<br>B、选中工程文件，F4，选择app的Dependencies标签页面，然后+，搜索关键字并下载</p>
 <h2 id="Shift-F6-Refactor-Rename"><a href="#Shift-F6-Refactor-Rename" class="headerlink" title="Shift+F6 (Refactor | Rename)"></a>Shift+F6 (Refactor | Rename)</h2><p>To try it, place the caret at the symbol you want to rename, and press <strong>Shift+F6 (Refactor | Rename)</strong>. Type the new name in the popup window that appears, or select one of the suggested names, and press Enter.</p>

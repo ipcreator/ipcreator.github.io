@@ -1598,13 +1598,15 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
     <link href="http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/"/>
     <id>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</id>
     <published>2017-03-03T00:31:06.000Z</published>
-    <updated>2017-03-10T02:07:01.008Z</updated>
+    <updated>2017-03-10T07:42:45.822Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.codeceo.com/article/android-studio-skills.html" target="_blank" rel="external">提高效率的 Android Studio 技巧汇总</a></p>
 <p><img src="http://static.codeceo.com/images/2015/08/android-studio-logo.png" alt=""></p>
 <p>工欲善其事必先利其器，磨刀不误砍柴工</p>
  <a id="more"></a>
 <h2 id="使用Gradle设置layout子目录"><a href="#使用Gradle设置layout子目录" class="headerlink" title="使用Gradle设置layout子目录"></a>使用Gradle设置layout子目录</h2><figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">sourceSets &#123;</div><div class="line">    main &#123;</div><div class="line">        jni.srcDirs = [<span class="symbol">'src</span>/main/jni',]</div><div class="line">        res.srcDirs = [<span class="symbol">'src</span>/main/res',</div><div class="line">                       <span class="symbol">'src</span>/main/res/layout/activity',</div><div class="line">                      <span class="symbol">'src</span>/main/res/layout/fragment',</div><div class="line">                       <span class="symbol">'src</span>/main/res/layout/item']</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Ctrl-O"><a href="#Ctrl-O" class="headerlink" title="Ctrl+O"></a>Ctrl+O</h2><p>You may easily override methods of the base class by pressing Ctrl+O (Code | Override Methods).</p>
+<h2 id="Ctrl-I"><a href="#Ctrl-I" class="headerlink" title="Ctrl+I"></a>Ctrl+I</h2><p>To implement methods of the interfaces that the current class implements (or of the abstract base class), use Ctrl+I (Code | Implement methods).</p>
 <h2 id="Android-studio-插件安装"><a href="#Android-studio-插件安装" class="headerlink" title="Android studio 插件安装"></a><a href="http://blog.csdn.net/aaawqqq/article/details/50772720" target="_blank" rel="external">Android studio 插件安装</a></h2><p>安装插件的入口有两个地方:<br>1) Preferences  &gt;  Plugins   选择  Browse repositories 联网安装插件<br>2)启动界面的configure选项  -&gt;  plugins  -&gt; 弹出plugins 菜单</p>
 <h2 id="添加依赖库"><a href="#添加依赖库" class="headerlink" title="添加依赖库"></a>添加依赖库</h2><p>A、在build.Gradle文件中手工添加<br>B、选中工程文件，F4，选择app的Dependencies标签页面，然后+，搜索关键字并下载</p>
 <h2 id="Shift-F6-Refactor-Rename"><a href="#Shift-F6-Refactor-Rename" class="headerlink" title="Shift+F6 (Refactor | Rename)"></a>Shift+F6 (Refactor | Rename)</h2><p>To try it, place the caret at the symbol you want to rename, and press <strong>Shift+F6 (Refactor | Rename)</strong>. Type the new name in the popup window that appears, or select one of the suggested names, and press Enter.</p>
@@ -3986,7 +3988,7 @@ public void thisIsSuper() {
     <link href="http://ipcreator.me/2017/02/22/MyView/English/love-words/"/>
     <id>http://ipcreator.me/2017/02/22/MyView/English/love-words/</id>
     <published>2017-02-21T23:44:05.000Z</published>
-    <updated>2017-03-10T02:39:49.622Z</updated>
+    <updated>2017-03-10T06:33:43.687Z</updated>
     
     <content type="html"><![CDATA[<p>图文来源：<a href="http://xue.youdao.com/sw/m/1309029?keyfrom=dict2.index" target="_blank" rel="external">微信号 我爱背单词</a></p>
 <h2 id="predator"><a href="#predator" class="headerlink" title="predator"></a>predator</h2><p>英 [‘predətə]  美 [‘prɛdətɚ]<br>n. [动] 捕食者；[动] 食肉动物；掠夺者</p>
@@ -3998,6 +4000,11 @@ public void thisIsSuper() {
 <p><strong>双语例句</strong><br>Insane pumpkin carving of the Predator.<br>疯狂的南瓜雕刻——食肉动物。</p>
 <p>Some residents and experts said the predator may be a bear, a wayward panther or cougar, or even a wolf because 3-inch paw tracks were found at the scene.<br>一些居民和专家认为这种食肉动物可能是一只熊，一头任性的豹子或狮子，抑或是一头狼，因为在现场发现了3英寸长的爪迹。</p>
 <p>But just like Dutch in Predator before the final battle, you have to be able to answer only one question about your target before you start: where they are.<br>但就像一战之前的荷兰掠夺者一样，在开始工作之前你必须能够回答实现目标的唯一问题：他们在哪里？</p>
+<h2 id="Mipmap"><a href="#Mipmap" class="headerlink" title="Mipmap"></a>Mipmap</h2><p>In 3D computer graphics texture filtering, mipmaps (also MIP maps) are pre-calculated, optimized collections of images that accompany a main texture, intended to increase rendering speed and reduce aliasing artifacts. They are widely used in 3D computer games, flight simulators and other 3D imaging systems.</p>
+<p>MIP来源于拉丁文中的multum in parvo，意为在一个小空间里的多数。MIP map(有时候拼写成mipmap)是一种电脑图形图像技术，用于在三维图像的二维代替物中达到立体感效应。MIP map技术与材质帖图技术结合，根据距观看者远近距离的不同，以不同的分辨率将单一的材质帖图以多重图像的形式表现出来并代表平面纹理：尺寸最大的图像放在前面显著的位置，而相对较小的图像则后退到背景区域。每一个不同的尺寸等级定义成一个MIP map水平。MIP map技术帮助避免了不想要的锯齿边缘（称为锯齿状图形）在图像中出现，这种锯齿状图形可能是由于在不同分辨率下使用bit map图像产生的。</p>
+<h2 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h2><p>是一个基于Apache Ant和Apache Maven概念的项目自动化建构工具。</p>
+<h2 id="constraint"><a href="#constraint" class="headerlink" title="constraint"></a>constraint</h2><p>英 [kən’streɪnt]  美 [kən’strent]<br>n. [数] 约束；局促，态度不自然；强制</p>
+<h2 id="wrapper"><a href="#wrapper" class="headerlink" title="wrapper"></a>wrapper</h2><p>英 [‘ræpə]  美 [‘ræpɚ]<br>n. 包装材料；[包装] 包装纸；书皮</p>
 <h2 id="improper"><a href="#improper" class="headerlink" title="improper"></a>improper</h2><p>英 [ɪm’prɒpə]  美 [ɪm’prɑpɚ]<br>adj. 不正确的，错误的；不适当的；不合礼仪的</p>
 <h2 id="canary"><a href="#canary" class="headerlink" title="canary"></a>canary</h2><p>英 [kə’neərɪ]  美 [kə’nɛri]<br>n. [鸟] 金丝雀；淡黄色<br>n. (Canary)人名；(英)卡纳里<br>[ 复数 canaries ]</p>
 <h2 id="neural"><a href="#neural" class="headerlink" title="neural"></a>neural</h2><p>英 [‘njʊər(ə)l]  美 [‘nʊrəl]<br>adj. 神经的；神经系统的；背的；神经中枢的<br>n. (Neural)人名；(捷)诺伊拉尔</p>
@@ -4030,7 +4037,7 @@ public void thisIsSuper() {
 <p><strong>词根</strong><br>mandate<br>n.<br>mandate 授权；命令，指令；委托管理；受命进行的工作<br>mandatary 受托者；代理人<br>mandator 命令者；委托人，托管人<br>mandamus 命令书；书面训令<br>vt.<br>mandate 授权；托管<br>mandamus 发训令（过去式mandamused，过去分词mandamused，现在分词mandamusing，第三人称单数mandamuses）</p>
 <p><strong>短语</strong><br>mandatory plan 指令性计划 ; 强制性计划 ; 指令性打算 ; 指令性<br>mandatory offer 强制要约 ; 强制性要约 ; 强制性收购建议 ; 强制性收购<br>Mandatory Lock 强制锁 ; 强制性锁 ; 强制性的锁<br>mandatory retention 必须保持 ; 强制保持<br>mandatory rule 法定规范 ; 强制性规则 ; 强制规定 ; 强制性规范<br>MANDATORY FIELD 必选项目 ; 必填字段 ; 必须填写<br>Mandatory insurance 强制保险 ; 政策性保险 ; 法定保险 ; 强制保险<br>Mandatory Prewash 强制预洗<br>mandatory legislation 强迫性法规 ; 强制性法律</p>
 <p><strong>双语例句</strong><br>Not all these interfaces are mandatory.<br>并非所有这些接口都是强制的。</p>
-<h2 id="constraint"><a href="#constraint" class="headerlink" title="constraint"></a>constraint</h2><p>英 [kən’streɪnt]  美 [kən’strent]<br>n. [数] 约束；局促，态度不自然；强制</p>
+<h2 id="constraint-1"><a href="#constraint-1" class="headerlink" title="constraint"></a>constraint</h2><p>英 [kən’streɪnt]  美 [kən’strent]<br>n. [数] 约束；局促，态度不自然；强制</p>
 <p><strong>词根</strong><br> constrain<br>adj.<br>constrained 拘泥的；被强迫的；不舒服的<br>adv.<br>constrainedly 勉强地；强迫地；不自然地<br>v.<br>constrained 驱使；强迫；勉强（constrain的过去分词）<br>vt.<br>constrain 驱使；强迫；束缚</p>
 <p><strong>短语</strong><br>Constraint programming 约束编程 ; 约束编程 ; 约束规划 ; 限制规划<br>Path Constraint 路径约束 ; 路径限制 ; 指定物体沿着或在样条线间运动 ; 同前<br>constraint condition 约束条件 ; 束缚前提 ; 约束前提 ; 束缚条件<br>Orientation Constraint 方位约束 ; 方向约束 ; 方向限制 ; 指定物体的方位与另一物体的方位一致<br>site constraint 地盘限制 ; 工地限制 ; 地盘限制;工地限制<br>contact constraint 接触约束 ; 接触束缚 ; 相接拘束<br>active constraint 有效约束 ; 活动约束 ; 起作用的约束 ; 主动约束<br>internal constraint 内部约束 ; 内约束<br>nonholonomic constraint 不完全约束 ; 非完整约束</p>
 <p><strong>双语例句</strong><br>The boy felt constraint in her presence.<br>那男孩在她面前感到局促不安。</p>
