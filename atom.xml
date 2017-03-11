@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-03-11T08:46:19.901Z</updated>
+  <updated>2017-03-11T14:45:35.207Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>AndroidStudio技巧</title>
+    <title>BMI开发手记</title>
     <link href="http://ipcreator.me/2017/03/11/Program/Android/MyApp/bmi-app/"/>
     <id>http://ipcreator.me/2017/03/11/Program/Android/MyApp/bmi-app/</id>
     <published>2017-03-11T08:07:06.000Z</published>
-    <updated>2017-03-11T08:46:19.901Z</updated>
+    <updated>2017-03-11T14:45:35.207Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/BmiUILayout.PNG" alt=""></p>
 <p><strong>需求</strong><br>计算BMI指数，给出结果及建议，支持网络检索</p>
@@ -1591,7 +1591,7 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
     <link href="http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/"/>
     <id>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</id>
     <published>2017-03-03T00:31:06.000Z</published>
-    <updated>2017-03-11T02:15:51.297Z</updated>
+    <updated>2017-03-11T13:05:25.985Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.codeceo.com/article/android-studio-skills.html" target="_blank" rel="external">提高效率的 Android Studio 技巧汇总</a></p>
 <p><img src="http://static.codeceo.com/images/2015/08/android-studio-logo.png" alt=""></p>
@@ -1601,6 +1601,7 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
 <p> ctrl+number-minus 代码折叠<br> ctrl+number-plus代码展开<br> ctrl+shift+minus折叠窗口内所有代码<br> ctrl+shift+plus展开窗口内所有代码</p>
 <p> ctrl+o复写方法<br> ctrl+alt+o清除无效包引用<br> ctrl+alt+l 格式化代码</p>
 <p> ctrl+shift+backspace 返回上次编辑点</p>
+<p> Using <strong>Alt+Insert</strong> (Code | Generate) in the editor, you can easily generate getter and setter methods for any fields of your class.</p>
 <h2 id="使用Gradle设置layout子目录"><a href="#使用Gradle设置layout子目录" class="headerlink" title="使用Gradle设置layout子目录"></a>使用Gradle设置layout子目录</h2><figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">sourceSets &#123;</div><div class="line">    main &#123;</div><div class="line">        jni.srcDirs = [<span class="symbol">'src</span>/main/jni',]</div><div class="line">        res.srcDirs = [<span class="symbol">'src</span>/main/res',</div><div class="line">                       <span class="symbol">'src</span>/main/res/layout/activity',</div><div class="line">                      <span class="symbol">'src</span>/main/res/layout/fragment',</div><div class="line">                       <span class="symbol">'src</span>/main/res/layout/item']</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Ctrl-Shift-Space"><a href="#Ctrl-Shift-Space" class="headerlink" title="Ctrl+Shift+Space"></a>Ctrl+Shift+Space</h2><p>The SmartType code completion greatly helps to find methods and variables that are suitable in the current context, by analyzing the expected type of the whole expression. So doing, Android Studio pinpoints the top five most suitable results and highlights them on the blue background. For example, type</p>
 <p>and press <strong>Ctrl+Shift+Space</strong>:</p>
@@ -4729,7 +4730,7 @@ public void thisIsSuper() {
     <link href="http://ipcreator.me/2017/02/20/Program/my-views-of-learning-program/"/>
     <id>http://ipcreator.me/2017/02/20/Program/my-views-of-learning-program/</id>
     <published>2017-02-20T03:28:06.000Z</published>
-    <updated>2017-03-11T01:12:50.583Z</updated>
+    <updated>2017-03-11T13:05:21.263Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/Hello%20World%20Program%20in%20Eight%20Different%20Popular%20Programming%20Languages.jpg" alt=""></p>
 <p>作者：<a href="http://ipcreator.me">IPCreator</a></p>
@@ -4762,6 +4763,7 @@ public void thisIsSuper() {
 <p>他是如此相信自己，以至于别人不得不相信他——艾伦艾弗森</p>
 <p>大脑中的否定消极的情绪，就如肚子里的大便，一定要及时清理出去，否则只会有百害而无一益。——IPCreator</p>
 <p>这个单词/句子是什么意思？<br>为什么取这个名字，内涵是什么？<br>静态解读<br>动态调试<br>日志输出<br>别人的分析<br>自己的使用，用起来…学以致用，边学边用</p>
+<p>有这样的恒心和决心，何愁事情不成</p>
 <blockquote>
 <p>Dreams cann’t measured by S/A/B/C/D degree、money and position.<br>Great mind thinks alike.<br>RTFC Read the fucking code.<br>RTFM Read the fucking manual.<br>STFW Search the fucking Web.<br>Read  the article word by word.<br>Code can talk, let the code talk.<br>A good name tells the truth.<br>Keep code  simple and reusable.<br>Keep hungry, Keep foolish.<br>Keep healthy and sustainable.<br>Less  is  more, slow is quick.<br>Don’t Reinvent the Wheel.<br>Use is the best way of learning English , so is programming.<br>Master the essence of  things, including languages (English/C/C++/JAVA/PYTHON/JS…)，<br>platforms(Arena/Android/Tensor…)，tools(gcc/make/gradle/git…),etc<br>We make good habits first, then habits make us.<br>Success is a habit, so is happiness.</p>
 </blockquote>

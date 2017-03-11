@@ -26,7 +26,7 @@
 <meta property="og:image" content="http://static.codeceo.com/images/2015/11/4e600b142e3e4d86398b7b4db66db33f.gif">
 <meta property="og:image" content="http://static.codeceo.com/images/2015/11/3a824abd46773ba887c577f4cff1ff0c.gif">
 <meta property="og:image" content="http://static.codeceo.com/images/2015/11/2f68ddf53a1e6506c42e84b766ab6005.gif">
-<meta property="og:updated_time" content="2017-03-11T02:15:51.297Z">
+<meta property="og:updated_time" content="2017-03-11T13:05:25.985Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AndroidStudio技巧">
 <meta name="twitter:description" content="提高效率的 Android Studio 技巧汇总
@@ -206,6 +206,7 @@
 <p> ctrl+number-minus 代码折叠<br> ctrl+number-plus代码展开<br> ctrl+shift+minus折叠窗口内所有代码<br> ctrl+shift+plus展开窗口内所有代码</p>
 <p> ctrl+o复写方法<br> ctrl+alt+o清除无效包引用<br> ctrl+alt+l 格式化代码</p>
 <p> ctrl+shift+backspace 返回上次编辑点</p>
+<p> Using <strong>Alt+Insert</strong> (Code | Generate) in the editor, you can easily generate getter and setter methods for any fields of your class.</p>
 <h2 id="使用Gradle设置layout子目录"><a href="#使用Gradle设置layout子目录" class="headerlink" title="使用Gradle设置layout子目录"></a>使用Gradle设置layout子目录</h2><figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">sourceSets &#123;</div><div class="line">    main &#123;</div><div class="line">        jni.srcDirs = [<span class="symbol">'src</span>/main/jni',]</div><div class="line">        res.srcDirs = [<span class="symbol">'src</span>/main/res',</div><div class="line">                       <span class="symbol">'src</span>/main/res/layout/activity',</div><div class="line">                      <span class="symbol">'src</span>/main/res/layout/fragment',</div><div class="line">                       <span class="symbol">'src</span>/main/res/layout/item']</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Ctrl-Shift-Space"><a href="#Ctrl-Shift-Space" class="headerlink" title="Ctrl+Shift+Space"></a>Ctrl+Shift+Space</h2><p>The SmartType code completion greatly helps to find methods and variables that are suitable in the current context, by analyzing the expected type of the whole expression. So doing, Android Studio pinpoints the top five most suitable results and highlights them on the blue background. For example, type</p>
 <p>and press <strong>Ctrl+Shift+Space</strong>:</p>
