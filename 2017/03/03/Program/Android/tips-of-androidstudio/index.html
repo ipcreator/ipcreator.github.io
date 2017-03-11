@@ -26,7 +26,7 @@
 <meta property="og:image" content="http://static.codeceo.com/images/2015/11/4e600b142e3e4d86398b7b4db66db33f.gif">
 <meta property="og:image" content="http://static.codeceo.com/images/2015/11/3a824abd46773ba887c577f4cff1ff0c.gif">
 <meta property="og:image" content="http://static.codeceo.com/images/2015/11/2f68ddf53a1e6506c42e84b766ab6005.gif">
-<meta property="og:updated_time" content="2017-03-10T07:42:45.822Z">
+<meta property="og:updated_time" content="2017-03-11T02:15:51.297Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AndroidStudio技巧">
 <meta name="twitter:description" content="提高效率的 Android Studio 技巧汇总
@@ -202,23 +202,27 @@
 <p><img src="http://static.codeceo.com/images/2015/08/android-studio-logo.png" alt=""></p>
 <p>工欲善其事必先利其器，磨刀不误砍柴工</p>
  <a id="more"></a>
+<p> ctrl+/ 注释一行代码<br> ctrl+shift+/注释代码块<br> ctrl+b查看声明<br> ctrl+f查找<br> ctrl+r替换<br> ctrl+shif+f 全路径查找<br> ctrl+shift+r 全路径替换</p>
+<p> ctrl+number-minus 代码折叠<br> ctrl+number-plus代码展开<br> ctrl+shift+minus折叠窗口内所有代码<br> ctrl+shift+plus展开窗口内所有代码</p>
+<p> ctrl+o复写方法<br> ctrl+alt+o清除无效包引用<br> ctrl+alt+l 格式化代码</p>
+<p> ctrl+shift+backspace 返回上次编辑点</p>
 <h2 id="使用Gradle设置layout子目录"><a href="#使用Gradle设置layout子目录" class="headerlink" title="使用Gradle设置layout子目录"></a>使用Gradle设置layout子目录</h2><figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">sourceSets &#123;</div><div class="line">    main &#123;</div><div class="line">        jni.srcDirs = [<span class="symbol">'src</span>/main/jni',]</div><div class="line">        res.srcDirs = [<span class="symbol">'src</span>/main/res',</div><div class="line">                       <span class="symbol">'src</span>/main/res/layout/activity',</div><div class="line">                      <span class="symbol">'src</span>/main/res/layout/fragment',</div><div class="line">                       <span class="symbol">'src</span>/main/res/layout/item']</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Ctrl-Shift-Space"><a href="#Ctrl-Shift-Space" class="headerlink" title="Ctrl+Shift+Space"></a>Ctrl+Shift+Space</h2><p>The SmartType code completion greatly helps to find methods and variables that are suitable in the current context, by analyzing the expected type of the whole expression. So doing, Android Studio pinpoints the top five most suitable results and highlights them on the blue background. For example, type</p>
+<p>and press <strong>Ctrl+Shift+Space</strong>:</p>
+<p>The SmartType completion also works after the return keyword, in an assignment, in an argument list of a method call and other places.</p>
 <h2 id="Ctrl-O"><a href="#Ctrl-O" class="headerlink" title="Ctrl+O"></a>Ctrl+O</h2><p>You may easily override methods of the base class by pressing Ctrl+O (Code | Override Methods).</p>
 <h2 id="Ctrl-I"><a href="#Ctrl-I" class="headerlink" title="Ctrl+I"></a>Ctrl+I</h2><p>To implement methods of the interfaces that the current class implements (or of the abstract base class), use Ctrl+I (Code | Implement methods).</p>
 <h2 id="Android-studio-插件安装"><a href="#Android-studio-插件安装" class="headerlink" title="Android studio 插件安装"></a><a href="http://blog.csdn.net/aaawqqq/article/details/50772720" target="_blank" rel="external">Android studio 插件安装</a></h2><p>安装插件的入口有两个地方:<br>1) Preferences  &gt;  Plugins   选择  Browse repositories 联网安装插件<br>2)启动界面的configure选项  -&gt;  plugins  -&gt; 弹出plugins 菜单</p>
 <h2 id="添加依赖库"><a href="#添加依赖库" class="headerlink" title="添加依赖库"></a>添加依赖库</h2><p>A、在build.Gradle文件中手工添加<br>B、选中工程文件，F4，选择app的Dependencies标签页面，然后+，搜索关键字并下载</p>
 <h2 id="Shift-F6-Refactor-Rename"><a href="#Shift-F6-Refactor-Rename" class="headerlink" title="Shift+F6 (Refactor | Rename)"></a>Shift+F6 (Refactor | Rename)</h2><p>To try it, place the caret at the symbol you want to rename, and press <strong>Shift+F6 (Refactor | Rename)</strong>. Type the new name in the popup window that appears, or select one of the suggested names, and press Enter.</p>
 <h2 id="Enter和Tab在代码提示时的区别"><a href="#Enter和Tab在代码提示时的区别" class="headerlink" title="Enter和Tab在代码提示时的区别"></a>Enter和Tab在代码提示时的区别</h2><p> 看图!<br> <img src="http://static.codeceo.com/images/2015/11/0ff1495a69e7f791a6f664f279016617.gif" alt=""></p>
+<p> When using Code Completion, you can accept the currently highlighted selection in the popup list with Tab key.<br>Unlike accepting with the Enter key, the selected name will overwrite the rest of the name to the right of the caret. This can be especially useful for replacing one method or variable name with another.</p>
 <h2 id="Bookmarks"><a href="#Bookmarks" class="headerlink" title="Bookmarks!"></a>Bookmarks!</h2><p>如其名，书签。帮助快速回到指定的位置，实际使用中简直爽得不行。</p>
 <p><strong>f11</strong></p>
 <p>将当前位置添加到书签中或者从书签中移除。</p>
 <p><strong>shift+f11</strong></p>
 <p>显示有哪些书签。</p>
 <p><img src="http://static.codeceo.com/images/2015/11/6d48930da07ca6c8858aad67e9be48c1.gif" alt=""></p>
-<p>ctrl+/ 注释一行代码<br>ctrl+shift+/注释代码块<br>ctrl+b查看声明<br>ctrl+f查找<br>ctrl+r替换<br>ctrl+shif+f 全路径查找<br>ctrl+shift+r 全路径替换</p>
-<p>ctrl+number-minus 代码折叠<br>ctrl+number-plus代码展开<br>ctrl+shift+minus折叠窗口内所有代码<br>ctrl+shift+plus展开窗口内所有代码</p>
-<p>ctrl+o复写方法<br>ctrl+alt+o清除无效包引用</p>
-<p>ctrl+alt+l 格式化代码</p>
 <p><strong>ctrl + h</strong><br>显示大纲</p>
 <h2 id="The-File-Structure-Popup"><a href="#The-File-Structure-Popup" class="headerlink" title="The File Structure Popup"></a>The File Structure Popup</h2><p><strong>ctrl+f12</strong></p>
 <p>此快捷键可以调出当前文件的大纲，并通过模糊匹配快速跳转至指定的方法。<br>勾选上“show anonymous classes”后其功能相当于Eclipse中的ctrl+o</p>
@@ -330,18 +334,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/03/Program/Concepts/how-to-write-singe-instance/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/03/Program/Android/MyApp/my-favor-music-player/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          如何正确地写出单例模式
+          RollPlayer
         
       </div>
     </a>
   
   
-    <a href="/2017/03/02/Program/Concepts/history-of-open-source/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">开源软件及国内发展现状</div>
+    <a href="/2017/03/03/Program/Concepts/how-to-write-singe-instance/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何正确地写出单例模式</div>
       <i class="icon-circle-right"></i>
     </a>
   

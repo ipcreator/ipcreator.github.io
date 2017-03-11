@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="咖啡需要慢慢品，Java也如此…">
 <meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/JAVA.jpg">
-<meta property="og:updated_time" content="2017-03-09T13:26:49.648Z">
+<meta property="og:updated_time" content="2017-03-10T14:16:54.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java tips">
 <meta name="twitter:description" content="咖啡需要慢慢品，Java也如此…">
@@ -188,6 +188,11 @@
         <p><img src="http://om8nmvpn9.bkt.clouddn.com/JAVA.jpg" alt=""></p>
 <p>咖啡需要慢慢品，Java也如此…</p>
  <a id="more"></a>
+<h2 id="Java字符串验证"><a href="#Java字符串验证" class="headerlink" title="Java字符串验证"></a>Java字符串验证</h2><p><a href="http://www.cnblogs.com/lbangel/p/3247440.html" target="_blank" rel="external">java常见验证邮箱、电话号码、日期等格式</a></p>
+<h2 id="Java字符串操作"><a href="#Java字符串操作" class="headerlink" title="Java字符串操作"></a>Java字符串操作</h2><p><a href="http://www.cnblogs.com/freeabyss/archive/2013/05/15/3187057.html" target="_blank" rel="external">Java 字符串常用操作（String类）</a><br><a href="http://decentway.iteye.com/blog/1336904" target="_blank" rel="external">java字符串处理（分割截取替换等）</a><br><a href="http://mxdxm.iteye.com/blog/1071208" target="_blank" rel="external">java中去掉字符串中间的空格</a></p>
+<h2 id="去空格"><a href="#去空格" class="headerlink" title="去空格"></a>去空格</h2><p> 比如 时间字符串，去掉‘-’，‘：’，与空格<br>  String x = “2008-09-08 11:12:23”;<br>  x=x.replace(‘-‘, ‘ ‘).replace(‘:’, ‘ ‘).replaceAll(“ “,””);</p>
+<h2 id="用正则表达式"><a href="#用正则表达式" class="headerlink" title="用正则表达式"></a>用正则表达式</h2><p><a href="http://decentway.iteye.com/blog/1336904" target="_blank" rel="external">java字符串处理（分割截取替换等）</a><br><a href="http://www.cnblogs.com/freeabyss/archive/2013/05/15/3187057.html" target="_blank" rel="external">Java 字符串常用操作（String类）</a></p>
+<p>输出：20080908111223</p>
 <h2 id="Java核心技术点之注解"><a href="#Java核心技术点之注解" class="headerlink" title="Java核心技术点之注解"></a><a href="http://www.importnew.com/23816.html" target="_blank" rel="external">Java核心技术点之注解</a></h2><p> 关于注解有点我们需要明确的是，作为描述代码本身的一种元数据，注解是一种”被动“的信息。也就是说，必须由编译器或虚拟机来“主动”解析它，它才能发挥自己的作用。</p>
 <p> 注解是描述Java代码的代码，它能够被编译器解析，注解处理工具在运行时也能够解析注解。我们在Java源文件中使用注释，是为了以后我们或他人再来读这段代码时，能够更好地理解它。Javadoc工具可以解析我们在源代码中为类、方法、变量等添加的描述信息，并根据这些描述信息自动生成一个HTML文档，这些自动生成的文档即可作为API帮助文档。只要我们为类、方法等添加的描述信息符合Javadoc要求的语法，我们就能够使用Javadoc工具根据我们的描述信息自动生成一个帮助文档。而注解比java注释和Javadoc要强大得多，它们三者之间的重大的区别在于，Java注释和Javadoc描述所发挥的作用仅仅到编译时就止步了，而注解直到运行时都能够发挥作用。</p>
 <p>我们知道，使用“transient”关键字可以告诉编译器这个域不可序列化。相比于用”transient“这样的关键字修饰一个属性，注解为我们提供了为类/方法/属性/变量添加描述信息的更通用的方式，而这些描述信息对于开发者、自动化工具、Java编译器和Java运行时来说都是有意义的，也就是说他们都能“读懂”注解信息。”transient“关键字是一个修饰符，而注解也是一种修饰符。除了传递信息，我们也可以使用注解生成代码。我们可以使用注解，然后让注解解析工具来解析它们，以此来生成一些”模板化“的代码。比如Hibernate、Spring、Axis这些框架大量使用了注解，来避免一些重复的工作。</p>

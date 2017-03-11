@@ -6,20 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ipcreator.me">
-  <title>RollPlayer | IPCreator</title>
+  <title>AndroidStudio技巧 | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.">
+  <meta name="description" content="需求计算BMI指数，给出结果及建议，支持网络检索
+技术要点1、基于ConstraintLayout可视化设计UI界面2、SeekBar、FloatingActionButton、WebView控件的使用3、注意合理使用float数据类型4、逻辑控制，支持数据联动和动态显示隐藏效果5、长文本字符串的定义显示及相关注意事项">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RollPlayer">
-<meta property="og:url" content="http://ipcreator.me/2017/03/03/Program/Android/my-favor-music-player/index.html">
+<meta property="og:title" content="AndroidStudio技巧">
+<meta property="og:url" content="http://ipcreator.me/2017/03/11/Program/Android/MyApp/bmi-app/index.html">
 <meta property="og:site_name" content="IPCreator">
-<meta property="og:description" content="做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.">
-<meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/music.png">
-<meta property="og:updated_time" content="2017-03-03T12:30:30.261Z">
+<meta property="og:description" content="需求计算BMI指数，给出结果及建议，支持网络检索
+技术要点1、基于ConstraintLayout可视化设计UI界面2、SeekBar、FloatingActionButton、WebView控件的使用3、注意合理使用float数据类型4、逻辑控制，支持数据联动和动态显示隐藏效果5、长文本字符串的定义显示及相关注意事项">
+<meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/BmiUILayout.PNG">
+<meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/first.png">
+<meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/searchweb.png">
+<meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/dynamic.png">
+<meta property="og:updated_time" content="2017-03-11T08:46:19.901Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RollPlayer">
-<meta name="twitter:description" content="做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.">
-<meta name="twitter:image" content="http://om8nmvpn9.bkt.clouddn.com/music.png">
+<meta name="twitter:title" content="AndroidStudio技巧">
+<meta name="twitter:description" content="需求计算BMI指数，给出结果及建议，支持网络检索
+技术要点1、基于ConstraintLayout可视化设计UI界面2、SeekBar、FloatingActionButton、WebView控件的使用3、注意合理使用float数据类型4、逻辑控制，支持数据联动和动态显示隐藏效果5、长文本字符串的定义显示及相关注意事项">
+<meta name="twitter:image" content="http://om8nmvpn9.bkt.clouddn.com/BmiUILayout.PNG">
   
   
     <link rel="icon" href="/img/personalphoto.jpg">
@@ -165,30 +171,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Program/Android/my-favor-music-player" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Program/Android/MyApp/bmi-app" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      RollPlayer
+      AndroidStudio技巧
     </h1>
   
 
         
-        <a href="/2017/03/03/Program/Android/my-favor-music-player/" class="archive-article-date">
-  	<time datetime="2017-03-03T01:42:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
+        <a href="/2017/03/11/Program/Android/MyApp/bmi-app/" class="archive-article-date">
+  	<time datetime="2017-03-11T08:07:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://om8nmvpn9.bkt.clouddn.com/music.png" alt=""></p>
-<p>做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.</p>
+        <p><img src="http://om8nmvpn9.bkt.clouddn.com/BmiUILayout.PNG" alt=""></p>
+<p><strong>需求</strong><br>计算BMI指数，给出结果及建议，支持网络检索</p>
+<p><strong>技术要点</strong><br>1、基于ConstraintLayout可视化设计UI界面<br>2、SeekBar、FloatingActionButton、WebView控件的使用<br>3、注意合理使用float数据类型<br>4、逻辑控制，支持数据联动和动态显示隐藏效果<br>5、长文本字符串的定义显示及相关注意事项</p>
  <a id="more"></a>
-<h2 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h2><p>功能要求：一个窗口，一个目录，一些自己喜欢的歌曲，随机选择歌曲，支持单曲循环播放，支持歌词显示；<br>应用场景：徒步、登山、坐享时使用。</p>
+<p>效果演示图一：<br><img src="http://om8nmvpn9.bkt.clouddn.com/first.png" alt=""><br>效果演示图二：<br><img src="http://om8nmvpn9.bkt.clouddn.com/searchweb.png" alt=""><br>效果演示图三：<br><img src="http://om8nmvpn9.bkt.clouddn.com/dynamic.png" alt=""></p>
+<h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2><p>1、WebView和TextView控件动态显示和隐藏<br>在可视化设计时，先设计好一个，然后将其visibility属性设为GONE，之后再设计另一个；</p>
+<p>2、在定好大致框架后，善于利用ConstraintLayout的Inference功能，减少工作量的同时，避免所见非所得情况的发生；</p>
+<p>3、在定义字符串文本时，引入了%符号，需要设置相应的属性或者“用%%来表示1个%，和转意符号的用法相同；或者%前加转义\”，否则编译报错。</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="type">string</span> name=<span class="string">"bmi_fat_hint"</span> **formatted=<span class="string">"false"</span>**&gt;</div><div class="line">        <span class="string">"<span class="subst">\n</span><span class="subst">\n</span><span class="subst">\n</span>过重：25-28<span class="subst">\n</span><span class="subst">\n</span>"</span></div><div class="line">        <span class="string">"多动，选择有氧运动，有氧运动，是指那些以增强人体吸入、输送氧气以及与使用氧气能力为目的的耐久性运动。<span class="subst">\n</span><span class="subst">\n</span>"</span></div><div class="line">        <span class="string">"有氧锻炼中，心率要达到“有效心率阈值”，并在这个区域保持20分钟以上时，才是最适合消耗脂肪的运动方式。<span class="subst">\n</span><span class="subst">\n</span>"</span></div><div class="line">        <span class="string">"有效心率是指锻炼者达到本人最高心率(最大心率=220－年龄)60%-85%的心率范围。如一个40岁的人其最高心率为220－40=180，其有氧心率阈值为108-153次/分钟。<span class="subst">\n</span><span class="subst">\n</span>"</span></div><div class="line">        <span class="string">"建议进行有氧锻炼时每周进行5次，每次20-30分钟。练习的次数更多时，其效果并不十分明显。<span class="subst">\n</span><span class="subst">\n</span>"</span></div><div class="line">        <span class="string">"有氧运动的方式包括跑步、快步走、有节奏地骑自行车、游泳、爬山、上楼梯、做健身操、扭秧歌、跳健身舞等较长时间的耐力性运动。"</span></div><div class="line">    &lt;/<span class="type">string</span>&gt;</div></pre></td></tr></table></figure>
+<h2 id="参考阅读"><a href="#参考阅读" class="headerlink" title="参考阅读"></a>参考阅读</h2><p><a href="http://baike.baidu.com/link?url=0ygiXzU86jP3aeueTP6sc0CowQtP_X_rSRbm-c-cdiE0I3M32x-uSeJZv-wUZr9rSVtCT05cIPYmb68XjPXCn5uk1n-pgk7KgJuPfbscKRK" target="_blank" rel="external">BMI指数</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/53122387" target="_blank" rel="external">Android新特性介绍，ConstraintLayout完全解析</a><br><a href="http://blog.csdn.net/jiayou8809/article/details/7394784" target="_blank" rel="external">Android工程编译出现Multiple substitutions specified in non-positional format错误的分析</a><br><a href="http://blog.csdn.net/ganggang1st/article/details/6804086" target="_blank" rel="external">strings.xml文件中提供占位符来格式化数据</a><br><a href="http://www.myexception.cn/android/1995688.html" target="_blank" rel="external">android自定义Seekbar您还将你的拖动数值显示在旁边固定的TextView上么</a><br><a href="http://www.cnblogs.com/xmu-chenming/p/5790621.html" target="_blank" rel="external">【Android学习】android布局中几个距离单位的区别：px、dp、sp</a><br><a href="https://zhidao.baidu.com/question/264201411035450085.html" target="_blank" rel="external">Android的px，dp和sp等单位的区别详解</a></p>
 
       
 
@@ -269,7 +281,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACt0lEQVR42u3aQXLCQAwEwPz/0+QBYDOSVpBUtU9UQtnbe7DErH5+4usRXFffv//78+er7zzf7diFh4eHd3TpV4u4X1zyl6vl3m9NvmY8PDy8bd7VY3qv5ioyKQlX2/rGgoeHh/cHeL2G+B6WlA08PDy8/8jLl5hHEveMJMLAw8PD+xZv0tr2IoxeBLyYteDh4eHFvF648N3PK+d7eHh4eIcGAk7FB/khWa8YvFgJHh4e3gJvPhZwNp6owqKoAg8PD+8oL/kZP3nMqcGC3mAWHh4e3gav+mquRhVJMlAdzOoNgeHh4eFt8JIstLc181C4d1yHh4eHt8GrHr3nzXeyrF6BKdwTDw8Pb41XjQny//Zi4moYgYeHh/d5XvLV3uPz4DU/PCsUJDw8PLwFXjUwPTVWNW/Kj/1uwMPDwzvEqx7551tTbdDz0YE3M2V4eHh4h3j3L+u8yT41UnD/3HJ4gYeHh7fA67W81Vi2OqAwDz7w8PDw9ni9GKIXvFYLSbXMXLbUeHh4eGu8ajCRt7/V9r3X7r9YCR4eHt4CL/+R34sJ8qOy6rFZ/jMADw8Pb4OXj0wl7W9v0Xn8UY2S8fDw8DZ4vbhhUgzmw1j5duPh4eHt8Sbtby9ynRxuFQoMHh4e3lFeHtT24tfqoEA+8hW11Hh4eHgLvLyR7UW61ftU79xsqfHw8PAGvGoQUI1fyzvdevW/mYzAw8PDO8qrHvxXY4jeQntNf3kyAg8PD6/FexSvKnUSPUziCTw8PLw9Xn71ooHqOEI+iJA393h4eHgbvF4xyB9Wfekn7X6Ox8PDw9vjTYYGkgAi2ZTyWMBkPgIPDw/vI7z5cFUS4PaKypvEBQ8PD+9LvEkDXWiCB6XoQN3Dw8PDK0a0SRhx7JVdRFa3GA8PD2+PNykek+OxSfSQbA0eHh7eAu8XWp9pzpqXI2kAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aQW7DMAwEwPz/0y3QU3OIsSSVoqHHJ8NJbI0DLERRj0d8fP0cv89fXUk+vf7V7+8cPjAwMD6Wkdzu+jHJleqzylQMDIwbMJKQfRW4VUD+CgpPwcDAwLgcRB6L+X0wMDAwTjF6U8NkyoiBgYFxtrDMwze//xtrcQwMjA9k9BoDf3P+9v4GBgbGv2dMIvJs+E5GhYGBsZuRT/uut1lcl7L5QJPNHFEtjoGBsYiRlIV563HSTqg2NTEwMO7DSIaVVI75lVOLaxgYGBj5tCyZe/ZiN399GBgYd2P0FtcOLJYFU8MIjIGBsY7RW5+bLPT3Bl34BzAwMNYxJluv5lslqst8hdjFwMBYx5iXmvkj80W0fOqJgYGxm1HdNlGdVuYDqrYwn84xMDBWM5INDb2ozTdk9Bqlj3zGioGBsYLR2xIxKW6rpXIU4hgYGKsZedlZXZ6rxvHhWhwDA2MFoxBkxe5hcv06iMv/AAYGxmpG9ce97RT5r5IgfvoOBgbGakZegubLcNVGZhLl1dIXAwNjEyNf+q9OAXvfTF7Wy04sBgbGUsao59lqQE4K5qixioGBsY7xVTySm843XlRbFBgYGLsZ1bCbxGu+fNbDY2Bg7GacKiwnzcte4GJgYNyNUY3FPJqrWyuatTgGBgZGMZQnE8ckxA8ELgYGxlJGdbk/n2j2RoWBgXE3xiRMe6+ghylsDsPAwFjEmAwrLzjzOD5b+mJgYHw44xsjAhQZHVyi+AAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 
@@ -283,18 +295,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/04/Program/Android/android_signature_v1_and_v2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          APK Signature Scheme v2
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/03/Program/Concepts/how-to-write-singe-instance/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">如何正确地写出单例模式</div>
+    <a href="/2017/03/10/Program/Java/ram-of-java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JVM内存的那些事</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -308,7 +311,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Program/Android/my-favor-music-player" data-title="RollPlayer" data-url="http://ipcreator.me/2017/03/03/Program/Android/my-favor-music-player/"></div>
+	<div class="ds-thread" data-thread-key="Program/Android/MyApp/bmi-app" data-title="AndroidStudio技巧" data-url="http://ipcreator.me/2017/03/11/Program/Android/MyApp/bmi-app/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
