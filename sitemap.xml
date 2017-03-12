@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/03/12/Program/Java/anatomy-of-java-design-pattern/</loc>
+    
+    <lastmod>2017-03-12T11:45:25.647Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/12/MyView/Movie/ordinary-life/</loc>
+    
+    <lastmod>2017-03-12T11:18:37.806Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/20/Program/my-views-of-learning-program/</loc>
     
     <lastmod>2017-03-12T01:41:34.680Z</lastmod>
@@ -667,14 +681,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -688,23 +695,23 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ai-on-terminal-of-google/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
   </url>
   
@@ -723,6 +730,13 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ai-on-terminal-of-google/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
@@ -730,14 +744,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
