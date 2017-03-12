@@ -4,6 +4,86 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/20/Program/my-views-of-learning-program/</loc>
+    <lastmod>2017-03-12T01:41:34.680Z</lastmod>
+    <data>
+        <display>
+        <title>Coding心得</title>
+        <pubTime>2017-02-20T03:28:06.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/12/Program/Android/best-practice-of-android-dev/</loc>
+    <lastmod>2017-03-12T01:41:09.140Z</lastmod>
+    <data>
+        <display>
+        <title>Android之路</title>
+        <pubTime>2017-03-12T01:23:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/12/Program/Android/resolve-memory-leak/</loc>
+    <lastmod>2017-03-12T00:12:39.887Z</lastmod>
+    <data>
+        <display>
+        <title>分析解决内存泄漏问题</title>
+        <pubTime>2017-03-11T23:07:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/01/06/MyView/my-view-of-growing-up/</loc>
+    <lastmod>2017-03-11T23:06:37.530Z</lastmod>
+    <data>
+        <display>
+        <title>成长之我见</title>
+        <pubTime>2017-01-06T05:53:18.000Z</pubTime>
+        
+        <tag>Growing Up</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/03/11/Program/Android/MyApp/bmi-app/</loc>
     <lastmod>2017-03-11T14:45:35.207Z</lastmod>
     <data>
@@ -32,26 +112,6 @@
         <pubTime>2017-03-03T00:31:06.000Z</pubTime>
         
         <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/20/Program/my-views-of-learning-program/</loc>
-    <lastmod>2017-03-11T13:05:21.263Z</lastmod>
-    <data>
-        <display>
-        <title>Coding心得</title>
-        <pubTime>2017-02-20T03:28:06.000Z</pubTime>
-        
-        <tag>Programming</tag>
          
          
            
@@ -372,26 +432,6 @@
         <display>
         <title>欢迎访问我的个人博客</title>
         <pubTime>2016-12-30T16:01:06.000Z</pubTime>
-        
-        <tag>Growing Up</tag>
-         
-         
-           
-             
-              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/01/06/MyView/my-view-of-growing-up/</loc>
-    <lastmod>2017-03-09T03:13:38.411Z</lastmod>
-    <data>
-        <display>
-        <title>成长之我见</title>
-        <pubTime>2017-01-06T05:53:18.000Z</pubTime>
         
         <tag>Growing Up</tag>
          
@@ -1906,6 +1946,32 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/</loc>
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    <data>
+        <display>
+        <title>25个Java机器学习工具&库</title>
+        <pubTime>2017-02-19T15:50:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
+         
+        <tag>Open Source</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</loc>
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
@@ -1952,13 +2018,15 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
         <display>
-        <title>Awesome Deep Learning</title>
-        <pubTime>2017-02-19T15:56:00.000Z</pubTime>
+        <title>深度学习框架太抽象？其实不外乎这五大核心组件</title>
+        <pubTime>2017-02-19T15:57:20.000Z</pubTime>
         
+        <tag>AI</tag>
+         
         <tag>Deep Learning</tag>
          
          
@@ -1972,41 +2040,13 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/</loc>
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
         <display>
-        <title>25个Java机器学习工具&库</title>
-        <pubTime>2017-02-19T15:50:06.000Z</pubTime>
+        <title>Awesome Deep Learning</title>
+        <pubTime>2017-02-19T15:56:00.000Z</pubTime>
         
-        <tag>AI</tag>
-         
-        <tag>Machine Learning</tag>
-         
-        <tag>Open Source</tag>
-         
-        <tag>Java</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    <data>
-        <display>
-        <title>深度学习框架太抽象？其实不外乎这五大核心组件</title>
-        <pubTime>2017-02-19T15:57:20.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
         <tag>Deep Learning</tag>
          
          
@@ -2044,16 +2084,14 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     <data>
         <display>
-        <title>智能手机 + 机器学习 = 个人终端的未来</title>
-        <pubTime>2017-02-19T15:58:06.000Z</pubTime>
+        <title>技术大牛带你走向机器学习“正道”</title>
+        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
         
         <tag>AI</tag>
-         
-        <tag>Smart Phone</tag>
          
         <tag>Machine Learning</tag>
          
@@ -2068,14 +2106,16 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     <data>
         <display>
-        <title>技术大牛带你走向机器学习“正道”</title>
-        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
+        <title>智能手机 + 机器学习 = 个人终端的未来</title>
+        <pubTime>2017-02-19T15:58:06.000Z</pubTime>
         
         <tag>AI</tag>
+         
+        <tag>Smart Phone</tag>
          
         <tag>Machine Learning</tag>
          

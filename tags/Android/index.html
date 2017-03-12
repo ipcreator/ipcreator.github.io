@@ -164,6 +164,163 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Program/Android/best-practice-of-android-dev" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/12/Program/Android/best-practice-of-android-dev/">Android之路</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/12/Program/Android/best-practice-of-android-dev/" class="archive-article-date">
+  	<time datetime="2017-03-12T01:23:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、为什么要引入内部类？<br>2、为什么要引入内部匿名类？<br>3、为什么要引入static变量、方法和类？<br>4、为什么要新增线程？<br>5、如何确保多线程安全访问？<br>6、如何检测及分析内存泄漏？常用工具有哪些？<br>7、引发内存泄漏的常见错误模式有哪些？如何避免又如何解决？<br>8、为什么要引入接口？什么是面向接口编程？<br>9、API接口文档及示范案例学习了没有？为什么不学？<br>      不了解就用，出问题正常，不出问题才怪<br>10、事前不想清楚，不架构好，后面就等着救火打补丁<br>11、程序员如何进入心流，有想法有技能，每日能有进展，看得见摸的着<br>12、看见好代码就手痒，看到好软件/功能/服务，就琢磨着如何实现？<br>13、利用GitHub，及时备份，大胆尝试<br>14、高手之路，就是通过模仿、分析、解决一个个问题来练就<br>15、先易后难，循序渐进，有时候，该突击就突击<br>16、面向需求找方案，面对问题找答案，效率要好过按部就班地逐章阅读…<br>17、构建自己的代码库、经验案例库、文档库、工具库，武器越多，办法越多<br>18、基础越牢，思路越广，方案越好<br>19、……</p>
+<p> 遇到一个问题，搞清楚是什么（What）？为什么（Why）？怎么做（How）？，<br> 知其然知其所以然，不知不觉，量变到质变，熟能生出百巧来…</p>
+        
+          <a class="article-more-a" href="/2017/03/12/Program/Android/best-practice-of-android-dev/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/12/Program/Android/best-practice-of-android-dev/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Program/Android/resolve-memory-leak" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/12/Program/Android/resolve-memory-leak/">分析解决内存泄漏问题</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/12/Program/Android/resolve-memory-leak/" class="archive-article-date">
+  	<time datetime="2017-03-11T23:07:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>测试工具：LeakCanary</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">debugCompile</span> <span class="string">'com.squareup.leakcanary:leakcanary-android:1.5'</span></div><div class="line">releaseCompile <span class="string">'com.squareup.leakcanary:leakcanary-android-no-op:1.5'</span></div></pre></td></tr></table></figure>
+<p>内存泄漏的主要问题可以分为以下几种类型：</p>
+<ol>
+<li>静态变量引起的内存泄漏</li>
+<li>非静态内部类引起的内存泄漏</li>
+<li><p>资源未关闭引起的内存泄漏</p>
+        
+          <a class="article-more-a" href="/2017/03/12/Program/Android/resolve-memory-leak/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/12/Program/Android/resolve-memory-leak/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Program/Android/MyApp/bmi-app" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -473,162 +630,9 @@
 
 
   
-    <article id="post-Program/Android/MyApp/my-favor-music-player" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/03/Program/Android/MyApp/my-favor-music-player/">RollPlayer</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/03/Program/Android/MyApp/my-favor-music-player/" class="archive-article-date">
-  	<time datetime="2017-03-03T01:42:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://om8nmvpn9.bkt.clouddn.com/music.png" alt=""></p>
-<p>做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.</p>
-        
-          <a class="article-more-a" href="/2017/03/03/Program/Android/MyApp/my-favor-music-player/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/03/Program/Android/MyApp/my-favor-music-player/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Program/Concepts/how-to-write-singe-instance" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/03/Program/Concepts/how-to-write-singe-instance/">如何正确地写出单例模式</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/03/Program/Concepts/how-to-write-singe-instance/" class="archive-article-date">
-  	<time datetime="2017-03-03T00:31:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/">Jark’s Blog
-</a></p>
-<p>单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。</p>
-        
-          <a class="article-more-a" href="/2017/03/03/Program/Concepts/how-to-write-singe-instance/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/03/Program/Concepts/how-to-write-singe-instance/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/tags/Android/page/2/">2</a><a class="page-number" href="/tags/Android/page/3/">3</a><a class="extend next" rel="next" href="/tags/Android/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/tags/Android/page/2/">2</a><a class="page-number" href="/tags/Android/page/3/">3</a><a class="page-number" href="/tags/Android/page/4/">4</a><a class="extend next" rel="next" href="/tags/Android/page/2/">Next &raquo;</a>
     </nav>
   
 

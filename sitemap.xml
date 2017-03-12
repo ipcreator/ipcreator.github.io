@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/02/20/Program/my-views-of-learning-program/</loc>
+    
+    <lastmod>2017-03-12T01:41:34.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/12/Program/Android/best-practice-of-android-dev/</loc>
+    
+    <lastmod>2017-03-12T01:41:09.140Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/12/Program/Android/resolve-memory-leak/</loc>
+    
+    <lastmod>2017-03-12T00:12:39.887Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/01/06/MyView/my-view-of-growing-up/</loc>
+    
+    <lastmod>2017-03-11T23:06:37.530Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/03/11/Program/Android/MyApp/bmi-app/</loc>
     
     <lastmod>2017-03-11T14:45:35.207Z</lastmod>
@@ -12,13 +40,6 @@
     <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
     
     <lastmod>2017-03-11T13:05:25.985Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/20/Program/my-views-of-learning-program/</loc>
-    
-    <lastmod>2017-03-11T13:05:21.263Z</lastmod>
     
   </url>
   
@@ -131,13 +152,6 @@
     <loc>http://ipcreator.me/2016/12/31/MyView/my-hello-world/</loc>
     
     <lastmod>2017-03-09T03:20:52.126Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/01/06/MyView/my-view-of-growing-up/</loc>
-    
-    <lastmod>2017-03-09T03:13:38.411Z</lastmod>
     
   </url>
   
@@ -653,6 +667,13 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
@@ -667,21 +688,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -695,14 +709,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
