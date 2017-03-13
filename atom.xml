@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-03-12T11:18:37.806Z</updated>
+  <updated>2017-03-12T15:08:17.997Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -14,6 +14,128 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>编程思想之多线程与多进程</title>
+    <link href="http://ipcreator.me/2017/03/12/Program/Java/multi-thread/"/>
+    <id>http://ipcreator.me/2017/03/12/Program/Java/multi-thread/</id>
+    <published>2017-03-12T13:45:06.000Z</published>
+    <updated>2017-03-12T15:08:17.997Z</updated>
+    
+    <content type="html"><![CDATA[<p>作者: <a href="http://blog.csdn.net/luoweifu/article/details/46595285" target="_blank" rel="external">luoweifu</a></p>
+<h2 id="什么是线程"><a href="#什么是线程" class="headerlink" title="什么是线程"></a>什么是线程</h2><p>什么是线程？线程与进程与有什么关系？这是一个非常抽象的问题，也是一个特别广的话题，涉及到非常多的知识。我不能确保能把它讲的话，也不能确保讲的内容全部都正确。即使这样，我也希望尽可能地把他讲通俗一点，讲的明白一点，因为这是个一直困扰我很久的，扑朔迷离的知识领域，希望通过我的理解揭开它一层一层神秘的面纱。</p>
+<a id="more"></a>
+<h2 id="任务调度"><a href="#任务调度" class="headerlink" title="任务调度"></a>任务调度</h2><p>线程是什么？要理解这个概念，须要先了解一下操作系统的一些相关概念。大部分操作系统(如Windows、Linux)的任务调度是采用<strong>时间片轮转的抢占式</strong>调度方式，也就是说一个任务执行一小段时间后强制暂停去执行下一个任务，每个任务轮流执行。任务执行的一小段时间叫做时间片，任务正在执行时的状态叫运行状态，任务执行一段时间后强制暂停去执行下一个任务，被暂停的任务就处于就绪状态等待下一个属于它的时间片的到来。这样每个任务都能得到执行，由于CPU的执行效率非常高，时间片非常短，在各个任务之间快速地切换，给人的感觉就是多个任务在“同时进行”，这也就是我们所说的并发(别觉得并发有多高深，它的实现很复杂，但它的概念很简单，就是一句话：多个任务同时执行)。多任务运行过程的示意图如下：<br><img src="http://img.blog.csdn.net/20150623201226625?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+<h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><p>我们都知道计算机的核心是CPU，它承担了所有的计算任务；而操作系统是计算机的管理者，它负责任务的调度、资源的分配和管理，统领整个计算机硬件；应用程序侧是具有某种功能的程序，程序是运行于操作系统之上的。</p>
+<p><strong>进程是一个具有一定独立功能的程序在一个数据集上的一次动态执行的过程，是操作系统进行资源分配和调度的一个独立单位，是应用程序运行的载体</strong> 进程是一种抽象的概念，从来没有统一的标准定义。进程一般由<strong>程序、数据集合和进程控制块</strong>三部分组成。程序用于描述进程要完成的功能，是控制进程执行的指令集；数据集合是程序在执行时所需要的数据和工作区；<strong>程序控制块(Program Control Block，简称PCB)，包含进程的描述信息和控制信息，是进程存在的唯一标志。</strong></p>
+<p>进程具有的特征：<br><strong>动态性</strong>：进程是程序的一次执行过程，是临时的，有生命期的，是动态产生，动态消亡的；<br><strong>并发性</strong>：任何进程都可以同其他进程一起并发执行；<br><strong>独立性</strong>：进程是系统进行资源分配和调度的一个独立单位；<br><strong>结构性</strong>：进程由程序、数据和进程控制块三部分组成。</p>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p>在早期的操作系统中并没有线程的概念，进程是能拥有资源和独立运行的最小单位，也是程序执行的最小单位。任务调度采用的是时间片轮转的抢占式调度方式，而进程是任务调度的最小单位，每个进程有各自独立的一块内存，使得各个进程之间内存地址相互隔离。</p>
+<p>后来，随着计算机的发展，对CPU的要求越来越高，进程之间的切换开销较大，已经无法满足越来越复杂的程序的要求了。于是就发明了线程，<strong>线程是程序执行中一个单一的顺序控制流程，是程序执行流的最小单元，是处理器调度和分派的基本单位。</strong> 一个进程可以有一个或多个线程，<strong>各个线程之间共享程序的内存空间(也就是所在进程的内存空间)。</strong> 一个标准的<strong>线程由线程ID、当前指令指针(PC)、寄存器和堆栈组成。而进程由内存空间(代码、数据、进程空间、打开的文件)和一个或多个线程组成。</strong></p>
+<h2 id="进程与线程的区别"><a href="#进程与线程的区别" class="headerlink" title="进程与线程的区别"></a>进程与线程的区别</h2><p>前面讲了进程与线程，但可能你还觉得迷糊，感觉他们很类似。的确，进程与线程有着千丝万缕的关系，下面就让我们一起来理一理：<br>1.线程是程序执行的最小单位，而进程是操作系统分配资源的最小单位；<br>2.一个进程由一个或多个线程组成，线程是一个进程中代码的不同执行路线；<br>3.进程之间相互独立，但同一进程下的各个线程之间共享程序的内存空间(包括代码段、数据集、堆等)及一些进程级的资源(如打开文件和信号)，某进程内的线程在其它进程不可见；<br>4.调度和切换：线程上下文切换比进程上下文切换要快得多。</p>
+<p>线程与进程关系的示意图：<br><img src="http://img.blog.csdn.net/20150623201304175?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 2：进程与线程的资源共享关系</p>
+<p><img src="http://img.blog.csdn.net/20150623201318513?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 3：单线程与多线程的关系</p>
+<p>总之，线程和进程都是一种抽象的概念，线程是一种比进程更小的抽象，线程和进程都可用于实现并发。</p>
+<p>在早期的操作系统中并没有线程的概念，进程是能拥有资源和独立运行的最小单位，也是程序执行的最小单位。它相当于一个进程里只有一个线程，进程本身就是线程。所以线程有时被称为轻量级进程(Lightweight Process，LWP）。<br><img src="http://img.blog.csdn.net/20150623201335106?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 4：早期的操作系统只有进程，没有线程</p>
+<p>后来，随着计算机的发展，对多个任务之间上下文切换的效率要求越来越高，就抽象出一个更小的概念——线程，一般一个进程会有多个(也可是一个)线程。<br><img src="http://img.blog.csdn.net/20150623201405456?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 5：线程的出现，使得一个进程可以有多个线程</p>
+<h2 id="多线程与多核"><a href="#多线程与多核" class="headerlink" title="多线程与多核"></a>多线程与多核</h2><p>上面提到的时间片轮转的调度方式说一个任务执行一小段时间后强制暂停去执行下一个任务，每个任务轮流执行。很多操作系统的书都说“同一时间点只有一个任务在执行”。那有人可能就要问双核处理器呢？难道两个核不是同时运行吗？</p>
+<p>其实“同一时间点只有一个任务在执行”这句话是不准确的，至少它是不全面的。那多核处理器的情况下，线程是怎样执行呢？这就需要了解内核线程。<br>多核(心)处理器是指在一个处理器上集成多个运算核心从而提高计算能力，也就是有多个真正并行计算的处理核心，<strong>每一个处理核心对应一个内核线程。内核线程（Kernel Thread， KLT）就是直接由操作系统内核支持的线程，这种线程由内核来完成线程切换，内核通过操作调度器对线程进行调度，并负责将线程的任务映射到各个处理器上。一般一个处理核心对应一个内核线程，比如单核处理器对应一个内核线程，双核处理器对应两个内核线程，四核处理器对应四个内核线程。</strong></p>
+<p>现在的电脑一般是双核四线程、四核八线程，是<strong>采用超线程技术将一个物理处理核心模拟成两个逻辑处理核心，对应两个内核线程</strong>，所以在操作系统中看到的CPU数量是实际物理CPU数量的两倍，如你的电脑是双核四线程，打开“任务管理器\性能”可以看到4个CPU的监视器，四核八线程可以看到8个CPU的监视器。<br><img src="http://img.blog.csdn.net/20150623201509399?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 6：双核四线程在Windows8下查看的结果</p>
+<p>超线程技术就是利用特殊的硬件指令，把一个物理芯片模拟成两个逻辑处理核心，让单个处理器都能使用线程级并行计算，进而兼容多线程操作系统和软件，减少了CPU的闲置时间，提高的CPU的运行效率。这种超线程技术(如双核四线程)由处理器硬件的决定，同时也需要操作系统的支持才能在计算机中表现出来。</p>
+<p>程序一般不会直接去使用内核线程，而是去使用内核线程的一种高级接口——轻量级进程（Light Weight Process，LWP），轻量级进程就是我们通常意义上所讲的线程(我们在这称它为用户线程)，由于每个轻量级进程都由一个内核线程支持，因此只有先支持内核线程，才能有轻量级进程。用户线程与内核线程的对应关系有三种模型：一对一模型、多对一模型、多对多模型，在这以4个内核线程、3个用户线程为例对三种模型进行说明。</p>
+<h2 id="一对一模型"><a href="#一对一模型" class="headerlink" title="一对一模型"></a>一对一模型</h2><p>对于一对一模型来说，一个用户线程就唯一地对应一个内核线程(反过来不一定成立，一个内核线程不一定有对应的用户线程)。这样，如果CPU没有采用超线程技术(如四核四线程的计算机)，一个用户线程就唯一地映射到一个物理CPU的线程，线程之间的并发是真正的并发。一对一模型使用户线程具有与内核线程一样的优点，一个线程因某种原因阻塞时其他线程的执行不受影响；此处，一对一模型也可以让多线程程序在多处理器的系统上有更好的表现。<br>但一对一模型也有两个缺点：1.许多操作系统限制了内核线程的数量，因此一对一模型会使用户线程的数量受到限制；2.许多操作系统内核线程调度时，上下文切换的开销较大，导致用户线程的执行效率下降。<br><img src="http://img.blog.csdn.net/20150623201531159?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 7：一对一模型</p>
+<h2 id="多对一模型"><a href="#多对一模型" class="headerlink" title="多对一模型"></a>多对一模型</h2><p>多对一模型将多个用户线程映射到一个内核线程上，线程之间的切换由用户态的代码来进行，因此相对一对一模型，多对一模型的线程切换速度要快许多；此外，多对一模型对用户线程的数量几乎无限制。但多对一模型也有两个缺点：1.如果其中一个用户线程阻塞，那么其它所有线程都将无法执行，因为此时内核线程也随之阻塞了；2.在多处理器系统上，处理器数量的增加对多对一模型的线程性能不会有明显的增加，因为所有的用户线程都映射到一个处理器上了。<br><img src="http://img.blog.csdn.net/20150623201543668?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 8：多对一模型</p>
+<h2 id="多对多模型"><a href="#多对多模型" class="headerlink" title="多对多模型"></a>多对多模型</h2><p>多对多模型结合了一对一模型和多对一模型的优点，将多个用户线程映射到多个内核线程上。多对多模型的优点有：1.一个用户线程的阻塞不会导致所有线程的阻塞，因为此时还有别的内核线程被调度来执行；2.多对多模型对用户线程的数量没有限制；3.在多处理器的操作系统中，多对多模型的线程也能得到一定的性能提升，但提升的幅度不如一对一模型的高。<br>在现在流行的操作系统中，大都采用多对多的模型。<br><img src="http://img.blog.csdn.net/20150623201557825?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 9：多对多模型</p>
+<h2 id="查看进程与线程"><a href="#查看进程与线程" class="headerlink" title="查看进程与线程"></a>查看进程与线程</h2><p>一个应用程序可能是多线程的，也可能是多进程的，如何查看呢？在Windows下我们只须打开任务管理器就能查看一个应用程序的进程和线程数。按“Ctrl+Alt+Del”或右键快捷工具栏打开任务管理器。<br>查看进程数和线程数：<br><img src="http://img.blog.csdn.net/20150623201615140?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 10：查看线程数和进程数</p>
+<p>在“进程”选项卡下，我们可以看到一个应用程序包含的线程数。如果一个应用程序有多个进程，我们能看到每一个进程，如在上图中，Google的chrome浏览器就有多个进程。同时，如果打开了一个应用程序的多个实例也会有多个进程，如上图中我打开了两个cmd窗口，就有两个cmd进程。如果看不到线程数这一列，可以在点击“查看\选择列”菜单，增加监听的列。</p>
+<h2 id="查看CPU和内存的使用率："><a href="#查看CPU和内存的使用率：" class="headerlink" title="查看CPU和内存的使用率："></a>查看CPU和内存的使用率：</h2><p>在性能选项卡中，我们可以查看CPU和内存的使用率，根据CPU使用记录的监视器的个数还能看出逻辑处理核心的个数，如我的双核四线程的计算机就有四个监视器。<br><img src="http://img.blog.csdn.net/20150623201628475?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 11：查看CPU和内存的使用率</p>
+<h2 id="线程的生命周期"><a href="#线程的生命周期" class="headerlink" title="线程的生命周期"></a>线程的生命周期</h2><p>当线程的数量小于处理器的数量时，线程的并发是真正的并发，不同的线程运行在不同的处理器上。但当线程的数量大于处理器的数量时，线程的并发会受到一些阻碍，此时并不是真正的并发，因为此时至少有一个处理器会运行多个线程。<br>在单个处理器运行多个线程时，并发是一种模拟出来的状态。操作系统采用时间片轮转的方式轮流执行每一个线程。现在，几乎所有的现代操作系统采用的都是时间片轮转的抢占式调度方式，如我们熟悉的Unix、Linux、Windows及Mac OS X等流行的操作系统。<br>我们知道线程是程序执行的最小单位，也是任务执行的最小单位。在早期只有进程的操作系统中，进程有五种状态，创建、就绪、运行、阻塞(等待)、退出。早期的进程相当于现在的只有单个线程的进程，那么现在的多线程也有五种状态，现在的多线程的生命周期与早期进程的生命周期类似。<br><img src="http://img.blog.csdn.net/20150629220341018?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 12：早期进程的生命周期</p>
+<p>进程在运行过程有三种状态：就绪、运行、阻塞，创建和退出状态描述的是进程的创建过程和退出过程。<br>创建：进程正在创建，还不能运行。操作系统在创建进程时要进行的工作包括分配和建立进程控制块表项、建立资源表格并分配资源、加载程序并建立地址空间；<br>就绪：时间片已用完，此线程被强制暂停，等待下一个属于他的时间片到来；<br>运行：此线程正在执行，正在占用时间片；<br>阻塞：也叫等待状态，等待某一事件(如IO或另一个线程)执行完；<br>退出：进程已结束，所以也称结束状态，释放操作系统分配的资源。<br><img src="http://img.blog.csdn.net/20150629220354195?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>图 13：线程的生命周期</p>
+<p>创建：一个新的线程被创建，等待该线程被调用执行；<br>就绪：时间片已用完，此线程被强制暂停，等待下一个属于他的时间片到来；<br>运行：此线程正在执行，正在占用时间片；<br>阻塞：也叫等待状态，等待某一事件(如IO或另一个线程)执行完；<br>退出：一个线程完成任务或者其他终止条件发生，该线程终止进入退出状态，退出状态释放该线程所分配的资源。</p>
+<h2 id="编程思想之多线程与多进程-2-——线程优先级与线程安全"><a href="#编程思想之多线程与多进程-2-——线程优先级与线程安全" class="headerlink" title="编程思想之多线程与多进程(2)——线程优先级与线程安全"></a>编程思想之多线程与多进程(2)——线程优先级与线程安全</h2><h2 id="线程优先级"><a href="#线程优先级" class="headerlink" title="线程优先级"></a>线程优先级</h2><p>现在主流操作系统(如Windows、Linux、Mac OS X)的任务调度除了具有前面提到的时间片轮转的特点外，还有优先级调度(Priority Schedule)的特点。优先级调度决定了线程按照什么顺序轮流执行，在具有优先级调度的系统中，线程拥有各自的线程优先级(Thread Priority)。具有高优先级的线程会更早地执行，而低优先级的线程通常要等没有更高优先级的可执行线程时才会被执行。</p>
+<p>线程的优先级可以由用户手动设置，此外系统也会根据不同情形调整优先级。通常情况下，频繁地进入等待状态(进入等待状态会放弃之前仍可占用的时间份额)的线程(如IO线程)，比频繁进行大量计算以至于每次都把所有时间片全部用尽的线程更受操作系统的欢迎。因为频繁进入等待的线程只会占用很少的时间，这样操作系统可以处理更多的任务。我们把频繁等待的线程称之为IO密集型线程(IO Bound Thread)，而把很少等待的线程称之为CPU密集型线程(CPU Bound Thread)。IO密集型线程总是比CPU密集型线程更容易得到优先级的提升。</p>
+<h2 id="线程饿死"><a href="#线程饿死" class="headerlink" title="线程饿死:"></a>线程饿死:</h2><p>在优先级调度下，容易出现一种线程饿死的现象。一个线程饿死是说它的优先级较低，在它执行之前总是有比它优先级更高的线程等待执行，因此这个低优先级的线程始终得不到执行。当CPU密集型的线程优先级较高时，其它低优先级的线程就很可能出现饿死的情况；当IO密集型线程优先级较高时，其它线程相对不容易造成饿死的善，因为IO线程有大量的等待时间。为了避免线程饿死，调度系统通常会逐步提升那些等待了很久而得不到执行的线程的优先级。这样，一个线程只要它等待了足够长的时间，其优先级总会被提升到可以让它执行的程度，也就是说这种情况下线程始终会得到执行，只是时间的问题。</p>
+<p>在优先级调度环境下，线程优先级的改变有三种方式：</p>
+<ol>
+<li>用户指定优先级；</li>
+<li>根据进入等待状态的频繁程度提升或降低优先级(由操作系统完成)；</li>
+<li>长时间得不到执行而被提升优先级。</li>
+</ol>
+<h2 id="线程安全与锁"><a href="#线程安全与锁" class="headerlink" title="线程安全与锁"></a>线程安全与锁</h2><p>在多个线程并发执行访问同一个数据时，如果不采取相应的措施，将会是非常危险的。假设你在工行有一个银行账户，两张银联卡(自己手里一张，女朋友手里一张)，里面有100万。假设取钱就两个过程：1.检查账户余额，2.取出现金(如果要取出的金额 &gt; 账户余额，则取现成功，否则取现失败)。有一天你要买房想把钱取出来，而此时你女朋友也想买一辆车(假设你们事先没有商量)。两个人都在取钱，你在A号ATM机取100万，女朋友在B号ATM机取80万。这时A号ATM检查账户余额发现有100万，可以取出；而与此同时，同一时刻B号ATM也在检查账户余额发现有100万，可以取出；这样，A、B都把钱取出来了。</p>
+<p>100万的存款取出180万，银行就亏大发了(当然你就笑呵呵了……)！这就是线程并发的不安全性。为避免这种情况发生，我们要将多个线程对同一数据的访问同步，确保线程安全。</p>
+<p>所谓 <strong>同步(synchronization)</strong> 就是指一个线程访问数据时，其它线程不得对同一个数据进行访问，即同一时刻只能有一个线程访问该数据，当这一线程访问结束时其它线程才能对这它进行访问。同步最常见的方式就是使用锁(Lock)，也称为线程锁。锁是一种非强制机制，每一个线程在访问数据或资源之前，首先试图获取(Acquire)锁，并在访问结束之后释放(Release)锁。在锁被占用时试图获取锁，线程会进入等待状态，直到锁被释放再次变为可用。</p>
+<h2 id="二元信号量"><a href="#二元信号量" class="headerlink" title="二元信号量"></a>二元信号量</h2><p>二元信号量(Binary Semaphore)是一种最简单的锁，它有两种状态：占用和非占用。它 <strong>适合只能被唯一一个线程独占访问的资源</strong>。当二元信号量处于非占用状态时，第一个试图获取该二元信号量锁的线程会获得该锁，并将二元信号量锁置为占用状态，之后其它试图获取该二元信号量的线程会进入等待状态，直到该锁被释放。</p>
+<h2 id="信号量"><a href="#信号量" class="headerlink" title="信号量"></a>信号量</h2><p>多元信号量允许多个线程访问同一个资源，多元信号量简称信号量(Semaphore)，对于允许多个线程并发访问的资源，这是一个很好的选择。一个初始值为N的信号量允许N个线程并发访问。线程访问资源时首先获取信号量锁，进行如下操作：</p>
+<ol>
+<li>将信号量的值减1；</li>
+<li>如果信号量的值小于0，则进入等待状态，否则继续执行；<br>访问资源结束之后，线程释放信号量锁，进行如下操作：</li>
+<li>将信号量的值加1；</li>
+<li>如果信号量的值小于1(等于0)，唤醒一个等待中的线程；</li>
+</ol>
+<h2 id="互斥量"><a href="#互斥量" class="headerlink" title="互斥量"></a>互斥量</h2><p>互斥量(Mutex)和二元信号量类似，资源仅允许一个线程访问。<strong>与二元信号量不同的是，信号量在整个系统中可以被任意线程获取和释放，也就是说，同一个信号量可以由一个线程获取而由另一线程释放。</strong> 而 <strong>互斥量则要求哪个线程获取了该互斥量锁就由哪个线程释放</strong>，其它线程越俎代庖释放互斥量是无效的。</p>
+<h2 id="临界区"><a href="#临界区" class="headerlink" title="临界区"></a>临界区</h2><p>临界区(Critical Section)是一种比互斥量更加严格的同步手段。互斥量和信号量在系统的任何进程都是可见的，也就是说一个进程创建了一个互斥量或信号量，另一进程试图获取该锁是合法的。而 <strong>临界区的作用范围仅限于本进程，其它的进程无法获取该锁。</strong> 除此之处，临界区与互斥量的性质相同。</p>
+<h2 id="读写锁"><a href="#读写锁" class="headerlink" title="读写锁"></a>读写锁</h2><p>读写锁(Read-Write Lock)允许多个线程同时对同一个数据进行读操作，而只允许一个线程进行写操作。这是因为读操作不会改变数据的内容，是安全的；而写操作会改变数据的内容，是不安全的。对同一个读写锁，有两种获取方式：共享的(Shared)和独占的(Exclusive)。当锁处于自由状态时，试图以任何一种方式获取锁都能成功，并将锁置为对应的状态；如果锁处于共享状态，其它线程以共享方式获取该锁，仍然能成功，此时该锁分配给了多个线程；如果其它线程试图如独占的方式获取处于共享状态的锁，它必须等待所有线程释放该锁；处于独占状态的锁阻止任何线程获取该锁，不论它们以何种方式。获取读写锁的方式总结如下：<br>读写锁的状态    以共享方式获取    以独占方式获取<br>自由    成功    成功<br>共享    成功    等待<br>独占    等待    等待<br>表 1 ：获取读写锁的方式</p>
+<h2 id="编程思想之多线程与多进程-3-——Java中的多线程"><a href="#编程思想之多线程与多进程-3-——Java中的多线程" class="headerlink" title="编程思想之多线程与多进程(3)——Java中的多线程"></a>编程思想之多线程与多进程(3)——Java中的多线程</h2><h2 id="单线程"><a href="#单线程" class="headerlink" title="单线程"></a>单线程</h2><p>任何程序至少有一个线程，即使你没有主动地创建线程，程序从一开始执行就有一个默认的线程，被称为主线程，只有一个线程的程序称为单线程程序。如下面这一简单的代码，没有显示地创建一个线程，<strong>程序从main开始执行，main本身就是一个线程(主线程)，单个线程从头执行到尾。</strong></p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span> args[]) &#123;</div><div class="line">   System.out.<span class="built_in">println</span>(<span class="string">"输出从1到100的数:"</span>);</div><div class="line">   <span class="built_in">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i ++) &#123;</div><div class="line">      System.out.<span class="built_in">println</span>(i + <span class="number">1</span>);</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="创建线程"><a href="#创建线程" class="headerlink" title="创建线程"></a>创建线程</h2><p>单线程程序简单明了，但有时无法满足特定的需求。如一个文字处理的程序，我在打印文章的同时也要能对文字进行编辑，如果是单线程的程序则要等打印机打印完成之后你才能对文字进行编辑，但打印的过程一般比较漫长，这是我们无法容忍的。如果采用多线程，打印的时候可以单独开一个线程去打印，主线程可以继续进行文字编辑。在程序需要同时执行多个任务时，可以采用多线程。</p>
+<p>在程序需要同时执行多个任务时，可以采用多线程。<strong>Java给多线程编程提供了内置的支持，提供了两种创建线程方法：1.通过实现Runable接口；2.通过继承Thread类。</strong></p>
+<p>Thread是JDK实现的对线程支持的类，Thread类本身实现了Runnable接口，所以Runnable是显示创建线程必须实现的接口; Runnable只有一个run方法，所以不管通过哪种方式创建线程，都必须实现run方法。我们可以看一个例子。</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * User: luoweifu</div><div class="line"> * Date: 15-5-24</div><div class="line"> * Time: 下午9:30</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 通过实现Runnable方法</div><div class="line"> */</div><div class="line"><span class="keyword">class</span> <span class="title">ThreadA</span> <span class="title">implements</span> <span class="title">Runnable</span> &#123;</div><div class="line">   <span class="keyword">private</span> Thread thread;</div><div class="line">   <span class="keyword">private</span> String threadName;</div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="title">ThreadA</span>(<span class="params">String threadName</span>) </span>&#123;</div><div class="line">      thread = <span class="keyword">new</span> Thread(<span class="keyword">this</span>, threadName);</div><div class="line">      <span class="keyword">this</span>.threadName = threadName;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="comment">//实现run方法</span></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i ++) &#123;</div><div class="line">         System.<span class="keyword">out</span>.println(threadName + <span class="string">": "</span> + i);</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      thread.start();</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 继承Thread的方法</div><div class="line"> */</div><div class="line"><span class="keyword">class</span> <span class="title">ThreadB</span> <span class="title">extends</span> <span class="title">Thread</span> &#123;</div><div class="line">   <span class="keyword">private</span> String threadName;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="title">ThreadB</span>(<span class="params">String threadName</span>) </span>&#123;</div><div class="line">      super(threadName);</div><div class="line">      <span class="keyword">this</span>.threadName = threadName;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="comment">//实现run方法</span></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i ++) &#123;</div><div class="line">         System.<span class="keyword">out</span>.println(threadName + <span class="string">": "</span> + i);</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MultiThread</span>&#123;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params">String args[]</span>) </span>&#123;</div><div class="line">      ThreadA threadA = <span class="keyword">new</span> ThreadA(<span class="string">"ThreadA"</span>);</div><div class="line">      ThreadB threadB = <span class="keyword">new</span> ThreadB(<span class="string">"ThreadB"</span>);</div><div class="line">      threadA.start();</div><div class="line">      threadB.start();</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>说明：上面的例子中例举了两种实现线程的方式。<strong>大部分情况下选择实现Runnable接口的方式会优于继承Thread的方式</strong>，因为：</p>
+<ol>
+<li>从 Thread 类继承会强加类层次；</li>
+<li>有些类不能继承Thread类，如要作为线程运行的类已经是某一个类的子类了，但<strong>Java只支持单继承</strong>，所以不能再继承Thread类了。</li>
+</ol>
+<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><p>线程与线程之间的关系，有几种:</p>
+<p>模型一：简单的线程，多个线程同时执行，但各个线程处理的任务毫不相干，没有数据和资源的共享，不会出现争抢资源的情况。这种情况下不管有多少个线程同时执行都是安全的，其执行模型如下：</p>
+<p><img src="http://img.blog.csdn.net/20150628203010538" alt=""><br>图 1：处理相互独立的任务</p>
+<p>模型二：复杂的线程，多个线程共享相同的数据或资源，就会出现多个线程争抢一个资源的情况。这时就容易造成数据的非预期(错误)处理，是线程不安全的，其模型如下:<br><img src="http://img.blog.csdn.net/20150628203115567" alt=""><br>图 2：多个线程共享相同的数据或资源</p>
+<p>在出现模型二的情况时就要考虑线程的同步，确保线程的安全。<strong>Java中对线程同步的支持，最常见的方式是添加synchronized同步锁。</strong></p>
+<p>我们通过一个例子来看一下线程同步的应用。</p>
+<p>买火车票是大家春节回家最为关注的事情，我们就简单模拟一下火车票的售票系统(为使程序简单，我们就抽出最简单的模型进行模拟)：有500张从北京到赣州的火车票，在8个窗口同时出售，保证系统的稳定性和数据的原子性。</p>
+<p><img src="http://img.blog.csdn.net/20150628203427692" alt=""></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 模拟服务器的类</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Service</span> </span>&#123;</div><div class="line">   <span class="keyword">private</span> String ticketName;    <span class="comment">//票名</span></div><div class="line">   <span class="keyword">private</span> <span class="keyword">int</span> totalCount;        <span class="comment">//总票数</span></div><div class="line">   <span class="keyword">private</span> <span class="keyword">int</span> remaining;        <span class="comment">//剩余票数</span></div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Service</span><span class="params">(String ticketName, <span class="keyword">int</span> totalCount)</span> </span>&#123;</div><div class="line">      <span class="keyword">this</span>.ticketName = ticketName;</div><div class="line">      <span class="keyword">this</span>.totalCount = totalCount;</div><div class="line">      <span class="keyword">this</span>.remaining = totalCount;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">int</span> <span class="title">saleTicket</span><span class="params">(<span class="keyword">int</span> ticketNum)</span> </span>&#123;</div><div class="line">      <span class="keyword">if</span> (remaining &gt; <span class="number">0</span>) &#123;</div><div class="line">         remaining -= ticketNum;</div><div class="line">         <span class="keyword">try</span> &#123;        <span class="comment">//暂停0.1秒，模拟真实系统中复杂计算所用的时间</span></div><div class="line">            Thread.sleep(<span class="number">100</span>);</div><div class="line">         &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">         &#125;</div><div class="line"></div><div class="line">         <span class="keyword">if</span> (remaining &gt;= <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">return</span> remaining;</div><div class="line">         &#125; <span class="keyword">else</span> &#123;</div><div class="line">            remaining += ticketNum;</div><div class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">         &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">int</span> <span class="title">getRemaining</span><span class="params">()</span> </span>&#123;</div><div class="line">      <span class="keyword">return</span> remaining;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">getTicketName</span><span class="params">()</span> </span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.ticketName;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 售票程序</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TicketSaler</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</div><div class="line">   <span class="keyword">private</span> String name;</div><div class="line">   <span class="keyword">private</span> Service service;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="title">TicketSaler</span><span class="params">(String windowName, Service service)</span> </span>&#123;</div><div class="line">      <span class="keyword">this</span>.name = windowName;</div><div class="line">      <span class="keyword">this</span>.service = service;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">      <span class="keyword">while</span> (service.getRemaining() &gt; <span class="number">0</span>) &#123;</div><div class="line">         <span class="keyword">synchronized</span> (<span class="keyword">this</span>)</div><div class="line">         &#123;</div><div class="line">            System.out.print(Thread.currentThread().getName() + <span class="string">"出售第"</span> + service.getRemaining() + <span class="string">"张票，"</span>);</div><div class="line">            <span class="keyword">int</span> remaining = service.saleTicket(<span class="number">1</span>);</div><div class="line">            <span class="keyword">if</span> (remaining &gt;= <span class="number">0</span>) &#123;</div><div class="line">               System.out.println(<span class="string">"出票成功!剩余"</span> + remaining + <span class="string">"张票."</span>);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">               System.out.println(<span class="string">"出票失败！该票已售完。"</span>);</div><div class="line">            &#125;</div><div class="line">         &#125;</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>测试程序：</p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 测试类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TicketingSystem</span> </span>&#123;</div><div class="line">   <span class="keyword">public</span> <span class="keyword">static</span> void main(<span class="keyword">String</span> args[]) &#123;</div><div class="line">      Service service = <span class="keyword">new</span> <span class="type">Service</span>(<span class="string">"北京--&gt;赣州"</span>, <span class="number">500</span>);</div><div class="line">      TicketSaler ticketSaler = <span class="keyword">new</span> <span class="type">TicketSaler</span>(<span class="string">"售票程序"</span>, service);</div><div class="line">      <span class="comment">//创建8个线程，以模拟8个窗口</span></div><div class="line">      Thread threads[] = <span class="keyword">new</span> <span class="type">Thread</span>[<span class="number">8</span>];</div><div class="line">      <span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt; threads.length; i++) &#123;</div><div class="line">         threads[i] = <span class="keyword">new</span> <span class="type">Thread</span>(ticketSaler, <span class="string">"窗口"</span> + (i + <span class="number">1</span>));</div><div class="line">         System.out.println(<span class="string">"窗口"</span> + (i + <span class="number">1</span>) + <span class="string">"开始出售 "</span> + service.getTicketName() + <span class="string">" 的票..."</span>);</div><div class="line">         threads[i].start();</div><div class="line">      &#125;</div><div class="line"></div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">窗口<span class="number">1</span>开始出售 北京–&gt;赣州 的票…</div><div class="line">窗口<span class="number">2</span>开始出售 北京–&gt;赣州 的票…</div><div class="line">窗口<span class="number">3</span>开始出售 北京–&gt;赣州 的票…</div><div class="line">窗口<span class="number">4</span>开始出售 北京–&gt;赣州 的票…</div><div class="line">窗口<span class="number">5</span>开始出售 北京–&gt;赣州 的票…</div><div class="line">窗口<span class="number">6</span>开始出售 北京–&gt;赣州 的票…</div><div class="line">窗口<span class="number">7</span>开始出售 北京–&gt;赣州 的票…</div><div class="line">窗口<span class="number">8</span>开始出售 北京–&gt;赣州 的票…</div><div class="line">窗口<span class="number">1</span>出售第<span class="number">500</span>张票，出票成功!剩余<span class="number">499</span>张票.</div><div class="line">窗口<span class="number">1</span>出售第<span class="number">499</span>张票，出票成功!剩余<span class="number">498</span>张票.</div><div class="line">窗口<span class="number">6</span>出售第<span class="number">498</span>张票，出票成功!剩余<span class="number">497</span>张票.</div><div class="line">窗口<span class="number">6</span>出售第<span class="number">497</span>张票，出票成功!剩余<span class="number">496</span>张票.</div><div class="line">窗口<span class="number">1</span>出售第<span class="number">496</span>张票，出票成功!剩余<span class="number">495</span>张票.</div><div class="line">窗口<span class="number">1</span>出售第<span class="number">495</span>张票，出票成功!剩余<span class="number">494</span>张票.</div><div class="line">窗口<span class="number">1</span>出售第<span class="number">494</span>张票，出票成功!剩余<span class="number">493</span>张票.</div><div class="line">窗口<span class="number">2</span>出售第<span class="number">493</span>张票，出票成功!剩余<span class="number">492</span>张票.</div><div class="line">窗口<span class="number">2</span>出售第<span class="number">492</span>张票，出票成功!剩余<span class="number">491</span>张票.</div><div class="line">窗口<span class="number">2</span>出售第<span class="number">491</span>张票，出票成功!剩余<span class="number">490</span>张票.</div><div class="line">窗口<span class="number">2</span>出售第<span class="number">490</span>张票，出票成功!剩余<span class="number">489</span>张票.</div><div class="line">窗口<span class="number">2</span>出售第<span class="number">489</span>张票，出票成功!剩余<span class="number">488</span>张票.</div><div class="line">窗口<span class="number">2</span>出售第<span class="number">488</span>张票，出票成功!剩余<span class="number">487</span>张票.</div><div class="line">窗口<span class="number">6</span>出售第<span class="number">487</span>张票，出票成功!剩余<span class="number">486</span>张票.</div><div class="line">窗口<span class="number">6</span>出售第<span class="number">486</span>张票，出票成功!剩余<span class="number">485</span>张票.</div><div class="line">窗口<span class="number">3</span>出售第<span class="number">485</span>张票，出票成功!剩余<span class="number">484</span>张票.</div><div class="line">……</div></pre></td></tr></table></figure>
+<p>在上面的例子中，涉及到<strong>数据的更改的Service类saleTicket方法和TicketSaler类run方法都用了synchronized同步锁</strong>进行同步处理，以保证数据的准确性和原子性。</p>
+<p>关于synchronized更详细的用法请参见：<a href="http://blog.csdn.net/luoweifu/article/details/46613015" target="_blank" rel="external">《Java中Synchronized的用法》</a></p>
+<h2 id="线程控制"><a href="#线程控制" class="headerlink" title="线程控制"></a>线程控制</h2><p>在多线程程序中，除了最重要的线程同步外，还有其它的线程控制，如线程的中断、合并、优先级等。</p>
+<p>线程等待(wait、notify、notifyAll)</p>
+<p>Wait：使当前的线程处于等待状态；<br>Notify：唤醒其中一个等待线程；<br>notifyAll：唤醒所有等待线程。</p>
+<p>详细用法参见：<a href="http://blog.csdn.net/luoweifu/article/details/46664809" target="_blank" rel="external">《 Java多线程中wait, notify and notifyAll的使用》</a></p>
+<h2 id="线程中断-interrupt"><a href="#线程中断-interrupt" class="headerlink" title="线程中断(interrupt)"></a>线程中断(interrupt)</h2><p>在Java提供的线程支持类Thread中，有三个用于线程中断的方法：<br>public void interrupt(); 中断线程。<br>public static boolean interrupted(); 是一个静态方法，用于测试当前线程是否已经中断，并将线程的中断状态 清除。所以如果线程已经中断，调用两次interrupted，第二次时会返回false，因为第一次返回true后会清除中断状态。<br>public boolean isInterrupted(); 测试线程是否已经中断。</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">**</div><div class="line"> * 打印线程</div><div class="line"> */</div><div class="line"><span class="keyword">class</span> <span class="title">Printer</span> <span class="title">implements</span> <span class="title">Runnable</span> &#123;</div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">while</span> (!Thread.currentThread().isInterrupted()) &#123;     <span class="comment">//如果当前线程未被中断，则执行打印工作</span></div><div class="line">         System.<span class="keyword">out</span>.println(Thread.currentThread().getName() + <span class="string">"打印中… …"</span>);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">if</span> (Thread.currentThread().isInterrupted()) &#123;</div><div class="line">         System.<span class="keyword">out</span>.println(<span class="string">"interrupted:"</span> +  Thread.interrupted());       <span class="comment">//返回当前线程的状态，并清除状态</span></div><div class="line">         System.<span class="keyword">out</span>.println(<span class="string">"isInterrupted:"</span> +  Thread.currentThread().isInterrupted());</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Printer printer = new Printer()<span class="comment">;</span></div><div class="line">Thread printerThread = new Thread(printer, <span class="string">"打印线程"</span>)<span class="comment">;</span></div><div class="line">printerThread.start()<span class="comment">;</span></div><div class="line">try &#123;</div><div class="line">   Thread.sleep(<span class="number">100</span>)<span class="comment">;</span></div><div class="line">&#125; catch (InterruptedException e) &#123;</div><div class="line">   e.printStackTrace()<span class="comment">;</span></div><div class="line">&#125;</div><div class="line">System.out.println(<span class="string">"有紧急任务出现，需中断打印线程."</span>)<span class="comment">;</span></div><div class="line">System.out.println(<span class="string">"中断前的状态："</span> + printerThread.isInterrupted())<span class="comment">;</span></div><div class="line">printerThread.interrupt()<span class="comment">;       // 中断打印线程</span></div><div class="line">System.out.println(<span class="string">"中断前的状态："</span> + printerThread.isInterrupted())<span class="comment">;</span></div></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">打印线程打印中… …</div><div class="line">… …</div><div class="line">打印线程打印中… …</div><div class="line">有紧急任务出现，需中断打印线程.</div><div class="line">打印线程打印中… …</div><div class="line">中断前的状态：<span class="literal">false</span></div><div class="line">打印线程打印中… …</div><div class="line">中断前的状态：<span class="literal">true</span></div><div class="line"><span class="string">interrupted:</span><span class="literal">true</span></div><div class="line"><span class="string">isInterrupted:</span><span class="literal">false</span></div></pre></td></tr></table></figure>
+<h2 id="线程合并-join"><a href="#线程合并-join" class="headerlink" title="线程合并(join)"></a>线程合并(join)</h2><p>所谓合并，就是等待其它线程执行完，再执行当前线程，执行起来的效果就好像把其它线程合并到当前线程执行一样。其执行关系如下：</p>
+<p><img src="http://img.blog.csdn.net/20150628204041010" alt=""><br>图 4:线程合并的过程</p>
+<p>public final void join()<br>等待该线程终止</p>
+<p>public final void join(long millis);<br>等待该线程终止的时间最长为 millis 毫秒。超时为 0 意味着要一直等下去。</p>
+<p>public final void join(long millis, int nanos)<br>等待该线程终止的时间最长为 millis 毫秒 + nanos 纳秒</p>
+<p>这个常见的一个应用就是安装程序，很多大的软件都会包含多个插件，如果选择完整安装，则要等所有的插件都安装完成才能结束，且插件与插件之间还可能会有依赖关系。</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 插件1</div><div class="line"> */</div><div class="line"><span class="keyword">class</span> <span class="title">Plugin1</span> <span class="title">implements</span> <span class="title">Runnable</span> &#123;</div><div class="line"></div><div class="line">   @<span class="function">Override</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span>(<span class="params"></span>) &#123;</div><div class="line">      System.<span class="keyword">out</span>.println(<span class="string">"插件1开始安装."</span>);</div><div class="line">      System.<span class="keyword">out</span>.println(<span class="string">"安装中..."</span>);</div><div class="line">      <span class="keyword">try</span> &#123;</div><div class="line">         Thread.sleep(<span class="number">1000</span>);</div><div class="line">      &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">         e.printStackTrace();</div><div class="line">      &#125;</div><div class="line">      System.<span class="keyword">out</span>.println(<span class="string">"插件1完成安装."</span>);</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 插件2</div><div class="line"> */</div><div class="line"><span class="keyword">class</span> <span class="title">Plugin2</span> <span class="title">implements</span> <span class="title">Runnable</span> &#123;</div><div class="line"></div><div class="line">   @<span class="function">Override</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span>(<span class="params"></span>) &#123;</div><div class="line">      System.<span class="keyword">out</span>.println(<span class="string">"插件2开始安装."</span>);</div><div class="line">      System.<span class="keyword">out</span>.println(<span class="string">"安装中..."</span>);</div><div class="line">      <span class="keyword">try</span> &#123;</div><div class="line">         Thread.sleep(<span class="number">2000</span>);</div><div class="line">      &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">         e.printStackTrace();</div><div class="line">      &#125;</div><div class="line">      System.<span class="keyword">out</span>.println(<span class="string">"插件2完成安装."</span>);</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">System.<span class="keyword">out</span>.println(<span class="string">"主线程开启..."</span>);</div><div class="line">Thread thread1 = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Plugin1());</div><div class="line">Thread thread2 = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Plugin2());</div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">   thread1.start();   <span class="comment">//开始插件1的安装</span></div><div class="line">   thread1.<span class="keyword">join</span>();       <span class="comment">//等插件1的安装线程结束</span></div><div class="line">   thread2.start();   <span class="comment">//再开始插件2的安装</span></div><div class="line">   thread2.<span class="keyword">join</span>();       <span class="comment">//等插件2的安装线程结束,才能回到主线程</span></div><div class="line">&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">   e.printStackTrace();</div><div class="line">&#125;</div><div class="line">System.<span class="keyword">out</span>.println(<span class="string">"主线程结束，程序安装完成！"</span>);</div></pre></td></tr></table></figure>
+<h2 id="优先级-Priority"><a href="#优先级-Priority" class="headerlink" title="优先级(Priority)"></a>优先级(Priority)</h2><p>线程优先级是指获得CPU资源的优先程序。优先级高的容易获得CPU资源，优先级底的较难获得CPU资源，表现出来的情况就是优先级越高执行的时间越多。</p>
+<p>Java中通过getPriority和setPriority方法获取和设置线程的优先级。Thread类提供了三个表示优先级的常量：MIN_PRIORITY优先级最低，为1；NORM_PRIORITY是正常的优先级；为5，MAX_PRIORITY优先级最高，为10。我们创建线程对象后，如果不显示的设置优先级的话，默认为5。</p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 优先级</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PriorityThread</span> <span class="keyword"><span class="keyword">implements</span> <span class="type">Runnable</span></span></span>&#123;</div><div class="line">   @Override</div><div class="line">   <span class="keyword">public</span> void run() &#123;</div><div class="line">      <span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i ++) &#123;</div><div class="line">         System.out.println(Thread.currentThread().getName() + <span class="string">": "</span> + i);</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//创建三个线程</span></div><div class="line">Thread thread1 = <span class="keyword">new</span> <span class="type">Thread</span>(<span class="keyword">new</span> <span class="type">PriorityThread</span>(), <span class="string">"Thread1"</span>);</div><div class="line">Thread thread2 = <span class="keyword">new</span> <span class="type">Thread</span>(<span class="keyword">new</span> <span class="type">PriorityThread</span>(), <span class="string">"Thread2"</span>);</div><div class="line">Thread thread3 = <span class="keyword">new</span> <span class="type">Thread</span>(<span class="keyword">new</span> <span class="type">PriorityThread</span>(), <span class="string">"Thread3"</span>);</div><div class="line"><span class="comment">//设置优先级</span></div><div class="line">thread1.setPriority(Thread.MAX_PRIORITY);</div><div class="line">thread2.setPriority(<span class="number">8</span>);</div><div class="line"><span class="comment">//开始执行线程</span></div><div class="line">thread3.start();</div><div class="line">thread2.start();</div><div class="line">thread1.start();</div></pre></td></tr></table></figure>
+<p>从结果中我们可以看到线程thread1明显比线程thread3执行的快。</p>
+<h2 id="参考阅读"><a href="#参考阅读" class="headerlink" title="参考阅读"></a>参考阅读</h2><p><a href="http://blog.csdn.net/luoweifu/article/details/46595285" target="_blank" rel="external">编程思想之多线程与多进程(1)——以操作系统的角度述说线程与进程</a><br><a href="http://blog.csdn.net/luoweifu/article/details/46701167" target="_blank" rel="external">编程思想之多线程与多进程(2)——线程优先级与线程安全</a><br><a href="http://blog.csdn.net/luoweifu/article/details/46673975" target="_blank" rel="external">编程思想之多线程与多进程(3)——Java中的多线程</a><br><a href="http://blog.csdn.net/luoweifu/article/details/46835437" target="_blank" rel="external">编程思想之多线程与多进程(4)——C++中的多线程</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作者: &lt;a href=&quot;http://blog.csdn.net/luoweifu/article/details/46595285&quot;&gt;luoweifu&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;什么是线程&quot;&gt;&lt;a href=&quot;#什么是线程&quot; class=&quot;headerlink&quot; title=&quot;什么是线程&quot;&gt;&lt;/a&gt;什么是线程&lt;/h2&gt;&lt;p&gt;什么是线程？线程与进程与有什么关系？这是一个非常抽象的问题，也是一个特别广的话题，涉及到非常多的知识。我不能确保能把它讲的话，也不能确保讲的内容全部都正确。即使这样，我也希望尽可能地把他讲通俗一点，讲的明白一点，因为这是个一直困扰我很久的，扑朔迷离的知识领域，希望通过我的理解揭开它一层一层神秘的面纱。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>平凡的世界</title>
@@ -45,43 +167,6 @@
     
     
       <category term="Movie" scheme="http://ipcreator.me/tags/Movie/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java设计模式</title>
-    <link href="http://ipcreator.me/2017/03/12/Program/Java/anatomy-of-java-design-pattern/"/>
-    <id>http://ipcreator.me/2017/03/12/Program/Java/anatomy-of-java-design-pattern/</id>
-    <published>2017-03-12T01:23:06.000Z</published>
-    <updated>2017-03-12T11:45:25.647Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h2><p><strong>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</strong></p>
-<p>为什么作为Java新手神器的System.out.println()，到了真正项目开发当中会被唾弃呢？其实只要细细分析，你就会发现它的很多弊端。比如不可控制，所有的日志都会在项目上线后照常打印，从而降低运行效率；又或者不能将日志记录到本地文件，一旦打印被清除，日志将再也找不回来；再或者打印的内容没有Tag区分，你将很难辨别这一行日志是在哪个类里打印的。</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">private</span> <span class="keyword">static</span> LogUtil sLogUtil;  </div><div class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line">    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line">        sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>将LogUtil的构造函数私有化，这样就无法使用new关键字来创建LogUtil的实例了。然后使用一个sLogUtil私有静态变量来保存实例，并提供一个公有的getInstance方法用于获取LogUtil的实例，在这个方法里面判断如果sLogUtil为空，就new出一个新的LogUtil实例，否则就直接返回sLogUtil。这样就可以保证内存当中只会存在一个LogUtil的实例了。</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line"><span class="number">2.</span>    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line"><span class="number">3.</span>        sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>使用单例模式就是为了让这个类在内存中只能有一个实例的，可是你有考虑到在多线程中打印日志的情况吗？</p>
-<p>如果现在有两个线程同时在执行getInstance方法，第一个线程刚执行完第2行，还没执行第3行，这个时候第二个线程执行到了第2行，它会发现sLogUtil还是null，于是进入到了if判断里面。这样你的单例模式就失败了，因为创建了两个不同的实例。</p>
-<p>只需要给方法加上同步锁就可以了，代码如下：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line">    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line">        sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>如果是在getInstance方法上加了一个synchronized，那么我每次去执行getInstace方法的时候都会受到同步锁的影响，这样运行的效率会降低，其实<strong>只需要在第一次创建LogUtil实例的时候加上同步锁</strong>就好了。</p>
-<p>首先将synchronized关键字从方法声明中去除，把它加入到方法体当中：这样效果是和直接在方法上加synchronized完全一致的。然后在synchronized的外面再加一层判断，如下所示：代码改成这样之后，只有在sLogUtil还没被初始化的时候才会进入到第3行，然后加上同步锁。等sLogUtil一但初始化完成了，就再也走不到第3行了，这样执行getInstance方法也不会再受到同步锁的影响，效率上会有一定的提升。<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line"><span class="number">2.</span>    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line"><span class="number">3.</span>        <span class="keyword">synchronized</span> (LogUtil.class) &#123;  </div><div class="line">            <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line">                sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这种方法叫做<strong>双重锁定(Double-Check Locking)</strong></p>
-<p> 参考阅读：<br> <a href="http://blog.csdn.net/guolin_blog/article/details/8860649" target="_blank" rel="external"> Java设计模式透析之 —— 单例(Singleton)</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;单例&quot;&gt;&lt;a href=&quot;#单例&quot; class=&quot;headerlink&quot; title=&quot;单例&quot;&gt;&lt;/a&gt;单例&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;保证一个类仅有一个实例，并提供一个访问它的全局访问点。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;为什么作为Java新手神器的Syst
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
-    
-      <category term="Pattern" scheme="http://ipcreator.me/tags/Pattern/"/>
     
   </entry>
   
@@ -118,6 +203,48 @@
     
     
       <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java设计模式</title>
+    <link href="http://ipcreator.me/2017/03/12/Program/Java/anatomy-of-java-design-pattern/"/>
+    <id>http://ipcreator.me/2017/03/12/Program/Java/anatomy-of-java-design-pattern/</id>
+    <published>2017-03-12T01:23:06.000Z</published>
+    <updated>2017-03-12T14:20:45.606Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1489338402459&amp;di=f354d44523b4c5d751414e4970189a88&amp;imgtype=0&amp;src=http%3A%2F%2Fsishuok.com%2Fforum%2Fupload%2F2012%2F8%2F21%2Fd9c285859566d753d86f1a44bc9f9a05__2.JPG" alt=""></p>
+<h2 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h2><p><strong>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</strong></p>
+<p><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4232751296,330377077&amp;fm=23&amp;gp=0.jpg" alt=""></p>
+<a id="more"></a>
+<p>为什么作为Java新手神器的System.out.println()，到了真正项目开发当中会被唾弃呢？其实只要细细分析，你就会发现它的很多弊端。比如不可控制，所有的日志都会在项目上线后照常打印，从而降低运行效率；又或者不能将日志记录到本地文件，一旦打印被清除，日志将再也找不回来；再或者打印的内容没有Tag区分，你将很难辨别这一行日志是在哪个类里打印的。</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">private</span> <span class="keyword">static</span> LogUtil sLogUtil;  </div><div class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line">    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line">        sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>将LogUtil的构造函数私有化，这样就无法使用new关键字来创建LogUtil的实例了。然后使用一个sLogUtil私有静态变量来保存实例，并提供一个公有的getInstance方法用于获取LogUtil的实例，在这个方法里面判断如果sLogUtil为空，就new出一个新的LogUtil实例，否则就直接返回sLogUtil。这样就可以保证内存当中只会存在一个LogUtil的实例了。</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line"><span class="number">2.</span>    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line"><span class="number">3.</span>        sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>使用单例模式就是为了让这个类在内存中只能有一个实例的，可是你有考虑到在多线程中打印日志的情况吗？</p>
+<p>如果现在有两个线程同时在执行getInstance方法，第一个线程刚执行完第2行，还没执行第3行，这个时候第二个线程执行到了第2行，它会发现sLogUtil还是null，于是进入到了if判断里面。这样你的单例模式就失败了，因为创建了两个不同的实例。</p>
+<p>只需要给方法加上同步锁就可以了，代码如下：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line">    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line">        sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果是在getInstance方法上加了一个synchronized，那么我每次去执行getInstace方法的时候都会受到同步锁的影响，这样运行的效率会降低，其实<strong>只需要在第一次创建LogUtil实例的时候加上同步锁</strong>就好了。</p>
+<p>首先将synchronized关键字从方法声明中去除，把它加入到方法体当中：这样效果是和直接在方法上加synchronized完全一致的。然后在synchronized的外面再加一层判断，如下所示：代码改成这样之后，只有在sLogUtil还没被初始化的时候才会进入到第3行，然后加上同步锁。等sLogUtil一但初始化完成了，就再也走不到第3行了，这样执行getInstance方法也不会再受到同步锁的影响，效率上会有一定的提升。<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line"><span class="number">2.</span>    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line"><span class="number">3.</span>        <span class="keyword">synchronized</span> (LogUtil.class) &#123;  </div><div class="line">            <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line">                sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这种方法叫做<strong>双重锁定(Double-Check Locking)</strong></p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>A. 无论synchronized关键字加在方法上还是对象上，如果它作用的对象是非静态的，则它取得的锁是对象；如果synchronized作用的对象是一个静态方法或一个类，则它取得的锁是对类，该类所有的对象同一把锁。<br>B. 每个对象只有一个锁（lock）与之相关联，谁拿到这个锁谁就可以运行它所控制的那段代码。<br>C. 实现同步是要很大的系统开销作为代价的，甚至可能造成死锁，所以尽量避免无谓的同步控制。</p>
+<p> 参考阅读：<br> <a href="http://blog.csdn.net/guolin_blog/article/details/8860649" target="_blank" rel="external"> Java设计模式透析之 —— 单例(Singleton)</a><br> <a href="http://blog.csdn.net/luoweifu/article/details/46613015" target="_blank" rel="external"> Java中Synchronized的用法</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp;amp;sec=1489338402459&amp;amp;di=f354d44523b4c5d751414e4970189a88&amp;amp;imgtype=0&amp;amp;src=http%3A%2F%2Fsishuok.com%2Fforum%2Fupload%2F2012%2F8%2F21%2Fd9c285859566d753d86f1a44bc9f9a05__2.JPG&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;单例&quot;&gt;&lt;a href=&quot;#单例&quot; class=&quot;headerlink&quot; title=&quot;单例&quot;&gt;&lt;/a&gt;单例&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;保证一个类仅有一个实例，并提供一个访问它的全局访问点。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4232751296,330377077&amp;amp;fm=23&amp;amp;gp=0.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
+    
+      <category term="Pattern" scheme="http://ipcreator.me/tags/Pattern/"/>
     
   </entry>
   
@@ -1746,58 +1873,6 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
   </entry>
   
   <entry>
-    <title>如何正确地写出单例模式</title>
-    <link href="http://ipcreator.me/2017/03/03/Program/Concepts/how-to-write-singe-instance/"/>
-    <id>http://ipcreator.me/2017/03/03/Program/Concepts/how-to-write-singe-instance/</id>
-    <published>2017-03-03T00:31:06.000Z</published>
-    <updated>2017-03-03T01:28:44.188Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/" target="_blank" rel="external">Jark’s Blog
-</a></p>
-<p>单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。</p>
- <a id="more"></a>
-<h2 id="懒汉式，线程不安全"><a href="#懒汉式，线程不安全" class="headerlink" title="懒汉式，线程不安全"></a>懒汉式，线程不安全</h2><p>当被问到要实现一个单例模式时，很多人的第一反应是写出如下的代码，包括教科书上也是这样教我们的。<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">   <span class="keyword"> private</span><span class="keyword"> static</span> Singleton instance;</div><div class="line">   <span class="keyword"> private</span> Singleton ()&#123;&#125;</div><div class="line"></div><div class="line">   <span class="keyword"> public</span><span class="keyword"> static</span> Singleton getInstance() &#123;</div><div class="line">    <span class="built_in"> if </span>(instance == null) &#123;</div><div class="line">        <span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</div><div class="line">     &#125;</div><div class="line">    <span class="built_in"> return </span>instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这段代码简单明了，而且使用了懒加载模式，但是却存在致命的问题。当有多个线程并行调用 getInstance() 的时候，就会创建多个实例。也就是说在多线程下不能正常工作。</p>
-<p>懒汉式，线程安全<br>为了解决上面的问题，最简单的方法是将整个 getInstance() 方法设为同步（synchronized）。<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public<span class="keyword"> static</span> synchronized Singleton getInstance() &#123;</div><div class="line">   <span class="built_in"> if </span>(instance == null) &#123;</div><div class="line">       <span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</div><div class="line">    &#125;</div><div class="line">   <span class="built_in"> return </span>instance;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>虽然做到了线程安全，并且解决了多实例的问题，但是它并不高效。因为在任何时候只能有一个线程调用 getInstance() 方法。但是同步操作只需要在第一次调用时才被需要，即第一次创建单例实例对象时。这就引出了双重检验锁。</p>
-<p><strong>双重检验锁</strong><br>双重检验锁模式（double checked locking pattern），是一种使用同步块加锁的方法。程序员称其为双重检查锁，因为会有两次检查 instance == null，一次是在同步块外，一次是在同步块内。为什么在同步块内还要再检验一次？因为可能会有多个线程一起进入同步块外的 if，如果在同步块内不进行二次检验的话就会生成多个实例了。<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public<span class="keyword"> static</span> Singleton getSingleton() &#123;</div><div class="line">   <span class="built_in"> if </span>(instance == null) &#123;                         //Single Checked</div><div class="line">        synchronized (Singleton.class) &#123;</div><div class="line">           <span class="built_in"> if </span>(instance == null) &#123;                 //Double Checked</div><div class="line">               <span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">   <span class="built_in"> return </span>instance ;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这段代码看起来很完美，很可惜，它是有问题。主要在于instance = new Singleton()这句，这并非是一个原子操作，事实上在 JVM 中这句话大概做了下面 3 件事情。</p>
-<ol>
-<li>给 instance 分配内存</li>
-<li>调用 Singleton 的构造函数来初始化成员变量</li>
-<li>将instance对象指向分配的内存空间（执行完这步 instance 就为非 null 了）<br>但是在 JVM 的即时编译器中存在指令重排序的优化。也就是说上面的第二步和第三步的顺序是不能保证的，最终的执行顺序可能是 1-2-3 也可能是 1-3-2。如果是后者，则在 3 执行完毕、2 未执行之前，被线程二抢占了，这时 instance 已经是非 null 了（但却没有初始化），所以线程二会直接返回 instance，然后使用，然后顺理成章地报错。</li>
-</ol>
-<p>我们只需要将 instance 变量声明成 volatile 就可以了。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton instance; <span class="comment">//声明成 volatile</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;                         </div><div class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;</div><div class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;       </div><div class="line">                    instance = <span class="keyword">new</span> Singleton();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>有些人认为使用 volatile 的原因是可见性，也就是可以保证线程在本地不会存有 instance 的副本，每次都是去主内存中读取。但其实是不对的。使用 volatile 的主要原因是其另一个特性：禁止指令重排序优化。也就是说，在 volatile 变量的赋值操作后面会有一个内存屏障（生成的汇编代码上），读操作不会被重排序到内存屏障之前。比如上面的例子，取操作必须在执行完 1-2-3 之后或者 1-3-2 之后，不存在执行到 1-3 然后取到值的情况。从「先行发生原则」的角度理解的话，就是对于一个 volatile 变量的写操作都先行发生于后面对这个变量的读操作（这里的“后面”是时间上的先后顺序）。</p>
-<p>但是特别注意在 Java 5 以前的版本使用了 volatile 的双检锁还是有问题的。其原因是 Java 5 以前的 JMM （Java 内存模型）是存在缺陷的，即时将变量声明成 volatile 也不能完全避免重排序，主要是 volatile 变量前后的代码仍然存在重排序问题。这个 volatile 屏蔽重排序的问题在 Java 5 中才得以修复，所以在这之后才可以放心使用 volatile。</p>
-<p>相信你不会喜欢这种复杂又隐含问题的方式，当然我们有更好的实现线程安全的单例模式的办法。</p>
-<h2 id="饿汉式-static-final-field"><a href="#饿汉式-static-final-field" class="headerlink" title="饿汉式 static final field"></a>饿汉式 static final field</h2><p>这种方法非常简单，因为单例的实例被声明成 static 和 final 变量了，在第一次加载类到内存中时就会初始化，所以创建实例本身是线程安全的。<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class Singleton&#123;</div><div class="line">    //类加载时就初始化</div><div class="line">   <span class="keyword"> private</span><span class="keyword"> static</span><span class="keyword"> final</span> Singleton<span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</div><div class="line"></div><div class="line">   <span class="keyword"> private</span> Singleton()&#123;&#125;</div><div class="line"></div><div class="line">   <span class="keyword"> public</span><span class="keyword"> static</span> Singleton getInstance()&#123;</div><div class="line">       <span class="built_in"> return </span>instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这种写法如果完美的话，就没必要在啰嗦那么多双检锁的问题了。缺点是它不是一种懒加载模式（lazy initialization），单例会在加载类后一开始就被初始化，即使客户端没有调用 getInstance()方法。饿汉式的创建方式在一些场景中将无法使用：譬如 Singleton 实例的创建是依赖参数或者配置文件的，在 getInstance() 之前必须调用某个方法设置参数给它，那样这种单例写法就无法使用了。</p>
-<h2 id="静态内部类-static-nested-class"><a href="#静态内部类-static-nested-class" class="headerlink" title="静态内部类 static nested class"></a>静态内部类 static nested class</h2><p>我比较倾向于使用静态内部类的方法，这种方法也是《Effective Java》上所推荐的。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonHolder</span> </span>&#123;  </div><div class="line">        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton INSTANCE = <span class="keyword">new</span> Singleton();  </div><div class="line">    &#125;  </div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line">        <span class="keyword">return</span> SingletonHolder.INSTANCE;</div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这种写法仍然使用JVM本身机制保证了线程安全问题；由于 SingletonHolder 是私有的，除了 getInstance() 之外没有办法访问它，因此它是懒汉式的；同时读取实例的时候不会进行同步，没有性能缺陷；也不依赖 JDK 版本。</p>
-<h2 id="枚举-Enum"><a href="#枚举-Enum" class="headerlink" title="枚举 Enum"></a>枚举 Enum</h2><p>用枚举写单例实在太简单了！这也是它最大的优点。下面这段代码就是声明枚举实例的通常做法。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">enum</span> <span class="title">EasySingleton</span>&#123;</span></div><div class="line">    INSTANCE;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>我们可以通过EasySingleton.INSTANCE来访问实例，这比调用getInstance()方法简单多了。创建枚举默认就是线程安全的，所以不需要担心double checked locking，而且还能防止反序列化导致重新创建新的对象。但是还是很少看到有人这样写，可能是因为不太熟悉吧。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>一般来说，单例模式有五种写法：懒汉、饿汉、双重检验锁、静态内部类、枚举。上述所说都是线程安全的实现，文章开头给出的第一种方法不算正确的写法。</p>
-<p>就我个人而言，一般情况下直接使用饿汉式就好了，如果明确要求要懒加载（lazy initialization）会倾向于使用静态内部类，如果涉及到反序列化创建对象时会试着使用枚举的方式来实现单例。</p>
-<h2 id="Read-More"><a href="#Read-More" class="headerlink" title="Read More"></a>Read More</h2><p><a href="http://javarevisited.blogspot.sg/2014/05/double-checked-locking-on-singleton-in-java.html" target="_blank" rel="external">Double Checked Locking on Singleton Class in Java</a><br><a href="http://javarevisited.blogspot.sg/2012/07/why-enum-singleton-are-better-in-java.html" target="_blank" rel="external">Why Enum Singleton are better in Java</a><br><a href="http://javarevisited.blogspot.com/2012/12/how-to-create-thread-safe-singleton-in-java-example.html" target="_blank" rel="external">How to create thread safe Singleton in Java</a><br><a href="http://javarevisited.blogspot.com/2011/03/10-interview-questions-on-singleton.html" target="_blank" rel="external">10 Singleton Pattern Interview questions in Java</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/&quot;&gt;Jark’s Blog
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
     <title>AndroidStudio技巧</title>
     <link href="http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/"/>
     <id>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</id>
@@ -1854,6 +1929,58 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
       &lt;p&gt;&lt;a href=&quot;http://www.codeceo.com/article/android-studio-skills.html&quot;&gt;提高效率的 Android Studio 技巧汇总&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://static.codeceo.com/images/2015/08/android-studio-logo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;工欲善其事必先利其器，磨刀不误砍柴工&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何正确地写出单例模式</title>
+    <link href="http://ipcreator.me/2017/03/03/Program/Concepts/how-to-write-singe-instance/"/>
+    <id>http://ipcreator.me/2017/03/03/Program/Concepts/how-to-write-singe-instance/</id>
+    <published>2017-03-03T00:31:06.000Z</published>
+    <updated>2017-03-03T01:28:44.188Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/" target="_blank" rel="external">Jark’s Blog
+</a></p>
+<p>单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。</p>
+ <a id="more"></a>
+<h2 id="懒汉式，线程不安全"><a href="#懒汉式，线程不安全" class="headerlink" title="懒汉式，线程不安全"></a>懒汉式，线程不安全</h2><p>当被问到要实现一个单例模式时，很多人的第一反应是写出如下的代码，包括教科书上也是这样教我们的。<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">   <span class="keyword"> private</span><span class="keyword"> static</span> Singleton instance;</div><div class="line">   <span class="keyword"> private</span> Singleton ()&#123;&#125;</div><div class="line"></div><div class="line">   <span class="keyword"> public</span><span class="keyword"> static</span> Singleton getInstance() &#123;</div><div class="line">    <span class="built_in"> if </span>(instance == null) &#123;</div><div class="line">        <span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</div><div class="line">     &#125;</div><div class="line">    <span class="built_in"> return </span>instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这段代码简单明了，而且使用了懒加载模式，但是却存在致命的问题。当有多个线程并行调用 getInstance() 的时候，就会创建多个实例。也就是说在多线程下不能正常工作。</p>
+<p>懒汉式，线程安全<br>为了解决上面的问题，最简单的方法是将整个 getInstance() 方法设为同步（synchronized）。<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public<span class="keyword"> static</span> synchronized Singleton getInstance() &#123;</div><div class="line">   <span class="built_in"> if </span>(instance == null) &#123;</div><div class="line">       <span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</div><div class="line">    &#125;</div><div class="line">   <span class="built_in"> return </span>instance;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>虽然做到了线程安全，并且解决了多实例的问题，但是它并不高效。因为在任何时候只能有一个线程调用 getInstance() 方法。但是同步操作只需要在第一次调用时才被需要，即第一次创建单例实例对象时。这就引出了双重检验锁。</p>
+<p><strong>双重检验锁</strong><br>双重检验锁模式（double checked locking pattern），是一种使用同步块加锁的方法。程序员称其为双重检查锁，因为会有两次检查 instance == null，一次是在同步块外，一次是在同步块内。为什么在同步块内还要再检验一次？因为可能会有多个线程一起进入同步块外的 if，如果在同步块内不进行二次检验的话就会生成多个实例了。<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public<span class="keyword"> static</span> Singleton getSingleton() &#123;</div><div class="line">   <span class="built_in"> if </span>(instance == null) &#123;                         //Single Checked</div><div class="line">        synchronized (Singleton.class) &#123;</div><div class="line">           <span class="built_in"> if </span>(instance == null) &#123;                 //Double Checked</div><div class="line">               <span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">   <span class="built_in"> return </span>instance ;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这段代码看起来很完美，很可惜，它是有问题。主要在于instance = new Singleton()这句，这并非是一个原子操作，事实上在 JVM 中这句话大概做了下面 3 件事情。</p>
+<ol>
+<li>给 instance 分配内存</li>
+<li>调用 Singleton 的构造函数来初始化成员变量</li>
+<li>将instance对象指向分配的内存空间（执行完这步 instance 就为非 null 了）<br>但是在 JVM 的即时编译器中存在指令重排序的优化。也就是说上面的第二步和第三步的顺序是不能保证的，最终的执行顺序可能是 1-2-3 也可能是 1-3-2。如果是后者，则在 3 执行完毕、2 未执行之前，被线程二抢占了，这时 instance 已经是非 null 了（但却没有初始化），所以线程二会直接返回 instance，然后使用，然后顺理成章地报错。</li>
+</ol>
+<p>我们只需要将 instance 变量声明成 volatile 就可以了。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton instance; <span class="comment">//声明成 volatile</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;                         </div><div class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;</div><div class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;       </div><div class="line">                    instance = <span class="keyword">new</span> Singleton();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>有些人认为使用 volatile 的原因是可见性，也就是可以保证线程在本地不会存有 instance 的副本，每次都是去主内存中读取。但其实是不对的。使用 volatile 的主要原因是其另一个特性：禁止指令重排序优化。也就是说，在 volatile 变量的赋值操作后面会有一个内存屏障（生成的汇编代码上），读操作不会被重排序到内存屏障之前。比如上面的例子，取操作必须在执行完 1-2-3 之后或者 1-3-2 之后，不存在执行到 1-3 然后取到值的情况。从「先行发生原则」的角度理解的话，就是对于一个 volatile 变量的写操作都先行发生于后面对这个变量的读操作（这里的“后面”是时间上的先后顺序）。</p>
+<p>但是特别注意在 Java 5 以前的版本使用了 volatile 的双检锁还是有问题的。其原因是 Java 5 以前的 JMM （Java 内存模型）是存在缺陷的，即时将变量声明成 volatile 也不能完全避免重排序，主要是 volatile 变量前后的代码仍然存在重排序问题。这个 volatile 屏蔽重排序的问题在 Java 5 中才得以修复，所以在这之后才可以放心使用 volatile。</p>
+<p>相信你不会喜欢这种复杂又隐含问题的方式，当然我们有更好的实现线程安全的单例模式的办法。</p>
+<h2 id="饿汉式-static-final-field"><a href="#饿汉式-static-final-field" class="headerlink" title="饿汉式 static final field"></a>饿汉式 static final field</h2><p>这种方法非常简单，因为单例的实例被声明成 static 和 final 变量了，在第一次加载类到内存中时就会初始化，所以创建实例本身是线程安全的。<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class Singleton&#123;</div><div class="line">    //类加载时就初始化</div><div class="line">   <span class="keyword"> private</span><span class="keyword"> static</span><span class="keyword"> final</span> Singleton<span class="built_in"> instance </span>=<span class="built_in"> new </span>Singleton();</div><div class="line"></div><div class="line">   <span class="keyword"> private</span> Singleton()&#123;&#125;</div><div class="line"></div><div class="line">   <span class="keyword"> public</span><span class="keyword"> static</span> Singleton getInstance()&#123;</div><div class="line">       <span class="built_in"> return </span>instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这种写法如果完美的话，就没必要在啰嗦那么多双检锁的问题了。缺点是它不是一种懒加载模式（lazy initialization），单例会在加载类后一开始就被初始化，即使客户端没有调用 getInstance()方法。饿汉式的创建方式在一些场景中将无法使用：譬如 Singleton 实例的创建是依赖参数或者配置文件的，在 getInstance() 之前必须调用某个方法设置参数给它，那样这种单例写法就无法使用了。</p>
+<h2 id="静态内部类-static-nested-class"><a href="#静态内部类-static-nested-class" class="headerlink" title="静态内部类 static nested class"></a>静态内部类 static nested class</h2><p>我比较倾向于使用静态内部类的方法，这种方法也是《Effective Java》上所推荐的。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonHolder</span> </span>&#123;  </div><div class="line">        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton INSTANCE = <span class="keyword">new</span> Singleton();  </div><div class="line">    &#125;  </div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line">        <span class="keyword">return</span> SingletonHolder.INSTANCE;</div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这种写法仍然使用JVM本身机制保证了线程安全问题；由于 SingletonHolder 是私有的，除了 getInstance() 之外没有办法访问它，因此它是懒汉式的；同时读取实例的时候不会进行同步，没有性能缺陷；也不依赖 JDK 版本。</p>
+<h2 id="枚举-Enum"><a href="#枚举-Enum" class="headerlink" title="枚举 Enum"></a>枚举 Enum</h2><p>用枚举写单例实在太简单了！这也是它最大的优点。下面这段代码就是声明枚举实例的通常做法。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">enum</span> <span class="title">EasySingleton</span>&#123;</span></div><div class="line">    INSTANCE;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>我们可以通过EasySingleton.INSTANCE来访问实例，这比调用getInstance()方法简单多了。创建枚举默认就是线程安全的，所以不需要担心double checked locking，而且还能防止反序列化导致重新创建新的对象。但是还是很少看到有人这样写，可能是因为不太熟悉吧。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>一般来说，单例模式有五种写法：懒汉、饿汉、双重检验锁、静态内部类、枚举。上述所说都是线程安全的实现，文章开头给出的第一种方法不算正确的写法。</p>
+<p>就我个人而言，一般情况下直接使用饿汉式就好了，如果明确要求要懒加载（lazy initialization）会倾向于使用静态内部类，如果涉及到反序列化创建对象时会试着使用枚举的方式来实现单例。</p>
+<h2 id="Read-More"><a href="#Read-More" class="headerlink" title="Read More"></a>Read More</h2><p><a href="http://javarevisited.blogspot.sg/2014/05/double-checked-locking-on-singleton-in-java.html" target="_blank" rel="external">Double Checked Locking on Singleton Class in Java</a><br><a href="http://javarevisited.blogspot.sg/2012/07/why-enum-singleton-are-better-in-java.html" target="_blank" rel="external">Why Enum Singleton are better in Java</a><br><a href="http://javarevisited.blogspot.com/2012/12/how-to-create-thread-safe-singleton-in-java-example.html" target="_blank" rel="external">How to create thread safe Singleton in Java</a><br><a href="http://javarevisited.blogspot.com/2011/03/10-interview-questions-on-singleton.html" target="_blank" rel="external">10 Singleton Pattern Interview questions in Java</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/&quot;&gt;Jark’s Blog
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。&lt;/p&gt;
     
     </summary>
     
@@ -2868,6 +2995,84 @@ grub引导也分为两个阶段stage1阶段和stage2阶段(有些较新的grub�
   </entry>
   
   <entry>
+    <title>Android硬件加速原理与实现简介</title>
+    <link href="http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/"/>
+    <id>http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/</id>
+    <published>2017-02-26T14:57:06.000Z</published>
+    <updated>2017-02-27T00:24:17.038Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://tech.meituan.com/hardware-accelerate.html" target="_blank" rel="external">子健</a></p>
+<p>在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。</p>
+<p>本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。</p>
+<a id="more"></a>
+<h2 id="了解硬件加速对App开发的意义"><a href="#了解硬件加速对App开发的意义" class="headerlink" title="了解硬件加速对App开发的意义"></a>了解硬件加速对App开发的意义</h2><p>对于App开发者，简单了解硬件加速原理及上层API实现，开发时就可以充分利用硬件加速提高页面的性能。以Android举例，实现一个圆角矩形按钮通常有两种方案：使用PNG图片；使用代码（XML/Java）实现。简单对比两种方案如下。</p>
+<p>方案    原理    特点<br>使用PNG图片（BitmapDrawable）    解码PNG图片生成Bitmap，传到底层，由GPU渲染    图片解码消耗CPU运算资源，Bitmap占用内存大，绘制慢<br>使用XML或Java代码实现（ShapeDrawable）    直接将Shape信息传到底层，由GPU渲染    消耗CPU资源少，占用内存小，绘制快</p>
+<h3 id="页面渲染背景知识"><a href="#页面渲染背景知识" class="headerlink" title="页面渲染背景知识"></a>页面渲染背景知识</h3><p>页面渲染时，被绘制的元素最终要转换成矩阵像素点（即多维数组形式，类似安卓中的Bitmap），才能被显示器显示。<br>页面由各种基本元素组成，例如圆形、圆角矩形、线段、文字、矢量图（常用贝塞尔曲线组成）、Bitmap等。<br>元素绘制时尤其是动画绘制过程中，经常涉及插值、缩放、旋转、透明度变化、动画过渡、毛玻璃模糊，甚至包括3D变换、物理运动（例如游戏中常见的抛物线运动）、多媒体文件解码（主要在桌面机中有应用，移动设备一般不用GPU做解码）等运算。<br>绘制过程经常需要进行逻辑较简单、但数据量庞大的浮点运算。</p>
+<h3 id="CPU与GPU结构对比"><a href="#CPU与GPU结构对比" class="headerlink" title="CPU与GPU结构对比"></a>CPU与GPU结构对比</h3><p>CPU（Central Processing Unit，中央处理器）是计算机设备核心器件，用于执行程序代码，软件开发者对此都很熟悉；GPU（Graphics Processing Unit，图形处理器）主要用于处理图形运算，通常所说“显卡”的核心部件就是GPU。</p>
+<p>下面是CPU和GPU的结构对比图。其中：<br><img src="http://tech.meituan.com/img/hardware-accelerate/cpu-gpu.png" alt=""><br>黄色的Control为控制器，用于协调控制整个CPU的运行，包括取出指令、控制其他模块的运行等；<br>绿色的ALU（Arithmetic Logic Unit）是算术逻辑单元，用于进行数学、逻辑运算；<br>橙色的Cache和DRAM分别为缓存和RAM，用于存储信息。</p>
+<p>从结构图可以看出，CPU的控制器较为复杂，而ALU数量较少。因此<strong>CPU擅长各种复杂的逻辑运算，但不擅长数学尤其是浮点运算。</strong></p>
+<p>以8086为例，一百多条汇编指令大部分都是逻辑指令，数学计算相关的主要是16位加减乘除和移位运算。一次整型和逻辑运算一般需要1~3个机器周期，而浮点运算要转换成整数计算，一次运算可能消耗上百个机器周期。<br>更简单的<strong>CPU甚至只有加法指令，减法用补码加法实现，乘法用累加实现，除法用减法循环实现。</strong><br>现代CPU一般都带有硬件浮点运算器（FPU），但主要适用于数据量不大的情况。<br>CPU是串行结构。以计算100个数字为例，对于CPU的一个核，每次只能计算两个数的和，结果逐步累加。<br>和CPU不同的是，<strong>GPU就是为实现大量数学运算设计的。从结构图中可以看到，GPU的控制器比较简单，但包含了大量ALU。GPU中的ALU使用了并行设计，且具有较多浮点运算单元。</strong></p>
+<blockquote>
+<p><strong>硬件加速的主要原理，就是通过底层软件代码，将CPU不擅长的图形计算转换成GPU专用指令，由GPU完成。</strong></p>
+</blockquote>
+<p>扩展：很多计算机中的GPU有自己独立的显存；没有独立显存则使用共享内存的形式，从内存中划分一块区域作为显存。显存可以保存GPU指令等信息。</p>
+<h3 id="并行结构举例：级联加法器"><a href="#并行结构举例：级联加法器" class="headerlink" title="并行结构举例：级联加法器"></a>并行结构举例：级联加法器</h3><p>为了方便理解，这里先从底层电路结构的角度举一个例子。如下图为一个加法器，对应实际的数字电路结构。</p>
+<p>A、B为输入，C为输出，且A、B、C均为总线，以32位CPU为例，则每根总线实际由32根导线组成，每根导线用不同的电压表示一个二进制的0或1。<br>Clock为时钟信号线，每个固定的时钟周期可向其输入一个特定的电压信号，每当一个时钟信号到来时，A和B的和就会输出到C。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-1.png" alt=""></p>
+<p>现在我们要计算8个整数的和。</p>
+<p>对于CPU这种串行结构，代码编写很简单，用for循环把所有数字逐个相加即可。串行结构只有一个加法器，需要7次求和运算；每次计算完部分和，还要将其再转移到加法器的输入端，做下一次计算。整个过程至少要消耗十几个机器周期。</p>
+<p>而对于并行结构，一种常见的设计是级联加法器，如下图，其中所有的clock连在一起。当需要相加的8个数据在输入端A1~B4准备好后，经过三个时钟周期，求和操作就完成了。如果数据量更大、级联的层级更大，则并行结构的优势更明显。</p>
+<p>由于电路的限制，不容易通过提高时钟频率、减小时钟周期的方式提高运算速度。并行结构通过增加电路规模、并行处理，来实现更快的运算。但并行结构不容易实现复杂逻辑，因为同时考虑多个支路的输出结果，并协调同步处理的过程很复杂（有点像多线程编程）。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-2.png" alt=""></p>
+<p>GPU并行计算举例<br>假设我们有如下图像处理任务，给每个像素值加1。GPU并行计算的方式简单粗暴，在资源允许的情况下，可以为每个像素开一个GPU线程，由其进行加1操作。数学运算量越大，这种并行方式性能优势越明显。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-task.png" alt=""></p>
+<h2 id="Android中的硬件加速"><a href="#Android中的硬件加速" class="headerlink" title="Android中的硬件加速"></a>Android中的硬件加速</h2><p>在Android中，大多数应用的界面都是利用常规的View来构建的（除了游戏、视频、图像等应用可能直接使用OpenGL ES）。下面根据Android 6.0原生系统的Java层代码，对View的软件和硬件加速渲染做一些分析和对比。</p>
+<p>DisplayList<br>DisplayList是一个基本绘制元素，包含元素原始属性（位置、尺寸、角度、透明度等），对应Canvas的drawXxx()方法（如下图）。</p>
+<p>信息传递流程：Canvas(Java API) —&gt; OpenGL(C/C++ Lib) —&gt; 驱动程序 —&gt; GPU。</p>
+<p>在Android 4.1及以上版本，DisplayList支持属性，如果View的一些属性发生变化（比如Scale、Alpha、Translate），只需把属性更新给GPU，不需要生成新的DisplayList。</p>
+<p>RenderNode<br>一个RenderNode包含若干个DisplayList，通常一个RenderNode对应一个View，包含View自身及其子View的所有DisplayList。<br><img src="http://tech.meituan.com/img/hardware-accelerate/canvas-draw.png" alt=""></p>
+<h2 id="Android绘制流程（Android-6-0）"><a href="#Android绘制流程（Android-6-0）" class="headerlink" title="Android绘制流程（Android 6.0）"></a>Android绘制流程（Android 6.0）</h2><p>下面是安卓View完整的绘制流程图，主要通过阅读源码和调试得出，虚线箭头表示递归调用。</p>
+<p>从ViewRootImpl.performTraversals到PhoneWindow.DecroView.drawChild是每次遍历View树的固定流程，首先根据标志位判断是否需要重新布局并执行布局；然后进行Canvas的创建等操作开始绘制。</p>
+<p>如果硬件加速不支持或者被关闭，则使用软件绘制，生成的Canvas即Canvas.class的对象；<br>如果支持硬件加速，则生成的是DisplayListCanvas.class的对象；<br>两者的isHardwareAccelerated()方法返回的值分别为false、true，View根据这个值判断是否使用硬件加速。<br>View中的draw(canvas,parent,drawingTime) - draw(canvas) - onDraw - dispachDraw - drawChild这条递归路径（下文简称Draw路径），调用了Canvas.drawXxx()方法，在软件渲染时用于实际绘制；在硬件加速时，用于构建DisplayList。<br>View中的updateDisplayListIfDirty - dispatchGetDisplayList - recreateChildDisplayList这条递归路径（下文简称DisplayList路径），仅在硬件加速时会经过，用于在遍历View树绘制的过程中更新DisplayList属性，并快速跳过不需要重建DisplayList的View。</p>
+<p>Android 6.0中，和DisplayList相关的API目前仍被标记为“@hide”不可访问，表示还不成熟，后续版本可能开放。<br>硬件加速情况下，draw流程执行结束后DisplayList构建完成，然后通过ThreadedRenderer.nSyncAndDrawFrame()利用GPU绘制DisplayList到屏幕上。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-func.png" alt=""></p>
+<h2 id="纯软件绘制-VS-硬件加速（Android-6-0）"><a href="#纯软件绘制-VS-硬件加速（Android-6-0）" class="headerlink" title="纯软件绘制 VS 硬件加速（Android 6.0）"></a>纯软件绘制 VS 硬件加速（Android 6.0）</h2><p>下面根据具体的几种场景，具体分析一下硬件加速前后的流程与加速效果。</p>
+<p>渲染场景    纯软件绘制    硬件加速    加速效果分析<br>页面初始化    绘制所有View    创建所有DisplayList    GPU分担了复杂计算任务<br>在一个复杂页面调用背景透明TextView的setText()，且调用后其尺寸位置不变    重绘脏区所有View    TextView及每一级父View重建DisplayList    重叠的兄弟节点不需CPU重绘，GPU会自行处理<br>TextView逐帧播放Alpha / Translation / Scale动画    每帧都要重绘脏区所有View    除第一帧同场景2，之后每帧只更新TextView对应RenderNode的属性    刷新一帧性能极大提高，动画流畅度提高<br>修改TextView透明度    重绘脏区所有View    直接调用RenderNode.setAlpha()更新    加速前需全页面遍历，并重绘很多View；加速后只触发DecorView.updateDisplayListIfDirty，不再往下遍历，CPU执行时间可忽略不计</p>
+<p>场景1中，无论是否加速，遍历View树并都会走Draw路径。硬件加速后Draw路径不做实际绘制工作，只是构建DisplayList，复杂的绘制计算任务被GPU分担，已经有了较大的加速效果。<br>场景2中，TextView设置前后尺寸位置不变，不会触发重新Layout。</p>
+<p>软件绘制时，TextView所在区域即为脏区。由于TextView有透明区域，遍历View树的过程中，和脏区重叠的多数View都要重绘，包括与之重叠的兄弟节点和他们的父节点（详见后面的介绍），不需要绘制的View在draw(canvas,parent,drawingTime)方法中判断直接返回。</p>
+<p>硬件加速后，也需要遍历View树，但只有TextView及其每一层父节点需要重建DisplayList，走的是Draw路径，其他View直接走了DisplayList路径，剩下的工作都交给GPU处理。页面越复杂，两者性能差距越明显。</p>
+<p>场景3中，软件绘制每一帧都要做大量绘制工作，很容易导致动画卡顿。硬件加速后，动画过程直接走DisplayList路径更新DisplayList的属性，动画流畅度能得到极大提高。</p>
+<p>场景4中，两者的性能差距更明显。简单修改透明度，软件绘制仍然要做很多工作；硬件加速后一般直接更新RenderNode的属性，不需要触发invalidate，也不会遍历View树（除了少数View可能要对Alpha做特殊响应并在onSetAlpha()返回true，代码如下）。<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> class View &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">void</span> setAlpha(@FloatRange(from=<span class="number">0.0</span>, to=<span class="number">1.0</span>) <span class="built_in">float</span> <span class="built_in">alpha</span>) &#123;</div><div class="line">        ensureTransformationInfo();</div><div class="line">        <span class="keyword">if</span> (mTransformationInfo.mAlpha != <span class="built_in">alpha</span>) &#123;</div><div class="line">            mTransformationInfo.mAlpha = <span class="built_in">alpha</span>;</div><div class="line">            <span class="keyword">if</span> (onSetAlpha((<span class="built_in">int</span>) (<span class="built_in">alpha</span> * <span class="number">255</span>))) &#123;</div><div class="line">                <span class="comment">// ...</span></div><div class="line">                invalidate(<span class="keyword">true</span>);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="comment">// ...</span></div><div class="line">                mRenderNode.setAlpha(getFinalAlpha());</div><div class="line">                <span class="comment">// ...</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">protected</span> <span class="built_in">boolean</span> onSetAlpha(<span class="built_in">int</span> <span class="built_in">alpha</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="软件绘制刷新逻辑简介"><a href="#软件绘制刷新逻辑简介" class="headerlink" title="软件绘制刷新逻辑简介"></a>软件绘制刷新逻辑简介</h3><p>实际阅读源码并实验，得出通常情况下的软件绘制刷新逻辑：</p>
+<p>默认情况下，View的clipChildren属性为true，即每个View绘制区域不能超出其父View的范围。如果设置一个页面根布局的clipChildren属性为false，则子View可以超出父View的绘制区域。<br>当一个View触发invalidate，且没有播放动画、没有触发layout的情况下：</p>
+<p>对于全不透明的View，其自身会设置标志位PFLAG_DIRTY，其父View会设置标志位PFLAG_DIRTY_OPAQUE。在draw(canvas)方法中，只有这个View自身重绘。<br>对于可能有透明区域的View，其自身和父View都会设置标志位PFLAG_DIRTY。</p>
+<p>clipChildren为true时，脏区会被转换成ViewRoot中的Rect，刷新时层层向下判断，当View与脏区有重叠则重绘。如果一个View超出父View范围且与脏区重叠，但其父View不与脏区重叠，这个子View不会重绘。<br>clipChildren为false时，ViewGroup.invalidateChildInParent()中会把脏区扩大到自身整个区域，于是与这个区域重叠的所有View都会重绘。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>至此，硬件加速相关的内容就介绍完了，这里做个简单总结：</p>
+<p>CPU更擅长复杂逻辑控制，而GPU得益于大量ALU和并行结构设计，更擅长数学运算。<br>页面由各种基础元素（DisplayList）构成，渲染时需要进行大量浮点运算。</p>
+<p>硬件加速条件下，CPU用于控制复杂绘制逻辑、构建或更新DisplayList；GPU用于完成图形计算、渲染DisplayList。</p>
+<p>硬件加速条件下，刷新界面尤其是播放动画时，CPU只重建或更新必要的DisplayList，进一步提高渲染效率。</p>
+<p>实现同样效果，应尽量使用更简单的DisplayList，从而达到更好的性能（Shape代替Bitmap等）。</p>
+<h2 id="参考资料与扩展阅读"><a href="#参考资料与扩展阅读" class="headerlink" title="参考资料与扩展阅读"></a>参考资料与扩展阅读</h2><p><a href="http://www.cnblogs.com/LBSer/p/4592862.html" target="_blank" rel="external">GPU—并行计算利器</a><br><a href="http://www.eechina.com/thread-176224-1-1.html" target="_blank" rel="external">显示卡的“心脏”GPU工作原理介绍</a><br><a href="http://hust.cf/matlab/2016/05/15/Matlab%E7%9A%84GPU%E5%8A%A0%E9%80%9F.html" target="_blank" rel="external">Matlab的GPU加速</a><br><a href="http://blog.csdn.net/yang_yulei/article/details/22529437" target="_blank" rel="external">处理器体系结构：了解CPU的基本运行原理</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3563960.html" target="_blank" rel="external">CPU的内部架构和工作原理</a><br><a href="http://xilinx.eetrend.com/article/10087" target="_blank" rel="external">什么是异构多处理系统，为什么需要异构多处理系统</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/45943255" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List构建过程分析</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/46281499" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List渲染过程分析</a><br><a href="http://www.jianshu.com/p/996bca12eb1d" target="_blank" rel="external">Android Choreographer源码分析</a><br><a href="http://blog.csdn.net/innost/article/details/8272867" target="_blank" rel="external">Android Project Butter分析</a></p>
+<p>不想错过技术博客更新？想给文章评论、和作者互动？第一时间获取技术沙龙信息？</p>
+<p>请关注我们的官方微信公众号“美团点评技术团队”。现在就拿出手机，扫一扫：<br><img src="http://tech.meituan.com/img/qrcode_for_gh.jpg" alt=""><br>公众号二维码</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://tech.meituan.com/hardware-accelerate.html&quot;&gt;子健&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。&lt;/p&gt;
+&lt;p&gt;本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+      <category term="CPU" scheme="http://ipcreator.me/tags/CPU/"/>
+    
+      <category term="GPU" scheme="http://ipcreator.me/tags/GPU/"/>
+    
+  </entry>
+  
+  <entry>
     <title>聊聊clean code</title>
     <link href="http://ipcreator.me/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/"/>
     <id>http://ipcreator.me/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/</id>
@@ -3021,84 +3226,6 @@ grub引导也分为两个阶段stage1阶段和stage2阶段(有些较新的grub�
     
     
       <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android硬件加速原理与实现简介</title>
-    <link href="http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/"/>
-    <id>http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/</id>
-    <published>2017-02-26T14:57:06.000Z</published>
-    <updated>2017-02-27T00:24:17.038Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://tech.meituan.com/hardware-accelerate.html" target="_blank" rel="external">子健</a></p>
-<p>在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。</p>
-<p>本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。</p>
-<a id="more"></a>
-<h2 id="了解硬件加速对App开发的意义"><a href="#了解硬件加速对App开发的意义" class="headerlink" title="了解硬件加速对App开发的意义"></a>了解硬件加速对App开发的意义</h2><p>对于App开发者，简单了解硬件加速原理及上层API实现，开发时就可以充分利用硬件加速提高页面的性能。以Android举例，实现一个圆角矩形按钮通常有两种方案：使用PNG图片；使用代码（XML/Java）实现。简单对比两种方案如下。</p>
-<p>方案    原理    特点<br>使用PNG图片（BitmapDrawable）    解码PNG图片生成Bitmap，传到底层，由GPU渲染    图片解码消耗CPU运算资源，Bitmap占用内存大，绘制慢<br>使用XML或Java代码实现（ShapeDrawable）    直接将Shape信息传到底层，由GPU渲染    消耗CPU资源少，占用内存小，绘制快</p>
-<h3 id="页面渲染背景知识"><a href="#页面渲染背景知识" class="headerlink" title="页面渲染背景知识"></a>页面渲染背景知识</h3><p>页面渲染时，被绘制的元素最终要转换成矩阵像素点（即多维数组形式，类似安卓中的Bitmap），才能被显示器显示。<br>页面由各种基本元素组成，例如圆形、圆角矩形、线段、文字、矢量图（常用贝塞尔曲线组成）、Bitmap等。<br>元素绘制时尤其是动画绘制过程中，经常涉及插值、缩放、旋转、透明度变化、动画过渡、毛玻璃模糊，甚至包括3D变换、物理运动（例如游戏中常见的抛物线运动）、多媒体文件解码（主要在桌面机中有应用，移动设备一般不用GPU做解码）等运算。<br>绘制过程经常需要进行逻辑较简单、但数据量庞大的浮点运算。</p>
-<h3 id="CPU与GPU结构对比"><a href="#CPU与GPU结构对比" class="headerlink" title="CPU与GPU结构对比"></a>CPU与GPU结构对比</h3><p>CPU（Central Processing Unit，中央处理器）是计算机设备核心器件，用于执行程序代码，软件开发者对此都很熟悉；GPU（Graphics Processing Unit，图形处理器）主要用于处理图形运算，通常所说“显卡”的核心部件就是GPU。</p>
-<p>下面是CPU和GPU的结构对比图。其中：<br><img src="http://tech.meituan.com/img/hardware-accelerate/cpu-gpu.png" alt=""><br>黄色的Control为控制器，用于协调控制整个CPU的运行，包括取出指令、控制其他模块的运行等；<br>绿色的ALU（Arithmetic Logic Unit）是算术逻辑单元，用于进行数学、逻辑运算；<br>橙色的Cache和DRAM分别为缓存和RAM，用于存储信息。</p>
-<p>从结构图可以看出，CPU的控制器较为复杂，而ALU数量较少。因此<strong>CPU擅长各种复杂的逻辑运算，但不擅长数学尤其是浮点运算。</strong></p>
-<p>以8086为例，一百多条汇编指令大部分都是逻辑指令，数学计算相关的主要是16位加减乘除和移位运算。一次整型和逻辑运算一般需要1~3个机器周期，而浮点运算要转换成整数计算，一次运算可能消耗上百个机器周期。<br>更简单的<strong>CPU甚至只有加法指令，减法用补码加法实现，乘法用累加实现，除法用减法循环实现。</strong><br>现代CPU一般都带有硬件浮点运算器（FPU），但主要适用于数据量不大的情况。<br>CPU是串行结构。以计算100个数字为例，对于CPU的一个核，每次只能计算两个数的和，结果逐步累加。<br>和CPU不同的是，<strong>GPU就是为实现大量数学运算设计的。从结构图中可以看到，GPU的控制器比较简单，但包含了大量ALU。GPU中的ALU使用了并行设计，且具有较多浮点运算单元。</strong></p>
-<blockquote>
-<p><strong>硬件加速的主要原理，就是通过底层软件代码，将CPU不擅长的图形计算转换成GPU专用指令，由GPU完成。</strong></p>
-</blockquote>
-<p>扩展：很多计算机中的GPU有自己独立的显存；没有独立显存则使用共享内存的形式，从内存中划分一块区域作为显存。显存可以保存GPU指令等信息。</p>
-<h3 id="并行结构举例：级联加法器"><a href="#并行结构举例：级联加法器" class="headerlink" title="并行结构举例：级联加法器"></a>并行结构举例：级联加法器</h3><p>为了方便理解，这里先从底层电路结构的角度举一个例子。如下图为一个加法器，对应实际的数字电路结构。</p>
-<p>A、B为输入，C为输出，且A、B、C均为总线，以32位CPU为例，则每根总线实际由32根导线组成，每根导线用不同的电压表示一个二进制的0或1。<br>Clock为时钟信号线，每个固定的时钟周期可向其输入一个特定的电压信号，每当一个时钟信号到来时，A和B的和就会输出到C。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-1.png" alt=""></p>
-<p>现在我们要计算8个整数的和。</p>
-<p>对于CPU这种串行结构，代码编写很简单，用for循环把所有数字逐个相加即可。串行结构只有一个加法器，需要7次求和运算；每次计算完部分和，还要将其再转移到加法器的输入端，做下一次计算。整个过程至少要消耗十几个机器周期。</p>
-<p>而对于并行结构，一种常见的设计是级联加法器，如下图，其中所有的clock连在一起。当需要相加的8个数据在输入端A1~B4准备好后，经过三个时钟周期，求和操作就完成了。如果数据量更大、级联的层级更大，则并行结构的优势更明显。</p>
-<p>由于电路的限制，不容易通过提高时钟频率、减小时钟周期的方式提高运算速度。并行结构通过增加电路规模、并行处理，来实现更快的运算。但并行结构不容易实现复杂逻辑，因为同时考虑多个支路的输出结果，并协调同步处理的过程很复杂（有点像多线程编程）。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-2.png" alt=""></p>
-<p>GPU并行计算举例<br>假设我们有如下图像处理任务，给每个像素值加1。GPU并行计算的方式简单粗暴，在资源允许的情况下，可以为每个像素开一个GPU线程，由其进行加1操作。数学运算量越大，这种并行方式性能优势越明显。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-task.png" alt=""></p>
-<h2 id="Android中的硬件加速"><a href="#Android中的硬件加速" class="headerlink" title="Android中的硬件加速"></a>Android中的硬件加速</h2><p>在Android中，大多数应用的界面都是利用常规的View来构建的（除了游戏、视频、图像等应用可能直接使用OpenGL ES）。下面根据Android 6.0原生系统的Java层代码，对View的软件和硬件加速渲染做一些分析和对比。</p>
-<p>DisplayList<br>DisplayList是一个基本绘制元素，包含元素原始属性（位置、尺寸、角度、透明度等），对应Canvas的drawXxx()方法（如下图）。</p>
-<p>信息传递流程：Canvas(Java API) —&gt; OpenGL(C/C++ Lib) —&gt; 驱动程序 —&gt; GPU。</p>
-<p>在Android 4.1及以上版本，DisplayList支持属性，如果View的一些属性发生变化（比如Scale、Alpha、Translate），只需把属性更新给GPU，不需要生成新的DisplayList。</p>
-<p>RenderNode<br>一个RenderNode包含若干个DisplayList，通常一个RenderNode对应一个View，包含View自身及其子View的所有DisplayList。<br><img src="http://tech.meituan.com/img/hardware-accelerate/canvas-draw.png" alt=""></p>
-<h2 id="Android绘制流程（Android-6-0）"><a href="#Android绘制流程（Android-6-0）" class="headerlink" title="Android绘制流程（Android 6.0）"></a>Android绘制流程（Android 6.0）</h2><p>下面是安卓View完整的绘制流程图，主要通过阅读源码和调试得出，虚线箭头表示递归调用。</p>
-<p>从ViewRootImpl.performTraversals到PhoneWindow.DecroView.drawChild是每次遍历View树的固定流程，首先根据标志位判断是否需要重新布局并执行布局；然后进行Canvas的创建等操作开始绘制。</p>
-<p>如果硬件加速不支持或者被关闭，则使用软件绘制，生成的Canvas即Canvas.class的对象；<br>如果支持硬件加速，则生成的是DisplayListCanvas.class的对象；<br>两者的isHardwareAccelerated()方法返回的值分别为false、true，View根据这个值判断是否使用硬件加速。<br>View中的draw(canvas,parent,drawingTime) - draw(canvas) - onDraw - dispachDraw - drawChild这条递归路径（下文简称Draw路径），调用了Canvas.drawXxx()方法，在软件渲染时用于实际绘制；在硬件加速时，用于构建DisplayList。<br>View中的updateDisplayListIfDirty - dispatchGetDisplayList - recreateChildDisplayList这条递归路径（下文简称DisplayList路径），仅在硬件加速时会经过，用于在遍历View树绘制的过程中更新DisplayList属性，并快速跳过不需要重建DisplayList的View。</p>
-<p>Android 6.0中，和DisplayList相关的API目前仍被标记为“@hide”不可访问，表示还不成熟，后续版本可能开放。<br>硬件加速情况下，draw流程执行结束后DisplayList构建完成，然后通过ThreadedRenderer.nSyncAndDrawFrame()利用GPU绘制DisplayList到屏幕上。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-func.png" alt=""></p>
-<h2 id="纯软件绘制-VS-硬件加速（Android-6-0）"><a href="#纯软件绘制-VS-硬件加速（Android-6-0）" class="headerlink" title="纯软件绘制 VS 硬件加速（Android 6.0）"></a>纯软件绘制 VS 硬件加速（Android 6.0）</h2><p>下面根据具体的几种场景，具体分析一下硬件加速前后的流程与加速效果。</p>
-<p>渲染场景    纯软件绘制    硬件加速    加速效果分析<br>页面初始化    绘制所有View    创建所有DisplayList    GPU分担了复杂计算任务<br>在一个复杂页面调用背景透明TextView的setText()，且调用后其尺寸位置不变    重绘脏区所有View    TextView及每一级父View重建DisplayList    重叠的兄弟节点不需CPU重绘，GPU会自行处理<br>TextView逐帧播放Alpha / Translation / Scale动画    每帧都要重绘脏区所有View    除第一帧同场景2，之后每帧只更新TextView对应RenderNode的属性    刷新一帧性能极大提高，动画流畅度提高<br>修改TextView透明度    重绘脏区所有View    直接调用RenderNode.setAlpha()更新    加速前需全页面遍历，并重绘很多View；加速后只触发DecorView.updateDisplayListIfDirty，不再往下遍历，CPU执行时间可忽略不计</p>
-<p>场景1中，无论是否加速，遍历View树并都会走Draw路径。硬件加速后Draw路径不做实际绘制工作，只是构建DisplayList，复杂的绘制计算任务被GPU分担，已经有了较大的加速效果。<br>场景2中，TextView设置前后尺寸位置不变，不会触发重新Layout。</p>
-<p>软件绘制时，TextView所在区域即为脏区。由于TextView有透明区域，遍历View树的过程中，和脏区重叠的多数View都要重绘，包括与之重叠的兄弟节点和他们的父节点（详见后面的介绍），不需要绘制的View在draw(canvas,parent,drawingTime)方法中判断直接返回。</p>
-<p>硬件加速后，也需要遍历View树，但只有TextView及其每一层父节点需要重建DisplayList，走的是Draw路径，其他View直接走了DisplayList路径，剩下的工作都交给GPU处理。页面越复杂，两者性能差距越明显。</p>
-<p>场景3中，软件绘制每一帧都要做大量绘制工作，很容易导致动画卡顿。硬件加速后，动画过程直接走DisplayList路径更新DisplayList的属性，动画流畅度能得到极大提高。</p>
-<p>场景4中，两者的性能差距更明显。简单修改透明度，软件绘制仍然要做很多工作；硬件加速后一般直接更新RenderNode的属性，不需要触发invalidate，也不会遍历View树（除了少数View可能要对Alpha做特殊响应并在onSetAlpha()返回true，代码如下）。<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> class View &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">void</span> setAlpha(@FloatRange(from=<span class="number">0.0</span>, to=<span class="number">1.0</span>) <span class="built_in">float</span> <span class="built_in">alpha</span>) &#123;</div><div class="line">        ensureTransformationInfo();</div><div class="line">        <span class="keyword">if</span> (mTransformationInfo.mAlpha != <span class="built_in">alpha</span>) &#123;</div><div class="line">            mTransformationInfo.mAlpha = <span class="built_in">alpha</span>;</div><div class="line">            <span class="keyword">if</span> (onSetAlpha((<span class="built_in">int</span>) (<span class="built_in">alpha</span> * <span class="number">255</span>))) &#123;</div><div class="line">                <span class="comment">// ...</span></div><div class="line">                invalidate(<span class="keyword">true</span>);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="comment">// ...</span></div><div class="line">                mRenderNode.setAlpha(getFinalAlpha());</div><div class="line">                <span class="comment">// ...</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">protected</span> <span class="built_in">boolean</span> onSetAlpha(<span class="built_in">int</span> <span class="built_in">alpha</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="软件绘制刷新逻辑简介"><a href="#软件绘制刷新逻辑简介" class="headerlink" title="软件绘制刷新逻辑简介"></a>软件绘制刷新逻辑简介</h3><p>实际阅读源码并实验，得出通常情况下的软件绘制刷新逻辑：</p>
-<p>默认情况下，View的clipChildren属性为true，即每个View绘制区域不能超出其父View的范围。如果设置一个页面根布局的clipChildren属性为false，则子View可以超出父View的绘制区域。<br>当一个View触发invalidate，且没有播放动画、没有触发layout的情况下：</p>
-<p>对于全不透明的View，其自身会设置标志位PFLAG_DIRTY，其父View会设置标志位PFLAG_DIRTY_OPAQUE。在draw(canvas)方法中，只有这个View自身重绘。<br>对于可能有透明区域的View，其自身和父View都会设置标志位PFLAG_DIRTY。</p>
-<p>clipChildren为true时，脏区会被转换成ViewRoot中的Rect，刷新时层层向下判断，当View与脏区有重叠则重绘。如果一个View超出父View范围且与脏区重叠，但其父View不与脏区重叠，这个子View不会重绘。<br>clipChildren为false时，ViewGroup.invalidateChildInParent()中会把脏区扩大到自身整个区域，于是与这个区域重叠的所有View都会重绘。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>至此，硬件加速相关的内容就介绍完了，这里做个简单总结：</p>
-<p>CPU更擅长复杂逻辑控制，而GPU得益于大量ALU和并行结构设计，更擅长数学运算。<br>页面由各种基础元素（DisplayList）构成，渲染时需要进行大量浮点运算。</p>
-<p>硬件加速条件下，CPU用于控制复杂绘制逻辑、构建或更新DisplayList；GPU用于完成图形计算、渲染DisplayList。</p>
-<p>硬件加速条件下，刷新界面尤其是播放动画时，CPU只重建或更新必要的DisplayList，进一步提高渲染效率。</p>
-<p>实现同样效果，应尽量使用更简单的DisplayList，从而达到更好的性能（Shape代替Bitmap等）。</p>
-<h2 id="参考资料与扩展阅读"><a href="#参考资料与扩展阅读" class="headerlink" title="参考资料与扩展阅读"></a>参考资料与扩展阅读</h2><p><a href="http://www.cnblogs.com/LBSer/p/4592862.html" target="_blank" rel="external">GPU—并行计算利器</a><br><a href="http://www.eechina.com/thread-176224-1-1.html" target="_blank" rel="external">显示卡的“心脏”GPU工作原理介绍</a><br><a href="http://hust.cf/matlab/2016/05/15/Matlab%E7%9A%84GPU%E5%8A%A0%E9%80%9F.html" target="_blank" rel="external">Matlab的GPU加速</a><br><a href="http://blog.csdn.net/yang_yulei/article/details/22529437" target="_blank" rel="external">处理器体系结构：了解CPU的基本运行原理</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3563960.html" target="_blank" rel="external">CPU的内部架构和工作原理</a><br><a href="http://xilinx.eetrend.com/article/10087" target="_blank" rel="external">什么是异构多处理系统，为什么需要异构多处理系统</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/45943255" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List构建过程分析</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/46281499" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List渲染过程分析</a><br><a href="http://www.jianshu.com/p/996bca12eb1d" target="_blank" rel="external">Android Choreographer源码分析</a><br><a href="http://blog.csdn.net/innost/article/details/8272867" target="_blank" rel="external">Android Project Butter分析</a></p>
-<p>不想错过技术博客更新？想给文章评论、和作者互动？第一时间获取技术沙龙信息？</p>
-<p>请关注我们的官方微信公众号“美团点评技术团队”。现在就拿出手机，扫一扫：<br><img src="http://tech.meituan.com/img/qrcode_for_gh.jpg" alt=""><br>公众号二维码</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://tech.meituan.com/hardware-accelerate.html&quot;&gt;子健&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。&lt;/p&gt;
-&lt;p&gt;本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
-    
-      <category term="CPU" scheme="http://ipcreator.me/tags/CPU/"/>
-    
-      <category term="GPU" scheme="http://ipcreator.me/tags/GPU/"/>
     
   </entry>
   
@@ -4197,7 +4324,7 @@ public void thisIsSuper() {
     <link href="http://ipcreator.me/2017/02/22/MyView/English/love-words/"/>
     <id>http://ipcreator.me/2017/02/22/MyView/English/love-words/</id>
     <published>2017-02-21T23:44:05.000Z</published>
-    <updated>2017-03-11T01:11:29.554Z</updated>
+    <updated>2017-03-13T10:47:45.706Z</updated>
     
     <content type="html"><![CDATA[<p>图文来源：<a href="http://xue.youdao.com/sw/m/1309029?keyfrom=dict2.index" target="_blank" rel="external">微信号 我爱背单词</a></p>
 <h2 id="predator"><a href="#predator" class="headerlink" title="predator"></a>predator</h2><p>英 [‘predətə]  美 [‘prɛdətɚ]<br>n. [动] 捕食者；[动] 食肉动物；掠夺者</p>
@@ -4209,6 +4336,7 @@ public void thisIsSuper() {
 <p><strong>双语例句</strong><br>Insane pumpkin carving of the Predator.<br>疯狂的南瓜雕刻——食肉动物。</p>
 <p>Some residents and experts said the predator may be a bear, a wayward panther or cougar, or even a wolf because 3-inch paw tracks were found at the scene.<br>一些居民和专家认为这种食肉动物可能是一只熊，一头任性的豹子或狮子，抑或是一头狼，因为在现场发现了3英寸长的爪迹。</p>
 <p>But just like Dutch in Predator before the final battle, you have to be able to answer only one question about your target before you start: where they are.<br>但就像一战之前的荷兰掠夺者一样，在开始工作之前你必须能够回答实现目标的唯一问题：他们在哪里？</p>
+<h2 id="serendipity"><a href="#serendipity" class="headerlink" title="serendipity"></a>serendipity</h2><p>英 [,ser(ə)n’dɪpɪtɪ]  美 [,sɛrən’dɪpəti]<br>n. 意外发现珍奇事物的本领；有意外发现珍宝的运气</p>
 <h2 id="inflater"><a href="#inflater" class="headerlink" title="inflater"></a>inflater</h2><p>[in’fleitə]<br>n. 增压泵；充气者</p>
 <h2 id="exception"><a href="#exception" class="headerlink" title="exception"></a>exception</h2><p>英 [ɪk’sepʃ(ə)n; ek-]  美 [ɪk’sɛpʃən]<br>n. 例外；异议</p>
 <h2 id="illegal"><a href="#illegal" class="headerlink" title="illegal"></a>illegal</h2><p>英 [ɪ’liːg(ə)l]  美 [ɪ’ligl]<br>adj. [法] 非法的；违法的；违反规则的<br>n. 非法移民，非法劳工</p>
@@ -5113,6 +5241,77 @@ public void thisIsSuper() {
   </entry>
   
   <entry>
+    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
+    <link href="http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/"/>
+    <id>http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/</id>
+    <published>2017-02-19T15:59:59.000Z</published>
+    <updated>2017-02-27T03:43:44.623Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
+<p>作者：傅盛</p>
+<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
+<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
+<p>怎么思考呢?我讲几个关键点。</p>
+<a id="more"></a>
+<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
+<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
+<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
+<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
+<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
+<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
+<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
+<p>这才有了一句流行语——Welcome to the GPU world.</p>
+<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
+<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
+<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
+<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
+<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
+<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
+<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
+<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
+<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
+<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
+<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
+<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
+<p>为什么要异构?</p>
+<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
+<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
+<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
+<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
+<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
+<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
+<p>我认为，只要需求越多，它就会越来越准。</p>
+<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
+<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
+<p>漫漫长路，才刚刚开始。<br>End.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;作者：傅盛&lt;/p&gt;
+&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
+&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
+&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
+    
+      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
+    
+  </entry>
+  
+  <entry>
     <title>人工智能的黄金时代</title>
     <link href="http://ipcreator.me/2017/02/19/BusinessAI/golden-age-of-artificial-intelligence/"/>
     <id>http://ipcreator.me/2017/02/19/BusinessAI/golden-age-of-artificial-intelligence/</id>
@@ -5280,77 +5479,6 @@ public void thisIsSuper() {
     
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
-    <link href="http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/"/>
-    <id>http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/</id>
-    <published>2017-02-19T15:59:59.000Z</published>
-    <updated>2017-02-27T03:43:44.623Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
-<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
-<p>作者：傅盛</p>
-<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
-<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
-<p>怎么思考呢?我讲几个关键点。</p>
-<a id="more"></a>
-<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
-<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
-<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
-<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
-<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
-<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
-<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
-<p>这才有了一句流行语——Welcome to the GPU world.</p>
-<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
-<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
-<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
-<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
-<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
-<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
-<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
-<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
-<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
-<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
-<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
-<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
-<p>为什么要异构?</p>
-<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
-<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
-<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
-<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
-<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
-<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
-<p>我认为，只要需求越多，它就会越来越准。</p>
-<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
-<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
-<p>漫漫长路，才刚刚开始。<br>End.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;作者：傅盛&lt;/p&gt;
-&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
-&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
-&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
-    
-      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
     
   </entry>
   
@@ -5677,109 +5805,6 @@ public void thisIsSuper() {
   </entry>
   
   <entry>
-    <title>技术大牛带你走向机器学习“正道”</title>
-    <link href="http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/"/>
-    <id>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</id>
-    <published>2017-02-19T15:57:06.000Z</published>
-    <updated>2017-02-19T06:03:00.876Z</updated>
-    
-    <content type="html"><![CDATA[<p>作者：<a href="http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html" target="_blank" rel="external">雷锋网 亚峰</a></p>
-<p>导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。</p>
-<p>雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：</p>
-<p>现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。<br>随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。</p>
-<p>其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？</p>
-<p>雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。</p>
-  <a id="more"></a>
-<p>嘉宾介绍：</p>
-<p>王刚，前乐视大数据总监，现任某电商平台大数据总监。10 年大数据领域工作经验，具有 Hadoop 和 Spark 生态相关技术的实际应用经验。目前专注于机器学习，搜索和推荐系统的设计和开发。</p>
-<p>以下为王刚所撰写的正文：</p>
-<p>机器学习对很多初学者来说，最大的学习困难和障碍就是模型、算法、“眼花缭乱”的数学公式所带来的抽象感，无法有效的建立起直觉上的理解。所以本文的目的是尝试给初学者具体的学习方式建议，以帮助初学者打通机器学习的任督二脉，然后通过不断的学习和实践，使得自己在机器学习领域的专业能力持续提升。</p>
-<p>机器学习与人工智能、深度学习之间的关系</p>
-<p>当前被提及的高频词语是“AI人工智能”、“机器学习”、“深度学习”。那这些词语背后所代表的技术之间到底是什么关系呢？充分的理解这个关系，有利于建立起更加系统的专业学习框架。</p>
-<p>首先，我们要搞明白机器学习到底学习的是什么，答案是模型“参数”，比如Y=AX+B是个机器学习的模型，通过样本数据，可以学习出参数A和B的确定值。然后基于这两个参数，对模型进行泛化，即对给定的X对Y进行预测。明白了机器学习到底是学习什么之后，我们一起看看下图来搞清楚机器学习与人工智能和深度学习之间的关系。</p>
-<p>技术大牛带你走向机器学习“正道”：小朋友才迷信算法，大人们更重视工程实践</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888f9bedd1f.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>如上图所示，人工智能是最大的一个范畴，人工智能的实现目前看主要有两种途径：一种是基于脑科学的方式来实现智能。另一种是基于机器学习的方式来实现智能，这种方式的假设是当学习的数据足够充分，就可以大概率的逼近事实。</p>
-<p>再回到公式Y=AX+B，我们可以看到机器学习是通过X和Y来学习出参数A和B，而在机器学习中，X是人工构造的特征，Y是人工进行标注的标签。一句话，机器学习就是通过构造X和Y来学习参数A和B。但通常情况下，构造X和标注Y需要耗用大量的人力和时间。所以，对于如何更智能的构造X和标注Y是机器学习很重要的研究方向。深度学习的一个重要作用就是能够更智能的构造X，即进行更好的特征表示。所以深度学习是机器学习的一个子集。那如何更好的标注Y呢，当前流行的对抗生成网络（GAN）就是一种解决方案。</p>
-<p>机器学习需要的基础知识体系</p>
-<p>机器学习的三个关键要素是模型、策略、算法。模型指的是具体的机器学习模型，比如决策树、SVM、神经网络、LDA等具体模型。策略指的是最小化模型结构性风险的手段，即避免模型欠拟合和过拟合的应对策略，在这里专指正则化（Regularization）。算法指的是建立好模型之后，如何对模型中的参数进行学习。也即最优化的方法。所以，初学者需要掌握的基础知识为：</p>
-<p>1.导数与微积分，以及还需要对泰勒展开式、拉格朗日等定理和公式有充分的掌握。这是进行算法推导的基础中的基础。</p>
-<p>2.线性代数，矩阵运算等要做到熟练掌握，因为机器学习的最优化算法中涉及到的复杂计算需要线性代数好矩阵运算的内容。</p>
-<p>3.概率论，概率论的基础知识是理解像极大似然、最大熵、EM算法、贝叶斯网络、概率图模型的基础。</p>
-<p>4.最优化，机器学习中的模型训练是通过对模型中参数的学习来进行泛化推广。如何对模型中的参数进行学习是最优化要解决的问题。比如线性优化、非线性优化的各种主要方法（比如梯度下降法、牛顿和拟牛顿法等）要有充分的理解。</p>
-<p>5.机器学习模型的思想和具体实现方式要理解透彻。</p>
-<p>机器学习的应用实践</p>
-<p>特征工程，如上面所说就是造X，机器学习实践中大部分的实践都在处理特征工程上。所以真正有机器学习实践经验的人都知道机器学习更多的时间不是高大上的算法，而是苦逼特征工程。工程师每天更多的是基于对业务的深刻理解，通过构建“更好”的特征，持续提升模型的准确度。</p>
-<p>推荐系统与搜索系统</p>
-<p>当推荐和搜索这些字眼出现在网页中，专业书籍中，或是大部分的培训课程中，更多的是与机器学习和算法关联起来。这种情况的原因可能是为了迎合机器学习在大部分人认知中的“高大上”吧。</p>
-<p>在实际的产品设计和开发中，推荐系统和搜索系统是有着一个更大概念的系统架构，绝非仅仅是只有机器学习和算法。其中UI/UE的重要性占比为40%，业务理解重要性占比为30%，数据重要性占比为20%，模型重要性占比为10%。</p>
-<p>以推荐系统举例，整个推荐系统的框架应当如下图所示：</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fc4b17f9.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>下图是电商平台上推荐系统的框架</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fd1d31a4.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>所以，建议的推荐系统知识学习体系为：</p>
-<p>一、推荐系统之整体架构</p>
-<p>1.推荐系统的本质、目标及价值</p>
-<p>2.一个好的推荐系统的相貌</p>
-<p>3.线下零售的促销员与电商平台的推荐系统的关系</p>
-<p>3.推荐系统与搜索的关系</p>
-<p>4.主流电商平台上的推荐系统学习</p>
-<p>5.推荐系统的整体架构图以及如何学习推荐系统</p>
-<p>二、推荐系统之策略及模型</p>
-<ol>
-<li><p>基于规则的推荐算法</p>
-</li>
-<li><p>基于内容(Content-Based)的推荐算法</p>
-</li>
-<li><p>基于协同过滤（CF)的推荐算法</p>
-</li>
-<li><p>基于隐因子（SVD/SVD++/MF/FM/FFM/PLSA/LDA）的推荐算法</p>
-</li>
-<li><p>推荐结果的排序模型（GBDT+LR，LTR）</p>
-</li>
-<li><p>数学基础及典型最优化算法</p>
-</li>
-</ol>
-<p>7.不同场景下的推荐策略（如在电商平台上，首页、详情页、购物车页、搜索结果页等不同场景下的推荐策略）</p>
-<p>8.推荐系统评估</p>
-<p>如何评估线下模型，如何评估线上效果</p>
-<p>三、推荐系统之特征工程</p>
-<p>1.用户画像如何构建</p>
-<p>2.特征工程如何构建，以及如何进行特征分析</p>
-<p>四、推荐系统之交互体验</p>
-<p>如何向用户展示推荐系统的权威性、取得用户的信任、如何帮助用户决策、如何获取用户反馈。</p>
-<p>如何开始机器学习</p>
-<p>对于大多数人来说，如果以抽象的方式开始学习一项内容肯定不是最好的方式。相反，先建立起直觉，然后建立具体到抽象的映射，再深入学习抽象部分完成对细节部分的掌握，最后循环到具体的应用是适合大多数人的学习方式。所以对于机器学习初学者建议的学习路径为：</p>
-<p>步骤一：先选择一门实战性非常强的机器学习及其应用课程进行学习。目标是通过足够多具体的应用，能够深刻理解机器学习的实际使用方式，从而建立起直觉。</p>
-<p>步骤二：学习机器学习的理论课程，包括具体的模型算法，最优化方法，以及相关的公式推导。过了这一关，就完成了对机器学习细节的更好掌控。</p>
-<p>步骤三：如果能够立刻参与到机器学习的实际项目中是最好不过了。如果不能，可以去完成Kaggle中的一些比赛项目。</p>
-<p>最后，也是最最重要的建议，如果要想“更快速”“更高效”的掌握机器学习，找到合适的培训课程进行学习是最合适的方式。用钱买时间，买别人的经验，以更高效的方式掌握机器学习后，这些付出的费用可能仅仅是你工作之后月薪的很小的一部分。</p>
-<p>在任督二脉打通之后，可以适当的对分布式存储和计算相关体系的内容进行学习。即靠的是个人的持续修行，在理论与实践循环提升中，成长为真正的专家。</p>
-<p>PS：为了推动 AI 人才全面化，雷锋网将为大家提供一个业界顶级的专业 AI 技术培训平台：1024MOOC 。其中王刚老师也会在1024MOOC 开展系统的机器学习实战培训课程，具体开课时间在年后一周左右，请大家持续关注雷锋网(公众号：雷锋网)信息。</p>
-<p>雷锋网原创文章，未经授权禁止转载。详情见转载须知。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;作者：&lt;a href=&quot;http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html&quot;&gt;雷锋网 亚峰&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。&lt;/p&gt;
-&lt;p&gt;雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：&lt;/p&gt;
-&lt;p&gt;现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。&lt;br&gt;随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。&lt;/p&gt;
-&lt;p&gt;其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？&lt;/p&gt;
-&lt;p&gt;雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
-    
-  </entry>
-  
-  <entry>
     <title>机器学习年度 20 大开源项目花落谁家？（Python 版）</title>
     <link href="http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/"/>
     <id>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</id>
@@ -5927,6 +5952,109 @@ public void thisIsSuper() {
       <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
     
       <category term="Open Source" scheme="http://ipcreator.me/tags/Open-Source/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>技术大牛带你走向机器学习“正道”</title>
+    <link href="http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/"/>
+    <id>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</id>
+    <published>2017-02-19T15:57:06.000Z</published>
+    <updated>2017-02-19T06:03:00.876Z</updated>
+    
+    <content type="html"><![CDATA[<p>作者：<a href="http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html" target="_blank" rel="external">雷锋网 亚峰</a></p>
+<p>导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。</p>
+<p>雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：</p>
+<p>现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。<br>随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。</p>
+<p>其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？</p>
+<p>雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。</p>
+  <a id="more"></a>
+<p>嘉宾介绍：</p>
+<p>王刚，前乐视大数据总监，现任某电商平台大数据总监。10 年大数据领域工作经验，具有 Hadoop 和 Spark 生态相关技术的实际应用经验。目前专注于机器学习，搜索和推荐系统的设计和开发。</p>
+<p>以下为王刚所撰写的正文：</p>
+<p>机器学习对很多初学者来说，最大的学习困难和障碍就是模型、算法、“眼花缭乱”的数学公式所带来的抽象感，无法有效的建立起直觉上的理解。所以本文的目的是尝试给初学者具体的学习方式建议，以帮助初学者打通机器学习的任督二脉，然后通过不断的学习和实践，使得自己在机器学习领域的专业能力持续提升。</p>
+<p>机器学习与人工智能、深度学习之间的关系</p>
+<p>当前被提及的高频词语是“AI人工智能”、“机器学习”、“深度学习”。那这些词语背后所代表的技术之间到底是什么关系呢？充分的理解这个关系，有利于建立起更加系统的专业学习框架。</p>
+<p>首先，我们要搞明白机器学习到底学习的是什么，答案是模型“参数”，比如Y=AX+B是个机器学习的模型，通过样本数据，可以学习出参数A和B的确定值。然后基于这两个参数，对模型进行泛化，即对给定的X对Y进行预测。明白了机器学习到底是学习什么之后，我们一起看看下图来搞清楚机器学习与人工智能和深度学习之间的关系。</p>
+<p>技术大牛带你走向机器学习“正道”：小朋友才迷信算法，大人们更重视工程实践</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888f9bedd1f.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>如上图所示，人工智能是最大的一个范畴，人工智能的实现目前看主要有两种途径：一种是基于脑科学的方式来实现智能。另一种是基于机器学习的方式来实现智能，这种方式的假设是当学习的数据足够充分，就可以大概率的逼近事实。</p>
+<p>再回到公式Y=AX+B，我们可以看到机器学习是通过X和Y来学习出参数A和B，而在机器学习中，X是人工构造的特征，Y是人工进行标注的标签。一句话，机器学习就是通过构造X和Y来学习参数A和B。但通常情况下，构造X和标注Y需要耗用大量的人力和时间。所以，对于如何更智能的构造X和标注Y是机器学习很重要的研究方向。深度学习的一个重要作用就是能够更智能的构造X，即进行更好的特征表示。所以深度学习是机器学习的一个子集。那如何更好的标注Y呢，当前流行的对抗生成网络（GAN）就是一种解决方案。</p>
+<p>机器学习需要的基础知识体系</p>
+<p>机器学习的三个关键要素是模型、策略、算法。模型指的是具体的机器学习模型，比如决策树、SVM、神经网络、LDA等具体模型。策略指的是最小化模型结构性风险的手段，即避免模型欠拟合和过拟合的应对策略，在这里专指正则化（Regularization）。算法指的是建立好模型之后，如何对模型中的参数进行学习。也即最优化的方法。所以，初学者需要掌握的基础知识为：</p>
+<p>1.导数与微积分，以及还需要对泰勒展开式、拉格朗日等定理和公式有充分的掌握。这是进行算法推导的基础中的基础。</p>
+<p>2.线性代数，矩阵运算等要做到熟练掌握，因为机器学习的最优化算法中涉及到的复杂计算需要线性代数好矩阵运算的内容。</p>
+<p>3.概率论，概率论的基础知识是理解像极大似然、最大熵、EM算法、贝叶斯网络、概率图模型的基础。</p>
+<p>4.最优化，机器学习中的模型训练是通过对模型中参数的学习来进行泛化推广。如何对模型中的参数进行学习是最优化要解决的问题。比如线性优化、非线性优化的各种主要方法（比如梯度下降法、牛顿和拟牛顿法等）要有充分的理解。</p>
+<p>5.机器学习模型的思想和具体实现方式要理解透彻。</p>
+<p>机器学习的应用实践</p>
+<p>特征工程，如上面所说就是造X，机器学习实践中大部分的实践都在处理特征工程上。所以真正有机器学习实践经验的人都知道机器学习更多的时间不是高大上的算法，而是苦逼特征工程。工程师每天更多的是基于对业务的深刻理解，通过构建“更好”的特征，持续提升模型的准确度。</p>
+<p>推荐系统与搜索系统</p>
+<p>当推荐和搜索这些字眼出现在网页中，专业书籍中，或是大部分的培训课程中，更多的是与机器学习和算法关联起来。这种情况的原因可能是为了迎合机器学习在大部分人认知中的“高大上”吧。</p>
+<p>在实际的产品设计和开发中，推荐系统和搜索系统是有着一个更大概念的系统架构，绝非仅仅是只有机器学习和算法。其中UI/UE的重要性占比为40%，业务理解重要性占比为30%，数据重要性占比为20%，模型重要性占比为10%。</p>
+<p>以推荐系统举例，整个推荐系统的框架应当如下图所示：</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fc4b17f9.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>下图是电商平台上推荐系统的框架</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fd1d31a4.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>所以，建议的推荐系统知识学习体系为：</p>
+<p>一、推荐系统之整体架构</p>
+<p>1.推荐系统的本质、目标及价值</p>
+<p>2.一个好的推荐系统的相貌</p>
+<p>3.线下零售的促销员与电商平台的推荐系统的关系</p>
+<p>3.推荐系统与搜索的关系</p>
+<p>4.主流电商平台上的推荐系统学习</p>
+<p>5.推荐系统的整体架构图以及如何学习推荐系统</p>
+<p>二、推荐系统之策略及模型</p>
+<ol>
+<li><p>基于规则的推荐算法</p>
+</li>
+<li><p>基于内容(Content-Based)的推荐算法</p>
+</li>
+<li><p>基于协同过滤（CF)的推荐算法</p>
+</li>
+<li><p>基于隐因子（SVD/SVD++/MF/FM/FFM/PLSA/LDA）的推荐算法</p>
+</li>
+<li><p>推荐结果的排序模型（GBDT+LR，LTR）</p>
+</li>
+<li><p>数学基础及典型最优化算法</p>
+</li>
+</ol>
+<p>7.不同场景下的推荐策略（如在电商平台上，首页、详情页、购物车页、搜索结果页等不同场景下的推荐策略）</p>
+<p>8.推荐系统评估</p>
+<p>如何评估线下模型，如何评估线上效果</p>
+<p>三、推荐系统之特征工程</p>
+<p>1.用户画像如何构建</p>
+<p>2.特征工程如何构建，以及如何进行特征分析</p>
+<p>四、推荐系统之交互体验</p>
+<p>如何向用户展示推荐系统的权威性、取得用户的信任、如何帮助用户决策、如何获取用户反馈。</p>
+<p>如何开始机器学习</p>
+<p>对于大多数人来说，如果以抽象的方式开始学习一项内容肯定不是最好的方式。相反，先建立起直觉，然后建立具体到抽象的映射，再深入学习抽象部分完成对细节部分的掌握，最后循环到具体的应用是适合大多数人的学习方式。所以对于机器学习初学者建议的学习路径为：</p>
+<p>步骤一：先选择一门实战性非常强的机器学习及其应用课程进行学习。目标是通过足够多具体的应用，能够深刻理解机器学习的实际使用方式，从而建立起直觉。</p>
+<p>步骤二：学习机器学习的理论课程，包括具体的模型算法，最优化方法，以及相关的公式推导。过了这一关，就完成了对机器学习细节的更好掌控。</p>
+<p>步骤三：如果能够立刻参与到机器学习的实际项目中是最好不过了。如果不能，可以去完成Kaggle中的一些比赛项目。</p>
+<p>最后，也是最最重要的建议，如果要想“更快速”“更高效”的掌握机器学习，找到合适的培训课程进行学习是最合适的方式。用钱买时间，买别人的经验，以更高效的方式掌握机器学习后，这些付出的费用可能仅仅是你工作之后月薪的很小的一部分。</p>
+<p>在任督二脉打通之后，可以适当的对分布式存储和计算相关体系的内容进行学习。即靠的是个人的持续修行，在理论与实践循环提升中，成长为真正的专家。</p>
+<p>PS：为了推动 AI 人才全面化，雷锋网将为大家提供一个业界顶级的专业 AI 技术培训平台：1024MOOC 。其中王刚老师也会在1024MOOC 开展系统的机器学习实战培训课程，具体开课时间在年后一周左右，请大家持续关注雷锋网(公众号：雷锋网)信息。</p>
+<p>雷锋网原创文章，未经授权禁止转载。详情见转载须知。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作者：&lt;a href=&quot;http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html&quot;&gt;雷锋网 亚峰&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。&lt;/p&gt;
+&lt;p&gt;雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：&lt;/p&gt;
+&lt;p&gt;现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。&lt;br&gt;随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。&lt;/p&gt;
+&lt;p&gt;其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？&lt;/p&gt;
+&lt;p&gt;雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
     
   </entry>
   
@@ -8625,58 +8753,6 @@ new file:   source/slider.fa3fc2.js
   </entry>
   
   <entry>
-    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
-    <link href="http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</id>
-    <published>2017-02-18T01:02:06.000Z</published>
-    <updated>2017-02-19T06:02:30.218Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
-<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<a id="more"></a>
-<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
-<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
-<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
-<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
-<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
-<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
-<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
-<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
-<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
-<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
-<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
-<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
-<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
-<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
-<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
-<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
-<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
-<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
-<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
-<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
-<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python 资源大全中文版</title>
     <link href="http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/"/>
     <id>http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/</id>
@@ -9782,6 +9858,58 @@ new file:   source/slider.fa3fc2.js
     
     
       <category term="Python" scheme="http://ipcreator.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
+    <link href="http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/"/>
+    <id>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</id>
+    <published>2017-02-18T01:02:06.000Z</published>
+    <updated>2017-02-19T06:02:30.218Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
+<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<a id="more"></a>
+<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
+<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
+<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
+<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
+<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
+<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
+<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
+<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
+<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
+<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
+<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
+<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
+<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
+<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
+<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
+<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
+<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
+<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
+<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
+<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
+<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
     
   </entry>
   
@@ -11777,94 +11905,6 @@ At this point you can add the tensorflow/examples/android directory as a new And
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
       <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>避免炒作，如何寻找有价值的人工智能初创企业？</title>
-    <link href="http://ipcreator.me/2017/02/13/BusinessAI/how-to-find-ai-start-up-firm/"/>
-    <id>http://ipcreator.me/2017/02/13/BusinessAI/how-to-find-ai-start-up-firm/</id>
-    <published>2017-02-13T00:58:06.000Z</published>
-    <updated>2017-02-27T03:43:35.604Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html" target="_blank" rel="external">作者：网易AI研究院</a></p>
-<p><img src="http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png" alt=""></p>
-<p>　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。</p>
-<p>　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：</p>
-  <a id="more"></a>
-<h2 id="人工智能是公司的核心价值所在吗？"><a href="#人工智能是公司的核心价值所在吗？" class="headerlink" title="人工智能是公司的核心价值所在吗？"></a>人工智能是公司的核心价值所在吗？</h2><p>  　　投资公司Qualcomm Ventures的风险投资人Varun Jain坦言，“很多陷入资金困境的公司都会将自己包装成人工智能企业。”Varun Jain列举了从人工智能路由器到人工智能榨汁机等产品和设备。</p>
-<p>  　　Varun Jain解释称，在很多情况下，公司所宣传的人工智能仅仅是一个附加功能，而不是公司的核心价值。他指出，“传统的WiFi路由器可以使用人工智能技术来检测网络中的异常数据，但路由器的功能并不会有实质性的改变。”</p>
-<p>  　　相比之下，Qualcomm Ventures投资了Clarifai和Cruise Automation等真正的人工智能初创企业，而Cruise Automation已经被通用收购。Cruise Automation通过人工智能技术为自动驾驶汽车供电，而Clarifai则是利用先进的深度学习和计算机视觉技术来识别图像和视频中的特定物体。</p>
-<h2 id="技术团队有多可靠？"><a href="#技术团队有多可靠？" class="headerlink" title="　　技术团队有多可靠？"></a>　　技术团队有多可靠？</h2><p>  　　CRV公司的风险投资人Max Gazor指出，“具备先进人工智能技术的公司往往拥有顶尖的技术人才，他们或者来自业内先进研究实验室，或是来自诸如Google Brain或Facebook人工智能团队等知名行业组织。”</p>
-<p>  　　CRV对技术的追求直接体现在他们的投资行为中，他们投资的公司创始人普遍具有非凡的技术经验。初创企业Rethink Robotics创始人Rod Brooks是麻省理工学院人工智能实验室的创始主管，也是著名机器人公司iRobot的创始人。而Jibo的Cynthia Breazeal也曾在麻省理工大学媒体实验室成立过机器人小组，是一名世界知名的社交机器人专家。Pullstring公司的创始人Oren Jacob也是如此，他曾是皮克斯的首席技术官，自公司成立初期就与史蒂夫乔布斯共事。</p>
-<p>  　　而投资公司DCM Capital的创始人David Cheng则指出，“在整个行业生命周期的这一特定阶段，<strong>一个公司拥有一定数量的人工智能专家就能够获得开发技术的必要经验，从而开发真正的创新解决方案。</strong> 如果一个团队声称他们的产品使用了领先的人工智能技术却没有相应的团队，那么我们对此将持怀疑态度。”</p>
-<h2 id="能够有效解决客户的实际问题吗？"><a href="#能够有效解决客户的实际问题吗？" class="headerlink" title="　　能够有效解决客户的实际问题吗？"></a>　　能够有效解决客户的实际问题吗？</h2><p>  　　投资公司GE Ventures投资人Michael Dolbec指出，“就我个人而言，一个公司若是仅仅对人工智能夸夸其谈，而毫不涉及客户问题，那我就没有什么兴趣。我们投资的是宝贵的技术成果，而不是科学实验项目。”</p>
-<p>  　　每一位投资者对此都表示认同。</p>
-<p>  　　IA Ventures的Brad Gillespie补充称，“如果让我在二者中选择其一时，那么一个公司的业务专业知识将胜过其机器学习专业技能。”IA Ventures曾投资了Vectra Networks，这是一家由经验丰富业内专家领导的网络安全公司，专注于为客户解决重要问题，为安全分析师最大限度提高可用性。而Vectra Networks的竞争对手不断强调他们机器学习技术的复杂性，但客户的反应是“这些家伙很聪明，但他们并不理解我的业务是什么。他们的产品很花哨，但我并不明白它到底是什么。”</p>
-<p>  　　有效解决客户的业务痛点需要创始团队能够超越狭隘的技术方法，拥有解决特定业务的能力。投资公司Two Sigma Ventures的Colin Beirne指出，“当然，<strong>解决当今大多数困难问题需要不同技术的整合，而在特定业务领域使用人工智能能够在一定程度上降低学习理解的复杂性。</strong>”</p>
-<h2 id="是否有相关的，自有或可扩展的数据源？"><a href="#是否有相关的，自有或可扩展的数据源？" class="headerlink" title="　　是否有相关的，自有或可扩展的数据源？"></a>　　是否有相关的，自有或可扩展的数据源？</h2><p>  　　投资公司Qualcomm Ventures的Jain总习惯于这样问创始人，“你是如何获取数据的？你是依托大公司提供的数据，还是独立获取数据？”当然这两种方法都是可行的，但投资人更倾向于创业公司能够独立获取数据。</p>
-<p>  　　传统上。自动驾驶汽车会在郊区等封闭环境中进行测试。而Qualcomm所投资的Cruise Automation则通过在开放城市环境中操作测试车辆，整合人工干预的因素，从而获取更多驾驶数据。同样，Qualcomm所投资的Clarifai通过应用程序能够获取更多的数据，通过此也能够处理更多的业务数据。</p>
-<p>  　　投资者除了对数据源的独特性和合理性有要求，此外人工智能数据还必须要与其面对的问题密切相关。投资公司Battery Ventures的Dharmesh Thakker指出，“<strong>新一代人工智能技术往往取决于获取数据的复杂程度。诸如图像、音视频等非结构化数据处理要比普通文本困难的多。</strong>”在投资决策中，Dharmesh Thakker还会考虑目标公司处理静态数据和快速移动物体数据的能力。诸如自动驾驶汽车获取的实时图像等快速移动物体数据处理算法通常会复杂很多。</p>
-<p>  　　最后，创始团队还需要 <strong>证实其有根据自有数据不断改进产品性能的能力</strong>。Qualcomm的Jain会定期考察团队是否有“快速处理数据并不断优化的能力，从而使系统更加健壮。”</p>
-<h2 id="开发独有技术还是依靠开源产品"><a href="#开发独有技术还是依靠开源产品" class="headerlink" title="　　开发独有技术还是依靠开源产品"></a>　　开发独有技术还是依靠开源产品</h2><p>  　　投资公司Verizon Ventures的投资人Suresh Madhavan指出，相比于开发专有技术，依托开源框架往往就像是一种赠品，“<strong>开源的确能够让你分析解决一些表面问题，但无助于从根本上解决有难度的业务问题。</strong>”</p>
-<p>  　　DCM Ventures的Cheng也同意这一点。DCM的投资团队背后拥有一个由行业顾问和技术专家组成的强大网络。“（这些专家）帮我们审查团队技术、数据架构方式，并能够确定创业团队进行数据收集、存储、解析的根本方法。他们也帮助我们擦亮眼睛，找出滥竽充数者。”</p>
-<h2 id="产品是否有粘性？"><a href="#产品是否有粘性？" class="headerlink" title="　　产品是否有粘性？"></a>　　产品是否有粘性？</h2><p>  　　Sumant Mandal是投资公司March Capital的合伙人，也是The Hive的共同创始人，后者是一家专注于人工智能初创企业的孵化器。Mandal坦言，“<strong>对于人工智能初创企业来说， 如果效率不能提高5到10倍，那么就很难打入市场，从而为投资者带来价值。</strong>”Mandal建议初创企业需要考虑客户的收益。比如要将人工智能用于改进招聘流程，Mandal就建议初创团队要问自己，“如果我能够将相应效率提高5倍，那么能否让客户从雇员身上获得百倍收益？”</p>
-<p>  　　此外，Mandal还指出，<strong>价值提升必须要以客户可见的方式提供给客户，譬如以仪表盘或是真正有价值的情报等形式展现出来。</strong> Mandal警告称，虽然人工智能在网络安全领域的应用已经很多，但数据和相关人才的缺乏，导致“安全分析师并不需要过多的警报”。</p>
-<p>  　　而即便有一个较为理想的产品，仅仅为客户提供单一的解决方案也不是一个可行的商业模式。Woodside Capital的Kartik Gada建议创业公司要寻求收益以及客户的多元化。“你的收入是否稳健？是否常态化？你的客户是否需要相同或更多的解决方案？”</p>
-<h2 id="创业团队是否全面？"><a href="#创业团队是否全面？" class="headerlink" title="　　创业团队是否全面？"></a>　　创业团队是否全面？</h2><p>  　　最后一点，投资者倾向于寻求那些能够解决人工智能业务的多样化团队。投资公司Monsanto Growth Ventures的Kiersten Stead解释称，“多样化意味着团队包括业内专家、商业领袖以及销售精英，而不仅仅是工程技术人员。”</p>
-<p>  　　但是，Stead观察到，很多创业团队，特别是那些仅仅由人工智能研究人员组成的技术团队，并没有特定行业的相关经验，更容易失败。在农业技术开发和遗传育种方面尤为如此。</p>
-<p>  　　她强调，“人工智能技术团队在销售上有短板，反之亦然。我们会寻找行业经验丰富的人工智能企业创始人，他们往往有完整成熟的职业生涯，可与各类人组成一个多样化的团队。”人工智能企业往往会忽视销售和营销，但这对于成功非常重要。</p>
-<p>  　　投资公司Woodside Capital的Gada也警告称，“<strong>很多人工智能初创企业犯下的最大错误就是完全无视营销的重要性。很多客户根本不知道他们需要这些产品。</strong>”（晗冰）</p>
-<h2 id="AI研究院-企业做人工智能转型有四大关键要素"><a href="#AI研究院-企业做人工智能转型有四大关键要素" class="headerlink" title="AI研究院 | 企业做人工智能转型有四大关键要素"></a>AI研究院 | 企业做人工智能转型有四大关键要素</h2><p>  　　【AI研究院 | 网易智能工作室倾力打造的人工智能专业栏目，聚焦行业，深度分析，只为专业】</p>
-<p>  　　<img src="http://dingyue.nosdn.127.net/qvgJyuC8=PfZZvxXgv1ME7yu5vNchInjJQ74zChPxAvSr1486702463725compressflag.jpg" alt=""></p>
-<p>  　　网易智能讯 2月10日消息，在很多行业我们都已接近人工智能技术发展的临界点，包括自动驾驶汽车、蜂巢无人机、自动售货等。如今一个公司无论规模大小如何，都必须了解人工智能将怎样影响、甚至消灭某个行业，以及学会利用人工智能和机器学习（ML）。</p>
-<p>  　　对于企业来说这是一个至关重要的选择——是投身到人工智能领域还是保持现状等着被淘汰，前者可以更有效地帮助企业实现商业目标。人工智能—机器学习将令我们的日常生活更加美好高效，把现有工作提升到更加精确、有效的水平。</p>
-<p>  　　像优步、谷歌和Facebook这样的科技创新公司，通过收购和内部组织的转型，在人工智能领域进行了大胆尝试，使它成为一项战略重点。在2017年达沃斯论坛上，世界各国领导人探讨了人工智能对就业的影响，以及哪些行业适合应用这项技术。</p>
-<p>  　　事实上，根据互联网数据中心（IDC）的数据显示，到2020年，企业在人工智能方面的投入将从2016年的80亿美元飙升至470亿美元。另外，到2019年，将会有超过1.1亿个安装了嵌入式智能助手的设备走进美国家庭。</p>
-<p>  　　Intuit公司的人工智能转型始于4年前，当时业内都在探讨两个问题：金融软件的未来是什么；我们在帮助客户方面扮演怎样的角色。人工智能的趋势在当时是很明显的，包括工作的个性化、自动化、增强和速度等，这些都需要软件来进行辅助。近年来，随着人工智能技术的进步，我们对它的看法也作出了改变。</p>
-<p>  　　现在我们将人工智能看作一种为用户提供方便的技术。我们预计人工智能将创造新技术，例如以一种曾经无法想象的高科技方法为消费者处理税务、为小型企业完成账目记录等。但要实现这一目标并非易事。Intuit公司拥有30多种人工智能和机器学习模型，可以在实时体验中接触客户，而且我们还在不断作出新的尝试。我们在实验和成果中不断学习、发展和改进技术。</p>
-<p>  　　如果你的公司致力于通过人工智能打造能够满足消费者需求的产品和服务，那么这里有几个关键的问题需要考虑。</p>
-<p>  　　<strong>1.重视数据</strong></p>
-<p>  　　每一家公司的人工智能探索之旅都从数据开始。数据令机器学习和人工智能更强大。如果你一直在考虑如何利用数据，那么现在就可以开始制定和实施计划了。</p>
-<p>  　　在Intuit，我们几年前就已经转向了对数据的关注。我们在与业务部门同事进行沟通后制定了技术路线，充分了解了客户需求、行业趋势以及数据能够带来的客户利益。我们的Intuit Analytics Cloud云分析系统打破了一些障碍，让我们能够以更全面地认识产品产生的海量数据。在拥有人工智能或机器学习模型之前，我们就开始专注于数据分析和个性化的基础性工作。<strong>可靠、快速、准确的数据是人工智能—机器学习发展的催化剂。</strong></p>
-<p>  　　<strong>2.展望未来</strong></p>
-<p>  　　设想公司的未来是很重要的，同时也要观察人工智能将如何令你更加强大，或者改变你对研发工作的想法。我们在Intuit进行了一场活动，会见了各种各样的组织和个人，包括大学的学者专家、创业公司、风投公司等，探讨了人工智能和机器学习的未来蓝图，以及Intuit公司将如何适应这一转变。规模较小的公司同样可以在相应的资源范围内做出创新。</p>
-<p>  　　<strong>3.转变心态</strong></p>
-<p>  　　在开始阶段向业务部门和产品负责人解释投资人工智能的益处，可能是一件很有挑战性的事情。重要的是每个季度的客户利益需要体现在商业价值上，而不是单纯研究数据。例如，Intuit的税务分析系统就分析了3000万客户的纳税申报表，对分项扣除还是统一扣除作出相应建议，这可以节省40%的税收工作准备时间。这样一个甚至非数据专家都能理解的切实的商业成果。可以说，<strong>人工智能—机器学习是一段探索之旅。通过实际产生的影响来预估潜在的成果</strong>，这是很重要的。</p>
-<p>  　　4.成立团队，选择项目</p>
-<p>  　　要在企业中开始发展人工智能，先选择一个容易解决的业务问题，组件一支跨职能员工团队，包括数据科学家、工程师和质量监管人员，同时要注意及时更新团队。在团队中建立起能够理解实验价值的文化。珍惜从人工智能应用中得来的知识。另外，你的团队还应同时拥有专业知识和实战经验。千万不要认为只需要聘请专家。同时，在亟待解决的问题上还需要保持与其他行业科学家的互动，比如其他领域的博士等，他们天生具有好奇心，能够理解科学原理，并且有一套不同的解决方案。<strong>真正的人工智能—机器学习可以在应用数据科学方面带来重大成果。</strong> 不要低估了它的重要性，同时也要改变心态。</p>
-<p>  　　我们才刚刚到达人工智能和机器学习的起步阶段。<strong>在公司初创之时紧跟最先进的技术，将有助于你在未来发展中处于优势地位。</strong></p>
-<p>  　　（来源/VentureBeat 翻译/机器小易 审校/小ka）</p>
-<p>  　　注：本文为网易智能工作室稿件，转载需注明出处，否则追究其法律责任。</p>
-<h2 id="人工智能的迅速崛起需要警惕这四大风险"><a href="#人工智能的迅速崛起需要警惕这四大风险" class="headerlink" title="人工智能的迅速崛起需要警惕这四大风险"></a>人工智能的迅速崛起需要警惕这四大风险</h2><p><img src="http://dingyue.nosdn.127.net/ydgEN7xEoWpsGyUkJBKbgdXlwrf5u91jceEc1KE5IZXI=1484981995496compressflag.jpg" alt=""></p>
-<p>　　【网易智能讯 1月21日消息】大家可以想象一下，一名营销主管深夜翻看公司的幻灯片，该公司承诺利用人工智能（AI）自动化他的评分过程、优化他的广告开支方案、帮助增加他的营销开支回报率，他想要知道，哪里可能出现问题？</p>
-<p>的确有可能出现问题。尽管公司使用AI会让营销人员的工作变得更简单，但我们必须承认，AI的承诺往往言过其实。AI带来的好处是显而易见的，但也存在巨大风险。即使你找到最好的AI，并将其应用到你的营销技术堆栈中，依然存在影响你成功部署AI的风险。我并不担心这些风险，也不想将它们藏起来，我认为最好是直接面对它们，直至最终解决它们。</p>
-<p>AI主要存在四大类危险：</p>
-<p><strong>AI危险一：害怕失去工作</strong><br>这是最容易理解的AI危险，同时也是最容易解决的。人们经常害怕AI，因为他们担心AI会让人类变得多余，最终被拥有机器大脑的AI取代我们独特的技能。对于某些工作来说，这可能是真的。但我认为，AI带来的实际危险可能比人类预想的更低。AI还不够先进，也无法全面取代营销专家。如果营销人员学会有效地使用AI，它们反而会增强人类能力。也就是说，为了促使人们购买AI支持的技术，我们首先需要平抚人们对AI的恐惧。</p>
-<p><strong>AI危险二：错位的激励</strong><br>技术传道者有时候会深入企业内部，并利用让人惊叹的创意，阐述他们的产品如何改变每个人。但是有了AI和许多企业技术，这些热情常常会撞墙，因为这些墙将各个部门隔离开。事实证明，公司中拥有大量数据的人，往往不会与其他利益相关者分享数据。无论是出于隐私担忧、部门政策、个人冲突亦或是简单的流程偏差，比如障碍往往可能导致雄心勃勃的AI项目被搁置。</p>
-<p>为此，到目前为止，两类公司在部署AI时取得最大成功，一类是初创企业（公司规模较小，刚刚创建还没有僵化思维），一类是像谷歌和Facebook这样的大科技公司（其全部生命线都基于对数据的利用）。介于这两类极端公司之间的其他企业，几乎包括世界上所有公司，部署AI都会遇到更大阻碍。想要利用AI提高效率的营销人员需要意识到部门和监管问题，这些问题可能影响到他们。此外，数据价值链上的所有玩家都需要保持一致。</p>
-<p><strong>AI危险三：不可预测性</strong><br>这可能是AI固有的最大危险。所有AI项目都是不可预测的，因为它们正被用于解决未知问题。与传统软件开发不同，目前还没有标准的工程方法，可以通过分步获得可预知的AI结果。在这种情况下，将AI应用到营销数据中就像纯粹的科幻。我们不知道特定的数据集是否能解决特定的问题。就像无法预测科学实验的所有结果那样，AI也很难预测结果。这是有关软件开发的全新思维方式，但对任何营销领域或没有AI经验的人来说，这将是个巨大挑战。</p>
-<p><strong>AI危险四：人才匮乏</strong><br>这是AI带来的最后危险，阻碍你的团队引入足够的人才。不幸的是，当前AI领域存在巨大的技术鸿沟。AI领域的绝大多数人才都没有真正处理大规模行业数据的经验。而真正的专家还很少，最新统计显示，数据科学家的职位空缺高达1.6万个。这意味着，找到你需要的专业人士，并让他们帮助部署和执行AI驱动的营销计划非常困难。</p>
-<p>由于存在这些风险，你可以看到截止到目前许多AI实验都以失败告终。举例来说，麦肯锡最近做了一项研究，对石油和天然气钻探作业决策中的数据进行实时分析。麦肯锡研究的1家公司在离岸钻井仪器方面投入巨资，并通过RFID标签和内嵌传感器收集到大量数据。不幸的是，他们收集的数据中只有40%能传回到陆地数据中心，只有1%能真正进入数据库中，不到1%能被用于终端用户的产品中。最终，这些数据没有为人们的决策提供任何帮助。</p>
-<p>不幸的是，你可能发现同样大的阻力。在使用AI过程中，你会遇到强烈的文化阻碍。许多人不相信机器做出的决定，直到机器算法有机会证明自己的决定。营销高管们部署AI面对的挑战是，需要确保所有相关利益者支持他们。确保人们受到相关训练，确保他们对可能结果产生现实期待，并获得正确的激励奖励。</p>
-<p>只有做到这些，你才能开始意识到AI革命为营销领域带来的惊人好处。（小小）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://dy.163.com/v2/article/detail/CCBUQLJG0511CUKV.html&quot;&gt;作者：网易AI研究院&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://dingyue.nosdn.127.net/IU0mHBufDYJuCfqTLNrBB2w5XVt7aFWiewNOPCU=XBFoJ1486103192435compressflag.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;　　据国外媒体报道，毫无疑问现在人工智能概念已经牢牢抓住了公众想象力和媒体的眼球，也带来了大量的业内投资和收购。在新一轮的炒作周期中，投资者该如何辨别相关的人工智能到底是炒作还是真正的现实，这将是一个挑战。&lt;/p&gt;
-&lt;p&gt;　　日前，科技网站venturebeat采访了CRV, IA Ventures, Two Sigma等知名投资公司中经验丰富的风险投资人，从而深入探究这些成功的投资者是如何评估一家人工智能初创公司的。如果你也是一名人工智能相关创业公司的创始人，在投资者面前需要回答好以下的关键问题：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="理财" scheme="http://ipcreator.me/categories/%E7%90%86%E8%B4%A2/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
     
   </entry>
   

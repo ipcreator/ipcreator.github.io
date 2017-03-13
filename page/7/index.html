@@ -164,6 +164,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Program/Concepts/the-anatomy-of-file-system" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/">小议Linux系统下的文件系统</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/" class="archive-article-date">
+  	<time datetime="2017-02-27T01:14:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.chinaunix.net/uid-23069658-id-3437835.html">wjlkoorey</a></p>
+<p>Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的新手们就会被文件系统这个概念弄得晕头转向，恰好我当年正好属于后者。</p>
+<p>从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的一种新型的日志文件系统)，那个年代经常听到说“我要把C盘格式化成ntfs格式，D盘格式化成fat32格式”。一到Linux下，很多入门Linux的书籍中当牵扯到文件系统这个术语时，二话不说，不管三七二十一就给出了下面这个图，然后逐一解释一下每个目录是拿来干啥的、里面会放什么类型的文件就完事儿了，弄得初学者经常“丈二和尚摸不着头脑”。难道这就是Linux下的文件系统。而且新手一直被“灌输”一个思想：Linux下一切都是文件，不再像Windows那样用扩展名来为文件分类等等。这就让那些喜欢刨根问底的fresh-fish很是不爽，他们本着对学术的严谨、技术的狂热的态度，一心想弄明白：到底什么才是文件系统。本文的目的就是和大家分享一下我当初是如何学习Linux的文件系统的，也算是一个“老”油条的一些心得吧。</p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/linux%E7%9B%AE%E5%BD%95.png" alt=""></p>
+        
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">File System</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Program/Concepts/the-anatomy-of-GPU" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -397,83 +475,6 @@
 
 
   
-    <article id="post-Program/Concepts/the-ways-of-keep-code-clean" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/">聊聊clean code</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/" class="archive-article-date">
-  	<time datetime="2017-02-26T14:57:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://tech.meituan.com/clean-code.html">王烨</a><br><img src="http://okkntqe2h.bkt.clouddn.com/clean-code.jpg" alt=""><br>clean code，顾名思义就是整洁的代码，或者说清晰、漂亮的代码，相信大多数工程师都希望自己能写出这样的代码。</p>
-<p>也许这是个千人千面的话题，每个工程师都有自己的理解。比如我，从一个天天被骂代码写得烂的人，逐渐学习成长，到现在也能写的出“人模人样”的代码来了。这期间算是积累了一点经验心得，想和大家分享，抛砖引玉。</p>
-<p>本文主要针对面向对象编程的clean code来阐述，面向过程代码的思路会比较不同，不在本文的讨论范畴。</p>
-        
-          <a class="article-more-a" href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Program</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-Program/Android/the-essence-of-hardware-accelarate-in-android" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -559,32 +560,31 @@
 
 
   
-    <article id="post-BusinessAI/example-of-machine-learning-in-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Program/Concepts/the-ways-of-keep-code-clean" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/">实例详解机器学习如何解决问题</a>
+      <a class="article-title" href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/">聊聊clean code</a>
     </h1>
   
 
         
-        <a href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/" class="archive-article-date">
-  	<time datetime="2017-02-26T14:34:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+        <a href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/" class="archive-article-date">
+  	<time datetime="2017-02-26T14:57:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://tech.meituan.com/mt-mlinaction-how-to-ml.html">huawolf</a></p>
-<p><img src="http://tech.meituan.com/img/how_to_ml/extract_fea.png" alt=""></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在解决工业界问题的实战中所需的基本技术、经验和技巧。本文主要结合实际问题，概要地介绍机器学习解决实际问题的整个流程，包括对问题建模、准备训练数据、抽取特征、训练模型和优化模型等关键环节；另外几篇则会对这些关键环节进行更深入地介绍。</p>
-<p>下文分为1）机器学习的概述，2）对问题建模，3）准备训练数据，4）抽取特征，5）训练模型，6）优化模型，7）总结 共7个章节进行介绍。</p>
+        <p><a href="http://tech.meituan.com/clean-code.html">王烨</a><br><img src="http://okkntqe2h.bkt.clouddn.com/clean-code.jpg" alt=""><br>clean code，顾名思义就是整洁的代码，或者说清晰、漂亮的代码，相信大多数工程师都希望自己能写出这样的代码。</p>
+<p>也许这是个千人千面的话题，每个工程师都有自己的理解。比如我，从一个天天被骂代码写得烂的人，逐渐学习成长，到现在也能写的出“人模人样”的代码来了。这期间算是积累了一点经验心得，想和大家分享，抛砖引玉。</p>
+<p>本文主要针对面向对象编程的clean code来阐述，面向过程代码的思路会比较不同，不在本文的讨论范畴。</p>
         
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/#more">more >></a>
         
       
 
@@ -598,7 +598,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Program</a>
         		</li>
       		
 		</ul>
@@ -610,7 +610,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -619,7 +619,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/">展开全文 >></a>
         </p>
       
 
@@ -639,7 +639,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
     </nav>
   
 

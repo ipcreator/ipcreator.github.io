@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://ipcreator.me">
   <title>Java设计模式 | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="单例保证一个类仅有一个实例，并提供一个访问它的全局访问点。
-为什么作为Java新手神器的System.out.println()，到了真正项目开发当中会被唾弃呢？其实只要细细分析，你就会发现它的很多弊端。比如不可控制，所有的日志都会在项目上线后照常打印，从而降低运行效率；又或者不能将日志记录到本地文件，一旦打印被清除，日志将再也找不回来；再或者打印的内容没有Tag区分，你将很难辨别这一行日志是在哪">
+  <meta name="description" content="单例保证一个类仅有一个实例，并提供一个访问它的全局访问点。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java设计模式">
 <meta property="og:url" content="http://ipcreator.me/2017/03/12/Program/Java/anatomy-of-java-design-pattern/index.html">
 <meta property="og:site_name" content="IPCreator">
-<meta property="og:description" content="单例保证一个类仅有一个实例，并提供一个访问它的全局访问点。
-为什么作为Java新手神器的System.out.println()，到了真正项目开发当中会被唾弃呢？其实只要细细分析，你就会发现它的很多弊端。比如不可控制，所有的日志都会在项目上线后照常打印，从而降低运行效率；又或者不能将日志记录到本地文件，一旦打印被清除，日志将再也找不回来；再或者打印的内容没有Tag区分，你将很难辨别这一行日志是在哪">
-<meta property="og:updated_time" content="2017-03-12T11:45:25.647Z">
+<meta property="og:description" content="单例保证一个类仅有一个实例，并提供一个访问它的全局访问点。">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489338402459&di=f354d44523b4c5d751414e4970189a88&imgtype=0&src=http%3A%2F%2Fsishuok.com%2Fforum%2Fupload%2F2012%2F8%2F21%2Fd9c285859566d753d86f1a44bc9f9a05__2.JPG">
+<meta property="og:image" content="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4232751296,330377077&fm=23&gp=0.jpg">
+<meta property="og:updated_time" content="2017-03-12T14:20:45.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java设计模式">
-<meta name="twitter:description" content="单例保证一个类仅有一个实例，并提供一个访问它的全局访问点。
-为什么作为Java新手神器的System.out.println()，到了真正项目开发当中会被唾弃呢？其实只要细细分析，你就会发现它的很多弊端。比如不可控制，所有的日志都会在项目上线后照常打印，从而降低运行效率；又或者不能将日志记录到本地文件，一旦打印被清除，日志将再也找不回来；再或者打印的内容没有Tag区分，你将很难辨别这一行日志是在哪">
+<meta name="twitter:description" content="单例保证一个类仅有一个实例，并提供一个访问它的全局访问点。">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489338402459&di=f354d44523b4c5d751414e4970189a88&imgtype=0&src=http%3A%2F%2Fsishuok.com%2Fforum%2Fupload%2F2012%2F8%2F21%2Fd9c285859566d753d86f1a44bc9f9a05__2.JPG">
   
   
     <link rel="icon" href="/img/personalphoto.jpg">
@@ -186,7 +186,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h2><p><strong>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</strong></p>
+        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1489338402459&amp;di=f354d44523b4c5d751414e4970189a88&amp;imgtype=0&amp;src=http%3A%2F%2Fsishuok.com%2Fforum%2Fupload%2F2012%2F8%2F21%2Fd9c285859566d753d86f1a44bc9f9a05__2.JPG" alt=""></p>
+<h2 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h2><p><strong>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</strong></p>
+<p><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4232751296,330377077&amp;fm=23&amp;gp=0.jpg" alt=""></p>
+<a id="more"></a>
 <p>为什么作为Java新手神器的System.out.println()，到了真正项目开发当中会被唾弃呢？其实只要细细分析，你就会发现它的很多弊端。比如不可控制，所有的日志都会在项目上线后照常打印，从而降低运行效率；又或者不能将日志记录到本地文件，一旦打印被清除，日志将再也找不回来；再或者打印的内容没有Tag区分，你将很难辨别这一行日志是在哪个类里打印的。</p>
 <figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">private</span> <span class="keyword">static</span> LogUtil sLogUtil;  </div><div class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line">    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line">        sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>将LogUtil的构造函数私有化，这样就无法使用new关键字来创建LogUtil的实例了。然后使用一个sLogUtil私有静态变量来保存实例，并提供一个公有的getInstance方法用于获取LogUtil的实例，在这个方法里面判断如果sLogUtil为空，就new出一个新的LogUtil实例，否则就直接返回sLogUtil。这样就可以保证内存当中只会存在一个LogUtil的实例了。</p>
@@ -197,7 +200,8 @@
 <p>如果是在getInstance方法上加了一个synchronized，那么我每次去执行getInstace方法的时候都会受到同步锁的影响，这样运行的效率会降低，其实<strong>只需要在第一次创建LogUtil实例的时候加上同步锁</strong>就好了。</p>
 <p>首先将synchronized关键字从方法声明中去除，把它加入到方法体当中：这样效果是和直接在方法上加synchronized完全一致的。然后在synchronized的外面再加一层判断，如下所示：代码改成这样之后，只有在sLogUtil还没被初始化的时候才会进入到第3行，然后加上同步锁。等sLogUtil一但初始化完成了，就再也走不到第3行了，这样执行getInstance方法也不会再受到同步锁的影响，效率上会有一定的提升。<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line"><span class="number">2.</span>    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line"><span class="number">3.</span>        <span class="keyword">synchronized</span> (LogUtil.class) &#123;  </div><div class="line">            <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line">                sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>这种方法叫做<strong>双重锁定(Double-Check Locking)</strong></p>
-<p> 参考阅读：<br> <a href="http://blog.csdn.net/guolin_blog/article/details/8860649" target="_blank" rel="external"> Java设计模式透析之 —— 单例(Singleton)</a></p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>A. 无论synchronized关键字加在方法上还是对象上，如果它作用的对象是非静态的，则它取得的锁是对象；如果synchronized作用的对象是一个静态方法或一个类，则它取得的锁是对类，该类所有的对象同一把锁。<br>B. 每个对象只有一个锁（lock）与之相关联，谁拿到这个锁谁就可以运行它所控制的那段代码。<br>C. 实现同步是要很大的系统开销作为代价的，甚至可能造成死锁，所以尽量避免无谓的同步控制。</p>
+<p> 参考阅读：<br> <a href="http://blog.csdn.net/guolin_blog/article/details/8860649" target="_blank" rel="external"> Java设计模式透析之 —— 单例(Singleton)</a><br> <a href="http://blog.csdn.net/luoweifu/article/details/46613015" target="_blank" rel="external"> Java中Synchronized的用法</a></p>
 
       
 
@@ -296,18 +300,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/12/MyView/Movie/ordinary-life/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/12/Program/Android/best-practice-of-android-dev/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          平凡的世界
+          Android之路
         
       </div>
     </a>
   
   
-    <a href="/2017/03/12/Program/Android/best-practice-of-android-dev/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android之路</div>
+    <a href="/2017/03/12/Program/Android/resolve-memory-leak/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">分析解决内存泄漏问题</div>
       <i class="icon-circle-right"></i>
     </a>
   

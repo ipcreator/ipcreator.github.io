@@ -164,6 +164,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Program/Java/multi-thread" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/12/Program/Java/multi-thread/">编程思想之多线程与多进程</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/12/Program/Java/multi-thread/" class="archive-article-date">
+  	<time datetime="2017-03-12T13:45:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作者: <a href="http://blog.csdn.net/luoweifu/article/details/46595285">luoweifu</a></p>
+<h2 id="什么是线程"><a href="#什么是线程" class="headerlink" title="什么是线程"></a>什么是线程</h2><p>什么是线程？线程与进程与有什么关系？这是一个非常抽象的问题，也是一个特别广的话题，涉及到非常多的知识。我不能确保能把它讲的话，也不能确保讲的内容全部都正确。即使这样，我也希望尽可能地把他讲通俗一点，讲的明白一点，因为这是个一直困扰我很久的，扑朔迷离的知识领域，希望通过我的理解揭开它一层一层神秘的面纱。</p>
+        
+          <a class="article-more-a" href="/2017/03/12/Program/Java/multi-thread/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/12/Program/Java/multi-thread/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-MyView/Movie/ordinary-life" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -240,94 +316,6 @@
 
 
   
-    <article id="post-Program/Java/anatomy-of-java-design-pattern" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/12/Program/Java/anatomy-of-java-design-pattern/">Java设计模式</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/12/Program/Java/anatomy-of-java-design-pattern/" class="archive-article-date">
-  	<time datetime="2017-03-12T01:23:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h2><p><strong>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</strong></p>
-<p>为什么作为Java新手神器的System.out.println()，到了真正项目开发当中会被唾弃呢？其实只要细细分析，你就会发现它的很多弊端。比如不可控制，所有的日志都会在项目上线后照常打印，从而降低运行效率；又或者不能将日志记录到本地文件，一旦打印被清除，日志将再也找不回来；再或者打印的内容没有Tag区分，你将很难辨别这一行日志是在哪个类里打印的。</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">private</span> <span class="keyword">static</span> LogUtil sLogUtil;  </div><div class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line">    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line">        sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>将LogUtil的构造函数私有化，这样就无法使用new关键字来创建LogUtil的实例了。然后使用一个sLogUtil私有静态变量来保存实例，并提供一个公有的getInstance方法用于获取LogUtil的实例，在这个方法里面判断如果sLogUtil为空，就new出一个新的LogUtil实例，否则就直接返回sLogUtil。这样就可以保证内存当中只会存在一个LogUtil的实例了。</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line"><span class="number">2.</span>    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line"><span class="number">3.</span>        sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>使用单例模式就是为了让这个类在内存中只能有一个实例的，可是你有考虑到在多线程中打印日志的情况吗？</p>
-<p>如果现在有两个线程同时在执行getInstance方法，第一个线程刚执行完第2行，还没执行第3行，这个时候第二个线程执行到了第2行，它会发现sLogUtil还是null，于是进入到了if判断里面。这样你的单例模式就失败了，因为创建了两个不同的实例。</p>
-<p>只需要给方法加上同步锁就可以了，代码如下：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line">    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line">        sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>如果是在getInstance方法上加了一个synchronized，那么我每次去执行getInstace方法的时候都会受到同步锁的影响，这样运行的效率会降低，其实<strong>只需要在第一次创建LogUtil实例的时候加上同步锁</strong>就好了。</p>
-<p>首先将synchronized关键字从方法声明中去除，把它加入到方法体当中：这样效果是和直接在方法上加synchronized完全一致的。然后在synchronized的外面再加一层判断，如下所示：代码改成这样之后，只有在sLogUtil还没被初始化的时候才会进入到第3行，然后加上同步锁。等sLogUtil一但初始化完成了，就再也走不到第3行了，这样执行getInstance方法也不会再受到同步锁的影响，效率上会有一定的提升。<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="function">LogUtil <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line"><span class="number">2.</span>    <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line"><span class="number">3.</span>        <span class="keyword">synchronized</span> (LogUtil.class) &#123;  </div><div class="line">            <span class="keyword">if</span> (sLogUtil == <span class="keyword">null</span>) &#123;  </div><div class="line">                sLogUtil = <span class="keyword">new</span> LogUtil();  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这种方法叫做<strong>双重锁定(Double-Check Locking)</strong></p>
-<p> 参考阅读：<br> <a href="http://blog.csdn.net/guolin_blog/article/details/8860649" target="_blank" rel="external"> Java设计模式透析之 —— 单例(Singleton)</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Pattern</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/12/Program/Java/anatomy-of-java-design-pattern/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-Program/Android/best-practice-of-android-dev" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -387,6 +375,87 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/12/Program/Android/best-practice-of-android-dev/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Program/Java/anatomy-of-java-design-pattern" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/12/Program/Java/anatomy-of-java-design-pattern/">Java设计模式</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/12/Program/Java/anatomy-of-java-design-pattern/" class="archive-article-date">
+  	<time datetime="2017-03-12T01:23:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1489338402459&amp;di=f354d44523b4c5d751414e4970189a88&amp;imgtype=0&amp;src=http%3A%2F%2Fsishuok.com%2Fforum%2Fupload%2F2012%2F8%2F21%2Fd9c285859566d753d86f1a44bc9f9a05__2.JPG" alt=""></p>
+<h2 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h2><p><strong>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</strong></p>
+<p><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4232751296,330377077&amp;fm=23&amp;gp=0.jpg" alt=""></p>
+        
+          <a class="article-more-a" href="/2017/03/12/Program/Java/anatomy-of-java-design-pattern/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Pattern</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/12/Program/Java/anatomy-of-java-design-pattern/">展开全文 >></a>
         </p>
       
 
@@ -562,86 +631,9 @@
 
 
   
-    <article id="post-Program/Java/ram-of-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/10/Program/Java/ram-of-java/">JVM内存的那些事</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/10/Program/Java/ram-of-java/" class="archive-article-date">
-  	<time datetime="2017-03-10T03:19:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>原文出处： <a href="http://www.jianshu.com/p/eaef248b5a2c">占小狼</a></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于C语言开发的程序员来说，在内存管理方面，必须负责每一个对象的生命周期，从有到无。<br>对于Java程序员你来说，在虚拟机内存管理的帮助下，不需要为每个new对象都匹配free操作，内存泄露和内存溢出等问题也不太容易出现，不过也正是因为把内存管理交给了虚拟机，一旦运行中的程序出现了内存泄露问题，给排查过程造成很大困难。所以只有理解了Java虚拟机的运行机制，才能够运筹帷幄于各种代码。本文以HotSpot为例说说虚拟机的那些事。</p>
-<p>JAVA虚拟机把管理的内存划分为几个不同的数据区。<br><img src="http://upload-images.jianshu.io/upload_images/2184951-75502fd0f9001ece.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-        
-          <a class="article-more-a" href="/2017/03/10/Program/Java/ram-of-java/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/10/Program/Java/ram-of-java/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/25/">25</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/26/">26</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
     </nav>
   
 
