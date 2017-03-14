@@ -6,14 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ipcreator.me">
-  <title>Dev Bugs | IPCreator</title>
+  <title>Android Dev Bugs | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="什么是智者？就是一个坑不跌两回呗
 The wiser man doesn’t fall into the same pit twice.
 基础不牢、地动山摇
  Without a solid foundation, the earth will shake.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Dev Bugs">
+<meta property="og:title" content="Android Dev Bugs">
 <meta property="og:url" content="http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="什么是智者？就是一个坑不跌两回呗
@@ -21,9 +21,10 @@ The wiser man doesn’t fall into the same pit twice.
 基础不牢、地动山摇
  Without a solid foundation, the earth will shake.">
 <meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/wiseman.jpeg">
-<meta property="og:updated_time" content="2017-03-10T14:25:24.780Z">
+<meta property="og:image" content="http://s8.sinaimg.cn/mw690/001VP1dYzy6Je3KTVpZf7&690">
+<meta property="og:updated_time" content="2017-03-14T12:40:05.200Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dev Bugs">
+<meta name="twitter:title" content="Android Dev Bugs">
 <meta name="twitter:description" content="什么是智者？就是一个坑不跌两回呗
 The wiser man doesn’t fall into the same pit twice.
 基础不牢、地动山摇
@@ -181,7 +182,7 @@ The wiser man doesn’t fall into the same pit twice.
         
   
     <h1 class="article-title" itemprop="name">
-      Dev Bugs
+      Android Dev Bugs
     </h1>
   
 
@@ -200,6 +201,13 @@ The wiser man doesn’t fall into the same pit twice.
 <p>基础不牢、地动山摇</p>
 <p> Without a solid foundation, the earth will shake.</p>
  <a id="more"></a>
+<h2 id="如何使视频在VideoView中居中显示"><a href="#如何使视频在VideoView中居中显示" class="headerlink" title="如何使视频在VideoView中居中显示"></a><a href="http://blog.sina.com.cn/s/blog_6988593e0101j3pu.html" target="_blank" rel="external">如何使视频在VideoView中居中显示</a></h2><p> 默认情况下，如果视频分辨率小于设备的屏幕分辨率，VideoView在播放视频时都是在左上角显示的，影响美观。如何让居中显示呢？<br> 下面给出解决方法：<br> 1、修改VideoView组件的Layout Parameters的Gravity属性<br> <img src="http://s8.sinaimg.cn/mw690/001VP1dYzy6Je3KTVpZf7&amp;690" alt=""><br>2、使用“格式工厂”视频处理软件修改视频分辨率，使其等于或大于设备的屏幕分辨率。</p>
+<h2 id="Android-设置TextView滑动滚动条和滑动效果"><a href="#Android-设置TextView滑动滚动条和滑动效果" class="headerlink" title="Android 设置TextView滑动滚动条和滑动效果"></a><a href="http://blog.csdn.net/whu_zhangmin/article/details/29808339" target="_blank" rel="external">Android 设置TextView滑动滚动条和滑动效果</a></h2><p><a href="http://jingyan.baidu.com/article/c85b7a640641dc003aac9562.html" target="_blank" rel="external">Android TextView属性大全</a></p>
+<p> 1、单独的TextView控件设置滚动条<br> <figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;TextView</div><div class="line">        Android:<span class="built_in">id</span>=<span class="string">"@+id/content"</span></div><div class="line">        android:layout_width=<span class="string">"fill_parent"</span></div><div class="line">        android:layout_height=<span class="string">"wrap_content"</span></div><div class="line">        android:<span class="built_in">text</span>=<span class="string">"file content is empty!"</span></div><div class="line">        android:scrollbars=<span class="string">"vertical"</span></div><div class="line">        android:fadeScrollbars=<span class="string">"false"</span>/&gt;</div></pre></td></tr></table></figure></p>
+<p>在activity中为这个TextView设置：<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">mFileContentView</span> = (TextView) findViewById(R.id.content)<span class="comment">;</span></div><div class="line">mFileContentView.setMovementMethod(ScrollingMovementMethod.getInstance())<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<p>经过上面两个步骤，TextView就可以上下滚动了，如果想自定义滚动条，接着在xml里面加入属性：<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">android:</span>scrollbarThumbVertical=<span class="string">"@drawable/ic_launcher"</span>   <span class="comment">//滑块的图片</span></div><div class="line"><span class="symbol">android:</span>scrollbarTrackVertical=<span class="string">"@drawable/ic_launcher"</span>   <span class="comment">//滑道的图片</span></div></pre></td></tr></table></figure></p>
+<p>ScrollBar由两部分组成，一个是Track（滑道），一个是Thumb(滑块)</p>
+<p>2、也可以用ScrollView<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ScrollView</span></span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"fill_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:scrollbars</span>=<span class="string">"vertical"</span></div><div class="line">        <span class="attr">android:fadingEdge</span>=<span class="string">"vertical"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:id</span>=<span class="string">"@+id/content"</span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"fill_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"file content is empty!"</span>/&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">ScrollView</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h2 id="删除联系人"><a href="#删除联系人" class="headerlink" title="删除联系人"></a>删除联系人</h2><p><a href="http://blog.csdn.net/u010800530/article/details/39455347" target="_blank" rel="external">Android开发系列（十一）：对手机通讯录的读取、添加、删除、查找</a><br><a href="http://www.cnblogs.com/weilf/p/4851872.html" target="_blank" rel="external">android通讯录开发及优化</a></p>
 <h2 id="利用Android-Studio中集成的Android-Link"><a href="#利用Android-Studio中集成的Android-Link" class="headerlink" title="利用Android Studio中集成的Android Link"></a>利用Android Studio中集成的Android Link</h2><p>打开AS，点击工具栏的Analyze-Run Inspection by Name-输入unused resources-选择要搜索的范围回车-查看搜索结果并删除无用的资源文件</p>
 <h2 id="android-parentActivityName"><a href="#android-parentActivityName" class="headerlink" title="android:parentActivityName"></a>android:parentActivityName</h2><p> android:parentActivityName的作用，就是为了左上角给子Activity加一个返回按钮，具体信息如下：</p>
@@ -430,7 +438,7 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Program/Android/android-trouble-resolver" data-title="Dev Bugs" data-url="http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/"></div>
+	<div class="ds-thread" data-thread-key="Program/Android/android-trouble-resolver" data-title="Android Dev Bugs" data-url="http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -732,6 +740,22 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Pattern</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Regular Expression</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Gson</a>
               </li>
             
             <div class="clearfix"></div>

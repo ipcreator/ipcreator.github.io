@@ -15,7 +15,8 @@
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.">
 <meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/music.png">
-<meta property="og:updated_time" content="2017-03-03T12:30:30.261Z">
+<meta property="og:image" content="http://img.blog.csdn.net/20161128093058740">
+<meta property="og:updated_time" content="2017-03-14T12:39:24.921Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RollPlayer">
 <meta name="twitter:description" content="做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.">
@@ -189,6 +190,9 @@
 <p>做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.</p>
  <a id="more"></a>
 <h2 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h2><p>功能要求：一个窗口，一个目录，一些自己喜欢的歌曲，随机选择歌曲，支持单曲循环播放，支持歌词显示；<br>应用场景：徒步、登山、坐享时使用。</p>
+<p><img src="http://img.blog.csdn.net/20161128093058740" alt=""></p>
+<p>状态1：Idel(空闲)状态<br>当 mediaplayer创建或者执行reset()方法后处于这个状态。<br>状态2：Initialized(已初始化)状态<br>当调用mediaplayer的setDataResource()方法给mediaplayer设置播放的数据源后，mediaplayer会处于该状态。<br>状态3：Prepared(准备就续)状态<br>设置完数据源后，调用mediaplayer的prepare()方法，让mediaplayer准备播放。值得一提的是，这里除了prepare()方法，还有prepareAsnyc()方法，此方法是异步方法，一般用于网络视频的缓冲。当缓冲完毕后，就会触发准备完毕的事件。我们要做的就是监听该事件(OnPreparedListener)，当缓冲完成时，执行相应的操作。在此状态上，我们可以调用seekTo()方法定位视频，此方法不改变mediaplayer的状态；亦可调用stop()放弃视频播放，使mediaplayer处于Stopped状态。一般我们会在此状态上调用start()方法开始播放视频。<br>状态4：Started(开始)状态<br>当处于Prepared状态、Paused状态和PlayebackCompeleted状态时，调用Started()方法即可进入该状态。在该状态中，mediaplayer开始播放视频，可以通过seekTo()方法和start()方法改变视频播放的进度，当Looping为真且播放完毕后，它会重新开始播放（即循环播放）；否则播放完毕后，会触发事件并调用OnCompletionaListener.OnCompletion()方法，进行特定操作，并进入PlaybackCompleted状态。在此状态中，亦可调用pause()方法或者stop()方法让视频暂停或停止，此时mediaplayer分别处于Stopped和Paused状态。<br>状态5：Stopped(停止)状态<br>当 mediaplayer处于Prepared、Started、Paused、PlaybackCompleted状态时，调用stop()方法即可进入本状态。应特别注意的是，在本状态中，若想重新开始播放，不能直接调用start()方法，必须调用prepare()方法或prepareAsync()方法重新让mediaplayer处于Prepared状态方可调用start()方法播放视频。<br>状态6：Paused(暂停)状态<br>当mediaplayer处于Started状态是，调用pause()方法即可进入本状态。在本状态里，可直接调用start()方法使，mediaplayer回到Started状态，亦可调用stop()方法停止视频播放，让播放器处于停止态。<br>状态7：PlaybackCompleted(播放完成)状态<br>当mediaplayer播放完成且Looping为假时即可进入本状态。在本状态可调用start()方法使mediaplayer回到Started状态（注意此时是从头开始播放）；亦可调用stop()方法使mediaplayer处于停止态，结束播放。<br>状态8：Error(错误)状态<br>当mediaplayer出现错误时处于此状态。<br>调用release()方法即可释放此mediaplayer对象。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://www.runoob.com/w3cnote/android-tutorial-mediaplayer.html" target="_blank" rel="external">MediaPlayer播放音频与视频</a><br><a href="http://blog.csdn.net/huaxun66/article/details/53333747" target="_blank" rel="external">Android MediaPlayer和VideoView的使用</a><br><a href="http://blog.sina.com.cn/s/blog_53ad73d70101c6om.html" target="_blank" rel="external">Android Supported Media Formats（Android支持的媒体格式）</a></p>
 
       
 
@@ -293,8 +297,8 @@
     </a>
   
   
-    <a href="/2017/03/03/Program/Android/tips-of-androidstudio/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">AndroidStudio技巧</div>
+    <a href="/2017/03/03/Program/Concepts/how-to-write-singe-instance/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何正确地写出单例模式</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -610,6 +614,22 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Pattern</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Regular Expression</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Gson</a>
               </li>
             
             <div class="clearfix"></div>

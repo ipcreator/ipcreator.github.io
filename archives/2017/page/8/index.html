@@ -164,32 +164,31 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-BusinessAI/example-of-machine-learning-in-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Program/Concepts/the-anatomy-of-network-programming" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/">实例详解机器学习如何解决问题</a>
+      <a class="article-title" href="/2017/02/27/Program/Concepts/the-anatomy-of-network-programming/">Linux网络编程</a>
     </h1>
   
 
         
-        <a href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/" class="archive-article-date">
-  	<time datetime="2017-02-26T14:34:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+        <a href="/2017/02/27/Program/Concepts/the-anatomy-of-network-programming/" class="archive-article-date">
+  	<time datetime="2017-02-27T02:11:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://tech.meituan.com/mt-mlinaction-how-to-ml.html">huawolf</a></p>
-<p><img src="http://tech.meituan.com/img/how_to_ml/extract_fea.png" alt=""></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在解决工业界问题的实战中所需的基本技术、经验和技巧。本文主要结合实际问题，概要地介绍机器学习解决实际问题的整个流程，包括对问题建模、准备训练数据、抽取特征、训练模型和优化模型等关键环节；另外几篇则会对这些关键环节进行更深入地介绍。</p>
-<p>下文分为1）机器学习的概述，2）对问题建模，3）准备训练数据，4）抽取特征，5）训练模型，6）优化模型，7）总结 共7个章节进行介绍。</p>
+        <p><img src="https://www.ibm.com/developerworks/cn/linux/l-linux-networking-stack/figure2.gif" alt=""></p>
+<p>Linux的整个网络协议栈都构建与Linux Kernel中，整个栈也是严格按照分层的思想来设计的，整个栈共分为五层，分别是 ：</p>
+<p>1． 系统调用接口层，实质是一个面向用户空间应用程序的接口调用库，向用户空间应用程序提供使用网络服务的接口。<br>2． 协议无关的接口层，就是SOCKET层，这一层的目的是屏蔽底层的不同协议（更准确的来说主要是TCP与UDP，当然还包括RAW IP， SCTP等），以便与系统调用层之间的接口可以简单，统一。简单的说，不管我们应用层使用什么协议，都要通过系统调用接口来建立一个SOCKET，这个SOCKET其实是一个巨大的sock结构，它和下面一层的网络协议层联系起来，屏蔽了不同的网络协议的不同，只把数据部分呈献给应用层（通过系统调用接口来呈献）。<br>3． 网络协议实现层，毫无疑问，这是整个协议栈的核心。这一层主要实现各种网络协议，最主要的当然是IP，ICMP，ARP，RARP，TCP，UDP等。这一层包含了很多设计的技巧与算法，相当的不错。<br>4． 与具体设备无关的驱动接口层，这一层的目的主要是为了统一不同的接口卡的驱动程序与网络协议层的接口，它将各种不同的驱动程序的功能统一抽象为几个特殊的动作，如open，close，init等，这一层可以屏蔽底层不同的驱动程序。<br>5． 驱动程序层，这一层的目的就很简单了，就是建立与硬件的接口层。<br>可以看到，Linux网络协议栈是一个严格分层的结构，其中的每一层都执行相对独立的功能，结构非常清晰。<br>其中的两个“无关”层的设计非常棒，通过这两个“无关”层，其协议栈可以非常轻松的进行扩展。在我们自己的软件设计中，可以吸收这种设计方法。</p>
         
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-network-programming/#more">more >></a>
         
       
 
@@ -203,7 +202,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Network</a>
         		</li>
       		
 		</ul>
@@ -215,7 +218,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -224,7 +227,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-network-programming/">展开全文 >></a>
         </p>
       
 
@@ -242,31 +245,31 @@
 
 
   
-    <article id="post-BusinessAI/data-clean-and-remark-feature-in-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Program/Concepts/start-up-of-linux" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/">机器学习中的数据清洗与特征处理综述</a>
+      <a class="article-title" href="/2017/02/27/Program/Concepts/start-up-of-linux/">从头构建自己的Linux系统</a>
     </h1>
   
 
         
-        <a href="/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/" class="archive-article-date">
-  	<time datetime="2017-02-26T14:24:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+        <a href="/2017/02/27/Program/Concepts/start-up-of-linux/" class="archive-article-date">
+  	<time datetime="2017-02-27T02:03:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://tech.meituan.com/machinelearning-data-feature-process.html">caohao</a></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>随着美团交易规模的逐步增大，积累下来的业务数据和交易数据越来越多，这些数据是美团做为一个团购平台最宝贵的财富。通过对这些数据的分析和挖掘，不仅能给美团业务发展方向提供决策支持，也为业务的迭代指明了方向。目前在美团的团购系统中大量地应用到了机器学习和数据挖掘技术，例如个性化推荐、筛选排序、搜索排序、用户建模等等，为公司创造了巨大的价值。</p>
-<p>本文主要介绍在美团的推荐与个性化团队实践中的数据清洗与特征挖掘方法。主要内容已经在内部公开课”机器学习InAction系列”讲过，本博客的内容主要是讲座内容的提炼和总结。</p>
+        <p><a href="http://blog.chinaunix.net/uid-23069658-id-3343885.html">wjlkoorey</a></p>
+<p><img src="http://blog.chinaunix.net/attachment/201303/23/23069658_1364022276448d.gif" alt=""></p>
+<p>在博文“<a href="http://blog.chinaunix.net/uid-23069658-id-3142047.html">Linux系统启动过程分析</a>”中我们了解了linux系统的启动流程，今天我们就来手动一步一步从头来构建一个最小的linux系统，然后用模拟器将其加载起来。常见的模拟器有Qemu、Bochs、VMWare、VPC、Virtual Box和Xen等，以及特殊的模拟UML(User-Mode-Linux)，这里我们选择用VMWare。</p>
         
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/start-up-of-linux/#more">more >></a>
         
       
 
@@ -280,7 +283,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
@@ -292,7 +295,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -301,7 +304,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/start-up-of-linux/">展开全文 >></a>
         </p>
       
 
@@ -319,33 +322,32 @@
 
 
   
-    <article id="post-BusinessAI/ffm-learning-in-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Program/Concepts/the-anatomy-of-file-system" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/BusinessAI/ffm-learning-in-meituan/">深入FFM原理与实践</a>
+      <a class="article-title" href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/">小议Linux系统下的文件系统</a>
     </h1>
   
 
         
-        <a href="/2017/02/26/BusinessAI/ffm-learning-in-meituan/" class="archive-article-date">
-  	<time datetime="2017-02-26T14:20:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+        <a href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/" class="archive-article-date">
+  	<time datetime="2017-02-27T01:14:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://tech.meituan.com/deep-understanding-of-ffm-principles-and-practices.html">del2z, 大龙</a></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>FM和FFM模型是最近几年提出的模型，凭借其在数据量比较大并且特征稀疏的情况下，仍然能够得到优秀的性能和效果的特性，屡次在各大公司举办的CTR预估比赛中获得不错的战绩。美团点评技术团队在搭建DSP的过程中，探索并使用了FM和FFM模型进行CTR和CVR预估，并且取得了不错的效果。本文旨在把我们对FM和FFM原理的探索和应用的经验介绍给有兴趣的读者。</p>
-<p>在计算广告领域，点击率CTR（click-through rate）和转化率CVR（conversion rate）是衡量广告流量的两个关键指标。准确的估计CTR、CVR对于提高流量的价值，增加广告收入有重要的指导作用。预估CTR/CVR，业界常用的方法有人工特征工程 + LR(Logistic Regression)、GBDT(Gradient Boosting Decision Tree) + LR[1][2][3]、FM（Factorization Machine）[2][7]和FFM（Field-aware Factorization Machine）[9]模型。在这些模型中，FM和FFM近年来表现突出，分别在由Criteo和Avazu举办的CTR预测竞赛中夺得冠军[4][5]。</p>
-<p>考虑到FFM模型在CTR预估比赛中的不俗战绩，美团点评技术团队在搭建DSP（Demand Side Platform）[6]平台时，在站内CTR/CVR的预估上使用了该模型，取得了不错的效果。本文是基于对FFM模型的深度调研和使用经验，从原理、实现和应用几个方面对FFM进行探讨，希望能够从原理上解释FFM模型在点击率预估上取得优秀效果的原因。因为FFM是在FM的基础上改进得来的，所以我们首先引入FM模型，本文章节组织方式如下：</p>
-<p>首先介绍FM的原理。<br>其次介绍FFM对FM的改进。<br>然后介绍FFM的实现细节。<br>最后介绍模型在DSP场景的应用。</p>
+        <p><a href="http://blog.chinaunix.net/uid-23069658-id-3437835.html">wjlkoorey</a></p>
+<p>Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的新手们就会被文件系统这个概念弄得晕头转向，恰好我当年正好属于后者。</p>
+<p>从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的一种新型的日志文件系统)，那个年代经常听到说“我要把C盘格式化成ntfs格式，D盘格式化成fat32格式”。一到Linux下，很多入门Linux的书籍中当牵扯到文件系统这个术语时，二话不说，不管三七二十一就给出了下面这个图，然后逐一解释一下每个目录是拿来干啥的、里面会放什么类型的文件就完事儿了，弄得初学者经常“丈二和尚摸不着头脑”。难道这就是Linux下的文件系统。而且新手一直被“灌输”一个思想：Linux下一切都是文件，不再像Windows那样用扩展名来为文件分类等等。这就让那些喜欢刨根问底的fresh-fish很是不爽，他们本着对学术的严谨、技术的狂热的态度，一心想弄明白：到底什么才是文件系统。本文的目的就是和大家分享一下我当初是如何学习Linux的文件系统的，也算是一个“老”油条的一些心得吧。</p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/linux%E7%9B%AE%E5%BD%95.png" alt=""></p>
         
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/ffm-learning-in-meituan/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/#more">more >></a>
         
       
 
@@ -359,7 +361,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">File System</a>
         		</li>
       		
 		</ul>
@@ -371,7 +373,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -380,7 +382,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/ffm-learning-in-meituan/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/">展开全文 >></a>
         </p>
       
 
@@ -398,30 +400,32 @@
 
 
   
-    <article id="post-BusinessAI/online-learning-in-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Program/Concepts/the-anatomy-of-GPU" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/BusinessAI/online-learning-in-meituan/">Online Learning算法理论与实践</a>
+      <a class="article-title" href="/2017/02/27/Program/Concepts/the-anatomy-of-GPU/">显示卡的“心脏” GPU工作原理介绍</a>
     </h1>
   
 
         
-        <a href="/2017/02/26/BusinessAI/online-learning-in-meituan/" class="archive-article-date">
-  	<time datetime="2017-02-26T14:13:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+        <a href="/2017/02/27/Program/Concepts/the-anatomy-of-GPU/" class="archive-article-date">
+  	<time datetime="2017-02-27T00:58:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://tech.meituan.com/online-learning.html">孔东营</a></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="http://tech.meituan.com/img/online-learning/online-learning-flow.png" alt=""><br>Online Learning是工业界比较常用的机器学习算法，在很多场景下都能有很好的效果。本文主要介绍Online Learning的基本原理和两种常用的Online Learning算法：FTRL（Follow The Regularized Leader）[1]和BPR（Bayesian Probit Regression）[2]，以及Online Learning在美团移动端推荐重排序的应用。</p>
+        <p><a href="http://www.eechina.com/thread-176224-1-1.html">designapp</a></p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png" alt=""></p>
+<p>图形处理器(英语：Graphics Processing Unit，缩写：gpu)，又称显示核心、视觉处理器、显示芯片，是一种专门在个人电脑、工作站、游戏机和一些移动设备(如平板电脑、智能手机等)上图像运算工作的微处理器。</p>
+<p>用途是将计算机系统所需要的显示信息进行转换驱动，并向显示器提供行扫描信号，控制显示器的正确显示，是连接显示器和个人电脑主板的重要元件，也是“人机对话”的重要设备之一。显卡作为电脑主机里的一个重要组成部分，承担输出显示图形的任务，对于从事专业图形设计的人来说显卡非常重要。</p>
         
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/online-learning-in-meituan/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-GPU/#more">more >></a>
         
       
 
@@ -435,7 +439,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">GPU</a>
         		</li>
       		
 		</ul>
@@ -447,7 +451,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -456,7 +460,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/online-learning-in-meituan/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-GPU/">展开全文 >></a>
         </p>
       
 
@@ -474,30 +478,31 @@
 
 
   
-    <article id="post-BusinessAI/framework-of-get-features-in-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Program/Concepts/the-anatomy-of-hard-disk" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/">外卖排序系统特征生产框架</a>
+      <a class="article-title" href="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/">硬盘的存储原理和内部架构</a>
     </h1>
   
 
         
-        <a href="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/" class="archive-article-date">
-  	<time datetime="2017-02-26T14:04:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+        <a href="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/" class="archive-article-date">
+  	<time datetime="2017-02-27T00:58:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://tech.meituan.com/feature_pipeline.html">海文</a></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="http://tech.meituan.com/img/feature_pipeline/001.png" alt=""><br>外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。</p>
+        <p><a href="http://blog.chinaunix.net/uid-23069658-id-3413957.html">wjlkoorey</a></p>
+<p><img src="http://blog.chinaunix.net/attachment/201211/19/23069658_13533340196613.jpg" alt=""></p>
+<p>本来想写个文件系统的专题，结果发现对硬盘的内部架构和存储原理还是比较模糊，因为不了解“一点”硬盘的存储原理对文件系统的认识老是感觉镜花水月，不踏实。经过搜集整理资料就由了本文的问世。借用Bean_lee兄一句话：成果和荣耀归于前辈。</p>
         
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/#more">more >></a>
         
       
 
@@ -511,7 +516,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">File System</a>
         		</li>
       		
 		</ul>
@@ -523,7 +528,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -532,7 +537,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/">展开全文 >></a>
         </p>
       
 
@@ -550,31 +555,32 @@
 
 
   
-    <article id="post-BusinessAI/deep-learning-in-meituan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Program/Concepts/the-anatomy-of-cpu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/26/BusinessAI/deep-learning-in-meituan/">深度学习在美团点评的应用</a>
+      <a class="article-title" href="/2017/02/27/Program/Concepts/the-anatomy-of-cpu/">CPU的内部架构和工作原理</a>
     </h1>
   
 
         
-        <a href="/2017/02/26/BusinessAI/deep-learning-in-meituan/" class="archive-article-date">
-  	<time datetime="2017-02-26T13:56:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-26</time>
+        <a href="/2017/02/27/Program/Concepts/the-anatomy-of-cpu/" class="archive-article-date">
+  	<time datetime="2017-02-27T00:06:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://tech.meituan.com/deeplearning_application.html">文竹 李彪 晓明</a></p>
-<p>   <img src="http://tech.meituan.com/img/deeplearning_application/clicknet_framework.png" alt=""></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>近年来，深度学习在语音、图像、自然语言处理等领域取得非常突出的成果，成了最引人注目的技术热点之一。美团点评这两年在深度学习方面也进行了一些探索，其中在自然语言处理领域，我们将深度学习技术应用于文本分析、语义匹配、搜索引擎的排序模型等；在计算机视觉领域，我们将其应用于文字识别、目标检测、图像分类、图像质量排序等。下面我们就以语义匹配、图像质量排序及文字识别这三个应用场景为例，来详细介绍美团点评在深度学习技术及应用方面的经验和方法论。</p>
+        <p><a href="http://blog.chinaunix.net/uid-23069658-id-3563960.html">wjlkoorey</a></p>
+<p><strong>更多参考</strong><br><a href="http://blog.csdn.net/yang_yulei/article/details/22529437"> 处理器体系结构（了解CPU的基本运行原理）——《深入理解计算机系统》</a><br><a href="http://blog.csdn.net/yang_yulei/article/details/22613327">CPU的实模式与保护模式（简介）</a></p>
+<p>一直以来，总以为CPU内部真是如当年学习《计算机组成原理》时书上所介绍的那样，是各种逻辑门器件的组合。当看到纳米技术时就想，真的可以把那些器件做的那么小么？直到看了<a href="http://v.youku.com/v_show/id_XMjQyMDAyMTUy.html">Intel CPU制作流程</a>及<a href="http://v.youku.com/v_show/id_XMzcyODU1NDIw.html">AMD芯片的制作流程</a>的介绍不禁感慨，原来科技是如此的发达。</p>
+<p>本文我们以Intel为例对CPU的工作原理做简单介绍，仅仅是简单介绍，那么AMD，ARM，MIPS甚至PowerPC你应该会触类旁通才对。</p>
         
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/deep-learning-in-meituan/#more">more >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-cpu/#more">more >></a>
         
       
 
@@ -588,7 +594,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Deep Learning</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CPU</a>
         		</li>
       		
 		</ul>
@@ -600,7 +606,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/AI/" class="article-tag-list-link color3">AI</a>
+        			<a href="/categories/技术/" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -609,7 +615,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/26/BusinessAI/deep-learning-in-meituan/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/02/27/Program/Concepts/the-anatomy-of-cpu/">展开全文 >></a>
         </p>
       
 
@@ -629,7 +635,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/page/7/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2017/page/6/">6</a><a class="page-number" href="/archives/2017/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/archives/2017/page/9/">9</a><a class="page-number" href="/archives/2017/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2017/page/25/">25</a><a class="extend next" rel="next" href="/archives/2017/page/9/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/archives/2017/page/7/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2017/page/6/">6</a><a class="page-number" href="/archives/2017/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/archives/2017/page/9/">9</a><a class="page-number" href="/archives/2017/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2017/page/27/">27</a><a class="extend next" rel="next" href="/archives/2017/page/9/">Next &raquo;</a>
     </nav>
   
 
@@ -913,6 +919,22 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Pattern</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Regular Expression</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Gson</a>
               </li>
             
             <div class="clearfix"></div>

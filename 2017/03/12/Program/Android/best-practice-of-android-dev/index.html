@@ -8,16 +8,18 @@
   <link rel="dns-prefetch" href="http://ipcreator.me">
   <title>Android之路 | IPCreator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、为什么要引入内部类？2、为什么要引入内部匿名类？3、为什么要引入static变量、方法和类？4、为什么要新增线程？5、如何确保多线程安全访问？6、如何检测及分析内存泄漏？常用工具有哪些？7、引发内存泄漏的常见错误模式有哪些？如何避免又如何解决？8、为什么要引入接口？什么是面向接口编程？9、API接口文档及示范案例学习了没有？为什么不学？      不了解就用，出问题正常，不出问题才怪10、事前">
+  <meta name="description" content="遇到一个问题，搞清楚是什么（What）？为什么（Why）？怎么做（How）？，知其然知其所以然，不知不觉，量变到质变，熟能生出百巧来…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android之路">
 <meta property="og:url" content="http://ipcreator.me/2017/03/12/Program/Android/best-practice-of-android-dev/index.html">
 <meta property="og:site_name" content="IPCreator">
-<meta property="og:description" content="1、为什么要引入内部类？2、为什么要引入内部匿名类？3、为什么要引入static变量、方法和类？4、为什么要新增线程？5、如何确保多线程安全访问？6、如何检测及分析内存泄漏？常用工具有哪些？7、引发内存泄漏的常见错误模式有哪些？如何避免又如何解决？8、为什么要引入接口？什么是面向接口编程？9、API接口文档及示范案例学习了没有？为什么不学？      不了解就用，出问题正常，不出问题才怪10、事前">
-<meta property="og:updated_time" content="2017-03-12T01:41:09.140Z">
+<meta property="og:description" content="遇到一个问题，搞清楚是什么（What）？为什么（Why）？怎么做（How）？，知其然知其所以然，不知不觉，量变到质变，熟能生出百巧来…">
+<meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/road.jpg">
+<meta property="og:updated_time" content="2017-03-14T12:51:22.274Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android之路">
-<meta name="twitter:description" content="1、为什么要引入内部类？2、为什么要引入内部匿名类？3、为什么要引入static变量、方法和类？4、为什么要新增线程？5、如何确保多线程安全访问？6、如何检测及分析内存泄漏？常用工具有哪些？7、引发内存泄漏的常见错误模式有哪些？如何避免又如何解决？8、为什么要引入接口？什么是面向接口编程？9、API接口文档及示范案例学习了没有？为什么不学？      不了解就用，出问题正常，不出问题才怪10、事前">
+<meta name="twitter:description" content="遇到一个问题，搞清楚是什么（What）？为什么（Why）？怎么做（How）？，知其然知其所以然，不知不觉，量变到质变，熟能生出百巧来…">
+<meta name="twitter:image" content="http://om8nmvpn9.bkt.clouddn.com/road.jpg">
   
   
     <link rel="icon" href="/img/personalphoto.jpg">
@@ -183,19 +185,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1、为什么要引入内部类？<br>2、为什么要引入内部匿名类？<br>3、为什么要引入static变量、方法和类？<br>4、为什么要新增线程？<br>5、如何确保多线程安全访问？<br>6、如何检测及分析内存泄漏？常用工具有哪些？<br>7、引发内存泄漏的常见错误模式有哪些？如何避免又如何解决？<br>8、为什么要引入接口？什么是面向接口编程？<br>9、API接口文档及示范案例学习了没有？为什么不学？<br>      不了解就用，出问题正常，不出问题才怪<br>10、事前不想清楚，不架构好，后面就等着救火打补丁<br>11、程序员如何进入心流，有想法有技能，每日能有进展，看得见摸的着<br>12、看见好代码就手痒，看到好软件/功能/服务，就琢磨着如何实现？<br>13、利用GitHub，及时备份，大胆尝试<br>14、高手之路，就是通过模仿、分析、解决一个个问题来练就<br>15、先易后难，循序渐进，有时候，该突击就突击<br>16、面向需求找方案，面对问题找答案，效率要好过按部就班地逐章阅读…<br>17、构建自己的代码库、经验案例库、文档库、工具库，武器越多，办法越多<br>18、基础越牢，思路越广，方案越好<br>19、……</p>
-<p> 遇到一个问题，搞清楚是什么（What）？为什么（Why）？怎么做（How）？，<br> 知其然知其所以然，不知不觉，量变到质变，熟能生出百巧来…</p>
+        <p><img src="http://om8nmvpn9.bkt.clouddn.com/road.jpg" alt=""></p>
+<p> 遇到一个问题，搞清楚是什么（What）？为什么（Why）？怎么做（How）？，知其然知其所以然，不知不觉，量变到质变，熟能生出百巧来…</p>
   <a id="more"></a>
-<p>  避免程序崩溃的常见方法<br>  1、引用/销毁对象前，判空<br>  2、合理使用Try/Catch语句<br>  3、…</p>
+<h2 id="避免程序崩溃的常见方法"><a href="#避免程序崩溃的常见方法" class="headerlink" title="避免程序崩溃的常见方法"></a>避免程序崩溃的常见方法</h2><p>  0、四大组件要登记（尤其移植第三方时要注意）<br>  1、引用/销毁对象前，判空<br>  2、合理使用Try/Catch语句<br>  3、…</p>
+<h2 id="为什么系列"><a href="#为什么系列" class="headerlink" title="为什么系列"></a>为什么系列</h2><p>  1、为什么要引入内部类？<br>  2、为什么要引入内部匿名类？<br>  3、为什么要引入static变量、方法和类？<br>  4、为什么要新增线程？<br>  5、如何确保多线程安全访问？<br>  6、如何检测及分析内存泄漏？常用工具有哪些？<br>  7、引发内存泄漏的常见错误模式有哪些？如何避免又如何解决？<br>  8、为什么要引入接口？什么是面向接口编程？<br>  9、API接口文档及示范案例学习了没有？为什么不学？<br>        不了解就用，出问题正常，不出问题才怪<br>  10、事前不想清楚，不架构好，后面就等着救火打补丁<br>  11、程序员如何进入心流，有想法有技能，每日能有进展，看得见摸的着<br>  12、看见好代码就手痒，看到好软件/功能/服务，就琢磨着如何实现？<br>  13、利用GitHub，及时备份，大胆尝试<br>  14、高手之路，就是通过模仿、分析、解决一个个问题来练就<br>  15、先易后难，循序渐进，有时候，该突击就突击<br>  16、面向需求找方案，面对问题找答案，效率要好过按部就班地逐章阅读…<br>  17、构建自己的代码库、经验案例库、文档库、工具库，武器越多，办法越多<br>  18、基础越牢，思路越广，方案越好<br>  19、……</p>
 <p>  这个单词/句子是什么意思？<br>  为什么取这个名字，内涵是什么？<br>  静态解读<br>  动态调试<br>  日志输出<br>  别人的分析<br>  自己的使用，用起来…学以致用，边学边用</p>
-<p>  <strong>容易导致挫败感的几个原因</strong><br>  A、一上手就是较大型项目，陌生无知的知识/技能点太多；<br>  B、求快，有紧迫时间进度要求<br>  C、求好，一开始就要求完美</p>
-<p>  <strong>破解方案</strong><br>  A、循序渐进，把握好节奏感，创造成就感<br>  B、检索、复用、请教、协作、沟通<br>  C、一步一步来，水到渠成，功到自然成</p>
+<h2 id="容易导致挫败感的几个原因"><a href="#容易导致挫败感的几个原因" class="headerlink" title="容易导致挫败感的几个原因"></a>容易导致挫败感的几个原因</h2><p>  A、一上手就是较大型项目，陌生无知的知识/技能点太多；<br>  B、求快，有紧迫时间进度要求<br>  C、求好，一开始就要求完美</p>
+<h2 id="破解方案"><a href="#破解方案" class="headerlink" title="破解方案"></a>破解方案</h2><p>  A、循序渐进，把握好节奏感，创造成就感<br>  B、检索、复用、请教、协作、沟通<br>  C、一步一步来，水到渠成，功到自然成</p>
 <p>  找成就感的一些示例：小型、有用、有趣的</p>
 <p>  壁纸、电子书、词典、拼图、五子棋、计算器、BMI、联系人、相机、音乐播放器…</p>
 <p>  更新补充到自己的技术体系中<br>  同步到自己的blog中去</p>
 <p>  他是如此相信自己，以至于别人不得不相信他——艾伦艾弗森</p>
 <p>  大脑中的否定消极的情绪，就如肚子里的大便，一定要及时清理出去，否则只会有百害而无一益。——IPCreator</p>
-<p>  有这样的恒心和决心，何愁事情不成</p>
+<p>  <strong>有这样的决心和恒心，何愁事情不成</strong><br>  <strong>功不唐捐，天道酬勤</strong></p>
 
       
 
@@ -290,18 +293,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/12/MyView/Movie/ordinary-life/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/12/Program/Java/anatomy-of-java-design-pattern/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          平凡的世界
+          Java设计模式
         
       </div>
     </a>
   
   
-    <a href="/2017/03/12/Program/Java/anatomy-of-java-design-pattern/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java设计模式</div>
+    <a href="/2017/03/12/Program/Android/resolve-memory-leak/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">分析解决内存泄漏问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -617,6 +620,22 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Pattern</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Regular Expression</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Gson</a>
               </li>
             
             <div class="clearfix"></div>

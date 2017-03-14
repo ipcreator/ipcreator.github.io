@@ -2,6 +2,104 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/03/12/Program/Android/best-practice-of-android-dev/</loc>
+    
+    <lastmod>2017-03-14T12:51:22.274Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/14/Program/Android/update-ui/</loc>
+    
+    <lastmod>2017-03-14T12:46:32.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/12/Program/Android/resolve-memory-leak/</loc>
+    
+    <lastmod>2017-03-14T12:41:16.850Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
+    
+    <lastmod>2017-03-14T12:40:19.018Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
+    
+    <lastmod>2017-03-14T12:40:05.200Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/Program/Android/MyApp/my-favor-music-player/</loc>
+    
+    <lastmod>2017-03-14T12:39:24.921Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/12/Program/Android/multi-thread-in-android/</loc>
+    
+    <lastmod>2017-03-14T06:10:42.994Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/13/Program/Tool/regular-expression-in-java/</loc>
+    
+    <lastmod>2017-03-14T05:57:35.699Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/13/Program/Tool/brief-introduction-of-regular-expression/</loc>
+    
+    <lastmod>2017-03-14T05:44:33.835Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/14/MyView/Movie/house-of-card/</loc>
+    
+    <lastmod>2017-03-14T05:43:50.409Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/13/Program/Tool/anatomy-of-regular-expression/</loc>
+    
+    <lastmod>2017-03-14T04:47:11.487Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/14/Program/Android/MyApp/update-cool-weather/</loc>
+    
+    <lastmod>2017-03-14T04:41:33.291Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/13/Program/C++/difference-of-java-and-c++/</loc>
+    
+    <lastmod>2017-03-13T11:58:16.691Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/12/Program/Java/multi-thread/</loc>
+    
+    <lastmod>2017-03-13T11:47:16.809Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/lixiaolai-lead-to-freedom-of-wealth/</loc>
     
     <lastmod>2017-03-13T11:29:53.078Z</lastmod>
@@ -12,13 +110,6 @@
     <loc>http://ipcreator.me/2017/02/22/MyView/English/love-words/</loc>
     
     <lastmod>2017-03-13T10:47:45.706Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/12/Program/Java/multi-thread/</loc>
-    
-    <lastmod>2017-03-12T15:08:17.997Z</lastmod>
     
   </url>
   
@@ -51,20 +142,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/03/12/Program/Android/best-practice-of-android-dev/</loc>
-    
-    <lastmod>2017-03-12T01:41:09.140Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/12/Program/Android/resolve-memory-leak/</loc>
-    
-    <lastmod>2017-03-12T00:12:39.887Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/01/06/MyView/my-view-of-growing-up/</loc>
     
     <lastmod>2017-03-11T23:06:37.530Z</lastmod>
@@ -75,20 +152,6 @@
     <loc>http://ipcreator.me/2017/03/11/Program/Android/MyApp/bmi-app/</loc>
     
     <lastmod>2017-03-11T14:45:35.207Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
-    
-    <lastmod>2017-03-11T13:05:25.985Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
-    
-    <lastmod>2017-03-10T14:25:24.780Z</lastmod>
     
   </url>
   
@@ -222,13 +285,6 @@
     <loc>http://ipcreator.me/2017/03/04/Program/Android/android_signature_v1_and_v2/</loc>
     
     <lastmod>2017-03-04T14:03:17.625Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/03/Program/Android/MyApp/my-favor-music-player/</loc>
-    
-    <lastmod>2017-03-03T12:30:30.261Z</lastmod>
     
   </url>
   
@@ -695,6 +751,13 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
@@ -723,20 +786,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/19/BusinessAI/ai-on-terminal-of-google/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
@@ -751,7 +800,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
@@ -765,7 +821,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
