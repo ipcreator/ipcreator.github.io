@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-03-19T14:39:24.584Z</updated>
+  <updated>2017-03-21T15:09:41.858Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -16,14 +16,249 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>那些冲击三观和心灵的书籍</title>
+    <title>贝叶斯定理（Bayes&#39; theorem）</title>
+    <link href="http://ipcreator.me/2017/03/21/Program/mathematics/bayes-rule/"/>
+    <id>http://ipcreator.me/2017/03/21/Program/mathematics/bayes-rule/</id>
+    <published>2017-03-21T14:05:08.000Z</published>
+    <updated>2017-03-21T15:09:41.858Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://image.beekka.com/blog/201108/bg2011082507.jpg" alt=""></p>
+<p>贝叶斯定理的威力之一在于能让我们由已知的概率以及手头的信息去推断未知的概率。</p>
+<p>概率论只不过是把常识用数学公式表达了出来。——拉普拉斯</p>
+<a id="more"></a>
+<p>贝叶斯定理的胆识</p>
+<p>同人于野</p>
+<p>你相信上帝吗？你相信中医吗？你相信全球变暖是人为造成的，而且问题非常严重吗？你相信转基因食品的安全性吗？你相信大年初一去雍和宫祈福能带来好运吗？</p>
+<p>本文不研究这些问题。我想说的是，当你说“我相信”或者“我不相信”的时候，你到底是个什么意思。</p>
+<p>如果我们把“相信”仅仅当成一个表态，那它的意义其实相当有限。也许我们可以在跟朋友闲聊的时候吹吹，也许我们可以在网上参与评论，也许我们还能写篇文章说明自己的立场。但是这又能怎样？空谈误国。我们的观点完全不左右真理，而且通常很难左右别人。</p>
+<p>“相信不相信”的真正意义，在于给我们自己的决策提供依据。如果我相信大年初一去雍和宫祈福能带来好运，那么第一，我想方设法去；第二，别人信与不信与我关系不大，事实上我可能希望信的人少，这样我去更方便。如此说来“信不信”是个非常主观的判断，我们完全可以容忍别人的判断跟自己不同。</p>
+<p>更进一步，“信或不信”有点生硬，最好我们能把它量化一下，用一个数字来描述，比如说用概率。比如如果我说“雍和宫好使的可能性是15%”，那我就是不怎么相信；如果我说“雍和宫好使的可能性是100%”，那我就是深信不疑。严格地说，这个概率数字当然是所谓“主观概率”，就好像天气预报说明天下雨的概率是30%—样，其实“明天”只发生一次，并不是说在100个平行宇宙的明天中有30个会下雨。</p>
+<p>这个量化了的信念可以让我们的决策更科学。如果我对雍和宫的信念值只有15%，但是我大年初一那天正好就从雍和官路过，那我就完全可以进去上个香，有枣没枣打一竿子再说——可是专程跑一趟就没必要了。如果我对雍和宫的信念值高达95%，那我就值得坐火车去北京上香。</p>
+<p>真正的深信不疑和彻底不信都是很少的，甚至可能是虚张声势自欺欺人。一般情况下对一般有争议的问题我们都是抱着将信将疑的态度，信念值在0.01%到99.99%之间。而且，我们对大多数事物的信念值都在动态变化。比如有什么特别突兀的新东西出来，我们一开始可能是不信的，随着证据增多，慢慢加强信念。</p>
+<p>—个智识分子应该拥有这种复杂的信念体系，时刻调整自己对各种事物的看法。也可以说，这是不断地变动自己的世界观。</p>
+<p>想要科学合理地做到这一点，我们需要用到贝叶斯定理。这个定理的数学形式和思想都非常简单，早在两百多年前就被人发现和使用了，但是—直争议极大，因为它的用法恰恰是计算主观概率。很多统计学家认为主观概率根本不科学，个人的信念毫无意义，只有客观概率才值得严肃对待。但是在过去这五六十年内，实用主义者们没理会统计学家的争论，使用贝叶斯定理做了很多很多事：破解了二战时德军密码、预测了俄罗斯潜艇的位置、判断申请贷款者的信用……我们不妨直接引用《金融时报》中文版何帆的一篇科普文章：</p>
+<p>生命科学家用它研究基因是如何被控制的；教育学家突然意识到，学生的学习过程其实就是贝叶斯法则的运用；基金经理用贝叶斯法则找到投资策略；Google用贝叶斯法则改进搜索功能，帮助用户过滤垃级邮件；无人驾驶汽车接收车顶传感器搜集到的路况和交通数据，运用贝叶斯法则灵新从地图上获得的信息。人工智能、机器翻译中大量用到贝叶斯法则。</p>
+<p>所有这些应用的原理都是一样的。如果我掌握这个东西的全部信息，那我当然能计算一个客观概率——可是生活中绝大多数决策面临的信息是不全的，我们手里只有非常有限的几个证据。而贝叶斯定理的精神在于，既然无法得到全面的信息，我们就在证据有限的情况下，尽可能地做一个更好的判断。</p>
+<p>先来看看贝叶斯定理是什么样的：</p>
+<p>P(A|B)= p(B|A) /  P（B) * p(A)</p>
+<p>A代表我们感兴趣的事件，比如“雍和宫祈福有用”，p（A)表示它发生的概率。B代表一个与之有关的事件，比如“我朋友，某甲，去年去了雍和宫祈福，结果他很快就升职了”，P(A\B)则代表在B发生的情况下，A发生的概率。类似地，p（B）表示B发生的概率，p(B\A)表示在A发生的情况下，B发生的概率。</p>
+<p>这是一个“定理”，因为它不是哪个门派掌门人拍脑袋决定的思路，而是数学推导出来的。并不是你“选择”使用这个公式，而是只要你认同概率论的基本法则，你就必须用这个公式。统计学家的分歧在于走这一步到底好不好，而不在于这一步应该怎么走。</p>
+<p>如果你没怎么看懂上面说的技术细节，也请坚持往下读——最关键思想是：当B发生以后，有了这个新的证据，我们对A的信念就需要做一个调整，从p(A)变成p（A\B)了。你可以把A当成你对一般情况的理论预言，把B当成一次实验结果。有了新的实验结果，你就调整自己的理论预言。</p>
+<p>现在我们就拿雍和宫祈福这个例子，来看看一个贝叶斯主义者是怎么更新自己的信念的。首先我们用基本的概率公式，把p（B)展开成P(B)=p（B\A）<em>p（A）+p（B\A-）</em>p（A-），其中A-表示A的相反事件，也就是“雍和宫不好使”，p（A-)=1-p（A）。这么做可以更精确地估算p(B)。这样贝叶斯定理要求我们先自行估计三个值：</p>
+<p>你事先认为雍和宫有多好使，也就是p(A)；</p>
+<p>如果雍和宫好使，某甲因为祈福加持而升职的可能性，也就是P(B\A)；</p>
+<p>如果雍和宫不好使，某甲不借助这个力量而升职的可能性，也就是p（B\A-)。</p>
+<p>—个比较合理的估计差不多是这样的。某甲既然能升职，必然有过人之处，那么我们可以认为他在没有雍和宫加持的情况下也有50%的升职可能，所以P(B\A-)=0.5。雍和宫就算再灵验也不能有求必应，否则人人出来都成亿万富翁了，我们姑且假设，所谓“灵验”就是能让某甲升职的概率大大提升，这样我们可以估计P（B\A)=0.8。如果你事先对雍和宫的信念值是15%，那么p（A)=0.15。</p>
+<p>这样根据贝叶斯定理计算，现在你的信念值应该是p（A\B)=0.22。</p>
+<p>玩这种数字有什么意义呢？这比听风就是雨可高级多了。如果我的信念值从15%变成22%，那就说明第一，我这个人听劝，有利证据进来了，我的确调高了我的信念值；第二，我这个人稳重，没有听到一个证据就立即发生世界观的彻底改变，过去不怎么信，现在还是不怎么信。听劝又稳重，既做到了开张圣听，也没有妄自菲薄，古代对贤人的要求也不过如此吧？</p>
+<p>而且你可以继续调整信念。假设过了一年你听说另一个朋友某乙，水平与某甲相当，也去了雍和宫祈福升职，结果未能升职！这一次，p（A)=0.22。现在B表示“未能升职”，所以p（B\A）不再是0.8，而应该是0.2。p（B\A-)仍然是0.5。我们计算出，p（A\B）=0.1。</p>
+<p>所以因为这一次不灵的事件，你应该把你对雍和宫的信念值从22%调低到10%。在数学上很容易证明，只要p（B\A)&gt;p(B\A-)，B事件就会使我们对事件A的信念值提升，反之则会降低。这样有时候往上调有时候往下调，当你听说了很多证据之后，就有可能形成一个比较稳定的看法。对雍和宫这样的例子来说，经过几次祈福不好使的打击，很快你就应该不信了。<br>而如果我们对某件事的信念值非常非常低，那么即使强有力的证据也很难扭转我们的信念。现在我们来说一个贝叶斯定理的极端例子，这个例子堪称典故！</p>
+<p>艾滋病毒（HIV)检测技术的准确度相当惊人。如果一个人真是HIV阳性，血液检测的手段有99.9%的把握把他这个阳性给检查出来而不漏网。如果一个人不携带HIV，那么检测手段的精度更高，达到99.99%——也就是说只有0.01%的可能性会冤枉他。</p>
+<p>已知一般人群中HIV携带者的比例是0.01%。现在假设我们随便在街头找一个人给他做检查，发现检测结果是HIV阳性，那么请问，这个人真的携带HIV的可能性是多大呢？</p>
+<p>在你回答之前，我先提供一点背景资料。德国马普研究所的心理学家曾经拿这道题考了好几百人，包括学生，数学家和医生。结果95%的大学生和40%的医生都给出了错误的答案。</p>
+<p>我们使用贝叶斯定理。A表示“这个人真的携带HIV”，B表示“检测出HIV”，那么根据现有条件，p（A）=0.01%，p（B\A)=99.9%，p（B\A-)=0.01%，带入公式，计算得到p（A\B)=50%！答案是即使在这么高的检测准确度之下，哪怕这个人真的被检测到HIV阳性，他真有HIV的可能性也只有50%。</p>
+<p>如果你脑子还没转过弯来，我们还有个直观的解释。假设我们随机地找一万个人来做实验。根据HIV病毒的分布，这一万人中应该只有一个人是真的携带HIV的。而由于我们的检测手段很强，这个人会被检测出来。但剩下的9999人都没有携带HIV，可是我们对没有携带HIV的人的检测精度是99.99%，也就是说有万分之一的可能性会冤枉一人。这样一来，我们的检测手段还会在9999人中冤枉一个人。</p>
+<p>本来只有一人携带HIV，可是我们却检测出来两人。所以如果一个人被检测出HIV来，他真的携带HIV的可能性其实只有50%。</p>
+<p>从根本上说，造成这种局面的原因在于HIV尽管名声很大，但其实是一种罕见的病毒，人群中只有万分之一的人感染。在这种情况下即使你的检测手段再高，也很有可能会冤枉人。</p>
+<p>如果一个疾病比较罕见，那么你就不应该对阳性诊断太有信心。</p>
+<p>由此我联想到中国历史特殊时期的“抓特务”行动。“特务”这个工作的要求，其实贵在精而不在多，再说国民党也没那么多钱养，真正的特务其实是很少的。如果我们看到一个人长得像特务，说话走路也像特务，我们有多大把握说他就是特务呢？上面这个例子告诉我们，“误诊率”可能相当高。“抓特务”，最好的办法是冒出来一个抓一个，最可怕的办法是搞“人人过关”。如果你搞“人人过关”，必然是一大堆冤假错案！</p>
+<p>这就是冤假错案产生的数学原理，这也是为什么卡尔萨根说“超乎寻常的论断需要超乎寻常的证据”。</p>
+<p>我自己最近的一次信念改变的经历是关于自动驾驶汽车的。2010年第一次听说Google正在试验一个相当完善的自动驾驶汽车系统，我不太相信。那时候很多人还在把驾驶当成一个人工智能非常难以做到的例子来说事儿——计算机别说驾驶汽车，连在停车场停车都停不好。别的公司试验自动驾驶，都是非常初级的技术：或者需要特殊的公路，或者需要一个人做司机在前面引路，后面无人驾驶车队必须一辆紧挨着一辆不能有别的车插队，模仿着往前走，根本谈不上应对复杂的交通路况。所以我当时判断可能记者没听懂专家的介绍，或者记者被忽悠了。</p>
+<p>然而此后陆续看到很多关于Google这个项目的报道，越来越多细节被透露出来。这时候，虽然其他公司的自动驾驶项目仍然很初级，虽然家用吸尘机器人的行动路线仍然很愚蠢，但我已经非常相信Google的自动驾驶系统了。鉴于这个系统从未有过商业应用，我目前对它的相信程度大概是95%。这个信念值已经足以让我在写文章的时候假定这个自动驾驶系统真实存在。</p>
+<p>据说中国曾经在历史特殊时期禁止教授贝叶斯统计学，可能因为那时候的人认为信念不容更改吧。至今有很多人是坚持信念不看证据的，甚至有了与自己信念相反的证据出来，他直接忽略这个证据，或者干脆说这是个阴谋，反而证明我的信念更正确了。还有一种情况是像雍正对年羹尧那样，要说信任就好得如胶似漆，要说不信就不听辩解直接赐死！像这样的二愣子性格，实在不太适合求知。正确的态度是不断根据新的事实来调整自己的观点。</p>
+<p>观点随事实改变，有胆有识，这就是贝叶斯定理的伟大原则。<br>文章选自《智识分子》</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://xueqiu.com/8102984655/73644129" target="_blank" rel="external">贝叶斯定理的胆识</a><br><a href="http://blog.csdn.net/kesalin/article/details/40370325/" target="_blank" rel="external">从贝叶斯定理说开去</a><br><a href="http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/" target="_blank" rel="external">数学之美番外篇：平凡而又神奇的贝叶斯方法</a><br><a href="http://www.ruanyifeng.com/blog/2011/08/bayesian_inference_part_one.html" target="_blank" rel="external">贝叶斯推断及其互联网应用（一）：定理简介</a><br><a href="http://www.ruanyifeng.com/blog/2011/08/bayesian_inference_part_two.html" target="_blank" rel="external">贝叶斯推断及其互联网应用（二）：过滤垃圾邮件</a><br><a href="http://www.ruanyifeng.com/blog/2012/10/spelling_corrector.html" target="_blank" rel="external">贝叶斯推断及其互联网应用（三）：拼写检查</a><br><a href="http://www.ruanyifeng.com/blog/2013/12/naive_bayes_classifier.html" target="_blank" rel="external">朴素贝叶斯分类器的应用</a><br><a href="http://blog.csdn.net/pongba/article/details/2915005" target="_blank" rel="external">机器学习与人工智能学习资源导引</a><br><a href="http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/" target="_blank" rel="external">数学之美番外篇：进化论中的概率论</a><br><a href="http://www.matrix67.com" target="_blank" rel="external">Matrix67: The Aha Moments</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://image.beekka.com/blog/201108/bg2011082507.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;贝叶斯定理的威力之一在于能让我们由已知的概率以及手头的信息去推断未知的概率。&lt;/p&gt;
+&lt;p&gt;概率论只不过是把常识用数学公式表达了出来。——拉普拉斯&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Mathematics" scheme="http://ipcreator.me/tags/Mathematics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DataNovo</title>
+    <link href="http://ipcreator.me/2017/03/21/BusinessAI/datanovo/"/>
+    <id>http://ipcreator.me/2017/03/21/BusinessAI/datanovo/</id>
+    <published>2017-03-21T07:07:18.000Z</published>
+    <updated>2017-03-21T15:13:26.480Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://www.datanovo.com/landing/img/logo.png" alt=""></p>
+<p>DataNovo Offers Keyword-Free Prior Art Search, Product Assessment on Infringement,<br>and Legal Analytics on Every U.S. Patent.</p>
+   <a id="more"></a>
+<h2 id="DataNovo-Offers-Keyword-Free-Prior-Art-Search"><a href="#DataNovo-Offers-Keyword-Free-Prior-Art-Search" class="headerlink" title="DataNovo Offers Keyword-Free Prior Art Search"></a>DataNovo Offers Keyword-Free Prior Art Search</h2><p>With just the patent number, DataNovo’s powerful machine learning system identifies the most relevant prior art against the patent. Results include uncited patents and non-patent literature.</p>
+<p><img src="http://www.datanovo.com/landing/img/cinema-1.png" alt=""></p>
+<h2 id="DataNovo-Offers-Product-Assessment-on-Infringement"><a href="#DataNovo-Offers-Product-Assessment-on-Infringement" class="headerlink" title="DataNovo Offers Product Assessment on Infringement"></a>DataNovo Offers Product Assessment on Infringement</h2><p>Describe your product in as few as six words. DataNovo then analyzes your product to generate a list of U.S. patents that might cover that product to help you avoid potential infringement.</p>
+<p><img src="http://www.datanovo.com/landing/img/cinema-2.png" alt=""></p>
+<h2 id="DataNovo-Offers-Actionable-Analytics"><a href="#DataNovo-Offers-Actionable-Analytics" class="headerlink" title="DataNovo Offers Actionable Analytics"></a>DataNovo Offers Actionable Analytics</h2><p>DataNovo offers patent strength analytics and core business metrics on each U.S. patent to help you make informed decisions in courtrooms and boardrooms.</p>
+<p><img src="http://www.datanovo.com/landing/img/cinema-3.png" alt=""></p>
+<h2 id="FOR-LAW-FIRMS-AND-PRACTICING-ATTORNEYS"><a href="#FOR-LAW-FIRMS-AND-PRACTICING-ATTORNEYS" class="headerlink" title="FOR LAW FIRMS AND PRACTICING ATTORNEYS"></a>FOR LAW FIRMS AND PRACTICING ATTORNEYS</h2><p>Legal practitioners turn to DataNovo for conducting the most efficient and thorough prior art searches for U.S. patent. Simply enter the a U.S. patent number, and DataNovo then processes the patent and generate all relevant prior art search results in seconds.</p>
+<h2 id="FOR-COMPANIES-AND-STARTUPS"><a href="#FOR-COMPANIES-AND-STARTUPS" class="headerlink" title="FOR COMPANIES AND STARTUPS"></a>FOR COMPANIES AND STARTUPS</h2><p>Companies and startups use DataNovo to guide their litigation strategy when filing or defending against patent infringement suits, and to institute intelligent, cost-saving measures to avoid unnecessary and often expensive legal proceedings.</p>
+<h2 id="FOR-IP-STAKEHOLDERS-AND-COLLABORATORS"><a href="#FOR-IP-STAKEHOLDERS-AND-COLLABORATORS" class="headerlink" title="FOR IP STAKEHOLDERS AND COLLABORATORS"></a>FOR IP STAKEHOLDERS AND COLLABORATORS</h2><p>Investors (venture capitalists, investment banks), auditors, advisors, innovators, and influencers subscribe to DataNovo to discover new and existing opportunities in patent financing, revenue generation, and equity positions for patents that have unrealized potentials.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://www.datanovo.com/landing/img/logo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;DataNovo Offers Keyword-Free Prior Art Search, Product Assessment on Infringement,&lt;br&gt;and Legal Analytics on Every U.S. Patent.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="IPR" scheme="http://ipcreator.me/tags/IPR/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSDN</title>
+    <link href="http://ipcreator.me/2017/03/21/Program/csdn/"/>
+    <id>http://ipcreator.me/2017/03/21/Program/csdn/</id>
+    <published>2017-03-21T06:54:18.000Z</published>
+    <updated>2017-03-21T07:32:05.419Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>2000年就与CSDN结下了不解之缘，见证了其发展与壮大，下一个AI时代，共同学习与成长。</p>
+</blockquote>
+<p><a href="http://geek.csdn.net/news/detail/188197" target="_blank" rel="external">IBM PowerAI人工智能12小时编程马拉松大赛——“我是大侦探”</a></p>
+<p><img src="http://img.blog.csdn.net/20170321135021107?" alt=""></p>
+<p>CSDN总编孟迎霞对于有志于向人工智能领域发展的技术人员提出了三点建议：一是坚定自己要到哪里去。人工智能领域范畴庞大，涉及行业多，不论是专业化人工智能还是通用普适化人工智能，带来众多机遇，开发者要<strong>选定方向和路径</strong>。第二，要<strong>善于利用巨头和工具的资源</strong>。第三，开发者要<strong>沉下心来苦练内功，抓住机会</strong>。</p>
+   <a id="more"></a>
+<p><a href="http://geek.csdn.net/news/detail/139455" target="_blank" rel="external">TensorFlow 贡献者唐源：掌握 Google 深度学习框架的正确姿势</a></p>
+<p><img src="http://img.blog.csdn.net/20170222150432480" alt=""><br>唐源，美国 Uptake 数据科学家，带领团队建立用于多个物联网领域的数据科学引擎进行条件和健康监控，同时建立公司的预测模型引擎，现已被用于航空、能源等大型机械领域。是 TensorFlow 和 DMLC 的成员，TensorFlow、XGBoost、MXNet 等软件的 committer，曾荣获谷歌 Open Source Peer Bonus。在美国宾州州立大学获得荣誉数学学位，曾在本科学习期间成为创业公司 DataNovo 的核心创始成员，研究专利数据挖掘、无关键字现有技术搜索、策略推荐等。</p>
+<h2 id="CSDN：对于数学功底不是很好的程序员，如果想掌握深度学习，甚至成为数据科学家，您有什么好的建议？"><a href="#CSDN：对于数学功底不是很好的程序员，如果想掌握深度学习，甚至成为数据科学家，您有什么好的建议？" class="headerlink" title="CSDN：对于数学功底不是很好的程序员，如果想掌握深度学习，甚至成为数据科学家，您有什么好的建议？"></a>CSDN：对于数学功底不是很好的程序员，如果想掌握深度学习，甚至成为数据科学家，您有什么好的建议？</h2><p>唐源：深度学习其实一开始也就是从一个简单的神经网络发展来的。如果想扎扎实实做这一方面的研究，当然数学越好以及知识越广能够带你走的更远。但是如果没有很好的数学功底，走应用的路线也是非常好的，毕竟也不是所有的研究都有很大的影响力或者用到了很高深的数学，很多时候只要能够读懂大概的算法思路，知道这个算法在什么样的应用中适用就行了。现在数据科学家的门槛其实也是越来越低，以前是有 Scikit-learn 的帮助，现在是有着各种深度学习框架，甚至最近 TensorFlow 在机器学习应用方面的侧重，比如说大力研发高阶的 <strong>Estimator API</strong>，也更是让更多人能够更有效地学习和更快地进入到这个行业当中。</p>
+<h2 id="CSDN：如果没有数学基础的限制，能否给刚入门深度学习的开发者提供一些学习和实践经验？"><a href="#CSDN：如果没有数学基础的限制，能否给刚入门深度学习的开发者提供一些学习和实践经验？" class="headerlink" title="CSDN：如果没有数学基础的限制，能否给刚入门深度学习的开发者提供一些学习和实践经验？"></a>CSDN：如果没有数学基础的限制，能否给刚入门深度学习的开发者提供一些学习和实践经验？</h2><p>唐源：可以对这些深度学习的算法和架构都进行了解，要知道每个算法都适用于哪些类型的运用，基础好的话可以直接读一些好的会议以及期刊论文，关注一下前沿的研究。一定要多积累实战经验，可以多参与项目，参与像 Kaggle 这样的竞赛，最近的 Data Science Bowl 就是个很好的切入点，可以多融入到论坛中的讨论，来学习学习大家的思路和方法。如果对模型具体的实现感兴趣的话，可以尝试着读一读源代码，因为这不仅能帮助理解模型，也能了解到对于这个模型的实现，具体有哪些需要注意的地方，比如说性能上为什么这样处理会更好，API 为什么这样设计，等等。</p>
+<h2 id="CSDN：如果用户已经使用-Spark-作为大数据处理平台，也用了-MLlib，有什么理由是他必须使用-TensorFlow-的？"><a href="#CSDN：如果用户已经使用-Spark-作为大数据处理平台，也用了-MLlib，有什么理由是他必须使用-TensorFlow-的？" class="headerlink" title="CSDN：如果用户已经使用 Spark 作为大数据处理平台，也用了 MLlib，有什么理由是他必须使用 TensorFlow 的？"></a>CSDN：如果用户已经使用 Spark 作为大数据处理平台，也用了 MLlib，有什么理由是他必须使用 TensorFlow 的？</h2><p>唐源： TensorFlow 提供的不仅仅只是现有的一些比较热门的模型实现，深度学习和机器学习这个领域的发展是非常快的，很多问题往往不是简单的现有模型能够解决的，最重要的是一个框架的灵活性和可拓展性一定是不能丢的，Spark 的 MLlib 很优秀地实现了一些工业界需求比较大的一些算法，但是 TensorFlow 能提供的不仅仅是这些，<strong>它提供了很多建立机器学习和深度学习必有的元素，比如，TensorFlow 有着自己的 metrics、losses、optimizers、layers 等模块来帮助建立各种各样的深度学习模型，它也提供了许多高阶的 Estimator API 来帮助用户更好地搭建和定义自己的分布式的模型，FeatureColumn 模块来帮助数据科学工作中很重要的特征工程，DataFrame 和 QueueRunner 等模块来更好地实现数据的预处理，提取批量队列，等等。另外，TensorFlow 省去了在各种不同的设备（比如 CPU、GPU、TPU）上的实现，用户只需要集中精力调用已经实现好的 API 就可以在各种设备上进行自动优化以及资源分配，这些都是 Spark 目前还不能或者是很难做到的。最近雅虎开源的 TensorFlowOnSpark 也挺有意思，可以在现有的 Spark/Hadoop 分布式集群的基础上部署 TensorFlow 的程序，这样可以避免数据在已有 Spark/Hadoop 集群和深度学习集群间移动，HDFS 里面的数据能够更好地输入进 TensorFlow 的程序当中。</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;2000年就与CSDN结下了不解之缘，见证了其发展与壮大，下一个AI时代，共同学习与成长。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://geek.csdn.net/news/detail/188197&quot;&gt;IBM PowerAI人工智能12小时编程马拉松大赛——“我是大侦探”&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20170321135021107?&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;CSDN总编孟迎霞对于有志于向人工智能领域发展的技术人员提出了三点建议：一是坚定自己要到哪里去。人工智能领域范畴庞大，涉及行业多，不论是专业化人工智能还是通用普适化人工智能，带来众多机遇，开发者要&lt;strong&gt;选定方向和路径&lt;/strong&gt;。第二，要&lt;strong&gt;善于利用巨头和工具的资源&lt;/strong&gt;。第三，开发者要&lt;strong&gt;沉下心来苦练内功，抓住机会&lt;/strong&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>壹心理</title>
+    <link href="http://ipcreator.me/2017/03/20/MyView/psychology/"/>
+    <id>http://ipcreator.me/2017/03/20/MyView/psychology/</id>
+    <published>2017-03-20T13:12:06.000Z</published>
+    <updated>2017-03-20T14:45:27.635Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://media.xinli001.com/images/logo3.png" alt=""><br>文章来源：<a href="http://www.xinli001.com" target="_blank" rel="external">壹心理</a></p>
+<p><img src="http://om280wrd3.bkt.clouddn.com/psychology.jpg" alt=""></p>
+<blockquote>
+<p>一念一天堂，一念一地狱，成长的道路上，你并不孤单。</p>
+</blockquote>
+   <a id="more"></a>
+<h2 id="我不想给你安全感，只想教会你无所畏惧"><a href="#我不想给你安全感，只想教会你无所畏惧" class="headerlink" title="我不想给你安全感，只想教会你无所畏惧"></a><a href="http://www.xinli001.com/info/100366728" target="_blank" rel="external">我不想给你安全感，只想教会你无所畏惧</a></h2><p><img src="http://ossimg.xinli001.com/20170320/059b378d2ad38ac338e3fbe5eaa30aea.jpg" alt=""></p>
+<p>人生最黑暗的时刻，就是我们拼刺刀的时候，拼的是什么？拼的就是两个声音：<strong>一个是自我安抚的声音；一个是自我指引的声音。</strong></p>
+<p>为什么会有被家暴的女人十几年都无法离开那个施虐的男人？为什么一个男人反复出轨，对一个女人长期冷暴力，她却无法离婚？为什么他总是忍受老板的侮辱，却一直不能辞职离开，哪怕所有人都看到他有足够的能力开创自己的事业？</p>
+<p>为什么有那么多人过着其实不值得他们过的生活？</p>
+<p>因为，对他们来说，缺少的就是这两点：<strong>安全感和掌控感</strong>。</p>
+<p>为什么一个女人受了那么多创伤和背叛，却不能离开这个婚姻？是因为当年他追她的时候，给了她三个月美好贴心的照顾，这3个月成为她人生最巅峰的高光时刻，为此她可以付出13年，甚至30年的代价，因为她无法相信，离开了这个男人，她是否还有可能拥有这样的时刻——<strong>她不相信这温暖可以再次发生，再次拥有，而且可以由她来掌控。</strong></p>
+<p><strong>因为她太穷了，她的内在的燃料太少了，不能像弗兰克一样，在完全断绝了外在的供应以后，依然可以自我供给。</strong></p>
+<p>直到有一天我忽然想到，也许黑暗没有那么可怕，也许死没有那么可怕，也许到了老了那一天，我可以平静或欣喜地等待它的到来。</p>
+<p>也许那时是我内在真正的自由的时候，是我<strong>内在精神的火焰可以永远燃烧下去</strong>的时候，我将终于可以免于无尽的恐惧，和这个世界和解了。</p>
+<h2 id="碎片化信息面前，如何保持深度思考能力？"><a href="#碎片化信息面前，如何保持深度思考能力？" class="headerlink" title="碎片化信息面前，如何保持深度思考能力？"></a><a href="http://www.xinli001.com/info/100366339" target="_blank" rel="external">碎片化信息面前，如何保持深度思考能力？</a></h2><p><img src="http://ossimg.xinli001.com/20170316/4c59e9e269ee85ef813d3a4f5646d3a3.jpg" alt=""></p>
+<h3 id="1-培养逻辑能力-树状分析任务"><a href="#1-培养逻辑能力-树状分析任务" class="headerlink" title="1.培养逻辑能力 树状分析任务"></a>1.培养逻辑能力 树状分析任务</h3><p>老司机和菜鸟最大的区别就是，当老板下达”一堆”任务工作安排（这些任务工作就好比碎片化信息）之后，老司机会从容悠闲地把任务分个主次，然后再分一个123，主要任务可以理解为树干，次要任务就是主干里的树枝。</p>
+<h3 id="2-学会联想“无关”的能力-连接碎片信息"><a href="#2-学会联想“无关”的能力-连接碎片信息" class="headerlink" title="2.学会联想“无关”的能力 连接碎片信息"></a>2.学会联想“无关”的能力 连接碎片信息</h3><h3 id="3-学会批判能力-挑战权威"><a href="#3-学会批判能力-挑战权威" class="headerlink" title="3.学会批判能力 挑战权威"></a>3.学会批判能力 挑战权威</h3><p>这两年我们经常看见这样的话：创业N大军规，但你从来不怀疑，因为他们成功了。但你不知道的是：成功不可复制，失败有迹可循。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://media.xinli001.com/images/logo3.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;文章来源：&lt;a href=&quot;http://www.xinli001.com&quot;&gt;壹心理&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://om280wrd3.bkt.clouddn.com/psychology.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一念一天堂，一念一地狱，成长的道路上，你并不孤单。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="Psychology" scheme="http://ipcreator.me/tags/Psychology/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>活着</title>
+    <link href="http://ipcreator.me/2017/03/20/MyView/Movie/to-live/"/>
+    <id>http://ipcreator.me/2017/03/20/MyView/Movie/to-live/</id>
+    <published>2017-03-20T01:18:18.000Z</published>
+    <updated>2017-03-20T01:41:16.133Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p><strong>To Live, life of ordinary people</strong></p>
+</blockquote>
+<p><img src="https://movie.douban.com/photos/photo/1117503323/#title-anchor" alt=""></p>
+<p>根据余华同名小说改编。<br>　　富少福贵（葛优）嗜赌成性，妻子家珍（巩俐）屡劝无果后带着女儿凤霞离开了他，当夜，福贵输光所有家产气死父亲，被迫靠变卖母亲首饰租间破屋过活。一年后，家珍手拉凤霞怀抱刚出世的儿子有庆回到家中，福贵痛改前非，开始靠演皮影戏过起安份守己的日子。<br>　　但好景不常，内战时期，福贵被国民党抓去当劳工，一番辗转终回到家乡与一家人团圆后，凤霞因病变成哑巴，而在后来的大跃进运动和文化大革命中，他虽获某些小福，逆境却也一直与他如影相随。</p>
+<a id="more"></a>
+<p>导演: 张艺谋<br>编剧: 余华 / 芦苇<br>主演: 葛优 / 巩俐 / 姜武 / 牛犇 / 郭涛 / 张璐 / 倪大红 / 肖聪 / 董飞 / 刘天池 / 董立范 / 黄宗洛 / 刘燕瑾 / 李连义 / 杨同顺<br>类型: 剧情 / 家庭<br>制片国家/地区: 中国大陆 / 香港<br>语言: 汉语普通话<br>上映日期: 1994-05-18(法国) / 1994-06-30(香港)<br>片长: 132分钟<br>又名: 人生 / Lifetimes / To Live<br>IMDb链接: <a href="http://www.imdb.com/title/tt0110081" target="_blank" rel="external">tt0110081</a></p>
+<p> <a href="https://www.douban.com/people/yanshudetudou/" target="_blank" rel="external">]鼹鼠的土豆</a><br>都说落架的凤凰不如鸡，有朝一日毛长齐，凤凰还是凤凰，鸡还是鸡。我们都会死谁也改变不了，但只有活着，你才能得到幸福的机会。</p>
+<p>我们不能决定结果，却可以选择面对生活的情绪。</p>
+<p>生活其实就是这样，我们努力的把知识转化成技能（就像福贵的皮影戏），在人生的路上打怪升级，也无非是想等到机遇来临时能够把握。</p>
+<p><a href="https://www.douban.com/people/quills/" target="_blank" rel="external">八月槎</a><br>命运的悲剧不是无原因的，人为的命运的悲剧也许才是更大的悲剧，在一个个“伟大”的时代中，人是如何的努力也难以把握住自己的命运，人的徒劳，人的无奈，人的卑微的欲求——活着，是如何的被践踏。</p>
+<p>王小波先生的一句话，“天空应当是蓝色的，但实际上是红色的；正如我们的生活不应该是我写的这样，但实际上，它正是我写的这个样子。”</p>
+<p><a href="https://www.douban.com/people/lengyi/" target="_blank" rel="external">冷翳</a><br>在这部影片中，张艺谋花了最大精力琢磨处理的就是皮影了。通过一开头就出现的皮影戏贯穿整部影片，其实也就是导演在反复把玩的一个主题－－命运的玩偶。赌馆里，福贵少爷到后台去唱上几嗓子，皮影戏的风格就来个大转变，台下人也跟着乐。福贵哪里知道，龙二正在和赌馆老板串通虎视耽耽着他家祖宅，他的命运也从此将有个大转变，而命运在暗处乐和着：游戏开始了！不仅仅是福贵，很多人都从此加入到这个游戏中，成为被命运手中操控的玩偶，无从选择的一步步走下去。皮影再次出现时，是福贵到龙二家借钱，龙二却把整整一箱皮影给了他，两人的角色调了个个儿。这个调个儿的影响龙二不知，福贵也不知，直到多少年后，才知道这只是命运和他们开的一个大玩笑，福贵输掉了家产，也同时输掉了本该戴在他头上的地主的帽子，输掉了那最后在龙二身上开花的“打的死死的”五颗子弹。</p>
+<p>福贵的皮影从街道演到国军，从国军演到共军，再演到大炼钢铁和文革时期，他自己也如同身不由己的玩偶在命运中起伏。在影片中，每一次命运的小把戏，都伴随着皮影的特写。国军的刺刀划开白布，福贵和春生被抓了壮丁；共军用刺刀挑起皮影在灿烂的阳光下举向天空，福贵得到了那张支离破碎却恭恭敬敬镶在镜框里挂在墙上的“革命证明”，而春生开上了“死也愿意”的汽车，后来也就是这么开着汽车撞倒了墙，砸死了福贵唯一的儿子有庆。对于有庆的死，皮影戏的象征意义在前面埋了个伏笔，那就是有庆端醋给福贵喝时，福贵喷在白布上的醋，这么蕴染开来，仿佛那块盖着血肉模糊的有庆身上沾满血迹的白布。而那时屏幕上在一旁声嘶力竭叫喊的福贵的特写，身后同样是那幅皮影戏的影窗。</p>
+<p>皮影最后在福贵向凤霞大声的说“留不住了，烧！”后，随着跳动的火焰在阳光下扭曲变形。皮影被烧了，可是命运的游戏并没有停止。文革中，因为大夫被关牛棚学生当班，凤霞生产大出血而得不到及时救治，本可以救她一命的王教授却被福贵好心买给他的七个馒头撑得动不了。福贵带着孙子馒头坐在凤霞的坟头前，不停的念叨，我要是没给王教授买七个馒头就好了，正如当年家珍在有庆坟头前不停念叨，我要是拦住你爹不让你去学校就好了一样。命运的强大力量自始至终都没有放过福贵一家，没有放过每个时代的每个人。张艺谋就是这么小心翼翼的处理着每个皮影的细节，每个命运把玩的游戏，不停的展示这种永恒的力量，翻云覆雨，沧海桑田，而一个个这些独立的个体，只是棋子，只是命运手中相互联系的玩偶。</p>
+<p>影片最后，福贵把积了灰的皮影箱从床下拉出，打开来，温暖的阳光照射进去，他把小鸡一只只放进去，馒头问了和有庆同样的话，小鸡长大后呢？福贵也答了当年回答有庆的话，小鸡长大之后就会变成鹅，鹅长大之后就会变成羊，羊长大了就会变成了牛。。。。一切开始轮回。。。。。。面对命运，就是这样，我们渺小无奈，我们无法逃脱，只是，仍然要活着，努力的活着，充满希望的活着，因为再无法选择，也要始终相信，“一切都会好起来的”！</p>
+<p><a href="https://www.douban.com/people/treesky/" target="_blank" rel="external">人活着，就比什么都强</a><br>王小波说，“中国历史几千年，没有几个人有过自己的个人尊严。。。中华礼仪之邦，一切尊严，都从整体和人与人的关系上定义，一个人不在单位，不在家里，不代表国家，不代表民族，单独存在时，居然不算一个人就只算是一块肉”。</p>
+<p>在中国，每个人都在喊着过幸福生活，但却有大部分的人都只是在努力着如何生存，和残酷的现实做激烈的斗争，没有尊严的事情做的太多，也渐渐麻木，以至于后来他自己也想不起来初衷却只是想过个安稳日子。“我跟着你，只是想过着安稳日子”家珍一直在电影里重复着这句话，有家，有人，比什么都好，命运的重重磨难并没有让这个家破灭，福贵的家犹如风雨中飘零的浮萍，摇摇欲坠，始终不倒，面对着残酷的现实，福贵与家珍唯默默承受这些无法言喻的痛苦，撕破脸前的自尊，然后再继续生活，这是中国人最可笑也最谆朴的道德品质。一直以为，我们的眼里只看得到自己和身边的人，再远一些，就已经看不清楚了，连自己都在找寻尊严，更何德何能把别人当人来看呢？都是身体，一具东西罢了。。。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;To Live, life of ordinary people&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://movie.douban.com/photos/photo/1117503323/#title-anchor&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;根据余华同名小说改编。&lt;br&gt;　　富少福贵（葛优）嗜赌成性，妻子家珍（巩俐）屡劝无果后带着女儿凤霞离开了他，当夜，福贵输光所有家产气死父亲，被迫靠变卖母亲首饰租间破屋过活。一年后，家珍手拉凤霞怀抱刚出世的儿子有庆回到家中，福贵痛改前非，开始靠演皮影戏过起安份守己的日子。&lt;br&gt;　　但好景不常，内战时期，福贵被国民党抓去当劳工，一番辗转终回到家乡与一家人团圆后，凤霞因病变成哑巴，而在后来的大跃进运动和文化大革命中，他虽获某些小福，逆境却也一直与他如影相随。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="Movies" scheme="http://ipcreator.me/tags/Movies/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OMG，poor and cheap attention</title>
     <link href="http://ipcreator.me/2017/03/19/MyView/books-impacting-me/"/>
     <id>http://ipcreator.me/2017/03/19/MyView/books-impacting-me/</id>
     <published>2017-03-19T14:09:18.000Z</published>
-    <updated>2017-03-19T14:39:24.584Z</updated>
+    <updated>2017-03-21T15:10:07.622Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://omj173lhw.bkt.clouddn.com/impact.jpg" alt=""></p>
+    <content type="html"><![CDATA[<h1 id="那些冲击三观和心灵的书、人、事"><a href="#那些冲击三观和心灵的书、人、事" class="headerlink" title="那些冲击三观和心灵的书、人、事"></a>那些冲击三观和心灵的书、人、事</h1><p><img src="http://omj173lhw.bkt.clouddn.com/impact.jpg" alt=""></p>
 <p>总有一些人和事，书和语句，会冲击到你心灵的最深处，使你醍醐灌顶，豁然开朗，并在你生命的长河中掀起一阵涟漪乃至波涛骇浪…</p>
+<p>原来我的这个世界还可以是这样的…<br>原来我还可以这样活…<br>原来方法如此简单…<br>原来我也可以做到和坚持下来…</p>
   <a id="more"></a>
 <p>  《你的生命有什么可能》——人有很多种活法，每一种活法都有其平等的价值和意义。</p>
 <blockquote>
@@ -37,9 +272,17 @@
 <blockquote>
 <p><strong>在中国，对绝大多数人来说，English + Computer Skills = Freedom</strong></p>
 </blockquote>
+<p>《第一行代码，郭霖》</p>
+<blockquote>
+<p>做你喜欢做的事情，任何时候都不会太迟，你发现的问题，其实就是你的机会</p>
+</blockquote>
 <p>《人人都能用英语》——原来如此</p>
 <blockquote>
 <p>“用140字概括一下怎样才能学好英语？我回复说：其实一个字就够了：“用”。”</p>
+</blockquote>
+<p><a href="http://www.geekonomics10000.com/870" target="_blank" rel="external">《一点实用主义的学英语心得》</a>——学英语不是一个修身养性的长期活动，要争取在短期内突破。先突击练基本功，再突击准备考试，这并非是我的什么发明，而是大部分考托考G的大学生研究生的做法。只要坚持读完一本书，你就基本过关了。你的第二、第三本书将会越读越快，最后可能只需偶尔翻一下字典。这个关键是在潜移默化中适应英文。</p>
+<blockquote>
+<p>记忆的关键在于间隔式的重复。过一天复习一次，过三天再复习一次，过一周再复习一次，让间隔的时间越来越长。所以你每天的单词功课实际上是先复习旧的，再学新的。你还可以根据情况设定某些天作为纯粹的复习时间。<br>如果你需要通过什么英语考试，有了单词和精读的基本功之后就可以为考试做准备了。不过在英语考试中取得好成绩的关键是掌握这些考试的特定技能，而不是英语技能。你要做大量的真题，想运动员一样对自己进行有高度针对性的训练。有很大的可能性，你能够在GRE阅读理解部分取得高分，而仍然看不进去一本真正的书，因为前者的秘诀是快速发现考题和文章之间的联系，你甚至不必读完或者读懂那篇文章。<br>先听精益求精地听熟悉的内容，纯粹是为了练习听力。慢慢过渡到直接听没读过的有声书。人脑的适应能力是非常强的</p>
 </blockquote>
 <p>《正确高效使用 Google》——付出一点翻墙的代价绝对物有所值</p>
 <blockquote>
@@ -59,6 +302,19 @@
 <p>学习作为一项总括的技能的话，有一套统一的练习方法，就是“刻意练习”，去除一些不重要的因素，可总结成以下四点:</p>
 <p>1.只在“学习区”练习；<br>2.把练习内容分成有针对性的小块，对每一小块重复联系；<br>3.在练习过程中获得即时反馈；<br>4.练习时注意力高度集中。<br>学习的关键就在于“刻意”地在这个领域内，练习。<br>刻意练习就是在大脑中建立长期记忆的过程，把套路二“长”在身上，关键在于两点:<br>1.必须进行大量重复训练；<br>2.训练必须有高度的针对性。</p>
 </blockquote>
+<p><a href="http://www.geekonomics10000.com/973" target="_blank" rel="external">《想要提高效率，就得不公平》</a><br><img src="http://omj173lhw.bkt.clouddn.com/%E5%B9%82%E7%8E%87%EF%BC%88power%20law%EF%BC%89.png" alt=""><br>马太效应 — “凡有的，还要加给他，叫他有余”！现实世界中富人财富增长的秘密正是如此：更有钱是因为已经很有钱。真正让人进入富豪排行榜的不是按小时计费的高工资，而是投资创办企业。越是有钱的人，越容易在投资中赚到更多的钱，这是一个正反馈过程。从一万赚到十万很难，而从一亿赚到一亿零十万则根本就不算赚钱。幂律分布，最早是在1897年被经济学家维弗雷多·帕累托发现，他正是在考察人群财富的时候发现的这个分布。他认为之所以会有这样的分布，是正反馈造成的，越有钱的人越容易赚钱。</p>
+<p>现实世界中有很多东西是幂率分布的：公司的大小、城市的大小、病毒感染的人群、商品畅销程度……甚至有些自然现象也是如此：地震强度、油田大小，等等。</p>
+<p>幂率分布到底是什么原因造成的？我看了很多文献，可以说现在没有一个统一的理论，正反馈过程只是其中一个可能的原因[1]。但我们更关心的是，这种分布意味着什么？</p>
+<p><strong>它意味着这个世界非常不均匀！</strong></p>
+<p>世界上绝大多数人和事都是平庸的，而且最好的东西还都挤在一起。<br>有了这个正确的世界观，我们才能有正确的方法论。这个方法论就是既然世界这么不均匀，我们就不应该“公平”对待世界上的各种东西。</p>
+<p><strong> 80/20 做事法</strong><br>做事最关键的战略，就是做好最关键的。</p>
+<p>iPhone出来一鸣惊人，但是连最起码的复制粘贴功能都不给，而iPad一出来居然不支持多任务工作。也许市场上的每一个智能手机都有复制粘贴功能，每一台电脑都能多任务，可它们全都没法跟苹果的产品相提并论 — 因为iPhone和iPad上能做其他所有产品都做不到的事。乔布斯不追求大而全，而是先把最有核心竞争力的东西做出来，因为他知道这才是消费者最关心的东西。</p>
+<p>很反感的一句话是“××无小事”。事情当然有大小之分，无小事就是无大事。</p>
+<p><strong>效率的关键就在于不公平。</strong></p>
+<p><strong>极简主义</strong><br>要事优先，尽量只做最重要的事，少干或者不干那些不重要的事，才是出类拔萃的关键。<br>要事优先，第一你得有自由意志，知道自己有选择的权力，不能别人让你做什么就做什么，强调主动性。第二你得学会判断哪些重要哪些不重要。第三你还得有勇气有能力拒绝自己不想干的事，敢跟人说“不”。现代社会中出现很多完美主义者，其实都是不懂轻重缓急的个人评价焦虑症患者。他们关注各种细节，经常能指出别人的小错误。比如给他们看个PPT，他们很容易注意到上面有没有标点错误，却不知道你说的大局是什么。这其实是特别浪费时间的性格。</p>
+<p>衣着无比整洁，东西摆放井井有条，对什么事情都有记录存档，这样的作风并不值得学习，这种人设定了错误的优先级。达到这样的状态要花费很多时间去整理生活，这些时间完全可以用来做些更有意思的事。如果你从未错过航班，你在机场浪费了太多时间。如果你从未丢过东西，你在整理上浪费了太多时间。如果你从未做错事，你做的事不够大。</p>
+<p>人的精力有限，什么都想要是不可能的。如果真想培养人才，“全面”发展其实是一个错误的思想，天赋树不能乱点。极简主义要求我们培养核心的竞争力，在他喜欢的东西上加大力度。用20%的时间就可能实现这个小孩80%的功能，剩下80%的时间几乎都是浪费，还不如让他去玩。</p>
+<p>玩很重要。极简主义的核心思想就是把最关键的事情做好，省出来时间去玩。这也符合特勒布在《反脆弱》一书说的“杠铃原则”：做事要注重两端不管中间 — 我要么做最难的事，要么玩或者什么都不做。</p>
 <p>《此生未完成》——幸福的定义<br><strong>我们要用多大的代价，才能认清活着的意义。</strong></p>
 <blockquote>
 <p>在生死临界点的时候，你会发现，任何的加班，给自己太多的压力，买房买车的需求，这些都是浮云。如果有时间好好陪陪你的孩子，把买车的钱给父母买双鞋子，不要拼命去换什么大房子 ，和爱的人在一起蜗居也温暖……<br>人有个好的心态，才能享受人生。不奢望太多的东西，只要这一生中有自己的居所，有自己的小家，甜蜜而温馨，每天过着快乐的生活就够了。随缘的爱是最幸福的爱，无须计划，无须设计，一切都顺理成章，轻松，自然，流淌着最本真的爱，相爱的人儿自是充满着感动，心喜，激动。</p>
@@ -77,12 +333,82 @@
 <li>我们的人生究竟是为什么？</li>
 </ol>
 </blockquote>
+<h2 id="IPCreator"><a href="#IPCreator" class="headerlink" title="IPCreator"></a>IPCreator</h2><p><strong>打工与创业</strong></p>
+<p>打工是为了实现别人的梦想而奋斗，拿自己的时间和技能去换取金钱，是一种及时的反馈</p>
+<p>创业是为了实现自己的人生梦想，是用潜在的打工收入交换未来更大的受益，<br>是一种耐心的持续的针对性的积累，需要明确的目标、可行的计划以及超强的执行力，<br>还有家人的理解和支持，以及自我激励和超强的意志力。</p>
+<p>每天唤醒自己的是梦想，而不是闹钟</p>
+<p>打工是当下的安全感，稳定<br>创业是摒弃当前安全感去获取未来更大的安全感，自知自控</p>
+<p>不以成败论英雄<br>类似经历必有益、读书必有用<br>量力而行，尽力而为，问心无愧<br>不给人生留遗憾</p>
+<p>不干用健康换金钱/名利的傻事<br>不干凑热闹、随大流、操他人心的傻事<br>你的事不关他人事<br>他人事关你鸟事<br>只为、只需、只能为自己的选择和行为负责<br>不做烂好人、不做情绪和金钱的奴隶<br>绝不自我消耗，家人内耗<br>不做表现型，要做成长型</p>
+<p>不以爱的名义去控制、伤害（我为你负责？）<br>不干以为了他人的名义去行实则为了自我的事情（还不是为了你好？）<br>不干明明可以预防却最后双手一摊谁知道呢的事情（谁知道呢）</p>
+<p>他人都有自己的事情和追求，不一定有时间和精力来了解情况<br>他人不了解情况，也就很难理解<br>他人都有自己的立场，不一定能支持和鼓励，结果自找无趣<br>再者，以他们的经历、学识是否又能真正理解？<br>譬如，家人的期望是什么？在老家找份压力不大稳定的收入，然后过一生，只要不务农就行<br>只有一种情况需要他人一定要支持，那就是依赖他人才能生存，才能展开工作…<br>别忘了，这可是一个超级个体时代，是一个AI时代</p>
+<p>正确的做法：一方面：理解他人，接纳和包容他人，同时，保持距离，<br>让他们自己为自己的选择和行为负责任，不做烂好人，不擦烂屁股；<br>另一方面，对他人的理解和支持，不期望，不等待，不强求，有更好，没有也行。</p>
+<p>前期自己是自己的贵人<br>后期，需要寻找对的贵人</p>
+<p>打基础的时候，快不得<br>有了Demo之后慢不得</p>
+<p>若不打通理论与实践的环节，如何教学、指导和创业<br>要在正确的方向上持续积累，要有战略眼光、切身践行和持之以恒</p>
+<p>别急，慢慢来，一切都来得及<br>相信自己的信念，还有很多机会<br>不凑热闹、不随大流、不操他人心</p>
+<p><strong>分阶段</strong></p>
+<p>学生<br>职场<br>创业<br>人生</p>
+<p>以前学习/奋斗，为了考试、高分、名次、荣誉、肯定、表扬、鲜花、掌声、名利、生存、外在</p>
+<p>现在是为了成长、内在、梦想、心智洞开</p>
+<p>父母不健康幸福，儿女一般都不怎么健康幸福<br>负能量的源泉</p>
+<p>成功是一种习惯<br>幸福也是</p>
+<p>开心就好</p>
+<p>人不过百岁，常怀千岁忧</p>
+<p>人生是一场修行，边修行边前行<br>人生是一场旅行，要学会欣赏沿途风景<br>人生是一场战斗，边学习边战斗，边战斗边学习</p>
+<p><strong>分享</strong></p>
+<p>先管好自己，过好自己的生活。<br>否则，动不动就分享，一方面别人不会听无效果，另一方面浪费自己的注意力和时间，<br>自寻烦恼，得不偿失，先成长为鸵鸟，再分享给小鸡。</p>
+<p><strong>如何减缓压力</strong></p>
+<p>自己：化整为零，循序渐进，各个击破<br>他人：让他们各自为自己的选择和行为负责，尽力而为，问心无愧，每个人的人生道路自己选择，自己负责，不贴标签，不做评价</p>
+<p>自己知道要摒弃一个别人以前给自己贴的否定标签要多久时间多大代价，就能理解并做到不给他人贴标签的好习惯。</p>
+<p>“心甘情愿”</p>
+<p>幸福就像蝴蝶，金钱也是<br>先让自己变得健康、积极、阳光，再辐射正能量</p>
+<p>注意力&gt;时间&gt;金钱<br>健康&gt;见识&gt;技能</p>
+<p>刻意练习+持续积累<br>学之者不如好之者<br>好之者不如乐之者</p>
+<p>不以贫富来分人<br>不以长短来筛选</p>
+<p>健康、家人、梦想</p>
+<p>日行一万步+夜眠八小时+坐享十次<br>一周家庭日，一年一地方</p>
+<p>健康基础、磨练意志力</p>
+<p>是爱让生活更加美好，生命更加精彩。<br>思想独立的前提是经济独立。</p>
+<p>先求生存，后求发展<br>基础不牢，地动山摇<br>做事做人两把刷子<br>不一定要亲自出手，能把问题解决掉的人就是高手，<br>动不动就出手的人是打手<br>量变到质变，自古华山一条路<br>正若不行，反则攻之，条条大道通罗马</p>
+<p>没有安全感的人会折磨自己、家人、乃至身边一切人，珍爱生命，远离没有安全感的人</p>
+<h2 id="IPCreator的好习惯"><a href="#IPCreator的好习惯" class="headerlink" title="IPCreator的好习惯"></a>IPCreator的好习惯</h2><blockquote>
+<p>We make our habits first, then habits make us.<br>One more word/page/book/day<br>What is your point.<br>走出一条属于自己的正常、健康和可持续发展的道路<br>完美==脆弱<br>电子化、系统化、内化、产品服务化<br>整理消化自己的&gt;别人的<br>最大的落后是观念落后，你会给后代留下什么？想留下什么，要留下什么？<br>让自己和家人健康幸福的能力&gt;赚钱的技能<br>心甘情愿、无怨无悔、任劳任怨<br>少干不干让自己后悔的事情，提升自己，自我成长，推迟满足，摒弃完美，表现型进化为成长型<br>不干那些让自己可能引入极端被动的事情，譬如杠杆等</p>
+</blockquote>
+<h3 id="A、爱读书"><a href="#A、爱读书" class="headerlink" title="A、爱读书"></a>A、爱读书</h3><p>应试教育、高分<br>书柜、多看、豆瓣、知乎</p>
+<h3 id="B、记笔记"><a href="#B、记笔记" class="headerlink" title="B、记笔记"></a>B、记笔记</h3><p>笔记本、Evernote、有道云笔记</p>
+<h3 id="C、温故而知新"><a href="#C、温故而知新" class="headerlink" title="C、温故而知新"></a>C、温故而知新</h3><p>艾宾浩斯记忆曲线</p>
+<h3 id="D、跨界、寻求创新"><a href="#D、跨界、寻求创新" class="headerlink" title="D、跨界、寻求创新"></a>D、跨界、寻求创新</h3><p>点评和视角<br>产品与服务<br>创新想法<br>专利清单</p>
+<h3 id="E、持之以恒"><a href="#E、持之以恒" class="headerlink" title="E、持之以恒"></a>E、持之以恒</h3><p>163博客、IPCreator<br>日行一万步<br>夜眠八小时</p>
+<p>不积跬步无以至千里<br>不积小流无以成江海</p>
+<p>千里之行始于足下</p>
+<h3 id="F、学以致用，知行合一"><a href="#F、学以致用，知行合一" class="headerlink" title="F、学以致用，知行合一"></a>F、学以致用，知行合一</h3><p>人生、幸福、读书、技能、创业、投资</p>
+<h2 id="G、举一反三，融会贯通，多维竞争"><a href="#G、举一反三，融会贯通，多维竞争" class="headerlink" title="G、举一反三，融会贯通，多维竞争"></a>G、举一反三，融会贯通，多维竞争</h2><p>技术、管理、培训、专利、创业<br>JSON工具、CoolWeather、IPCreator</p>
+<h2 id="IPCreator’s-diary"><a href="#IPCreator’s-diary" class="headerlink" title="IPCreator’s diary"></a>IPCreator’s diary</h2><h3 id="03-20"><a href="#03-20" class="headerlink" title="03.20"></a>03.20</h3><p>见证美图的疯狂，炒作，多少人又在最高位入场被套，常识的胜利<br>win10、s7 edge、brain’s os 均再次升级<br>工欲善其事必先利其器，磨刀不误砍柴工<br>《智识分子》、财富自由之路<br>延迟满足感</p>
+<h3 id="03-21"><a href="#03-21" class="headerlink" title="03.21"></a>03.21</h3><p>注意力陷阱<br>A、自责，渴求完美 == 接纳并信任自己<br>B、他求，苛求他人 == 聚焦自我成长<br>C、重复，历史遗留 == 消化放下,弱化清除<br>D、急躁，急于求成 == 升级认知，水到渠成</p>
+<p>控制不了自己的人才想控制别人<br>本质追逐名利的人才想影响他人<br>脆弱自卑的人才想着追求完美<br>沉溺于过去的人正丢掉现在与未来<br>功利无知的人才想一夜暴富</p>
+<p>求学阶段、工作阶段、生活经历<br>那些年、那些人、那些事…<br>与自己、他人及世界和解了…</p>
+<p>理顺了之前的模式根源：典型的应试教育者、表现型性格、投机主义者<br>A、死记硬背+应试技巧<br>B、浮于表面+急于求成<br>C、自控力差+苛求他人<br>D、安全感缺失+即时满足</p>
+<p>一个人性格的形成，离不开儿时经历、家庭条件、父母性格、学校教育、社会阅历等<br>自己和家人是如何一步一步走到今天的？掉过哪些战略和心智上的坑？<br>面对现实（与他人不一样 –&gt;都是平民老百姓）、直面问题（知足感恩，内省而非外求）、寻求解决之道，治标更治本<br>多问几个凭什么？为什么？拨开表象背后的真相<br>以前种种经历，尤其是苦难，都是自己成长和沉淀的绝佳素材，再出发，七年一辈子</p>
+<p>只字不差、一个单词，一页一页，一本一本，一件一件，一步一步，一口一口，一天一天…One More<br>正向循环，量变到质变，线性到非线性，零散到系统，一通到百通…<br>原来这么简单，原来你也可以……</p>
+<p>生命宝贵，远离负能量，远离那些没有安全感的人<br>随时切换操作系统，并且降低要求和标准</p>
+<p>凭什么？为什么？人与人的社会竞争是靠家庭的综合实力</p>
+<p>从农村出来的人又有多少能够坦然面对缺乏眼界和见识这一劣势，<br>遇到问题时，往往只能想到并使用单打独斗和勤劳蛮力这种线性思维，<br>于此同时，心气、标准和要求还比他人要高<br>过程的发展往往是在新的环境中表现出强烈的不适应性，比如，对人的不信任，缺乏多赢思维，不能自制又控制欲强，缺乏耐心和坚持……<br>即使有些到达了他们眼中的所谓成功境地，由于采用了非正常健康可发展方式，往往也是筋疲力尽，毫无幸福快乐可言<br>最终的结局，往往是子欲养而亲不待，有享福的条件而身体消受不起，甚至人财两亏，这给后代留下无尽的痛苦和遗憾</p>
+<p>到头来，一句“还不是为了你们”，早知如此结局，倒还不如当初面对现实，循序渐进地逐步升级社会阶层<br>不霸蛮，不强求，保护好自己的同时，量力而行， 问心无愧即可，对最终的结果负责，将眼光放长远<br>将注意力和重点聚焦在儿女心智、见识和成长上，而非金钱、名利等外在因素上，<br>可惜多少人明白这一道理的时候，早已物是人非甚至天各一方了……</p>
+<p>一定要早点想清楚这辈子你图的是什么？<br>后代真正需要的是什么？<br>你能付出怎样的代价去换取你所谓的成功？到底值不值？</p>
+<p>以牺牲身体健康和家庭幸福为代价的奋斗模式，最好远离之<br>远离缺乏安全感、身体不健康和充满负能量的人，试想：<br>连自我都不爱、保护不了和不珍惜的人，怎么可能爱和珍惜他人，更别谈保护他人以及善于合作等其它事情了。</p>
+<p>对于存在这种情况的家人怎么办？尽力而为，问心无愧即可，尽了全力还无用无效，就知难而退，该放弃放弃，该远离远离<br>别过分苛求，以免连自己都搭上。还是上面那条建议，先自保再保人。</p>
+<p>自己只需也只能为自己的选择和行为负责，对于其他人也是如此。在这件事情上，苦口婆心地说是没有太大用处的。<br>明知而为之，就是作，而对于作，有句名言：No Zuo No Die，闲的！</p>
+<p>现在不方便，很忙，不要随意打扰，要善于利用，保护自己那宝贵的注意力，<br>更别提那种刷微信、微博等主动浪费注意力的行为了，一旦养成了好习惯，想停都停不下来……</p>
+<h3 id="03-22"><a href="#03-22" class="headerlink" title="03.22"></a>03.22</h3><p>注意力&gt;时间&gt;金钱<br>坐享锻炼恢复大脑<br>只字不差地阅读（慢就是快、少就是多）<br>看不懂也要读完<br>刻意练习掌握技能<br>通过朗读攻克听力</p>
+<p>数学日</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://omj173lhw.bkt.clouddn.com/impact.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;那些冲击三观和心灵的书、人、事&quot;&gt;&lt;a href=&quot;#那些冲击三观和心灵的书、人、事&quot; class=&quot;headerlink&quot; title=&quot;那些冲击三观和心灵的书、人、事&quot;&gt;&lt;/a&gt;那些冲击三观和心灵的书、人、事&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;http://omj173lhw.bkt.clouddn.com/impact.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;总有一些人和事，书和语句，会冲击到你心灵的最深处，使你醍醐灌顶，豁然开朗，并在你生命的长河中掀起一阵涟漪乃至波涛骇浪…&lt;/p&gt;
+&lt;p&gt;原来我的这个世界还可以是这样的…&lt;br&gt;原来我还可以这样活…&lt;br&gt;原来方法如此简单…&lt;br&gt;原来我也可以做到和坚持下来…&lt;/p&gt;
     
     </summary>
     
@@ -309,10 +635,10 @@
     <link href="http://ipcreator.me/2017/03/19/MyView/Movie/hacksaw-ridge/"/>
     <id>http://ipcreator.me/2017/03/19/MyView/Movie/hacksaw-ridge/</id>
     <published>2017-03-19T10:30:18.000Z</published>
-    <updated>2017-03-19T13:25:57.013Z</updated>
+    <updated>2017-03-20T00:38:44.491Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p><strong>信仰、勇气</strong></p>
+<p><strong>Belief、Courage、One More</strong></p>
 </blockquote>
 <p><img src="https://img3.doubanio.com/view/thing_review/large/public/p394232.jpg" alt=""></p>
 <a id="more"></a>
@@ -334,7 +660,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;信仰、勇气&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Belief、Courage、One More&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;https://img3.doubanio.com/view/thing_review/large/public/p394232.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
@@ -509,9 +835,12 @@
     <link href="http://ipcreator.me/2017/03/14/MyView/Movie/house-of-card/"/>
     <id>http://ipcreator.me/2017/03/14/MyView/Movie/house-of-card/</id>
     <published>2017-03-14T04:39:06.000Z</published>
-    <updated>2017-03-14T05:43:50.409Z</updated>
+    <updated>2017-03-20T01:16:38.161Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://img5.doubanio.com/view/photo/photo/public/p2324460286.jpg" alt=""></p>
+    <content type="html"><![CDATA[<blockquote>
+<p><strong>Politics</strong></p>
+</blockquote>
+<p><img src="https://img5.doubanio.com/view/photo/photo/public/p2324460286.jpg" alt=""></p>
   <a id="more"></a>
 <p>导演: 埃里克·萨哈罗夫<br>编剧: 梅丽莎·詹姆斯·吉布森 / 鲍尔·威利蒙<br>主演: 凯文·史派西 / 罗宾·怀特 / 迈克尔·凯利 / 内芙·坎贝尔 / 詹姆斯·马丁内斯 / 安德鲁·波尔克<br>类型: 剧情<br>制片国家/地区: 美国<br>语言: 英语<br>首播: <strong>2017-05-30(美国)</strong><br>季数:<br>集数: 13<br>单集片长: 60分钟<br>又名: 众议院要人<br>IMDb链接: <a href="http://www.imdb.com/title/tt5419058" target="_blank" rel="external">tt5419058</a></p>
 <h2 id="参考阅读"><a href="#参考阅读" class="headerlink" title="参考阅读"></a>参考阅读</h2><p><a href="http://www.7y7.com/yingshi/48/205048.html" target="_blank" rel="external">《纸牌屋》第五季确定新主创阵容 凯文史派西表期待</a></p>
@@ -519,7 +848,10 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://img5.doubanio.com/view/photo/photo/public/p2324460286.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Politics&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://img5.doubanio.com/view/photo/photo/public/p2324460286.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -1032,9 +1364,12 @@ handler 负责发送消息，Looper 负责接收 Handler 发送消息，并直�
     <link href="http://ipcreator.me/2017/03/12/MyView/Movie/ordinary-life/"/>
     <id>http://ipcreator.me/2017/03/12/MyView/Movie/ordinary-life/</id>
     <published>2017-03-12T10:58:06.000Z</published>
-    <updated>2017-03-12T11:18:37.806Z</updated>
+    <updated>2017-03-20T00:27:33.352Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://img1.doubanio.com/view/photo/photo/public/p2232185147.jpg" alt=""></p>
+    <content type="html"><![CDATA[<blockquote>
+<p><strong>Life</strong></p>
+</blockquote>
+<p><img src="https://img1.doubanio.com/view/photo/photo/public/p2232185147.jpg" alt=""></p>
 <p>这个故事发生在20世纪70年代，文革的余波仍在社会各个角落震荡，无情摧毁着每个人的生活。出身贫寒的农家子弟孙少平（袁弘 饰）有着极强的自尊心，即使在好友田润生（尹智玄饰）面前也不愿展露寒酸的一面。他和地主家的女儿郝红梅（汪芦云 饰）虽然身份有着天壤之别，类似的心境则让他们彼此相知。哥哥孙少安（王雷 饰）是家里的脊梁骨，父亲的意外去世让他必须选择更加坚强，他与润生的姐姐田润叶（佟丽娅 饰）青梅竹马，互有好感，怎奈那时的爱情身不由己，有情人儿往往无法走到一起。两兄弟以各自的方式闯荡生活，经历着爱情、人生的嬗变……<br>　　本片根据路遥的同名小说改编。</p>
 <a id="more"></a>
 <p>第28届中国电视金鹰奖  (2016)<br>观众最喜爱的电视剧男演员奖 王雷<br>观众最喜爱的电视剧女演员奖 佟丽娅</p>
@@ -1048,7 +1383,10 @@ handler 负责发送消息，Looper 负责接收 Handler 发送消息，并直�
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/photo/photo/public/p2232185147.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Life&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/photo/photo/public/p2232185147.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;这个故事发生在20世纪70年代，文革的余波仍在社会各个角落震荡，无情摧毁着每个人的生活。出身贫寒的农家子弟孙少平（袁弘 饰）有着极强的自尊心，即使在好友田润生（尹智玄饰）面前也不愿展露寒酸的一面。他和地主家的女儿郝红梅（汪芦云 饰）虽然身份有着天壤之别，类似的心境则让他们彼此相知。哥哥孙少安（王雷 饰）是家里的脊梁骨，父亲的意外去世让他必须选择更加坚强，他与润生的姐姐田润叶（佟丽娅 饰）青梅竹马，互有好感，怎奈那时的爱情身不由己，有情人儿往往无法走到一起。两兄弟以各自的方式闯荡生活，经历着爱情、人生的嬗变……&lt;br&gt;　　本片根据路遥的同名小说改编。&lt;/p&gt;
     
     </summary>
@@ -2100,33 +2438,6 @@ bw.close();
   </entry>
   
   <entry>
-    <title>Git automatically</title>
-    <link href="http://ipcreator.me/2017/03/09/Program/Windows/auto-git-daily/"/>
-    <id>http://ipcreator.me/2017/03/09/Program/Windows/auto-git-daily/</id>
-    <published>2017-03-08T23:30:06.000Z</published>
-    <updated>2017-03-09T06:34:20.309Z</updated>
-    
-    <content type="html"><![CDATA[<p>能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…</p>
- <a id="more"></a>
- <figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line">@<span class="built_in">title</span> auto update blog articles and git push</div><div class="line"></div><div class="line"><span class="built_in">set</span> fileSource=D:\IPCreatorBlog\source</div><div class="line"><span class="built_in">set</span> fileDestination=C:\IPCreatorBlogGit\blog\source</div><div class="line"><span class="built_in">set</span> gitDir=C:\IPCreatorBlogGit\blog</div><div class="line"></div><div class="line"><span class="built_in">cls</span></div><div class="line"></div><div class="line"><span class="built_in">cd</span> <span class="variable">%fileDestination%</span></div><div class="line"><span class="built_in">rd</span> /s/q <span class="variable">%fileDestination%</span></div><div class="line"><span class="built_in">Xcopy</span> /e <span class="variable">%fileSource%</span> <span class="variable">%fileDestination%</span></div><div class="line"></div><div class="line"><span class="built_in">cd</span> <span class="variable">%gitDir%</span></div><div class="line">git add -v .</div><div class="line">git commit -m "Update blog daily"</div><div class="line">git push</div><div class="line"></div><div class="line"><span class="built_in">pause</span></div></pre></td></tr></table></figure>
-<figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> user<span class="title">@LAPTOP-082RQVIH</span> MINGW<span class="number">64</span> /<span class="keyword">c</span>/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git config --<span class="keyword">global</span> <span class="keyword">alias</span>.blog '<span class="title">!git</span> <span class="keyword">add</span> . &amp;&amp; git commit -m <span class="string">"blog update"</span> &amp;&amp; git push'**                                                                                                                          </div><div class="line">user<span class="title">@LAPTOP-082RQVIH</span> MINGW<span class="number">64</span> /<span class="keyword">c</span>/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git blog**</div><div class="line">On branch master</div><div class="line">Your branch is up-<span class="keyword">to</span>-date with 'origin/master'.</div><div class="line">nothing <span class="keyword">to</span> commit, working tree clean</div></pre></td></tr></table></figure>
-<p> 更多参考：<br> <a href="https://www.zybuluo.com/yangfch3/note/338252" target="_blank" rel="external">Windows批处理(cmd/bat)使用小记</a><br> <a href="http://xstarcd.github.io/wiki/windows/windows_cmd_summary_commands.html" target="_blank" rel="external">批处理常用命令总结 - 批处理命令简介</a><br> <a href="https://segmentfault.com/q/1010000000263597" target="_blank" rel="external">Git批处理脚本</a><br> <a href="https://www.zhihu.com/question/38962022" target="_blank" rel="external">请问如何写一个批处理自动打开 gitbash，然后自动执行一系列git命令（windows平台）？</a><br> <a href="https://docs.google.com/document/d/1IjrCvTqL3J92DPXNzkCPYRi6Ftb2v6aCbncpxh9ozy4/edit" target="_blank" rel="external">Chrome-启动参数</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Thinking in Java</title>
     <link href="http://ipcreator.me/2017/03/09/Program/Java/thinking-in-java/"/>
     <id>http://ipcreator.me/2017/03/09/Program/Java/thinking-in-java/</id>
@@ -2150,6 +2461,33 @@ bw.close();
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://img3.doubanio.com/lpic/s27243455.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在Bruce Eckel的文字亲和力和小而直接的编程示例面前也会化解于无形。从Java的基础语法到最高级特性（深入的面向对象概念、多线程、自动项目构建、单元测试和调试等），本书都能逐步指导你轻松掌握。&lt;br&gt;从本书获得的各项大奖以及来自世界各地的读者评论中，不难看出这是一本经典之作。本书的作者拥有多年教学经验，对C、C++以及Java语言都有独到、深入的见解，以通俗易懂及小而直接的示例解释了一个个晦涩抽象的概念。本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、Java I/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书。&lt;br&gt;&lt;a href=&quot;https://book.douban.com/subject/2130190/&quot;&gt;]第4版&lt;/a&gt;特点：&lt;br&gt;适合初学者与专业人员的经典的面向对象叙述方式，为更新的Java SE5/6增加了新的示例和章节。&lt;br&gt; 测验框架显示程序输出。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git automatically</title>
+    <link href="http://ipcreator.me/2017/03/09/Program/Windows/auto-git-daily/"/>
+    <id>http://ipcreator.me/2017/03/09/Program/Windows/auto-git-daily/</id>
+    <published>2017-03-08T23:30:06.000Z</published>
+    <updated>2017-03-09T06:34:20.309Z</updated>
+    
+    <content type="html"><![CDATA[<p>能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…</p>
+ <a id="more"></a>
+ <figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line">@<span class="built_in">title</span> auto update blog articles and git push</div><div class="line"></div><div class="line"><span class="built_in">set</span> fileSource=D:\IPCreatorBlog\source</div><div class="line"><span class="built_in">set</span> fileDestination=C:\IPCreatorBlogGit\blog\source</div><div class="line"><span class="built_in">set</span> gitDir=C:\IPCreatorBlogGit\blog</div><div class="line"></div><div class="line"><span class="built_in">cls</span></div><div class="line"></div><div class="line"><span class="built_in">cd</span> <span class="variable">%fileDestination%</span></div><div class="line"><span class="built_in">rd</span> /s/q <span class="variable">%fileDestination%</span></div><div class="line"><span class="built_in">Xcopy</span> /e <span class="variable">%fileSource%</span> <span class="variable">%fileDestination%</span></div><div class="line"></div><div class="line"><span class="built_in">cd</span> <span class="variable">%gitDir%</span></div><div class="line">git add -v .</div><div class="line">git commit -m "Update blog daily"</div><div class="line">git push</div><div class="line"></div><div class="line"><span class="built_in">pause</span></div></pre></td></tr></table></figure>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> user<span class="title">@LAPTOP-082RQVIH</span> MINGW<span class="number">64</span> /<span class="keyword">c</span>/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git config --<span class="keyword">global</span> <span class="keyword">alias</span>.blog '<span class="title">!git</span> <span class="keyword">add</span> . &amp;&amp; git commit -m <span class="string">"blog update"</span> &amp;&amp; git push'**                                                                                                                          </div><div class="line">user<span class="title">@LAPTOP-082RQVIH</span> MINGW<span class="number">64</span> /<span class="keyword">c</span>/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git blog**</div><div class="line">On branch master</div><div class="line">Your branch is up-<span class="keyword">to</span>-date with 'origin/master'.</div><div class="line">nothing <span class="keyword">to</span> commit, working tree clean</div></pre></td></tr></table></figure>
+<p> 更多参考：<br> <a href="https://www.zybuluo.com/yangfch3/note/338252" target="_blank" rel="external">Windows批处理(cmd/bat)使用小记</a><br> <a href="http://xstarcd.github.io/wiki/windows/windows_cmd_summary_commands.html" target="_blank" rel="external">批处理常用命令总结 - 批处理命令简介</a><br> <a href="https://segmentfault.com/q/1010000000263597" target="_blank" rel="external">Git批处理脚本</a><br> <a href="https://www.zhihu.com/question/38962022" target="_blank" rel="external">请问如何写一个批处理自动打开 gitbash，然后自动执行一系列git命令（windows平台）？</a><br> <a href="https://docs.google.com/document/d/1IjrCvTqL3J92DPXNzkCPYRi6Ftb2v6aCbncpxh9ozy4/edit" target="_blank" rel="external">Chrome-启动参数</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…&lt;/p&gt;
     
     </summary>
     
@@ -2204,9 +2542,12 @@ bw.close();
     <link href="http://ipcreator.me/2017/03/08/MyView/Movie/billy-lynn&#39;s-long-halftime-walk/"/>
     <id>http://ipcreator.me/2017/03/08/MyView/Movie/billy-lynn&#39;s-long-halftime-walk/</id>
     <published>2017-03-08T15:30:06.000Z</published>
-    <updated>2017-03-09T03:12:19.139Z</updated>
+    <updated>2017-03-20T00:27:37.600Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2391542403.jpg" alt=""></p>
+    <content type="html"><![CDATA[<blockquote>
+<p><strong>War, Soldier, People</strong></p>
+</blockquote>
+<p><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2391542403.jpg" alt=""></p>
 <p>比利·林恩的中场战事的剧情简介  ·  ·  ·  ·  ·  ·</p>
 <p>　　伊拉克战争时期，来自美国德州的19岁技术兵比利·林恩（乔·阿尔文 Joe Alwyn 饰）因为一段偶然拍摄的视频而家喻户晓。那是一次规模不大却激烈非常的遭遇战，战斗中林恩所在的B班班长（范·迪塞尔 Vin Diesel 饰）遭到当地武装分子的伏击和劫持，而林恩为了营救班长不惜铤而走险冲锋陷阵。视频公布于世让他成为全美民众所崇拜的英雄，然而却鲜有人理解他和战友们所经历的一切。为了安葬班长，B班得到了短暂的休假，因此他们得以受邀参加一场在德州举行的橄榄球比赛。林恩的姐姐因某事件深感愧疚，她希望弟弟能借此机缘回归普通生活。而周围的经纪人、球迷、大老板、普通民众则对战争、卫国、士兵有着各种各样想当然的理解。球场上的庆典盛大开幕，林恩和战友们的心却愈加沉重与焦躁……<br>　　本片根据作家本·方丹（Ben Fountain）的同名小说改编。</p>
 <a id="more"></a>
@@ -2233,7 +2574,10 @@ bw.close();
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2391542403.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;War, Soldier, People&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2391542403.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;比利·林恩的中场战事的剧情简介  ·  ·  ·  ·  ·  ·&lt;/p&gt;
 &lt;p&gt;　　伊拉克战争时期，来自美国德州的19岁技术兵比利·林恩（乔·阿尔文 Joe Alwyn 饰）因为一段偶然拍摄的视频而家喻户晓。那是一次规模不大却激烈非常的遭遇战，战斗中林恩所在的B班班长（范·迪塞尔 Vin Diesel 饰）遭到当地武装分子的伏击和劫持，而林恩为了营救班长不惜铤而走险冲锋陷阵。视频公布于世让他成为全美民众所崇拜的英雄，然而却鲜有人理解他和战友们所经历的一切。为了安葬班长，B班得到了短暂的休假，因此他们得以受邀参加一场在德州举行的橄榄球比赛。林恩的姐姐因某事件深感愧疚，她希望弟弟能借此机缘回归普通生活。而周围的经纪人、球迷、大老板、普通民众则对战争、卫国、士兵有着各种各样想当然的理解。球场上的庆典盛大开幕，林恩和战友们的心却愈加沉重与焦躁……&lt;br&gt;　　本片根据作家本·方丹（Ben Fountain）的同名小说改编。&lt;/p&gt;
     
@@ -5233,7 +5577,7 @@ public void thisIsSuper() {
     <link href="http://ipcreator.me/2017/02/22/MyView/English/love-words/"/>
     <id>http://ipcreator.me/2017/02/22/MyView/English/love-words/</id>
     <published>2017-02-21T23:44:05.000Z</published>
-    <updated>2017-03-19T11:31:23.817Z</updated>
+    <updated>2017-03-21T15:09:40.360Z</updated>
     
     <content type="html"><![CDATA[<p>图文来源：<a href="http://xue.youdao.com/sw/m/1309029?keyfrom=dict2.index" target="_blank" rel="external">微信号 我爱背单词</a></p>
 <h2 id="predator"><a href="#predator" class="headerlink" title="predator"></a>predator</h2><p>英 [‘predətə]  美 [‘prɛdətɚ]<br>n. [动] 捕食者；[动] 食肉动物；掠夺者</p>
@@ -5245,6 +5589,33 @@ public void thisIsSuper() {
 <p><strong>双语例句</strong><br>Insane pumpkin carving of the Predator.<br>疯狂的南瓜雕刻——食肉动物。</p>
 <p>Some residents and experts said the predator may be a bear, a wayward panther or cougar, or even a wolf because 3-inch paw tracks were found at the scene.<br>一些居民和专家认为这种食肉动物可能是一只熊，一头任性的豹子或狮子，抑或是一头狼，因为在现场发现了3英寸长的爪迹。</p>
 <p>But just like Dutch in Predator before the final battle, you have to be able to answer only one question about your target before you start: where they are.<br>但就像一战之前的荷兰掠夺者一样，在开始工作之前你必须能够回答实现目标的唯一问题：他们在哪里？</p>
+<h2 id="mathematics"><a href="#mathematics" class="headerlink" title="mathematics"></a>mathematics</h2><p>英 [mæθ(ə)’mætɪks]  美 [,mæθə’mætɪks]<br>n. 数学；数学运算</p>
+<h2 id="nova"><a href="#nova" class="headerlink" title="nova"></a>nova</h2><p>英 [‘nəʊvə]  美 [‘novə]<br>n. [天] 新星<br>n. (Nova)人名；(意、西、塞、葡)诺娃(女名)，诺瓦；(英)诺瓦</p>
+<h2 id="equity"><a href="#equity" class="headerlink" title="equity"></a>equity</h2><p>英 [‘ekwɪtɪ]  美 [‘ɛkwəti]<br>n. 公平，公正；衡平法；普通股；抵押资产的净值<br>[ 复数 equities ]</p>
+<h2 id="revenue"><a href="#revenue" class="headerlink" title="revenue"></a>revenue</h2><p>英 [‘revənjuː]  美 [‘rɛvənu]<br>n. 税收，国家的收入；收益</p>
+<h2 id="influencer"><a href="#influencer" class="headerlink" title="influencer"></a>influencer</h2><p>n. 影响者</p>
+<h2 id="auditor"><a href="#auditor" class="headerlink" title="auditor"></a>auditor</h2><p>英 [‘ɔːdɪtə]  美 [‘ɔdɪtɚ]<br>n. 审计员；听者；旁听生</p>
+<h2 id="institute"><a href="#institute" class="headerlink" title="institute"></a>institute</h2><p>英 [‘ɪnstɪtjuːt]  美 [‘ɪnstɪtut]<br>vt. 开始（调查）；制定；创立；提起（诉讼）<br>n. 学会，协会；学院</p>
+<h2 id="infringement"><a href="#infringement" class="headerlink" title="infringement"></a>infringement</h2><p>英 [ɪn’frɪn(d)ʒm(ə)nt]  美 [ɪn’frɪndʒmənt]<br>n. 侵犯；违反</p>
+<h2 id="strategy"><a href="#strategy" class="headerlink" title="strategy"></a>strategy</h2><p>英 [ˈstrætədʒɪ]  美 [‘strætədʒi]<br>n. 战略，策略<br>[ 复数 strategies ]</p>
+<h2 id="litigation"><a href="#litigation" class="headerlink" title="litigation"></a>litigation</h2><p>英 [lɪtɪ’geɪʃ(ə)n]  美 [‘lɪtə’geʃən]<br>n. 诉讼；起诉</p>
+<h2 id="collaborator"><a href="#collaborator" class="headerlink" title="collaborator"></a>collaborator</h2><p>英 [kə’læbəreɪtə]  美 [kə’læbə’retɚ]<br>n. [劳经] 合作者；勾结者；通敌者</p>
+<h2 id="stakeholder"><a href="#stakeholder" class="headerlink" title="stakeholder"></a>stakeholder</h2><p>英 [ˈsteɪkhəʊldə(r)]  美 [ˈsteɪkhoʊldər]<br>n. 利益相关者；赌金保管者</p>
+<h2 id="startup"><a href="#startup" class="headerlink" title="startup"></a>startup</h2><p>英 [stɑ:tʌp]  美 [‘stɑrt’ʌp]<br>n. 启动；开办</p>
+<h2 id="attorney"><a href="#attorney" class="headerlink" title="attorney"></a>attorney</h2><p>英 [ə’tɜːnɪ]  美 [ə’tɝni]<br>n. 律师；代理人；检查官</p>
+<h2 id="prior"><a href="#prior" class="headerlink" title="prior"></a>prior</h2><p>英 [‘praɪə]  美 [‘praɪɚ]<br>adj. 优先的；在先的，在前的<br>adv. 在前，居先<br>n. (Prior)人名；(法、西、葡、捷)普里奥尔；(英)普赖尔；(意)普廖尔</p>
+<h2 id="prior-art"><a href="#prior-art" class="headerlink" title="prior art"></a>prior art</h2><p>先前技术</p>
+<h2 id="meditation"><a href="#meditation" class="headerlink" title="meditation"></a>meditation</h2><p>英 [medɪ’teɪʃ(ə)n]  美 [,mɛdɪ’teʃən]<br>n. 冥想；沉思，深思</p>
+<h2 id="metacognition"><a href="#metacognition" class="headerlink" title="metacognition"></a>metacognition</h2><p>[ˌmɛtəkɒɡˈnɪʃən]<br>n. 元认知；后设认知</p>
+<h2 id="deliberate"><a href="#deliberate" class="headerlink" title="deliberate"></a>deliberate</h2><p>英 [dɪ’lɪb(ə)rət]  美 [dɪ’lɪbərət]<br>adj. 故意的；深思熟虑的；从容的<br>vt. 仔细考虑；商议<br>[ 过去式 deliberated 过去分词 deliberated 现在分词 deliberating ]</p>
+<h2 id="psychology"><a href="#psychology" class="headerlink" title="psychology"></a>psychology</h2><p>英 [saɪ’kɒlədʒɪ]  美 [saɪ’kɑlədʒi]<br>n. 心理学；心理状态<br>[ 复数 psychologies ]</p>
+<h2 id="philosophy"><a href="#philosophy" class="headerlink" title="philosophy"></a>philosophy</h2><p>英 [fɪ’lɒsəfɪ]  美 [fə’lɑsəfi]<br>n. 哲学；哲理；人生观<br>[ 复数 philosophies ]</p>
+<h2 id="inherent"><a href="#inherent" class="headerlink" title="inherent"></a>inherent</h2><p>英 [ɪn’hɪər(ə)nt; -‘her(ə)nt]  美 [ɪn’hɪrənt]<br>adj. 固有的；内在的；与生俱来的，遗传的<br><img src="https://oimagec7.ydstatic.com/image?id=-3767924326175665245&amp;product=dict&amp;_w=990&amp;_h=5395&amp;originWidth=990&amp;originHeight=5395" alt=""></p>
+<p>Industry and frugality are inherent qualities of Chinese nation.</p>
+<h2 id="industry"><a href="#industry" class="headerlink" title="industry"></a>industry</h2><p>英 [‘ɪndəstrɪ]  美 [‘ɪndəstri]<br>n. 产业；工业；勤勉<br>[ 复数 industries ]</p>
+<h2 id="frugality"><a href="#frugality" class="headerlink" title="frugality"></a>frugality</h2><p>英 [fruː’gælɪtɪ]  美 [frʊ’gæləti]<br>n. 俭省，节俭<br>[ 复数 frugalities ]</p>
+<h2 id="adjacent"><a href="#adjacent" class="headerlink" title="adjacent"></a>adjacent</h2><p>英 [ə’dʒeɪs(ə)nt]  美 [ə’dʒesnt]<br>adj. 邻近的，毗连的</p>
+<h2 id="physicist"><a href="#physicist" class="headerlink" title="physicist"></a>physicist</h2><p>英 [‘fɪzɪsɪst]  美 [‘fɪzɪsɪst]<br>n. 物理学家；唯物论者</p>
 <h2 id="conscientious"><a href="#conscientious" class="headerlink" title="conscientious"></a>conscientious</h2><p>英 [,kɒnʃɪ’enʃəs]  美 [‘kɑnʃɪ’ɛnʃəs]<br>adj. 认真的；尽责的；本着良心的；小心谨慎的</p>
 <p>conscience<br>英 [‘kɒnʃ(ə)ns]  美 [ˈkɑːnʃəns]<br>n. 道德心，良心<br>n. (Conscience)人名；(法)孔西延斯</p>
 <h2 id="combat"><a href="#combat" class="headerlink" title="combat"></a>combat</h2><p>英 [‘kɒmbæt; ‘kʌm-]  美 [‘kɑmbæt]<br>vt. 反对；与…战斗<br>vi. 战斗；搏斗<br>n. 战斗；争论<br>adj. 战斗的；为…斗争的<br>n. (Combat)人名；(法)孔巴<br>[ 过去式 combated或combatted 过去分词 combated或combatted 现在分词 combating或combatting ]</p>
@@ -6156,6 +6527,77 @@ public void thisIsSuper() {
   </entry>
   
   <entry>
+    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
+    <link href="http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/"/>
+    <id>http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/</id>
+    <published>2017-02-19T15:59:59.000Z</published>
+    <updated>2017-02-27T03:43:44.623Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
+<p>作者：傅盛</p>
+<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
+<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
+<p>怎么思考呢?我讲几个关键点。</p>
+<a id="more"></a>
+<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
+<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
+<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
+<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
+<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
+<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
+<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
+<p>这才有了一句流行语——Welcome to the GPU world.</p>
+<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
+<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
+<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
+<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
+<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
+<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
+<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
+<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
+<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
+<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
+<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
+<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
+<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
+<p>为什么要异构?</p>
+<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
+<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
+<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
+<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
+<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
+<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
+<p>我认为，只要需求越多，它就会越来越准。</p>
+<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
+<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
+<p>漫漫长路，才刚刚开始。<br>End.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;作者：傅盛&lt;/p&gt;
+&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
+&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
+&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
+    
+      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
+    
+  </entry>
+  
+  <entry>
     <title>人工智能的黄金时代</title>
     <link href="http://ipcreator.me/2017/02/19/BusinessAI/golden-age-of-artificial-intelligence/"/>
     <id>http://ipcreator.me/2017/02/19/BusinessAI/golden-age-of-artificial-intelligence/</id>
@@ -6323,77 +6765,6 @@ public void thisIsSuper() {
     
     
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>猎豹CEO傅盛：关于深度学习的五个思考</title>
-    <link href="http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/"/>
-    <id>http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/</id>
-    <published>2017-02-19T15:59:59.000Z</published>
-    <updated>2017-02-27T03:43:44.623Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.36dsj.com/archives/61885" target="_blank" rel="external">来源：36大数据</a></p>
-<p><img src="http://okkntqe2h.bkt.clouddn.com/fusheng.jpg" alt=""></p>
-<p>作者：傅盛</p>
-<p>任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。<br>过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。</p>
-<h2 id="技术，进入了一场以数据为驱动的革命。"><a href="#技术，进入了一场以数据为驱动的革命。" class="headerlink" title="技术，进入了一场以数据为驱动的革命。"></a>技术，进入了一场以数据为驱动的革命。</h2><p>互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。<br>我们需要重新思考技术的致胜点。</p>
-<p>怎么思考呢?我讲几个关键点。</p>
-<a id="more"></a>
-<h2 id="1、数据和运算能力，变得越来越重要。"><a href="#1、数据和运算能力，变得越来越重要。" class="headerlink" title="1、数据和运算能力，变得越来越重要。"></a>1、数据和运算能力，变得越来越重要。</h2><p>孔子说过一句话：“学而不思则罔，思而不学则殆”。</p>
-<p>先说，学而不思则罔。你拿了很多知识，不深度学习，不行。如果你没有运算能力，有了一堆数据，算不出来，没用。不是深度越深，效果越好。<br>这是个复杂的问题。需要不停算，不停实验。</p>
-<p>今天，整个深度学习的理论，还不够成熟，依然落后于实践。更多时候，只能靠试。此时，运算能力，就变得非常关键。</p>
-<p>假如，别人做一次运算，要两个礼拜，而你只需要一天或2个小时。同样时间内，你可以做更多实验，积累更多宝贵经验，迭代速度也更快。</p>
-<p>这就好像，两个人起点一样，但由于迭代速度不同，导致了最后成就的千差万别。每一次迭代，相当于你的一次翻版。你是一天迭代一次，还是一年迭代一次。你对自己翻版本的速度有多快，决定你最后以多大的成果超过对手。</p>
-<p>思而不学则殆呢?简单说，如果你没有数据，一点用都没有。</p>
-<p>这个时代越来越需要海量数据。数据量越大越好。甚至于，我们以前被认为不是很关键的数据，都有可能灌进去，再看效果。</p>
-<p>这才有了一句流行语——Welcome to the GPU world.</p>
-<p>GPU最早为快速满足增长的图形计算需求而设计。它不同于CPU，在多核多线程处理上浮点性能更佳，使得它在图形界的并行运算，变得超强。</p>
-<p>早期，谷歌发表了一篇论文说——深度学习的结果，要跑在英伟达的GPU上。很快，做芯片起家的英伟达，其公司股价开始蹭蹭蹭一路上涨，涨了好几十块。</p>
-<p>然而，如果今天，你还以为英伟达是个显卡公司，那就大错特错了。如今汽车的防撞系统，警告系统，以及无人驾驶采用的双目视觉图像处理，英伟达是第一大提供商。它其实变成了一家人工智能公司。</p>
-<p>说到这，大家可能也会奇怪——今天关于无人驾驶，辅助驾驶的新闻越来越多，也有越来越多的公司在做，为啥呢?</p>
-<p>核心就在于，深度学习极大降低了这一门槛。只要你能拿到足够数据，就可能实现对物体的各种判断。</p>
-<p>本质也带来了一个技术上弯道超车的好机会。很多公司辛苦积累的软件技术直接作废了。包括IBM做了语音输入好多年，上来就被深度学习超越了。尤其当谷歌进入语音输入时，一下就超越了IBM多年的技术积累。与此同时，谷歌还有足够多的数据，以及足够多的语音样本，不停输入。</p>
-<p><strong>算法为核心的竞争力，正转换成数据为核心竞争力。</strong></p>
-<p>我个人觉得，甚至有些算法会消失掉。但，并不是说算法不重要。<strong>只是神经网络的核心算法，提升起来太难。</strong></p>
-<p>现在大家都把专注度放在了数据和运算。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<p>数据变得越来越重要。尤其在深度学习里，获取足够多的数据，就有机会产生更好的结果。神经网络本身差异不会很大，关键比的是——谁能把这些数据用好，并快速计算。</p>
-<h2 id="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"><a href="#2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。" class="headerlink" title="2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。"></a>2、公司研发结构会发生很多改变，数据获取和数据标注会变得非常重要。</h2><p>中国在这场竞争中，还是有很大机会。能够轻易获取的互联网数据，以及低成本的众包劳动，将为中国公司带来训练所需的计算和人力资源。</p>
-<p>第一，数据获取的量级。尽管美国整个技术的前沿性很好，问题在于——硅谷一家小公司拿到的数据，和一家中国高速发展的互联网公司拿到的数据，不可同日而语。</p>
-<p>第二，数据标注的成本。在美国，要搞数据标注，肯定很累，多贵啊!但在中国，到珠海或成都随便找300个人，去帮你标注，成本很低。ImageNet图像分类大赛，中国人取得的成绩明显突出。国外，微软或谷歌参赛，都是几个人去做图像标注和算法验证。而中国可以组织足够多的人去做标注。<br>我认为，ImageNet大赛，未来的世界冠军都会来自中国。</p>
-<h2 id="3、并行异构计算的人才，变成核心竞争力。"><a href="#3、并行异构计算的人才，变成核心竞争力。" class="headerlink" title="3、并行异构计算的人才，变成核心竞争力。"></a>3、并行异构计算的人才，变成核心竞争力。</h2><p>过去计算领域都是以CPU为中心的计算模式。深度学习要将CPU和GPU两个加起来。这是两个技术的计算模型，是异构的模型。</p>
-<p>为什么要异构?</p>
-<p>因为GPU是并行的。它需要用来显示。为了让你的屏幕刷新保持更快更流畅，就要把GPU分成很多个小的运算单元。每一个运算单元，负责屏幕某一块具体区域的刷新。而大量这样的运算单元都包含在一个GPU当中。要想跑得快，就得把计算逻辑放在CPU中，同时再把你准备好的数据拷贝到GPU中。然后呢?GPU再用并行的方式，计算准备好的这些数据。这就是异构的模型。</p>
-<p>这个模型，是计算体系，也是硬件体系的一次革命，是真正的技术革命。</p>
-<p>举个例子。现在要完成一个复杂的大型任务，需分割在100台机器，让它们分开跑，又同时共同执行同一个全局任务，需要一个数学上严格的方法来完成。这意味着，每一次计算更新的时候，都要把大数据刷一遍，刷几千遍是何其难的事情。几十亿个参数的深度学习模型，每一次迭代都要把参数刷一遍。尤其数据量足够大时，这是很难的。</p>
-<p>因此，能否调动大量的运算资源，就会成为核心竞争力。我的判断是，未来整个研发结构——重数据，重运算，这两点，必然出现。</p>
-<h2 id="4、语音和视觉，将成为下一代交互模式。"><a href="#4、语音和视觉，将成为下一代交互模式。" class="headerlink" title="4、语音和视觉，将成为下一代交互模式。"></a>4、语音和视觉，将成为下一代交互模式。</h2><p>可能大家没有注意一个数据，谷歌已经有20%的搜索来自语音。这是很可怕的一个趋势。<br>我认为，语音和视觉会是下一代的交互模式。<br>过去我们从PC时代的十指模式(电脑键盘)，走到今天的拇指模式(手机)，未来一定是自然模式(语音和视觉)。<br>因为，太多的交互都会变得很简单。有多简单呢?只会用接触的方式去完成。今天之所以还没有大规模到来，其实是技术不够成熟。<br>亚马逊发布Echo时，为什么谷歌那么在意?我觉得很重要的一点，就是它通过300万台的设备，不停地拿数据——用户的每一次说话，都是一次新的数据。这个数据足够多，又反过来加深它的语音能力。<br>交互模式的变化，不仅改变了产品，也影响了数据方式。</p>
-<h2 id="5、深度学习在各个领域产生的变革才刚刚开始。"><a href="#5、深度学习在各个领域产生的变革才刚刚开始。" class="headerlink" title="5、深度学习在各个领域产生的变革才刚刚开始。"></a>5、深度学习在各个领域产生的变革才刚刚开始。</h2><p>无论是现阶段的内容个性化推荐，还是未来输入方式的改变，还有太多地方，可以被深度学习改变。<br>比如人脸识别。今天你用支付宝，或招商银行客户端，都会让你扫一扫，准确率已经相当高了。高到什么程度呢?有一家公司专门为海关提供人脸识别服务。以前用人工查看，看两个小时后就会出错，加上深度学习算法的系统，极大降低了人脸识别的出错率。</p>
-<p>我认为，只要需求越多，它就会越来越准。</p>
-<p>比如小米手机出了面孔功能。根据人脸识别进行照片分类。已经可以达到92%的准确率了。包括猎豹。我们在全球有6亿月度活跃用户，一旦建立起深度学习的核心技术能力，猎豹向很多领域的扩展和应用结合就会变成可能。</p>
-<p><strong>如果你把深度学习看成一种“工具”，就会发现——它有很多和其它领域，包括传统行业相互结合的机会。</strong></p>
-<p>漫漫长路，才刚刚开始。<br>End.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.36dsj.com/archives/61885&quot;&gt;来源：36大数据&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/fusheng.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;作者：傅盛&lt;/p&gt;
-&lt;p&gt;任何一场革命，绝不是以敲锣打鼓的方式，来到你的身边。等到某一天，你忽然发现快要天翻地覆时，再去看，发现自己已被别人抛弃了。&lt;br&gt;过去以端为中心的技术革命，不能说结束了，但已不再是时代的风口。&lt;/p&gt;
-&lt;h2 id=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;a href=&quot;#技术，进入了一场以数据为驱动的革命。&quot; class=&quot;headerlink&quot; title=&quot;技术，进入了一场以数据为驱动的革命。&quot;&gt;&lt;/a&gt;技术，进入了一场以数据为驱动的革命。&lt;/h2&gt;&lt;p&gt;互联网不再只是一张虚拟的网，而更像是一个大数据库。大量的数据，沉甸甸，就在那里。没有人知道，怎么把这些数据，更加完整清晰的表达出来。&lt;br&gt;我们需要重新思考技术的致胜点。&lt;/p&gt;
-&lt;p&gt;怎么思考呢?我讲几个关键点。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
-    
-      <category term="Business" scheme="http://ipcreator.me/tags/Business/"/>
     
   </entry>
   
@@ -6720,109 +7091,6 @@ public void thisIsSuper() {
   </entry>
   
   <entry>
-    <title>技术大牛带你走向机器学习“正道”</title>
-    <link href="http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/"/>
-    <id>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</id>
-    <published>2017-02-19T15:57:06.000Z</published>
-    <updated>2017-02-19T06:03:00.876Z</updated>
-    
-    <content type="html"><![CDATA[<p>作者：<a href="http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html" target="_blank" rel="external">雷锋网 亚峰</a></p>
-<p>导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。</p>
-<p>雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：</p>
-<p>现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。<br>随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。</p>
-<p>其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？</p>
-<p>雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。</p>
-  <a id="more"></a>
-<p>嘉宾介绍：</p>
-<p>王刚，前乐视大数据总监，现任某电商平台大数据总监。10 年大数据领域工作经验，具有 Hadoop 和 Spark 生态相关技术的实际应用经验。目前专注于机器学习，搜索和推荐系统的设计和开发。</p>
-<p>以下为王刚所撰写的正文：</p>
-<p>机器学习对很多初学者来说，最大的学习困难和障碍就是模型、算法、“眼花缭乱”的数学公式所带来的抽象感，无法有效的建立起直觉上的理解。所以本文的目的是尝试给初学者具体的学习方式建议，以帮助初学者打通机器学习的任督二脉，然后通过不断的学习和实践，使得自己在机器学习领域的专业能力持续提升。</p>
-<p>机器学习与人工智能、深度学习之间的关系</p>
-<p>当前被提及的高频词语是“AI人工智能”、“机器学习”、“深度学习”。那这些词语背后所代表的技术之间到底是什么关系呢？充分的理解这个关系，有利于建立起更加系统的专业学习框架。</p>
-<p>首先，我们要搞明白机器学习到底学习的是什么，答案是模型“参数”，比如Y=AX+B是个机器学习的模型，通过样本数据，可以学习出参数A和B的确定值。然后基于这两个参数，对模型进行泛化，即对给定的X对Y进行预测。明白了机器学习到底是学习什么之后，我们一起看看下图来搞清楚机器学习与人工智能和深度学习之间的关系。</p>
-<p>技术大牛带你走向机器学习“正道”：小朋友才迷信算法，大人们更重视工程实践</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888f9bedd1f.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>如上图所示，人工智能是最大的一个范畴，人工智能的实现目前看主要有两种途径：一种是基于脑科学的方式来实现智能。另一种是基于机器学习的方式来实现智能，这种方式的假设是当学习的数据足够充分，就可以大概率的逼近事实。</p>
-<p>再回到公式Y=AX+B，我们可以看到机器学习是通过X和Y来学习出参数A和B，而在机器学习中，X是人工构造的特征，Y是人工进行标注的标签。一句话，机器学习就是通过构造X和Y来学习参数A和B。但通常情况下，构造X和标注Y需要耗用大量的人力和时间。所以，对于如何更智能的构造X和标注Y是机器学习很重要的研究方向。深度学习的一个重要作用就是能够更智能的构造X，即进行更好的特征表示。所以深度学习是机器学习的一个子集。那如何更好的标注Y呢，当前流行的对抗生成网络（GAN）就是一种解决方案。</p>
-<p>机器学习需要的基础知识体系</p>
-<p>机器学习的三个关键要素是模型、策略、算法。模型指的是具体的机器学习模型，比如决策树、SVM、神经网络、LDA等具体模型。策略指的是最小化模型结构性风险的手段，即避免模型欠拟合和过拟合的应对策略，在这里专指正则化（Regularization）。算法指的是建立好模型之后，如何对模型中的参数进行学习。也即最优化的方法。所以，初学者需要掌握的基础知识为：</p>
-<p>1.导数与微积分，以及还需要对泰勒展开式、拉格朗日等定理和公式有充分的掌握。这是进行算法推导的基础中的基础。</p>
-<p>2.线性代数，矩阵运算等要做到熟练掌握，因为机器学习的最优化算法中涉及到的复杂计算需要线性代数好矩阵运算的内容。</p>
-<p>3.概率论，概率论的基础知识是理解像极大似然、最大熵、EM算法、贝叶斯网络、概率图模型的基础。</p>
-<p>4.最优化，机器学习中的模型训练是通过对模型中参数的学习来进行泛化推广。如何对模型中的参数进行学习是最优化要解决的问题。比如线性优化、非线性优化的各种主要方法（比如梯度下降法、牛顿和拟牛顿法等）要有充分的理解。</p>
-<p>5.机器学习模型的思想和具体实现方式要理解透彻。</p>
-<p>机器学习的应用实践</p>
-<p>特征工程，如上面所说就是造X，机器学习实践中大部分的实践都在处理特征工程上。所以真正有机器学习实践经验的人都知道机器学习更多的时间不是高大上的算法，而是苦逼特征工程。工程师每天更多的是基于对业务的深刻理解，通过构建“更好”的特征，持续提升模型的准确度。</p>
-<p>推荐系统与搜索系统</p>
-<p>当推荐和搜索这些字眼出现在网页中，专业书籍中，或是大部分的培训课程中，更多的是与机器学习和算法关联起来。这种情况的原因可能是为了迎合机器学习在大部分人认知中的“高大上”吧。</p>
-<p>在实际的产品设计和开发中，推荐系统和搜索系统是有着一个更大概念的系统架构，绝非仅仅是只有机器学习和算法。其中UI/UE的重要性占比为40%，业务理解重要性占比为30%，数据重要性占比为20%，模型重要性占比为10%。</p>
-<p>以推荐系统举例，整个推荐系统的框架应当如下图所示：</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fc4b17f9.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>下图是电商平台上推荐系统的框架</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fd1d31a4.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>所以，建议的推荐系统知识学习体系为：</p>
-<p>一、推荐系统之整体架构</p>
-<p>1.推荐系统的本质、目标及价值</p>
-<p>2.一个好的推荐系统的相貌</p>
-<p>3.线下零售的促销员与电商平台的推荐系统的关系</p>
-<p>3.推荐系统与搜索的关系</p>
-<p>4.主流电商平台上的推荐系统学习</p>
-<p>5.推荐系统的整体架构图以及如何学习推荐系统</p>
-<p>二、推荐系统之策略及模型</p>
-<ol>
-<li><p>基于规则的推荐算法</p>
-</li>
-<li><p>基于内容(Content-Based)的推荐算法</p>
-</li>
-<li><p>基于协同过滤（CF)的推荐算法</p>
-</li>
-<li><p>基于隐因子（SVD/SVD++/MF/FM/FFM/PLSA/LDA）的推荐算法</p>
-</li>
-<li><p>推荐结果的排序模型（GBDT+LR，LTR）</p>
-</li>
-<li><p>数学基础及典型最优化算法</p>
-</li>
-</ol>
-<p>7.不同场景下的推荐策略（如在电商平台上，首页、详情页、购物车页、搜索结果页等不同场景下的推荐策略）</p>
-<p>8.推荐系统评估</p>
-<p>如何评估线下模型，如何评估线上效果</p>
-<p>三、推荐系统之特征工程</p>
-<p>1.用户画像如何构建</p>
-<p>2.特征工程如何构建，以及如何进行特征分析</p>
-<p>四、推荐系统之交互体验</p>
-<p>如何向用户展示推荐系统的权威性、取得用户的信任、如何帮助用户决策、如何获取用户反馈。</p>
-<p>如何开始机器学习</p>
-<p>对于大多数人来说，如果以抽象的方式开始学习一项内容肯定不是最好的方式。相反，先建立起直觉，然后建立具体到抽象的映射，再深入学习抽象部分完成对细节部分的掌握，最后循环到具体的应用是适合大多数人的学习方式。所以对于机器学习初学者建议的学习路径为：</p>
-<p>步骤一：先选择一门实战性非常强的机器学习及其应用课程进行学习。目标是通过足够多具体的应用，能够深刻理解机器学习的实际使用方式，从而建立起直觉。</p>
-<p>步骤二：学习机器学习的理论课程，包括具体的模型算法，最优化方法，以及相关的公式推导。过了这一关，就完成了对机器学习细节的更好掌控。</p>
-<p>步骤三：如果能够立刻参与到机器学习的实际项目中是最好不过了。如果不能，可以去完成Kaggle中的一些比赛项目。</p>
-<p>最后，也是最最重要的建议，如果要想“更快速”“更高效”的掌握机器学习，找到合适的培训课程进行学习是最合适的方式。用钱买时间，买别人的经验，以更高效的方式掌握机器学习后，这些付出的费用可能仅仅是你工作之后月薪的很小的一部分。</p>
-<p>在任督二脉打通之后，可以适当的对分布式存储和计算相关体系的内容进行学习。即靠的是个人的持续修行，在理论与实践循环提升中，成长为真正的专家。</p>
-<p>PS：为了推动 AI 人才全面化，雷锋网将为大家提供一个业界顶级的专业 AI 技术培训平台：1024MOOC 。其中王刚老师也会在1024MOOC 开展系统的机器学习实战培训课程，具体开课时间在年后一周左右，请大家持续关注雷锋网(公众号：雷锋网)信息。</p>
-<p>雷锋网原创文章，未经授权禁止转载。详情见转载须知。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;作者：&lt;a href=&quot;http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html&quot;&gt;雷锋网 亚峰&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。&lt;/p&gt;
-&lt;p&gt;雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：&lt;/p&gt;
-&lt;p&gt;现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。&lt;br&gt;随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。&lt;/p&gt;
-&lt;p&gt;其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？&lt;/p&gt;
-&lt;p&gt;雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
-    
-  </entry>
-  
-  <entry>
     <title>机器学习年度 20 大开源项目花落谁家？（Python 版）</title>
     <link href="http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/"/>
     <id>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</id>
@@ -6970,6 +7238,109 @@ public void thisIsSuper() {
       <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
     
       <category term="Open Source" scheme="http://ipcreator.me/tags/Open-Source/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>技术大牛带你走向机器学习“正道”</title>
+    <link href="http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/"/>
+    <id>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</id>
+    <published>2017-02-19T15:57:06.000Z</published>
+    <updated>2017-02-19T06:03:00.876Z</updated>
+    
+    <content type="html"><![CDATA[<p>作者：<a href="http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html" target="_blank" rel="external">雷锋网 亚峰</a></p>
+<p>导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。</p>
+<p>雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：</p>
+<p>现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。<br>随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。</p>
+<p>其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？</p>
+<p>雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。</p>
+  <a id="more"></a>
+<p>嘉宾介绍：</p>
+<p>王刚，前乐视大数据总监，现任某电商平台大数据总监。10 年大数据领域工作经验，具有 Hadoop 和 Spark 生态相关技术的实际应用经验。目前专注于机器学习，搜索和推荐系统的设计和开发。</p>
+<p>以下为王刚所撰写的正文：</p>
+<p>机器学习对很多初学者来说，最大的学习困难和障碍就是模型、算法、“眼花缭乱”的数学公式所带来的抽象感，无法有效的建立起直觉上的理解。所以本文的目的是尝试给初学者具体的学习方式建议，以帮助初学者打通机器学习的任督二脉，然后通过不断的学习和实践，使得自己在机器学习领域的专业能力持续提升。</p>
+<p>机器学习与人工智能、深度学习之间的关系</p>
+<p>当前被提及的高频词语是“AI人工智能”、“机器学习”、“深度学习”。那这些词语背后所代表的技术之间到底是什么关系呢？充分的理解这个关系，有利于建立起更加系统的专业学习框架。</p>
+<p>首先，我们要搞明白机器学习到底学习的是什么，答案是模型“参数”，比如Y=AX+B是个机器学习的模型，通过样本数据，可以学习出参数A和B的确定值。然后基于这两个参数，对模型进行泛化，即对给定的X对Y进行预测。明白了机器学习到底是学习什么之后，我们一起看看下图来搞清楚机器学习与人工智能和深度学习之间的关系。</p>
+<p>技术大牛带你走向机器学习“正道”：小朋友才迷信算法，大人们更重视工程实践</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888f9bedd1f.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>如上图所示，人工智能是最大的一个范畴，人工智能的实现目前看主要有两种途径：一种是基于脑科学的方式来实现智能。另一种是基于机器学习的方式来实现智能，这种方式的假设是当学习的数据足够充分，就可以大概率的逼近事实。</p>
+<p>再回到公式Y=AX+B，我们可以看到机器学习是通过X和Y来学习出参数A和B，而在机器学习中，X是人工构造的特征，Y是人工进行标注的标签。一句话，机器学习就是通过构造X和Y来学习参数A和B。但通常情况下，构造X和标注Y需要耗用大量的人力和时间。所以，对于如何更智能的构造X和标注Y是机器学习很重要的研究方向。深度学习的一个重要作用就是能够更智能的构造X，即进行更好的特征表示。所以深度学习是机器学习的一个子集。那如何更好的标注Y呢，当前流行的对抗生成网络（GAN）就是一种解决方案。</p>
+<p>机器学习需要的基础知识体系</p>
+<p>机器学习的三个关键要素是模型、策略、算法。模型指的是具体的机器学习模型，比如决策树、SVM、神经网络、LDA等具体模型。策略指的是最小化模型结构性风险的手段，即避免模型欠拟合和过拟合的应对策略，在这里专指正则化（Regularization）。算法指的是建立好模型之后，如何对模型中的参数进行学习。也即最优化的方法。所以，初学者需要掌握的基础知识为：</p>
+<p>1.导数与微积分，以及还需要对泰勒展开式、拉格朗日等定理和公式有充分的掌握。这是进行算法推导的基础中的基础。</p>
+<p>2.线性代数，矩阵运算等要做到熟练掌握，因为机器学习的最优化算法中涉及到的复杂计算需要线性代数好矩阵运算的内容。</p>
+<p>3.概率论，概率论的基础知识是理解像极大似然、最大熵、EM算法、贝叶斯网络、概率图模型的基础。</p>
+<p>4.最优化，机器学习中的模型训练是通过对模型中参数的学习来进行泛化推广。如何对模型中的参数进行学习是最优化要解决的问题。比如线性优化、非线性优化的各种主要方法（比如梯度下降法、牛顿和拟牛顿法等）要有充分的理解。</p>
+<p>5.机器学习模型的思想和具体实现方式要理解透彻。</p>
+<p>机器学习的应用实践</p>
+<p>特征工程，如上面所说就是造X，机器学习实践中大部分的实践都在处理特征工程上。所以真正有机器学习实践经验的人都知道机器学习更多的时间不是高大上的算法，而是苦逼特征工程。工程师每天更多的是基于对业务的深刻理解，通过构建“更好”的特征，持续提升模型的准确度。</p>
+<p>推荐系统与搜索系统</p>
+<p>当推荐和搜索这些字眼出现在网页中，专业书籍中，或是大部分的培训课程中，更多的是与机器学习和算法关联起来。这种情况的原因可能是为了迎合机器学习在大部分人认知中的“高大上”吧。</p>
+<p>在实际的产品设计和开发中，推荐系统和搜索系统是有着一个更大概念的系统架构，绝非仅仅是只有机器学习和算法。其中UI/UE的重要性占比为40%，业务理解重要性占比为30%，数据重要性占比为20%，模型重要性占比为10%。</p>
+<p>以推荐系统举例，整个推荐系统的框架应当如下图所示：</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fc4b17f9.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>下图是电商平台上推荐系统的框架</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fd1d31a4.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>所以，建议的推荐系统知识学习体系为：</p>
+<p>一、推荐系统之整体架构</p>
+<p>1.推荐系统的本质、目标及价值</p>
+<p>2.一个好的推荐系统的相貌</p>
+<p>3.线下零售的促销员与电商平台的推荐系统的关系</p>
+<p>3.推荐系统与搜索的关系</p>
+<p>4.主流电商平台上的推荐系统学习</p>
+<p>5.推荐系统的整体架构图以及如何学习推荐系统</p>
+<p>二、推荐系统之策略及模型</p>
+<ol>
+<li><p>基于规则的推荐算法</p>
+</li>
+<li><p>基于内容(Content-Based)的推荐算法</p>
+</li>
+<li><p>基于协同过滤（CF)的推荐算法</p>
+</li>
+<li><p>基于隐因子（SVD/SVD++/MF/FM/FFM/PLSA/LDA）的推荐算法</p>
+</li>
+<li><p>推荐结果的排序模型（GBDT+LR，LTR）</p>
+</li>
+<li><p>数学基础及典型最优化算法</p>
+</li>
+</ol>
+<p>7.不同场景下的推荐策略（如在电商平台上，首页、详情页、购物车页、搜索结果页等不同场景下的推荐策略）</p>
+<p>8.推荐系统评估</p>
+<p>如何评估线下模型，如何评估线上效果</p>
+<p>三、推荐系统之特征工程</p>
+<p>1.用户画像如何构建</p>
+<p>2.特征工程如何构建，以及如何进行特征分析</p>
+<p>四、推荐系统之交互体验</p>
+<p>如何向用户展示推荐系统的权威性、取得用户的信任、如何帮助用户决策、如何获取用户反馈。</p>
+<p>如何开始机器学习</p>
+<p>对于大多数人来说，如果以抽象的方式开始学习一项内容肯定不是最好的方式。相反，先建立起直觉，然后建立具体到抽象的映射，再深入学习抽象部分完成对细节部分的掌握，最后循环到具体的应用是适合大多数人的学习方式。所以对于机器学习初学者建议的学习路径为：</p>
+<p>步骤一：先选择一门实战性非常强的机器学习及其应用课程进行学习。目标是通过足够多具体的应用，能够深刻理解机器学习的实际使用方式，从而建立起直觉。</p>
+<p>步骤二：学习机器学习的理论课程，包括具体的模型算法，最优化方法，以及相关的公式推导。过了这一关，就完成了对机器学习细节的更好掌控。</p>
+<p>步骤三：如果能够立刻参与到机器学习的实际项目中是最好不过了。如果不能，可以去完成Kaggle中的一些比赛项目。</p>
+<p>最后，也是最最重要的建议，如果要想“更快速”“更高效”的掌握机器学习，找到合适的培训课程进行学习是最合适的方式。用钱买时间，买别人的经验，以更高效的方式掌握机器学习后，这些付出的费用可能仅仅是你工作之后月薪的很小的一部分。</p>
+<p>在任督二脉打通之后，可以适当的对分布式存储和计算相关体系的内容进行学习。即靠的是个人的持续修行，在理论与实践循环提升中，成长为真正的专家。</p>
+<p>PS：为了推动 AI 人才全面化，雷锋网将为大家提供一个业界顶级的专业 AI 技术培训平台：1024MOOC 。其中王刚老师也会在1024MOOC 开展系统的机器学习实战培训课程，具体开课时间在年后一周左右，请大家持续关注雷锋网(公众号：雷锋网)信息。</p>
+<p>雷锋网原创文章，未经授权禁止转载。详情见转载须知。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作者：&lt;a href=&quot;http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html&quot;&gt;雷锋网 亚峰&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。&lt;/p&gt;
+&lt;p&gt;雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：&lt;/p&gt;
+&lt;p&gt;现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。&lt;br&gt;随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。&lt;/p&gt;
+&lt;p&gt;其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？&lt;/p&gt;
+&lt;p&gt;雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
     
   </entry>
   
@@ -9668,6 +10039,58 @@ new file:   source/slider.fa3fc2.js
   </entry>
   
   <entry>
+    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
+    <link href="http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/"/>
+    <id>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</id>
+    <published>2017-02-18T01:02:06.000Z</published>
+    <updated>2017-02-19T06:02:30.218Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
+<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<a id="more"></a>
+<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
+<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
+<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
+<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
+<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
+<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
+<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
+<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
+<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
+<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
+<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
+<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
+<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
+<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
+<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
+<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
+<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
+<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
+<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
+<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
+<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
+<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
+    
+      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python 资源大全中文版</title>
     <link href="http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/"/>
     <id>http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/</id>
@@ -10777,58 +11200,6 @@ new file:   source/slider.fa3fc2.js
   </entry>
   
   <entry>
-    <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
-    <link href="http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</id>
-    <published>2017-02-18T01:02:06.000Z</published>
-    <updated>2017-02-19T06:02:30.218Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.csdn.net/article/2015-11-13/2826207" target="_blank" rel="external">谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</a></p>
-<p>摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<a id="more"></a>
-<p>谷歌宣布将其最重要的创新项目之一 —— 人工智能引擎 ——作为开源项目发布到网上供大家免费使用，这展示了计算机软件行业正进行着什么样的变革。</p>
-<p>最近，互联网巨头们接二连三地将自己线上核心业务所用的软件开源。项目开源加快了技术发展的进程。随着人工智能引擎TensorFlow的开源，谷歌能以各种方式为公司范围之外的机器学习研究提供支持，这些研究成果也将反馈给谷歌。</p>
-<p>不过谷歌的人工智能引擎也反映了当今计算机硬件行业的发展趋势。在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。</p>
-<p>根据负责谷歌AI项目的工程师Jeff Dean的说法，<strong>谷歌不仅用GPU训练其AI服务，而且还运行这些服务产品 —— 将它们植入用户手中的智能电话。</strong></p>
-<p>那是一次重大的转变。目前，Facebook在其庞大的计算机数据中心里用GPU训练人脸识别模型，但在为用户提供服务时 —— 真刀实战地在社交网站上识别人脸 —— 还是使用传统的处理器，或者CPU。Facebook的CTO Mike “Schrep” Schroepfer近日在公司总部举行的一次简短的记者见面会上指出，这种基本配置是目前的行业标准。但谷歌为了追求更高层次的效率，某些时候在数据中心里GPU既用来训练AI模型，又用来执行模型。谷歌也并不是踽踽独行。中国搜索引擎巨头百度也正在搭建一套类似的AI系统。“这是一次巨大的模式变革”，百度首席科学家Andrew Ng说道。</p>
-<p>这一变革对于专注于GPU的芯片巨头NVIDIA来说是件好事。而且这也是世界最大的芯片制造商Intel产品的空白区。Intel不生产GPU。一些互联网企业和研究院开始关注可编程逻辑阵列FPGA了，将它作为AI领域的GPU替代品，并且Intel最近收购了一家专门生产可编程芯片的公司。</p>
-<p>AI在全球的在线服务业务中扮演了越来越重要的角色 —— 备选芯片架构在AI中的地位也越来越重要。目前，在我们提供线上服务的计算机数据中心里已经如此了，若干年内，同样的现象也将会在移动设备上出现，因为我们使用的服务其实是相同的。</p>
-<h2 id="深度学习实践"><a href="#深度学习实践" class="headerlink" title="深度学习实践"></a>深度学习实践</h2><p>在谷歌、Facebook、微软、百度等公司，GPU被证明对“深度学习”非常有效，因为它可以并行处理许多小数据集。深度学习依赖于神经网络 —— 一种模拟人类大脑中神经元的系统 —— 这些网络是用来快速分析大量的数据。举个例子，为了教会神经网络识别一只猫，你就需要输入无数张猫的图像。GPU擅长处理这类任务。另外，它们的能耗也没有CPU这么高。</p>
-<p>但是，这些公司在实际应用中使用深度学习技术时 —— 比如识别猫的手机App —— 这个App是由运行在CPU上的数据系统驱动的。根据在百度AI团队负责高性能计算系统的Bryan Catanzaro介绍，这是因为GPU只在持续不断输入数据的时候效率才高，而通常用来驱动手机App的数据服务器软件并不以这种方式往芯片传输数据。通常情况下，当收到手机App发来的请求后，服务器每次处理一个请求。Catanzaro解释道，如果你使用GPU分别处理收到的每个请求，“很难保证GPU有足够多的任务，让它能够有效运行。GPU从未真正发挥出作用。”</p>
-<p>就是说，如果在执行环节你能不断地给GPU传入数据，那么它的效率比CPU高得多。百度正在其新的AI平台做这方面尝试。简单说来，就是请求发送到数据中心，然后将多个请求打包传入GPU。“我们打包这些请求，不再让处理器每次处理一个请求，而是每次处理多个请求，”Catanzaro说道。“别让GPU闲下来。”</p>
-<p>目前还不清楚谷歌将如何处理这个问题。但是他们表示已经有TensorFlow在执行阶段使用GPU的案例。“基于不同的问题，我们有时候把GPU既用于训练，又用于识别，”谷歌发言人Jason Freidenfelds证实。</p>
-<p>这似乎显得微不足道。事实上却是一项大工程。驱动这些AI应用产品的系统包括数十台、数百台、甚至上千台的机器。而且这些系统在我们日常生活中的地位日益重要。现在谷歌的深度学习技术不仅用来识别照片、识别语音、机器翻译，还用来提高搜索质量。其它公司也将同样的技术用于精准广告投放、计算机安全，甚至理解自然语言的应用。换句话说，像谷歌和百度这样的公司还需要大量的GPU。</p>
-<h2 id="无处不在的AI"><a href="#无处不在的AI" class="headerlink" title="无处不在的AI"></a>无处不在的AI</h2><p>与此同时，<strong>TensorFlow也将其中一些AI产品从数据中心推向了智能手机端。</strong></p>
-<p>一般来说，如果在手机端使用深度学习相关的App，必须往数据中心回传信息。所有的AI都在服务器端。例如，你在安卓手机上执行了一个命令，这条命令必须传到谷歌的数据中心，在那里用巨大的CPU或者GPU网络来处理。</p>
-<p>但是，谷歌也一直在提升自己的AI引擎，某些情况下可以在手机端执行完成。“你能使用一个模型描述，并且在手机端上运行”，Dean说，“而且你并不需要真的对模型描述或是代码做改动。”</p>
-<p>谷歌的翻译App正是这么搭建的。谷歌在数据中心训练模型来识别单词和完成翻译，一旦训练完成，App就能独立地运行 —— 不需要网络连接。你可以把手机对准一块法语路牌，立即就能显示出英语翻译。</p>
-<p>这要做好很困难。毕竟，手机的处理能力有限。随着时间推进，越来越多的这类任务会被迁移到手机端。深度学习软件会改进，移动设备硬件也在发展。“深度学习的未来在小巧灵活的移动设备上”，深度学习创业公司的创始人Chris Nicholson如是说。</p>
-<p>举例来说，GPU正在试图寻找置入手机的方式，硬件制造商也在不断改进CPU的速度和效率。同时，IBM也在开发专为AI任务定制的“neuromorphic”芯片，使用过的人觉得它非常适合移动设备。</p>
-<p>如今，谷歌的AI引擎不仅运行在服务器的CPU和GPU上，还运行在常规的智能手机芯片上。但据谷歌工程师Rajat Monga称，他们开发的TensorFlow能让工程师们轻而易举地迁移到其它硬件平台上。现在工具已经开源，外部人员也可以使用了。Dean如此描述TensorFlow：“它应该可以移植到各种硬件。”<br>没错，硬件界也在经历变革 —— 和软件界并驾齐驱。</p>
-<p>原文链接：<a href="http://www.wired.com/2015/11/googles-open-source-ai-tensorflow-signals-fast-changing-hardware-world/" target="_blank" rel="external">TensorFlow, Google’s Open Source AI, Signals Big Changes in Hardware</a></p>
-<p> Too（译者/赵屹华 审校/刘帝伟、朱正贵 责编/周建丁）</p>
-<p>译者简介：赵屹华，计算广告工程师@搜狗，前生物医学工程师，关注推荐算法、机器学习领域。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-11-13/2826207&quot;&gt;谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;摘要：在谷歌内部，处理图像识别、语音识别和语言翻译等任务时，TensorFlow依赖于配备图像处理单元（GPU）的机器，和被用于渲染游戏图像的芯片等，但对其它的任务也擅长。它对这些芯片的依赖比想象中的更多。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
     <title>超智能体</title>
     <link href="http://ipcreator.me/2017/02/18/Program/Concepts/super-intelligence-individual/"/>
     <id>http://ipcreator.me/2017/02/18/Program/Concepts/super-intelligence-individual/</id>
@@ -11289,366 +11660,6 @@ new file:   source/slider.fa3fc2.js
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
       <category term="Neural Networks" scheme="http://ipcreator.me/tags/Neural-Networks/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Supercharging Android Apps With TensorFlow</title>
-    <link href="http://ipcreator.me/2017/02/17/Program/TensorFlow/supercharging-android-apps-with-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/17/Program/TensorFlow/supercharging-android-apps-with-tensorflow/</id>
-    <published>2017-02-17T02:26:06.000Z</published>
-    <updated>2017-02-17T15:10:29.777Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://jalammar.github.io/Supercharging-android-apps-using-tensorflow/" target="_blank" rel="external">J Alammar</a></p>
-<p>Supercharging Android Apps With TensorFlow (Google’s Open Source Machine Learning Library)<br>In November 2015, Google announced and open sourced TensorFlow, its latest and greatest machine learning library. This is a big deal for three reasons:</p>
-<ol>
-<li>Machine Learning expertise: Google is a dominant force in machine learning. Its prominence in search owes a lot to the strides it achieved in machine learning.</li>
-<li>Scalability: the announcement noted that TensorFlow was initially designed for internal use and that it’s already in production for some live product features.</li>
-<li>Ability to run on Mobile.</li>
-</ol>
-<p>This last reason is the operating reason for this post since we’ll be focusing on Android. If you examine the tensorflow repo on GitHub, you’ll find a little tensorflow/examples/android directory. I’ll try to shed some light on the Android TensorFlow example and some of the things going on under the hood.</p>
-  <a id="more"></a>
-<h2 id="A-Look-of-Recognition"><a href="#A-Look-of-Recognition" class="headerlink" title="A Look of Recognition"></a>A Look of Recognition</h2><p>The app glances out through your camera and tries to identify the objects it sees. Sometimes it does a good job, other times it can’t quite pin down the object, and at times it leads to thought provoking guesses! Overall, it feels pretty magical.</p>
-<p><img src="https://jalammar.github.io/images/android_tensorflow_classifier_results.jpg" alt=""><br>android_tensorflow_classifier_results.jpg</p>
-<p>The app accomplishes this feat using a bundled machine learning model running in TensorFlow on the device (no network calls to a backend service). The model is trained against millions of images so that it can look at the photos the camera feeds it and classify the object into its best guess (from the 1000 object classifications it knows). Along with its best guess, it shows a confidence score to indicate how sure it is about its guess.</p>
-<p>The Android example page gives you an idea on how to build the app, and ultimately culminates in producing this <a href="https://s3.amazonaws.com/jalammar.github.io/tensorflow_demo.apk" target="_blank" rel="external">APK</a> (I built and uploaded the APK to save you some time since the building process requires installing the Android NDK and Bazel, Google’s build tool).</p>
-<p>NOTE: Android 5.0 or later required since the example uses the Camera2 package introduced in Android 5.0.</p>
-<p>NOTE: if your device runs Android 6.0 or later, you have to install the app with the following command (It gives the app the appropriate permissions it needs to run):</p>
-<pre><code>adb install -r -g /path/to/apk.apk
-</code></pre><h2 id="App-Structure-Walkthrough"><a href="#App-Structure-Walkthrough" class="headerlink" title="App Structure Walkthrough"></a>App Structure Walkthrough</h2><p><img src="https://jalammar.github.io/images/android-tensorflow-app-structure_1.png" alt=""><br>android-tensorflow-app-structure_1.png</p>
-<p>The core TensorFlow engine is built with C++, but programmers can write their TensorFlow software in either C++ or Python. The Android TensorFlow example uses the C++ interface in the following manner:</p>
-<p>On startup, the app launches an Android activity (CameraActivity.java) which then starts a fragment (CameraConnectionFragment.java)<br>The fragment does some setup to basically start the camera and feed the incoming stream of images to an object it instantiates (TensorflowImageListener.java)<br>The listener consults the classifier (TensorflowClassifier.java) about each image it gets, and receives the classification and confidence score for each image.<br>The good thing is that most of this logic is in normal Android Java SDK territory – so this should be familiar to most Android devs. So where is the C++?<br><img src="https://jalammar.github.io/images/android-tensorflow-app-structure_2.png" alt=""><br>android-tensorflow-app-structure_2.png</p>
-<p>If you look closely at TensorflowClassifier, you may notice the following methods:</p>
-<pre><code>public native int initializeTensorflow( );
-
-private native String classifyImageBmp(Bitmap bitmap);
-</code></pre><p>The native keywords in these method signatures indicate that these methods are implemented in native C++ code. Look for them under the “android/jni” directory and true enough, you’ll find tensorflow_jni.cc</p>
-<pre><code>JNIEXPORT jint JNICALL
-TENSORFLOW_METHOD(initializeTensorflow)(...) {
-...
-}
-
-
-JNIEXPORT jstring JNICALL
-TENSORFLOW_METHOD(classifyImageBmp)(...) {
-...
-}
-</code></pre><p>JNI (short for Java Native Interface) is a way in which the Java parts of an Android app can communicate with the native C++ parts. So when we call classifyImageBmp(bitmap) in our Java code, it will actually invoke the C++ function exported in tensorflow_jni.cc and return the value it returns.</p>
-<p>A Bitmap file cannot directly be sent to TensorFlow as input. It has be transformed into an input tensor that we’d send in step #2 in the flow above. A tensor is an n-dimensional array of values, and is the motif TensorFlow uses to send data between all of its different parts/operations. This model expect a 3-dimensional array that supplies the Red/Green/Blue value of each pixel in the image. The dimensions are:</p>
-<ol>
-<li>X-index of the pixel</li>
-<li>Y-index of the pixel</li>
-<li>indication of which value this cell holds (0 for red, 1 for green, 2 for blue)<br>And the value of the cell would be the actual value of R or G or B channel for that pixel.<br><img src="https://jalammar.github.io/images/input_tensor.png" alt=""><br>input_tensor.png</li>
-</ol>
-<p>(This is somewhat oversimplified. I glanced over two things for simplicity’s sake. First is the conversion from the YUV format that the Android camera exports to the RGB format the model expects. Second is that the model actually takes a 4-dimensional tensor, but these three are the ones we care about)</p>
-<h2 id="The-Model"><a href="#The-Model" class="headerlink" title="The Model"></a>The Model</h2><p>As you read the example’s README.md, you’ll notice that it instructs you to download a zip file containing the TensorFlow model and add it to the assets directory. This zip file contains two files that are important for us:</p>
-<p>tensorflow_inception_graph.pb- At 54 MBs unzipped, this file constitutes the majority of the APK size (58 MBs). This is our trained machine learning model and where the magic comes from. It’s a pre-built TensorFlow Graph describing the exact operations needed to compute a classification from input image data. This Graph is serialized and encoded into binary with Google’s Protocol Buffers so it can be deserialized across different platforms (think of it as a binary-encoded JSON file).</p>
-<p>imagenet_comp_graph_label_strings.txt- this contains the 1000 classifications that the output of the model corresponds to (e.g. “vending machine”, “water bottle”, “coffee mug”). These classifications are defined by the ImageNet Large Scale Visual Recognition Challenge which the model was built to compete in.</p>
-<p>The model here is what’s known as a deep convolutional neural network. It is built in the Inception architecture described in Going Deeper with Convolutions. Convolutional neural networks are some of the most popular models in deep learning. They have been very successful in image recognition (so much so, that most highly ranked teams in the competition used them).</p>
-<p>The model is read from the file and fed into TensorFlow when the app starts up. This code is actually really interesting to read and see how to communicate with tensorflow (if you run the app with your device connected to your computer, you can see these helpful log messages printed in logcat).</p>
-<h2 id="Build-System"><a href="#Build-System" class="headerlink" title="Build System"></a>Build System</h2><p>The Android app example is not built the traditional Gradle way. Because the app has to contain NDK elements as well as TensorFlow itself, a more elaborate build system was utilized. The example is configured to be built with Google’s Bazel build system running from the TensorFlow root directory.</p>
-<p>The WORKSPACE file in the root directory specifies the main parameters of the project. The BUILD file in the Android directory instructs the build system to build the Java and C++ files of the app.</p>
-<h2 id="The-Possibilities"><a href="#The-Possibilities" class="headerlink" title="The Possibilities"></a>The Possibilities</h2><p><strong>Using a trained model in your app seems to be the lowest hanging fruit for mobile TensorFlow apps at the moment.</strong> While you can probably train a model on Android, mobile devices are not well suited for the intensive processing required by complex models with larger training sets.</p>
-<p>Want to learn more about machine learning? Consider checking out the Machine Learning course on Coursera. There’s also a good discussion in /r/MachineLearning here: In your experience, which machine learning course on Coursera (or other MOOC web site) was the best?.</p>
-<p>Want to comment? /r/androiddev, Hacker News.</p>
-<p>Written on January 6, 2016</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://jalammar.github.io/Supercharging-android-apps-using-tensorflow/&quot;&gt;J Alammar&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Supercharging Android Apps With TensorFlow (Google’s Open Source Machine Learning Library)&lt;br&gt;In November 2015, Google announced and open sourced TensorFlow, its latest and greatest machine learning library. This is a big deal for three reasons:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Machine Learning expertise: Google is a dominant force in machine learning. Its prominence in search owes a lot to the strides it achieved in machine learning.&lt;/li&gt;
-&lt;li&gt;Scalability: the announcement noted that TensorFlow was initially designed for internal use and that it’s already in production for some live product features.&lt;/li&gt;
-&lt;li&gt;Ability to run on Mobile.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This last reason is the operating reason for this post since we’ll be focusing on Android. If you examine the tensorflow repo on GitHub, you’ll find a little tensorflow/examples/android directory. I’ll try to shed some light on the Android TensorFlow example and some of the things going on under the hood.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TensorFlow Android Camera Demo</title>
-    <link href="http://ipcreator.me/2017/02/17/Program/TensorFlow/tensorflow-android-camera-demo/"/>
-    <id>http://ipcreator.me/2017/02/17/Program/TensorFlow/tensorflow-android-camera-demo/</id>
-    <published>2017-02-17T02:26:06.000Z</published>
-    <updated>2017-02-17T14:55:11.735Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android" target="_blank" rel="external">作者：tensorflow</a></p>
-<p><img src="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/android/sample_images/classify1.jpg" alt=""></p>
-<p><img src="https://github.com/tensorflow/tensorflow/raw/master/tensorflow/examples/android/sample_images/stylize1.jpg" alt=""></p>
-<p><img src="https://github.com/tensorflow/tensorflow/raw/master/tensorflow/examples/android/sample_images/detect1.jpg" alt=""></p>
-<p>This folder contains an example application utilizing TensorFlow for Android devices.</p>
-<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>The demos in this folder are designed to give straightforward samples of using TensorFlow in mobile applications.</p>
-<p>Inference is done using the TensorFlow Android Inference Interface, which may be built separately if you want a standalone library to drop into your existing application.</p>
-<p>A device running Android 5.0 (API 21) or higher is required to run the demo.</p>
-<a id="more"></a>
-<h2 id="Current-samples"><a href="#Current-samples" class="headerlink" title="Current samples:"></a>Current samples:</h2><pre><code>TF Classify: Uses the Google Inception model to classify camera frames in real-time, displaying the top results in an overlay on the camera image.
-TF Detect: Demonstrates a model based on Scalable Object Detection using Deep Neural Networks to localize and track people in the camera preview in real-time.
-TF Stylize: Uses a model based on A Learned Representation For Artistic Style to restyle the camera preview image to that of a number of different artists.
-</code></pre><h2 id="Prebuilt-APK"><a href="#Prebuilt-APK" class="headerlink" title="Prebuilt APK:"></a>Prebuilt APK:</h2><pre><code>If you just want the fastest path to trying the demo, you may download the nightly build here. Expand the &quot;View&quot; and then the &quot;out&quot; folders under &quot;Last Successful Artifacts to find tensorflow_demo.apk. Also available are precompiled native libraries that you may drop into your own applications. See tensorflow/contrib/android/README.md for more details.
-</code></pre><h2 id="Running-the-Demo"><a href="#Running-the-Demo" class="headerlink" title="Running the Demo"></a>Running the Demo</h2><pre><code>Once the app is installed it can be started via the &quot;TF Classify&quot;, &quot;TF Detect&quot; and &quot;TF Stylize&quot; icons, which have the orange TensorFlow logo as their icon.
-
-While running the activities, pressing the volume keys on your device will toggle debug visualizations on/off, rendering additional info to the screen that may be useful for development purposes.
-</code></pre><h2 id="Building-the-Demo-from-Source"><a href="#Building-the-Demo-from-Source" class="headerlink" title="Building the Demo from Source"></a>Building the Demo from Source</h2><pre><code>Pick your preferred approach below. At the moment, we have full support for Bazel, and partial support for gradle, cmake, make, and Android Studio.
-
-As a first step for all build types, clone the TensorFlow repo with:
-
-git clone --recurse-submodules https://github.com/tensorflow/tensorflow.git
-Note that --recurse-submodules is necessary to prevent some issues with protobuf compilation.
-</code></pre><h2 id="Bazel"><a href="#Bazel" class="headerlink" title="Bazel"></a>Bazel</h2><pre><code>Install Bazel and Android Prerequisites
-
-Bazel is the primary build system for TensorFlow. To build with Bazel, it and the Android NDK and SDK must be installed on your system.
-
-Get the recommended Bazel version listed in os_setup.html
-The Android NDK is required to build the native (C/C++) TensorFlow code. The current recommended version is 12b, which may be found here.
-The Android SDK and build tools may be obtained here, or alternatively as part of Android Studio. Build tools API &gt;= 23 is required to build the TF Android demo.
-Edit WORKSPACE
-
-The Android entries in &lt;workspace_root&gt;/WORKSPACE must be uncommented with the paths filled in appropriately depending on where you installed the NDK and SDK. Otherwise an error such as: &quot;The external label &apos;//external:android/sdk&apos; is not bound to anything&quot; will be reported.
-
-Also edit the API levels for the SDK in WORKSPACE to the highest level you have installed in your SDK. This must be &gt;= 23 (this is completely independent of the API level of the demo, which is defined in AndroidManifest.xml). The NDK API level may remain at 21.
-
-Install Model Files (optional)
-
-The TensorFlow GraphDefs that contain the model definitions and weights are not packaged in the repo because of their size. They are downloaded automatically and packaged with the APK by Bazel via a new_http_archive defined in WORKSPACE during the build process.
-
-Optional: If you wish to place the models in your assets manually (E.g. for non-Bazel builds), remove all of the model_files entries from the assets list in tensorflow_demo found in the [BUILD](BUILD) file. Then download and extract the archives yourself to the assets directory in thesource tree:
-
-BASE_URL=https://storage.googleapis.com/download.tensorflow.org/models
-for MODEL_ZIP in inception5h.zip mobile_multibox_v1a.zip stylize_v1.zip
-do
-  curl -L ${BASE_URL}/${MODEL_ZIP} -o /tmp/${MODEL_ZIP}
-  unzip /tmp/${MODEL_ZIP} -d tensorflow/examples/android/assets/
-done
-This will extract the models and their associated metadata files to the local assets/ directory.
-
-Build
-
-After editing your WORKSPACE file to update the SDK/NDK configuration, you may build the APK. Run this from your workspace root:
-
-bazel build -c opt //tensorflow/examples/android:tensorflow_demo
-If you get build errors about protocol buffers, run git submodule update --init and make sure that you&apos;ve modified your WORKSPACE file as instructed, then try building again.
-
-Install
-
-Make sure that adb debugging is enabled on your Android 5.0 (API 21) or later device, then after building use the following command from your workspace root to install the APK:
-
-adb install -r bazel-bin/tensorflow/examples/android/tensorflow_demo.apk
-</code></pre><h2 id="Android-Studio"><a href="#Android-Studio" class="headerlink" title="Android Studio"></a>Android Studio</h2><pre><code>Android Studio may be used to build the demo in conjunction with Bazel. First, make sure that you can build with Bazel following the above directions. Then, look at build.gradle and make sure that the path to Bazel matches that of your system.
-
-At this point you can add the tensorflow/examples/android directory as a new Android Studio project. Click through installing all the Gradle extensions it requests, and you should be able to have Android Studio build the demo like any other application (it will call out to Bazel to build the native code with the NDK).
-</code></pre><h2 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h2><pre><code>Full CMake support for the demo is coming soon, but for now it is possible to build the TensorFlow Android Inference library using tensorflow/contrib/android/cmake.
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android&quot;&gt;作者：tensorflow&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/android/sample_images/classify1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/tensorflow/tensorflow/raw/master/tensorflow/examples/android/sample_images/stylize1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/tensorflow/tensorflow/raw/master/tensorflow/examples/android/sample_images/detect1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;This folder contains an example application utilizing TensorFlow for Android devices.&lt;/p&gt;
-&lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description&quot;&gt;&lt;/a&gt;Description&lt;/h2&gt;&lt;p&gt;The demos in this folder are designed to give straightforward samples of using TensorFlow in mobile applications.&lt;/p&gt;
-&lt;p&gt;Inference is done using the TensorFlow Android Inference Interface, which may be built separately if you want a standalone library to drop into your existing application.&lt;/p&gt;
-&lt;p&gt;A device running Android 5.0 (API 21) or higher is required to run the demo.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TensorFlow Android stand-alone demo</title>
-    <link href="http://ipcreator.me/2017/02/17/Program/TensorFlow/tensorflow-android-stand-alone-demo/"/>
-    <id>http://ipcreator.me/2017/02/17/Program/TensorFlow/tensorflow-android-stand-alone-demo/</id>
-    <published>2017-02-17T02:16:06.000Z</published>
-    <updated>2017-02-17T14:48:18.479Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/miyosuda/TensorFlowAndroidDemo" target="_blank" rel="external">作者：miyosuda</a></p>
-<p><img src="https://camo.githubusercontent.com/c7524a5212d3212f0c017a50cac6c765e1389964/687474703a2f2f6e6172722e6a702f707269766174652f6d69796f7368692f74656e736f72666c6f772f74656e736f72666c6f775f73637265656e312e706e67" alt=""></p>
-<p>Android demo source files extracted from original TensorFlow source. (TensorFlow r0.10)</p>
-<p>To build this demo, you don’t need to prepare build environment with Bazel, and it only requires AndroidStudio.</p>
-<p>If you would like to build jni codes, only NDK is requied to build it.</p>
-  <a id="more"></a>
-<pre><code>How to build jni codes
-</code></pre><p>First install NDK, and set path for NDK tools, and then type commands below to create .so file.</p>
-<pre><code><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>cd jni-build</div><div class="line"><span class="variable">$ </span>make</div><div class="line"><span class="variable">$ </span>make install</div></pre></td></tr></table></figure>
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://github.com/miyosuda/TensorFlowAndroidDemo&quot;&gt;作者：miyosuda&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/c7524a5212d3212f0c017a50cac6c765e1389964/687474703a2f2f6e6172722e6a702f707269766174652f6d69796f7368692f74656e736f72666c6f772f74656e736f72666c6f775f73637265656e312e706e67&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Android demo source files extracted from original TensorFlow source. (TensorFlow r0.10)&lt;/p&gt;
-&lt;p&gt;To build this demo, you don’t need to prepare build environment with Bazel, and it only requires AndroidStudio.&lt;/p&gt;
-&lt;p&gt;If you would like to build jni codes, only NDK is requied to build it.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TensorFlow的技术应用</title>
-    <link href="http://ipcreator.me/2017/02/17/Program/TensorFlow/applications-of-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/17/Program/TensorFlow/applications-of-tensorflow/</id>
-    <published>2017-02-17T02:06:06.000Z</published>
-    <updated>2017-02-17T02:12:35.170Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.leiphone.com/news/201702/pwAazPPM6idKOeSZ.html" target="_blank" rel="external">作者：AI研习社</a></p>
-<blockquote>
-<p><strong>通过一些TensorFlow实际应用，让大家对TensorFlow有理性和感性的双层认知。</strong></p>
-</blockquote>
-<p>随着谷歌2015年发布开源人工系统TensorFlow，让本就如火如荼的深度学习再添一把火，截至现在，TensorFlow已经历了多个版本演进，功能不断完善，AI开发者也能灵活自如的运用TensorFlow解决一些实际问题，下面雷锋网(公众号：雷锋网)会对一些比较实用的TensorFlow应用做相关整理，让大家对TensorFlow有理性和感性的双层认知。</p>
-  <a id="more"></a>
-<pre><code>TensorFlow在图像识别中的应用
-</code></pre><p>对人类而言，区分画面、图像就如同与生俱来一样简单，例如我们能够轻松的识别老虎与雄狮的区别，但如果把这个问题交给计算机看上去并不简单。</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a425f346c57.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>在过去几年里，机器学习在解决这些难题方面取得了巨大的进步。其中，我们发现一种称为深度卷积神经网络的模型在困难的视觉识别任务中取得了理想的效果 —— 达到人类水平，在某些领域甚至超过。下面这篇文章雷锋网重点整理了TensorFlow在图像识别中的应用，看计算机如何识别图像。</p>
-<p>地址：<a href="http://www.csdn.net/article/2015-12-16/2826496" target="_blank" rel="external">http://www.csdn.net/article/2015-12-16/2826496</a></p>
-<p>除了认识TensorFlow在图像识别中的应用，关于如何搭建图像识别系统雷锋网也有相关教程：</p>
-<p><a href="http://www.leiphone.com/news/201701/Y4uyEktkkwb5YhJM.html" target="_blank" rel="external">手把手教你用TensorFlow搭建图像识别系统（一）</a></p>
-<p><a href="http://www.leiphone.com/news/201701/2tH3DgLmsGhnDd8D.html" target="_blank" rel="external">手把手教你用TensorFlow搭建图像识别系统（二）</a></p>
-<p><a href="http://www.leiphone.com/news/201701/UHuzaB7hDiKAVZ3X.html" target="_blank" rel="external">手把手教你用TensorFlow搭建图像识别系统（三）</a></p>
-<p>农场主与TensorFlow的邂逅，AI告诉你一根优秀的黄瓜应该具备什么素质</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a5828f60698.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>一根优秀的黄瓜应该具备什么素质？相信这是很多人不可描述的问题，而对于黄瓜农场主而言，同一个品种的黄瓜可以根据颜色、刺、体态等因素分成9类，但分检工作对于人来说恰好是一个枯燥繁琐的过程。</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201609/57c7eb25b0e4c.gif" alt=""></p>
-<p>一位日本农场主 Makoto 为解决这一难题，利用TensorFlow制作了一款黄瓜分类机，通过机器就能够完成黄瓜的分类工作，但识别准确率目前只有70%，Makoto 目前正打算使用谷歌的云机器学习（Cloud Machine Learning）平台，来进一步改善他的黄瓜分类机。</p>
-<p>地址：<a href="http://www.leiphone.com/news/201609/dHgxLbz96OQqVN8z.html（来源雷锋网）" target="_blank" rel="external">http://www.leiphone.com/news/201609/dHgxLbz96OQqVN8z.html（来源雷锋网）</a></p>
-<p>用TensorFlow搭建图像分类器</p>
-<p>本文将详细介绍如何通过TensorFlow搭建图像分类器，从安装、优化、编码、和使用等方面手把手教你用TensorFlow搭建图像分类器。</p>
-<p>地址：<a href="http://www.leiphone.com/news/201702/JdaLcpYO59zTTF06.html" target="_blank" rel="external">http://www.leiphone.com/news/201702/JdaLcpYO59zTTF06.html</a></p>
-<p>如何使用Tensorflow实现快速风格迁移？</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a425f4818b1.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>风格迁移（Style Transfer）是深度学习众多应用中非常有趣的一种，如图，我们可以使用这种方法把一张图片的风格“迁移”到另一张图片上，但原始的风格迁移的速度是非常慢的。在GPU上，生成一张图片都需要10分钟左右，而如果只使用CPU而不使用GPU运行程序，甚至需要几个小时。这个时间还会随着图片尺寸的增大而迅速增大，那么能否实现使用Tensorflow实现快速风格迁移？</p>
-<p>地址：<a href="http://www.leiphone.com/news/201701/tGlVRXWShwe7ffHW.html" target="_blank" rel="external">http://www.leiphone.com/news/201701/tGlVRXWShwe7ffHW.html</a></p>
-<p>运用TensorFlow处理简单的NLP问题</p>
-<p>当前互联网每天都在产生大量的文本和音频数据，通过挖掘这些数据，我们可以做一些更加便捷的应用，例如机器翻译、语音识别、词性标注以及信息检索等，这些都属于NLP范畴。而在NLP领域中，语言模型是最基本的一个环节，本文主要围绕语言模型展开，首先介绍其基本原理，进而引出词向量(word2vec)、循环神经网络(RNN)、长短时记忆网络(LSTM)等深度学习相关模型，并详细介绍如何利用 TensorFlow 实现上述模型。</p>
-<p>地址：<a href="http://blog.csdn.net/frankiegu/article/details/52133763" target="_blank" rel="external">http://blog.csdn.net/frankiegu/article/details/52133763</a></p>
-<p>在TensorFlow中用深度度学习修复图像</p>
-<p>生活中经常会遇到图片缺失问题，设计师和摄影师用内容自动填补来补充图像中不想要的或缺失的部分，本文将介绍通过一个 DCGAN 用深度学习进行图像修复。</p>
-<p>地址：<a href="http://blog.csdn.net/whiteboy1999/article/details/53727376?locationNum=1&amp;fps=1" target="_blank" rel="external">http://blog.csdn.net/whiteboy1999/article/details/53727376?locationNum=1&amp;fps=1</a></p>
-<p>基于Tensorflow的CNN/CRF图像分割技术</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a54a6900cd3.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>本篇文章验证了卷积神经网络应用于图像分割领域时存在的一个问题——粗糙的分割结果。根据像素间交叉熵损失的定义，我们在简化的场景下进行了模型的训练，并使用后向传播来更新权重。我们使用条件随机场（CRFs）来解决分割结果粗糙的问题，并取得了很好的效果。</p>
-<p>地址：<a href="https://yq.aliyun.com/articles/67189?spm=5176.8067842.tagmain.47.W3YH1h" target="_blank" rel="external">https://yq.aliyun.com/articles/67189?spm=5176.8067842.tagmain.47.W3YH1h</a></p>
-<p>利用Docker和阿里云容器服务轻松搭建分布式TensorFlow训练集群</p>
-<p>由于在现实世界里，单机训练大型神经网络的速度非常缓慢，这就需要运行分布式TensorFlow集群并行化的训练模型。但是TensorFlow本身只是计算框架，要将其应用在生产环境，还是需要集群管理工具的资源调度，监控以及生命周期管理等能力。</p>
-<p>本文将分两个部分介绍如何在阿里云容器服务上玩转TensorFlow训练集群。</p>
-<p>第一部分：<a href="https://yq.aliyun.com/articles/68337?spm=5176.100239.blogcont60894.15.tOeTKV" target="_blank" rel="external">https://yq.aliyun.com/articles/68337?spm=5176.100239.blogcont60894.15.tOeTKV</a></p>
-<p>第二部分：<a href="https://yq.aliyun.com/articles/60894?spm=5176.8067842.tagmain.29.W3YH1h" target="_blank" rel="external">https://yq.aliyun.com/articles/60894?spm=5176.8067842.tagmain.29.W3YH1h</a></p>
-<p>雷锋网原创文章，未经授权禁止转载。详情见转载须知。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.leiphone.com/news/201702/pwAazPPM6idKOeSZ.html&quot;&gt;作者：AI研习社&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;通过一些TensorFlow实际应用，让大家对TensorFlow有理性和感性的双层认知。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;随着谷歌2015年发布开源人工系统TensorFlow，让本就如火如荼的深度学习再添一把火，截至现在，TensorFlow已经历了多个版本演进，功能不断完善，AI开发者也能灵活自如的运用TensorFlow解决一些实际问题，下面雷锋网(公众号：雷锋网)会对一些比较实用的TensorFlow应用做相关整理，让大家对TensorFlow有理性和感性的双层认知。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tensorflow 的入门与安装</title>
-    <link href="http://ipcreator.me/2017/02/17/Program/TensorFlow/setup-of-tensorflow/"/>
-    <id>http://ipcreator.me/2017/02/17/Program/TensorFlow/setup-of-tensorflow/</id>
-    <published>2017-02-17T01:56:06.000Z</published>
-    <updated>2017-02-17T01:59:11.229Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.leiphone.com/news/201702/I9mcLjB6pKjTf1Or.html" target="_blank" rel="external">作者：AI研习社</a></p>
-<blockquote>
-<p><strong>作为AI 领域最受关注和使用率最高的开源框架之一，TensorFlow 究竟是如何安装的呢？这篇汇总资料你不得不看！</strong></p>
-</blockquote>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/58a2d3a8ba7be.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>自2015年11月发布以来，谷歌旗下的机器学习开源框架TensorFlow已经在图像识别，大数据分析，语音识别和语义理解，机器翻译等各个领域得到了广泛应用，同时也得到了业内人士的普遍认可，成为了目前最受关注和使用率最高的开源框架之一。</p>
-<p>本文将重点整理TensorFlow框架的入门和安装教程。更多关于TensorFlow的深入介绍、应用项目以及各机器学习开源框架之间的对比等内容，请见雷锋网(公众号：雷锋网)的系列文章。</p>
-  <a id="more"></a>
-<p>下面是本文整理的资料内容：</p>
-<p>在安装之前，这里先列出一些对TensorFlow给出大略介绍的文章，其中包括一些重要的概念解释，TensorFlow的具体含义和优点，以及TensorFlow的基本工作原理等。</p>
-<ol>
-<li><p>《TensorFlow极速入门》<br>链接：<a href="http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html" target="_blank" rel="external">http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html</a><br>本文介绍了 graph 与 session 等基本组件，解释了 rank 和 shape 等基础数据结构概念，讲解了一些 variable 需要注意的地方并介绍了 placeholders 与 feed_dict 。最终以一个手写数字识别的实例将这些点串起来进行了具体说明。</p>
-</li>
-<li><p>《TensorFlow学习笔记1：入门》<br>链接：<a href="http://www.jeyzhang.com/tensorflow-learning-notes.html" target="_blank" rel="external">http://www.jeyzhang.com/tensorflow-learning-notes.html</a><br>本文与上一篇的行文思路基本一致，首先概括了TensorFlow的特性，然后介绍了graph、session、variable 等基本概念的含义，以具体代码的形式针对每个概念给出了进一步的解释。最后通过手写数字识别的实例将这些点串起来进行了具体说明。<br>需要指出的是，两篇文章覆盖的基础概念不尽相同，并且举例用的代码也不一样。</p>
-</li>
-<li><p>《TensorFlow入门》<br>链接：<a href="http://www.jianshu.com/p/6766fbcd43b9#" target="_blank" rel="external">http://www.jianshu.com/p/6766fbcd43b9#</a><br>与上面两篇不同，本文简单介绍了 TensorFlow 的含义、优点、安装和基本工作原理之后，直接通过代码示例的方式讲解了 TensorFlow 的简单用法，包括生成三维数据，然后用一个平面拟合它，以及通过 variable 实现一个简单的计数器等。</p>
-</li>
-</ol>
-<p>值得一提的是，以上第二和第三篇分别来自两个系列文章，这两个系列也都是关于 TensorFlow 入门和实践的优秀博客。第二篇的后续文章讲述了卷积神经网络（CNN）模型构建，以及利用 TensorFlow 生成词向量 (Word Embedding) 的具体过程。第三篇则实际上是基于斯坦福大学基于深度学习的自然语言处理课程的学习笔记，该系列其他的文章还讲述了循环神经网络（RNN）和 word2vec 模型等更深入的知识，感兴趣的读者可以从文章的作者页找到更多文章。</p>
-<p>上述文章都更倾向于 TensorFlow 的简单介绍了基础用法，但对于TensorFlow具体安装过程的讲述则不够细致。因此这里专门针对TensorFlow的安装过程推荐一篇教程。</p>
-<ol>
-<li>《真正从零开始，TensorFlow详细安装入门图文教程！》<br>链接：<a href="http://www.leiphone.com/news/201606/ORlQ7uK3TIW8xVGF.html" target="_blank" rel="external">http://www.leiphone.com/news/201606/ORlQ7uK3TIW8xVGF.html</a><br>上文来自雷锋网小编的亲身实践，真正做到了从零开始，详细介绍了在Linux环境下如何通过pip命令安装TensorFlow框架的完整流程，以及面对一些常见问题的处理办法。值得一提的是，本文在讲解完框架安装之后，还针对Komodo开发环境进行了简单介绍。</li>
-</ol>
-<p>经过了以上来自民间的实践教程之后，相信各位读者对TensorFlow的大致情况和具体安装方法已经有了自己的理解。下面对于那些想要更全面和深入地了解TensorFlow的读者，我们推荐几个官方的教程。</p>
-<ol>
-<li><p>谷歌官方入门教程<br>链接：<a href="https://www.tensorflow.org/get_started/" target="_blank" rel="external">https://www.tensorflow.org/get_started/</a></p>
-</li>
-<li><p>谷歌教程翻译<br><a href="https://github.com/jikexueyuanwiki/tensorflow-zh" target="_blank" rel="external">https://github.com/jikexueyuanwiki/tensorflow-zh</a></p>
-</li>
-</ol>
-<p>这里谷歌给出的入门教程内容十分丰富，除了最基本的安装、名词解释和代码示例之外，还给出了 API 接口的详细解释和说明。但考虑到内容全是英文，因此雷锋网在这里给出了国内志愿者对谷歌内容的中文翻译版，可以为那些英文不好的读者提供参考。</p>
-<ol>
-<li>TensorFlow中文社区<br><a href="http://www.tensorfly.cn/" target="_blank" rel="external">http://www.tensorfly.cn/</a><br>最后我们在这里推荐一个 TensorFlow 的中文社区，该网站几乎可以认为是 TensorFlow 的中文官网，除了上述谷歌官方教程的中文翻译之外，该网站还包括进阶指南、API中文手册、精华文章和TF社区等诸多板块。</li>
-</ol>
-<p>雷锋网版权文章，未经授权禁止转载。详情见转载须知。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.leiphone.com/news/201702/I9mcLjB6pKjTf1Or.html&quot;&gt;作者：AI研习社&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;作为AI 领域最受关注和使用率最高的开源框架之一，TensorFlow 究竟是如何安装的呢？这篇汇总资料你不得不看！&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;http://static.leiphone.com/uploads/new/article/740_740/201702/58a2d3a8ba7be.jpg?imageMogr2/format/jpg/quality/90&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;自2015年11月发布以来，谷歌旗下的机器学习开源框架TensorFlow已经在图像识别，大数据分析，语音识别和语义理解，机器翻译等各个领域得到了广泛应用，同时也得到了业内人士的普遍认可，成为了目前最受关注和使用率最高的开源框架之一。&lt;/p&gt;
-&lt;p&gt;本文将重点整理TensorFlow框架的入门和安装教程。更多关于TensorFlow的深入介绍、应用项目以及各机器学习开源框架之间的对比等内容，请见雷锋网(公众号：雷锋网)的系列文章。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Tensorflow" scheme="http://ipcreator.me/tags/Tensorflow/"/>
     
   </entry>
   
