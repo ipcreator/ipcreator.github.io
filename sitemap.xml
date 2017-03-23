@@ -2,9 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/03/23/Program/TensorFlow/ai-chips/</loc>
+    
+    <lastmod>2017-03-23T14:16:49.879Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/22/MyView/English/love-words/</loc>
     
-    <lastmod>2017-03-23T09:21:49.685Z</lastmod>
+    <lastmod>2017-03-23T14:07:57.246Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/23/Program/Windows/ic-chip/</loc>
+    
+    <lastmod>2017-03-23T14:04:34.931Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/23/Program/Java/design-pattern/</loc>
+    
+    <lastmod>2017-03-23T11:57:16.194Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
+    
+    <lastmod>2017-03-23T11:18:01.839Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/08/Program/Java/java-trouble-solver/</loc>
+    
+    <lastmod>2017-03-23T11:02:51.193Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
+    
+    <lastmod>2017-03-23T10:00:16.388Z</lastmod>
     
   </url>
   
@@ -124,13 +166,6 @@
     <loc>http://ipcreator.me/2017/03/22/MyShare/learning-habits/</loc>
     
     <lastmod>2017-03-22T08:28:16.924Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
-    
-    <lastmod>2017-03-22T04:14:48.400Z</lastmod>
     
   </url>
   
@@ -261,13 +296,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
-    
-    <lastmod>2017-03-15T03:06:19.325Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/03/12/Program/Android/best-practice-of-android-dev/</loc>
     
     <lastmod>2017-03-14T12:51:22.274Z</lastmod>
@@ -355,13 +383,6 @@
     <loc>http://ipcreator.me/2017/03/11/Program/Android/MyApp/bmi-app/</loc>
     
     <lastmod>2017-03-11T14:45:35.207Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/08/Program/Java/java-trouble-solver/</loc>
-    
-    <lastmod>2017-03-10T14:16:54.288Z</lastmod>
     
   </url>
   
@@ -898,6 +919,13 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
@@ -906,13 +934,6 @@
   
   <url>
     <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -933,6 +954,13 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
@@ -947,13 +975,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
@@ -961,14 +982,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/Python/tools-of-python/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     

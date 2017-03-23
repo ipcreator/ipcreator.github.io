@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="咖啡需要慢慢品，Java也如此…">
 <meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/JAVA.jpg">
-<meta property="og:updated_time" content="2017-03-10T14:16:54.288Z">
+<meta property="og:updated_time" content="2017-03-23T11:02:51.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java tips">
 <meta name="twitter:description" content="咖啡需要慢慢品，Java也如此…">
@@ -384,36 +384,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time</span>
-                
-                <span title="Reading time">
-                  
-                </span>
-              
-            </div>
-          
 
           
 
@@ -431,6 +401,22 @@
         <p><img src="http://om8nmvpn9.bkt.clouddn.com/JAVA.jpg" alt=""></p>
 <p>咖啡需要慢慢品，Java也如此…</p>
  <a id="more"></a>
+<h2 id="Java中字符串中子串的查找共有四种方法-indexof"><a href="#Java中字符串中子串的查找共有四种方法-indexof" class="headerlink" title="Java中字符串中子串的查找共有四种方法(indexof())"></a><a href="http://www.cnblogs.com/gzggyy/archive/2013/06/21/3148610.html" target="_blank" rel="external">Java中字符串中子串的查找共有四种方法(indexof())</a></h2><p> Java中字符串中子串的查找共有四种方法，如下：<br>1、int indexOf(String str) ：返回第一次出现的指定子字符串在此字符串中的索引。<br>2、int indexOf(String str, int startIndex)：从指定的索引处开始，返回第一次出现的指定子字符串在此字符串中的索引。<br>3、int lastIndexOf(String str) ：返回在此字符串中最右边出现的指定子字符串的索引。<br>4、int lastIndexOf(String str, int startIndex) ：从指定的索引处开始向后搜索，返回在此字符串中最后一次出现的指定子字符串的索引。</p>
+<p>indexof()用法说明<br>indexof()</p>
+<p>返回 String 对象内第一次出现子字符串的字符位置。</p>
+<p>string.indexOf(subString[, startIndex])</p>
+<p>参数<br>string</p>
+<p>必选项。String 对象或文字。</p>
+<p>subString 必选项。</p>
+<p>要在 String 对象中查找的子字符串。</p>
+<p>starIndex 可选项。</p>
+<p>该整数值指出在 String 对象内开始查找的索引。如果省略，则从字符串的开始处查找。</p>
+<p>说明<br>indexOf 方法返回一个整数值，指出 String 对象内子字符串的开始位置。如果没有找到子字符串，则返回-1。</p>
+<p>如果 startindex 是负数，则 startindex 被当作零。如果它比最大的字符位置索引还大，则它被当作最大的可能索引。</p>
+<p>从左向右执行查找。否则，该方法与 lastIndexOf 相同。</p>
+<p>示例<br>下面的示例说明了 indexOf 方法的用法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function IndexDemo(str2)&#123;</div><div class="line">var str1 = &quot;BABEBIBOBUBABEBIBOBU&quot;</div><div class="line">var s = str1.indexOf(str2);</div><div class="line">return(s);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public class FirstDemo &#123;</div><div class="line"></div><div class="line">  /**</div><div class="line">    *API中String的常用方法</div><div class="line">    */</div><div class="line">  // 查找指定字符串是否存在</div><div class="line">  public static void main(String[] args) &#123;</div><div class="line">    String str1 = &quot;abcdefghijklmnabc&quot;;</div><div class="line">    // 从头开始查找是否存在指定的字符</div><div class="line">    System.out.println(str1.indexOf(&quot;c&quot;));</div><div class="line">    // 从第四个字符位置开始往后继续查找</div><div class="line">    System.out.println(str1.indexOf(&quot;c&quot;, 3));</div><div class="line">    //若指定字符串中没有该字符则系统返回-1</div><div class="line">    System.out.println(str1.indexOf(&quot;x&quot;));</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
 <h2 id="Java字符串验证"><a href="#Java字符串验证" class="headerlink" title="Java字符串验证"></a>Java字符串验证</h2><p><a href="http://www.cnblogs.com/lbangel/p/3247440.html" target="_blank" rel="external">java常见验证邮箱、电话号码、日期等格式</a></p>
 <h2 id="Java字符串操作"><a href="#Java字符串操作" class="headerlink" title="Java字符串操作"></a>Java字符串操作</h2><p><a href="http://www.cnblogs.com/freeabyss/archive/2013/05/15/3187057.html" target="_blank" rel="external">Java 字符串常用操作（String类）</a><br><a href="http://decentway.iteye.com/blog/1336904" target="_blank" rel="external">java字符串处理（分割截取替换等）</a><br><a href="http://mxdxm.iteye.com/blog/1071208" target="_blank" rel="external">java中去掉字符串中间的空格</a></p>
 <h2 id="去空格"><a href="#去空格" class="headerlink" title="去空格"></a>去空格</h2><p> 比如 时间字符串，去掉‘-’，‘：’，与空格<br>  String x = “2008-09-08 11:12:23”;<br>  x=x.replace(‘-‘, ‘ ‘).replace(‘:’, ‘ ‘).replaceAll(“ “,””);</p>
@@ -678,7 +664,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">176</span>
+                <span class="site-state-item-count">179</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -700,7 +686,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -819,7 +805,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java字符串验证"><span class="nav-number">1.</span> <span class="nav-text">Java字符串验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java字符串操作"><span class="nav-number">2.</span> <span class="nav-text">Java字符串操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去空格"><span class="nav-number">3.</span> <span class="nav-text">去空格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用正则表达式"><span class="nav-number">4.</span> <span class="nav-text">用正则表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java核心技术点之注解"><span class="nav-number">5.</span> <span class="nav-text">Java核心技术点之注解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Digester解析xml文件"><span class="nav-number">6.</span> <span class="nav-text">Digester解析xml文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中static作用及用法详解"><span class="nav-number">7.</span> <span class="nav-text">Java中static作用及用法详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static表示不要实例化就可以使用"><span class="nav-number">8.</span> <span class="nav-text">static表示不要实例化就可以使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static和final一块用表示什么"><span class="nav-number">9.</span> <span class="nav-text">static和final一块用表示什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">10.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深入理解Java中的final关键字"><span class="nav-number">11.</span> <span class="nav-text">深入理解Java中的final关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#final关键字的含义"><span class="nav-number">11.1.</span> <span class="nav-text">final关键字的含义?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是final变量？"><span class="nav-number">11.2.</span> <span class="nav-text">什么是final变量？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是final方法"><span class="nav-number">11.3.</span> <span class="nav-text">什么是final方法?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是final类？"><span class="nav-number">11.4.</span> <span class="nav-text">什么是final类？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final关键字的好处"><span class="nav-number">11.5.</span> <span class="nav-text">final关键字的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不可变类"><span class="nav-number">11.6.</span> <span class="nav-text">不可变类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于final的重要知识点"><span class="nav-number">11.7.</span> <span class="nav-text">关于final的重要知识点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名类"><span class="nav-number">12.</span> <span class="nav-text">匿名类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">12.1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用的形参为何要为final"><span class="nav-number">12.2.</span> <span class="nav-text">使用的形参为何要为final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名内部类初始化"><span class="nav-number">12.3.</span> <span class="nav-text">匿名内部类初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中匿名类的两种实现方式"><span class="nav-number">13.</span> <span class="nav-text">Java中匿名类的两种实现方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中字符串中子串的查找共有四种方法-indexof"><span class="nav-number">1.</span> <span class="nav-text">Java中字符串中子串的查找共有四种方法(indexof())</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java字符串验证"><span class="nav-number">2.</span> <span class="nav-text">Java字符串验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java字符串操作"><span class="nav-number">3.</span> <span class="nav-text">Java字符串操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去空格"><span class="nav-number">4.</span> <span class="nav-text">去空格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用正则表达式"><span class="nav-number">5.</span> <span class="nav-text">用正则表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java核心技术点之注解"><span class="nav-number">6.</span> <span class="nav-text">Java核心技术点之注解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Digester解析xml文件"><span class="nav-number">7.</span> <span class="nav-text">Digester解析xml文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中static作用及用法详解"><span class="nav-number">8.</span> <span class="nav-text">Java中static作用及用法详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static表示不要实例化就可以使用"><span class="nav-number">9.</span> <span class="nav-text">static表示不要实例化就可以使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static和final一块用表示什么"><span class="nav-number">10.</span> <span class="nav-text">static和final一块用表示什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">11.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深入理解Java中的final关键字"><span class="nav-number">12.</span> <span class="nav-text">深入理解Java中的final关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#final关键字的含义"><span class="nav-number">12.1.</span> <span class="nav-text">final关键字的含义?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是final变量？"><span class="nav-number">12.2.</span> <span class="nav-text">什么是final变量？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是final方法"><span class="nav-number">12.3.</span> <span class="nav-text">什么是final方法?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是final类？"><span class="nav-number">12.4.</span> <span class="nav-text">什么是final类？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final关键字的好处"><span class="nav-number">12.5.</span> <span class="nav-text">final关键字的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不可变类"><span class="nav-number">12.6.</span> <span class="nav-text">不可变类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于final的重要知识点"><span class="nav-number">12.7.</span> <span class="nav-text">关于final的重要知识点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名类"><span class="nav-number">13.</span> <span class="nav-text">匿名类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">13.1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用的形参为何要为final"><span class="nav-number">13.2.</span> <span class="nav-text">使用的形参为何要为final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名内部类初始化"><span class="nav-number">13.3.</span> <span class="nav-text">匿名内部类初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中匿名类的两种实现方式"><span class="nav-number">14.</span> <span class="nav-text">Java中匿名类的两种实现方式</span></a></li></ol></div>
             
 
           </div>
