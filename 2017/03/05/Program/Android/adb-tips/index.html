@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="图形化界面太低效，还存在DDMS连接不稳定的隐患，尽量通过命令行方式高效解决">
 <meta property="og:image" content="https://github.com/ipcreator/awesome-adb/raw/master/assets/title.png">
-<meta property="og:updated_time" content="2017-03-10T01:06:50.446Z">
+<meta property="og:updated_time" content="2017-03-24T04:03:14.411Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Debug Bridge tips">
 <meta name="twitter:description" content="图形化界面太低效，还存在DDMS连接不稳定的隐患，尽量通过命令行方式高效解决">
@@ -447,6 +447,7 @@
 <p>关键点：使用 “.”是可以一次性 push一个文件目录的。<br>如果AdbTest有子目录会如何？如果子目录中有文件，则会将子目录和其中的文件一起推送过去，如果子目录是空的，则会跳过</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb push comment12031715.txt commenttest.txt userLibrary.dic /sdcard/Download</div></pre></td></tr></table></figure>
 <p>adb 一次性推送多个文件，如果目标文件夹中存在同名文件，会如何？默认是直接覆盖的，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">C:\Users\user\Desktop&gt;adb push smile.lrc /storage/sdcard/Download</div><div class="line">smile.lrc: 1 file pushed. 0.0 MB/s (1061 bytes in 0.100s)</div><div class="line"></div><div class="line">C:\Users\user\Desktop&gt;adb push smile.jpg /storage/sdcard/Download</div><div class="line">smile.jpg: 1 file pushed. 0.6 MB/s (51419 bytes in 0.088s)</div></pre></td></tr></table></figure>
 <h2 id="遇到读写权限问题的解决办法"><a href="#遇到读写权限问题的解决办法" class="headerlink" title="遇到读写权限问题的解决办法"></a>遇到读写权限问题的解决办法</h2><p>在shell命令行中输入：adb root<br>切换到root用户<br>然后执行如下命令：（注意 /表示的是根目录，因此这个不仅仅是对sdcard，其他文件也可以读写。rw表示读写权限，mount重挂载文件系统）<br>adb shell mount -o remount rw / , 修改系统读写权限</p>
 <p>注意系统文件在push后需要修改权限，以framework-res.apk为例，输入：adb shell chmod 644 /system/framework/framework-res.apk回车，然后设备重启下就替换完成了。</p>
 <h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><p>Android 系统的日志分为两部分，底层的 Linux 内核日志输出到 /proc/kmsg，Android 的日志输出到 /dev/log。</p>
@@ -689,7 +690,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">179</span>
+                <span class="site-state-item-count">181</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

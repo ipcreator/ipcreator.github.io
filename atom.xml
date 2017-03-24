@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-03-23T14:16:49.879Z</updated>
+  <updated>2017-03-24T14:56:25.050Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -14,6 +14,174 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android最佳性能实践</title>
+    <link href="http://ipcreator.me/2017/03/24/Program/Android/optimization-of-android/"/>
+    <id>http://ipcreator.me/2017/03/24/Program/Android/optimization-of-android/</id>
+    <published>2017-03-24T14:55:06.000Z</published>
+    <updated>2017-03-24T14:56:25.050Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://img.blog.csdn.net/20161124140922633" alt=""><br><a href="http://blog.csdn.net/guolin_blog" target="_blank" rel="external">作者：郭霖</a></p>
+<p><a href="http://blog.csdn.net/guolin_blog/article/details/42238627" target="_blank" rel="external">Android最佳性能实践(一)——合理管理内存</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/42238633" target="_blank" rel="external">Android最佳性能实践(二)——分析内存的使用情况</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/42318689" target="_blank" rel="external">Android最佳性能实践(三)——高性能编码优化</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/43376527" target="_blank" rel="external">Android最佳性能实践(四)——布局优化技巧</a></p>
+<a id="more"></a>
+<h2 id="Android最佳性能实践-一-——合理管理内存"><a href="#Android最佳性能实践-一-——合理管理内存" class="headerlink" title="Android最佳性能实践(一)——合理管理内存"></a>Android最佳性能实践(一)——合理管理内存</h2><p>有不少朋友都问过我，怎样才能写出高性能的应用程序，如何避免程序出现OOM，或者当程序内存占用过高的时候该怎么样去排查。确实，一个优秀的应用程序，不仅仅要功能完成得好，性能问题也应该处理得恰到好处。为此，我也是阅读了不少Android官方给出的高性能编程建议，那么从本篇文章开始，我就准备开始写一个全新系列的博文，来把这些建议进行整理和分析，帮助大家能够写出更加出色的应用程序。</p>
+<p>注意本系列文章的内容基本源于Android Doc，如果想要阅读更加详细的关于性能方面的资料，可以直接去阅读Android官方文档。</p>
+<p>内存(RAM)对于任何一个软件开发环境都是种非常珍贵的资源，而对于移动操作系统来讲的话，则会显得更加珍贵，因为手机的硬件条件相对于PC毕竟是比较落后的。尽管Android系统的虚拟机拥有自动回收垃圾的机制，但这并不代表我们就可以忽视应该在什么时候分配和释放内存。</p>
+<p>为了使垃圾回收器可以正常释放程序所占用的内存，在编写代码的时候就一定要注意尽量避免出现内存泄漏的情况（通常都是由于全局成员变量持有对象引用所导致的），并且在适当的时候去释放对象引用。对于大多数的应用程序而言，后面其它的事情就可以都交给垃圾回收器去完成了，如果一个对象的引用不再被其它对象所持有，那么系统就会将这个对象所分配的内存进行回收。</p>
+<p>我们在开发软件的时候应当自始至终都把内存的问题充分考虑进去，这样的话才能开发出更加高性能的软件。而内存问题也并不是无规律可行的，Android系统给我们提出了很多内存优化的建议技巧，只要按照这些技巧来编写程序，就可以让我们的程序在内存性能发面表现得相当不错，下面我们就来一一学习一下这些技巧。</p>
+<h3 id="节制地使用Service"><a href="#节制地使用Service" class="headerlink" title="节制地使用Service"></a>节制地使用Service</h3><p>如果应用程序当中需要使用Service来执行后台任务的话，请一定要注意只有当任务正在执行的时候才应该让Service运行起来。另外，当任务执行完之后去停止Service的时候，要小心Service停止失败导致内存泄漏的情况。</p>
+<p>当我们启动一个Service时，系统会倾向于将这个Service所依赖的进程进行保留，这样就会导致这个进程变得非常消耗内存。并且，系统可以在LRU cache当中缓存的进程数量也会减少，导致切换应用程序的时候耗费更多性能。严重的话，甚至有可能会导致崩溃，因为系统在内存非常吃紧的时候可能已无法维护所有正在运行的Service所依赖的进程了。</p>
+<p>为了能够控制Service的生命周期，Android官方推荐的最佳解决方案就是使用IntentService，这种Service的最大特点就是当后台任务执行结束后会自动停止，从而极大程度上避免了Service内存泄漏的可能性。关于IntentService更加详细的用法讲解，可以参考《第一行代码——Android》的9.5.2节。</p>
+<p>让一个Service在后台一直保持运行，即使它并不执行任何工作，这是编写Android程序时最糟糕的做法之一。所以Android官方极度建议开发人员们不要过于贪婪，让Service在后台一直运行，这不仅可能会导致手机和程序的性能非常低下，而且被用户发现了之后也有可能直接导致我们的软件被卸载（我个人就会这么做）。</p>
+<h3 id="当界面不可见时释放内存"><a href="#当界面不可见时释放内存" class="headerlink" title="当界面不可见时释放内存"></a>当界面不可见时释放内存</h3><p>当用户打开了另外一个程序，我们的程序界面已经不再可见的时候，我们应当将所有和界面相关的资源进行释放。在这种场景下释放资源可以让系统缓存后台进程的能力显著增加，因此也会让用户体验变得更好。</p>
+<p>那么我们如何才能知道程序界面是不是已经不可见了呢？其实很简单，只需要在Activity中重写onTrimMemory()方法，然后在这个方法中监听TRIM_MEMORY_UI_HIDDEN这个级别，一旦触发了之后就说明用户已经离开了我们的程序，那么此时就可以进行资源释放操作了，如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@Override  </div><div class="line">public void onTrimMemory(int level) &#123;  </div><div class="line">    super.onTrimMemory(level);  </div><div class="line">    switch (level) &#123;  </div><div class="line">    case TRIM_MEMORY_UI_HIDDEN:  </div><div class="line">        // 进行资源释放操作  </div><div class="line">        break;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>注意onTrimMemory()方法中的TRIM_MEMORY_UI_HIDDEN回调只有当我们程序中的所有UI组件全部不可见的时候才会触发，这和onStop()方法还是有很大区别的，因为onStop()方法只是当一个Activity完全不可见的时候就会调用，比如说用户打开了我们程序中的另一个Activity。因此，我们可以在onStop()方法中去释放一些Activity相关的资源，比如说取消网络连接或者注销广播接收器等，但是像UI相关的资源应该一直要等到onTrimMemory(TRIM_MEMORY_UI_HIDDEN)这个回调之后才去释放，这样可以保证如果用户只是从我们程序的一个Activity回到了另外一个Activity，界面相关的资源都不需要重新加载，从而提升响应速度。</p>
+<h3 id="当内存紧张时释放内存"><a href="#当内存紧张时释放内存" class="headerlink" title="当内存紧张时释放内存"></a>当内存紧张时释放内存</h3><p>除了刚才讲的TRIM_MEMORY_UI_HIDDEN这个回调，onTrimMemory()方法还有很多种其它类型的回调，可以在手机内存降低的时候及时通知我们。我们应该根据回调中传入的级别来去决定如何释放应用程序的资源：<br>TRIM_MEMORY_RUNNING_MODERATE    表示应用程序正常运行，并且不会被杀掉。但是目前手机的内存已经有点低了，系统可能会开始根据LRU缓存规则来去杀死进程了。<br>TRIM_MEMORY_RUNNING_LOW    表示应用程序正常运行，并且不会被杀掉。但是目前手机的内存已经非常低了，我们应该去释放掉一些不必要的资源以提升系统的性能，同时这也会直接影响到我们应用程序的性能。<br>TRIM_MEMORY_RUNNING_CRITICAL    表示应用程序仍然正常运行，但是系统已经根据LRU缓存规则杀掉了大部分缓存的进程了。这个时候我们应当尽可能地去释放任何不必要的资源，不然的话系统可能会继续杀掉所有缓存中的进程，并且开始杀掉一些本来应当保持运行的进程，比如说后台运行的服务。<br>以上是当我们的应用程序正在运行时的回调，那么如果我们的程序目前是被缓存的，则会收到以下几种类型的回调：<br>TRIM_MEMORY_BACKGROUND    表示手机目前内存已经很低了，系统准备开始根据LRU缓存来清理进程。这个时候我们的程序在LRU缓存列表的最近位置，是不太可能被清理掉的，但这时去释放掉一些比较容易恢复的资源能够让手机的内存变得比较充足，从而让我们的程序更长时间地保留在缓存当中，这样当用户返回我们的程序时会感觉非常顺畅，而不是经历了一次重新启动的过程。<br>TRIM_MEMORY_MODERATE    表示手机目前内存已经很低了，并且我们的程序处于LRU缓存列表的中间位置，如果手机内存还得不到进一步释放的话，那么我们的程序就有被系统杀掉的风险了。<br>TRIM_MEMORY_COMPLETE    表示手机目前内存已经很低了，并且我们的程序处于LRU缓存列表的最边缘位置，系统会最优先考虑杀掉我们的应用程序，在这个时候应当尽可能地把一切可以释放的东西都进行释放。</p>
+<h3 id="避免在Bitmap上浪费内存"><a href="#避免在Bitmap上浪费内存" class="headerlink" title="避免在Bitmap上浪费内存"></a>避免在Bitmap上浪费内存</h3><p>当我们读取一个Bitmap图片的时候，有一点一定要注意，就是千万不要去加载不需要的分辨率。在一个很小的ImageView上显示一张高分辨率的图片不会带来任何视觉上的好处，但却会占用我们相当多宝贵的内存。需要仅记的一点是，将一张图片解析成一个Bitmap对象时所占用的内存并不是这个图片在硬盘中的大小，可能一张图片只有100k你觉得它并不大，但是读取到内存当中是按照像素点来算的，比如这张图片是1500<em>1000像素，使用的ARGB_8888颜色类型，那么每个像素点就会占用4个字节，总内存就是1500</em>1000*4字节，也就是5.7M，这个数据看起来就比较恐怖了。</p>
+<p>至于如何去压缩图片，以及更多在图片方面节省内存的技术，大家可以去参考我之前写的一篇博客 Android高效加载大图、多图解决方案，有效避免程序OOM 。</p>
+<h3 id="使用优化过的数据集合"><a href="#使用优化过的数据集合" class="headerlink" title="使用优化过的数据集合"></a>使用优化过的数据集合</h3><p>Android API当中提供了一些优化过后的数据集合工具类，如SparseArray，SparseBooleanArray，以及LongSparseArray等，使用这些API可以让我们的程序更加高效。传统Java API中提供的HashMap工具类会相对比较低效，因为它需要为每一个键值对都提供一个对象入口，而SparseArray就避免掉了基本数据类型转换成对象数据类型的时间。</p>
+<h3 id="知晓内存的开支情况"><a href="#知晓内存的开支情况" class="headerlink" title="知晓内存的开支情况"></a>知晓内存的开支情况</h3><p>我们还应当清楚我们所使用语言的内存开支和消耗情况，并且在整个软件的设计和开发当中都应该将这些信息考虑在内。可能有一些看起来无关痛痒的写法，结果却会导致很大一部分的内存开支，例如：<br>使用枚举通常会比使用静态常量要消耗两倍以上的内存，在Android开发当中我们应当尽可能地不使用枚举。<br>任何一个Java类，包括内部类、匿名类，都要占用大概500字节的内存空间。<br>任何一个类的实例要消耗12-16字节的内存开支，因此频繁创建实例也是会一定程序上影响内存的。<br>在使用HashMap时，即使你只设置了一个基本数据类型的键，比如说int，但是也会按照对象的大小来分配内存，大概是32字节，而不是4字节。因此最好的办法就是像上面所说的一样，使用优化过的数据集合。</p>
+<h3 id="谨慎使用抽象编程"><a href="#谨慎使用抽象编程" class="headerlink" title="谨慎使用抽象编程"></a>谨慎使用抽象编程</h3><p>许多程序员都喜欢各种使用抽象来编程，认为这是一种很好的编程习惯。当然，这一点不可否认，因为的抽象的编程方法更加面向对象，而且在代码的维护和可扩展性方面都会有所提高。但是，在Android上使用抽象会带来额外的内存开支，因为抽象的编程方法需要编写额外的代码，虽然这些代码根本执行不到，但是却也要映射到内存当中，不仅占用了更多的内存，在执行效率方面也会有所降低。当然这里我并不是提倡大家完全不使用抽象编程，而是谨慎使用抽象编程，不要认为这是一种很酷的编程方式而去肆意使用它，只在你认为有必要的情况下才去使用。</p>
+<h3 id="尽量避免使用依赖注入框架"><a href="#尽量避免使用依赖注入框架" class="headerlink" title="尽量避免使用依赖注入框架"></a>尽量避免使用依赖注入框架</h3><p>现在有很多人都喜欢在Android工程当中使用依赖注入框架，比如说像Guice或者RoboGuice等，因为它们可以简化一些复杂的编码操作，比如可以将下面的一段代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">class AndroidWay extends Activity &#123;   </div><div class="line">    TextView name;   </div><div class="line">    ImageView thumbnail;   </div><div class="line">    LocationManager loc;   </div><div class="line">    Drawable icon;   </div><div class="line">    String myName;   </div><div class="line"></div><div class="line">    public void onCreate(Bundle savedInstanceState) &#123;   </div><div class="line">        super.onCreate(savedInstanceState);   </div><div class="line">        setContentView(R.layout.main);  </div><div class="line">        name      = (TextView) findViewById(R.id.name);   </div><div class="line">        thumbnail = (ImageView) findViewById(R.id.thumbnail);   </div><div class="line">        loc       = (LocationManager) getSystemService(Activity.LOCATION_SERVICE);   </div><div class="line">        icon      = getResources().getDrawable(R.drawable.icon);   </div><div class="line">        myName    = getString(R.string.app_name);   </div><div class="line">        name.setText( &quot;Hello, &quot; + myName );   </div><div class="line">    &#125;   </div><div class="line">&#125;   </div><div class="line">简化成这样的一种写法：</div><div class="line">[java] view plain copy 在CODE上查看代码片派生到我的代码片</div><div class="line">@ContentView(R.layout.main)  </div><div class="line">class RoboWay extends RoboActivity &#123;   </div><div class="line">    @InjectView(R.id.name)             TextView name;   </div><div class="line">    @InjectView(R.id.thumbnail)        ImageView thumbnail;   </div><div class="line">    @InjectResource(R.drawable.icon)   Drawable icon;   </div><div class="line">    @InjectResource(R.string.app_name) String myName;   </div><div class="line">    @Inject                            LocationManager loc;   </div><div class="line"></div><div class="line">    public void onCreate(Bundle savedInstanceState) &#123;   </div><div class="line">        super.onCreate(savedInstanceState);   </div><div class="line">        name.setText( &quot;Hello, &quot; + myName );   </div><div class="line">    &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>看上去确实十分诱人，我们甚至可以将findViewById()这一类的繁琐操作全部省去了。但是这些框架为了要搜寻代码中的注解，通常都需要经历较长的初始化过程，并且还可能将一些你用不到的对象也一并加载到内存当中。这些用不到的对象会一直占用着内存空间，可能要过很久之后才会得到释放，相较之下，也许多敲几行看似繁琐的代码才是更好的选择。</p>
+<h3 id="使用ProGuard简化代码"><a href="#使用ProGuard简化代码" class="headerlink" title="使用ProGuard简化代码"></a>使用ProGuard简化代码</h3><p>ProGuard相信大家都不会陌生，很多人都会使用这个工具来混淆代码，但是除了混淆之外，它还具有压缩和优化代码的功能。ProGuard会对我们的代码进行检索，删除一些无用的代码，并且会对类、字段、方法等进行重命名，重命名之后的类、字段和方法名都会比原来简短很多，这样的话也就对内存的占用变得更少了。</p>
+<h3 id="使用多个进程"><a href="#使用多个进程" class="headerlink" title="使用多个进程"></a>使用多个进程</h3><p>这个技巧其实并不是非常建议使用，但它确实是一种可以帮助我们节省和管理内存的高级技巧。如果你要使用它的话一定要谨慎使用，因为绝大多数的应用程序都不应该在多个进程当中运行的，一旦使用不当，它甚至会增加额外的内存而不是帮我们节省内存。这个技巧比较适用于那些需要在后台去完成一项独立的任务，和前台的功能是可以完全区分开的场景。</p>
+<p>这里举一个比较适合去使用多进程技巧的场景，比如说我们正在做一个音乐播放器软件，其中播放音乐的功能应该是一个独立的功能，它不需要和UI方面有任何关系，即使软件已经关闭了也应该可以正常播放音乐。如果此时我们只使用一个进程，那么即使用户关闭了软件，已经完全由Service来控制音乐播放了，系统仍然会将许多UI方面的内存进行保留。在这种场景下就非常适合使用两个进程，一个用于UI展示，另一个则用于在后台持续地播放音乐。</p>
+<p>想要实现多进程的功能也非常简单，只需要在AndroidManifest文件的应用程序组件中声明一个android:process属性就可以了，比如说我们希望播放音乐的Service可以运行在一个单独的进程当中，就可以这样写：</p>
+<pre><code>&lt;service android:name=&quot;.PlaybackService&quot;  
+         android:process=&quot;:background&quot; /&gt;
+</code></pre><p>这里指定的进程名是background，你也可以将它改成任意你喜欢的名字。需要注意的是，进程名的前面都应该加上一个冒号，表示该进程是一个当前应用程序的私有进程。</p>
+<p>遵循以上的所有编程建议，我们就可以让应用程序内存的使用变得更加合理化。但这只是第一步而已，为了要让程序拥有最佳性能，我们要学习的东西还有很多，下篇文章当中将会介绍如何分析内存的使用情况，感兴趣的朋友请继续阅读 Android最佳性能实践(二)——分析内存的使用情况 。</p>
+<h2 id="参考阅读"><a href="#参考阅读" class="headerlink" title="参考阅读"></a>参考阅读</h2><p><a href="http://blog.csdn.net/guolin_blog/article/details/42238627" target="_blank" rel="external">Android最佳性能实践(一)——合理管理内存</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/42238633" target="_blank" rel="external">Android最佳性能实践(二)——分析内存的使用情况</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/42318689" target="_blank" rel="external">Android最佳性能实践(三)——高性能编码优化</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/43376527" target="_blank" rel="external">Android最佳性能实践(四)——布局优化技巧</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20161124140922633&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog&quot;&gt;作者：郭霖&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/42238627&quot;&gt;Android最佳性能实践(一)——合理管理内存&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/42238633&quot;&gt;Android最佳性能实践(二)——分析内存的使用情况&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/42318689&quot;&gt;Android最佳性能实践(三)——高性能编码优化&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/43376527&quot;&gt;Android最佳性能实践(四)——布局优化技巧&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SmartMusicPlayer</title>
+    <link href="http://ipcreator.me/2017/03/24/Program/Android/MyApp/my-favor-music-player/"/>
+    <id>http://ipcreator.me/2017/03/24/Program/Android/MyApp/my-favor-music-player/</id>
+    <published>2017-03-24T13:48:06.000Z</published>
+    <updated>2017-03-24T14:45:46.369Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/Screenshot_1490356818.png" alt=""></p>
+<p>做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.</p>
+ <a id="more"></a>
+<h2 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h2><p>功能要求：一个窗口，一个列表，喜欢的歌曲，支持循环播放/进度拖动/歌词同步显示/动画/异步网络歌曲、图片及歌词下载；<br>应用场景：徒步、登山、坐享时使用。</p>
+<h2 id="设计及实现"><a href="#设计及实现" class="headerlink" title="设计及实现"></a>设计及实现</h2><h3 id="1-0版本"><a href="#1-0版本" class="headerlink" title="1.0版本"></a>1.0版本</h3><p><img src="http://om8nmvpn9.bkt.clouddn.com/music.png" alt=""></p>
+<h3 id="2-0版本"><a href="#2-0版本" class="headerlink" title="2.0版本"></a>2.0版本</h3><blockquote>
+<p>歌名应景：平和、坚持、创新</p>
+</blockquote>
+<h4 id="smooth"><a href="#smooth" class="headerlink" title="smooth"></a>smooth</h4><p><img src="http://om8nmvpn9.bkt.clouddn.com/Screenshot_1490356818.png" alt=""></p>
+<h4 id="baby-one-more-time"><a href="#baby-one-more-time" class="headerlink" title="baby one more time"></a>baby one more time</h4><p><img src="http://om8nmvpn9.bkt.clouddn.com/Screenshot_1490356849.png" alt=""></p>
+<h4 id="i-want-in-that-way"><a href="#i-want-in-that-way" class="headerlink" title="i want in that way"></a>i want in that way</h4><p><img src="http://om8nmvpn9.bkt.clouddn.com/Screenshot_1490356830.png" alt=""></p>
+<h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2><h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><p>扫描媒体库时，模拟器上文件少未出现异常，但由于真机文件较多，导致主线程阻塞，新增线程执行歌曲扫描。</p>
+<h3 id="运行时权限"><a href="#运行时权限" class="headerlink" title="运行时权限"></a>运行时权限</h3><p>采用获取并判断IMEI号是否为空或者全0来判断是否为模拟器环境，需要获取到READ_PHONE_STATE权限，运行时动态申请。</p>
+<h3 id="异步下载"><a href="#异步下载" class="headerlink" title="异步下载"></a>异步下载</h3><p>通过服务实现，下载完成后，发广播通知，并通过附加参数传递文件路径。</p>
+<h3 id="歌词解析"><a href="#歌词解析" class="headerlink" title="歌词解析"></a>歌词解析</h3><p>歌词文件格式不统一，需要多做兼容性测试，譬如一行有多个时间标签，再如标签中存在异常字符等。<br>另外，解析出来的歌词节点列表，需要基于时间点排序，<br>mediaplayer的进度值单位为毫秒，解析歌词时间时，尽量保持单位一致。</p>
+<h3 id="实时更新UI"><a href="#实时更新UI" class="headerlink" title="实时更新UI"></a>实时更新UI</h3><p>方法一：<br>Handle的post方法，在post的Runable的run方法中，使用postDelay方法再次post该Runable对象，在Runable中更新UI，达到实时更新UI的目的<br>方法二：<br>多开一个线程，线程写一个持续循环，每次进入循环内即post一次Runable，然后休眠1000ms，亦可做到实时更新UI</p>
+<h3 id="歌曲切换"><a href="#歌曲切换" class="headerlink" title="歌曲切换"></a>歌曲切换</h3><p>setDataSource()之前需要调用reSet()方法，才可以重新设置歌曲</p>
+<h3 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h3><p>歌词文件编码不一致导致，内部需要统一处理</p>
+<h3 id="属性动画"><a href="#属性动画" class="headerlink" title="属性动画"></a>属性动画</h3><p>界面动画不要太多，以免给用户造成眼花缭乱的不好体验</p>
+<h3 id="SeekBar"><a href="#SeekBar" class="headerlink" title="SeekBar"></a>SeekBar</h3><p>联动效果，进度/时间/歌词等要同步变动</p>
+<h3 id="控制逻辑"><a href="#控制逻辑" class="headerlink" title="控制逻辑"></a>控制逻辑</h3><p>响应点击播放/暂停/停止按钮时，要同步控制动画及各关联控件。</p>
+<h3 id="浮点运算"><a href="#浮点运算" class="headerlink" title="浮点运算"></a>浮点运算</h3><p>根据seekbar当前进度来计算提示时间的横坐标偏移量时，((double)curPos/(double)maxPos) * width</p>
+<h2 id="mediaplayer状态机"><a href="#mediaplayer状态机" class="headerlink" title="mediaplayer状态机"></a>mediaplayer状态机</h2><h3 id="状态1：Idel-空闲-状态"><a href="#状态1：Idel-空闲-状态" class="headerlink" title="状态1：Idel(空闲)状态"></a>状态1：Idel(空闲)状态</h3><p>当 mediaplayer创建或者执行reset()方法后处于这个状态。</p>
+<h3 id="状态2：Initialized-已初始化-状态"><a href="#状态2：Initialized-已初始化-状态" class="headerlink" title="状态2：Initialized(已初始化)状态"></a>状态2：Initialized(已初始化)状态</h3><p>当调用mediaplayer的setDataResource()方法给mediaplayer设置播放的数据源后，mediaplayer会处于该状态。</p>
+<h3 id="状态3：Prepared-准备就续-状态"><a href="#状态3：Prepared-准备就续-状态" class="headerlink" title="状态3：Prepared(准备就续)状态"></a>状态3：Prepared(准备就续)状态</h3><p>设置完数据源后，调用mediaplayer的prepare()方法，让mediaplayer准备播放。值得一提的是，这里除了prepare()方法，还有prepareAsnyc()方法，此方法是异步方法，一般用于网络视频的缓冲。当缓冲完毕后，就会触发准备完毕的事件。我们要做的就是监听该事件(OnPreparedListener)，当缓冲完成时，执行相应的操作。在此状态上，我们可以调用seekTo()方法定位视频，此方法不改变mediaplayer的状态；亦可调用stop()放弃视频播放，使mediaplayer处于Stopped状态。一般我们会在此状态上调用start()方法开始播放视频。</p>
+<h3 id="状态4：Started-开始-状态"><a href="#状态4：Started-开始-状态" class="headerlink" title="状态4：Started(开始)状态"></a>状态4：Started(开始)状态</h3><p>当处于Prepared状态、Paused状态和PlayebackCompeleted状态时，调用Started()方法即可进入该状态。在该状态中，mediaplayer开始播放视频，可以通过seekTo()方法和start()方法改变视频播放的进度，当Looping为真且播放完毕后，它会重新开始播放（即循环播放）；否则播放完毕后，会触发事件并调用OnCompletionaListener.OnCompletion()方法，进行特定操作，并进入PlaybackCompleted状态。在此状态中，亦可调用pause()方法或者stop()方法让视频暂停或停止，此时mediaplayer分别处于Stopped和Paused状态。</p>
+<h3 id="状态5：Stopped-停止-状态"><a href="#状态5：Stopped-停止-状态" class="headerlink" title="状态5：Stopped(停止)状态"></a>状态5：Stopped(停止)状态</h3><p>当 mediaplayer处于Prepared、Started、Paused、PlaybackCompleted状态时，调用stop()方法即可进入本状态。应特别注意的是，在本状态中，若想重新开始播放，不能直接调用start()方法，必须调用prepare()方法或prepareAsync()方法重新让mediaplayer处于Prepared状态方可调用start()方法播放视频。</p>
+<h3 id="状态6：Paused-暂停-状态"><a href="#状态6：Paused-暂停-状态" class="headerlink" title="状态6：Paused(暂停)状态"></a>状态6：Paused(暂停)状态</h3><p>当mediaplayer处于Started状态是，调用pause()方法即可进入本状态。在本状态里，可直接调用start()方法使，mediaplayer回到Started状态，亦可调用stop()方法停止视频播放，让播放器处于停止态。</p>
+<h3 id="状态7：PlaybackCompleted-播放完成-状态"><a href="#状态7：PlaybackCompleted-播放完成-状态" class="headerlink" title="状态7：PlaybackCompleted(播放完成)状态"></a>状态7：PlaybackCompleted(播放完成)状态</h3><p>当mediaplayer播放完成且Looping为假时即可进入本状态。在本状态可调用start()方法使mediaplayer回到Started状态（注意此时是从头开始播放）；亦可调用stop()方法使mediaplayer处于停止态，结束播放。</p>
+<h3 id="状态8：Error-错误-状态"><a href="#状态8：Error-错误-状态" class="headerlink" title="状态8：Error(错误)状态"></a>状态8：Error(错误)状态</h3><p>当mediaplayer出现错误时处于此状态。<br>调用release()方法即可释放此mediaplayer对象。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://www.runoob.com/w3cnote/android-tutorial-mediaplayer.html" target="_blank" rel="external">MediaPlayer播放音频与视频</a><br><a href="http://blog.csdn.net/huaxun66/article/details/53333747" target="_blank" rel="external">Android MediaPlayer和VideoView的使用</a><br><a href="http://blog.sina.com.cn/s/blog_53ad73d70101c6om.html" target="_blank" rel="external">Android Supported Media Formats（Android支持的媒体格式）</a><br><a href="http://blog.csdn.net/vicken520/article/details/8567640" target="_blank" rel="external">彻底解决android读取中文txt，lrc的乱码（自动判断文档类型并转码)</a><br><a href="http://www.cnblogs.com/wsine/p/5177372.html" target="_blank" rel="external">Android实现简单音乐播放器(MediaPlayer)</a><br><a href="http://blog.csdn.net/wwj_748/article/details/9256251" target="_blank" rel="external">Android应用–简、美音乐播放器原型放送</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/Screenshot_1490356818.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android属性动画完全解析</title>
+    <link href="http://ipcreator.me/2017/03/24/Program/Android/animation-of-android/"/>
+    <id>http://ipcreator.me/2017/03/24/Program/Android/animation-of-android/</id>
+    <published>2017-03-24T00:46:06.000Z</published>
+    <updated>2017-03-24T03:57:26.037Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://img.blog.csdn.net/20150504225554203" alt=""><br><a href="http://blog.csdn.net/guolin_blog" target="_blank" rel="external">作者：郭霖</a></p>
+<p>Android系统在一开始的时候就给我们提供了两种实现动画效果的方式，逐帧动画(frame-by-frame animation)和补间动画(tweened animation)。逐帧动画的工作原理很简单，其实就是将一个完整的动画拆分成一张张单独的图片，然后再将它们连贯起来进行播放，类似于动画片的工作原理。补间动画则是可以对View进行一系列的动画操作，包括淡入淡出、缩放、平移、旋转四种。</p>
+<p>然而自Android 3.0版本开始，系统给我们提供了一种全新的动画模式，属性动画(property animation)，它的功能非常强大，弥补了之前补间动画的一些缺陷，几乎是可以完全替代掉补间动画了。这篇文章的主题就是对Android属性动画进行一次完全解析。</p>
+   <a id="more"></a>
+<h2 id="为什么要引入属性动画？"><a href="#为什么要引入属性动画？" class="headerlink" title="为什么要引入属性动画？"></a>为什么要引入属性动画？</h2><p>   Android之前的补间动画机制其实还算是比较健全的，在android.view.animation包下面有好多的类可以供我们操作，来完成一系列的动画效果，比如说对View进行移动、缩放、旋转和淡入淡出，并且我们还可以借助AnimationSet来将这些动画效果组合起来使用，除此之外还可以通过配置Interpolator来控制动画的播放速度等等等等。那么这里大家可能要产生疑问了，既然之前的动画机制已经这么健全了，为什么还要引入属性动画呢？</p>
+<p>   其实上面所谓的健全都是相对的，如果你的需求中只需要对View进行移动、缩放、旋转和淡入淡出操作，那么补间动画确实已经足够健全了。但是很显然，这些功能是不足以覆盖所有的场景的，一旦我们的需求超出了移动、缩放、旋转和淡入淡出这四种对View的操作，那么补间动画就不能再帮我们忙了，也就是说它在功能和可扩展方面都有相当大的局限性，那么下面我们就来看看补间动画所不能胜任的场景。</p>
+<p>   注意上面我在介绍补间动画的时候都有使用“对View进行操作”这样的描述，没错，<strong>补间动画是只能够作用在View上的。</strong> 也就是说，我们可以对一个Button、TextView、甚至是LinearLayout、或者其它任何继承自View的组件进行动画操作，但是如果我们想要对一个非View的对象进行动画操作，抱歉，补间动画就帮不上忙了。可能有的朋友会感到不能理解，我怎么会需要对一个非View的对象进行动画操作呢？这里我举一个简单的例子，比如说我们有一个自定义的View，在这个View当中有一个Point对象用于管理坐标，然后在onDraw()方法当中就是根据这个Point对象的坐标值来进行绘制的。也就是说，如果我们可以对Point对象进行动画操作，那么整个自定义View的动画效果就有了。显然，补间动画是不具备这个功能的，这是它的第一个缺陷。</p>
+<p>   然后补间动画还有一个缺陷，就是它只能够实现移动、缩放、旋转和淡入淡出这四种动画操作，那如果我们希望可以对View的背景色进行动态地改变呢？很遗憾，我们只能靠自己去实现了。说白了，之前的补间动画机制就是使用硬编码的方式来完成的，功能限定死就是这些，基本上没有任何扩展性可言。</p>
+<p>   最后，<strong>补间动画还有一个致命的缺陷，就是它只是改变了View的显示效果而已，而不会真正去改变View的属性。</strong> 什么意思呢？比如说，现在屏幕的左上角有一个按钮，然后我们通过补间动画将它移动到了屏幕的右下角，现在你可以去尝试点击一下这个按钮，点击事件是绝对不会触发的，因为实际上这个按钮还是停留在屏幕的左上角，只不过补间动画将这个按钮绘制到了屏幕的右下角而已。</p>
+<p>   也正是因为这些原因，Android开发团队决定在3.0版本当中引入属性动画这个功能，那么属性动画是不是就把上述的问题全部解决掉了？下面我们就来一起看一看。</p>
+<p>   新引入的属性动画机制已经不再是针对于View来设计的了，也不限定于只能实现移动、缩放、旋转和淡入淡出这几种动画操作，同时也不再只是一种视觉上的动画效果了。它实际上是<strong>一种不断地对值进行操作的机制，并将值赋值到指定对象的指定属性上，可以是任意对象的任意属性。</strong> 所以我们仍然可以将一个View进行移动或者缩放，但同时也可以对自定义View中的Point对象进行动画操作了。我们只需要告诉系统动画的运行时长，需要执行哪种类型的动画，以及动画的初始值和结束值，剩下的工作就可以全部交给系统去完成了。</p>
+<p>   既然<strong>属性动画的实现机制是通过对目标对象进行赋值并修改其属性来实现的</strong>，那么之前所说的按钮显示的问题也就不复存在了，如果我们通过属性动画来移动一个按钮，那么这个按钮就是真正的移动了，而不再是仅仅在另外一个位置绘制了而已。</p>
+<p>   好了，介绍了这么多，相信大家已经对属性动画有了一个最基本的认识了，下面我们就来开始学习一下属性动画的用法。</p>
+<h2 id="ValueAnimator"><a href="#ValueAnimator" class="headerlink" title="ValueAnimator"></a>ValueAnimator</h2><p>ValueAnimator是整个属性动画机制当中最核心的一个类，前面我们已经提到了，属性动画的运行机制是通过不断地对值进行操作来实现的，而初始值和结束值之间的动画过渡就是由ValueAnimator这个类来负责计算的。它的内部使用一种时间循环的机制来计算值与值之间的动画过渡，我们只需要将初始值和结束值提供给ValueAnimator，并且告诉它动画所需运行的时长，那么ValueAnimator就会自动帮我们完成从初始值平滑地过渡到结束值这样的效果。除此之外，ValueAnimator还负责管理动画的播放次数、播放模式、以及对动画设置监听器等，确实是一个非常重要的类。</p>
+<p>但是ValueAnimator的用法却一点都不复杂，我们先从最简单的功能看起吧，比如说想要将一个值从0平滑过渡到1，时长300毫秒，就可以这样写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ValueAnimator anim = ValueAnimator.ofFloat(0f, 1f);  </div><div class="line">anim.setDuration(300);  </div><div class="line">anim.start();</div></pre></td></tr></table></figure>
+<p>怎么样？很简单吧，调用ValueAnimator的ofFloat()方法就可以构建出一个ValueAnimator的实例，ofFloat()方法当中允许传入多个float类型的参数，这里传入0和1就表示将值从0平滑过渡到1，然后调用ValueAnimator的setDuration()方法来设置动画运行的时长，最后调用start()方法启动动画。</p>
+<p>用法就是这么简单，现在如果你运行一下上面的代码，动画就会执行了。可是这只是一个将值从0过渡到1的动画，又看不到任何界面效果，我们怎样才能知道这个动画是不是已经真正运行了呢？这就需要借助监听器来实现了，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">ValueAnimator anim = ValueAnimator.ofFloat(0f, 1f);  </div><div class="line">anim.setDuration(300);  </div><div class="line">anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() &#123;  </div><div class="line">    @Override  </div><div class="line">    public void onAnimationUpdate(ValueAnimator animation) &#123;  </div><div class="line">        float currentValue = (float) animation.getAnimatedValue();  </div><div class="line">        Log.d(&quot;TAG&quot;, &quot;cuurent value is &quot; + currentValue);  </div><div class="line">    &#125;  </div><div class="line">&#125;);  </div><div class="line">anim.start();</div></pre></td></tr></table></figure>
+<p>可以看到，这里我们通过addUpdateListener()方法来添加一个动画的监听器，在动画执行的过程中会不断地进行回调，我们只需要在回调方法当中将当前的值取出并打印出来，就可以知道动画有没有真正运行了。运行上述代码，控制台打印如下所示：<br><img src="http://img.blog.csdn.net/20150403174704189?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ3VvbGluX2Jsb2c=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>从打印日志的值我们就可以看出，ValueAnimator确实已经在正常工作了，值在300毫秒的时间内从0平滑过渡到了1，而这个计算工作就是由ValueAnimator帮助我们完成的。另外ofFloat()方法当中是可以传入任意多个参数的，因此我们还可以构建出更加复杂的动画逻辑，比如说将一个值在5秒内从0过渡到5，再过渡到3，再过渡到10，就可以这样写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ValueAnimator anim = ValueAnimator.ofFloat(0f, 5f, 3f, 10f);  </div><div class="line">anim.setDuration(5000);  </div><div class="line">anim.start();</div></pre></td></tr></table></figure>
+<p>当然也许你并不需要小数位数的动画过渡，可能你只是希望将一个整数值从0平滑地过渡到100，那么也很简单，只需要调用ValueAnimator的ofInt()方法就可以了，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ValueAnimator anim = ValueAnimator.ofInt(0, 100);</div></pre></td></tr></table></figure>
+<p>ValueAnimator当中最常用的应该就是ofFloat()和ofInt()这两个方法了，另外还有一个ofObject()方法，我会在下篇文章进行讲解。</p>
+<p>那么除此之外，我们还可以调用setStartDelay()方法来设置动画延迟播放的时间，调用setRepeatCount()和setRepeatMode()方法来设置动画循环播放的次数以及循环播放的模式，循环模式包括RESTART和REVERSE两种，分别表示重新播放和倒序播放的意思。这些方法都很简单，我就不再进行详细讲解了。</p>
+<h2 id="ObjectAnimator"><a href="#ObjectAnimator" class="headerlink" title="ObjectAnimator"></a>ObjectAnimator</h2><p>相比于ValueAnimator，ObjectAnimator可能才是我们最常接触到的类，因为ValueAnimator只不过是对值进行了一个平滑的动画过渡，但我们实际使用到这种功能的场景好像并不多。而ObjectAnimator则就不同了，它是可以直接对任意对象的任意属性进行动画操作的，比如说View的alpha属性。</p>
+<p>不过虽说ObjectAnimator会更加常用一些，但是它其实是继承自ValueAnimator的，底层的动画实现机制也是基于ValueAnimator来完成的，因此ValueAnimator仍然是整个属性动画当中最核心的一个类。那么既然是继承关系，说明ValueAnimator中可以使用的方法在ObjectAnimator中也是可以正常使用的，它们的用法也非常类似，这里如果我们想要将一个TextView在5秒中内从常规变换成全透明，再从全透明变换成常规，就可以这样写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ObjectAnimator animator = ObjectAnimator.ofFloat(textview, &quot;alpha&quot;, 1f, 0f, 1f);  </div><div class="line">animator.setDuration(5000);  </div><div class="line">animator.start();</div></pre></td></tr></table></figure></p>
+<p>可以看到，我们还是调用了ofFloat()方法来去创建一个ObjectAnimator的实例，只不过ofFloat()方法当中接收的参数有点变化了。这里第一个参数要求传入一个object对象，我们想要对哪个对象进行动画操作就传入什么，这里我传入了一个textview。第二个参数是想要对该对象的哪个属性进行动画操作，由于我们想要改变TextView的不透明度，因此这里传入”alpha”。后面的参数就是不固定长度了，想要完成什么样的动画就传入什么值，这里传入的值就表示将TextView从常规变换成全透明，再从全透明变换成常规。之后调用setDuration()方法来设置动画的时长，然后调用start()方法启动动画，效果如下图所示：</p>
+<p><img src="http://img.blog.csdn.net/20150406161443130" alt=""></p>
+<p>学会了这一个用法之后，其它的用法我们就可以举一反三了，那比如说我们想要将TextView进行一次360度的旋转，就可以这样写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ObjectAnimator animator = ObjectAnimator.ofFloat(textview, &quot;rotation&quot;, 0f, 360f);  </div><div class="line">animator.setDuration(5000);  </div><div class="line">animator.start();</div></pre></td></tr></table></figure>
+<p>可以看到，这里我们将第二个参数改成了”rotation”，然后将动画的初始值和结束值分别设置成0和360，现在运行一下代码，效果如下图所示：</p>
+<p><img src="http://img.blog.csdn.net/20150406161421215" alt=""></p>
+<h2 id="参考阅读"><a href="#参考阅读" class="headerlink" title="参考阅读"></a>参考阅读</h2><p><a href="http://blog.csdn.net/guolin_blog/article/details/43536355" target="_blank" rel="external">Android属性动画完全解析(上)，初识属性动画的基本用法</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/43816093" target="_blank" rel="external"> Android属性动画完全解析(中)，ValueAnimator和ObjectAnimator的高级用法</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/44171115" target="_blank" rel="external"> Android属性动画完全解析(下)，Interpolator和ViewPropertyAnimator的用法</a>   </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20150504225554203&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog&quot;&gt;作者：郭霖&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Android系统在一开始的时候就给我们提供了两种实现动画效果的方式，逐帧动画(frame-by-frame animation)和补间动画(tweened animation)。逐帧动画的工作原理很简单，其实就是将一个完整的动画拆分成一张张单独的图片，然后再将它们连贯起来进行播放，类似于动画片的工作原理。补间动画则是可以对View进行一系列的动画操作，包括淡入淡出、缩放、平移、旋转四种。&lt;/p&gt;
+&lt;p&gt;然而自Android 3.0版本开始，系统给我们提供了一种全新的动画模式，属性动画(property animation)，它的功能非常强大，弥补了之前补间动画的一些缺陷，几乎是可以完全替代掉补间动画了。这篇文章的主题就是对Android属性动画进行一次完全解析。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>AI芯片的几种选择</title>
@@ -864,7 +1032,7 @@
     <link href="http://ipcreator.me/2017/03/19/MyView/books-impacting-me/"/>
     <id>http://ipcreator.me/2017/03/19/MyView/books-impacting-me/</id>
     <published>2017-03-19T14:09:18.000Z</published>
-    <updated>2017-03-23T03:11:18.233Z</updated>
+    <updated>2017-03-24T00:24:51.126Z</updated>
     
     <content type="html"><![CDATA[<h1 id="那些冲击三观和心灵的书、人、事"><a href="#那些冲击三观和心灵的书、人、事" class="headerlink" title="那些冲击三观和心灵的书、人、事"></a>那些冲击三观和心灵的书、人、事</h1><p><img src="http://omj173lhw.bkt.clouddn.com/impact.jpg" alt=""></p>
 <p>总有一些人和事，书和语句，会冲击到你心灵的最深处，使你醍醐灌顶，豁然开朗，并在你生命的长河中掀起一阵涟漪乃至波涛骇浪…</p>
@@ -1029,6 +1197,7 @@
 <p>==兄弟姐妹聚会==<br>有朋自远方来，不亦乐乎？<br>交流、激励、成长、分享、开心<br>职场、投资、生活、人生…</p>
 <p>宝贵的注意力和时间资源，除了美食，还得有所收获。<br>不要苛求，大家开心就好。</p>
 <h3 id="03-23"><a href="#03-23" class="headerlink" title="03.23"></a>03.23</h3><p>预测未来，不如创造未来<br>一旦行动了，就停不下来</p>
+<p>更换Hexo Next主题，优化组织结构</p>
 <p>譬如：<br>运动的习惯<br>坐享的习惯<br>践行的习惯</p>
 <p>大疆、华为、OPPO式的做法，有自己的目标、行动和坚持，正确的方向上做正确的事情，每天进一步一点点。<br>真正的独立和强大是：不需要依附任何人（包括经济条件、健康快乐、目标行动等…），也不羡慕任何人。<br>做自己喜欢擅长而又有价值的事情，过自己独立充实健康快乐的人生。量力而行，尽力而为，问心无愧。<br>不期待也不需要他人的肯定、表扬和激励，也会一步一步，踏踏实实地朝着自己的既定目标前行。</p>
 <p>以前浪费了多少宝贵的注意力，关注了多少不该和不值得关注的人/事/物？<br>舍本逐末地聚焦成功，名利上，而忽视了最根本的自我成长上。</p>
@@ -1036,6 +1205,7 @@
 <p>简而言之，自知者明，自胜者强。<br>不迷茫，不焦躁，慢慢来，耐心点，一切都来得及，七年就是一辈子，人可以活几辈子。</p>
 <p>真的勇士，敢于直面惨淡的生活和残酷的真相，继续前行和奋斗。</p>
 <p>RTFC：<a href="https://pan.baidu.com/s/1ngsZs?errno=0&amp;errmsg=Auth%20Login%20Sucess&amp;&amp;bduss=&amp;ssnerror=0#list/path=%2FAndroid%E6%BA%90%E7%A0%81&amp;parentPath=%2F" target="_blank" rel="external">Android7.1.1</a> + <a href="http://download.csdn.net/detail/yi5971/9767765?locationNum=1&amp;fps=1#comment" target="_blank" rel="external">SourceInsight4.0</a></p>
+<h2 id="03-24"><a href="#03-24" class="headerlink" title="03.24"></a>03.24</h2><p>你觉得容易的事，别人也觉得容易<br>你觉得困难的事，绝大部分人也会觉得很难<br>知难而退还是迎难而上，选择决定未来</p>
 ]]></content>
     
     <summary type="html">
@@ -3072,33 +3242,6 @@ bw.close();
   </entry>
   
   <entry>
-    <title>Git automatically</title>
-    <link href="http://ipcreator.me/2017/03/09/Program/Windows/auto-git-daily/"/>
-    <id>http://ipcreator.me/2017/03/09/Program/Windows/auto-git-daily/</id>
-    <published>2017-03-08T23:30:06.000Z</published>
-    <updated>2017-03-09T06:34:20.309Z</updated>
-    
-    <content type="html"><![CDATA[<p>能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…</p>
- <a id="more"></a>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">@title auto update blog articles and git push</div><div class="line"></div><div class="line">set fileSource=D:\IPCreatorBlog\source</div><div class="line">set fileDestination=C:\IPCreatorBlogGit\blog\source</div><div class="line">set gitDir=C:\IPCreatorBlogGit\blog</div><div class="line"></div><div class="line">cls</div><div class="line"></div><div class="line">cd %fileDestination%</div><div class="line">rd /s/q %fileDestination%</div><div class="line">Xcopy /e %fileSource% %fileDestination%</div><div class="line"></div><div class="line">cd %gitDir%</div><div class="line">git add -v .</div><div class="line">git commit -m &quot;Update blog daily&quot;</div><div class="line">git push</div><div class="line"></div><div class="line">pause</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> user@LAPTOP-082RQVIH MINGW64 /c/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git config --global alias.blog &apos;!git add . &amp;&amp; git commit -m &quot;blog update&quot; &amp;&amp; git push&apos;**                                                                                                                          </div><div class="line">user@LAPTOP-082RQVIH MINGW64 /c/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git blog**</div><div class="line">On branch master</div><div class="line">Your branch is up-to-date with &apos;origin/master&apos;.</div><div class="line">nothing to commit, working tree clean</div></pre></td></tr></table></figure>
-<p> 更多参考：<br> <a href="https://www.zybuluo.com/yangfch3/note/338252" target="_blank" rel="external">Windows批处理(cmd/bat)使用小记</a><br> <a href="http://xstarcd.github.io/wiki/windows/windows_cmd_summary_commands.html" target="_blank" rel="external">批处理常用命令总结 - 批处理命令简介</a><br> <a href="https://segmentfault.com/q/1010000000263597" target="_blank" rel="external">Git批处理脚本</a><br> <a href="https://www.zhihu.com/question/38962022" target="_blank" rel="external">请问如何写一个批处理自动打开 gitbash，然后自动执行一系列git命令（windows平台）？</a><br> <a href="https://docs.google.com/document/d/1IjrCvTqL3J92DPXNzkCPYRi6Ftb2v6aCbncpxh9ozy4/edit" target="_blank" rel="external">Chrome-启动参数</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Thinking in Java</title>
     <link href="http://ipcreator.me/2017/03/09/Program/Java/thinking-in-java/"/>
     <id>http://ipcreator.me/2017/03/09/Program/Java/thinking-in-java/</id>
@@ -3122,6 +3265,33 @@ bw.close();
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://img3.doubanio.com/lpic/s27243455.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在Bruce Eckel的文字亲和力和小而直接的编程示例面前也会化解于无形。从Java的基础语法到最高级特性（深入的面向对象概念、多线程、自动项目构建、单元测试和调试等），本书都能逐步指导你轻松掌握。&lt;br&gt;从本书获得的各项大奖以及来自世界各地的读者评论中，不难看出这是一本经典之作。本书的作者拥有多年教学经验，对C、C++以及Java语言都有独到、深入的见解，以通俗易懂及小而直接的示例解释了一个个晦涩抽象的概念。本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、Java I/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书。&lt;br&gt;&lt;a href=&quot;https://book.douban.com/subject/2130190/&quot;&gt;]第4版&lt;/a&gt;特点：&lt;br&gt;适合初学者与专业人员的经典的面向对象叙述方式，为更新的Java SE5/6增加了新的示例和章节。&lt;br&gt; 测验框架显示程序输出。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git automatically</title>
+    <link href="http://ipcreator.me/2017/03/09/Program/Windows/auto-git-daily/"/>
+    <id>http://ipcreator.me/2017/03/09/Program/Windows/auto-git-daily/</id>
+    <published>2017-03-08T23:30:06.000Z</published>
+    <updated>2017-03-09T06:34:20.309Z</updated>
+    
+    <content type="html"><![CDATA[<p>能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…</p>
+ <a id="more"></a>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">@title auto update blog articles and git push</div><div class="line"></div><div class="line">set fileSource=D:\IPCreatorBlog\source</div><div class="line">set fileDestination=C:\IPCreatorBlogGit\blog\source</div><div class="line">set gitDir=C:\IPCreatorBlogGit\blog</div><div class="line"></div><div class="line">cls</div><div class="line"></div><div class="line">cd %fileDestination%</div><div class="line">rd /s/q %fileDestination%</div><div class="line">Xcopy /e %fileSource% %fileDestination%</div><div class="line"></div><div class="line">cd %gitDir%</div><div class="line">git add -v .</div><div class="line">git commit -m &quot;Update blog daily&quot;</div><div class="line">git push</div><div class="line"></div><div class="line">pause</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> user@LAPTOP-082RQVIH MINGW64 /c/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git config --global alias.blog &apos;!git add . &amp;&amp; git commit -m &quot;blog update&quot; &amp;&amp; git push&apos;**                                                                                                                          </div><div class="line">user@LAPTOP-082RQVIH MINGW64 /c/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git blog**</div><div class="line">On branch master</div><div class="line">Your branch is up-to-date with &apos;origin/master&apos;.</div><div class="line">nothing to commit, working tree clean</div></pre></td></tr></table></figure>
+<p> 更多参考：<br> <a href="https://www.zybuluo.com/yangfch3/note/338252" target="_blank" rel="external">Windows批处理(cmd/bat)使用小记</a><br> <a href="http://xstarcd.github.io/wiki/windows/windows_cmd_summary_commands.html" target="_blank" rel="external">批处理常用命令总结 - 批处理命令简介</a><br> <a href="https://segmentfault.com/q/1010000000263597" target="_blank" rel="external">Git批处理脚本</a><br> <a href="https://www.zhihu.com/question/38962022" target="_blank" rel="external">请问如何写一个批处理自动打开 gitbash，然后自动执行一系列git命令（windows平台）？</a><br> <a href="https://docs.google.com/document/d/1IjrCvTqL3J92DPXNzkCPYRi6Ftb2v6aCbncpxh9ozy4/edit" target="_blank" rel="external">Chrome-启动参数</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…&lt;/p&gt;
     
     </summary>
     
@@ -3229,7 +3399,7 @@ bw.close();
     <link href="http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/"/>
     <id>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</id>
     <published>2017-03-08T14:59:06.000Z</published>
-    <updated>2017-03-23T11:18:01.839Z</updated>
+    <updated>2017-03-24T14:47:54.818Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/wiseman.jpeg" alt=""></p>
 <p>什么是智者？就是一个坑不跌两回呗</p>
@@ -3237,6 +3407,31 @@ bw.close();
 <p>基础不牢、地动山摇</p>
 <p> Without a solid foundation, the earth will shake.</p>
  <a id="more"></a>
+<h2 id="android-设置textView水平居中显示"><a href="#android-设置textView水平居中显示" class="headerlink" title="android 设置textView水平居中显示"></a>android 设置textView水平居中显示</h2><ol>
+<li><p>让textView里面的内容水平居中 :    android:gravity=”center_horizontal”</p>
+<ol>
+<li>让textView控件在它的父布局里水平居中     android:layout_gravity=”center_horizontal”</li>
+</ol>
+<h2 id="Java-编程下正则表达式判断字符串是否包含中文"><a href="#Java-编程下正则表达式判断字符串是否包含中文" class="headerlink" title="Java 编程下正则表达式判断字符串是否包含中文"></a><a href="http://www.cnblogs.com/sunzn/archive/2013/07/12/3186518.html" target="_blank" rel="external">Java 编程下正则表达式判断字符串是否包含中文</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"> public static boolean isContainChinese(String str) &#123;</div><div class="line"></div><div class="line">    Pattern p = Pattern.compile(&quot;[\u4e00-\u9fa5]&quot;);</div><div class="line">    Matcher m = p.matcher(str);</div><div class="line">    if (m.find()) &#123;</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">    return false;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Android里面多行字符串怎么一行行读取？"><a href="#Android里面多行字符串怎么一行行读取？" class="headerlink" title="Android里面多行字符串怎么一行行读取？"></a>Android里面多行字符串怎么一行行读取？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> String[] lines = 内容.split(&quot;\n&quot;);</div><div class="line">for(String line : lines) &#123;</div><div class="line">    //line就是每一行</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Java-list对象列表排序-实例"><a href="#Java-list对象列表排序-实例" class="headerlink" title="Java list对象列表排序 实例"></a><a href="http://www.cnblogs.com/qqzy168/p/4098031.html" target="_blank" rel="external">Java list对象列表排序 实例</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Collections.sort(list, new Comparator() &#123;</div><div class="line">           public int compare(Object a, Object b) &#123;</div><div class="line">               int one = ((Bean) a).getPriority();</div><div class="line">               int two = ((Bean) b).getPriority();</div><div class="line">               return one - two;</div><div class="line">           &#125;</div><div class="line">       &#125;);</div></pre></td></tr></table></figure>
+<h2 id="JAVA编程有一个小数-如何去掉小数部分"><a href="#JAVA编程有一个小数-如何去掉小数部分" class="headerlink" title="JAVA编程有一个小数,如何去掉小数部分?"></a>JAVA编程有一个小数,如何去掉小数部分?</h2><p>向上取整:Math.ceil() //只要有小数都+1<br>向下取整:Math.floor() //不取小数<br>四舍五入:Math.round() //四舍五入</p>
+<h2 id="Android-最简单的SD卡文件遍历程序"><a href="#Android-最简单的SD卡文件遍历程序" class="headerlink" title="Android 最简单的SD卡文件遍历程序"></a><a href="http://www.cnblogs.com/hnrainll/archive/2012/05/18/2507801.html" target="_blank" rel="external">Android 最简单的SD卡文件遍历程序</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">//检测SD卡是否存在</div><div class="line">if (Environment.getExternalStorageState().equals(</div><div class="line">        Environment.MEDIA_MOUNTED)) &#123;</div><div class="line">    path = Environment.getExternalStorageDirectory();</div><div class="line">&#125;else&#123;</div><div class="line">    Toast.makeText(this, &quot;没有SD卡&quot;, Toast.LENGTH_LONG).show();</div><div class="line">    finish();</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 遍历接收一个文件路径，然后把文件子目录中的所有文件遍历并输出来</div><div class="line">   private void getAllFiles(File root)&#123;  </div><div class="line">       File files[] = root.listFiles();  </div><div class="line">       if(files != null)&#123;  </div><div class="line">           for (File f : files)&#123;  </div><div class="line">               if(f.isDirectory())&#123;  </div><div class="line">                   getAllFiles(f);  </div><div class="line">               &#125;else&#123;  </div><div class="line">                   System.out.println(f);  </div><div class="line">               &#125;  </div><div class="line">           &#125;  </div><div class="line">       &#125;  </div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="android-程序中代码如何判断模拟器和真机"><a href="#android-程序中代码如何判断模拟器和真机" class="headerlink" title="android 程序中代码如何判断模拟器和真机"></a><a href="http://blog.csdn.net/shangxinlei88/article/details/44807415" target="_blank" rel="external">android 程序中代码如何判断模拟器和真机</a></h2><p>一般真机的imei码是唯一的所以可以采用这种方法！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">/** 判断是否模拟器。如果返回TRUE，则当前是模拟器</div><div class="line">     * @param context</div><div class="line">     * @return</div><div class="line">*/</div><div class="line">public static boolean isEmulator(Context context)&#123;  </div><div class="line">        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);  </div><div class="line">        String imei = tm.getDeviceId();  </div><div class="line">        if (imei == null || imei.equals(&quot;000000000000000&quot;))&#123;  </div><div class="line">            return true;  </div><div class="line">        &#125;  </div><div class="line">        return false;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>提醒：记得要申请READ_PHONE_STATE权限哦</p>
+<h2 id="android中arraylist插入数据到第一个位置"><a href="#android中arraylist插入数据到第一个位置" class="headerlink" title="android中arraylist插入数据到第一个位置"></a>android中arraylist插入数据到第一个位置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> ArrayList m = new ArrayList();</div><div class="line">m.add(0, Integer.valueOf(1));</div></pre></td></tr></table></figure>
+<p>add方法可以指定位置</p>
+<h2 id="android设置Activity背景色为透明的3种方法"><a href="#android设置Activity背景色为透明的3种方法" class="headerlink" title="android设置Activity背景色为透明的3种方法"></a><a href="http://blog.csdn.net/lily9/article/details/11983221" target="_blank" rel="external">android设置Activity背景色为透明的3种方法</a></h2><p> 方法一：这种方法比较简单，只有一个步骤，只需要在配置文件中把需要设置为透明的activity的样式设置为<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Android:theme=&quot;@android:style/Theme.Translucent&quot;</div></pre></td></tr></table></figure></p>
+<p>即可，这种方式只改变背景的颜色，对其他控件没有影响。但是它只能把背景设置为完全透明。如果要设置为半透明或者要设置透明的程度无法实现。</p>
+<p>方法二：这种方法也比较简单，只需要在方法一的基础上，再布局文件中配置背景颜色就可以<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">android:background=&quot;#01000000&quot;</div></pre></td></tr></table></figure></p>
+<p> “ #01000000”中“01”表示的是背景透明的程度，这个值只能设置01及以上的值，不能设置为00，及不能设置为完全透明，不过设置为01其实和透明的效果也很接近了，肉眼几乎看不出来区别了。这种方法同样对其他控件没有影响。</p>
+<p> 方法三：这种方法稍微复杂些，有几个步骤，这种方法对其他控件的透明度也会产生影响，并且可以自己设置透明的程度，相对来说要灵活一些。<br>第一步，在res/values下建立colors.xml文件，设置一个背景颜色，在这里可以设置你背景的颜色和透明度。<br>      添加上自定义的颜色<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;color name=&quot;transparent&quot;&gt;#55ff&lt;/color&gt;</div></pre></td></tr></table></figure></p>
+<p>第二步，在res/values/下建styles.xml,设置程序的风格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;style name=&quot;Transparent&quot;&gt;  </div><div class="line">        &lt;item name=&quot;android:windowBackground&quot;&gt;@color/transparent&lt;/item&gt;  </div><div class="line">        &lt;item name=&quot;android:windowIsTranslucent&quot;&gt;true&lt;/item&gt;  </div><div class="line">        &lt;item name=&quot;android:windowAnimationStyle&quot;&gt;@+android:style/Animation.Translucent&lt;/item&gt;  </div><div class="line">    &lt;/style&gt;</div></pre></td></tr></table></figure></p>
+<p>第三步，把这个styles.xml用在相应的Activity上。即在AndroidManifest.xml中的任意<activity>标签中添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">android:theme=&quot;@style/Transparent&quot;</div></pre></td></tr></table></figure></activity></p>
+<p>如果想设置所有的activity都使用这个风格，可以把这句标签语句添加在<application>中。<br>这个方法不仅对背景透明有效，而且对其他控件也有效，如果其他控件没有设置背景颜色，会呈现出透明的效果。这种方法比较复杂些，如果不是需要对整个页面及控件都有透明度要求，建议使用前面2中方法。        </application></p>
 <h2 id="Android图片加载框架最全解析（一），Glide的基本用法"><a href="#Android图片加载框架最全解析（一），Glide的基本用法" class="headerlink" title="Android图片加载框架最全解析（一），Glide的基本用法"></a><a href="http://blog.csdn.net/guolin_blog/article/details/53759439" target="_blank" rel="external">Android图片加载框架最全解析（一），Glide的基本用法</a></h2><p>with()方法可以接收Context、Activity或者Fragment类型的参数。也就是说我们选择的范围非常广，不管是在Activity还是Fragment中调用with()方法，都可以直接传this。那如果调用的地方既不在Activity中也不在Fragment中呢？也没关系，我们可以获取当前应用程序的ApplicationContext，传入到with()方法当中。注意with()方法中传入的实例会决定Glide加载图片的生命周期，如果传入的是Activity或者Fragment的实例，那么当这个Activity或Fragment被销毁的时候，图片加载也会停止。如果传入的是ApplicationContext，那么只有当应用程序被杀掉的时候，图片加载才会停止。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line">Glide.with(this).load(url).into(imageView);</div><div class="line"></div><div class="line">String url = &quot;http://cn.bing.com/az/hprichbg/rb/Dongdaemun_ZH-CN10736487148_1920x1080.jpg&quot;;</div><div class="line">Glide.with(this).load(url).into(imageView);</div><div class="line"></div><div class="line">// 加载本地图片</div><div class="line">File file = new File(getExternalCacheDir() + &quot;/image.jpg&quot;);</div><div class="line">Glide.with(this).load(file).into(imageView);</div><div class="line"></div><div class="line">// 加载应用资源</div><div class="line">int resource = R.drawable.image;</div><div class="line">Glide.with(this).load(resource).into(imageView);</div><div class="line"></div><div class="line">// 加载二进制流</div><div class="line">byte[] image = getImageBytes();</div><div class="line">Glide.with(this).load(image).into(imageView);</div><div class="line"></div><div class="line">// 加载Uri对象</div><div class="line">Uri imageUri = getImageUri();</div><div class="line">Glide.with(this).load(imageUri).into(imageView);</div><div class="line"></div><div class="line">// 占位图就是指在图片的加载过程中，我们先显示一张临时的图片，等图片加载出来了再替换成要加载的图片。</div><div class="line">Glide.with(this)</div><div class="line">     .load(url)</div><div class="line">     .placeholder(R.drawable.loading)</div><div class="line">     .into(imageView);</div><div class="line"></div><div class="line">// 因为Glide有非常强大的缓存机制，我们刚才加载那张必应美图的时候Glide自动就已经将它缓存下来了，下次加载的时候将会直接从缓存中读取，不会再去网络下载了，因而加载的速度非常快，所以占位图可能根本来不及显示。</div><div class="line">// 串接了一个diskCacheStrategy()方法，并传入DiskCacheStrategy.NONE参数，这样就可以禁用掉Glide的缓存功能。</div><div class="line">     Glide.with(this)</div><div class="line">     .load(url)</div><div class="line">     .placeholder(R.drawable.loading)</div><div class="line">     .diskCacheStrategy(DiskCacheStrategy.NONE)</div><div class="line">     .into(imageView);</div><div class="line"></div><div class="line">// 异常占位图就是指，如果因为某些异常情况导致图片加载失败，比如说手机网络信号不好，这个时候就显示这张异常占位图。</div><div class="line">     Glide.with(this)</div><div class="line">          .load(url)</div><div class="line">          .placeholder(R.drawable.loading)</div><div class="line">          .error(R.drawable.error)</div><div class="line">          .diskCacheStrategy(DiskCacheStrategy.NONE)</div><div class="line">          .into(imageView);</div><div class="line"></div><div class="line">不管我们传入的是一张普通图片，还是一张GIF图片，Glide都会自动进行判断，并且可以正确地把它解析并展示出来。</div><div class="line"></div><div class="line">// load()方法的后面加入了一个asBitmap()方法，这个方法的意思就是说这里只允许加载静态图片，不需要Glide去帮我们自动进行图片格式的判断了。</div><div class="line">          Glide.with(this)</div><div class="line">               .load(url)</div><div class="line">               .asBitmap()</div><div class="line">               .placeholder(R.drawable.loading)</div><div class="line">               .error(R.drawable.error)</div><div class="line">               .diskCacheStrategy(DiskCacheStrategy.NONE)</div><div class="line">               .into(imageView);</div><div class="line"></div><div class="line">// 既然我们能强制指定加载静态图片，就也能强制指定加载动态图片。用了asGif()方法替代了asBitmap()方法</div><div class="line">               Glide.with(this)</div><div class="line">                    .load(url)</div><div class="line">                    .asGif()</div><div class="line">                    .placeholder(R.drawable.loading)</div><div class="line">                    .error(R.drawable.error)</div><div class="line">                    .diskCacheStrategy(DiskCacheStrategy.NONE)</div><div class="line">                    .into(imageView);      </div><div class="line"></div><div class="line">//使用Glide在绝大多数情况下我们都是不需要指定图片大小的。</div><div class="line"></div><div class="line">                    Glide.with(this)</div><div class="line">                         .load(url)</div><div class="line">                         .placeholder(R.drawable.loading)</div><div class="line">                         .error(R.drawable.error)</div><div class="line">                         .diskCacheStrategy(DiskCacheStrategy.NONE)</div><div class="line">                         .override(100, 100)</div><div class="line">                         .into(imageView);</div></pre></td></tr></table></figure>
 <p>什么叫内存浪费呢？比如说一张图片的尺寸是1000<em>1000像素，但是我们界面上的ImageView可能只有200</em>200像素，这个时候如果你不对图片进行任何压缩就直接读取到内存中，这就属于内存浪费了，因为程序中根本就用不到这么高像素的图片。Glide从来都不会直接将图片的完整尺寸全部加载到内存中，而是用多少加载多少。Glide会自动判断ImageView的大小，然后只将这么大的图片像素加载到内存当中，帮助我们节省内存开支。内部的实现原理其实就是<a href="http://blog.csdn.net/guolin_blog/article/details/9316683" target="_blank" rel="external"> Android高效加载大图、多图解决方案，有效避免程序OOM</a>当中介绍的技术</p>
@@ -3559,7 +3754,7 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
     <link href="http://ipcreator.me/2017/03/05/Program/Android/adb-tips/"/>
     <id>http://ipcreator.me/2017/03/05/Program/Android/adb-tips/</id>
     <published>2017-03-05T07:25:06.000Z</published>
-    <updated>2017-03-10T01:06:50.446Z</updated>
+    <updated>2017-03-24T04:03:14.411Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://github.com/ipcreator/awesome-adb/raw/master/assets/title.png" alt=""></p>
 <p>图形化界面太低效，还存在DDMS连接不稳定的隐患，尽量通过命令行方式高效解决</p>
@@ -3610,6 +3805,7 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
 <p>关键点：使用 “.”是可以一次性 push一个文件目录的。<br>如果AdbTest有子目录会如何？如果子目录中有文件，则会将子目录和其中的文件一起推送过去，如果子目录是空的，则会跳过</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb push comment12031715.txt commenttest.txt userLibrary.dic /sdcard/Download</div></pre></td></tr></table></figure>
 <p>adb 一次性推送多个文件，如果目标文件夹中存在同名文件，会如何？默认是直接覆盖的，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">C:\Users\user\Desktop&gt;adb push smile.lrc /storage/sdcard/Download</div><div class="line">smile.lrc: 1 file pushed. 0.0 MB/s (1061 bytes in 0.100s)</div><div class="line"></div><div class="line">C:\Users\user\Desktop&gt;adb push smile.jpg /storage/sdcard/Download</div><div class="line">smile.jpg: 1 file pushed. 0.6 MB/s (51419 bytes in 0.088s)</div></pre></td></tr></table></figure>
 <h2 id="遇到读写权限问题的解决办法"><a href="#遇到读写权限问题的解决办法" class="headerlink" title="遇到读写权限问题的解决办法"></a>遇到读写权限问题的解决办法</h2><p>在shell命令行中输入：adb root<br>切换到root用户<br>然后执行如下命令：（注意 /表示的是根目录，因此这个不仅仅是对sdcard，其他文件也可以读写。rw表示读写权限，mount重挂载文件系统）<br>adb shell mount -o remount rw / , 修改系统读写权限</p>
 <p>注意系统文件在push后需要修改权限，以framework-res.apk为例，输入：adb shell chmod 644 /system/framework/framework-res.apk回车，然后设备重启下就替换完成了。</p>
 <h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><p>Android 系统的日志分为两部分，底层的 Linux 内核日志输出到 /proc/kmsg，Android 的日志输出到 /dev/log。</p>
@@ -3749,25 +3945,67 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
   </entry>
   
   <entry>
-    <title>RollPlayer</title>
-    <link href="http://ipcreator.me/2017/03/03/Program/Android/MyApp/my-favor-music-player/"/>
-    <id>http://ipcreator.me/2017/03/03/Program/Android/MyApp/my-favor-music-player/</id>
-    <published>2017-03-03T01:42:06.000Z</published>
-    <updated>2017-03-14T12:39:24.921Z</updated>
+    <title>Android Studio 技巧</title>
+    <link href="http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/"/>
+    <id>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</id>
+    <published>2017-03-03T00:31:06.000Z</published>
+    <updated>2017-03-24T03:57:22.746Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/music.png" alt=""></p>
-<p>做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.</p>
+    <content type="html"><![CDATA[<p><a href="http://www.codeceo.com/article/android-studio-skills.html" target="_blank" rel="external">提高效率的 Android Studio 技巧汇总</a></p>
+<p><img src="http://static.codeceo.com/images/2015/08/android-studio-logo.png" alt=""></p>
+<p>工欲善其事必先利其器，磨刀不误砍柴工</p>
  <a id="more"></a>
-<h2 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h2><p>功能要求：一个窗口，一个目录，一些自己喜欢的歌曲，随机选择歌曲，支持单曲循环播放，支持歌词显示；<br>应用场景：徒步、登山、坐享时使用。</p>
-<p><img src="http://img.blog.csdn.net/20161128093058740" alt=""></p>
-<p>状态1：Idel(空闲)状态<br>当 mediaplayer创建或者执行reset()方法后处于这个状态。<br>状态2：Initialized(已初始化)状态<br>当调用mediaplayer的setDataResource()方法给mediaplayer设置播放的数据源后，mediaplayer会处于该状态。<br>状态3：Prepared(准备就续)状态<br>设置完数据源后，调用mediaplayer的prepare()方法，让mediaplayer准备播放。值得一提的是，这里除了prepare()方法，还有prepareAsnyc()方法，此方法是异步方法，一般用于网络视频的缓冲。当缓冲完毕后，就会触发准备完毕的事件。我们要做的就是监听该事件(OnPreparedListener)，当缓冲完成时，执行相应的操作。在此状态上，我们可以调用seekTo()方法定位视频，此方法不改变mediaplayer的状态；亦可调用stop()放弃视频播放，使mediaplayer处于Stopped状态。一般我们会在此状态上调用start()方法开始播放视频。<br>状态4：Started(开始)状态<br>当处于Prepared状态、Paused状态和PlayebackCompeleted状态时，调用Started()方法即可进入该状态。在该状态中，mediaplayer开始播放视频，可以通过seekTo()方法和start()方法改变视频播放的进度，当Looping为真且播放完毕后，它会重新开始播放（即循环播放）；否则播放完毕后，会触发事件并调用OnCompletionaListener.OnCompletion()方法，进行特定操作，并进入PlaybackCompleted状态。在此状态中，亦可调用pause()方法或者stop()方法让视频暂停或停止，此时mediaplayer分别处于Stopped和Paused状态。<br>状态5：Stopped(停止)状态<br>当 mediaplayer处于Prepared、Started、Paused、PlaybackCompleted状态时，调用stop()方法即可进入本状态。应特别注意的是，在本状态中，若想重新开始播放，不能直接调用start()方法，必须调用prepare()方法或prepareAsync()方法重新让mediaplayer处于Prepared状态方可调用start()方法播放视频。<br>状态6：Paused(暂停)状态<br>当mediaplayer处于Started状态是，调用pause()方法即可进入本状态。在本状态里，可直接调用start()方法使，mediaplayer回到Started状态，亦可调用stop()方法停止视频播放，让播放器处于停止态。<br>状态7：PlaybackCompleted(播放完成)状态<br>当mediaplayer播放完成且Looping为假时即可进入本状态。在本状态可调用start()方法使mediaplayer回到Started状态（注意此时是从头开始播放）；亦可调用stop()方法使mediaplayer处于停止态，结束播放。<br>状态8：Error(错误)状态<br>当mediaplayer出现错误时处于此状态。<br>调用release()方法即可释放此mediaplayer对象。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://www.runoob.com/w3cnote/android-tutorial-mediaplayer.html" target="_blank" rel="external">MediaPlayer播放音频与视频</a><br><a href="http://blog.csdn.net/huaxun66/article/details/53333747" target="_blank" rel="external">Android MediaPlayer和VideoView的使用</a><br><a href="http://blog.sina.com.cn/s/blog_53ad73d70101c6om.html" target="_blank" rel="external">Android Supported Media Formats（Android支持的媒体格式）</a></p>
+<p> ctrl+/ 注释一行代码<br> ctrl+shift+/注释代码块<br> ctrl+b查看声明<br> ctrl+f查找<br> ctrl+r替换<br> ctrl+shif+f 全路径查找<br> ctrl+shift+r 全路径替换</p>
+<p> ctrl+number-minus 代码折叠<br> ctrl+number-plus代码展开<br> ctrl+shift+minus折叠窗口内所有代码<br> ctrl+shift+plus展开窗口内所有代码</p>
+<p> ctrl+o复写方法<br> ctrl+alt+o清除无效包引用<br> ctrl+alt+l 格式化代码</p>
+<p> ctrl+shift+backspace 返回上次编辑点</p>
+<p> You can comment or uncomment lines and blocks of code using <strong>Ctrl+Slash</strong> and <strong>Ctrl+Shift+Slash</strong>.<br> Ctrl+Slash comments or uncomments the current line or selected block with single line comments (//…).<br> Ctrl+Shift+Slash encloses the selected block in a block comment (/<em>…</em>/).<br> To uncomment a commented block press Ctrl+Shift+Slash anywhere inside it.</p>
+<p>To navigate to the implementation(s) of an abstract method, position the caret at its usage or its name in the declaration and press <strong>Ctrl+Alt+B</strong>.</p>
+<p>The SmartType code completion may be used after the new keyword, to instantiate an object of the expected type. For example, type</p>
+<p>and press <strong>Ctrl+Shift+Space</strong>:</p>
+<p> When you want to catch exceptions thrown by some code fragment, select it in the editor, press <strong>Ctrl+Alt+T</strong> (Code | Surround With) and choose try / catch. The catch blocks for all the exceptions thrown inside the block will be generated automatically.<br>You can customize the bodies of the generated catch blocks on the Code tab of File | Settings | File and Code Templates.<br>Use other items in the list to surround with other constructs.</p>
+<p> Using <strong>Alt+Insert</strong> (Code | Generate) in the editor, you can easily generate getter and setter methods for any fields of your class.</p>
+<h2 id="使用Gradle设置layout子目录"><a href="#使用Gradle设置layout子目录" class="headerlink" title="使用Gradle设置layout子目录"></a>使用Gradle设置layout子目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">sourceSets &#123;</div><div class="line">    main &#123;</div><div class="line">        jni.srcDirs = [&apos;src/main/jni&apos;,]</div><div class="line">        res.srcDirs = [&apos;src/main/res&apos;,</div><div class="line">                       &apos;src/main/res/layout/activity&apos;,</div><div class="line">                      &apos;src/main/res/layout/fragment&apos;,</div><div class="line">                       &apos;src/main/res/layout/item&apos;]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Ctrl-Shift-Space"><a href="#Ctrl-Shift-Space" class="headerlink" title="Ctrl+Shift+Space"></a>Ctrl+Shift+Space</h2><p>The SmartType code completion greatly helps to find methods and variables that are suitable in the current context, by analyzing the expected type of the whole expression. So doing, Android Studio pinpoints the top five most suitable results and highlights them on the blue background. For example, type</p>
+<p>and press <strong>Ctrl+Shift+Space</strong>:</p>
+<p>The SmartType completion also works after the return keyword, in an assignment, in an argument list of a method call and other places.</p>
+<h2 id="Ctrl-O"><a href="#Ctrl-O" class="headerlink" title="Ctrl+O"></a>Ctrl+O</h2><p>You may easily override methods of the base class by pressing Ctrl+O (Code | Override Methods).</p>
+<h2 id="Ctrl-I"><a href="#Ctrl-I" class="headerlink" title="Ctrl+I"></a>Ctrl+I</h2><p>To implement methods of the interfaces that the current class implements (or of the abstract base class), use Ctrl+I (Code | Implement methods).</p>
+<h2 id="Android-studio-插件安装"><a href="#Android-studio-插件安装" class="headerlink" title="Android studio 插件安装"></a><a href="http://blog.csdn.net/aaawqqq/article/details/50772720" target="_blank" rel="external">Android studio 插件安装</a></h2><p>安装插件的入口有两个地方:<br>1) Preferences  &gt;  Plugins   选择  Browse repositories 联网安装插件<br>2)启动界面的configure选项  -&gt;  plugins  -&gt; 弹出plugins 菜单</p>
+<h2 id="添加依赖库"><a href="#添加依赖库" class="headerlink" title="添加依赖库"></a>添加依赖库</h2><p>A、在build.Gradle文件中手工添加<br>B、选中工程文件，F4，选择app的Dependencies标签页面，然后+，搜索关键字并下载</p>
+<h2 id="Shift-F6-Refactor-Rename"><a href="#Shift-F6-Refactor-Rename" class="headerlink" title="Shift+F6 (Refactor | Rename)"></a>Shift+F6 (Refactor | Rename)</h2><p>To try it, place the caret at the symbol you want to rename, and press <strong>Shift+F6 (Refactor | Rename)</strong>. Type the new name in the popup window that appears, or select one of the suggested names, and press Enter.</p>
+<h2 id="Enter和Tab在代码提示时的区别"><a href="#Enter和Tab在代码提示时的区别" class="headerlink" title="Enter和Tab在代码提示时的区别"></a>Enter和Tab在代码提示时的区别</h2><p> 看图!<br> <img src="http://static.codeceo.com/images/2015/11/0ff1495a69e7f791a6f664f279016617.gif" alt=""></p>
+<p> When using Code Completion, you can accept the currently highlighted selection in the popup list with Tab key.<br>Unlike accepting with the Enter key, the selected name will overwrite the rest of the name to the right of the caret. This can be especially useful for replacing one method or variable name with another.</p>
+<h2 id="Bookmarks"><a href="#Bookmarks" class="headerlink" title="Bookmarks!"></a>Bookmarks!</h2><p>如其名，书签。帮助快速回到指定的位置，实际使用中简直爽得不行。</p>
+<p><strong>f11</strong></p>
+<p>将当前位置添加到书签中或者从书签中移除。</p>
+<p><strong>shift+f11</strong></p>
+<p>显示有哪些书签。</p>
+<p><img src="http://static.codeceo.com/images/2015/11/6d48930da07ca6c8858aad67e9be48c1.gif" alt=""></p>
+<p><strong>ctrl + h</strong><br>显示大纲</p>
+<h2 id="The-File-Structure-Popup"><a href="#The-File-Structure-Popup" class="headerlink" title="The File Structure Popup"></a>The File Structure Popup</h2><p><strong>ctrl+f12</strong></p>
+<p>此快捷键可以调出当前文件的大纲，并通过模糊匹配快速跳转至指定的方法。<br>勾选上“show anonymous classes”后其功能相当于Eclipse中的ctrl+o</p>
+<p><img src="http://static.codeceo.com/images/2015/11/b9a22088dd4c98e411f2a2b1329fee16.gif" alt=""></p>
+<h2 id="Hide-All-Panels"><a href="#Hide-All-Panels" class="headerlink" title="Hide All Panels"></a>Hide All Panels</h2><p><strong>ctrl + shit +F12</strong></p>
+<p>关闭或者恢复其他窗口。在编写代码的时候非常方便的全屏编辑框，可以更加专心的coding…</p>
+<p><img src="http://static.codeceo.com/images/2015/11/04e27f2ff4e98ae04802bb81b8ca54ab.gif" alt=""></p>
+<h2 id="Parameter-Info"><a href="#Parameter-Info" class="headerlink" title="Parameter Info"></a>Parameter Info</h2><p><strong>ctrl+p</strong></p>
+<p>在调用一些方法的时候免不了会忘记或者不知道此方法需要哪些参数。ctrl+p可以显示出此方法需要的参数。必备技能之一。</p>
+<h2 id="Lines-Edit"><a href="#Lines-Edit" class="headerlink" title="Lines Edit"></a>Lines Edit</h2><p><strong>ctrl+y</strong><br>删除行</p>
+<h2 id="Find-Actions"><a href="#Find-Actions" class="headerlink" title="Find Actions"></a>Find Actions</h2><p><strong>ctrl+shift+a</strong></p>
+<p>对于没有设置快捷键或者忘记快捷键的菜单或者动作（Action），可能通过输入其名字快速调用。神技！！！</p>
+<p>例如想要编译，只需要输入”release”，则列表框中就会出现”assembleRelease”选项，选择就可以进行编译。</p>
+<p><img src="http://static.codeceo.com/images/2015/11/4e600b142e3e4d86398b7b4db66db33f.gif" alt=""></p>
+<p><strong>分析堆栈信息</strong></p>
+<p>Find Actions(ctrl+shift+a)输入 <strong>analyze stacktrace”</strong> 即可查看堆栈信息。<br><img src="http://static.codeceo.com/images/2015/11/3a824abd46773ba887c577f4cff1ff0c.gif" alt=""></p>
+<p><strong>分析某个值的来源</strong><br>Find Actions(ctrl+shift+a)输入”Analyze Data Flow to Here”，可以查看某个变量某个参数其值是如何一路赋值过来的。<br>对于分析代码非常有用。<br><img src="http://static.codeceo.com/images/2015/11/2f68ddf53a1e6506c42e84b766ab6005.gif" alt=""></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/music.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://www.codeceo.com/article/android-studio-skills.html&quot;&gt;提高效率的 Android Studio 技巧汇总&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://static.codeceo.com/images/2015/08/android-studio-logo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;工欲善其事必先利其器，磨刀不误砍柴工&lt;/p&gt;
     
     </summary>
     
@@ -3820,77 +4058,6 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
       &lt;p&gt;&lt;a href=&quot;http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/&quot;&gt;Jark’s Blog
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android Studio 技巧</title>
-    <link href="http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/"/>
-    <id>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</id>
-    <published>2017-03-03T00:31:06.000Z</published>
-    <updated>2017-03-23T10:00:16.388Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.codeceo.com/article/android-studio-skills.html" target="_blank" rel="external">提高效率的 Android Studio 技巧汇总</a></p>
-<p><img src="http://static.codeceo.com/images/2015/08/android-studio-logo.png" alt=""></p>
-<p>工欲善其事必先利其器，磨刀不误砍柴工</p>
- <a id="more"></a>
-<p> ctrl+/ 注释一行代码<br> ctrl+shift+/注释代码块<br> ctrl+b查看声明<br> ctrl+f查找<br> ctrl+r替换<br> ctrl+shif+f 全路径查找<br> ctrl+shift+r 全路径替换</p>
-<p> ctrl+number-minus 代码折叠<br> ctrl+number-plus代码展开<br> ctrl+shift+minus折叠窗口内所有代码<br> ctrl+shift+plus展开窗口内所有代码</p>
-<p> ctrl+o复写方法<br> ctrl+alt+o清除无效包引用<br> ctrl+alt+l 格式化代码</p>
-<p> ctrl+shift+backspace 返回上次编辑点</p>
-<p>To navigate to the implementation(s) of an abstract method, position the caret at its usage or its name in the declaration and press <strong>Ctrl+Alt+B</strong>.</p>
-<p>The SmartType code completion may be used after the new keyword, to instantiate an object of the expected type. For example, type</p>
-<p>and press <strong>Ctrl+Shift+Space</strong>:</p>
-<p> When you want to catch exceptions thrown by some code fragment, select it in the editor, press <strong>Ctrl+Alt+T</strong> (Code | Surround With) and choose try / catch. The catch blocks for all the exceptions thrown inside the block will be generated automatically.<br>You can customize the bodies of the generated catch blocks on the Code tab of File | Settings | File and Code Templates.<br>Use other items in the list to surround with other constructs.</p>
-<p> Using <strong>Alt+Insert</strong> (Code | Generate) in the editor, you can easily generate getter and setter methods for any fields of your class.</p>
-<h2 id="使用Gradle设置layout子目录"><a href="#使用Gradle设置layout子目录" class="headerlink" title="使用Gradle设置layout子目录"></a>使用Gradle设置layout子目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">sourceSets &#123;</div><div class="line">    main &#123;</div><div class="line">        jni.srcDirs = [&apos;src/main/jni&apos;,]</div><div class="line">        res.srcDirs = [&apos;src/main/res&apos;,</div><div class="line">                       &apos;src/main/res/layout/activity&apos;,</div><div class="line">                      &apos;src/main/res/layout/fragment&apos;,</div><div class="line">                       &apos;src/main/res/layout/item&apos;]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Ctrl-Shift-Space"><a href="#Ctrl-Shift-Space" class="headerlink" title="Ctrl+Shift+Space"></a>Ctrl+Shift+Space</h2><p>The SmartType code completion greatly helps to find methods and variables that are suitable in the current context, by analyzing the expected type of the whole expression. So doing, Android Studio pinpoints the top five most suitable results and highlights them on the blue background. For example, type</p>
-<p>and press <strong>Ctrl+Shift+Space</strong>:</p>
-<p>The SmartType completion also works after the return keyword, in an assignment, in an argument list of a method call and other places.</p>
-<h2 id="Ctrl-O"><a href="#Ctrl-O" class="headerlink" title="Ctrl+O"></a>Ctrl+O</h2><p>You may easily override methods of the base class by pressing Ctrl+O (Code | Override Methods).</p>
-<h2 id="Ctrl-I"><a href="#Ctrl-I" class="headerlink" title="Ctrl+I"></a>Ctrl+I</h2><p>To implement methods of the interfaces that the current class implements (or of the abstract base class), use Ctrl+I (Code | Implement methods).</p>
-<h2 id="Android-studio-插件安装"><a href="#Android-studio-插件安装" class="headerlink" title="Android studio 插件安装"></a><a href="http://blog.csdn.net/aaawqqq/article/details/50772720" target="_blank" rel="external">Android studio 插件安装</a></h2><p>安装插件的入口有两个地方:<br>1) Preferences  &gt;  Plugins   选择  Browse repositories 联网安装插件<br>2)启动界面的configure选项  -&gt;  plugins  -&gt; 弹出plugins 菜单</p>
-<h2 id="添加依赖库"><a href="#添加依赖库" class="headerlink" title="添加依赖库"></a>添加依赖库</h2><p>A、在build.Gradle文件中手工添加<br>B、选中工程文件，F4，选择app的Dependencies标签页面，然后+，搜索关键字并下载</p>
-<h2 id="Shift-F6-Refactor-Rename"><a href="#Shift-F6-Refactor-Rename" class="headerlink" title="Shift+F6 (Refactor | Rename)"></a>Shift+F6 (Refactor | Rename)</h2><p>To try it, place the caret at the symbol you want to rename, and press <strong>Shift+F6 (Refactor | Rename)</strong>. Type the new name in the popup window that appears, or select one of the suggested names, and press Enter.</p>
-<h2 id="Enter和Tab在代码提示时的区别"><a href="#Enter和Tab在代码提示时的区别" class="headerlink" title="Enter和Tab在代码提示时的区别"></a>Enter和Tab在代码提示时的区别</h2><p> 看图!<br> <img src="http://static.codeceo.com/images/2015/11/0ff1495a69e7f791a6f664f279016617.gif" alt=""></p>
-<p> When using Code Completion, you can accept the currently highlighted selection in the popup list with Tab key.<br>Unlike accepting with the Enter key, the selected name will overwrite the rest of the name to the right of the caret. This can be especially useful for replacing one method or variable name with another.</p>
-<h2 id="Bookmarks"><a href="#Bookmarks" class="headerlink" title="Bookmarks!"></a>Bookmarks!</h2><p>如其名，书签。帮助快速回到指定的位置，实际使用中简直爽得不行。</p>
-<p><strong>f11</strong></p>
-<p>将当前位置添加到书签中或者从书签中移除。</p>
-<p><strong>shift+f11</strong></p>
-<p>显示有哪些书签。</p>
-<p><img src="http://static.codeceo.com/images/2015/11/6d48930da07ca6c8858aad67e9be48c1.gif" alt=""></p>
-<p><strong>ctrl + h</strong><br>显示大纲</p>
-<h2 id="The-File-Structure-Popup"><a href="#The-File-Structure-Popup" class="headerlink" title="The File Structure Popup"></a>The File Structure Popup</h2><p><strong>ctrl+f12</strong></p>
-<p>此快捷键可以调出当前文件的大纲，并通过模糊匹配快速跳转至指定的方法。<br>勾选上“show anonymous classes”后其功能相当于Eclipse中的ctrl+o</p>
-<p><img src="http://static.codeceo.com/images/2015/11/b9a22088dd4c98e411f2a2b1329fee16.gif" alt=""></p>
-<h2 id="Hide-All-Panels"><a href="#Hide-All-Panels" class="headerlink" title="Hide All Panels"></a>Hide All Panels</h2><p><strong>ctrl + shit +F12</strong></p>
-<p>关闭或者恢复其他窗口。在编写代码的时候非常方便的全屏编辑框，可以更加专心的coding…</p>
-<p><img src="http://static.codeceo.com/images/2015/11/04e27f2ff4e98ae04802bb81b8ca54ab.gif" alt=""></p>
-<h2 id="Parameter-Info"><a href="#Parameter-Info" class="headerlink" title="Parameter Info"></a>Parameter Info</h2><p><strong>ctrl+p</strong></p>
-<p>在调用一些方法的时候免不了会忘记或者不知道此方法需要哪些参数。ctrl+p可以显示出此方法需要的参数。必备技能之一。</p>
-<h2 id="Lines-Edit"><a href="#Lines-Edit" class="headerlink" title="Lines Edit"></a>Lines Edit</h2><p><strong>ctrl+y</strong><br>删除行</p>
-<h2 id="Find-Actions"><a href="#Find-Actions" class="headerlink" title="Find Actions"></a>Find Actions</h2><p><strong>ctrl+shift+a</strong></p>
-<p>对于没有设置快捷键或者忘记快捷键的菜单或者动作（Action），可能通过输入其名字快速调用。神技！！！</p>
-<p>例如想要编译，只需要输入”release”，则列表框中就会出现”assembleRelease”选项，选择就可以进行编译。</p>
-<p><img src="http://static.codeceo.com/images/2015/11/4e600b142e3e4d86398b7b4db66db33f.gif" alt=""></p>
-<p><strong>分析堆栈信息</strong></p>
-<p>Find Actions(ctrl+shift+a)输入 <strong>analyze stacktrace”</strong> 即可查看堆栈信息。<br><img src="http://static.codeceo.com/images/2015/11/3a824abd46773ba887c577f4cff1ff0c.gif" alt=""></p>
-<p><strong>分析某个值的来源</strong><br>Find Actions(ctrl+shift+a)输入”Analyze Data Flow to Here”，可以查看某个变量某个参数其值是如何一路赋值过来的。<br>对于分析代码非常有用。<br><img src="http://static.codeceo.com/images/2015/11/2f68ddf53a1e6506c42e84b766ab6005.gif" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.codeceo.com/article/android-studio-skills.html&quot;&gt;提高效率的 Android Studio 技巧汇总&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://static.codeceo.com/images/2015/08/android-studio-logo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;工欲善其事必先利其器，磨刀不误砍柴工&lt;/p&gt;
     
     </summary>
     
@@ -4727,6 +4894,62 @@ grub引导也分为两个阶段stage1阶段和stage2阶段(有些较新的grub�
   </entry>
   
   <entry>
+    <title>显示卡的“心脏” GPU工作原理介绍</title>
+    <link href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/"/>
+    <id>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</id>
+    <published>2017-02-27T00:58:06.000Z</published>
+    <updated>2017-02-27T05:39:04.098Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.eechina.com/thread-176224-1-1.html" target="_blank" rel="external">designapp</a></p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png" alt=""></p>
+<p>图形处理器(英语：Graphics Processing Unit，缩写：gpu)，又称显示核心、视觉处理器、显示芯片，是一种专门在个人电脑、工作站、游戏机和一些移动设备(如平板电脑、智能手机等)上图像运算工作的微处理器。</p>
+<p>用途是将计算机系统所需要的显示信息进行转换驱动，并向显示器提供行扫描信号，控制显示器的正确显示，是连接显示器和个人电脑主板的重要元件，也是“人机对话”的重要设备之一。显卡作为电脑主机里的一个重要组成部分，承担输出显示图形的任务，对于从事专业图形设计的人来说显卡非常重要。</p>
+<a id="more"></a>
+<p>gpu由于历史原因，是为了视频游戏而产生的(至今其主要驱动力还是不断增长的视频游戏市场)，在三维游戏中常常出现的一类操作是对海量数据进行相同的操作，如：对每一个顶点进行同样的坐标变换，对每一个顶点按照同样的光照模型计算颜色值。</p>
+<p>gpu的众核架构非常适合把同样的指令流并行发送到众核上，采用不同的输入数据执行。在 2003-2004年左右，图形学之外的领域专家开始注意到gpu与众不同的计算能力，开始尝试把gpu用于通用计算(即GPgpu)。之后NVIDIA发布了CUDA，amd和等公司也发布了OpenCL，gpu开始在通用计算领域得到广泛应用，包括：数值分析，海量数据处理(排序，Map- Reduce等)，金融分析等等。</p>
+<p>简而言之，<strong>当程序员为cpu编写程序时，他们倾向于利用复杂的逻辑结构优化算法从而减少计算任务的运行时间，即Latency。当程序员为gpu编写程序时，则利用其处理海量数据的优势，通过提高总的数据吞吐量(Throughput)来掩盖 Lantency。</strong> 目前，cpu和gpu的区别正在逐渐缩小，因为gpu也在处理不规则任务和线程间通信方面有了长足的进步。另外，功耗问题对于gpu比cpu更严重。</p>
+<p>gpu是显示卡的“心脏”，也就相当于cpu在电脑中的作用，它决定了该显卡的档次和大部分性能，同时也是2D显示卡和3D显示卡的区别依据。</p>
+<p>2D显示芯片在处理3D图像和特效时主要依赖cpu的处理能力，称为“软加速”。3D显示芯片是将三维图像和特效处理功能集中在显示芯片内，也即所谓的“硬件加速”功能。显示芯片通常是显示卡上最大的芯片(也是引脚最多的)。gpu使显卡减少了对cpu的依赖，并进行部分原本cpu的工作，尤其是在3D图形处理时。gpu所采用的核心技术有硬体T&amp;L、立方环境材质贴图和顶点混合、纹理压缩和凹凸映射贴图、双重纹理四像素256位渲染引擎等，而硬体T&amp;L技术可以说是gpu的标志。</p>
+<h2 id="gpu工作原理-工作原理"><a href="#gpu工作原理-工作原理" class="headerlink" title="gpu工作原理-工作原理"></a>gpu工作原理-工作原理</h2><p>简单的说gpu就是能够从硬件上支持T&amp;L(Transform and LighTIng，多边形转换与光源处理)的显示芯片，因为T&amp;L是3D渲染中的一个重要部分，其作用是计算多边形的3D位置和处理动态光线效果，也可以称为“几何处理”。一个好的T&amp;L单元，可以提供细致的3D物体和高级的光线特效;只不过大多数PC中，T&amp;L的大部分运算是交由cpu处理的(这就也就是所谓的软件T&amp;L)，由于cpu的任务繁多，除了T&amp;L之外，还要做内存管理、输入响应等非3D图形处理工作，因此在实际运算的时候性能会大打折扣，常常出现显卡等待cpu数据的情况，其运算速度远跟不上今天复杂三维游戏的要求。即使cpu的工作频率超过 1GHz或更高，对它的帮助也不大，由于这是PC本身设计造成的问题，与cpu的速度无太大关系。</p>
+<p>gpu图形处理，可以大致分成 5 个步骤，如下图箭头的部分。分别为 vertex shader、primiTIve processing、rasterisaTIon、fragment shader、tesTIng and blending。<br><img src="http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png" alt=""></p>
+<p>第一步，vertex shader。是将三维空间中数个(x，y，z)顶点放进 gpu 中。在这一步骤中，电脑会在内部模拟出一个三维空间，并将这些顶点放置在这一空间内部。接着，投影在同一平面上，也是我们将看到的画面。同时，存下各点距离投影面的垂直距离，以便做后续的处理。</p>
+<p>这个过程就像是本地球观看星星一般。地球的天空，就像是一个投影面，所有的星星，不管远近皆投影在同一面上。本地球的我们，抬起头来观看星星，分不出星星的远近，只能分辨出亮度。gpu 所投影出的结果，和这个情况类似。<br><img src="http://okkntqe2h.bkt.clouddn.com/%E6%8A%AC%E8%B5%B7%E5%A4%B4%E6%9D%A5%E8%A7%82%E7%9C%8B%E6%98%9F%E6%98%9F%EF%BC%8C%E5%88%86%E4%B8%8D%E5%87%BA%E6%98%9F%E6%98%9F%E7%9A%84%E8%BF%9C%E8%BF%91%EF%BC%8C%E5%8F%AA%E8%83%BD%E5%88%86%E8%BE%A8%E5%87%BA%E4%BA%AE%E5%BA%A6.png" alt=""></p>
+<p>从地球所看到的星空，星星就像是投影到一球面上，除非使用特别的仪器，不然分不出星星和地球的距离</p>
+<p>第二步，primitive processing。是将相关的点链接在一起，以形成图形。在一开始输入数个顶点进入 gpu 时，程序会特别注记哪些点是需要组合在一起，以形成一线或面。就像是看星座的时候一样，将相关连的星星连起来，形成特定的图案。</p>
+<p>第三步，rasterisation。因为电脑的屏幕是由一个又一个的像素组成，因此，需要将一条连续的直线，使用绘图的演算法，以方格绘出该直线。图形也是以此方式，先标出边线，再用方格填满整个平面。</p>
+<p>第四步，fragment shader。将格点化后的图形着上颜色。所需着上的颜色也是于输入时便被注记。在游玩游戏时，这一步相当耗费 gpu 的计算资源，因为光影的效果、物体表面材质皆是在这一步进行，这些计算决定着游戏画面的精细程度。因此在游玩游戏时，调高游戏画面品质大幅增加这一步的计算负担，降低游戏品质。<br><img src="http://okkntqe2h.bkt.clouddn.com/%E5%B0%86%E4%B8%80%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2%EF%BC%8C%E7%94%A8%E6%96%B9%E6%A0%BC%E5%91%88%E7%8E%B0%E8%BF%91%E4%BC%BC%E5%8E%9F%E5%A7%8B%E5%9B%BE%E6%A1%88%EF%BC%8C%E5%B9%B6%E7%9D%80%E4%B8%8A%E9%A2%9C%E8%89%B2%E3%80%82%E4%B8%80%E5%9D%97%E5%8F%88%E4%B8%80%E5%9D%97%E7%9A%84%E6%96%B9%E6%A0%BC%EF%BC%8C%E5%B0%B1%E6%98%AF%E6%98%BE%E7%A4%BA%E5%99%A8%E4%B8%8A%E7%9A%84%E5%83%8F%E7%B4%A0.png" alt=""></p>
+<p>将一个三角形，用方格呈现近似原始图案，并着上颜色。一块又一块的方格，就是显示器上的像素</p>
+<p>最后一步，testing and blending。便是将第一步所获得的投影垂直距离取出，和第四步的结果一同做最后处理。在去除被会被其他较近距离的物体挡住的物体后，让剩下的图形放进 gpu 的输出内存。之后，结果便会被送到电脑屏幕显示。</p>
+<h2 id="gpu工作原理-主要供应商"><a href="#gpu工作原理-主要供应商" class="headerlink" title="gpu工作原理-主要供应商"></a>gpu工作原理-主要供应商</h2><p>gpu有非常多的厂商都生产，和cpu一样，生产的厂商比较多，但大家熟悉的却只有INA，以至于大家以为gpu只有三大厂商。</p>
+<h3 id="英特尔"><a href="#英特尔" class="headerlink" title="英特尔"></a>英特尔</h3><p>英特尔的gpu基本为集成显卡芯片，用于英特尔的主板和英特尔的cpu。可能你想不到，要是只按市场占有率计算，英特尔随着他主板及cpu发售的集成gpu占据了整个gpu市场的60%以上。</p>
+<p>他的gpu主要有：唯一一款独立显卡芯片Intel 740(i740)。Extreme Graphics系列、GMA系列(集成于芯片组中)。现在的HD Graphics系列[1] 、Iris? Graphics系列[2] 、Iris? Pro Graphics[2] 系列等(集成于cpu中)。</p>
+<h3 id="NVIDIA"><a href="#NVIDIA" class="headerlink" title="NVIDIA"></a>NVIDIA</h3><p>NVIDIA是现在最大的独立显卡芯片生产销售商。他的gpu包括大家熟悉的Geforce系列 ，包括GTX、GTS、GT等。专业工作站的Quadro系列 ，超级计算的Tesla系列 ，多显示器商用的NVS系列 ，移动设备的Tegra系列 。</p>
+<p>以前也销售集成在主板上的集成显卡芯片，这些随着主板芯片组一起发售，但是由于amd收购ATI后自身主板芯片组gpu能力提高，NVIDIA芯片组如日中天的景象已经消失了。曾经为游戏机Xbox、PS3供应gpu。</p>
+<h3 id="amd-ATI"><a href="#amd-ATI" class="headerlink" title="amd(ATI)"></a>amd(ATI)</h3><p>amd是世界上第二大的独立显卡芯片生产销售商，他的前身就是ATI，2006年amd以54亿美元收购ATI。他的gpu主要是大家熟悉的Radeon系列，包括以前的X、HD系列，近几年的R9、R7、R5、R3，现在的RX系列等。专业工作站的FireGL系列，超级计算的FireStream系列，多显示器商用的FireMV系列，现在前三者已合并为FirePro系列 。</p>
+<p>早期ATI还生产过Wonder系列、Mach系列、Rage系列芯片。除了独立显卡之外amd还拥有集成显卡芯片，集成于芯片组、APU中。由于amd收购ATI后，其主板市场迅速扩大，已经夺取了NVIDIA在amd处理器主板芯片组的半壁江山。就现在的发售量和发售盈利方面，amd的gpu市场占有率方面仍然略输于NVIDIA。amd也是游戏机Xbox 360、Wii、Wii U、PS4、Xbox One的gpu供应商。</p>
+<h3 id="3dfx"><a href="#3dfx" class="headerlink" title="3dfx"></a>3dfx</h3><p>是一家于1994年成立的生产3D gpu及显卡的公司。曾经生产了Voodoo系列显卡，并且研发了SLI技术。由于经营不善等问题于2002年被NVIDIA收购。</p>
+<h3 id="Matrox"><a href="#Matrox" class="headerlink" title="Matrox"></a>Matrox</h3><p>Matrox当年和NVIDIA，ATI一起争夺独立显卡芯片市场份额的一家公司，在曾经的一个时期Matrox的显卡和NVIDIA，ATI曾经在性能上比肩过。但由于后来其开发能力日渐衰退，在GF5时期，也就是ATI的9000系列时期，Matrox由于性能上整整落后了GF5900和Raden9800一个世代而逐渐被淘汰，淡出了民用独立显卡市场。但时下Matrox仍然在工程用专业显卡方面有自己的地位。</p>
+<p>这些显卡用于工程主图和多头输出仍然很强力。与NVIDIA和amd的专业显卡不同，NVIDIA，ATI的专业显卡涉足的是3D领域，而Matrox得专业显卡涉足的是2D领域，也就是CAD。但由于OpenCL、CUDA的日渐普及，DX10以上显卡将在所有支持CUDA的程序上表现出惊人的性能，也就是说当CUDA在各种运用软件普及的那天，Matrox也必将退出2D专业卡的市场。</p>
+<h3 id="SiS和VIA"><a href="#SiS和VIA" class="headerlink" title="SiS和VIA"></a>SiS和VIA</h3><p>矽统和威盛时下是对孪生兄弟，但他们曾经也是分开的两家公司，并且都生产自己主板的集成显卡芯片。但这可怜的两兄弟已经逐步在淡出主板市场了，也就必定将淡出gpu市场。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.eechina.com/thread-176224-1-1.html&quot;&gt;designapp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;图形处理器(英语：Graphics Processing Unit，缩写：gpu)，又称显示核心、视觉处理器、显示芯片，是一种专门在个人电脑、工作站、游戏机和一些移动设备(如平板电脑、智能手机等)上图像运算工作的微处理器。&lt;/p&gt;
+&lt;p&gt;用途是将计算机系统所需要的显示信息进行转换驱动，并向显示器提供行扫描信号，控制显示器的正确显示，是连接显示器和个人电脑主板的重要元件，也是“人机对话”的重要设备之一。显卡作为电脑主机里的一个重要组成部分，承担输出显示图形的任务，对于从事专业图形设计的人来说显卡非常重要。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="GPU" scheme="http://ipcreator.me/tags/GPU/"/>
+    
+  </entry>
+  
+  <entry>
     <title>硬盘的存储原理和内部架构</title>
     <link href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/"/>
     <id>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/</id>
@@ -4788,62 +5011,6 @@ grub引导也分为两个阶段stage1阶段和stage2阶段(有些较新的grub�
   </entry>
   
   <entry>
-    <title>显示卡的“心脏” GPU工作原理介绍</title>
-    <link href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/"/>
-    <id>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</id>
-    <published>2017-02-27T00:58:06.000Z</published>
-    <updated>2017-02-27T05:39:04.098Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.eechina.com/thread-176224-1-1.html" target="_blank" rel="external">designapp</a></p>
-<p><img src="http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png" alt=""></p>
-<p>图形处理器(英语：Graphics Processing Unit，缩写：gpu)，又称显示核心、视觉处理器、显示芯片，是一种专门在个人电脑、工作站、游戏机和一些移动设备(如平板电脑、智能手机等)上图像运算工作的微处理器。</p>
-<p>用途是将计算机系统所需要的显示信息进行转换驱动，并向显示器提供行扫描信号，控制显示器的正确显示，是连接显示器和个人电脑主板的重要元件，也是“人机对话”的重要设备之一。显卡作为电脑主机里的一个重要组成部分，承担输出显示图形的任务，对于从事专业图形设计的人来说显卡非常重要。</p>
-<a id="more"></a>
-<p>gpu由于历史原因，是为了视频游戏而产生的(至今其主要驱动力还是不断增长的视频游戏市场)，在三维游戏中常常出现的一类操作是对海量数据进行相同的操作，如：对每一个顶点进行同样的坐标变换，对每一个顶点按照同样的光照模型计算颜色值。</p>
-<p>gpu的众核架构非常适合把同样的指令流并行发送到众核上，采用不同的输入数据执行。在 2003-2004年左右，图形学之外的领域专家开始注意到gpu与众不同的计算能力，开始尝试把gpu用于通用计算(即GPgpu)。之后NVIDIA发布了CUDA，amd和等公司也发布了OpenCL，gpu开始在通用计算领域得到广泛应用，包括：数值分析，海量数据处理(排序，Map- Reduce等)，金融分析等等。</p>
-<p>简而言之，<strong>当程序员为cpu编写程序时，他们倾向于利用复杂的逻辑结构优化算法从而减少计算任务的运行时间，即Latency。当程序员为gpu编写程序时，则利用其处理海量数据的优势，通过提高总的数据吞吐量(Throughput)来掩盖 Lantency。</strong> 目前，cpu和gpu的区别正在逐渐缩小，因为gpu也在处理不规则任务和线程间通信方面有了长足的进步。另外，功耗问题对于gpu比cpu更严重。</p>
-<p>gpu是显示卡的“心脏”，也就相当于cpu在电脑中的作用，它决定了该显卡的档次和大部分性能，同时也是2D显示卡和3D显示卡的区别依据。</p>
-<p>2D显示芯片在处理3D图像和特效时主要依赖cpu的处理能力，称为“软加速”。3D显示芯片是将三维图像和特效处理功能集中在显示芯片内，也即所谓的“硬件加速”功能。显示芯片通常是显示卡上最大的芯片(也是引脚最多的)。gpu使显卡减少了对cpu的依赖，并进行部分原本cpu的工作，尤其是在3D图形处理时。gpu所采用的核心技术有硬体T&amp;L、立方环境材质贴图和顶点混合、纹理压缩和凹凸映射贴图、双重纹理四像素256位渲染引擎等，而硬体T&amp;L技术可以说是gpu的标志。</p>
-<h2 id="gpu工作原理-工作原理"><a href="#gpu工作原理-工作原理" class="headerlink" title="gpu工作原理-工作原理"></a>gpu工作原理-工作原理</h2><p>简单的说gpu就是能够从硬件上支持T&amp;L(Transform and LighTIng，多边形转换与光源处理)的显示芯片，因为T&amp;L是3D渲染中的一个重要部分，其作用是计算多边形的3D位置和处理动态光线效果，也可以称为“几何处理”。一个好的T&amp;L单元，可以提供细致的3D物体和高级的光线特效;只不过大多数PC中，T&amp;L的大部分运算是交由cpu处理的(这就也就是所谓的软件T&amp;L)，由于cpu的任务繁多，除了T&amp;L之外，还要做内存管理、输入响应等非3D图形处理工作，因此在实际运算的时候性能会大打折扣，常常出现显卡等待cpu数据的情况，其运算速度远跟不上今天复杂三维游戏的要求。即使cpu的工作频率超过 1GHz或更高，对它的帮助也不大，由于这是PC本身设计造成的问题，与cpu的速度无太大关系。</p>
-<p>gpu图形处理，可以大致分成 5 个步骤，如下图箭头的部分。分别为 vertex shader、primiTIve processing、rasterisaTIon、fragment shader、tesTIng and blending。<br><img src="http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png" alt=""></p>
-<p>第一步，vertex shader。是将三维空间中数个(x，y，z)顶点放进 gpu 中。在这一步骤中，电脑会在内部模拟出一个三维空间，并将这些顶点放置在这一空间内部。接着，投影在同一平面上，也是我们将看到的画面。同时，存下各点距离投影面的垂直距离，以便做后续的处理。</p>
-<p>这个过程就像是本地球观看星星一般。地球的天空，就像是一个投影面，所有的星星，不管远近皆投影在同一面上。本地球的我们，抬起头来观看星星，分不出星星的远近，只能分辨出亮度。gpu 所投影出的结果，和这个情况类似。<br><img src="http://okkntqe2h.bkt.clouddn.com/%E6%8A%AC%E8%B5%B7%E5%A4%B4%E6%9D%A5%E8%A7%82%E7%9C%8B%E6%98%9F%E6%98%9F%EF%BC%8C%E5%88%86%E4%B8%8D%E5%87%BA%E6%98%9F%E6%98%9F%E7%9A%84%E8%BF%9C%E8%BF%91%EF%BC%8C%E5%8F%AA%E8%83%BD%E5%88%86%E8%BE%A8%E5%87%BA%E4%BA%AE%E5%BA%A6.png" alt=""></p>
-<p>从地球所看到的星空，星星就像是投影到一球面上，除非使用特别的仪器，不然分不出星星和地球的距离</p>
-<p>第二步，primitive processing。是将相关的点链接在一起，以形成图形。在一开始输入数个顶点进入 gpu 时，程序会特别注记哪些点是需要组合在一起，以形成一线或面。就像是看星座的时候一样，将相关连的星星连起来，形成特定的图案。</p>
-<p>第三步，rasterisation。因为电脑的屏幕是由一个又一个的像素组成，因此，需要将一条连续的直线，使用绘图的演算法，以方格绘出该直线。图形也是以此方式，先标出边线，再用方格填满整个平面。</p>
-<p>第四步，fragment shader。将格点化后的图形着上颜色。所需着上的颜色也是于输入时便被注记。在游玩游戏时，这一步相当耗费 gpu 的计算资源，因为光影的效果、物体表面材质皆是在这一步进行，这些计算决定着游戏画面的精细程度。因此在游玩游戏时，调高游戏画面品质大幅增加这一步的计算负担，降低游戏品质。<br><img src="http://okkntqe2h.bkt.clouddn.com/%E5%B0%86%E4%B8%80%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2%EF%BC%8C%E7%94%A8%E6%96%B9%E6%A0%BC%E5%91%88%E7%8E%B0%E8%BF%91%E4%BC%BC%E5%8E%9F%E5%A7%8B%E5%9B%BE%E6%A1%88%EF%BC%8C%E5%B9%B6%E7%9D%80%E4%B8%8A%E9%A2%9C%E8%89%B2%E3%80%82%E4%B8%80%E5%9D%97%E5%8F%88%E4%B8%80%E5%9D%97%E7%9A%84%E6%96%B9%E6%A0%BC%EF%BC%8C%E5%B0%B1%E6%98%AF%E6%98%BE%E7%A4%BA%E5%99%A8%E4%B8%8A%E7%9A%84%E5%83%8F%E7%B4%A0.png" alt=""></p>
-<p>将一个三角形，用方格呈现近似原始图案，并着上颜色。一块又一块的方格，就是显示器上的像素</p>
-<p>最后一步，testing and blending。便是将第一步所获得的投影垂直距离取出，和第四步的结果一同做最后处理。在去除被会被其他较近距离的物体挡住的物体后，让剩下的图形放进 gpu 的输出内存。之后，结果便会被送到电脑屏幕显示。</p>
-<h2 id="gpu工作原理-主要供应商"><a href="#gpu工作原理-主要供应商" class="headerlink" title="gpu工作原理-主要供应商"></a>gpu工作原理-主要供应商</h2><p>gpu有非常多的厂商都生产，和cpu一样，生产的厂商比较多，但大家熟悉的却只有INA，以至于大家以为gpu只有三大厂商。</p>
-<h3 id="英特尔"><a href="#英特尔" class="headerlink" title="英特尔"></a>英特尔</h3><p>英特尔的gpu基本为集成显卡芯片，用于英特尔的主板和英特尔的cpu。可能你想不到，要是只按市场占有率计算，英特尔随着他主板及cpu发售的集成gpu占据了整个gpu市场的60%以上。</p>
-<p>他的gpu主要有：唯一一款独立显卡芯片Intel 740(i740)。Extreme Graphics系列、GMA系列(集成于芯片组中)。现在的HD Graphics系列[1] 、Iris? Graphics系列[2] 、Iris? Pro Graphics[2] 系列等(集成于cpu中)。</p>
-<h3 id="NVIDIA"><a href="#NVIDIA" class="headerlink" title="NVIDIA"></a>NVIDIA</h3><p>NVIDIA是现在最大的独立显卡芯片生产销售商。他的gpu包括大家熟悉的Geforce系列 ，包括GTX、GTS、GT等。专业工作站的Quadro系列 ，超级计算的Tesla系列 ，多显示器商用的NVS系列 ，移动设备的Tegra系列 。</p>
-<p>以前也销售集成在主板上的集成显卡芯片，这些随着主板芯片组一起发售，但是由于amd收购ATI后自身主板芯片组gpu能力提高，NVIDIA芯片组如日中天的景象已经消失了。曾经为游戏机Xbox、PS3供应gpu。</p>
-<h3 id="amd-ATI"><a href="#amd-ATI" class="headerlink" title="amd(ATI)"></a>amd(ATI)</h3><p>amd是世界上第二大的独立显卡芯片生产销售商，他的前身就是ATI，2006年amd以54亿美元收购ATI。他的gpu主要是大家熟悉的Radeon系列，包括以前的X、HD系列，近几年的R9、R7、R5、R3，现在的RX系列等。专业工作站的FireGL系列，超级计算的FireStream系列，多显示器商用的FireMV系列，现在前三者已合并为FirePro系列 。</p>
-<p>早期ATI还生产过Wonder系列、Mach系列、Rage系列芯片。除了独立显卡之外amd还拥有集成显卡芯片，集成于芯片组、APU中。由于amd收购ATI后，其主板市场迅速扩大，已经夺取了NVIDIA在amd处理器主板芯片组的半壁江山。就现在的发售量和发售盈利方面，amd的gpu市场占有率方面仍然略输于NVIDIA。amd也是游戏机Xbox 360、Wii、Wii U、PS4、Xbox One的gpu供应商。</p>
-<h3 id="3dfx"><a href="#3dfx" class="headerlink" title="3dfx"></a>3dfx</h3><p>是一家于1994年成立的生产3D gpu及显卡的公司。曾经生产了Voodoo系列显卡，并且研发了SLI技术。由于经营不善等问题于2002年被NVIDIA收购。</p>
-<h3 id="Matrox"><a href="#Matrox" class="headerlink" title="Matrox"></a>Matrox</h3><p>Matrox当年和NVIDIA，ATI一起争夺独立显卡芯片市场份额的一家公司，在曾经的一个时期Matrox的显卡和NVIDIA，ATI曾经在性能上比肩过。但由于后来其开发能力日渐衰退，在GF5时期，也就是ATI的9000系列时期，Matrox由于性能上整整落后了GF5900和Raden9800一个世代而逐渐被淘汰，淡出了民用独立显卡市场。但时下Matrox仍然在工程用专业显卡方面有自己的地位。</p>
-<p>这些显卡用于工程主图和多头输出仍然很强力。与NVIDIA和amd的专业显卡不同，NVIDIA，ATI的专业显卡涉足的是3D领域，而Matrox得专业显卡涉足的是2D领域，也就是CAD。但由于OpenCL、CUDA的日渐普及，DX10以上显卡将在所有支持CUDA的程序上表现出惊人的性能，也就是说当CUDA在各种运用软件普及的那天，Matrox也必将退出2D专业卡的市场。</p>
-<h3 id="SiS和VIA"><a href="#SiS和VIA" class="headerlink" title="SiS和VIA"></a>SiS和VIA</h3><p>矽统和威盛时下是对孪生兄弟，但他们曾经也是分开的两家公司，并且都生产自己主板的集成显卡芯片。但这可怜的两兄弟已经逐步在淡出主板市场了，也就必定将淡出gpu市场。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.eechina.com/thread-176224-1-1.html&quot;&gt;designapp&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;图形处理器(英语：Graphics Processing Unit，缩写：gpu)，又称显示核心、视觉处理器、显示芯片，是一种专门在个人电脑、工作站、游戏机和一些移动设备(如平板电脑、智能手机等)上图像运算工作的微处理器。&lt;/p&gt;
-&lt;p&gt;用途是将计算机系统所需要的显示信息进行转换驱动，并向显示器提供行扫描信号，控制显示器的正确显示，是连接显示器和个人电脑主板的重要元件，也是“人机对话”的重要设备之一。显卡作为电脑主机里的一个重要组成部分，承担输出显示图形的任务，对于从事专业图形设计的人来说显卡非常重要。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="GPU" scheme="http://ipcreator.me/tags/GPU/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CPU的内部架构和工作原理</title>
     <link href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-cpu/"/>
     <id>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-cpu/</id>
@@ -4901,6 +5068,84 @@ grub引导也分为两个阶段stage1阶段和stage2阶段(有些较新的grub�
     
     
       <category term="CPU" scheme="http://ipcreator.me/tags/CPU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android硬件加速原理与实现简介</title>
+    <link href="http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/"/>
+    <id>http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/</id>
+    <published>2017-02-26T14:57:06.000Z</published>
+    <updated>2017-02-27T00:24:17.038Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://tech.meituan.com/hardware-accelerate.html" target="_blank" rel="external">子健</a></p>
+<p>在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。</p>
+<p>本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。</p>
+<a id="more"></a>
+<h2 id="了解硬件加速对App开发的意义"><a href="#了解硬件加速对App开发的意义" class="headerlink" title="了解硬件加速对App开发的意义"></a>了解硬件加速对App开发的意义</h2><p>对于App开发者，简单了解硬件加速原理及上层API实现，开发时就可以充分利用硬件加速提高页面的性能。以Android举例，实现一个圆角矩形按钮通常有两种方案：使用PNG图片；使用代码（XML/Java）实现。简单对比两种方案如下。</p>
+<p>方案    原理    特点<br>使用PNG图片（BitmapDrawable）    解码PNG图片生成Bitmap，传到底层，由GPU渲染    图片解码消耗CPU运算资源，Bitmap占用内存大，绘制慢<br>使用XML或Java代码实现（ShapeDrawable）    直接将Shape信息传到底层，由GPU渲染    消耗CPU资源少，占用内存小，绘制快</p>
+<h3 id="页面渲染背景知识"><a href="#页面渲染背景知识" class="headerlink" title="页面渲染背景知识"></a>页面渲染背景知识</h3><p>页面渲染时，被绘制的元素最终要转换成矩阵像素点（即多维数组形式，类似安卓中的Bitmap），才能被显示器显示。<br>页面由各种基本元素组成，例如圆形、圆角矩形、线段、文字、矢量图（常用贝塞尔曲线组成）、Bitmap等。<br>元素绘制时尤其是动画绘制过程中，经常涉及插值、缩放、旋转、透明度变化、动画过渡、毛玻璃模糊，甚至包括3D变换、物理运动（例如游戏中常见的抛物线运动）、多媒体文件解码（主要在桌面机中有应用，移动设备一般不用GPU做解码）等运算。<br>绘制过程经常需要进行逻辑较简单、但数据量庞大的浮点运算。</p>
+<h3 id="CPU与GPU结构对比"><a href="#CPU与GPU结构对比" class="headerlink" title="CPU与GPU结构对比"></a>CPU与GPU结构对比</h3><p>CPU（Central Processing Unit，中央处理器）是计算机设备核心器件，用于执行程序代码，软件开发者对此都很熟悉；GPU（Graphics Processing Unit，图形处理器）主要用于处理图形运算，通常所说“显卡”的核心部件就是GPU。</p>
+<p>下面是CPU和GPU的结构对比图。其中：<br><img src="http://tech.meituan.com/img/hardware-accelerate/cpu-gpu.png" alt=""><br>黄色的Control为控制器，用于协调控制整个CPU的运行，包括取出指令、控制其他模块的运行等；<br>绿色的ALU（Arithmetic Logic Unit）是算术逻辑单元，用于进行数学、逻辑运算；<br>橙色的Cache和DRAM分别为缓存和RAM，用于存储信息。</p>
+<p>从结构图可以看出，CPU的控制器较为复杂，而ALU数量较少。因此<strong>CPU擅长各种复杂的逻辑运算，但不擅长数学尤其是浮点运算。</strong></p>
+<p>以8086为例，一百多条汇编指令大部分都是逻辑指令，数学计算相关的主要是16位加减乘除和移位运算。一次整型和逻辑运算一般需要1~3个机器周期，而浮点运算要转换成整数计算，一次运算可能消耗上百个机器周期。<br>更简单的<strong>CPU甚至只有加法指令，减法用补码加法实现，乘法用累加实现，除法用减法循环实现。</strong><br>现代CPU一般都带有硬件浮点运算器（FPU），但主要适用于数据量不大的情况。<br>CPU是串行结构。以计算100个数字为例，对于CPU的一个核，每次只能计算两个数的和，结果逐步累加。<br>和CPU不同的是，<strong>GPU就是为实现大量数学运算设计的。从结构图中可以看到，GPU的控制器比较简单，但包含了大量ALU。GPU中的ALU使用了并行设计，且具有较多浮点运算单元。</strong></p>
+<blockquote>
+<p><strong>硬件加速的主要原理，就是通过底层软件代码，将CPU不擅长的图形计算转换成GPU专用指令，由GPU完成。</strong></p>
+</blockquote>
+<p>扩展：很多计算机中的GPU有自己独立的显存；没有独立显存则使用共享内存的形式，从内存中划分一块区域作为显存。显存可以保存GPU指令等信息。</p>
+<h3 id="并行结构举例：级联加法器"><a href="#并行结构举例：级联加法器" class="headerlink" title="并行结构举例：级联加法器"></a>并行结构举例：级联加法器</h3><p>为了方便理解，这里先从底层电路结构的角度举一个例子。如下图为一个加法器，对应实际的数字电路结构。</p>
+<p>A、B为输入，C为输出，且A、B、C均为总线，以32位CPU为例，则每根总线实际由32根导线组成，每根导线用不同的电压表示一个二进制的0或1。<br>Clock为时钟信号线，每个固定的时钟周期可向其输入一个特定的电压信号，每当一个时钟信号到来时，A和B的和就会输出到C。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-1.png" alt=""></p>
+<p>现在我们要计算8个整数的和。</p>
+<p>对于CPU这种串行结构，代码编写很简单，用for循环把所有数字逐个相加即可。串行结构只有一个加法器，需要7次求和运算；每次计算完部分和，还要将其再转移到加法器的输入端，做下一次计算。整个过程至少要消耗十几个机器周期。</p>
+<p>而对于并行结构，一种常见的设计是级联加法器，如下图，其中所有的clock连在一起。当需要相加的8个数据在输入端A1~B4准备好后，经过三个时钟周期，求和操作就完成了。如果数据量更大、级联的层级更大，则并行结构的优势更明显。</p>
+<p>由于电路的限制，不容易通过提高时钟频率、减小时钟周期的方式提高运算速度。并行结构通过增加电路规模、并行处理，来实现更快的运算。但并行结构不容易实现复杂逻辑，因为同时考虑多个支路的输出结果，并协调同步处理的过程很复杂（有点像多线程编程）。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-2.png" alt=""></p>
+<p>GPU并行计算举例<br>假设我们有如下图像处理任务，给每个像素值加1。GPU并行计算的方式简单粗暴，在资源允许的情况下，可以为每个像素开一个GPU线程，由其进行加1操作。数学运算量越大，这种并行方式性能优势越明显。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-task.png" alt=""></p>
+<h2 id="Android中的硬件加速"><a href="#Android中的硬件加速" class="headerlink" title="Android中的硬件加速"></a>Android中的硬件加速</h2><p>在Android中，大多数应用的界面都是利用常规的View来构建的（除了游戏、视频、图像等应用可能直接使用OpenGL ES）。下面根据Android 6.0原生系统的Java层代码，对View的软件和硬件加速渲染做一些分析和对比。</p>
+<p>DisplayList<br>DisplayList是一个基本绘制元素，包含元素原始属性（位置、尺寸、角度、透明度等），对应Canvas的drawXxx()方法（如下图）。</p>
+<p>信息传递流程：Canvas(Java API) —&gt; OpenGL(C/C++ Lib) —&gt; 驱动程序 —&gt; GPU。</p>
+<p>在Android 4.1及以上版本，DisplayList支持属性，如果View的一些属性发生变化（比如Scale、Alpha、Translate），只需把属性更新给GPU，不需要生成新的DisplayList。</p>
+<p>RenderNode<br>一个RenderNode包含若干个DisplayList，通常一个RenderNode对应一个View，包含View自身及其子View的所有DisplayList。<br><img src="http://tech.meituan.com/img/hardware-accelerate/canvas-draw.png" alt=""></p>
+<h2 id="Android绘制流程（Android-6-0）"><a href="#Android绘制流程（Android-6-0）" class="headerlink" title="Android绘制流程（Android 6.0）"></a>Android绘制流程（Android 6.0）</h2><p>下面是安卓View完整的绘制流程图，主要通过阅读源码和调试得出，虚线箭头表示递归调用。</p>
+<p>从ViewRootImpl.performTraversals到PhoneWindow.DecroView.drawChild是每次遍历View树的固定流程，首先根据标志位判断是否需要重新布局并执行布局；然后进行Canvas的创建等操作开始绘制。</p>
+<p>如果硬件加速不支持或者被关闭，则使用软件绘制，生成的Canvas即Canvas.class的对象；<br>如果支持硬件加速，则生成的是DisplayListCanvas.class的对象；<br>两者的isHardwareAccelerated()方法返回的值分别为false、true，View根据这个值判断是否使用硬件加速。<br>View中的draw(canvas,parent,drawingTime) - draw(canvas) - onDraw - dispachDraw - drawChild这条递归路径（下文简称Draw路径），调用了Canvas.drawXxx()方法，在软件渲染时用于实际绘制；在硬件加速时，用于构建DisplayList。<br>View中的updateDisplayListIfDirty - dispatchGetDisplayList - recreateChildDisplayList这条递归路径（下文简称DisplayList路径），仅在硬件加速时会经过，用于在遍历View树绘制的过程中更新DisplayList属性，并快速跳过不需要重建DisplayList的View。</p>
+<p>Android 6.0中，和DisplayList相关的API目前仍被标记为“@hide”不可访问，表示还不成熟，后续版本可能开放。<br>硬件加速情况下，draw流程执行结束后DisplayList构建完成，然后通过ThreadedRenderer.nSyncAndDrawFrame()利用GPU绘制DisplayList到屏幕上。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-func.png" alt=""></p>
+<h2 id="纯软件绘制-VS-硬件加速（Android-6-0）"><a href="#纯软件绘制-VS-硬件加速（Android-6-0）" class="headerlink" title="纯软件绘制 VS 硬件加速（Android 6.0）"></a>纯软件绘制 VS 硬件加速（Android 6.0）</h2><p>下面根据具体的几种场景，具体分析一下硬件加速前后的流程与加速效果。</p>
+<p>渲染场景    纯软件绘制    硬件加速    加速效果分析<br>页面初始化    绘制所有View    创建所有DisplayList    GPU分担了复杂计算任务<br>在一个复杂页面调用背景透明TextView的setText()，且调用后其尺寸位置不变    重绘脏区所有View    TextView及每一级父View重建DisplayList    重叠的兄弟节点不需CPU重绘，GPU会自行处理<br>TextView逐帧播放Alpha / Translation / Scale动画    每帧都要重绘脏区所有View    除第一帧同场景2，之后每帧只更新TextView对应RenderNode的属性    刷新一帧性能极大提高，动画流畅度提高<br>修改TextView透明度    重绘脏区所有View    直接调用RenderNode.setAlpha()更新    加速前需全页面遍历，并重绘很多View；加速后只触发DecorView.updateDisplayListIfDirty，不再往下遍历，CPU执行时间可忽略不计</p>
+<p>场景1中，无论是否加速，遍历View树并都会走Draw路径。硬件加速后Draw路径不做实际绘制工作，只是构建DisplayList，复杂的绘制计算任务被GPU分担，已经有了较大的加速效果。<br>场景2中，TextView设置前后尺寸位置不变，不会触发重新Layout。</p>
+<p>软件绘制时，TextView所在区域即为脏区。由于TextView有透明区域，遍历View树的过程中，和脏区重叠的多数View都要重绘，包括与之重叠的兄弟节点和他们的父节点（详见后面的介绍），不需要绘制的View在draw(canvas,parent,drawingTime)方法中判断直接返回。</p>
+<p>硬件加速后，也需要遍历View树，但只有TextView及其每一层父节点需要重建DisplayList，走的是Draw路径，其他View直接走了DisplayList路径，剩下的工作都交给GPU处理。页面越复杂，两者性能差距越明显。</p>
+<p>场景3中，软件绘制每一帧都要做大量绘制工作，很容易导致动画卡顿。硬件加速后，动画过程直接走DisplayList路径更新DisplayList的属性，动画流畅度能得到极大提高。</p>
+<p>场景4中，两者的性能差距更明显。简单修改透明度，软件绘制仍然要做很多工作；硬件加速后一般直接更新RenderNode的属性，不需要触发invalidate，也不会遍历View树（除了少数View可能要对Alpha做特殊响应并在onSetAlpha()返回true，代码如下）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public class View &#123;</div><div class="line">    // ...</div><div class="line">    public void setAlpha(@FloatRange(from=0.0, to=1.0) float alpha) &#123;</div><div class="line">        ensureTransformationInfo();</div><div class="line">        if (mTransformationInfo.mAlpha != alpha) &#123;</div><div class="line">            mTransformationInfo.mAlpha = alpha;</div><div class="line">            if (onSetAlpha((int) (alpha * 255))) &#123;</div><div class="line">                // ...</div><div class="line">                invalidate(true);</div><div class="line">            &#125; else &#123;</div><div class="line">                // ...</div><div class="line">                mRenderNode.setAlpha(getFinalAlpha());</div><div class="line">                // ...</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    protected boolean onSetAlpha(int alpha) &#123;</div><div class="line">        return false;</div><div class="line">    &#125;</div><div class="line">    // ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="软件绘制刷新逻辑简介"><a href="#软件绘制刷新逻辑简介" class="headerlink" title="软件绘制刷新逻辑简介"></a>软件绘制刷新逻辑简介</h3><p>实际阅读源码并实验，得出通常情况下的软件绘制刷新逻辑：</p>
+<p>默认情况下，View的clipChildren属性为true，即每个View绘制区域不能超出其父View的范围。如果设置一个页面根布局的clipChildren属性为false，则子View可以超出父View的绘制区域。<br>当一个View触发invalidate，且没有播放动画、没有触发layout的情况下：</p>
+<p>对于全不透明的View，其自身会设置标志位PFLAG_DIRTY，其父View会设置标志位PFLAG_DIRTY_OPAQUE。在draw(canvas)方法中，只有这个View自身重绘。<br>对于可能有透明区域的View，其自身和父View都会设置标志位PFLAG_DIRTY。</p>
+<p>clipChildren为true时，脏区会被转换成ViewRoot中的Rect，刷新时层层向下判断，当View与脏区有重叠则重绘。如果一个View超出父View范围且与脏区重叠，但其父View不与脏区重叠，这个子View不会重绘。<br>clipChildren为false时，ViewGroup.invalidateChildInParent()中会把脏区扩大到自身整个区域，于是与这个区域重叠的所有View都会重绘。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>至此，硬件加速相关的内容就介绍完了，这里做个简单总结：</p>
+<p>CPU更擅长复杂逻辑控制，而GPU得益于大量ALU和并行结构设计，更擅长数学运算。<br>页面由各种基础元素（DisplayList）构成，渲染时需要进行大量浮点运算。</p>
+<p>硬件加速条件下，CPU用于控制复杂绘制逻辑、构建或更新DisplayList；GPU用于完成图形计算、渲染DisplayList。</p>
+<p>硬件加速条件下，刷新界面尤其是播放动画时，CPU只重建或更新必要的DisplayList，进一步提高渲染效率。</p>
+<p>实现同样效果，应尽量使用更简单的DisplayList，从而达到更好的性能（Shape代替Bitmap等）。</p>
+<h2 id="参考资料与扩展阅读"><a href="#参考资料与扩展阅读" class="headerlink" title="参考资料与扩展阅读"></a>参考资料与扩展阅读</h2><p><a href="http://www.cnblogs.com/LBSer/p/4592862.html" target="_blank" rel="external">GPU—并行计算利器</a><br><a href="http://www.eechina.com/thread-176224-1-1.html" target="_blank" rel="external">显示卡的“心脏”GPU工作原理介绍</a><br><a href="http://hust.cf/matlab/2016/05/15/Matlab%E7%9A%84GPU%E5%8A%A0%E9%80%9F.html" target="_blank" rel="external">Matlab的GPU加速</a><br><a href="http://blog.csdn.net/yang_yulei/article/details/22529437" target="_blank" rel="external">处理器体系结构：了解CPU的基本运行原理</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3563960.html" target="_blank" rel="external">CPU的内部架构和工作原理</a><br><a href="http://xilinx.eetrend.com/article/10087" target="_blank" rel="external">什么是异构多处理系统，为什么需要异构多处理系统</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/45943255" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List构建过程分析</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/46281499" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List渲染过程分析</a><br><a href="http://www.jianshu.com/p/996bca12eb1d" target="_blank" rel="external">Android Choreographer源码分析</a><br><a href="http://blog.csdn.net/innost/article/details/8272867" target="_blank" rel="external">Android Project Butter分析</a></p>
+<p>不想错过技术博客更新？想给文章评论、和作者互动？第一时间获取技术沙龙信息？</p>
+<p>请关注我们的官方微信公众号“美团点评技术团队”。现在就拿出手机，扫一扫：<br><img src="http://tech.meituan.com/img/qrcode_for_gh.jpg" alt=""><br>公众号二维码</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://tech.meituan.com/hardware-accelerate.html&quot;&gt;子健&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。&lt;/p&gt;
+&lt;p&gt;本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
+    
+      <category term="CPU" scheme="http://ipcreator.me/tags/CPU/"/>
+    
+      <category term="GPU" scheme="http://ipcreator.me/tags/GPU/"/>
     
   </entry>
   
@@ -5058,84 +5303,6 @@ grub引导也分为两个阶段stage1阶段和stage2阶段(有些较新的grub�
     
     
       <category term="Program" scheme="http://ipcreator.me/tags/Program/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android硬件加速原理与实现简介</title>
-    <link href="http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/"/>
-    <id>http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/</id>
-    <published>2017-02-26T14:57:06.000Z</published>
-    <updated>2017-02-27T00:24:17.038Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://tech.meituan.com/hardware-accelerate.html" target="_blank" rel="external">子健</a></p>
-<p>在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。</p>
-<p>本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。</p>
-<a id="more"></a>
-<h2 id="了解硬件加速对App开发的意义"><a href="#了解硬件加速对App开发的意义" class="headerlink" title="了解硬件加速对App开发的意义"></a>了解硬件加速对App开发的意义</h2><p>对于App开发者，简单了解硬件加速原理及上层API实现，开发时就可以充分利用硬件加速提高页面的性能。以Android举例，实现一个圆角矩形按钮通常有两种方案：使用PNG图片；使用代码（XML/Java）实现。简单对比两种方案如下。</p>
-<p>方案    原理    特点<br>使用PNG图片（BitmapDrawable）    解码PNG图片生成Bitmap，传到底层，由GPU渲染    图片解码消耗CPU运算资源，Bitmap占用内存大，绘制慢<br>使用XML或Java代码实现（ShapeDrawable）    直接将Shape信息传到底层，由GPU渲染    消耗CPU资源少，占用内存小，绘制快</p>
-<h3 id="页面渲染背景知识"><a href="#页面渲染背景知识" class="headerlink" title="页面渲染背景知识"></a>页面渲染背景知识</h3><p>页面渲染时，被绘制的元素最终要转换成矩阵像素点（即多维数组形式，类似安卓中的Bitmap），才能被显示器显示。<br>页面由各种基本元素组成，例如圆形、圆角矩形、线段、文字、矢量图（常用贝塞尔曲线组成）、Bitmap等。<br>元素绘制时尤其是动画绘制过程中，经常涉及插值、缩放、旋转、透明度变化、动画过渡、毛玻璃模糊，甚至包括3D变换、物理运动（例如游戏中常见的抛物线运动）、多媒体文件解码（主要在桌面机中有应用，移动设备一般不用GPU做解码）等运算。<br>绘制过程经常需要进行逻辑较简单、但数据量庞大的浮点运算。</p>
-<h3 id="CPU与GPU结构对比"><a href="#CPU与GPU结构对比" class="headerlink" title="CPU与GPU结构对比"></a>CPU与GPU结构对比</h3><p>CPU（Central Processing Unit，中央处理器）是计算机设备核心器件，用于执行程序代码，软件开发者对此都很熟悉；GPU（Graphics Processing Unit，图形处理器）主要用于处理图形运算，通常所说“显卡”的核心部件就是GPU。</p>
-<p>下面是CPU和GPU的结构对比图。其中：<br><img src="http://tech.meituan.com/img/hardware-accelerate/cpu-gpu.png" alt=""><br>黄色的Control为控制器，用于协调控制整个CPU的运行，包括取出指令、控制其他模块的运行等；<br>绿色的ALU（Arithmetic Logic Unit）是算术逻辑单元，用于进行数学、逻辑运算；<br>橙色的Cache和DRAM分别为缓存和RAM，用于存储信息。</p>
-<p>从结构图可以看出，CPU的控制器较为复杂，而ALU数量较少。因此<strong>CPU擅长各种复杂的逻辑运算，但不擅长数学尤其是浮点运算。</strong></p>
-<p>以8086为例，一百多条汇编指令大部分都是逻辑指令，数学计算相关的主要是16位加减乘除和移位运算。一次整型和逻辑运算一般需要1~3个机器周期，而浮点运算要转换成整数计算，一次运算可能消耗上百个机器周期。<br>更简单的<strong>CPU甚至只有加法指令，减法用补码加法实现，乘法用累加实现，除法用减法循环实现。</strong><br>现代CPU一般都带有硬件浮点运算器（FPU），但主要适用于数据量不大的情况。<br>CPU是串行结构。以计算100个数字为例，对于CPU的一个核，每次只能计算两个数的和，结果逐步累加。<br>和CPU不同的是，<strong>GPU就是为实现大量数学运算设计的。从结构图中可以看到，GPU的控制器比较简单，但包含了大量ALU。GPU中的ALU使用了并行设计，且具有较多浮点运算单元。</strong></p>
-<blockquote>
-<p><strong>硬件加速的主要原理，就是通过底层软件代码，将CPU不擅长的图形计算转换成GPU专用指令，由GPU完成。</strong></p>
-</blockquote>
-<p>扩展：很多计算机中的GPU有自己独立的显存；没有独立显存则使用共享内存的形式，从内存中划分一块区域作为显存。显存可以保存GPU指令等信息。</p>
-<h3 id="并行结构举例：级联加法器"><a href="#并行结构举例：级联加法器" class="headerlink" title="并行结构举例：级联加法器"></a>并行结构举例：级联加法器</h3><p>为了方便理解，这里先从底层电路结构的角度举一个例子。如下图为一个加法器，对应实际的数字电路结构。</p>
-<p>A、B为输入，C为输出，且A、B、C均为总线，以32位CPU为例，则每根总线实际由32根导线组成，每根导线用不同的电压表示一个二进制的0或1。<br>Clock为时钟信号线，每个固定的时钟周期可向其输入一个特定的电压信号，每当一个时钟信号到来时，A和B的和就会输出到C。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-1.png" alt=""></p>
-<p>现在我们要计算8个整数的和。</p>
-<p>对于CPU这种串行结构，代码编写很简单，用for循环把所有数字逐个相加即可。串行结构只有一个加法器，需要7次求和运算；每次计算完部分和，还要将其再转移到加法器的输入端，做下一次计算。整个过程至少要消耗十几个机器周期。</p>
-<p>而对于并行结构，一种常见的设计是级联加法器，如下图，其中所有的clock连在一起。当需要相加的8个数据在输入端A1~B4准备好后，经过三个时钟周期，求和操作就完成了。如果数据量更大、级联的层级更大，则并行结构的优势更明显。</p>
-<p>由于电路的限制，不容易通过提高时钟频率、减小时钟周期的方式提高运算速度。并行结构通过增加电路规模、并行处理，来实现更快的运算。但并行结构不容易实现复杂逻辑，因为同时考虑多个支路的输出结果，并协调同步处理的过程很复杂（有点像多线程编程）。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-2.png" alt=""></p>
-<p>GPU并行计算举例<br>假设我们有如下图像处理任务，给每个像素值加1。GPU并行计算的方式简单粗暴，在资源允许的情况下，可以为每个像素开一个GPU线程，由其进行加1操作。数学运算量越大，这种并行方式性能优势越明显。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-task.png" alt=""></p>
-<h2 id="Android中的硬件加速"><a href="#Android中的硬件加速" class="headerlink" title="Android中的硬件加速"></a>Android中的硬件加速</h2><p>在Android中，大多数应用的界面都是利用常规的View来构建的（除了游戏、视频、图像等应用可能直接使用OpenGL ES）。下面根据Android 6.0原生系统的Java层代码，对View的软件和硬件加速渲染做一些分析和对比。</p>
-<p>DisplayList<br>DisplayList是一个基本绘制元素，包含元素原始属性（位置、尺寸、角度、透明度等），对应Canvas的drawXxx()方法（如下图）。</p>
-<p>信息传递流程：Canvas(Java API) —&gt; OpenGL(C/C++ Lib) —&gt; 驱动程序 —&gt; GPU。</p>
-<p>在Android 4.1及以上版本，DisplayList支持属性，如果View的一些属性发生变化（比如Scale、Alpha、Translate），只需把属性更新给GPU，不需要生成新的DisplayList。</p>
-<p>RenderNode<br>一个RenderNode包含若干个DisplayList，通常一个RenderNode对应一个View，包含View自身及其子View的所有DisplayList。<br><img src="http://tech.meituan.com/img/hardware-accelerate/canvas-draw.png" alt=""></p>
-<h2 id="Android绘制流程（Android-6-0）"><a href="#Android绘制流程（Android-6-0）" class="headerlink" title="Android绘制流程（Android 6.0）"></a>Android绘制流程（Android 6.0）</h2><p>下面是安卓View完整的绘制流程图，主要通过阅读源码和调试得出，虚线箭头表示递归调用。</p>
-<p>从ViewRootImpl.performTraversals到PhoneWindow.DecroView.drawChild是每次遍历View树的固定流程，首先根据标志位判断是否需要重新布局并执行布局；然后进行Canvas的创建等操作开始绘制。</p>
-<p>如果硬件加速不支持或者被关闭，则使用软件绘制，生成的Canvas即Canvas.class的对象；<br>如果支持硬件加速，则生成的是DisplayListCanvas.class的对象；<br>两者的isHardwareAccelerated()方法返回的值分别为false、true，View根据这个值判断是否使用硬件加速。<br>View中的draw(canvas,parent,drawingTime) - draw(canvas) - onDraw - dispachDraw - drawChild这条递归路径（下文简称Draw路径），调用了Canvas.drawXxx()方法，在软件渲染时用于实际绘制；在硬件加速时，用于构建DisplayList。<br>View中的updateDisplayListIfDirty - dispatchGetDisplayList - recreateChildDisplayList这条递归路径（下文简称DisplayList路径），仅在硬件加速时会经过，用于在遍历View树绘制的过程中更新DisplayList属性，并快速跳过不需要重建DisplayList的View。</p>
-<p>Android 6.0中，和DisplayList相关的API目前仍被标记为“@hide”不可访问，表示还不成熟，后续版本可能开放。<br>硬件加速情况下，draw流程执行结束后DisplayList构建完成，然后通过ThreadedRenderer.nSyncAndDrawFrame()利用GPU绘制DisplayList到屏幕上。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-func.png" alt=""></p>
-<h2 id="纯软件绘制-VS-硬件加速（Android-6-0）"><a href="#纯软件绘制-VS-硬件加速（Android-6-0）" class="headerlink" title="纯软件绘制 VS 硬件加速（Android 6.0）"></a>纯软件绘制 VS 硬件加速（Android 6.0）</h2><p>下面根据具体的几种场景，具体分析一下硬件加速前后的流程与加速效果。</p>
-<p>渲染场景    纯软件绘制    硬件加速    加速效果分析<br>页面初始化    绘制所有View    创建所有DisplayList    GPU分担了复杂计算任务<br>在一个复杂页面调用背景透明TextView的setText()，且调用后其尺寸位置不变    重绘脏区所有View    TextView及每一级父View重建DisplayList    重叠的兄弟节点不需CPU重绘，GPU会自行处理<br>TextView逐帧播放Alpha / Translation / Scale动画    每帧都要重绘脏区所有View    除第一帧同场景2，之后每帧只更新TextView对应RenderNode的属性    刷新一帧性能极大提高，动画流畅度提高<br>修改TextView透明度    重绘脏区所有View    直接调用RenderNode.setAlpha()更新    加速前需全页面遍历，并重绘很多View；加速后只触发DecorView.updateDisplayListIfDirty，不再往下遍历，CPU执行时间可忽略不计</p>
-<p>场景1中，无论是否加速，遍历View树并都会走Draw路径。硬件加速后Draw路径不做实际绘制工作，只是构建DisplayList，复杂的绘制计算任务被GPU分担，已经有了较大的加速效果。<br>场景2中，TextView设置前后尺寸位置不变，不会触发重新Layout。</p>
-<p>软件绘制时，TextView所在区域即为脏区。由于TextView有透明区域，遍历View树的过程中，和脏区重叠的多数View都要重绘，包括与之重叠的兄弟节点和他们的父节点（详见后面的介绍），不需要绘制的View在draw(canvas,parent,drawingTime)方法中判断直接返回。</p>
-<p>硬件加速后，也需要遍历View树，但只有TextView及其每一层父节点需要重建DisplayList，走的是Draw路径，其他View直接走了DisplayList路径，剩下的工作都交给GPU处理。页面越复杂，两者性能差距越明显。</p>
-<p>场景3中，软件绘制每一帧都要做大量绘制工作，很容易导致动画卡顿。硬件加速后，动画过程直接走DisplayList路径更新DisplayList的属性，动画流畅度能得到极大提高。</p>
-<p>场景4中，两者的性能差距更明显。简单修改透明度，软件绘制仍然要做很多工作；硬件加速后一般直接更新RenderNode的属性，不需要触发invalidate，也不会遍历View树（除了少数View可能要对Alpha做特殊响应并在onSetAlpha()返回true，代码如下）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public class View &#123;</div><div class="line">    // ...</div><div class="line">    public void setAlpha(@FloatRange(from=0.0, to=1.0) float alpha) &#123;</div><div class="line">        ensureTransformationInfo();</div><div class="line">        if (mTransformationInfo.mAlpha != alpha) &#123;</div><div class="line">            mTransformationInfo.mAlpha = alpha;</div><div class="line">            if (onSetAlpha((int) (alpha * 255))) &#123;</div><div class="line">                // ...</div><div class="line">                invalidate(true);</div><div class="line">            &#125; else &#123;</div><div class="line">                // ...</div><div class="line">                mRenderNode.setAlpha(getFinalAlpha());</div><div class="line">                // ...</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    protected boolean onSetAlpha(int alpha) &#123;</div><div class="line">        return false;</div><div class="line">    &#125;</div><div class="line">    // ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="软件绘制刷新逻辑简介"><a href="#软件绘制刷新逻辑简介" class="headerlink" title="软件绘制刷新逻辑简介"></a>软件绘制刷新逻辑简介</h3><p>实际阅读源码并实验，得出通常情况下的软件绘制刷新逻辑：</p>
-<p>默认情况下，View的clipChildren属性为true，即每个View绘制区域不能超出其父View的范围。如果设置一个页面根布局的clipChildren属性为false，则子View可以超出父View的绘制区域。<br>当一个View触发invalidate，且没有播放动画、没有触发layout的情况下：</p>
-<p>对于全不透明的View，其自身会设置标志位PFLAG_DIRTY，其父View会设置标志位PFLAG_DIRTY_OPAQUE。在draw(canvas)方法中，只有这个View自身重绘。<br>对于可能有透明区域的View，其自身和父View都会设置标志位PFLAG_DIRTY。</p>
-<p>clipChildren为true时，脏区会被转换成ViewRoot中的Rect，刷新时层层向下判断，当View与脏区有重叠则重绘。如果一个View超出父View范围且与脏区重叠，但其父View不与脏区重叠，这个子View不会重绘。<br>clipChildren为false时，ViewGroup.invalidateChildInParent()中会把脏区扩大到自身整个区域，于是与这个区域重叠的所有View都会重绘。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>至此，硬件加速相关的内容就介绍完了，这里做个简单总结：</p>
-<p>CPU更擅长复杂逻辑控制，而GPU得益于大量ALU和并行结构设计，更擅长数学运算。<br>页面由各种基础元素（DisplayList）构成，渲染时需要进行大量浮点运算。</p>
-<p>硬件加速条件下，CPU用于控制复杂绘制逻辑、构建或更新DisplayList；GPU用于完成图形计算、渲染DisplayList。</p>
-<p>硬件加速条件下，刷新界面尤其是播放动画时，CPU只重建或更新必要的DisplayList，进一步提高渲染效率。</p>
-<p>实现同样效果，应尽量使用更简单的DisplayList，从而达到更好的性能（Shape代替Bitmap等）。</p>
-<h2 id="参考资料与扩展阅读"><a href="#参考资料与扩展阅读" class="headerlink" title="参考资料与扩展阅读"></a>参考资料与扩展阅读</h2><p><a href="http://www.cnblogs.com/LBSer/p/4592862.html" target="_blank" rel="external">GPU—并行计算利器</a><br><a href="http://www.eechina.com/thread-176224-1-1.html" target="_blank" rel="external">显示卡的“心脏”GPU工作原理介绍</a><br><a href="http://hust.cf/matlab/2016/05/15/Matlab%E7%9A%84GPU%E5%8A%A0%E9%80%9F.html" target="_blank" rel="external">Matlab的GPU加速</a><br><a href="http://blog.csdn.net/yang_yulei/article/details/22529437" target="_blank" rel="external">处理器体系结构：了解CPU的基本运行原理</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3563960.html" target="_blank" rel="external">CPU的内部架构和工作原理</a><br><a href="http://xilinx.eetrend.com/article/10087" target="_blank" rel="external">什么是异构多处理系统，为什么需要异构多处理系统</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/45943255" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List构建过程分析</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/46281499" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List渲染过程分析</a><br><a href="http://www.jianshu.com/p/996bca12eb1d" target="_blank" rel="external">Android Choreographer源码分析</a><br><a href="http://blog.csdn.net/innost/article/details/8272867" target="_blank" rel="external">Android Project Butter分析</a></p>
-<p>不想错过技术博客更新？想给文章评论、和作者互动？第一时间获取技术沙龙信息？</p>
-<p>请关注我们的官方微信公众号“美团点评技术团队”。现在就拿出手机，扫一扫：<br><img src="http://tech.meituan.com/img/qrcode_for_gh.jpg" alt=""><br>公众号二维码</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://tech.meituan.com/hardware-accelerate.html&quot;&gt;子健&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。&lt;/p&gt;
-&lt;p&gt;本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Android" scheme="http://ipcreator.me/tags/Android/"/>
-    
-      <category term="CPU" scheme="http://ipcreator.me/tags/CPU/"/>
-    
-      <category term="GPU" scheme="http://ipcreator.me/tags/GPU/"/>
     
   </entry>
   
@@ -6234,7 +6401,7 @@ public void thisIsSuper() {
     <link href="http://ipcreator.me/2017/02/22/MyView/English/love-words/"/>
     <id>http://ipcreator.me/2017/02/22/MyView/English/love-words/</id>
     <published>2017-02-21T23:44:05.000Z</published>
-    <updated>2017-03-23T14:07:57.246Z</updated>
+    <updated>2017-03-24T01:46:03.642Z</updated>
     
     <content type="html"><![CDATA[<p>图文来源：<a href="http://xue.youdao.com/sw/m/1309029?keyfrom=dict2.index" target="_blank" rel="external">微信号 我爱背单词</a></p>
 <h2 id="predator"><a href="#predator" class="headerlink" title="predator"></a>predator</h2><p>英 [‘predətə]  美 [‘prɛdətɚ]<br>n. [动] 捕食者；[动] 食肉动物；掠夺者</p>
@@ -6246,6 +6413,11 @@ public void thisIsSuper() {
 <p><strong>双语例句</strong><br>Insane pumpkin carving of the Predator.<br>疯狂的南瓜雕刻——食肉动物。</p>
 <p>Some residents and experts said the predator may be a bear, a wayward panther or cougar, or even a wolf because 3-inch paw tracks were found at the scene.<br>一些居民和专家认为这种食肉动物可能是一只熊，一头任性的豹子或狮子，抑或是一头狼，因为在现场发现了3英寸长的爪迹。</p>
 <p>But just like Dutch in Predator before the final battle, you have to be able to answer only one question about your target before you start: where they are.<br>但就像一战之前的荷兰掠夺者一样，在开始工作之前你必须能够回答实现目标的唯一问题：他们在哪里？</p>
+<h2 id="discrete"><a href="#discrete" class="headerlink" title="discrete"></a>discrete</h2><p>英 [dɪ’skriːt]  美 [dɪ’skrit]<br>adj. 离散的，不连续的<br>n. 分立元件；独立部件</p>
+<h2 id="animator"><a href="#animator" class="headerlink" title="animator"></a>animator</h2><p>英 [‘ænɪmeɪtə]  美 [‘ænə’metɚ]<br>n. 鼓舞者；赋与生气者；卡通片绘制者（等于animater）</p>
+<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><p>英 [ænɪ’meɪʃ(ə)n]  美 [,ænɪ’meʃən]<br>n. 活泼，生气；激励；卡通片绘制</p>
+<h2 id="interpolator"><a href="#interpolator" class="headerlink" title="interpolator"></a>interpolator</h2><p>[in’tə:pəuleitə]<br>n. 窜改者，插入器；内插程序</p>
+<h2 id="tween"><a href="#tween" class="headerlink" title="tween"></a>tween</h2><p>英 [twiːn]  美 [twin]<br>prep. 在两者之间<br>adv. 中间地</p>
 <h2 id="FPGA"><a href="#FPGA" class="headerlink" title="FPGA"></a>FPGA</h2><p>abbr. 现场可编程门阵列（Field Programmable Gate Array）</p>
 <h2 id="semiconductor"><a href="#semiconductor" class="headerlink" title="semiconductor"></a>semiconductor</h2><p>英 [,semɪkən’dʌktə]  美 [,sɛmɪkən’dʌktɚ]<br>n. [电子][物] 半导体</p>
 <h2 id="oxide"><a href="#oxide" class="headerlink" title="oxide"></a>oxide</h2><p>英 [‘ɒksaɪd]  美 [‘ɑksaɪd]<br>n. [化学] 氧化物</p>
@@ -7777,109 +7949,6 @@ public void thisIsSuper() {
   </entry>
   
   <entry>
-    <title>技术大牛带你走向机器学习“正道”</title>
-    <link href="http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/"/>
-    <id>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</id>
-    <published>2017-02-19T15:57:06.000Z</published>
-    <updated>2017-02-19T06:03:00.876Z</updated>
-    
-    <content type="html"><![CDATA[<p>作者：<a href="http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html" target="_blank" rel="external">雷锋网 亚峰</a></p>
-<p>导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。</p>
-<p>雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：</p>
-<p>现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。<br>随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。</p>
-<p>其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？</p>
-<p>雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。</p>
-  <a id="more"></a>
-<p>嘉宾介绍：</p>
-<p>王刚，前乐视大数据总监，现任某电商平台大数据总监。10 年大数据领域工作经验，具有 Hadoop 和 Spark 生态相关技术的实际应用经验。目前专注于机器学习，搜索和推荐系统的设计和开发。</p>
-<p>以下为王刚所撰写的正文：</p>
-<p>机器学习对很多初学者来说，最大的学习困难和障碍就是模型、算法、“眼花缭乱”的数学公式所带来的抽象感，无法有效的建立起直觉上的理解。所以本文的目的是尝试给初学者具体的学习方式建议，以帮助初学者打通机器学习的任督二脉，然后通过不断的学习和实践，使得自己在机器学习领域的专业能力持续提升。</p>
-<p>机器学习与人工智能、深度学习之间的关系</p>
-<p>当前被提及的高频词语是“AI人工智能”、“机器学习”、“深度学习”。那这些词语背后所代表的技术之间到底是什么关系呢？充分的理解这个关系，有利于建立起更加系统的专业学习框架。</p>
-<p>首先，我们要搞明白机器学习到底学习的是什么，答案是模型“参数”，比如Y=AX+B是个机器学习的模型，通过样本数据，可以学习出参数A和B的确定值。然后基于这两个参数，对模型进行泛化，即对给定的X对Y进行预测。明白了机器学习到底是学习什么之后，我们一起看看下图来搞清楚机器学习与人工智能和深度学习之间的关系。</p>
-<p>技术大牛带你走向机器学习“正道”：小朋友才迷信算法，大人们更重视工程实践</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888f9bedd1f.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>如上图所示，人工智能是最大的一个范畴，人工智能的实现目前看主要有两种途径：一种是基于脑科学的方式来实现智能。另一种是基于机器学习的方式来实现智能，这种方式的假设是当学习的数据足够充分，就可以大概率的逼近事实。</p>
-<p>再回到公式Y=AX+B，我们可以看到机器学习是通过X和Y来学习出参数A和B，而在机器学习中，X是人工构造的特征，Y是人工进行标注的标签。一句话，机器学习就是通过构造X和Y来学习参数A和B。但通常情况下，构造X和标注Y需要耗用大量的人力和时间。所以，对于如何更智能的构造X和标注Y是机器学习很重要的研究方向。深度学习的一个重要作用就是能够更智能的构造X，即进行更好的特征表示。所以深度学习是机器学习的一个子集。那如何更好的标注Y呢，当前流行的对抗生成网络（GAN）就是一种解决方案。</p>
-<p>机器学习需要的基础知识体系</p>
-<p>机器学习的三个关键要素是模型、策略、算法。模型指的是具体的机器学习模型，比如决策树、SVM、神经网络、LDA等具体模型。策略指的是最小化模型结构性风险的手段，即避免模型欠拟合和过拟合的应对策略，在这里专指正则化（Regularization）。算法指的是建立好模型之后，如何对模型中的参数进行学习。也即最优化的方法。所以，初学者需要掌握的基础知识为：</p>
-<p>1.导数与微积分，以及还需要对泰勒展开式、拉格朗日等定理和公式有充分的掌握。这是进行算法推导的基础中的基础。</p>
-<p>2.线性代数，矩阵运算等要做到熟练掌握，因为机器学习的最优化算法中涉及到的复杂计算需要线性代数好矩阵运算的内容。</p>
-<p>3.概率论，概率论的基础知识是理解像极大似然、最大熵、EM算法、贝叶斯网络、概率图模型的基础。</p>
-<p>4.最优化，机器学习中的模型训练是通过对模型中参数的学习来进行泛化推广。如何对模型中的参数进行学习是最优化要解决的问题。比如线性优化、非线性优化的各种主要方法（比如梯度下降法、牛顿和拟牛顿法等）要有充分的理解。</p>
-<p>5.机器学习模型的思想和具体实现方式要理解透彻。</p>
-<p>机器学习的应用实践</p>
-<p>特征工程，如上面所说就是造X，机器学习实践中大部分的实践都在处理特征工程上。所以真正有机器学习实践经验的人都知道机器学习更多的时间不是高大上的算法，而是苦逼特征工程。工程师每天更多的是基于对业务的深刻理解，通过构建“更好”的特征，持续提升模型的准确度。</p>
-<p>推荐系统与搜索系统</p>
-<p>当推荐和搜索这些字眼出现在网页中，专业书籍中，或是大部分的培训课程中，更多的是与机器学习和算法关联起来。这种情况的原因可能是为了迎合机器学习在大部分人认知中的“高大上”吧。</p>
-<p>在实际的产品设计和开发中，推荐系统和搜索系统是有着一个更大概念的系统架构，绝非仅仅是只有机器学习和算法。其中UI/UE的重要性占比为40%，业务理解重要性占比为30%，数据重要性占比为20%，模型重要性占比为10%。</p>
-<p>以推荐系统举例，整个推荐系统的框架应当如下图所示：</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fc4b17f9.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>下图是电商平台上推荐系统的框架</p>
-<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fd1d31a4.png?imageMogr2/format/jpg/quality/90" alt=""></p>
-<p>所以，建议的推荐系统知识学习体系为：</p>
-<p>一、推荐系统之整体架构</p>
-<p>1.推荐系统的本质、目标及价值</p>
-<p>2.一个好的推荐系统的相貌</p>
-<p>3.线下零售的促销员与电商平台的推荐系统的关系</p>
-<p>3.推荐系统与搜索的关系</p>
-<p>4.主流电商平台上的推荐系统学习</p>
-<p>5.推荐系统的整体架构图以及如何学习推荐系统</p>
-<p>二、推荐系统之策略及模型</p>
-<ol>
-<li><p>基于规则的推荐算法</p>
-</li>
-<li><p>基于内容(Content-Based)的推荐算法</p>
-</li>
-<li><p>基于协同过滤（CF)的推荐算法</p>
-</li>
-<li><p>基于隐因子（SVD/SVD++/MF/FM/FFM/PLSA/LDA）的推荐算法</p>
-</li>
-<li><p>推荐结果的排序模型（GBDT+LR，LTR）</p>
-</li>
-<li><p>数学基础及典型最优化算法</p>
-</li>
-</ol>
-<p>7.不同场景下的推荐策略（如在电商平台上，首页、详情页、购物车页、搜索结果页等不同场景下的推荐策略）</p>
-<p>8.推荐系统评估</p>
-<p>如何评估线下模型，如何评估线上效果</p>
-<p>三、推荐系统之特征工程</p>
-<p>1.用户画像如何构建</p>
-<p>2.特征工程如何构建，以及如何进行特征分析</p>
-<p>四、推荐系统之交互体验</p>
-<p>如何向用户展示推荐系统的权威性、取得用户的信任、如何帮助用户决策、如何获取用户反馈。</p>
-<p>如何开始机器学习</p>
-<p>对于大多数人来说，如果以抽象的方式开始学习一项内容肯定不是最好的方式。相反，先建立起直觉，然后建立具体到抽象的映射，再深入学习抽象部分完成对细节部分的掌握，最后循环到具体的应用是适合大多数人的学习方式。所以对于机器学习初学者建议的学习路径为：</p>
-<p>步骤一：先选择一门实战性非常强的机器学习及其应用课程进行学习。目标是通过足够多具体的应用，能够深刻理解机器学习的实际使用方式，从而建立起直觉。</p>
-<p>步骤二：学习机器学习的理论课程，包括具体的模型算法，最优化方法，以及相关的公式推导。过了这一关，就完成了对机器学习细节的更好掌控。</p>
-<p>步骤三：如果能够立刻参与到机器学习的实际项目中是最好不过了。如果不能，可以去完成Kaggle中的一些比赛项目。</p>
-<p>最后，也是最最重要的建议，如果要想“更快速”“更高效”的掌握机器学习，找到合适的培训课程进行学习是最合适的方式。用钱买时间，买别人的经验，以更高效的方式掌握机器学习后，这些付出的费用可能仅仅是你工作之后月薪的很小的一部分。</p>
-<p>在任督二脉打通之后，可以适当的对分布式存储和计算相关体系的内容进行学习。即靠的是个人的持续修行，在理论与实践循环提升中，成长为真正的专家。</p>
-<p>PS：为了推动 AI 人才全面化，雷锋网将为大家提供一个业界顶级的专业 AI 技术培训平台：1024MOOC 。其中王刚老师也会在1024MOOC 开展系统的机器学习实战培训课程，具体开课时间在年后一周左右，请大家持续关注雷锋网(公众号：雷锋网)信息。</p>
-<p>雷锋网原创文章，未经授权禁止转载。详情见转载须知。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;作者：&lt;a href=&quot;http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html&quot;&gt;雷锋网 亚峰&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。&lt;/p&gt;
-&lt;p&gt;雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：&lt;/p&gt;
-&lt;p&gt;现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。&lt;br&gt;随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。&lt;/p&gt;
-&lt;p&gt;其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？&lt;/p&gt;
-&lt;p&gt;雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
-    
-  </entry>
-  
-  <entry>
     <title>机器学习年度 20 大开源项目花落谁家？（Python 版）</title>
     <link href="http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/"/>
     <id>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</id>
@@ -8027,6 +8096,109 @@ public void thisIsSuper() {
       <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
     
       <category term="Open Source" scheme="http://ipcreator.me/tags/Open-Source/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>技术大牛带你走向机器学习“正道”</title>
+    <link href="http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/"/>
+    <id>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</id>
+    <published>2017-02-19T15:57:06.000Z</published>
+    <updated>2017-02-19T06:03:00.876Z</updated>
+    
+    <content type="html"><![CDATA[<p>作者：<a href="http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html" target="_blank" rel="external">雷锋网 亚峰</a></p>
+<p>导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。</p>
+<p>雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：</p>
+<p>现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。<br>随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。</p>
+<p>其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？</p>
+<p>雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。</p>
+  <a id="more"></a>
+<p>嘉宾介绍：</p>
+<p>王刚，前乐视大数据总监，现任某电商平台大数据总监。10 年大数据领域工作经验，具有 Hadoop 和 Spark 生态相关技术的实际应用经验。目前专注于机器学习，搜索和推荐系统的设计和开发。</p>
+<p>以下为王刚所撰写的正文：</p>
+<p>机器学习对很多初学者来说，最大的学习困难和障碍就是模型、算法、“眼花缭乱”的数学公式所带来的抽象感，无法有效的建立起直觉上的理解。所以本文的目的是尝试给初学者具体的学习方式建议，以帮助初学者打通机器学习的任督二脉，然后通过不断的学习和实践，使得自己在机器学习领域的专业能力持续提升。</p>
+<p>机器学习与人工智能、深度学习之间的关系</p>
+<p>当前被提及的高频词语是“AI人工智能”、“机器学习”、“深度学习”。那这些词语背后所代表的技术之间到底是什么关系呢？充分的理解这个关系，有利于建立起更加系统的专业学习框架。</p>
+<p>首先，我们要搞明白机器学习到底学习的是什么，答案是模型“参数”，比如Y=AX+B是个机器学习的模型，通过样本数据，可以学习出参数A和B的确定值。然后基于这两个参数，对模型进行泛化，即对给定的X对Y进行预测。明白了机器学习到底是学习什么之后，我们一起看看下图来搞清楚机器学习与人工智能和深度学习之间的关系。</p>
+<p>技术大牛带你走向机器学习“正道”：小朋友才迷信算法，大人们更重视工程实践</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888f9bedd1f.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>如上图所示，人工智能是最大的一个范畴，人工智能的实现目前看主要有两种途径：一种是基于脑科学的方式来实现智能。另一种是基于机器学习的方式来实现智能，这种方式的假设是当学习的数据足够充分，就可以大概率的逼近事实。</p>
+<p>再回到公式Y=AX+B，我们可以看到机器学习是通过X和Y来学习出参数A和B，而在机器学习中，X是人工构造的特征，Y是人工进行标注的标签。一句话，机器学习就是通过构造X和Y来学习参数A和B。但通常情况下，构造X和标注Y需要耗用大量的人力和时间。所以，对于如何更智能的构造X和标注Y是机器学习很重要的研究方向。深度学习的一个重要作用就是能够更智能的构造X，即进行更好的特征表示。所以深度学习是机器学习的一个子集。那如何更好的标注Y呢，当前流行的对抗生成网络（GAN）就是一种解决方案。</p>
+<p>机器学习需要的基础知识体系</p>
+<p>机器学习的三个关键要素是模型、策略、算法。模型指的是具体的机器学习模型，比如决策树、SVM、神经网络、LDA等具体模型。策略指的是最小化模型结构性风险的手段，即避免模型欠拟合和过拟合的应对策略，在这里专指正则化（Regularization）。算法指的是建立好模型之后，如何对模型中的参数进行学习。也即最优化的方法。所以，初学者需要掌握的基础知识为：</p>
+<p>1.导数与微积分，以及还需要对泰勒展开式、拉格朗日等定理和公式有充分的掌握。这是进行算法推导的基础中的基础。</p>
+<p>2.线性代数，矩阵运算等要做到熟练掌握，因为机器学习的最优化算法中涉及到的复杂计算需要线性代数好矩阵运算的内容。</p>
+<p>3.概率论，概率论的基础知识是理解像极大似然、最大熵、EM算法、贝叶斯网络、概率图模型的基础。</p>
+<p>4.最优化，机器学习中的模型训练是通过对模型中参数的学习来进行泛化推广。如何对模型中的参数进行学习是最优化要解决的问题。比如线性优化、非线性优化的各种主要方法（比如梯度下降法、牛顿和拟牛顿法等）要有充分的理解。</p>
+<p>5.机器学习模型的思想和具体实现方式要理解透彻。</p>
+<p>机器学习的应用实践</p>
+<p>特征工程，如上面所说就是造X，机器学习实践中大部分的实践都在处理特征工程上。所以真正有机器学习实践经验的人都知道机器学习更多的时间不是高大上的算法，而是苦逼特征工程。工程师每天更多的是基于对业务的深刻理解，通过构建“更好”的特征，持续提升模型的准确度。</p>
+<p>推荐系统与搜索系统</p>
+<p>当推荐和搜索这些字眼出现在网页中，专业书籍中，或是大部分的培训课程中，更多的是与机器学习和算法关联起来。这种情况的原因可能是为了迎合机器学习在大部分人认知中的“高大上”吧。</p>
+<p>在实际的产品设计和开发中，推荐系统和搜索系统是有着一个更大概念的系统架构，绝非仅仅是只有机器学习和算法。其中UI/UE的重要性占比为40%，业务理解重要性占比为30%，数据重要性占比为20%，模型重要性占比为10%。</p>
+<p>以推荐系统举例，整个推荐系统的框架应当如下图所示：</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fc4b17f9.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>下图是电商平台上推荐系统的框架</p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201701/58888fd1d31a4.png?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>所以，建议的推荐系统知识学习体系为：</p>
+<p>一、推荐系统之整体架构</p>
+<p>1.推荐系统的本质、目标及价值</p>
+<p>2.一个好的推荐系统的相貌</p>
+<p>3.线下零售的促销员与电商平台的推荐系统的关系</p>
+<p>3.推荐系统与搜索的关系</p>
+<p>4.主流电商平台上的推荐系统学习</p>
+<p>5.推荐系统的整体架构图以及如何学习推荐系统</p>
+<p>二、推荐系统之策略及模型</p>
+<ol>
+<li><p>基于规则的推荐算法</p>
+</li>
+<li><p>基于内容(Content-Based)的推荐算法</p>
+</li>
+<li><p>基于协同过滤（CF)的推荐算法</p>
+</li>
+<li><p>基于隐因子（SVD/SVD++/MF/FM/FFM/PLSA/LDA）的推荐算法</p>
+</li>
+<li><p>推荐结果的排序模型（GBDT+LR，LTR）</p>
+</li>
+<li><p>数学基础及典型最优化算法</p>
+</li>
+</ol>
+<p>7.不同场景下的推荐策略（如在电商平台上，首页、详情页、购物车页、搜索结果页等不同场景下的推荐策略）</p>
+<p>8.推荐系统评估</p>
+<p>如何评估线下模型，如何评估线上效果</p>
+<p>三、推荐系统之特征工程</p>
+<p>1.用户画像如何构建</p>
+<p>2.特征工程如何构建，以及如何进行特征分析</p>
+<p>四、推荐系统之交互体验</p>
+<p>如何向用户展示推荐系统的权威性、取得用户的信任、如何帮助用户决策、如何获取用户反馈。</p>
+<p>如何开始机器学习</p>
+<p>对于大多数人来说，如果以抽象的方式开始学习一项内容肯定不是最好的方式。相反，先建立起直觉，然后建立具体到抽象的映射，再深入学习抽象部分完成对细节部分的掌握，最后循环到具体的应用是适合大多数人的学习方式。所以对于机器学习初学者建议的学习路径为：</p>
+<p>步骤一：先选择一门实战性非常强的机器学习及其应用课程进行学习。目标是通过足够多具体的应用，能够深刻理解机器学习的实际使用方式，从而建立起直觉。</p>
+<p>步骤二：学习机器学习的理论课程，包括具体的模型算法，最优化方法，以及相关的公式推导。过了这一关，就完成了对机器学习细节的更好掌控。</p>
+<p>步骤三：如果能够立刻参与到机器学习的实际项目中是最好不过了。如果不能，可以去完成Kaggle中的一些比赛项目。</p>
+<p>最后，也是最最重要的建议，如果要想“更快速”“更高效”的掌握机器学习，找到合适的培训课程进行学习是最合适的方式。用钱买时间，买别人的经验，以更高效的方式掌握机器学习后，这些付出的费用可能仅仅是你工作之后月薪的很小的一部分。</p>
+<p>在任督二脉打通之后，可以适当的对分布式存储和计算相关体系的内容进行学习。即靠的是个人的持续修行，在理论与实践循环提升中，成长为真正的专家。</p>
+<p>PS：为了推动 AI 人才全面化，雷锋网将为大家提供一个业界顶级的专业 AI 技术培训平台：1024MOOC 。其中王刚老师也会在1024MOOC 开展系统的机器学习实战培训课程，具体开课时间在年后一周左右，请大家持续关注雷锋网(公众号：雷锋网)信息。</p>
+<p>雷锋网原创文章，未经授权禁止转载。详情见转载须知。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作者：&lt;a href=&quot;http://www.leiphone.com/news/201701/mY1HbudReeTtJHw4.html&quot;&gt;雷锋网 亚峰&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;导语：现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉。&lt;/p&gt;
+&lt;p&gt;雷锋网按：“算法”这两字在人工智能圈已然成为“高大上”的代名词，由于不少在校生和职场新人对它的过度迷恋，多名 AI 资深人士均对这一现象表示担忧。李开复曾这样说到：&lt;/p&gt;
+&lt;p&gt;现在的 AI 科学家大部分是在科研环境中培养出来的，不但欠缺工程化、产品化的经验，而且对于错综复杂的商业环境也并不熟悉，更缺乏解决实际问题所必须的数据资源。&lt;br&gt;随着开源框架层出不穷，人工智能产品化和商业化进程不断加速，使得算法的门槛逐渐降低，但对工程的要求不断在提高。这种情况下，实际应用和工程能力基础扎实的技术人才变得异常抢手。&lt;/p&gt;
+&lt;p&gt;其实 AI 新人们在进入职场后也愈发意识到这个问题，那他们该如何提升自己的实战能力？&lt;/p&gt;
+&lt;p&gt;雷锋网特邀王刚为大家讲述机器学习的实战与应用，王刚根据工程、产品、业务等多个维度帮大家梳理如何系统地去学习机器学习。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
+    
+      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
     
   </entry>
   
@@ -9615,64 +9787,6 @@ public void thisIsSuper() {
     
     
       <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Awesome Deep Learning</title>
-    <link href="http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/"/>
-    <id>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/</id>
-    <published>2017-02-19T15:56:00.000Z</published>
-    <updated>2017-02-19T06:03:00.878Z</updated>
-    
-    <content type="html"><![CDATA[<p>作者：<a href="https://github.com/josephmisiti/awesome-deep-learning" target="_blank" rel="external">Joseph Misiti/josephmisiti</a></p>
-<html lang="en" class=" is-u2f-enabled"><br><br>A curated list of awesome Deep Learning tutorials, projects and communities.<br><br>  <div id="readme" class="readme blob instapaper_body"><br>    <article class="markdown-body entry-content" itemprop="text"><h3><a id="user-content-free-online-books" class="anchor" href="#free-online-books" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Free Online Books</h3><br><br><ol><br><li> <a href="http://www.iro.umontreal.ca/%7Ebengioy/dlbook/" target="_blank" rel="external">Deep Learning</a> by Yoshua Bengio, Ian Goodfellow and Aaron Courville  (01/01/2015)</li><br><li> <a href="http://neuralnetworksanddeeplearning.com/" target="_blank" rel="external">Neural Networks and Deep Learning</a> by  Michael Nielsen (Dec 2014)</li><br><li> <a href="http://research.microsoft.com/pubs/209355/DeepLearning-NowPublishing-Vol7-SIG-039.pdf" target="_blank" rel="external">Deep Learning</a> by Microsoft Research (2013) </li><br><li> <a href="http://deeplearning.net/tutorial/deeplearning.pdf" target="_blank" rel="external">Deep Learning Tutorial</a> by LISA lab, University of Montreal (Jan 6 2015)</li><br></ol><br><br><a id="more"></a><br><br><h3><a id="user-content-courses" class="anchor" href="#courses" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Courses</h3><br><br><ol><br><li> <a href="https://class.coursera.org/ml-005" target="_blank" rel="external">Machine Learning - Stanford</a> by Andrew Ng in Coursera (2010-2014)</li><br><li> <a href="http://work.caltech.edu/lectures.html" target="_blank" rel="external">Machine Learning - Caltech</a> by Yaser Abu-Mostafa (2012-2014)</li><br><li> <a href="http://www.cs.cmu.edu/%7Etom/10701_sp11/lectures.shtml" target="_blank" rel="external">Machine Learning - Carnegie Mellon</a> by Tom Mitchell (Spring 2011)</li><br><li> <a href="https://class.coursera.org/neuralnets-2012-001" target="_blank" rel="external">Neural Networks for Machine Learning</a> by Geoffrey Hinton in Coursera (2012)</li><br><li> <a href="https://www.youtube.com/playlist?list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH" target="_blank" rel="external">Neural networks class</a> by Hugo Larochelle from Université de Sherbrooke (2013)</li><br><li> <a href="http://cilvr.cs.nyu.edu/doku.php?id=deeplearning:slides:start" target="_blank" rel="external">Deep Learning Course</a> by CILVR lab @ NYU (2014)</li><br><li> <a href="https://courses.edx.org/courses/BerkeleyX/CS188x_1/1T2013/courseware/" target="_blank" rel="external">A.I - Berkeley</a> by Dan Klein and Pieter Abbeel (2013)</li><br><li> <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lecture-videos/" target="_blank" rel="external">A.I - MIT</a> by Patrick Henry Winston (2010)</li><br><li> <a href="http://web.mit.edu/course/other/i2course/www/vision_and_learning_fall_2013.html" target="_blank" rel="external">Vision and learning - computers and brains</a> by Shimon Ullman, Tomaso Poggio, Ethan Meyers @ MIT (2013)</li><br></ol><br><br><h3><a id="user-content-video-and-lectures" class="anchor" href="#video-and-lectures" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Video and Lectures</h3><br><br><ol><br><li> <a href="https://www.youtube.com/watch?v=RIkxVci-R4k" target="_blank" rel="external">How To Create A Mind</a> By Ray Kurzweil</li><br><li> <a href="https://www.youtube.com/watch?v=n1ViNeWhC24" target="_blank" rel="external">Deep Learning, Self-Taught Learning and Unsupervised Feature Learning</a> By Andrew Ng</li><br><li> <a href="https://www.youtube.com/watch?v=vShMxxqtDDs&amp;amp;index=3&amp;amp;list=PL78U8qQHXgrhP9aZraxTT5-X1RccTcUYT" target="_blank" rel="external">Recent Developments in Deep Learning</a> By Geoff Hinton</li><br><li> <a href="https://www.youtube.com/watch?v=sc-KbuZqGkI" target="_blank" rel="external">The Unreasonable Effectiveness of Deep Learning</a> by Yann LeCun</li><br><li> <a href="https://www.youtube.com/watch?v=4xsVFLnHC_0" target="_blank" rel="external">Deep Learning of Representations</a> by Yoshua bengio</li><br><li> <a href="https://www.youtube.com/watch?v=6ufPpZDmPKA" target="_blank" rel="external">Principles of Hierarchical Temporal Memory</a> by Jeff Hawkins</li><br><li> <a href="https://www.youtube.com/watch?v=2QJi0ArLq7s&amp;amp;list=PL78U8qQHXgrhP9aZraxTT5-X1RccTcUYT" target="_blank" rel="external">Machine Learning Discussion Group - Deep Learning w/ Stanford AI Lab</a> by Adam Coates</li><br><li> <a href="http://vimeo.com/80821560" target="_blank" rel="external">Making Sense of the World with Deep Learning</a> By Adam Coates </li><br><li> <a href="https://www.youtube.com/watch?v=wZfVBwOO0-k" target="_blank" rel="external">Demystifying Unsupervised Feature Learning </a> By Adam Coates</li><br><li> <a href="https://www.youtube.com/watch?v=3boKlkPBckA" target="_blank" rel="external">Visual Perception with Deep Learning</a> By Yann LeCun</li><br><li> <a href="https://www.youtube.com/watch?v=AyzOUbkUf3M" target="_blank" rel="external">The Next Generation of Neural Networks</a> By Geoffrey Hinton at GoogleTechTalks</li><br><li> <a href="http://www.ted.com/talks/jeremy_howard_the_wonderful_and_terrifying_implications_of_computers_that_can_learn" target="_blank" rel="external">The wonderful and terrifying implications of computers that can learn</a> By Jeremy Howard at TEDxBrussels</li><br></ol><br><br><h3><a id="user-content-papers" class="anchor" href="#papers" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Papers</h3><br><br><ol><br><li> <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf" target="_blank" rel="external">ImageNet Classification with Deep Convolutional Neural Networks</a></li><br><li> <a href="http://www.cs.toronto.edu/%7Ehinton/absps/esann-deep-final.pdf" target="_blank" rel="external">Using Very Deep Autoencoders for Content Based Image Retrieval</a></li><br><li> <a href="http://www.iro.umontreal.ca/%7Elisa/pointeurs/TR1312.pdf" target="_blank" rel="external">Learning Deep Architectures for AI</a></li><br><li> <a href="http://deeplearning.cs.cmu.edu/" target="_blank" rel="external">CMU’s list of papers</a></li><br></ol><br><br><h3><a id="user-content-tutorials" class="anchor" href="#tutorials" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Tutorials</h3><br><br><ol><br><li> <a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial" target="_blank" rel="external">UFLDL Tutorial 1</a></li><br><li> <a href="http://ufldl.stanford.edu/tutorial/supervised/LinearRegression/" target="_blank" rel="external">UFLDL Tutorial 2</a></li><br><li> <a href="http://www.socher.org/index.php/DeepLearningTutorial/DeepLearningTutorial" target="_blank" rel="external">Deep Learning for NLP (without Magic)</a></li><br><li> <a href="http://www.toptal.com/machine-learning/an-introduction-to-deep-learning-from-perceptrons-to-deep-networks" target="_blank" rel="external">A Deep Learning Tutorial: From Perceptrons to Deep Networks</a></li><br><li> <a href="http://www.metacademy.org/roadmaps/rgrosse/deep_learning" target="_blank" rel="external">Deep Learning from the Bottom up</a></li><br></ol><br><br><h3><a id="user-content-websites" class="anchor" href="#websites" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>WebSites</h3><br><br><ol><br><li> <a href="http://deeplearning.net/" target="_blank" rel="external">deeplearning.net</a></li><br><li> <a href="http://deeplearning.stanford.edu/" target="_blank" rel="external">deeplearning.stanford.edu</a></li><br></ol><br><br><h3><a id="user-content-datasets" class="anchor" href="#datasets" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Datasets</h3><br><br><ol><br><li> <a href="http://yann.lecun.com/exdb/mnist/" target="_blank" rel="external">MNIST</a> Handwritten digits</li><br><li> <a href="http://ufldl.stanford.edu/housenumbers/" target="_blank" rel="external">Google House Numbers</a> from street view</li><br><li> <a href="http://www.cs.toronto.edu/%7Ekriz/cifar.html" target="_blank" rel="external">CIFAR-10 and CIFAR-100</a>4.<br></li><br><li> <a href="http://www.image-net.org/" target="_blank" rel="external">IMAGENET</a></li><br><li> <a href="http://groups.csail.mit.edu/vision/TinyImages/" target="_blank" rel="external">Tiny Images</a> 80 Million tiny images6.<br></li><br><li> <a href="http://yahoolabs.tumblr.com/post/89783581601/one-hundred-million-creative-commons-flickr-images" target="_blank" rel="external">Flickr Data</a> 100 Million Yahoo dataset</li><br><li> <a href="http://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/" target="_blank" rel="external">Berkeley Segmentation Dataset 500</a></li><br></ol><br><br><h3><a id="user-content-frameworks" class="anchor" href="#frameworks" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Frameworks</h3><br><br><ol><br><li> <a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">Caffe</a><br></li><br><li> <a href="http://torch.ch/" target="_blank" rel="external">Torch7</a></li><br><li> <a href="http://deeplearning.net/software/theano/" target="_blank" rel="external">Theano</a></li><br><li> <a href="https://code.google.com/p/cuda-convnet2/" target="_blank" rel="external">cuda-convnet</a></li><br><li> <a href="http://libccv.org/doc/doc-convnet/" target="_blank" rel="external">Ccv</a></li><br><li> <a href="http://numenta.org/nupic.html" target="_blank" rel="external">NuPIC</a></li><br><li> <a href="http://deeplearning4j.org/" target="_blank" rel="external">DeepLearning4J</a></li><br><li> <a href="https://github.com/harthur/brain" target="_blank" rel="external">Brain</a></li><br></ol><br><br><h3><a id="user-content-miscellaneous" class="anchor" href="#miscellaneous" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Miscellaneous</h3><br><br><ol><br><li> <a href="https://plus.google.com/communities/112866381580457264725" target="_blank" rel="external">Google Plus - Deep Learning Community</a></li><br><li> <a href="http://on-demand-gtc.gputechconf.com/gtcnew/on-demand-gtc.php?searchByKeyword=shelhamer&amp;amp;searchItems=&amp;amp;sessionTopic=&amp;amp;sessionEvent=4&amp;amp;sessionYear=2014&amp;amp;sessionFormat=&amp;amp;submit=&amp;amp;select=+" target="_blank" rel="external">Caffe Webinar</a></li><br><li> <a href="http://meta-guide.com/software-meta-guide/100-best-github-deep-learning/" target="_blank" rel="external">100 Best Github Resources in Github for DL</a></li><br><li> <a href="https://code.google.com/p/word2vec/" target="_blank" rel="external">Word2Vec</a></li><br><li> <a href="https://registry.hub.docker.com/u/tleyden5iwx/caffe/" target="_blank" rel="external">Caffe DockerFile</a></li><br><li> <a href="https://github.com/TorontoDeepLearning/convnet" target="_blank" rel="external">TorontoDeepLEarning convnet</a></li><br><li> <a href="http://www.cs.cmu.edu/%7Ecil/v-images.html" target="_blank" rel="external">Vision data sets</a></li><br><li> <a href="http://code.cogbits.com/wiki/doku.php" target="_blank" rel="external">Fantastic Torch Tutorial</a></li><br><li> <a href="https://github.com/clementfarabet/gfx.js" target="_blank" rel="external">gfx.js</a></li><br><li><a href="https://github.com/torch/torch7/wiki/Cheatsheet" target="_blank" rel="external">Torch7 Cheat sheet</a></li><br><li><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-864-advanced-natural-language-processing-fall-2005/" target="_blank" rel="external">Misc from MIT’s ‘Advanced Natural Language Processing’ course</a></li><br><li><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-867-machine-learning-fall-2006/lecture-notes/" target="_blank" rel="external">Misc from MIT’s ‘Machine Learning’ course</a></li><br><li><a href="http://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-520-a-networks-for-learning-regression-and-classification-spring-2001/" target="_blank" rel="external">Misc from MIT’s ‘Networks for Learning: Regression and Classification’ course</a></li><br><li><a href="http://ocw.mit.edu/courses/health-sciences-and-technology/hst-723j-neural-coding-and-perception-of-sound-spring-2005/index.htm" target="_blank" rel="external">Misc from MIT’s ‘Neural Coding and Perception of Sound’ course</a></li><br><li><a href="http://www.datasciencecentral.com/profiles/blogs/implementing-a-distributed-deep-learning-network-over-spark" target="_blank" rel="external">Implementing a Distributed Deep Learning Network over Spark</a></li><br></ol><br><br><hr><br><br><h3><a id="user-content-contributing" class="anchor" href="#contributing" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Contributing</h3><br><br><p>Have anything in mind that you think is awesome and would fit in this list? Feel free to send a <a href="https://github.com/ashara12/awesome-deeplearning/pulls" target="_blank" rel="external">pull request</a>. </p><br></article><br>  </div><br><br><br><br>  <br></html>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;作者：&lt;a href=&quot;https://github.com/josephmisiti/awesome-deep-learning&quot;&gt;Joseph Misiti/josephmisiti&lt;/a&gt;&lt;/p&gt;
-&lt;html lang=&quot;en&quot; class=&quot; is-u2f-enabled&quot;&gt;&lt;br&gt;&lt;br&gt;A curated list of awesome Deep Learning tutorials, projects and communities.&lt;br&gt;&lt;br&gt;  &lt;div id=&quot;readme&quot; class=&quot;readme blob instapaper_body&quot;&gt;&lt;br&gt;    &lt;article class=&quot;markdown-body entry-content&quot; itemprop=&quot;text&quot;&gt;&lt;h3&gt;&lt;a id=&quot;user-content-free-online-books&quot; class=&quot;anchor&quot; href=&quot;#free-online-books&quot; aria-hidden=&quot;true&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-link&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Free Online Books&lt;/h3&gt;&lt;br&gt;&lt;br&gt;&lt;ol&gt;&lt;br&gt;&lt;li&gt; &lt;a href=&quot;http://www.iro.umontreal.ca/%7Ebengioy/dlbook/&quot;&gt;Deep Learning&lt;/a&gt; by Yoshua Bengio, Ian Goodfellow and Aaron Courville  (01/01/2015)&lt;/li&gt;&lt;br&gt;&lt;li&gt; &lt;a href=&quot;http://neuralnetworksanddeeplearning.com/&quot;&gt;Neural Networks and Deep Learning&lt;/a&gt; by  Michael Nielsen (Dec 2014)&lt;/li&gt;&lt;br&gt;&lt;li&gt; &lt;a href=&quot;http://research.microsoft.com/pubs/209355/DeepLearning-NowPublishing-Vol7-SIG-039.pdf&quot;&gt;Deep Learning&lt;/a&gt; by Microsoft Research (2013) &lt;/li&gt;&lt;br&gt;&lt;li&gt; &lt;a href=&quot;http://deeplearning.net/tutorial/deeplearning.pdf&quot;&gt;Deep Learning Tutorial&lt;/a&gt; by LISA lab, University of Montreal (Jan 6 2015)&lt;/li&gt;&lt;br&gt;&lt;/ol&gt;&lt;br&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Deep Learning" scheme="http://ipcreator.me/tags/Deep-Learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>25个Java机器学习工具&amp;库</title>
-    <link href="http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/"/>
-    <id>http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/</id>
-    <published>2017-02-19T15:50:06.000Z</published>
-    <updated>2017-02-19T06:03:00.878Z</updated>
-    
-    <content type="html"><![CDATA[<p>转自：<a href="http://blog.csdn.net/xiexingshishu/article/details/50405531" target="_blank" rel="external">CSDN</a></p>
-<p>本列表总结了25个Java机器学习工具&amp;库</p>
-<a id="more"></a>
-<div id="article_content" class="article_content"><br><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>本列表总结了25个Java机器学习工具&amp;库：</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>1.&nbsp;<a target="_blank" href="http://www.cs.waikato.ac.nz/ml/weka/" style="color:rgb(0,102,204); text-decoration:none">Weka</a>集成了数据挖掘工作的机器学习算法。这些算法可以直接应用于一个数据集上或者你可以自己编写代码来调用。Weka包括一系列的工具，如数据预处理、分类、回归、聚类、关联规则以及可视化。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>2.<a target="_blank" href="http://moa.cms.waikato.ac.nz/" style="color:rgb(0,102,204); text-decoration:none">Massive&nbsp;Online&nbsp;Analysis</a>（MOA）是一个面向数据流挖掘的流行开源框架，有着非常活跃的成长社区。它包括一系列的机器学习算法（分类、回归、聚类、异常检测、概念漂移检测和推荐系统）和评估工具。关联了WEKA项目，MOA也是用Java编写的，其扩展性更强。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>3.<a target="_blank" href="http://meka.sourceforge.net/" style="color:rgb(0,102,204); text-decoration:none">MEKA</a>项目提供了一个面向多标签学习和评价方法的开源实现。在多标签分类中，我们要预测每个输入实例的多个输出变量。这与“普通”情况下只涉及一个单一目标变量的情形不同。此外，MEKA基于WEKA的机器学习工具包。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>4.&nbsp;<a target="_blank" href="https://adams.cms.waikato.ac.nz/" style="color:rgb(0,102,204); text-decoration:none">Advanced&nbsp;Data&nbsp;mining&nbsp;And&nbsp;Machine&nbsp;learning&nbsp;System</a>（ADAMS）是一种新型的柔性工作流引擎，旨在迅速建立并保持真实世界的复杂知识流，它是基于GPLv3发行的。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>5.&nbsp;<a target="_blank" href="http://elki.dbs.ifi.lmu.de/" style="color:rgb(0,102,204); text-decoration:none">Environment&nbsp;for&nbsp;Developing&nbsp;KDD-Applications&nbsp;Supported&nbsp;by&nbsp;Index-Structure</a>（ELKI）是一款基于Java的开源（AGPLv3）数据挖掘软件。ELKI主要集中于算法研究，重点研究聚类分析中的无监督方法和异常检测。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>6.&nbsp;<a target="_blank" href="http://mallet.cs.umass.edu/" style="color:rgb(0,102,204); text-decoration:none">Mallet</a>是一个基于Java的面向文本文件的机器学习工具包。Mallet支持分类算法，如最大熵、朴素贝叶斯和决策树分类。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>7.&nbsp;<a target="_blank" href="http://www.heatonresearch.com/encog" style="color:rgb(0,102,204); text-decoration:none">Encog</a>是一个先进的机器学习框架，集成了支持向量机（SVM）、人工神经网络、遗传算法、贝叶斯网络、隐马尔可夫模型（HMM）、遗传编程和遗传算法。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>8.&nbsp;<a target="_blank" href="http://www.datumbox.com/" style="color:rgb(0,102,204); text-decoration:none">Datumbox</a>机器学习框架是一个用Java编写的开源框架，允许快速地开发机器学习和统计应用。该框架的核心重点包括大量的机器学习算法以及统计测试，能够处理中等规模的数据集。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>9.&nbsp;<a target="_blank" href="http://deeplearning4j.org/" style="color:rgb(0,102,204); text-decoration:none">Deeplearning4j</a>是使用Java和Scala编写的第一个商业级的、开源的、分布式深入学习库。其设计的目的是用于商业环境中，而不是作为一个研究工具。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>10.&nbsp;<a target="_blank" href="http://mahout.apache.org/" style="color:rgb(0,102,204); text-decoration:none">Mahout</a>是一个内置算法的机器学习框架。Mahout-Samsara帮助人们创建他们自己的数学，并提供了一些现成的算法实现。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>11.<a target="_blank" href="https://rapidminer.com/" style="color:rgb(0,102,204); text-decoration:none">Rapid&nbsp;Miner</a>是德国多特蒙特技术大学开发的。它为开发者开发应用程序提供了一个GUI（图形用户界面）和Java&nbsp;API。它还提供了一些机器学习算法，用来做数据处理、可视化以及建模。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>12.&nbsp;<a target="_blank" href="http://samoa.incubator.apache.org/" style="color:rgb(0,102,204); text-decoration:none">Apache&nbsp;SAMOA</a>是一个机器学习（ML）框架，内嵌面向分布式流ML算法的编程抽象，并且允许在没有直接处理底层分布式流处理引擎（DSPEe，如Apache&nbsp;Storm、Apache&nbsp;S4和Apache&nbsp;samza）复杂性的情况下，开发新的ML算法。用户可以开发分布式流ML算法，而且可以在多个DSPEs上执行。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>13.&nbsp;<a target="_blank" href="http://neuroph.sourceforge.net/" style="color:rgb(0,102,204); text-decoration:none">Neuroph</a>通过提供支持创建、训练和保存神经网络的Java网络库和GUI工具，简化了神经网络开发。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>14.&nbsp;<a target="_blank" href="http://oryx.io/" style="color:rgb(0,102,204); text-decoration:none">Oryx&nbsp;2</a>是一个建立在Apache&nbsp;Spark和Apache&nbsp;Kafka的Lambda架构实现，但随着实时大规模机器学习而逐渐开始专业化。这是一个用于构建应用程序的框架，但也包括打包，以及面向协同过滤、分类、回归和聚类的端到端的应用程序。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>15.&nbsp;<a target="_blank" href="http://nlp.stanford.edu/software/classifier.shtml" style="color:rgb(0,102,204); text-decoration:none">Stanford&nbsp;Classifier</a>是一个机器学习工具，它可以将数据项归置到一个类别。一个概率分类器，比如这个，它可以对一个数据项给出类分配的概率分布。该软件是最大熵分类器的一个Java实现。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>16.<a target="_blank" href="http://www.cortical.io/" style="color:rgb(0,102,204); text-decoration:none">io</a>是一个Retina&nbsp;API，有着快速精确的类&#20284;大脑的自然语言处理算法。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>17.<a target="_blank" href="https://github.com/EdwardRaff/JSAT/tree/master" style="color:rgb(0,102,204); text-decoration:none">JSAT</a>是一个快速入门的机器学习库。该库是我在业余时间开发的，基于GPL3发行的。库中的一部分内容可自主学习，例如所有的代码都是独立的。JSAT没有外部依赖，而且是纯Java编写的。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>18.&nbsp;<a target="_blank" href="http://nd4j.org/" style="color:rgb(0,102,204); text-decoration:none">N-Dimensional&nbsp;Arrays&nbsp;for&nbsp;Java</a>(ND4J)是一个用于JVM的科学计算库。它们是用来在生产环境中使用的，这表明例程的设计是以最小的内存需求来运行的。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>19.&nbsp;<a target="_blank" href="https://www.openhub.net/p/8582" style="color:rgb(0,102,204); text-decoration:none">Java&nbsp;Machine&nbsp;Learning&nbsp;Library</a>（Java机器学习库）是一系列机器学习算法的相关实现。这些算法，无论是源代码还是文档，都编写的很出色。其主要语言是Java。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>20.&nbsp;<a target="_blank" href="http://java-ml.sourceforge.net/" style="color:rgb(0,102,204); text-decoration:none">Java-ML</a>是一个使用Java编写的一系列机器学习算法的Java&nbsp;API。它只提供了一个标准的算法接口。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>21.&nbsp;<a target="_blank" href="http://spark.apache.org/mllib/" style="color:rgb(0,102,204); text-decoration:none">MLlib&nbsp;(Spark)</a>是Apache&nbsp;Spark的可扩展机器学习库。虽然是Java，但该库与平台还支持Java，Scala和Python绑定。此库是最新的，并且算法很多。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>22.&nbsp;<a target="_blank" href="https://github.com/h2oai/h2o-3" style="color:rgb(0,102,204); text-decoration:none">H2O</a>是用于智能应用的机器学习API。它在大数据上对统计学、机器学习和数学进行了规模化。H2O可扩展，开发者可以在核心部分使用简单的数学知识。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>23.&nbsp;<a target="_blank" href="https://github.com/WalnutiQ/wAlnut" style="color:rgb(0,102,204); text-decoration:none">WalnutiQ</a>是人脑部分面向对象模型，有着理论常用的学习算法（正在向简单强烈的情感人工智能模型方向研究）。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>24.&nbsp;<a target="_blank" href="http://sourceforge.net/p/lemur/wiki/RankLib/" style="color:rgb(0,102,204); text-decoration:none">RankLib</a>是一个排名学习算法库。目前已经实现八种流行的算法。</p><br><p style="margin-top:0px; margin-bottom:1.5em; padding-top:0px; padding-bottom:0px; list-style:none; color:rgb(51,51,51); font-family:Helvetica,Tahoma,Arial,sans-serif; font-size:14px; line-height:24px"><br>25.&nbsp;<a target="_blank" href="https://github.com/numenta/htm.java" style="color:rgb(0,102,204); text-decoration:none">htm.java</a>（基于Java的Hierarchical&nbsp;Temporal&nbsp;Memory算法实现）是一个面向智能计算的Numenta平台的Java接口</p><br><br></div>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;转自：&lt;a href=&quot;http://blog.csdn.net/xiexingshishu/article/details/50405531&quot;&gt;CSDN&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;本列表总结了25个Java机器学习工具&amp;amp;库&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
-    
-      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
-    
-      <category term="Open Source" scheme="http://ipcreator.me/tags/Open-Source/"/>
-    
-      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
     
   </entry>
   
