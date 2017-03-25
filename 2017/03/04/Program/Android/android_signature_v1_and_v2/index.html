@@ -95,12 +95,12 @@
 <meta property="og:url" content="http://ipcreator.me/2017/03/04/Program/Android/android_signature_v1_and_v2/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="Android 7.0 introduces APK Signature Scheme v2, a new app-signing scheme that offers faster app install times and more protection against unauthorized alterations to APK files. By default, Android S">
-<meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/signature.png">
-<meta property="og:updated_time" content="2017-03-04T14:03:17.625Z">
+<meta property="og:image" content="http://tech.meituan.com/img/android-v2-signature/apk-before-after-signing.png">
+<meta property="og:updated_time" content="2017-03-25T12:17:32.766Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="APK Signature Scheme v2">
 <meta name="twitter:description" content="Android 7.0 introduces APK Signature Scheme v2, a new app-signing scheme that offers faster app install times and more protection against unauthorized alterations to APK files. By default, Android S">
-<meta name="twitter:image" content="http://okkntqe2h.bkt.clouddn.com/signature.png">
+<meta name="twitter:image" content="http://tech.meituan.com/img/android-v2-signature/apk-before-after-signing.png">
 
 
 
@@ -398,9 +398,10 @@
       
 
       
-        <p><img src="http://okkntqe2h.bkt.clouddn.com/signature.png" alt=""></p>
+        <p><img src="http://tech.meituan.com/img/android-v2-signature/apk-before-after-signing.png" alt=""></p>
 <p><a href="https://developer.android.com/about/versions/nougat/android-7.0.html#scoped_directory_access" target="_blank" rel="external"></a></p>
 <p>Android 7.0 introduces APK Signature Scheme v2, a new app-signing scheme that offers faster app install times and more protection against unauthorized alterations to APK files. By default, Android Studio 2.2 and the Android Plugin for Gradle 2.2 sign your app using both APK Signature Scheme v2 and the traditional signing scheme, which uses JAR signing.</p>
+<p><a href="https://github.com/ipcreator/walle" target="_blank" rel="external">Android Signature V2 Scheme签名下的新一代渠道包打包神器</a><br><a href="http://tech.meituan.com/android-apk-v2-signature-scheme.html" target="_blank" rel="external">新一代开源Android渠道包生成工具Walle</a><br><a href="http://tech.meituan.com/mt-apk-packaging.html" target="_blank" rel="external">美团Android自动化之旅—生成渠道包</a></p>
  <a id="more"></a>
 <p>Although we recommend applying APK Signature Scheme v2 to your app, this new scheme is not mandatory. If your app doesn’t build properly when using APK Signature Scheme v2, you can disable the new scheme. The disabling process causes Android Studio 2.2 and the Android Plugin for Gradle 2.2 to sign your app using only the traditional signing scheme. To sign with only the traditional scheme, open the module-level build.gradle file, then add the line v2SigningEnabled false to your release signing configuration:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">    ...</div><div class="line">    defaultConfig &#123; ... &#125;</div><div class="line">    signingConfigs &#123;</div><div class="line">      release &#123;</div><div class="line">        storeFile file(&quot;myreleasekey.keystore&quot;)</div><div class="line">        storePassword &quot;password&quot;</div><div class="line">        keyAlias &quot;MyReleaseKey&quot;</div><div class="line">        keyPassword &quot;password&quot;</div><div class="line">        v2SigningEnabled false</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
@@ -482,8 +483,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/03/Program/Android/tips-of-androidstudio/" rel="next" title="Android Studio 技巧">
-                <i class="fa fa-chevron-left"></i> Android Studio 技巧
+              <a href="/2017/03/03/Program/Concepts/how-to-write-singe-instance/" rel="next" title="如何正确地写出单例模式">
+                <i class="fa fa-chevron-left"></i> 如何正确地写出单例模式
               </a>
             
           </div>
@@ -596,7 +597,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">181</span>
+                <span class="site-state-item-count">190</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -618,7 +619,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

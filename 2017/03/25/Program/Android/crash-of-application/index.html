@@ -1,0 +1,1046 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="IPCreator" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="文章来源：简书
+我们在开发应用的过程中不可避免的会遇到各种Crash，今天分享一下如何姿势正确的处理这些Crash来提高我们的开发效率。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android应用崩溃(Crash)日志报告">
+<meta property="og:url" content="http://ipcreator.me/2017/03/25/Program/Android/crash-of-application/index.html">
+<meta property="og:site_name" content="IPCreator">
+<meta property="og:description" content="文章来源：简书
+我们在开发应用的过程中不可避免的会遇到各种Crash，今天分享一下如何姿势正确的处理这些Crash来提高我们的开发效率。">
+<meta property="og:updated_time" content="2017-03-25T12:00:56.829Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android应用崩溃(Crash)日志报告">
+<meta name="twitter:description" content="文章来源：简书
+我们在开发应用的过程中不可避免的会遇到各种Crash，今天分享一下如何姿势正确的处理这些Crash来提高我们的开发效率。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ipcreator.me/2017/03/25/Program/Android/crash-of-application/"/>
+
+
+
+
+
+  <title> Android应用崩溃(Crash)日志报告 | IPCreator </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IPCreator</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Growing up is the only password.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/03/25/Program/Android/crash-of-application/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="For life">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IPCreator">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android应用崩溃(Crash)日志报告
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-25T19:57:06+08:00">
+                2017-03-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/25/Program/Android/crash-of-application/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/25/Program/Android/crash-of-application/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/03/25/Program/Android/crash-of-application/" class="leancloud_visitors" data-flag-title="Android应用崩溃(Crash)日志报告">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>文章来源：<a href="http://www.jianshu.com/p/fc0f6e38e2f3" target="_blank" rel="external">简书</a></p>
+<p>我们在开发应用的过程中不可避免的会遇到各种Crash，今天分享一下如何姿势正确的处理这些Crash来提高我们的开发效率。</p>
+<a id="more"></a>
+<p>对于应用的Crash处理分为测试环境和生产环境。</p>
+<p>1、测试环境<br>在开发过程中为了方便快速定位崩溃所发生的代码，要求我们能在崩溃的同时将日志打印出来，最好以直观的界面显示。这里推荐大家一个开源项目：CustomActivityOnCrash<br>github地址：<a href="https://github.com/Ereza/CustomActivityOnCrash" target="_blank" rel="external">https://github.com/Ereza/CustomActivityOnCrash</a></p>
+<p>2、生产环境<br>当应用发布上线就不能给用户显示这样的界面了所以要用一种用户比较能接受的方式处理。</p>
+<p>在Application类中配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">    * 初始化程序崩溃捕捉处理</div><div class="line">    */</div><div class="line">   protected void initCrashHandler() &#123;</div><div class="line">       if (BuildConfig.isDebug) &#123;</div><div class="line">           CustomActivityOnCrash.install(this);</div><div class="line">       &#125; else &#123;</div><div class="line">           CrashHandler handler = CrashHandler.getInstance();</div><div class="line">           handler.init(getApplicationContext());</div><div class="line">           Thread.setDefaultUncaughtExceptionHandler(handler);</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+<p>CrashHandler类文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div></pre></td><td class="code"><pre><div class="line"> public class CrashHandler implements UncaughtExceptionHandler &#123;</div><div class="line">    /** Debug Log tag*/</div><div class="line">    public static final String TAG = &quot;CrashHandler&quot;;</div><div class="line">    /** 是否开启日志输出,在Debug状态下开启,</div><div class="line">     * 在Release状态下关闭以提示程序性能</div><div class="line">     * */</div><div class="line">    public static final boolean DEBUG = false;</div><div class="line">    /** 系统默认的UncaughtException处理类 */</div><div class="line">    private UncaughtExceptionHandler mDefaultHandler;</div><div class="line">    /** CrashHandler实例 */</div><div class="line">    private static CrashHandler INSTANCE;</div><div class="line">    /** 程序的Context对象 */</div><div class="line">    private Context mContext;</div><div class="line">    /** 使用Properties来保存设备的信息和错误堆栈信息*/</div><div class="line">    private Properties mDeviceCrashInfo = new Properties();</div><div class="line">    private static final String VERSION_NAME = &quot;versionName&quot;;</div><div class="line">    private static final String VERSION_CODE = &quot;versionCode&quot;;</div><div class="line">    private static final String STACK_TRACE = &quot;STACK_TRACE&quot;;</div><div class="line">    /** 错误报告文件的扩展名 */</div><div class="line">    private static final String CRASH_REPORTER_EXTENSION = &quot;.cr&quot;;</div><div class="line"></div><div class="line">    /** 保证只有一个CrashHandler实例 */</div><div class="line">    private CrashHandler() &#123;&#125;</div><div class="line"></div><div class="line">    /** 获取CrashHandler实例 ,单例模式*/</div><div class="line">    public static CrashHandler getInstance() &#123;</div><div class="line">        if (INSTANCE == null) &#123;</div><div class="line">            INSTANCE = new CrashHandler();</div><div class="line">        &#125;</div><div class="line">        return INSTANCE;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 初始化,注册Context对象,</div><div class="line">     * 获取系统默认的UncaughtException处理器,</div><div class="line">     * 设置该CrashHandler为程序的默认处理器</div><div class="line">     * @param ctx</div><div class="line">     */</div><div class="line">    public void init(Context ctx) &#123;</div><div class="line">        mContext = ctx;</div><div class="line">        mDefaultHandler = Thread.getDefaultUncaughtExceptionHandler();</div><div class="line">        Thread.setDefaultUncaughtExceptionHandler(this);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 当UncaughtException发生时会转入该函数来处理</div><div class="line">     */</div><div class="line">    @Override</div><div class="line">    public void uncaughtException(Thread thread, Throwable ex) &#123;</div><div class="line">        if (!handleException(ex) &amp;&amp; mDefaultHandler != null) &#123;</div><div class="line">            //如果用户没有处理则让系统默认的异常处理器来处理</div><div class="line">            mDefaultHandler.uncaughtException(thread, ex);</div><div class="line">        &#125; else &#123;</div><div class="line">            //Sleep一会后结束程序</div><div class="line">            try &#123;</div><div class="line">                Thread.sleep(5000);</div><div class="line">            &#125; catch (InterruptedException e) &#123;</div><div class="line">                Log.e(TAG, &quot;Error : &quot;, e);</div><div class="line">            &#125;</div><div class="line">            android.os.Process.killProcess(android.os.Process.myPid());</div><div class="line">            System.exit(10);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 自定义错误处理,收集错误信息</div><div class="line">     * 发送错误报告等操作均在此完成.</div><div class="line">     * 开发者可以根据自己的情况来自定义异常处理逻辑</div><div class="line">     * @param ex</div><div class="line">     * @return true:如果处理了该异常信息;否则返回false</div><div class="line">     */</div><div class="line">    private boolean handleException(Throwable ex) &#123;</div><div class="line">        if (ex == null) &#123;</div><div class="line">            Log.w(TAG, &quot;handleException --- ex==null&quot;);</div><div class="line">            return true;</div><div class="line">        &#125;</div><div class="line">        final String msg = ex.getLocalizedMessage();</div><div class="line">        if(msg == null) &#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        //使用Toast来显示异常信息</div><div class="line">        new Thread() &#123;</div><div class="line">            @Override</div><div class="line">            public void run() &#123;</div><div class="line">                Looper.prepare();</div><div class="line">                Toast toast = Toast.makeText(mContext, &quot;程序出错，即将退出&quot;,</div><div class="line">                        Toast.LENGTH_LONG);</div><div class="line">                toast.setGravity(Gravity.CENTER, 0, 0);</div><div class="line">                toast.show();</div><div class="line">//              MsgPrompt.showMsg(mContext, &quot;程序出错啦&quot;, msg+&quot;\n点确认退出&quot;);</div><div class="line">                Looper.loop();</div><div class="line">            &#125;</div><div class="line">        &#125;.start();</div><div class="line">        //收集设备信息</div><div class="line">        collectCrashDeviceInfo(mContext);</div><div class="line">        //保存错误报告文件</div><div class="line">        saveCrashInfoToFile(ex);</div><div class="line">        //发送错误报告到服务器</div><div class="line">        //sendCrashReportsToServer(mContext);</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 在程序启动时候, 可以调用该函数来发送以前没有发送的报告</div><div class="line">     */</div><div class="line">    public void sendPreviousReportsToServer() &#123;</div><div class="line">        sendCrashReportsToServer(mContext);</div><div class="line">    &#125;</div><div class="line">    /**</div><div class="line">     * 把错误报告发送给服务器,包含新产生的和以前没发送的.</div><div class="line">     * @param ctx</div><div class="line">     */</div><div class="line">    private void sendCrashReportsToServer(Context ctx) &#123;</div><div class="line">        String[] crFiles = getCrashReportFiles(ctx);</div><div class="line">        if (crFiles != null &amp;&amp; crFiles.length &gt; 0) &#123;</div><div class="line">            TreeSet&lt;String&gt; sortedFiles = new TreeSet&lt;String&gt;();</div><div class="line">            sortedFiles.addAll(Arrays.asList(crFiles));</div><div class="line">            for (String fileName : sortedFiles) &#123;</div><div class="line">                File cr = new File(ctx.getFilesDir(), fileName);</div><div class="line">                postReport(cr);</div><div class="line">                cr.delete();// 删除已发送的报告</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    private void postReport(File file) &#123;</div><div class="line">        // TODO 发送错误报告到服务器</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 获取错误报告文件名</div><div class="line">     * @param ctx</div><div class="line">     * @return</div><div class="line">     */</div><div class="line">    private String[] getCrashReportFiles(Context ctx) &#123;</div><div class="line">        File filesDir = ctx.getFilesDir();</div><div class="line">        FilenameFilter filter = new FilenameFilter() &#123;</div><div class="line">            public boolean accept(File dir, String name) &#123;</div><div class="line">                return name.endsWith(CRASH_REPORTER_EXTENSION);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">        return filesDir.list(filter);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 保存错误信息到文件中</div><div class="line">     * @param ex</div><div class="line">     * @return</div><div class="line">     */</div><div class="line">    private String saveCrashInfoToFile(Throwable ex) &#123;</div><div class="line">        Writer info = new StringWriter();</div><div class="line">        PrintWriter printWriter = new PrintWriter(info);</div><div class="line">        ex.printStackTrace(printWriter);</div><div class="line">        Throwable cause = ex.getCause();</div><div class="line">        while (cause != null) &#123;</div><div class="line">            cause.printStackTrace(printWriter);</div><div class="line">            cause = cause.getCause();</div><div class="line">        &#125;</div><div class="line">        String result = info.toString();</div><div class="line">        printWriter.close();</div><div class="line">        mDeviceCrashInfo.put(&quot;EXEPTION&quot;, ex.getLocalizedMessage());</div><div class="line">        mDeviceCrashInfo.put(STACK_TRACE, result);</div><div class="line">        try &#123;</div><div class="line">            //long timestamp = System.currentTimeMillis();</div><div class="line">            Time t = new Time(&quot;GMT+8&quot;);</div><div class="line">            t.setToNow(); // 取得系统时间</div><div class="line">            int date = t.year * 10000 + t.month * 100 + t.monthDay;</div><div class="line">            int time = t.hour * 10000 + t.minute * 100 + t.second;</div><div class="line">            String fileName = &quot;crash-&quot; + date + &quot;-&quot; + time + CRASH_REPORTER_EXTENSION;</div><div class="line">            FileOutputStream trace = mContext.openFileOutput(fileName,</div><div class="line">                    Context.MODE_PRIVATE);</div><div class="line">            mDeviceCrashInfo.store(trace, &quot;&quot;);</div><div class="line">            trace.flush();</div><div class="line">            trace.close();</div><div class="line">            return fileName;</div><div class="line">        &#125; catch (Exception e) &#123;</div><div class="line">            Log.e(TAG, &quot;an error occured while writing report file...&quot;, e);</div><div class="line">        &#125;</div><div class="line">        return null;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 收集程序崩溃的设备信息</div><div class="line">     *</div><div class="line">     * @param ctx</div><div class="line">     */</div><div class="line">    public void collectCrashDeviceInfo(Context ctx) &#123;</div><div class="line">        try &#123;</div><div class="line">            PackageManager pm = ctx.getPackageManager();</div><div class="line">            PackageInfo pi = pm.getPackageInfo(ctx.getPackageName(),</div><div class="line">                    PackageManager.GET_ACTIVITIES);</div><div class="line">            if (pi != null) &#123;</div><div class="line">                mDeviceCrashInfo.put(VERSION_NAME,</div><div class="line">                        pi.versionName == null ? &quot;not set&quot; : pi.versionName);</div><div class="line">                mDeviceCrashInfo.put(VERSION_CODE, &quot;&quot;+pi.versionCode);</div><div class="line">            &#125;</div><div class="line">        &#125; catch (PackageManager.NameNotFoundException e) &#123;</div><div class="line">            Log.e(TAG, &quot;Error while collect package info&quot;, e);</div><div class="line">        &#125;</div><div class="line">        //使用反射来收集设备信息.在Build类中包含各种设备信息,</div><div class="line">        //例如: 系统版本号,设备生产商 等帮助调试程序的有用信息</div><div class="line">        //具体信息请参考后面的截图</div><div class="line">        Field[] fields = Build.class.getDeclaredFields();</div><div class="line">        for (Field field : fields) &#123;</div><div class="line">            try &#123;</div><div class="line">                field.setAccessible(true);</div><div class="line">                mDeviceCrashInfo.put(field.getName(), &quot;&quot;+field.get(null));</div><div class="line">                if (DEBUG) &#123;</div><div class="line">                    Log.d(TAG, field.getName() + &quot; : &quot; + field.get(null));</div><div class="line">                &#125;</div><div class="line">            &#125; catch (Exception e) &#123;</div><div class="line">                Log.e(TAG, &quot;Error while collect crash info&quot;, e);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="参考阅读"><a href="#参考阅读" class="headerlink" title="参考阅读"></a>参考阅读</h2><p><a href="http://www.jianshu.com/p/fc0f6e38e2f3" target="_blank" rel="external">Android应用崩溃(Crash)日志报告</a><br><a href="http://www.magicsite.cn/blog/mobile/Android/Android317626.html" target="_blank" rel="external">Android采集应用崩溃日志</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>Post author:</strong>
+      For life
+    </li>
+    <li class="post-copyright-link">
+      <strong>Post link:</strong>
+      <a href="http://ipcreator.me/2017/03/25/Program/Android/crash-of-application/" title="Android应用崩溃(Crash)日志报告">http://ipcreator.me/2017/03/25/Program/Android/crash-of-application/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright Notice: </strong>
+      All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/25/Program/Android/emmagee/" rel="next" title="Emmagee">
+                <i class="fa fa-chevron-left"></i> Emmagee
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/25/Program/Android/fast-android-networking/" rel="prev" title="Fast-Android-Networking">
+                Fast-Android-Networking <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/25/Program/Android/crash-of-application/"
+           data-title="Android应用崩溃(Crash)日志报告" data-url="http://ipcreator.me/2017/03/25/Program/Android/crash-of-application/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/header.png"
+               alt="For life" />
+          <p class="site-author-name" itemprop="name">For life</p>
+           
+              <p class="site-description motion-element" itemprop="description">For life, growing up is the only password.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">190</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ipcreator" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" title="blog">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  blog
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://book.douban.com/subject/25870384/" title="你的生命有什么可能" target="_blank">你的生命有什么可能</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="超级个体" target="_blank">超级个体</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://gelonghui.com/p/101767.html" title="人工智能的黄金时代" target="_blank">人工智能的黄金时代</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="通往财富自由之路" target="_blank">通往财富自由之路</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="把时间当作朋友" target="_blank">把时间当作朋友</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="七年就是一辈子" target="_blank">七年就是一辈子</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="人人都是工程师" target="_blank">人人都是工程师</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="人人都能用英语" target="_blank">人人都能用英语</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考阅读"><span class="nav-number">1.</span> <span class="nav-text">参考阅读</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">For life</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ipcreator"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TfzAWJSzk2L4jpj4gHaNsMbp-gzGzoHsz", "PXNkGhS05PxL7rV3N8gDlAQe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+</body>
+</html>

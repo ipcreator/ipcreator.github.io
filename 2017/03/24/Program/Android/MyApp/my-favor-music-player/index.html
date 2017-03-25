@@ -100,7 +100,7 @@
 <meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/Screenshot_1490356818.png">
 <meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/Screenshot_1490356849.png">
 <meta property="og:image" content="http://om8nmvpn9.bkt.clouddn.com/Screenshot_1490356830.png">
-<meta property="og:updated_time" content="2017-03-24T14:45:46.369Z">
+<meta property="og:updated_time" content="2017-03-25T00:53:55.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SmartMusicPlayer">
 <meta name="twitter:description" content="做自己喜欢又擅长的，同时解决生活中的实际痛点，简单极致、有用有趣，It’s my life.">
@@ -418,6 +418,7 @@
 <h3 id="异步下载"><a href="#异步下载" class="headerlink" title="异步下载"></a>异步下载</h3><p>通过服务实现，下载完成后，发广播通知，并通过附加参数传递文件路径。</p>
 <h3 id="歌词解析"><a href="#歌词解析" class="headerlink" title="歌词解析"></a>歌词解析</h3><p>歌词文件格式不统一，需要多做兼容性测试，譬如一行有多个时间标签，再如标签中存在异常字符等。<br>另外，解析出来的歌词节点列表，需要基于时间点排序，<br>mediaplayer的进度值单位为毫秒，解析歌词时间时，尽量保持单位一致。</p>
 <h3 id="实时更新UI"><a href="#实时更新UI" class="headerlink" title="实时更新UI"></a>实时更新UI</h3><p>方法一：<br>Handle的post方法，在post的Runable的run方法中，使用postDelay方法再次post该Runable对象，在Runable中更新UI，达到实时更新UI的目的<br>方法二：<br>多开一个线程，线程写一个持续循环，每次进入循环内即post一次Runable，然后休眠1000ms，亦可做到实时更新UI</p>
+<p>注意：因为用到了多线程，有可能在执行onDestroy方法之后，Runable的run方法还有可能在继续执行，因此要在onDestroy方法释放资源后置空，在run方法中要判空。</p>
 <h3 id="歌曲切换"><a href="#歌曲切换" class="headerlink" title="歌曲切换"></a>歌曲切换</h3><p>setDataSource()之前需要调用reSet()方法，才可以重新设置歌曲</p>
 <h3 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h3><p>歌词文件编码不一致导致，内部需要统一处理</p>
 <h3 id="属性动画"><a href="#属性动画" class="headerlink" title="属性动画"></a>属性动画</h3><p>界面动画不要太多，以免给用户造成眼花缭乱的不好体验</p>
@@ -604,7 +605,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">181</span>
+                <span class="site-state-item-count">190</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -626,7 +627,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
