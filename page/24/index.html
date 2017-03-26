@@ -282,7 +282,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/02/13/Program/Concepts/ai-and-algorithms/">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/02/13/BusinessAI/generate-lyric-from-lyric-of-jay/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="For life">
@@ -304,8 +304,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/02/13/Program/Concepts/ai-and-algorithms/" itemprop="url">
-                  这一年来，数据科学家都用了哪些算法玩转人工智能？
+                <a class="post-title-link" href="/2017/02/13/BusinessAI/generate-lyric-from-lyric-of-jay/" itemprop="url">
+                  基于char-rnn和tensorflow生成周杰伦歌词
                 </a>
               
             
@@ -321,7 +321,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T08:58:06+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T14:30:00+08:00">
                 2017-02-13
               </time>
             
@@ -362,8 +362,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/13/Program/Concepts/ai-and-algorithms/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/Program/Concepts/ai-and-algorithms/" itemprop="commentCount"></span>
+                <a href="/2017/02/13/BusinessAI/generate-lyric-from-lyric-of-jay/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/BusinessAI/generate-lyric-from-lyric-of-jay/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -371,7 +371,7 @@
 
           
           
-             <span id="/2017/02/13/Program/Concepts/ai-and-algorithms/" class="leancloud_visitors" data-flag-title="这一年来，数据科学家都用了哪些算法玩转人工智能？">
+             <span id="/2017/02/13/BusinessAI/generate-lyric-from-lyric-of-jay/" class="leancloud_visitors" data-flag-title="基于char-rnn和tensorflow生成周杰伦歌词">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -401,18 +401,527 @@
 
       
         
-          <p><a href="http://dy.163.com/v2/article/detail/CCBLQGO50511CUKV.html">作者：刘志勇</a></p>
-<p> 在“数据为王”的今天，越来越多的人对数据科学产生了兴趣。数据科学家离不开算法的使用，那么，数据科学家最常用的算法，都是哪些呢？</p>
-<p> 　　最近，著名的资料探勘信息网站KDnuggets策划了十大算法调查，这次调查对数据科学家常用的算法进行排名，并发现最“产业”和最“学术”的算法，还对这些算法在过去5年间（2011~2016）的变化，做了一番详细的介绍。</p>
-<p> 　　这次调查结果，是基于844名受访者投票整理出来。</p>
-<p> 　　KDnuggets总结出十大算法及其投票份额如下：</p>
- <div align="center"><br><img src="http://dingyue.nosdn.127.net/XxbMqsswitgYGAfXTPRKrIW4J7xo9xrldOfRmWTK4cRxm1486093692046.jpg" width = "483" height = "379" ><br> </div>
-
-<p> 　　图1：数据科学家使用的十大算法和方法。</p>
-<p> 　　请参阅文末的所有算法和方法的完整列表。</p>
+          <p>作者：<a href="http://www.36dsj.com/archives/70163">leido</a></p>
+<p><img src="http://www.36dsj.com/wp-content/uploads/2016/11/455-2.jpg" alt=""></p>
+<p>最近深度学习在机器视觉CV、自然语言处理NLP领域表现出强大的潜力，各种深度学习/机器学习框架也层出不穷。TensorFlow是google于去年(2015.11)开源的深度学习框架，截止目前(2016-11-28)Github上已经有38000+的star数，称之为最近最受欢迎的深度学习框架一点也不过分。</p>
+<p>本着学习TensorFlow和RNN的目的，前些天发现了char-rnn这个有趣的项目，具体就是基于字符预测下一个字符，比日说已知hello的前四个字母hell，那我们就可以据此预测下一个字符很可能是o,因为是字符char级别的，并没有单词或句子层次上的特征提取，相对而言比较简单易学。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/02/13/Program/Concepts/ai-and-algorithms/#more" rel="contents">
+            <a class="btn" href="/2017/02/13/BusinessAI/generate-lyric-from-lyric-of-jay/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/02/13/BusinessAI/ai-on-ear-phone/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="For life">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IPCreator">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/13/BusinessAI/ai-on-ear-phone/" itemprop="url">
+                  新型耳机将要拉开AI增强人耳听觉序幕？
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T14:21:06+08:00">
+                2017-02-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/13/BusinessAI/ai-on-ear-phone/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/BusinessAI/ai-on-ear-phone/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/02/13/BusinessAI/ai-on-ear-phone/" class="leancloud_visitors" data-flag-title="新型耳机将要拉开AI增强人耳听觉序幕？">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><a href="http://dy.163.com/v2/article/detail/CBPNF1U20511CUKV.html">作者：网易AI研究院</a></p>
+<p><img src="http://dingyue.nosdn.127.net/GHHKKK5WXVGhYX4o4=tUSFdOMN2l5N3FBnjRaJ5or7iqT1485488780276compressflag.jpg" alt=""></p>
+<p>  据国外媒体报道，有家新公司在打造一种经过人工智能（AI）技术增强的耳机产品，其背后的理念是 <strong>AI人耳比普通的人耳要好使。</strong></p>
+<p>　　我们往往要在喧闹环境中专注于特定的声音——如孩子的哭喊声，在嘈杂的俱乐部中听朋友说话等等——这并不容易做到。要是人工智能能够让我们的耳朵变得更加智能呢？有家公司打算明年初推出这种智能平台：售价299美元的蓝牙耳机。他们的真正目的是什么呢？揭开AI增强的人耳听觉的序幕。（这可能也预示着手机的末日。）</p>
+<p>　　该款耳机名为Here One。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/13/BusinessAI/ai-on-ear-phone/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/02/13/Program/TensorFlow/quick-learning-of-tensorflow/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="For life">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IPCreator">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/13/Program/TensorFlow/quick-learning-of-tensorflow/" itemprop="url">
+                  TensorFlow极速入门
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T09:20:06+08:00">
+                2017-02-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/13/Program/TensorFlow/quick-learning-of-tensorflow/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/Program/TensorFlow/quick-learning-of-tensorflow/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/02/13/Program/TensorFlow/quick-learning-of-tensorflow/" class="leancloud_visitors" data-flag-title="TensorFlow极速入门">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><a href="http://www.leiphone.com/news/201702/vJpJqREn7EyoAd09.html">AI研习社</a></p>
+<p><img src="http://static.leiphone.com/uploads/new/article/740_740/201702/589ee26746f0a.jpg?imageMogr2/format/jpg/quality/90" alt=""></p>
+<p>目前，深度学习已经广泛应用于各个领域，很多童鞋想要一探究竟，这里抛砖引玉的介绍下最火的深度学习开源框架tensorflow。</p>
+<p>雷锋网按：本文原载于Qunar技术沙龙，原作者已授权雷锋网发布。作者孟晓龙，2016年加入Qunar，目前在去哪儿网机票事业部担任算法工程师。热衷于深度学习技术的探索，对新事物有着强烈的好奇心。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/13/Program/TensorFlow/quick-learning-of-tensorflow/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/02/13/Program/TensorFlow/simple-understanding-of-tensorflow/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="For life">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IPCreator">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/13/Program/TensorFlow/simple-understanding-of-tensorflow/" itemprop="url">
+                  TensorFlow基本用法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T09:10:06+08:00">
+                2017-02-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/13/Program/TensorFlow/simple-understanding-of-tensorflow/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/Program/TensorFlow/simple-understanding-of-tensorflow/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/02/13/Program/TensorFlow/simple-understanding-of-tensorflow/" class="leancloud_visitors" data-flag-title="TensorFlow基本用法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><a href="https://yjango.gitbooks.io/superorganism/content/tensorflowji_ben_yong_fa.html">yjango</a></p>
+<p><img src="https://yjango.gitbooks.io/superorganism/content/T1m6Z_B5KT1RXrhCrK.jpg" alt=""></p>
+<p>目前主流的TensorFlow。用tensorflow这样工具的原因是：它允许我们用计算图（Computational Graphs）的方式建立网络。同时又可以非常方便的对网络进行操作。下面就是对计算图的直观讲解。</p>
+<p>注：看完这部分内容的人，可以紧接着实现一个神经网络：<a href="https://yjango.gitbooks.io/superorganism/content/dai_ma_yan_shi.html">代码演示LV1</a>。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/13/Program/TensorFlow/simple-understanding-of-tensorflow/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -629,7 +1138,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/02/13/Program/TensorFlow/gentle-understanding-of-tensorflow/">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/02/13/Program/Concepts/ai-and-algorithms/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="For life">
@@ -651,518 +1160,7 @@
             
               
                 
-                <a class="post-title-link" href="/2017/02/13/Program/TensorFlow/gentle-understanding-of-tensorflow/" itemprop="url">
-                  Gentlest Tensorflow
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T08:52:06+08:00">
-                2017-02-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/13/Program/TensorFlow/gentle-understanding-of-tensorflow/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/Program/TensorFlow/gentle-understanding-of-tensorflow/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/02/13/Program/TensorFlow/gentle-understanding-of-tensorflow/" class="leancloud_visitors" data-flag-title="Gentlest Tensorflow">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="https://github.com/nethsix/gentle_tensorflow/">作者：Neth Six</a></p>
-<p><img src="https://avatars1.githubusercontent.com/u/1383827?v=3&amp;s=460" alt=""></p>
-<h2 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h2><p>Tensorflow (TF) is Google’s attempt to put the power of Deep Learning into the hands of developers around the world. It comes with a beginner &amp; an advanced tutorial, as well as a course on Udacity. However, the materials attempt to introduce both ML and TF concurrently to solve a multi-feature problem — character recognition, which albeit interesting, unnecessarily convolutes understanding. Gentlest Tensorflow attempts to overcome that by showing how to do linear regression for a single feature problem, and expand from there.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/13/Program/TensorFlow/gentle-understanding-of-tensorflow/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/02/13/Program/TensorFlow/good-understanding-of-tensorflow/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="For life">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/header.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IPCreator">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/13/Program/TensorFlow/good-understanding-of-tensorflow/" itemprop="url">
-                  深度 | 机器学习敲门砖:任何人都能看懂的TensorFlow介绍
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T08:51:06+08:00">
-                2017-02-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/13/Program/TensorFlow/good-understanding-of-tensorflow/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/Program/TensorFlow/good-understanding-of-tensorflow/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/02/13/Program/TensorFlow/good-understanding-of-tensorflow/" class="leancloud_visitors" data-flag-title="深度 | 机器学习敲门砖:任何人都能看懂的TensorFlow介绍">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="http://blog.csdn.net/lenbow/article/details/52152766">作者：Soon Hin Khor</a></p>
-<p>原文：<a href="http://www.kdnuggets.com/2016/08/gentlest-introduction-tensorflow-part-1.html">The Gentlest Introduction to Tensorflow – Part 1</a><br><a href="http://www.kdnuggets.com/2016/08/gentlest-introduction-tensorflow-part-2.html/2">The Gentlest Introduction to Tensorflow – Part 2</a></p>
-<p>机器之心编译  参与：Rick、吴攀、李亚洲</p>
-<p>　　本文是日本东京 TensorFlow 聚会联合组织者 Hin Khor 所写的 TensorFlow 系列介绍文章的前两部分，自称给出了关于 TensorFlow 的 gentlest 的介绍。这两部分谈到单一特征问题的线性回归问题以及训练（training）的含义，机器之心将继续关注本系列文章的后续更新。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/13/Program/TensorFlow/good-understanding-of-tensorflow/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/02/13/Program/TensorFlow/basic-concept-and-operation-of-tensorflow/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="For life">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/header.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IPCreator">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/13/Program/TensorFlow/basic-concept-and-operation-of-tensorflow/" itemprop="url">
-                  Tensorflow一些常用基本概念与函数
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T08:50:06+08:00">
-                2017-02-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/13/Program/TensorFlow/basic-concept-and-operation-of-tensorflow/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/Program/TensorFlow/basic-concept-and-operation-of-tensorflow/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/02/13/Program/TensorFlow/basic-concept-and-operation-of-tensorflow/" class="leancloud_visitors" data-flag-title="Tensorflow一些常用基本概念与函数">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="http://blog.csdn.net/lenbow/article/details/52152766">作者：林海山波</a></p>
-<p><img src="http://avatar.csdn.net/D/1/1/1_lenbow.jpg" alt=""></p>
-<p> 本文主要对tf的一些常用概念与方法进行描述。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/13/Program/TensorFlow/basic-concept-and-operation-of-tensorflow/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/02/13/Program/TensorFlow/benchmark-of-machine-learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="For life">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/header.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IPCreator">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/13/Program/TensorFlow/benchmark-of-machine-learning/" itemprop="url">
+                <a class="post-title-link" href="/2017/02/13/Program/Concepts/ai-and-algorithms/" itemprop="url">
                   这一年来，数据科学家都用了哪些算法玩转人工智能？
                 </a>
               
@@ -1179,7 +1177,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T08:40:06+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T08:58:06+08:00">
                 2017-02-13
               </time>
             
@@ -1220,8 +1218,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/13/Program/TensorFlow/benchmark-of-machine-learning/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/Program/TensorFlow/benchmark-of-machine-learning/" itemprop="commentCount"></span>
+                <a href="/2017/02/13/Program/Concepts/ai-and-algorithms/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/Program/Concepts/ai-and-algorithms/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1229,7 +1227,7 @@
 
           
           
-             <span id="/2017/02/13/Program/TensorFlow/benchmark-of-machine-learning/" class="leancloud_visitors" data-flag-title="这一年来，数据科学家都用了哪些算法玩转人工智能？">
+             <span id="/2017/02/13/Program/Concepts/ai-and-algorithms/" class="leancloud_visitors" data-flag-title="这一年来，数据科学家都用了哪些算法玩转人工智能？">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1259,11 +1257,18 @@
 
       
         
-          <p><a href="http://it.sohu.com/20170128/n479665884.shtml">新智元mp</a><br>论文作者：Shaohuai Shi, Qiang Wang, Pengfei Xu, Xiaowen Chu<br>译者：吴博, Elaine, Melody</p>
-<p>【新智元导读】新年伊始，新智元向你推荐香港浸会大学计算机学院褚晓文团队最新论文《基准评测当前最先进的深度学习软件工具》，评测了 Caffe、CNTK、MXNet、TensorFlow、Torch 这五个最受欢迎的DL框架在 FCN、CNN、RNN 上的表现。这是伯克利RISE实验室大牛、RISC之父 David Patterson 也在关注的深度学习库评测。论文作者强调这是一个开源项目，所有配置文件和实验数据均在 http: //www.comp.hkbu.edu.hk/?chxw/dlbench.html 公开，欢迎读者指正。【进入新智元公众号，在对话框输入“0128”下载论文】</p>
+          <p><a href="http://dy.163.com/v2/article/detail/CCBLQGO50511CUKV.html">作者：刘志勇</a></p>
+<p> 在“数据为王”的今天，越来越多的人对数据科学产生了兴趣。数据科学家离不开算法的使用，那么，数据科学家最常用的算法，都是哪些呢？</p>
+<p> 　　最近，著名的资料探勘信息网站KDnuggets策划了十大算法调查，这次调查对数据科学家常用的算法进行排名，并发现最“产业”和最“学术”的算法，还对这些算法在过去5年间（2011~2016）的变化，做了一番详细的介绍。</p>
+<p> 　　这次调查结果，是基于844名受访者投票整理出来。</p>
+<p> 　　KDnuggets总结出十大算法及其投票份额如下：</p>
+ <div align="center"><br><img src="http://dingyue.nosdn.127.net/XxbMqsswitgYGAfXTPRKrIW4J7xo9xrldOfRmWTK4cRxm1486093692046.jpg" width = "483" height = "379" ><br> </div>
+
+<p> 　　图1：数据科学家使用的十大算法和方法。</p>
+<p> 　　请参阅文末的所有算法和方法的完整列表。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/02/13/Program/TensorFlow/benchmark-of-machine-learning/#more" rel="contents">
+            <a class="btn" href="/2017/02/13/Program/Concepts/ai-and-algorithms/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1304,7 +1309,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/23/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><a class="extend next" rel="next" href="/page/25/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/23/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/25/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1349,7 +1354,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">190</span>
+                <span class="site-state-item-count">194</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

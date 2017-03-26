@@ -2,9 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
+    
+    <lastmod>2017-03-26T12:37:11.612Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/22/MyView/English/love-words/</loc>
     
-    <lastmod>2017-03-25T14:42:01.426Z</lastmod>
+    <lastmod>2017-03-26T12:37:02.221Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/Program/Android/MyApp/qi-niu-upload/</loc>
+    
+    <lastmod>2017-03-26T11:07:47.419Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/MyView/deep-thinking-change-my-life/</loc>
+    
+    <lastmod>2017-03-26T02:31:35.585Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/Program/Android/learning-resource-of-ai/</loc>
+    
+    <lastmod>2017-03-26T00:28:00.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/Program/Android/learning-resource-of-android/</loc>
+    
+    <lastmod>2017-03-26T00:14:58.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/22/Program/Tool/the-meaning-of-cross-wall/</loc>
+    
+    <lastmod>2017-03-26T00:13:30.837Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/Program/Tool/baiduyun-search/</loc>
+    
+    <lastmod>2017-03-26T00:03:07.552Z</lastmod>
     
   </url>
   
@@ -72,23 +121,9 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
-    
-    <lastmod>2017-03-25T10:34:12.876Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/03/25/Ipr/api-patent-query/</loc>
     
     <lastmod>2017-03-25T08:57:45.017Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/08/Program/Tool/baiduyun-search/</loc>
-    
-    <lastmod>2017-03-25T08:48:30.958Z</lastmod>
     
   </url>
   
@@ -299,13 +334,6 @@
     <loc>http://ipcreator.me/2017/03/21/Program/mathematics/bayes-rule/</loc>
     
     <lastmod>2017-03-22T00:33:14.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/22/Program/Tool/the-meaning-of-cross-wall/</loc>
-    
-    <lastmod>2017-03-22T00:13:00.858Z</lastmod>
     
   </url>
   
@@ -1003,13 +1031,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
-    
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
@@ -1017,7 +1038,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
     
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     
@@ -1031,7 +1052,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ai-on-terminal-of-google/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
+    
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
@@ -1045,14 +1073,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ai-on-terminal-of-google/</loc>
     
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     
@@ -1066,7 +1094,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/</loc>
     
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     

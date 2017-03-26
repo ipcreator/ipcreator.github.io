@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
+    <lastmod>2017-03-26T12:37:11.612Z</lastmod>
+    <data>
+        <display>
+        <title>Android Dev Bugs</title>
+        <pubTime>2017-03-08T14:59:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/22/MyView/English/love-words/</loc>
-    <lastmod>2017-03-25T14:42:01.426Z</lastmod>
+    <lastmod>2017-03-26T12:37:02.221Z</lastmod>
     <data>
         <display>
         <title>爱单词</title>
@@ -17,6 +37,128 @@
            
              
               <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/Program/Android/MyApp/qi-niu-upload/</loc>
+    <lastmod>2017-03-26T11:07:47.419Z</lastmod>
+    <data>
+        <display>
+        <title>支持七牛文件上传</title>
+        <pubTime>2017-03-26T08:10:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/MyView/deep-thinking-change-my-life/</loc>
+    <lastmod>2017-03-26T02:31:35.585Z</lastmod>
+    <data>
+        <display>
+        <title>坐享实践录</title>
+        <pubTime>2017-03-26T00:29:06.000Z</pubTime>
+        
+        <tag>Share</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人" url="http://ipcreator.me/categories/%E4%B8%AA%E4%BA%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/Program/Android/learning-resource-of-ai/</loc>
+    <lastmod>2017-03-26T00:28:00.450Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习与人工智能学习资源导引</title>
+        <pubTime>2017-03-26T00:17:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/Program/Android/learning-resource-of-android/</loc>
+    <lastmod>2017-03-26T00:14:58.263Z</lastmod>
+    <data>
+        <display>
+        <title>Coding相关的学习网站推荐</title>
+        <pubTime>2017-03-26T00:04:06.000Z</pubTime>
+        
+        <tag>Program</tag>
+         
+        <tag>Tool</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/22/Program/Tool/the-meaning-of-cross-wall/</loc>
+    <lastmod>2017-03-26T00:13:30.837Z</lastmod>
+    <data>
+        <display>
+        <title>The purpose of Cross Wall</title>
+        <pubTime>2017-03-21T23:56:08.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/Program/Tool/baiduyun-search/</loc>
+    <lastmod>2017-03-26T00:03:07.552Z</lastmod>
+    <data>
+        <display>
+        <title>搜百度盘——百度云搜索器</title>
+        <pubTime>2017-03-25T23:56:06.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -208,26 +350,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
-    <lastmod>2017-03-25T10:34:12.876Z</lastmod>
-    <data>
-        <display>
-        <title>Android Dev Bugs</title>
-        <pubTime>2017-03-08T14:59:06.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/03/25/Ipr/api-patent-query/</loc>
     <lastmod>2017-03-25T08:57:45.017Z</lastmod>
     <data>
@@ -236,26 +358,6 @@
         <pubTime>2017-03-25T08:53:06.000Z</pubTime>
         
         <tag>Patent</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/08/Program/Tool/baiduyun-search/</loc>
-    <lastmod>2017-03-25T08:48:30.958Z</lastmod>
-    <data>
-        <display>
-        <title>Android Dev Bugs</title>
-        <pubTime>2017-03-08T14:59:06.000Z</pubTime>
-        
-        <tag>Android</tag>
          
          
            
@@ -813,26 +915,6 @@
         <pubTime>2017-03-21T14:05:08.000Z</pubTime>
         
         <tag>Mathematics</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/22/Program/Tool/the-meaning-of-cross-wall/</loc>
-    <lastmod>2017-03-22T00:13:00.858Z</lastmod>
-    <data>
-        <display>
-        <title>The purpose of Cross Wall</title>
-        <pubTime>2017-03-21T23:56:08.000Z</pubTime>
-        
-        <tag>Tool</tag>
          
          
            
@@ -2879,28 +2961,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
-    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
-    <data>
-        <display>
-        <title>李开复：AI 创业的十个真相</title>
-        <pubTime>2017-02-19T15:59:58.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-        <tag>Business</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/</loc>
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
@@ -2927,16 +2987,16 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
     <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
         <display>
-        <title>深度学习框架太抽象？其实不外乎这五大核心组件</title>
-        <pubTime>2017-02-19T15:57:20.000Z</pubTime>
+        <title>李开复：AI 创业的十个真相</title>
+        <pubTime>2017-02-19T15:59:58.000Z</pubTime>
         
         <tag>AI</tag>
          
-        <tag>Deep Learning</tag>
+        <tag>Business</tag>
          
          
            
@@ -2973,18 +3033,38 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ai-on-terminal-of-google/</loc>
-    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
+    <lastmod>2017-02-19T06:03:00.878Z</lastmod>
     <data>
         <display>
-        <title>谷歌发布全新轻型机器学习架构：可直接载于设备端的AI系统</title>
-        <pubTime>2017-02-19T15:59:56.000Z</pubTime>
+        <title>深度学习框架太抽象？其实不外乎这五大核心组件</title>
+        <pubTime>2017-02-19T15:57:20.000Z</pubTime>
         
         <tag>AI</tag>
          
-        <tag>Google</tag>
+        <tag>Deep Learning</tag>
          
-        <tag>Android</tag>
+         
+           
+             
+              <breadCrumb title="技术" url="http://ipcreator.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
+    <lastmod>2017-02-19T06:03:00.876Z</lastmod>
+    <data>
+        <display>
+        <title>技术大牛带你走向机器学习“正道”</title>
+        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+        <tag>Machine Learning</tag>
          
          
            
@@ -3021,16 +3101,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ai-on-terminal-of-google/</loc>
     <lastmod>2017-02-19T06:03:00.876Z</lastmod>
     <data>
         <display>
-        <title>技术大牛带你走向机器学习“正道”</title>
-        <pubTime>2017-02-19T15:57:06.000Z</pubTime>
+        <title>谷歌发布全新轻型机器学习架构：可直接载于设备端的AI系统</title>
+        <pubTime>2017-02-19T15:59:56.000Z</pubTime>
         
         <tag>AI</tag>
          
-        <tag>Machine Learning</tag>
+        <tag>Google</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -3043,16 +3125,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     <data>
         <display>
-        <title>大数据/数据挖掘/推荐系统/机器学习相关资源</title>
-        <pubTime>2017-02-18T04:23:06.000Z</pubTime>
+        <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
+        <pubTime>2017-02-18T01:02:06.000Z</pubTime>
         
-        <tag>Big Data</tag>
+        <tag>AI</tag>
          
-        <tag>Data Mining</tag>
+        <tag>Google</tag>
+         
+        <tag>Tensorflow</tag>
          
          
            
@@ -3085,18 +3169,16 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/</loc>
     <lastmod>2017-02-19T06:02:30.218Z</lastmod>
     <data>
         <display>
-        <title>谷歌工智能开源项目Tensorflow预示着硬件领域的重大变革</title>
-        <pubTime>2017-02-18T01:02:06.000Z</pubTime>
+        <title>大数据/数据挖掘/推荐系统/机器学习相关资源</title>
+        <pubTime>2017-02-18T04:23:06.000Z</pubTime>
         
-        <tag>AI</tag>
+        <tag>Big Data</tag>
          
-        <tag>Google</tag>
-         
-        <tag>Tensorflow</tag>
+        <tag>Data Mining</tag>
          
          
            
