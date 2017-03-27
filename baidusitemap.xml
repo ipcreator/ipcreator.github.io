@@ -961,9 +961,9 @@
         <title>White Paper of Machine Learning of Google</title>
         <pubTime>2017-02-19T15:57:00.000Z</pubTime>
         
-        <tag>Google</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>Google</tag>
          
         <tag>White Paper</tag>
          
@@ -1677,9 +1677,9 @@
         <title>Supercharging Android Apps with TensorFlow</title>
         <pubTime>2017-02-17T02:26:06.000Z</pubTime>
         
-        <tag>Application</tag>
-         
         <tag>Android</tag>
+         
+        <tag>Application</tag>
          
         <tag>Tensorflow</tag>
          
@@ -2747,28 +2747,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    <data>
-        <display>
-        <title>Anatomy of GPU</title>
-        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>GPU</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
@@ -2793,18 +2771,16 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
         <display>
-        <title>File System of Linux</title>
-        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
+        <title>Anatomy of GPU</title>
+        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Linux</tag>
-         
-        <tag>File System</tag>
+        <tag>GPU</tag>
          
          
            
@@ -2856,6 +2832,30 @@
            
              
               <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>File System of Linux</title>
+        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>File System</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
           
         </display>
     </data>

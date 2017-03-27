@@ -1304,61 +1304,6 @@
   </entry>
   
   <entry>
-    <title>Stetho——A Debug Bridge for Android Applications</title>
-    <link href="http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/"/>
-    <id>http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/</id>
-    <published>2017-03-25T13:29:06.000Z</published>
-    <updated>2017-03-27T10:04:47.015Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://facebook.github.io/stetho/static/logo.png" alt=""><br><a href="https://github.com/facebook/stetho" target="_blank" rel="external">Stetho</a></p>
-<p>Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.</p>
-<a id="more"></a>
-<h1 id="Stetho"><a href="#Stetho" class="headerlink" title="Stetho "></a>Stetho <a href="https://travis-ci.org/facebook/stetho" target="_blank" rel="external"><img src="https://travis-ci.org/facebook/stetho.svg?branch=master" alt="Build Status"></a></h1><h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h3 id="Chrome-DevTools"><a href="#Chrome-DevTools" class="headerlink" title="Chrome DevTools"></a>Chrome DevTools</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-discovery.png" alt=""><br>The integration with the Chrome DevTools frontend is implemented using a client/server protocol which the Stetho software provides for your application. Once your application is integrated, simply navigate to chrome://inspect and click “Inspect” to get started!</p>
-<h3 id="Database-Inspection"><a href="#Database-Inspection" class="headerlink" title="Database Inspection"></a>Database Inspection</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-sqlite.png" alt=""><br>SQLite databases can be visualized and interactively explored with full read/write capabilities.</p>
-<h3 id="View-Hierarchy"><a href="#View-Hierarchy" class="headerlink" title="View Hierarchy"></a>View Hierarchy</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-elements.png" alt=""><br>View hierarchy support for ICS (API 15) and up! Lots of goodies such as instances virtually placed in the hierarchy, view highlighting, and the ability to tap on a view to jump to its position in the hierarchy.</p>
-<p><a href="https://facebook.github.io/stetho" target="_blank" rel="external">Stetho</a> is a sophisticated debug bridge for Android applications. When enabled,<br>developers have access to the Chrome Developer Tools feature natively part of<br>the Chrome desktop browser. Developers can also choose to enable the optional<br><code>dumpapp</code> tool which offers a powerful command-line interface to application<br>internals.</p>
-<p>Once you complete the set-up instructions below, just start your app and point<br>your laptop browser to <code>chrome://inspect</code>.  Click the “Inspect” button to<br>begin.</p>
-<h2 id="Set-up"><a href="#Set-up" class="headerlink" title="Set-up"></a>Set-up</h2><h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><p>Download <a href="https://github.com/facebook/stetho/releases/latest" target="_blank" rel="external">the latest JARs</a> or grab via Gradle:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho:1.4.2'</span></div></pre></td></tr></table></figure></p>
-<p>or Maven:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.facebook.stetho<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>stetho<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>Only the main <code>stetho</code> dependency is strictly required; however, you may also wish to use one of the network helpers:</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-okhttp3:1.4.2'</span></div></pre></td></tr></table></figure>
-<p>or:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-urlconnection:1.4.2'</span></div></pre></td></tr></table></figure></p>
-<p>You can also enable a JavaScript console with:</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-js-rhino:1.4.2'</span></div></pre></td></tr></table></figure>
-<p>For more details on how to customize the JavaScript runtime see <a href="stetho-js-rhino/">stetho-js-rhino</a>.</p>
-<h3 id="Putting-it-together"><a href="#Putting-it-together" class="headerlink" title="Putting it together"></a>Putting it together</h3><p>Integrating with Stetho is intended to be seamless and straightforward for<br>most existing Android applications.  There is a simple initialization step<br>which occurs in your <code>Application</code> class:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApplication</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate();</div><div class="line">    Stetho.initializeWithDefaults(<span class="keyword">this</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>This brings up most of the default configuration but does not enable some<br>additional hooks (most notably, network inspection).  See below for specific<br>details on individual subsystems.</p>
-<h3 id="Enable-network-inspection"><a href="#Enable-network-inspection" class="headerlink" title="Enable network inspection"></a>Enable network inspection</h3><p>If you are using the popular <a href="https://github.com/square/okhttp" target="_blank" rel="external">OkHttp</a><br>library at the 3.x release, you can use the<br><a href="https://github.com/square/okhttp/wiki/Interceptors" target="_blank" rel="external">Interceptors</a> system to<br>automatically hook into your existing stack.  This is currently the simplest<br>and most straightforward way to enable network inspection:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> OkHttpClient.Builder()</div><div class="line">    .addNetworkInterceptor(<span class="keyword">new</span> StethoInterceptor())</div><div class="line">    .build()</div></pre></td></tr></table></figure>
-<p>Note that okhttp 2.x will work as well, but with slightly different syntax and you must use the <code>stetho-okhttp</code> artifact (not <code>stetho-okhttp3</code>).</p>
-<p>As interceptors can modify the request and response, add the Stetho interceptor after all others to get an accurate view of the network traffic.</p>
-<p>If you are using <code>HttpURLConnection</code>, you can use <code>StethoURLConnectionManager</code><br>to assist with integration though you should be aware that there are some<br>caveats with this approach.  In particular, you must explicitly add<br><code>Accept-Encoding: gzip</code> to the request headers and manually handle compressed<br>responses in order for Stetho to report compressed payload sizes.</p>
-<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
-<h2 id="Going-further"><a href="#Going-further" class="headerlink" title="Going further"></a>Going further</h2><h3 id="Custom-dumpapp-plugins"><a href="#Custom-dumpapp-plugins" class="headerlink" title="Custom dumpapp plugins"></a>Custom dumpapp plugins</h3><p>Custom plugins are the preferred means of extending the <code>dumpapp</code> system and<br>can be added easily during configuration.  Simply replace your configuration<br>step as such:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Stetho.initialize(Stetho.newInitializerBuilder(context)</div><div class="line">    .enableDumpapp(<span class="keyword">new</span> DumperPluginsProvider() &#123;</div><div class="line">      <span class="meta">@Override</span></div><div class="line">      <span class="function"><span class="keyword">public</span> Iterable&lt;DumperPlugin&gt; <span class="title">get</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Stetho.DefaultDumperPluginsBuilder(context)</div><div class="line">            .provide(<span class="keyword">new</span> MyDumperPlugin())</div><div class="line">            .finish();</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">    .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(context))</div><div class="line">    .build())</div></pre></td></tr></table></figure>
-<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
-<h2 id="Improve-Stetho"><a href="#Improve-Stetho" class="headerlink" title="Improve Stetho!"></a>Improve Stetho!</h2><p>See the <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> file for how to help out.</p>
-<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Stetho is BSD-licensed. We also provide an additional patent grant.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://facebook.github.io/stetho/static/logo.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/facebook/stetho&quot;&gt;Stetho&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
-    
-    
-      <category term="Debug" scheme="http://ipcreator.me/tags/Debug/"/>
-    
-      <category term="Stetho" scheme="http://ipcreator.me/tags/Stetho/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Fast Android Networking</title>
     <link href="http://ipcreator.me/2017/03/25/Program/Android/fast-android-networking/"/>
     <id>http://ipcreator.me/2017/03/25/Program/Android/fast-android-networking/</id>
@@ -1529,6 +1474,61 @@
       <category term="OkHttp" scheme="http://ipcreator.me/tags/OkHttp/"/>
     
       <category term="Okio" scheme="http://ipcreator.me/tags/Okio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Stetho——A Debug Bridge for Android Applications</title>
+    <link href="http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/"/>
+    <id>http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/</id>
+    <published>2017-03-25T13:29:06.000Z</published>
+    <updated>2017-03-27T10:04:47.015Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://facebook.github.io/stetho/static/logo.png" alt=""><br><a href="https://github.com/facebook/stetho" target="_blank" rel="external">Stetho</a></p>
+<p>Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.</p>
+<a id="more"></a>
+<h1 id="Stetho"><a href="#Stetho" class="headerlink" title="Stetho "></a>Stetho <a href="https://travis-ci.org/facebook/stetho" target="_blank" rel="external"><img src="https://travis-ci.org/facebook/stetho.svg?branch=master" alt="Build Status"></a></h1><h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h3 id="Chrome-DevTools"><a href="#Chrome-DevTools" class="headerlink" title="Chrome DevTools"></a>Chrome DevTools</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-discovery.png" alt=""><br>The integration with the Chrome DevTools frontend is implemented using a client/server protocol which the Stetho software provides for your application. Once your application is integrated, simply navigate to chrome://inspect and click “Inspect” to get started!</p>
+<h3 id="Database-Inspection"><a href="#Database-Inspection" class="headerlink" title="Database Inspection"></a>Database Inspection</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-sqlite.png" alt=""><br>SQLite databases can be visualized and interactively explored with full read/write capabilities.</p>
+<h3 id="View-Hierarchy"><a href="#View-Hierarchy" class="headerlink" title="View Hierarchy"></a>View Hierarchy</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-elements.png" alt=""><br>View hierarchy support for ICS (API 15) and up! Lots of goodies such as instances virtually placed in the hierarchy, view highlighting, and the ability to tap on a view to jump to its position in the hierarchy.</p>
+<p><a href="https://facebook.github.io/stetho" target="_blank" rel="external">Stetho</a> is a sophisticated debug bridge for Android applications. When enabled,<br>developers have access to the Chrome Developer Tools feature natively part of<br>the Chrome desktop browser. Developers can also choose to enable the optional<br><code>dumpapp</code> tool which offers a powerful command-line interface to application<br>internals.</p>
+<p>Once you complete the set-up instructions below, just start your app and point<br>your laptop browser to <code>chrome://inspect</code>.  Click the “Inspect” button to<br>begin.</p>
+<h2 id="Set-up"><a href="#Set-up" class="headerlink" title="Set-up"></a>Set-up</h2><h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><p>Download <a href="https://github.com/facebook/stetho/releases/latest" target="_blank" rel="external">the latest JARs</a> or grab via Gradle:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho:1.4.2'</span></div></pre></td></tr></table></figure></p>
+<p>or Maven:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.facebook.stetho<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>stetho<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Only the main <code>stetho</code> dependency is strictly required; however, you may also wish to use one of the network helpers:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-okhttp3:1.4.2'</span></div></pre></td></tr></table></figure>
+<p>or:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-urlconnection:1.4.2'</span></div></pre></td></tr></table></figure></p>
+<p>You can also enable a JavaScript console with:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-js-rhino:1.4.2'</span></div></pre></td></tr></table></figure>
+<p>For more details on how to customize the JavaScript runtime see <a href="stetho-js-rhino/">stetho-js-rhino</a>.</p>
+<h3 id="Putting-it-together"><a href="#Putting-it-together" class="headerlink" title="Putting it together"></a>Putting it together</h3><p>Integrating with Stetho is intended to be seamless and straightforward for<br>most existing Android applications.  There is a simple initialization step<br>which occurs in your <code>Application</code> class:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApplication</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate();</div><div class="line">    Stetho.initializeWithDefaults(<span class="keyword">this</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This brings up most of the default configuration but does not enable some<br>additional hooks (most notably, network inspection).  See below for specific<br>details on individual subsystems.</p>
+<h3 id="Enable-network-inspection"><a href="#Enable-network-inspection" class="headerlink" title="Enable network inspection"></a>Enable network inspection</h3><p>If you are using the popular <a href="https://github.com/square/okhttp" target="_blank" rel="external">OkHttp</a><br>library at the 3.x release, you can use the<br><a href="https://github.com/square/okhttp/wiki/Interceptors" target="_blank" rel="external">Interceptors</a> system to<br>automatically hook into your existing stack.  This is currently the simplest<br>and most straightforward way to enable network inspection:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> OkHttpClient.Builder()</div><div class="line">    .addNetworkInterceptor(<span class="keyword">new</span> StethoInterceptor())</div><div class="line">    .build()</div></pre></td></tr></table></figure>
+<p>Note that okhttp 2.x will work as well, but with slightly different syntax and you must use the <code>stetho-okhttp</code> artifact (not <code>stetho-okhttp3</code>).</p>
+<p>As interceptors can modify the request and response, add the Stetho interceptor after all others to get an accurate view of the network traffic.</p>
+<p>If you are using <code>HttpURLConnection</code>, you can use <code>StethoURLConnectionManager</code><br>to assist with integration though you should be aware that there are some<br>caveats with this approach.  In particular, you must explicitly add<br><code>Accept-Encoding: gzip</code> to the request headers and manually handle compressed<br>responses in order for Stetho to report compressed payload sizes.</p>
+<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
+<h2 id="Going-further"><a href="#Going-further" class="headerlink" title="Going further"></a>Going further</h2><h3 id="Custom-dumpapp-plugins"><a href="#Custom-dumpapp-plugins" class="headerlink" title="Custom dumpapp plugins"></a>Custom dumpapp plugins</h3><p>Custom plugins are the preferred means of extending the <code>dumpapp</code> system and<br>can be added easily during configuration.  Simply replace your configuration<br>step as such:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Stetho.initialize(Stetho.newInitializerBuilder(context)</div><div class="line">    .enableDumpapp(<span class="keyword">new</span> DumperPluginsProvider() &#123;</div><div class="line">      <span class="meta">@Override</span></div><div class="line">      <span class="function"><span class="keyword">public</span> Iterable&lt;DumperPlugin&gt; <span class="title">get</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Stetho.DefaultDumperPluginsBuilder(context)</div><div class="line">            .provide(<span class="keyword">new</span> MyDumperPlugin())</div><div class="line">            .finish();</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">    .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(context))</div><div class="line">    .build())</div></pre></td></tr></table></figure>
+<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
+<h2 id="Improve-Stetho"><a href="#Improve-Stetho" class="headerlink" title="Improve Stetho!"></a>Improve Stetho!</h2><p>See the <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> file for how to help out.</p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Stetho is BSD-licensed. We also provide an additional patent grant.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://facebook.github.io/stetho/static/logo.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/facebook/stetho&quot;&gt;Stetho&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
+    
+    
+      <category term="Debug" scheme="http://ipcreator.me/tags/Debug/"/>
+    
+      <category term="Stetho" scheme="http://ipcreator.me/tags/Stetho/"/>
     
   </entry>
   
@@ -5910,6 +5910,60 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
   </entry>
   
   <entry>
+    <title>How to Write Right Singleton</title>
+    <link href="http://ipcreator.me/2017/03/03/Program/Java/how-to-write-singe-instance/"/>
+    <id>http://ipcreator.me/2017/03/03/Program/Java/how-to-write-singe-instance/</id>
+    <published>2017-03-03T00:31:06.000Z</published>
+    <updated>2017-03-27T09:58:42.002Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/" target="_blank" rel="external">Jark’s Blog
+</a></p>
+<p>单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。</p>
+ <a id="more"></a>
+<h2 id="懒汉式，线程不安全"><a href="#懒汉式，线程不安全" class="headerlink" title="懒汉式，线程不安全"></a>懒汉式，线程不安全</h2><p>当被问到要实现一个单例模式时，很多人的第一反应是写出如下的代码，包括教科书上也是这样教我们的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private static Singleton instance;</div><div class="line">    private Singleton ()&#123;&#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">     if (instance == null) &#123;</div><div class="line">         instance = new Singleton();</div><div class="line">     &#125;</div><div class="line">     return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这段代码简单明了，而且使用了懒加载模式，但是却存在致命的问题。当有多个线程并行调用 getInstance() 的时候，就会创建多个实例。也就是说在多线程下不能正常工作。</p>
+<p>懒汉式，线程安全<br>为了解决上面的问题，最简单的方法是将整个 getInstance() 方法设为同步（synchronized）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public static synchronized Singleton getInstance() &#123;</div><div class="line">    if (instance == null) &#123;</div><div class="line">        instance = new Singleton();</div><div class="line">    &#125;</div><div class="line">    return instance;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>虽然做到了线程安全，并且解决了多实例的问题，但是它并不高效。因为在任何时候只能有一个线程调用 getInstance() 方法。但是同步操作只需要在第一次调用时才被需要，即第一次创建单例实例对象时。这就引出了双重检验锁。</p>
+<p><strong>双重检验锁</strong><br>双重检验锁模式（double checked locking pattern），是一种使用同步块加锁的方法。程序员称其为双重检查锁，因为会有两次检查 instance == null，一次是在同步块外，一次是在同步块内。为什么在同步块内还要再检验一次？因为可能会有多个线程一起进入同步块外的 if，如果在同步块内不进行二次检验的话就会生成多个实例了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public static Singleton getSingleton() &#123;</div><div class="line">    if (instance == null) &#123;                         //Single Checked</div><div class="line">        synchronized (Singleton.class) &#123;</div><div class="line">            if (instance == null) &#123;                 //Double Checked</div><div class="line">                instance = new Singleton();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return instance ;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这段代码看起来很完美，很可惜，它是有问题。主要在于instance = new Singleton()这句，这并非是一个原子操作，事实上在 JVM 中这句话大概做了下面 3 件事情。</p>
+<ol>
+<li>给 instance 分配内存</li>
+<li>调用 Singleton 的构造函数来初始化成员变量</li>
+<li>将instance对象指向分配的内存空间（执行完这步 instance 就为非 null 了）<br>但是在 JVM 的即时编译器中存在指令重排序的优化。也就是说上面的第二步和第三步的顺序是不能保证的，最终的执行顺序可能是 1-2-3 也可能是 1-3-2。如果是后者，则在 3 执行完毕、2 未执行之前，被线程二抢占了，这时 instance 已经是非 null 了（但却没有初始化），所以线程二会直接返回 instance，然后使用，然后顺理成章地报错。</li>
+</ol>
+<p>我们只需要将 instance 变量声明成 volatile 就可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private volatile static Singleton instance; //声明成 volatile</div><div class="line">    private Singleton ()&#123;&#125;</div><div class="line"></div><div class="line">    public static Singleton getSingleton() &#123;</div><div class="line">        if (instance == null) &#123;                         </div><div class="line">            synchronized (Singleton.class) &#123;</div><div class="line">                if (instance == null) &#123;       </div><div class="line">                    instance = new Singleton();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>有些人认为使用 volatile 的原因是可见性，也就是可以保证线程在本地不会存有 instance 的副本，每次都是去主内存中读取。但其实是不对的。使用 volatile 的主要原因是其另一个特性：禁止指令重排序优化。也就是说，在 volatile 变量的赋值操作后面会有一个内存屏障（生成的汇编代码上），读操作不会被重排序到内存屏障之前。比如上面的例子，取操作必须在执行完 1-2-3 之后或者 1-3-2 之后，不存在执行到 1-3 然后取到值的情况。从「先行发生原则」的角度理解的话，就是对于一个 volatile 变量的写操作都先行发生于后面对这个变量的读操作（这里的“后面”是时间上的先后顺序）。</p>
+<p>但是特别注意在 Java 5 以前的版本使用了 volatile 的双检锁还是有问题的。其原因是 Java 5 以前的 JMM （Java 内存模型）是存在缺陷的，即时将变量声明成 volatile 也不能完全避免重排序，主要是 volatile 变量前后的代码仍然存在重排序问题。这个 volatile 屏蔽重排序的问题在 Java 5 中才得以修复，所以在这之后才可以放心使用 volatile。</p>
+<p>相信你不会喜欢这种复杂又隐含问题的方式，当然我们有更好的实现线程安全的单例模式的办法。</p>
+<h2 id="饿汉式-static-final-field"><a href="#饿汉式-static-final-field" class="headerlink" title="饿汉式 static final field"></a>饿汉式 static final field</h2><p>这种方法非常简单，因为单例的实例被声明成 static 和 final 变量了，在第一次加载类到内存中时就会初始化，所以创建实例本身是线程安全的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class Singleton&#123;</div><div class="line">    //类加载时就初始化</div><div class="line">    private static final Singleton instance = new Singleton();</div><div class="line"></div><div class="line">    private Singleton()&#123;&#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance()&#123;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这种写法如果完美的话，就没必要在啰嗦那么多双检锁的问题了。缺点是它不是一种懒加载模式（lazy initialization），单例会在加载类后一开始就被初始化，即使客户端没有调用 getInstance()方法。饿汉式的创建方式在一些场景中将无法使用：譬如 Singleton 实例的创建是依赖参数或者配置文件的，在 getInstance() 之前必须调用某个方法设置参数给它，那样这种单例写法就无法使用了。</p>
+<h2 id="静态内部类-static-nested-class"><a href="#静态内部类-static-nested-class" class="headerlink" title="静态内部类 static nested class"></a>静态内部类 static nested class</h2><p>我比较倾向于使用静态内部类的方法，这种方法也是《Effective Java》上所推荐的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;  </div><div class="line">    private static class SingletonHolder &#123;  </div><div class="line">        private static final Singleton INSTANCE = new Singleton();  </div><div class="line">    &#125;  </div><div class="line">    private Singleton ()&#123;&#125;  </div><div class="line">    public static final Singleton getInstance() &#123;  </div><div class="line">        return SingletonHolder.INSTANCE;</div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这种写法仍然使用JVM本身机制保证了线程安全问题；由于 SingletonHolder 是私有的，除了 getInstance() 之外没有办法访问它，因此它是懒汉式的；同时读取实例的时候不会进行同步，没有性能缺陷；也不依赖 JDK 版本。</p>
+<h2 id="枚举-Enum"><a href="#枚举-Enum" class="headerlink" title="枚举 Enum"></a>枚举 Enum</h2><p>用枚举写单例实在太简单了！这也是它最大的优点。下面这段代码就是声明枚举实例的通常做法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public enum EasySingleton&#123;</div><div class="line">    INSTANCE;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>我们可以通过EasySingleton.INSTANCE来访问实例，这比调用getInstance()方法简单多了。创建枚举默认就是线程安全的，所以不需要担心double checked locking，而且还能防止反序列化导致重新创建新的对象。但是还是很少看到有人这样写，可能是因为不太熟悉吧。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>一般来说，单例模式有五种写法：懒汉、饿汉、双重检验锁、静态内部类、枚举。上述所说都是线程安全的实现，文章开头给出的第一种方法不算正确的写法。</p>
+<p>就我个人而言，一般情况下直接使用饿汉式就好了，如果明确要求要懒加载（lazy initialization）会倾向于使用静态内部类，如果涉及到反序列化创建对象时会试着使用枚举的方式来实现单例。</p>
+<h2 id="Read-More"><a href="#Read-More" class="headerlink" title="Read More"></a>Read More</h2><p><a href="http://javarevisited.blogspot.sg/2014/05/double-checked-locking-on-singleton-in-java.html" target="_blank" rel="external">Double Checked Locking on Singleton Class in Java</a><br><a href="http://javarevisited.blogspot.sg/2012/07/why-enum-singleton-are-better-in-java.html" target="_blank" rel="external">Why Enum Singleton are better in Java</a><br><a href="http://javarevisited.blogspot.com/2012/12/how-to-create-thread-safe-singleton-in-java-example.html" target="_blank" rel="external">How to create thread safe Singleton in Java</a><br><a href="http://javarevisited.blogspot.com/2011/03/10-interview-questions-on-singleton.html" target="_blank" rel="external">10 Singleton Pattern Interview questions in Java</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/&quot;&gt;Jark’s Blog
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Program" scheme="http://ipcreator.me/categories/Program/"/>
+    
+    
+      <category term="Design Pattern" scheme="http://ipcreator.me/tags/Design-Pattern/"/>
+    
+      <category term="Singleton" scheme="http://ipcreator.me/tags/Singleton/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Tips of  Android Studio</title>
     <link href="http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/"/>
     <id>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</id>
@@ -5985,60 +6039,6 @@ Java_com_connorlin_jnitest_MainActivity_testJni(JNIEnv *env, jobject instance) {
       <category term="Android Studio" scheme="http://ipcreator.me/tags/Android-Studio/"/>
     
       <category term="Tip" scheme="http://ipcreator.me/tags/Tip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>How to Write Right Singleton</title>
-    <link href="http://ipcreator.me/2017/03/03/Program/Java/how-to-write-singe-instance/"/>
-    <id>http://ipcreator.me/2017/03/03/Program/Java/how-to-write-singe-instance/</id>
-    <published>2017-03-03T00:31:06.000Z</published>
-    <updated>2017-03-27T09:58:42.002Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/" target="_blank" rel="external">Jark’s Blog
-</a></p>
-<p>单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。</p>
- <a id="more"></a>
-<h2 id="懒汉式，线程不安全"><a href="#懒汉式，线程不安全" class="headerlink" title="懒汉式，线程不安全"></a>懒汉式，线程不安全</h2><p>当被问到要实现一个单例模式时，很多人的第一反应是写出如下的代码，包括教科书上也是这样教我们的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private static Singleton instance;</div><div class="line">    private Singleton ()&#123;&#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">     if (instance == null) &#123;</div><div class="line">         instance = new Singleton();</div><div class="line">     &#125;</div><div class="line">     return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这段代码简单明了，而且使用了懒加载模式，但是却存在致命的问题。当有多个线程并行调用 getInstance() 的时候，就会创建多个实例。也就是说在多线程下不能正常工作。</p>
-<p>懒汉式，线程安全<br>为了解决上面的问题，最简单的方法是将整个 getInstance() 方法设为同步（synchronized）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public static synchronized Singleton getInstance() &#123;</div><div class="line">    if (instance == null) &#123;</div><div class="line">        instance = new Singleton();</div><div class="line">    &#125;</div><div class="line">    return instance;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>虽然做到了线程安全，并且解决了多实例的问题，但是它并不高效。因为在任何时候只能有一个线程调用 getInstance() 方法。但是同步操作只需要在第一次调用时才被需要，即第一次创建单例实例对象时。这就引出了双重检验锁。</p>
-<p><strong>双重检验锁</strong><br>双重检验锁模式（double checked locking pattern），是一种使用同步块加锁的方法。程序员称其为双重检查锁，因为会有两次检查 instance == null，一次是在同步块外，一次是在同步块内。为什么在同步块内还要再检验一次？因为可能会有多个线程一起进入同步块外的 if，如果在同步块内不进行二次检验的话就会生成多个实例了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public static Singleton getSingleton() &#123;</div><div class="line">    if (instance == null) &#123;                         //Single Checked</div><div class="line">        synchronized (Singleton.class) &#123;</div><div class="line">            if (instance == null) &#123;                 //Double Checked</div><div class="line">                instance = new Singleton();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return instance ;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这段代码看起来很完美，很可惜，它是有问题。主要在于instance = new Singleton()这句，这并非是一个原子操作，事实上在 JVM 中这句话大概做了下面 3 件事情。</p>
-<ol>
-<li>给 instance 分配内存</li>
-<li>调用 Singleton 的构造函数来初始化成员变量</li>
-<li>将instance对象指向分配的内存空间（执行完这步 instance 就为非 null 了）<br>但是在 JVM 的即时编译器中存在指令重排序的优化。也就是说上面的第二步和第三步的顺序是不能保证的，最终的执行顺序可能是 1-2-3 也可能是 1-3-2。如果是后者，则在 3 执行完毕、2 未执行之前，被线程二抢占了，这时 instance 已经是非 null 了（但却没有初始化），所以线程二会直接返回 instance，然后使用，然后顺理成章地报错。</li>
-</ol>
-<p>我们只需要将 instance 变量声明成 volatile 就可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private volatile static Singleton instance; //声明成 volatile</div><div class="line">    private Singleton ()&#123;&#125;</div><div class="line"></div><div class="line">    public static Singleton getSingleton() &#123;</div><div class="line">        if (instance == null) &#123;                         </div><div class="line">            synchronized (Singleton.class) &#123;</div><div class="line">                if (instance == null) &#123;       </div><div class="line">                    instance = new Singleton();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>有些人认为使用 volatile 的原因是可见性，也就是可以保证线程在本地不会存有 instance 的副本，每次都是去主内存中读取。但其实是不对的。使用 volatile 的主要原因是其另一个特性：禁止指令重排序优化。也就是说，在 volatile 变量的赋值操作后面会有一个内存屏障（生成的汇编代码上），读操作不会被重排序到内存屏障之前。比如上面的例子，取操作必须在执行完 1-2-3 之后或者 1-3-2 之后，不存在执行到 1-3 然后取到值的情况。从「先行发生原则」的角度理解的话，就是对于一个 volatile 变量的写操作都先行发生于后面对这个变量的读操作（这里的“后面”是时间上的先后顺序）。</p>
-<p>但是特别注意在 Java 5 以前的版本使用了 volatile 的双检锁还是有问题的。其原因是 Java 5 以前的 JMM （Java 内存模型）是存在缺陷的，即时将变量声明成 volatile 也不能完全避免重排序，主要是 volatile 变量前后的代码仍然存在重排序问题。这个 volatile 屏蔽重排序的问题在 Java 5 中才得以修复，所以在这之后才可以放心使用 volatile。</p>
-<p>相信你不会喜欢这种复杂又隐含问题的方式，当然我们有更好的实现线程安全的单例模式的办法。</p>
-<h2 id="饿汉式-static-final-field"><a href="#饿汉式-static-final-field" class="headerlink" title="饿汉式 static final field"></a>饿汉式 static final field</h2><p>这种方法非常简单，因为单例的实例被声明成 static 和 final 变量了，在第一次加载类到内存中时就会初始化，所以创建实例本身是线程安全的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class Singleton&#123;</div><div class="line">    //类加载时就初始化</div><div class="line">    private static final Singleton instance = new Singleton();</div><div class="line"></div><div class="line">    private Singleton()&#123;&#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance()&#123;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这种写法如果完美的话，就没必要在啰嗦那么多双检锁的问题了。缺点是它不是一种懒加载模式（lazy initialization），单例会在加载类后一开始就被初始化，即使客户端没有调用 getInstance()方法。饿汉式的创建方式在一些场景中将无法使用：譬如 Singleton 实例的创建是依赖参数或者配置文件的，在 getInstance() 之前必须调用某个方法设置参数给它，那样这种单例写法就无法使用了。</p>
-<h2 id="静态内部类-static-nested-class"><a href="#静态内部类-static-nested-class" class="headerlink" title="静态内部类 static nested class"></a>静态内部类 static nested class</h2><p>我比较倾向于使用静态内部类的方法，这种方法也是《Effective Java》上所推荐的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;  </div><div class="line">    private static class SingletonHolder &#123;  </div><div class="line">        private static final Singleton INSTANCE = new Singleton();  </div><div class="line">    &#125;  </div><div class="line">    private Singleton ()&#123;&#125;  </div><div class="line">    public static final Singleton getInstance() &#123;  </div><div class="line">        return SingletonHolder.INSTANCE;</div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这种写法仍然使用JVM本身机制保证了线程安全问题；由于 SingletonHolder 是私有的，除了 getInstance() 之外没有办法访问它，因此它是懒汉式的；同时读取实例的时候不会进行同步，没有性能缺陷；也不依赖 JDK 版本。</p>
-<h2 id="枚举-Enum"><a href="#枚举-Enum" class="headerlink" title="枚举 Enum"></a>枚举 Enum</h2><p>用枚举写单例实在太简单了！这也是它最大的优点。下面这段代码就是声明枚举实例的通常做法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public enum EasySingleton&#123;</div><div class="line">    INSTANCE;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>我们可以通过EasySingleton.INSTANCE来访问实例，这比调用getInstance()方法简单多了。创建枚举默认就是线程安全的，所以不需要担心double checked locking，而且还能防止反序列化导致重新创建新的对象。但是还是很少看到有人这样写，可能是因为不太熟悉吧。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>一般来说，单例模式有五种写法：懒汉、饿汉、双重检验锁、静态内部类、枚举。上述所说都是线程安全的实现，文章开头给出的第一种方法不算正确的写法。</p>
-<p>就我个人而言，一般情况下直接使用饿汉式就好了，如果明确要求要懒加载（lazy initialization）会倾向于使用静态内部类，如果涉及到反序列化创建对象时会试着使用枚举的方式来实现单例。</p>
-<h2 id="Read-More"><a href="#Read-More" class="headerlink" title="Read More"></a>Read More</h2><p><a href="http://javarevisited.blogspot.sg/2014/05/double-checked-locking-on-singleton-in-java.html" target="_blank" rel="external">Double Checked Locking on Singleton Class in Java</a><br><a href="http://javarevisited.blogspot.sg/2012/07/why-enum-singleton-are-better-in-java.html" target="_blank" rel="external">Why Enum Singleton are better in Java</a><br><a href="http://javarevisited.blogspot.com/2012/12/how-to-create-thread-safe-singleton-in-java-example.html" target="_blank" rel="external">How to create thread safe Singleton in Java</a><br><a href="http://javarevisited.blogspot.com/2011/03/10-interview-questions-on-singleton.html" target="_blank" rel="external">10 Singleton Pattern Interview questions in Java</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/&quot;&gt;Jark’s Blog
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Program" scheme="http://ipcreator.me/categories/Program/"/>
-    
-    
-      <category term="Design Pattern" scheme="http://ipcreator.me/tags/Design-Pattern/"/>
-    
-      <category term="Singleton" scheme="http://ipcreator.me/tags/Singleton/"/>
     
   </entry>
   
@@ -6896,64 +6896,6 @@ grub引导也分为两个阶段stage1阶段和stage2阶段(有些较新的grub�
   </entry>
   
   <entry>
-    <title>Anatomy of GPU</title>
-    <link href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/"/>
-    <id>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</id>
-    <published>2017-02-27T00:58:06.000Z</published>
-    <updated>2017-03-27T08:55:53.034Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.eechina.com/thread-176224-1-1.html" target="_blank" rel="external">designapp</a></p>
-<p><img src="http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png" alt=""></p>
-<p>图形处理器(英语：Graphics Processing Unit，缩写：gpu)，又称显示核心、视觉处理器、显示芯片，是一种专门在个人电脑、工作站、游戏机和一些移动设备(如平板电脑、智能手机等)上图像运算工作的微处理器。</p>
-<p>用途是将计算机系统所需要的显示信息进行转换驱动，并向显示器提供行扫描信号，控制显示器的正确显示，是连接显示器和个人电脑主板的重要元件，也是“人机对话”的重要设备之一。显卡作为电脑主机里的一个重要组成部分，承担输出显示图形的任务，对于从事专业图形设计的人来说显卡非常重要。</p>
-<a id="more"></a>
-<p>gpu由于历史原因，是为了视频游戏而产生的(至今其主要驱动力还是不断增长的视频游戏市场)，在三维游戏中常常出现的一类操作是对海量数据进行相同的操作，如：对每一个顶点进行同样的坐标变换，对每一个顶点按照同样的光照模型计算颜色值。</p>
-<p>gpu的众核架构非常适合把同样的指令流并行发送到众核上，采用不同的输入数据执行。在 2003-2004年左右，图形学之外的领域专家开始注意到gpu与众不同的计算能力，开始尝试把gpu用于通用计算(即GPgpu)。之后NVIDIA发布了CUDA，amd和等公司也发布了OpenCL，gpu开始在通用计算领域得到广泛应用，包括：数值分析，海量数据处理(排序，Map- Reduce等)，金融分析等等。</p>
-<p>简而言之，<strong>当程序员为cpu编写程序时，他们倾向于利用复杂的逻辑结构优化算法从而减少计算任务的运行时间，即Latency。当程序员为gpu编写程序时，则利用其处理海量数据的优势，通过提高总的数据吞吐量(Throughput)来掩盖 Lantency。</strong> 目前，cpu和gpu的区别正在逐渐缩小，因为gpu也在处理不规则任务和线程间通信方面有了长足的进步。另外，功耗问题对于gpu比cpu更严重。</p>
-<p>gpu是显示卡的“心脏”，也就相当于cpu在电脑中的作用，它决定了该显卡的档次和大部分性能，同时也是2D显示卡和3D显示卡的区别依据。</p>
-<p>2D显示芯片在处理3D图像和特效时主要依赖cpu的处理能力，称为“软加速”。3D显示芯片是将三维图像和特效处理功能集中在显示芯片内，也即所谓的“硬件加速”功能。显示芯片通常是显示卡上最大的芯片(也是引脚最多的)。gpu使显卡减少了对cpu的依赖，并进行部分原本cpu的工作，尤其是在3D图形处理时。gpu所采用的核心技术有硬体T&amp;L、立方环境材质贴图和顶点混合、纹理压缩和凹凸映射贴图、双重纹理四像素256位渲染引擎等，而硬体T&amp;L技术可以说是gpu的标志。</p>
-<h2 id="gpu工作原理-工作原理"><a href="#gpu工作原理-工作原理" class="headerlink" title="gpu工作原理-工作原理"></a>gpu工作原理-工作原理</h2><p>简单的说gpu就是能够从硬件上支持T&amp;L(Transform and LighTIng，多边形转换与光源处理)的显示芯片，因为T&amp;L是3D渲染中的一个重要部分，其作用是计算多边形的3D位置和处理动态光线效果，也可以称为“几何处理”。一个好的T&amp;L单元，可以提供细致的3D物体和高级的光线特效;只不过大多数PC中，T&amp;L的大部分运算是交由cpu处理的(这就也就是所谓的软件T&amp;L)，由于cpu的任务繁多，除了T&amp;L之外，还要做内存管理、输入响应等非3D图形处理工作，因此在实际运算的时候性能会大打折扣，常常出现显卡等待cpu数据的情况，其运算速度远跟不上今天复杂三维游戏的要求。即使cpu的工作频率超过 1GHz或更高，对它的帮助也不大，由于这是PC本身设计造成的问题，与cpu的速度无太大关系。</p>
-<p>gpu图形处理，可以大致分成 5 个步骤，如下图箭头的部分。分别为 vertex shader、primiTIve processing、rasterisaTIon、fragment shader、tesTIng and blending。<br><img src="http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png" alt=""></p>
-<p>第一步，vertex shader。是将三维空间中数个(x，y，z)顶点放进 gpu 中。在这一步骤中，电脑会在内部模拟出一个三维空间，并将这些顶点放置在这一空间内部。接着，投影在同一平面上，也是我们将看到的画面。同时，存下各点距离投影面的垂直距离，以便做后续的处理。</p>
-<p>这个过程就像是本地球观看星星一般。地球的天空，就像是一个投影面，所有的星星，不管远近皆投影在同一面上。本地球的我们，抬起头来观看星星，分不出星星的远近，只能分辨出亮度。gpu 所投影出的结果，和这个情况类似。<br><img src="http://okkntqe2h.bkt.clouddn.com/%E6%8A%AC%E8%B5%B7%E5%A4%B4%E6%9D%A5%E8%A7%82%E7%9C%8B%E6%98%9F%E6%98%9F%EF%BC%8C%E5%88%86%E4%B8%8D%E5%87%BA%E6%98%9F%E6%98%9F%E7%9A%84%E8%BF%9C%E8%BF%91%EF%BC%8C%E5%8F%AA%E8%83%BD%E5%88%86%E8%BE%A8%E5%87%BA%E4%BA%AE%E5%BA%A6.png" alt=""></p>
-<p>从地球所看到的星空，星星就像是投影到一球面上，除非使用特别的仪器，不然分不出星星和地球的距离</p>
-<p>第二步，primitive processing。是将相关的点链接在一起，以形成图形。在一开始输入数个顶点进入 gpu 时，程序会特别注记哪些点是需要组合在一起，以形成一线或面。就像是看星座的时候一样，将相关连的星星连起来，形成特定的图案。</p>
-<p>第三步，rasterisation。因为电脑的屏幕是由一个又一个的像素组成，因此，需要将一条连续的直线，使用绘图的演算法，以方格绘出该直线。图形也是以此方式，先标出边线，再用方格填满整个平面。</p>
-<p>第四步，fragment shader。将格点化后的图形着上颜色。所需着上的颜色也是于输入时便被注记。在游玩游戏时，这一步相当耗费 gpu 的计算资源，因为光影的效果、物体表面材质皆是在这一步进行，这些计算决定着游戏画面的精细程度。因此在游玩游戏时，调高游戏画面品质大幅增加这一步的计算负担，降低游戏品质。<br><img src="http://okkntqe2h.bkt.clouddn.com/%E5%B0%86%E4%B8%80%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2%EF%BC%8C%E7%94%A8%E6%96%B9%E6%A0%BC%E5%91%88%E7%8E%B0%E8%BF%91%E4%BC%BC%E5%8E%9F%E5%A7%8B%E5%9B%BE%E6%A1%88%EF%BC%8C%E5%B9%B6%E7%9D%80%E4%B8%8A%E9%A2%9C%E8%89%B2%E3%80%82%E4%B8%80%E5%9D%97%E5%8F%88%E4%B8%80%E5%9D%97%E7%9A%84%E6%96%B9%E6%A0%BC%EF%BC%8C%E5%B0%B1%E6%98%AF%E6%98%BE%E7%A4%BA%E5%99%A8%E4%B8%8A%E7%9A%84%E5%83%8F%E7%B4%A0.png" alt=""></p>
-<p>将一个三角形，用方格呈现近似原始图案，并着上颜色。一块又一块的方格，就是显示器上的像素</p>
-<p>最后一步，testing and blending。便是将第一步所获得的投影垂直距离取出，和第四步的结果一同做最后处理。在去除被会被其他较近距离的物体挡住的物体后，让剩下的图形放进 gpu 的输出内存。之后，结果便会被送到电脑屏幕显示。</p>
-<h2 id="gpu工作原理-主要供应商"><a href="#gpu工作原理-主要供应商" class="headerlink" title="gpu工作原理-主要供应商"></a>gpu工作原理-主要供应商</h2><p>gpu有非常多的厂商都生产，和cpu一样，生产的厂商比较多，但大家熟悉的却只有INA，以至于大家以为gpu只有三大厂商。</p>
-<h3 id="英特尔"><a href="#英特尔" class="headerlink" title="英特尔"></a>英特尔</h3><p>英特尔的gpu基本为集成显卡芯片，用于英特尔的主板和英特尔的cpu。可能你想不到，要是只按市场占有率计算，英特尔随着他主板及cpu发售的集成gpu占据了整个gpu市场的60%以上。</p>
-<p>他的gpu主要有：唯一一款独立显卡芯片Intel 740(i740)。Extreme Graphics系列、GMA系列(集成于芯片组中)。现在的HD Graphics系列[1] 、Iris? Graphics系列[2] 、Iris? Pro Graphics[2] 系列等(集成于cpu中)。</p>
-<h3 id="NVIDIA"><a href="#NVIDIA" class="headerlink" title="NVIDIA"></a>NVIDIA</h3><p>NVIDIA是现在最大的独立显卡芯片生产销售商。他的gpu包括大家熟悉的Geforce系列 ，包括GTX、GTS、GT等。专业工作站的Quadro系列 ，超级计算的Tesla系列 ，多显示器商用的NVS系列 ，移动设备的Tegra系列 。</p>
-<p>以前也销售集成在主板上的集成显卡芯片，这些随着主板芯片组一起发售，但是由于amd收购ATI后自身主板芯片组gpu能力提高，NVIDIA芯片组如日中天的景象已经消失了。曾经为游戏机Xbox、PS3供应gpu。</p>
-<h3 id="amd-ATI"><a href="#amd-ATI" class="headerlink" title="amd(ATI)"></a>amd(ATI)</h3><p>amd是世界上第二大的独立显卡芯片生产销售商，他的前身就是ATI，2006年amd以54亿美元收购ATI。他的gpu主要是大家熟悉的Radeon系列，包括以前的X、HD系列，近几年的R9、R7、R5、R3，现在的RX系列等。专业工作站的FireGL系列，超级计算的FireStream系列，多显示器商用的FireMV系列，现在前三者已合并为FirePro系列 。</p>
-<p>早期ATI还生产过Wonder系列、Mach系列、Rage系列芯片。除了独立显卡之外amd还拥有集成显卡芯片，集成于芯片组、APU中。由于amd收购ATI后，其主板市场迅速扩大，已经夺取了NVIDIA在amd处理器主板芯片组的半壁江山。就现在的发售量和发售盈利方面，amd的gpu市场占有率方面仍然略输于NVIDIA。amd也是游戏机Xbox 360、Wii、Wii U、PS4、Xbox One的gpu供应商。</p>
-<h3 id="3dfx"><a href="#3dfx" class="headerlink" title="3dfx"></a>3dfx</h3><p>是一家于1994年成立的生产3D gpu及显卡的公司。曾经生产了Voodoo系列显卡，并且研发了SLI技术。由于经营不善等问题于2002年被NVIDIA收购。</p>
-<h3 id="Matrox"><a href="#Matrox" class="headerlink" title="Matrox"></a>Matrox</h3><p>Matrox当年和NVIDIA，ATI一起争夺独立显卡芯片市场份额的一家公司，在曾经的一个时期Matrox的显卡和NVIDIA，ATI曾经在性能上比肩过。但由于后来其开发能力日渐衰退，在GF5时期，也就是ATI的9000系列时期，Matrox由于性能上整整落后了GF5900和Raden9800一个世代而逐渐被淘汰，淡出了民用独立显卡市场。但时下Matrox仍然在工程用专业显卡方面有自己的地位。</p>
-<p>这些显卡用于工程主图和多头输出仍然很强力。与NVIDIA和amd的专业显卡不同，NVIDIA，ATI的专业显卡涉足的是3D领域，而Matrox得专业显卡涉足的是2D领域，也就是CAD。但由于OpenCL、CUDA的日渐普及，DX10以上显卡将在所有支持CUDA的程序上表现出惊人的性能，也就是说当CUDA在各种运用软件普及的那天，Matrox也必将退出2D专业卡的市场。</p>
-<h3 id="SiS和VIA"><a href="#SiS和VIA" class="headerlink" title="SiS和VIA"></a>SiS和VIA</h3><p>矽统和威盛时下是对孪生兄弟，但他们曾经也是分开的两家公司，并且都生产自己主板的集成显卡芯片。但这可怜的两兄弟已经逐步在淡出主板市场了，也就必定将淡出gpu市场。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.eechina.com/thread-176224-1-1.html&quot;&gt;designapp&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;图形处理器(英语：Graphics Processing Unit，缩写：gpu)，又称显示核心、视觉处理器、显示芯片，是一种专门在个人电脑、工作站、游戏机和一些移动设备(如平板电脑、智能手机等)上图像运算工作的微处理器。&lt;/p&gt;
-&lt;p&gt;用途是将计算机系统所需要的显示信息进行转换驱动，并向显示器提供行扫描信号，控制显示器的正确显示，是连接显示器和个人电脑主板的重要元件，也是“人机对话”的重要设备之一。显卡作为电脑主机里的一个重要组成部分，承担输出显示图形的任务，对于从事专业图形设计的人来说显卡非常重要。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Program" scheme="http://ipcreator.me/categories/Program/"/>
-    
-    
-      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
-    
-      <category term="GPU" scheme="http://ipcreator.me/tags/GPU/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Anatomy of Hard Disk</title>
     <link href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/"/>
     <id>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/</id>
@@ -7017,6 +6959,64 @@ grub引导也分为两个阶段stage1阶段和stage2阶段(有些较新的grub�
   </entry>
   
   <entry>
+    <title>Anatomy of GPU</title>
+    <link href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/"/>
+    <id>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</id>
+    <published>2017-02-27T00:58:06.000Z</published>
+    <updated>2017-03-27T08:55:53.034Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.eechina.com/thread-176224-1-1.html" target="_blank" rel="external">designapp</a></p>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png" alt=""></p>
+<p>图形处理器(英语：Graphics Processing Unit，缩写：gpu)，又称显示核心、视觉处理器、显示芯片，是一种专门在个人电脑、工作站、游戏机和一些移动设备(如平板电脑、智能手机等)上图像运算工作的微处理器。</p>
+<p>用途是将计算机系统所需要的显示信息进行转换驱动，并向显示器提供行扫描信号，控制显示器的正确显示，是连接显示器和个人电脑主板的重要元件，也是“人机对话”的重要设备之一。显卡作为电脑主机里的一个重要组成部分，承担输出显示图形的任务，对于从事专业图形设计的人来说显卡非常重要。</p>
+<a id="more"></a>
+<p>gpu由于历史原因，是为了视频游戏而产生的(至今其主要驱动力还是不断增长的视频游戏市场)，在三维游戏中常常出现的一类操作是对海量数据进行相同的操作，如：对每一个顶点进行同样的坐标变换，对每一个顶点按照同样的光照模型计算颜色值。</p>
+<p>gpu的众核架构非常适合把同样的指令流并行发送到众核上，采用不同的输入数据执行。在 2003-2004年左右，图形学之外的领域专家开始注意到gpu与众不同的计算能力，开始尝试把gpu用于通用计算(即GPgpu)。之后NVIDIA发布了CUDA，amd和等公司也发布了OpenCL，gpu开始在通用计算领域得到广泛应用，包括：数值分析，海量数据处理(排序，Map- Reduce等)，金融分析等等。</p>
+<p>简而言之，<strong>当程序员为cpu编写程序时，他们倾向于利用复杂的逻辑结构优化算法从而减少计算任务的运行时间，即Latency。当程序员为gpu编写程序时，则利用其处理海量数据的优势，通过提高总的数据吞吐量(Throughput)来掩盖 Lantency。</strong> 目前，cpu和gpu的区别正在逐渐缩小，因为gpu也在处理不规则任务和线程间通信方面有了长足的进步。另外，功耗问题对于gpu比cpu更严重。</p>
+<p>gpu是显示卡的“心脏”，也就相当于cpu在电脑中的作用，它决定了该显卡的档次和大部分性能，同时也是2D显示卡和3D显示卡的区别依据。</p>
+<p>2D显示芯片在处理3D图像和特效时主要依赖cpu的处理能力，称为“软加速”。3D显示芯片是将三维图像和特效处理功能集中在显示芯片内，也即所谓的“硬件加速”功能。显示芯片通常是显示卡上最大的芯片(也是引脚最多的)。gpu使显卡减少了对cpu的依赖，并进行部分原本cpu的工作，尤其是在3D图形处理时。gpu所采用的核心技术有硬体T&amp;L、立方环境材质贴图和顶点混合、纹理压缩和凹凸映射贴图、双重纹理四像素256位渲染引擎等，而硬体T&amp;L技术可以说是gpu的标志。</p>
+<h2 id="gpu工作原理-工作原理"><a href="#gpu工作原理-工作原理" class="headerlink" title="gpu工作原理-工作原理"></a>gpu工作原理-工作原理</h2><p>简单的说gpu就是能够从硬件上支持T&amp;L(Transform and LighTIng，多边形转换与光源处理)的显示芯片，因为T&amp;L是3D渲染中的一个重要部分，其作用是计算多边形的3D位置和处理动态光线效果，也可以称为“几何处理”。一个好的T&amp;L单元，可以提供细致的3D物体和高级的光线特效;只不过大多数PC中，T&amp;L的大部分运算是交由cpu处理的(这就也就是所谓的软件T&amp;L)，由于cpu的任务繁多，除了T&amp;L之外，还要做内存管理、输入响应等非3D图形处理工作，因此在实际运算的时候性能会大打折扣，常常出现显卡等待cpu数据的情况，其运算速度远跟不上今天复杂三维游戏的要求。即使cpu的工作频率超过 1GHz或更高，对它的帮助也不大，由于这是PC本身设计造成的问题，与cpu的速度无太大关系。</p>
+<p>gpu图形处理，可以大致分成 5 个步骤，如下图箭头的部分。分别为 vertex shader、primiTIve processing、rasterisaTIon、fragment shader、tesTIng and blending。<br><img src="http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png" alt=""></p>
+<p>第一步，vertex shader。是将三维空间中数个(x，y，z)顶点放进 gpu 中。在这一步骤中，电脑会在内部模拟出一个三维空间，并将这些顶点放置在这一空间内部。接着，投影在同一平面上，也是我们将看到的画面。同时，存下各点距离投影面的垂直距离，以便做后续的处理。</p>
+<p>这个过程就像是本地球观看星星一般。地球的天空，就像是一个投影面，所有的星星，不管远近皆投影在同一面上。本地球的我们，抬起头来观看星星，分不出星星的远近，只能分辨出亮度。gpu 所投影出的结果，和这个情况类似。<br><img src="http://okkntqe2h.bkt.clouddn.com/%E6%8A%AC%E8%B5%B7%E5%A4%B4%E6%9D%A5%E8%A7%82%E7%9C%8B%E6%98%9F%E6%98%9F%EF%BC%8C%E5%88%86%E4%B8%8D%E5%87%BA%E6%98%9F%E6%98%9F%E7%9A%84%E8%BF%9C%E8%BF%91%EF%BC%8C%E5%8F%AA%E8%83%BD%E5%88%86%E8%BE%A8%E5%87%BA%E4%BA%AE%E5%BA%A6.png" alt=""></p>
+<p>从地球所看到的星空，星星就像是投影到一球面上，除非使用特别的仪器，不然分不出星星和地球的距离</p>
+<p>第二步，primitive processing。是将相关的点链接在一起，以形成图形。在一开始输入数个顶点进入 gpu 时，程序会特别注记哪些点是需要组合在一起，以形成一线或面。就像是看星座的时候一样，将相关连的星星连起来，形成特定的图案。</p>
+<p>第三步，rasterisation。因为电脑的屏幕是由一个又一个的像素组成，因此，需要将一条连续的直线，使用绘图的演算法，以方格绘出该直线。图形也是以此方式，先标出边线，再用方格填满整个平面。</p>
+<p>第四步，fragment shader。将格点化后的图形着上颜色。所需着上的颜色也是于输入时便被注记。在游玩游戏时，这一步相当耗费 gpu 的计算资源，因为光影的效果、物体表面材质皆是在这一步进行，这些计算决定着游戏画面的精细程度。因此在游玩游戏时，调高游戏画面品质大幅增加这一步的计算负担，降低游戏品质。<br><img src="http://okkntqe2h.bkt.clouddn.com/%E5%B0%86%E4%B8%80%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2%EF%BC%8C%E7%94%A8%E6%96%B9%E6%A0%BC%E5%91%88%E7%8E%B0%E8%BF%91%E4%BC%BC%E5%8E%9F%E5%A7%8B%E5%9B%BE%E6%A1%88%EF%BC%8C%E5%B9%B6%E7%9D%80%E4%B8%8A%E9%A2%9C%E8%89%B2%E3%80%82%E4%B8%80%E5%9D%97%E5%8F%88%E4%B8%80%E5%9D%97%E7%9A%84%E6%96%B9%E6%A0%BC%EF%BC%8C%E5%B0%B1%E6%98%AF%E6%98%BE%E7%A4%BA%E5%99%A8%E4%B8%8A%E7%9A%84%E5%83%8F%E7%B4%A0.png" alt=""></p>
+<p>将一个三角形，用方格呈现近似原始图案，并着上颜色。一块又一块的方格，就是显示器上的像素</p>
+<p>最后一步，testing and blending。便是将第一步所获得的投影垂直距离取出，和第四步的结果一同做最后处理。在去除被会被其他较近距离的物体挡住的物体后，让剩下的图形放进 gpu 的输出内存。之后，结果便会被送到电脑屏幕显示。</p>
+<h2 id="gpu工作原理-主要供应商"><a href="#gpu工作原理-主要供应商" class="headerlink" title="gpu工作原理-主要供应商"></a>gpu工作原理-主要供应商</h2><p>gpu有非常多的厂商都生产，和cpu一样，生产的厂商比较多，但大家熟悉的却只有INA，以至于大家以为gpu只有三大厂商。</p>
+<h3 id="英特尔"><a href="#英特尔" class="headerlink" title="英特尔"></a>英特尔</h3><p>英特尔的gpu基本为集成显卡芯片，用于英特尔的主板和英特尔的cpu。可能你想不到，要是只按市场占有率计算，英特尔随着他主板及cpu发售的集成gpu占据了整个gpu市场的60%以上。</p>
+<p>他的gpu主要有：唯一一款独立显卡芯片Intel 740(i740)。Extreme Graphics系列、GMA系列(集成于芯片组中)。现在的HD Graphics系列[1] 、Iris? Graphics系列[2] 、Iris? Pro Graphics[2] 系列等(集成于cpu中)。</p>
+<h3 id="NVIDIA"><a href="#NVIDIA" class="headerlink" title="NVIDIA"></a>NVIDIA</h3><p>NVIDIA是现在最大的独立显卡芯片生产销售商。他的gpu包括大家熟悉的Geforce系列 ，包括GTX、GTS、GT等。专业工作站的Quadro系列 ，超级计算的Tesla系列 ，多显示器商用的NVS系列 ，移动设备的Tegra系列 。</p>
+<p>以前也销售集成在主板上的集成显卡芯片，这些随着主板芯片组一起发售，但是由于amd收购ATI后自身主板芯片组gpu能力提高，NVIDIA芯片组如日中天的景象已经消失了。曾经为游戏机Xbox、PS3供应gpu。</p>
+<h3 id="amd-ATI"><a href="#amd-ATI" class="headerlink" title="amd(ATI)"></a>amd(ATI)</h3><p>amd是世界上第二大的独立显卡芯片生产销售商，他的前身就是ATI，2006年amd以54亿美元收购ATI。他的gpu主要是大家熟悉的Radeon系列，包括以前的X、HD系列，近几年的R9、R7、R5、R3，现在的RX系列等。专业工作站的FireGL系列，超级计算的FireStream系列，多显示器商用的FireMV系列，现在前三者已合并为FirePro系列 。</p>
+<p>早期ATI还生产过Wonder系列、Mach系列、Rage系列芯片。除了独立显卡之外amd还拥有集成显卡芯片，集成于芯片组、APU中。由于amd收购ATI后，其主板市场迅速扩大，已经夺取了NVIDIA在amd处理器主板芯片组的半壁江山。就现在的发售量和发售盈利方面，amd的gpu市场占有率方面仍然略输于NVIDIA。amd也是游戏机Xbox 360、Wii、Wii U、PS4、Xbox One的gpu供应商。</p>
+<h3 id="3dfx"><a href="#3dfx" class="headerlink" title="3dfx"></a>3dfx</h3><p>是一家于1994年成立的生产3D gpu及显卡的公司。曾经生产了Voodoo系列显卡，并且研发了SLI技术。由于经营不善等问题于2002年被NVIDIA收购。</p>
+<h3 id="Matrox"><a href="#Matrox" class="headerlink" title="Matrox"></a>Matrox</h3><p>Matrox当年和NVIDIA，ATI一起争夺独立显卡芯片市场份额的一家公司，在曾经的一个时期Matrox的显卡和NVIDIA，ATI曾经在性能上比肩过。但由于后来其开发能力日渐衰退，在GF5时期，也就是ATI的9000系列时期，Matrox由于性能上整整落后了GF5900和Raden9800一个世代而逐渐被淘汰，淡出了民用独立显卡市场。但时下Matrox仍然在工程用专业显卡方面有自己的地位。</p>
+<p>这些显卡用于工程主图和多头输出仍然很强力。与NVIDIA和amd的专业显卡不同，NVIDIA，ATI的专业显卡涉足的是3D领域，而Matrox得专业显卡涉足的是2D领域，也就是CAD。但由于OpenCL、CUDA的日渐普及，DX10以上显卡将在所有支持CUDA的程序上表现出惊人的性能，也就是说当CUDA在各种运用软件普及的那天，Matrox也必将退出2D专业卡的市场。</p>
+<h3 id="SiS和VIA"><a href="#SiS和VIA" class="headerlink" title="SiS和VIA"></a>SiS和VIA</h3><p>矽统和威盛时下是对孪生兄弟，但他们曾经也是分开的两家公司，并且都生产自己主板的集成显卡芯片。但这可怜的两兄弟已经逐步在淡出主板市场了，也就必定将淡出gpu市场。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.eechina.com/thread-176224-1-1.html&quot;&gt;designapp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/gpu%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%88%90%205%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;图形处理器(英语：Graphics Processing Unit，缩写：gpu)，又称显示核心、视觉处理器、显示芯片，是一种专门在个人电脑、工作站、游戏机和一些移动设备(如平板电脑、智能手机等)上图像运算工作的微处理器。&lt;/p&gt;
+&lt;p&gt;用途是将计算机系统所需要的显示信息进行转换驱动，并向显示器提供行扫描信号，控制显示器的正确显示，是连接显示器和个人电脑主板的重要元件，也是“人机对话”的重要设备之一。显卡作为电脑主机里的一个重要组成部分，承担输出显示图形的任务，对于从事专业图形设计的人来说显卡非常重要。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Program" scheme="http://ipcreator.me/categories/Program/"/>
+    
+    
+      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
+    
+      <category term="GPU" scheme="http://ipcreator.me/tags/GPU/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Anatomy of CPU</title>
     <link href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-cpu/"/>
     <id>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-cpu/</id>
@@ -7074,6 +7074,84 @@ grub引导也分为两个阶段stage1阶段和stage2阶段(有些较新的grub�
     
     
       <category term="CPU" scheme="http://ipcreator.me/tags/CPU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Essence of Android Hardware Accelerate</title>
+    <link href="http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/"/>
+    <id>http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/</id>
+    <published>2017-02-26T14:57:06.000Z</published>
+    <updated>2017-03-27T08:07:36.763Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://tech.meituan.com/hardware-accelerate.html" target="_blank" rel="external">子健</a></p>
+<p>在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。</p>
+<p>本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。</p>
+<a id="more"></a>
+<h2 id="了解硬件加速对App开发的意义"><a href="#了解硬件加速对App开发的意义" class="headerlink" title="了解硬件加速对App开发的意义"></a>了解硬件加速对App开发的意义</h2><p>对于App开发者，简单了解硬件加速原理及上层API实现，开发时就可以充分利用硬件加速提高页面的性能。以Android举例，实现一个圆角矩形按钮通常有两种方案：使用PNG图片；使用代码（XML/Java）实现。简单对比两种方案如下。</p>
+<p>方案    原理    特点<br>使用PNG图片（BitmapDrawable）    解码PNG图片生成Bitmap，传到底层，由GPU渲染    图片解码消耗CPU运算资源，Bitmap占用内存大，绘制慢<br>使用XML或Java代码实现（ShapeDrawable）    直接将Shape信息传到底层，由GPU渲染    消耗CPU资源少，占用内存小，绘制快</p>
+<h3 id="页面渲染背景知识"><a href="#页面渲染背景知识" class="headerlink" title="页面渲染背景知识"></a>页面渲染背景知识</h3><p>页面渲染时，被绘制的元素最终要转换成矩阵像素点（即多维数组形式，类似安卓中的Bitmap），才能被显示器显示。<br>页面由各种基本元素组成，例如圆形、圆角矩形、线段、文字、矢量图（常用贝塞尔曲线组成）、Bitmap等。<br>元素绘制时尤其是动画绘制过程中，经常涉及插值、缩放、旋转、透明度变化、动画过渡、毛玻璃模糊，甚至包括3D变换、物理运动（例如游戏中常见的抛物线运动）、多媒体文件解码（主要在桌面机中有应用，移动设备一般不用GPU做解码）等运算。<br>绘制过程经常需要进行逻辑较简单、但数据量庞大的浮点运算。</p>
+<h3 id="CPU与GPU结构对比"><a href="#CPU与GPU结构对比" class="headerlink" title="CPU与GPU结构对比"></a>CPU与GPU结构对比</h3><p>CPU（Central Processing Unit，中央处理器）是计算机设备核心器件，用于执行程序代码，软件开发者对此都很熟悉；GPU（Graphics Processing Unit，图形处理器）主要用于处理图形运算，通常所说“显卡”的核心部件就是GPU。</p>
+<p>下面是CPU和GPU的结构对比图。其中：<br><img src="http://tech.meituan.com/img/hardware-accelerate/cpu-gpu.png" alt=""><br>黄色的Control为控制器，用于协调控制整个CPU的运行，包括取出指令、控制其他模块的运行等；<br>绿色的ALU（Arithmetic Logic Unit）是算术逻辑单元，用于进行数学、逻辑运算；<br>橙色的Cache和DRAM分别为缓存和RAM，用于存储信息。</p>
+<p>从结构图可以看出，CPU的控制器较为复杂，而ALU数量较少。因此<strong>CPU擅长各种复杂的逻辑运算，但不擅长数学尤其是浮点运算。</strong></p>
+<p>以8086为例，一百多条汇编指令大部分都是逻辑指令，数学计算相关的主要是16位加减乘除和移位运算。一次整型和逻辑运算一般需要1~3个机器周期，而浮点运算要转换成整数计算，一次运算可能消耗上百个机器周期。<br>更简单的<strong>CPU甚至只有加法指令，减法用补码加法实现，乘法用累加实现，除法用减法循环实现。</strong><br>现代CPU一般都带有硬件浮点运算器（FPU），但主要适用于数据量不大的情况。<br>CPU是串行结构。以计算100个数字为例，对于CPU的一个核，每次只能计算两个数的和，结果逐步累加。<br>和CPU不同的是，<strong>GPU就是为实现大量数学运算设计的。从结构图中可以看到，GPU的控制器比较简单，但包含了大量ALU。GPU中的ALU使用了并行设计，且具有较多浮点运算单元。</strong></p>
+<blockquote>
+<p><strong>硬件加速的主要原理，就是通过底层软件代码，将CPU不擅长的图形计算转换成GPU专用指令，由GPU完成。</strong></p>
+</blockquote>
+<p>扩展：很多计算机中的GPU有自己独立的显存；没有独立显存则使用共享内存的形式，从内存中划分一块区域作为显存。显存可以保存GPU指令等信息。</p>
+<h3 id="并行结构举例：级联加法器"><a href="#并行结构举例：级联加法器" class="headerlink" title="并行结构举例：级联加法器"></a>并行结构举例：级联加法器</h3><p>为了方便理解，这里先从底层电路结构的角度举一个例子。如下图为一个加法器，对应实际的数字电路结构。</p>
+<p>A、B为输入，C为输出，且A、B、C均为总线，以32位CPU为例，则每根总线实际由32根导线组成，每根导线用不同的电压表示一个二进制的0或1。<br>Clock为时钟信号线，每个固定的时钟周期可向其输入一个特定的电压信号，每当一个时钟信号到来时，A和B的和就会输出到C。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-1.png" alt=""></p>
+<p>现在我们要计算8个整数的和。</p>
+<p>对于CPU这种串行结构，代码编写很简单，用for循环把所有数字逐个相加即可。串行结构只有一个加法器，需要7次求和运算；每次计算完部分和，还要将其再转移到加法器的输入端，做下一次计算。整个过程至少要消耗十几个机器周期。</p>
+<p>而对于并行结构，一种常见的设计是级联加法器，如下图，其中所有的clock连在一起。当需要相加的8个数据在输入端A1~B4准备好后，经过三个时钟周期，求和操作就完成了。如果数据量更大、级联的层级更大，则并行结构的优势更明显。</p>
+<p>由于电路的限制，不容易通过提高时钟频率、减小时钟周期的方式提高运算速度。并行结构通过增加电路规模、并行处理，来实现更快的运算。但并行结构不容易实现复杂逻辑，因为同时考虑多个支路的输出结果，并协调同步处理的过程很复杂（有点像多线程编程）。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-2.png" alt=""></p>
+<p>GPU并行计算举例<br>假设我们有如下图像处理任务，给每个像素值加1。GPU并行计算的方式简单粗暴，在资源允许的情况下，可以为每个像素开一个GPU线程，由其进行加1操作。数学运算量越大，这种并行方式性能优势越明显。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-task.png" alt=""></p>
+<h2 id="Android中的硬件加速"><a href="#Android中的硬件加速" class="headerlink" title="Android中的硬件加速"></a>Android中的硬件加速</h2><p>在Android中，大多数应用的界面都是利用常规的View来构建的（除了游戏、视频、图像等应用可能直接使用OpenGL ES）。下面根据Android 6.0原生系统的Java层代码，对View的软件和硬件加速渲染做一些分析和对比。</p>
+<p>DisplayList<br>DisplayList是一个基本绘制元素，包含元素原始属性（位置、尺寸、角度、透明度等），对应Canvas的drawXxx()方法（如下图）。</p>
+<p>信息传递流程：Canvas(Java API) —&gt; OpenGL(C/C++ Lib) —&gt; 驱动程序 —&gt; GPU。</p>
+<p>在Android 4.1及以上版本，DisplayList支持属性，如果View的一些属性发生变化（比如Scale、Alpha、Translate），只需把属性更新给GPU，不需要生成新的DisplayList。</p>
+<p>RenderNode<br>一个RenderNode包含若干个DisplayList，通常一个RenderNode对应一个View，包含View自身及其子View的所有DisplayList。<br><img src="http://tech.meituan.com/img/hardware-accelerate/canvas-draw.png" alt=""></p>
+<h2 id="Android绘制流程（Android-6-0）"><a href="#Android绘制流程（Android-6-0）" class="headerlink" title="Android绘制流程（Android 6.0）"></a>Android绘制流程（Android 6.0）</h2><p>下面是安卓View完整的绘制流程图，主要通过阅读源码和调试得出，虚线箭头表示递归调用。</p>
+<p>从ViewRootImpl.performTraversals到PhoneWindow.DecroView.drawChild是每次遍历View树的固定流程，首先根据标志位判断是否需要重新布局并执行布局；然后进行Canvas的创建等操作开始绘制。</p>
+<p>如果硬件加速不支持或者被关闭，则使用软件绘制，生成的Canvas即Canvas.class的对象；<br>如果支持硬件加速，则生成的是DisplayListCanvas.class的对象；<br>两者的isHardwareAccelerated()方法返回的值分别为false、true，View根据这个值判断是否使用硬件加速。<br>View中的draw(canvas,parent,drawingTime) - draw(canvas) - onDraw - dispachDraw - drawChild这条递归路径（下文简称Draw路径），调用了Canvas.drawXxx()方法，在软件渲染时用于实际绘制；在硬件加速时，用于构建DisplayList。<br>View中的updateDisplayListIfDirty - dispatchGetDisplayList - recreateChildDisplayList这条递归路径（下文简称DisplayList路径），仅在硬件加速时会经过，用于在遍历View树绘制的过程中更新DisplayList属性，并快速跳过不需要重建DisplayList的View。</p>
+<p>Android 6.0中，和DisplayList相关的API目前仍被标记为“@hide”不可访问，表示还不成熟，后续版本可能开放。<br>硬件加速情况下，draw流程执行结束后DisplayList构建完成，然后通过ThreadedRenderer.nSyncAndDrawFrame()利用GPU绘制DisplayList到屏幕上。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-func.png" alt=""></p>
+<h2 id="纯软件绘制-VS-硬件加速（Android-6-0）"><a href="#纯软件绘制-VS-硬件加速（Android-6-0）" class="headerlink" title="纯软件绘制 VS 硬件加速（Android 6.0）"></a>纯软件绘制 VS 硬件加速（Android 6.0）</h2><p>下面根据具体的几种场景，具体分析一下硬件加速前后的流程与加速效果。</p>
+<p>渲染场景    纯软件绘制    硬件加速    加速效果分析<br>页面初始化    绘制所有View    创建所有DisplayList    GPU分担了复杂计算任务<br>在一个复杂页面调用背景透明TextView的setText()，且调用后其尺寸位置不变    重绘脏区所有View    TextView及每一级父View重建DisplayList    重叠的兄弟节点不需CPU重绘，GPU会自行处理<br>TextView逐帧播放Alpha / Translation / Scale动画    每帧都要重绘脏区所有View    除第一帧同场景2，之后每帧只更新TextView对应RenderNode的属性    刷新一帧性能极大提高，动画流畅度提高<br>修改TextView透明度    重绘脏区所有View    直接调用RenderNode.setAlpha()更新    加速前需全页面遍历，并重绘很多View；加速后只触发DecorView.updateDisplayListIfDirty，不再往下遍历，CPU执行时间可忽略不计</p>
+<p>场景1中，无论是否加速，遍历View树并都会走Draw路径。硬件加速后Draw路径不做实际绘制工作，只是构建DisplayList，复杂的绘制计算任务被GPU分担，已经有了较大的加速效果。<br>场景2中，TextView设置前后尺寸位置不变，不会触发重新Layout。</p>
+<p>软件绘制时，TextView所在区域即为脏区。由于TextView有透明区域，遍历View树的过程中，和脏区重叠的多数View都要重绘，包括与之重叠的兄弟节点和他们的父节点（详见后面的介绍），不需要绘制的View在draw(canvas,parent,drawingTime)方法中判断直接返回。</p>
+<p>硬件加速后，也需要遍历View树，但只有TextView及其每一层父节点需要重建DisplayList，走的是Draw路径，其他View直接走了DisplayList路径，剩下的工作都交给GPU处理。页面越复杂，两者性能差距越明显。</p>
+<p>场景3中，软件绘制每一帧都要做大量绘制工作，很容易导致动画卡顿。硬件加速后，动画过程直接走DisplayList路径更新DisplayList的属性，动画流畅度能得到极大提高。</p>
+<p>场景4中，两者的性能差距更明显。简单修改透明度，软件绘制仍然要做很多工作；硬件加速后一般直接更新RenderNode的属性，不需要触发invalidate，也不会遍历View树（除了少数View可能要对Alpha做特殊响应并在onSetAlpha()返回true，代码如下）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public class View &#123;</div><div class="line">    // ...</div><div class="line">    public void setAlpha(@FloatRange(from=0.0, to=1.0) float alpha) &#123;</div><div class="line">        ensureTransformationInfo();</div><div class="line">        if (mTransformationInfo.mAlpha != alpha) &#123;</div><div class="line">            mTransformationInfo.mAlpha = alpha;</div><div class="line">            if (onSetAlpha((int) (alpha * 255))) &#123;</div><div class="line">                // ...</div><div class="line">                invalidate(true);</div><div class="line">            &#125; else &#123;</div><div class="line">                // ...</div><div class="line">                mRenderNode.setAlpha(getFinalAlpha());</div><div class="line">                // ...</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    protected boolean onSetAlpha(int alpha) &#123;</div><div class="line">        return false;</div><div class="line">    &#125;</div><div class="line">    // ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="软件绘制刷新逻辑简介"><a href="#软件绘制刷新逻辑简介" class="headerlink" title="软件绘制刷新逻辑简介"></a>软件绘制刷新逻辑简介</h3><p>实际阅读源码并实验，得出通常情况下的软件绘制刷新逻辑：</p>
+<p>默认情况下，View的clipChildren属性为true，即每个View绘制区域不能超出其父View的范围。如果设置一个页面根布局的clipChildren属性为false，则子View可以超出父View的绘制区域。<br>当一个View触发invalidate，且没有播放动画、没有触发layout的情况下：</p>
+<p>对于全不透明的View，其自身会设置标志位PFLAG_DIRTY，其父View会设置标志位PFLAG_DIRTY_OPAQUE。在draw(canvas)方法中，只有这个View自身重绘。<br>对于可能有透明区域的View，其自身和父View都会设置标志位PFLAG_DIRTY。</p>
+<p>clipChildren为true时，脏区会被转换成ViewRoot中的Rect，刷新时层层向下判断，当View与脏区有重叠则重绘。如果一个View超出父View范围且与脏区重叠，但其父View不与脏区重叠，这个子View不会重绘。<br>clipChildren为false时，ViewGroup.invalidateChildInParent()中会把脏区扩大到自身整个区域，于是与这个区域重叠的所有View都会重绘。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>至此，硬件加速相关的内容就介绍完了，这里做个简单总结：</p>
+<p>CPU更擅长复杂逻辑控制，而GPU得益于大量ALU和并行结构设计，更擅长数学运算。<br>页面由各种基础元素（DisplayList）构成，渲染时需要进行大量浮点运算。</p>
+<p>硬件加速条件下，CPU用于控制复杂绘制逻辑、构建或更新DisplayList；GPU用于完成图形计算、渲染DisplayList。</p>
+<p>硬件加速条件下，刷新界面尤其是播放动画时，CPU只重建或更新必要的DisplayList，进一步提高渲染效率。</p>
+<p>实现同样效果，应尽量使用更简单的DisplayList，从而达到更好的性能（Shape代替Bitmap等）。</p>
+<h2 id="参考资料与扩展阅读"><a href="#参考资料与扩展阅读" class="headerlink" title="参考资料与扩展阅读"></a>参考资料与扩展阅读</h2><p><a href="http://www.cnblogs.com/LBSer/p/4592862.html" target="_blank" rel="external">GPU—并行计算利器</a><br><a href="http://www.eechina.com/thread-176224-1-1.html" target="_blank" rel="external">显示卡的“心脏”GPU工作原理介绍</a><br><a href="http://hust.cf/matlab/2016/05/15/Matlab%E7%9A%84GPU%E5%8A%A0%E9%80%9F.html" target="_blank" rel="external">Matlab的GPU加速</a><br><a href="http://blog.csdn.net/yang_yulei/article/details/22529437" target="_blank" rel="external">处理器体系结构：了解CPU的基本运行原理</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3563960.html" target="_blank" rel="external">CPU的内部架构和工作原理</a><br><a href="http://xilinx.eetrend.com/article/10087" target="_blank" rel="external">什么是异构多处理系统，为什么需要异构多处理系统</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/45943255" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List构建过程分析</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/46281499" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List渲染过程分析</a><br><a href="http://www.jianshu.com/p/996bca12eb1d" target="_blank" rel="external">Android Choreographer源码分析</a><br><a href="http://blog.csdn.net/innost/article/details/8272867" target="_blank" rel="external">Android Project Butter分析</a></p>
+<p>不想错过技术博客更新？想给文章评论、和作者互动？第一时间获取技术沙龙信息？</p>
+<p>请关注我们的官方微信公众号“美团点评技术团队”。现在就拿出手机，扫一扫：<br><img src="http://tech.meituan.com/img/qrcode_for_gh.jpg" alt=""><br>公众号二维码</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://tech.meituan.com/hardware-accelerate.html&quot;&gt;子健&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。&lt;/p&gt;
+&lt;p&gt;本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
+    
+    
+      <category term="Hardware Accelerate" scheme="http://ipcreator.me/tags/Hardware-Accelerate/"/>
+    
+      <category term="CPU" scheme="http://ipcreator.me/tags/CPU/"/>
+    
+      <category term="GPU" scheme="http://ipcreator.me/tags/GPU/"/>
     
   </entry>
   
@@ -7231,84 +7309,6 @@ grub引导也分为两个阶段stage1阶段和stage2阶段(有些较新的grub�
     
     
       <category term="Clean Code" scheme="http://ipcreator.me/tags/Clean-Code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Essence of Android Hardware Accelerate</title>
-    <link href="http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/"/>
-    <id>http://ipcreator.me/2017/02/26/Program/Android/the-essence-of-hardware-accelarate-in-android/</id>
-    <published>2017-02-26T14:57:06.000Z</published>
-    <updated>2017-03-27T08:07:36.763Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://tech.meituan.com/hardware-accelerate.html" target="_blank" rel="external">子健</a></p>
-<p>在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。</p>
-<p>本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。</p>
-<a id="more"></a>
-<h2 id="了解硬件加速对App开发的意义"><a href="#了解硬件加速对App开发的意义" class="headerlink" title="了解硬件加速对App开发的意义"></a>了解硬件加速对App开发的意义</h2><p>对于App开发者，简单了解硬件加速原理及上层API实现，开发时就可以充分利用硬件加速提高页面的性能。以Android举例，实现一个圆角矩形按钮通常有两种方案：使用PNG图片；使用代码（XML/Java）实现。简单对比两种方案如下。</p>
-<p>方案    原理    特点<br>使用PNG图片（BitmapDrawable）    解码PNG图片生成Bitmap，传到底层，由GPU渲染    图片解码消耗CPU运算资源，Bitmap占用内存大，绘制慢<br>使用XML或Java代码实现（ShapeDrawable）    直接将Shape信息传到底层，由GPU渲染    消耗CPU资源少，占用内存小，绘制快</p>
-<h3 id="页面渲染背景知识"><a href="#页面渲染背景知识" class="headerlink" title="页面渲染背景知识"></a>页面渲染背景知识</h3><p>页面渲染时，被绘制的元素最终要转换成矩阵像素点（即多维数组形式，类似安卓中的Bitmap），才能被显示器显示。<br>页面由各种基本元素组成，例如圆形、圆角矩形、线段、文字、矢量图（常用贝塞尔曲线组成）、Bitmap等。<br>元素绘制时尤其是动画绘制过程中，经常涉及插值、缩放、旋转、透明度变化、动画过渡、毛玻璃模糊，甚至包括3D变换、物理运动（例如游戏中常见的抛物线运动）、多媒体文件解码（主要在桌面机中有应用，移动设备一般不用GPU做解码）等运算。<br>绘制过程经常需要进行逻辑较简单、但数据量庞大的浮点运算。</p>
-<h3 id="CPU与GPU结构对比"><a href="#CPU与GPU结构对比" class="headerlink" title="CPU与GPU结构对比"></a>CPU与GPU结构对比</h3><p>CPU（Central Processing Unit，中央处理器）是计算机设备核心器件，用于执行程序代码，软件开发者对此都很熟悉；GPU（Graphics Processing Unit，图形处理器）主要用于处理图形运算，通常所说“显卡”的核心部件就是GPU。</p>
-<p>下面是CPU和GPU的结构对比图。其中：<br><img src="http://tech.meituan.com/img/hardware-accelerate/cpu-gpu.png" alt=""><br>黄色的Control为控制器，用于协调控制整个CPU的运行，包括取出指令、控制其他模块的运行等；<br>绿色的ALU（Arithmetic Logic Unit）是算术逻辑单元，用于进行数学、逻辑运算；<br>橙色的Cache和DRAM分别为缓存和RAM，用于存储信息。</p>
-<p>从结构图可以看出，CPU的控制器较为复杂，而ALU数量较少。因此<strong>CPU擅长各种复杂的逻辑运算，但不擅长数学尤其是浮点运算。</strong></p>
-<p>以8086为例，一百多条汇编指令大部分都是逻辑指令，数学计算相关的主要是16位加减乘除和移位运算。一次整型和逻辑运算一般需要1~3个机器周期，而浮点运算要转换成整数计算，一次运算可能消耗上百个机器周期。<br>更简单的<strong>CPU甚至只有加法指令，减法用补码加法实现，乘法用累加实现，除法用减法循环实现。</strong><br>现代CPU一般都带有硬件浮点运算器（FPU），但主要适用于数据量不大的情况。<br>CPU是串行结构。以计算100个数字为例，对于CPU的一个核，每次只能计算两个数的和，结果逐步累加。<br>和CPU不同的是，<strong>GPU就是为实现大量数学运算设计的。从结构图中可以看到，GPU的控制器比较简单，但包含了大量ALU。GPU中的ALU使用了并行设计，且具有较多浮点运算单元。</strong></p>
-<blockquote>
-<p><strong>硬件加速的主要原理，就是通过底层软件代码，将CPU不擅长的图形计算转换成GPU专用指令，由GPU完成。</strong></p>
-</blockquote>
-<p>扩展：很多计算机中的GPU有自己独立的显存；没有独立显存则使用共享内存的形式，从内存中划分一块区域作为显存。显存可以保存GPU指令等信息。</p>
-<h3 id="并行结构举例：级联加法器"><a href="#并行结构举例：级联加法器" class="headerlink" title="并行结构举例：级联加法器"></a>并行结构举例：级联加法器</h3><p>为了方便理解，这里先从底层电路结构的角度举一个例子。如下图为一个加法器，对应实际的数字电路结构。</p>
-<p>A、B为输入，C为输出，且A、B、C均为总线，以32位CPU为例，则每根总线实际由32根导线组成，每根导线用不同的电压表示一个二进制的0或1。<br>Clock为时钟信号线，每个固定的时钟周期可向其输入一个特定的电压信号，每当一个时钟信号到来时，A和B的和就会输出到C。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-1.png" alt=""></p>
-<p>现在我们要计算8个整数的和。</p>
-<p>对于CPU这种串行结构，代码编写很简单，用for循环把所有数字逐个相加即可。串行结构只有一个加法器，需要7次求和运算；每次计算完部分和，还要将其再转移到加法器的输入端，做下一次计算。整个过程至少要消耗十几个机器周期。</p>
-<p>而对于并行结构，一种常见的设计是级联加法器，如下图，其中所有的clock连在一起。当需要相加的8个数据在输入端A1~B4准备好后，经过三个时钟周期，求和操作就完成了。如果数据量更大、级联的层级更大，则并行结构的优势更明显。</p>
-<p>由于电路的限制，不容易通过提高时钟频率、减小时钟周期的方式提高运算速度。并行结构通过增加电路规模、并行处理，来实现更快的运算。但并行结构不容易实现复杂逻辑，因为同时考虑多个支路的输出结果，并协调同步处理的过程很复杂（有点像多线程编程）。<br><img src="http://tech.meituan.com/img/hardware-accelerate/cascade-adder-2.png" alt=""></p>
-<p>GPU并行计算举例<br>假设我们有如下图像处理任务，给每个像素值加1。GPU并行计算的方式简单粗暴，在资源允许的情况下，可以为每个像素开一个GPU线程，由其进行加1操作。数学运算量越大，这种并行方式性能优势越明显。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-task.png" alt=""></p>
-<h2 id="Android中的硬件加速"><a href="#Android中的硬件加速" class="headerlink" title="Android中的硬件加速"></a>Android中的硬件加速</h2><p>在Android中，大多数应用的界面都是利用常规的View来构建的（除了游戏、视频、图像等应用可能直接使用OpenGL ES）。下面根据Android 6.0原生系统的Java层代码，对View的软件和硬件加速渲染做一些分析和对比。</p>
-<p>DisplayList<br>DisplayList是一个基本绘制元素，包含元素原始属性（位置、尺寸、角度、透明度等），对应Canvas的drawXxx()方法（如下图）。</p>
-<p>信息传递流程：Canvas(Java API) —&gt; OpenGL(C/C++ Lib) —&gt; 驱动程序 —&gt; GPU。</p>
-<p>在Android 4.1及以上版本，DisplayList支持属性，如果View的一些属性发生变化（比如Scale、Alpha、Translate），只需把属性更新给GPU，不需要生成新的DisplayList。</p>
-<p>RenderNode<br>一个RenderNode包含若干个DisplayList，通常一个RenderNode对应一个View，包含View自身及其子View的所有DisplayList。<br><img src="http://tech.meituan.com/img/hardware-accelerate/canvas-draw.png" alt=""></p>
-<h2 id="Android绘制流程（Android-6-0）"><a href="#Android绘制流程（Android-6-0）" class="headerlink" title="Android绘制流程（Android 6.0）"></a>Android绘制流程（Android 6.0）</h2><p>下面是安卓View完整的绘制流程图，主要通过阅读源码和调试得出，虚线箭头表示递归调用。</p>
-<p>从ViewRootImpl.performTraversals到PhoneWindow.DecroView.drawChild是每次遍历View树的固定流程，首先根据标志位判断是否需要重新布局并执行布局；然后进行Canvas的创建等操作开始绘制。</p>
-<p>如果硬件加速不支持或者被关闭，则使用软件绘制，生成的Canvas即Canvas.class的对象；<br>如果支持硬件加速，则生成的是DisplayListCanvas.class的对象；<br>两者的isHardwareAccelerated()方法返回的值分别为false、true，View根据这个值判断是否使用硬件加速。<br>View中的draw(canvas,parent,drawingTime) - draw(canvas) - onDraw - dispachDraw - drawChild这条递归路径（下文简称Draw路径），调用了Canvas.drawXxx()方法，在软件渲染时用于实际绘制；在硬件加速时，用于构建DisplayList。<br>View中的updateDisplayListIfDirty - dispatchGetDisplayList - recreateChildDisplayList这条递归路径（下文简称DisplayList路径），仅在硬件加速时会经过，用于在遍历View树绘制的过程中更新DisplayList属性，并快速跳过不需要重建DisplayList的View。</p>
-<p>Android 6.0中，和DisplayList相关的API目前仍被标记为“@hide”不可访问，表示还不成熟，后续版本可能开放。<br>硬件加速情况下，draw流程执行结束后DisplayList构建完成，然后通过ThreadedRenderer.nSyncAndDrawFrame()利用GPU绘制DisplayList到屏幕上。<br><img src="http://tech.meituan.com/img/hardware-accelerate/render-func.png" alt=""></p>
-<h2 id="纯软件绘制-VS-硬件加速（Android-6-0）"><a href="#纯软件绘制-VS-硬件加速（Android-6-0）" class="headerlink" title="纯软件绘制 VS 硬件加速（Android 6.0）"></a>纯软件绘制 VS 硬件加速（Android 6.0）</h2><p>下面根据具体的几种场景，具体分析一下硬件加速前后的流程与加速效果。</p>
-<p>渲染场景    纯软件绘制    硬件加速    加速效果分析<br>页面初始化    绘制所有View    创建所有DisplayList    GPU分担了复杂计算任务<br>在一个复杂页面调用背景透明TextView的setText()，且调用后其尺寸位置不变    重绘脏区所有View    TextView及每一级父View重建DisplayList    重叠的兄弟节点不需CPU重绘，GPU会自行处理<br>TextView逐帧播放Alpha / Translation / Scale动画    每帧都要重绘脏区所有View    除第一帧同场景2，之后每帧只更新TextView对应RenderNode的属性    刷新一帧性能极大提高，动画流畅度提高<br>修改TextView透明度    重绘脏区所有View    直接调用RenderNode.setAlpha()更新    加速前需全页面遍历，并重绘很多View；加速后只触发DecorView.updateDisplayListIfDirty，不再往下遍历，CPU执行时间可忽略不计</p>
-<p>场景1中，无论是否加速，遍历View树并都会走Draw路径。硬件加速后Draw路径不做实际绘制工作，只是构建DisplayList，复杂的绘制计算任务被GPU分担，已经有了较大的加速效果。<br>场景2中，TextView设置前后尺寸位置不变，不会触发重新Layout。</p>
-<p>软件绘制时，TextView所在区域即为脏区。由于TextView有透明区域，遍历View树的过程中，和脏区重叠的多数View都要重绘，包括与之重叠的兄弟节点和他们的父节点（详见后面的介绍），不需要绘制的View在draw(canvas,parent,drawingTime)方法中判断直接返回。</p>
-<p>硬件加速后，也需要遍历View树，但只有TextView及其每一层父节点需要重建DisplayList，走的是Draw路径，其他View直接走了DisplayList路径，剩下的工作都交给GPU处理。页面越复杂，两者性能差距越明显。</p>
-<p>场景3中，软件绘制每一帧都要做大量绘制工作，很容易导致动画卡顿。硬件加速后，动画过程直接走DisplayList路径更新DisplayList的属性，动画流畅度能得到极大提高。</p>
-<p>场景4中，两者的性能差距更明显。简单修改透明度，软件绘制仍然要做很多工作；硬件加速后一般直接更新RenderNode的属性，不需要触发invalidate，也不会遍历View树（除了少数View可能要对Alpha做特殊响应并在onSetAlpha()返回true，代码如下）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public class View &#123;</div><div class="line">    // ...</div><div class="line">    public void setAlpha(@FloatRange(from=0.0, to=1.0) float alpha) &#123;</div><div class="line">        ensureTransformationInfo();</div><div class="line">        if (mTransformationInfo.mAlpha != alpha) &#123;</div><div class="line">            mTransformationInfo.mAlpha = alpha;</div><div class="line">            if (onSetAlpha((int) (alpha * 255))) &#123;</div><div class="line">                // ...</div><div class="line">                invalidate(true);</div><div class="line">            &#125; else &#123;</div><div class="line">                // ...</div><div class="line">                mRenderNode.setAlpha(getFinalAlpha());</div><div class="line">                // ...</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    protected boolean onSetAlpha(int alpha) &#123;</div><div class="line">        return false;</div><div class="line">    &#125;</div><div class="line">    // ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="软件绘制刷新逻辑简介"><a href="#软件绘制刷新逻辑简介" class="headerlink" title="软件绘制刷新逻辑简介"></a>软件绘制刷新逻辑简介</h3><p>实际阅读源码并实验，得出通常情况下的软件绘制刷新逻辑：</p>
-<p>默认情况下，View的clipChildren属性为true，即每个View绘制区域不能超出其父View的范围。如果设置一个页面根布局的clipChildren属性为false，则子View可以超出父View的绘制区域。<br>当一个View触发invalidate，且没有播放动画、没有触发layout的情况下：</p>
-<p>对于全不透明的View，其自身会设置标志位PFLAG_DIRTY，其父View会设置标志位PFLAG_DIRTY_OPAQUE。在draw(canvas)方法中，只有这个View自身重绘。<br>对于可能有透明区域的View，其自身和父View都会设置标志位PFLAG_DIRTY。</p>
-<p>clipChildren为true时，脏区会被转换成ViewRoot中的Rect，刷新时层层向下判断，当View与脏区有重叠则重绘。如果一个View超出父View范围且与脏区重叠，但其父View不与脏区重叠，这个子View不会重绘。<br>clipChildren为false时，ViewGroup.invalidateChildInParent()中会把脏区扩大到自身整个区域，于是与这个区域重叠的所有View都会重绘。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>至此，硬件加速相关的内容就介绍完了，这里做个简单总结：</p>
-<p>CPU更擅长复杂逻辑控制，而GPU得益于大量ALU和并行结构设计，更擅长数学运算。<br>页面由各种基础元素（DisplayList）构成，渲染时需要进行大量浮点运算。</p>
-<p>硬件加速条件下，CPU用于控制复杂绘制逻辑、构建或更新DisplayList；GPU用于完成图形计算、渲染DisplayList。</p>
-<p>硬件加速条件下，刷新界面尤其是播放动画时，CPU只重建或更新必要的DisplayList，进一步提高渲染效率。</p>
-<p>实现同样效果，应尽量使用更简单的DisplayList，从而达到更好的性能（Shape代替Bitmap等）。</p>
-<h2 id="参考资料与扩展阅读"><a href="#参考资料与扩展阅读" class="headerlink" title="参考资料与扩展阅读"></a>参考资料与扩展阅读</h2><p><a href="http://www.cnblogs.com/LBSer/p/4592862.html" target="_blank" rel="external">GPU—并行计算利器</a><br><a href="http://www.eechina.com/thread-176224-1-1.html" target="_blank" rel="external">显示卡的“心脏”GPU工作原理介绍</a><br><a href="http://hust.cf/matlab/2016/05/15/Matlab%E7%9A%84GPU%E5%8A%A0%E9%80%9F.html" target="_blank" rel="external">Matlab的GPU加速</a><br><a href="http://blog.csdn.net/yang_yulei/article/details/22529437" target="_blank" rel="external">处理器体系结构：了解CPU的基本运行原理</a><br><a href="http://blog.chinaunix.net/uid-23069658-id-3563960.html" target="_blank" rel="external">CPU的内部架构和工作原理</a><br><a href="http://xilinx.eetrend.com/article/10087" target="_blank" rel="external">什么是异构多处理系统，为什么需要异构多处理系统</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/45943255" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List构建过程分析</a><br><a href="http://blog.csdn.net/luoshengyang/article/details/46281499" target="_blank" rel="external">Android应用程序UI硬件加速渲染的Display List渲染过程分析</a><br><a href="http://www.jianshu.com/p/996bca12eb1d" target="_blank" rel="external">Android Choreographer源码分析</a><br><a href="http://blog.csdn.net/innost/article/details/8272867" target="_blank" rel="external">Android Project Butter分析</a></p>
-<p>不想错过技术博客更新？想给文章评论、和作者互动？第一时间获取技术沙龙信息？</p>
-<p>请关注我们的官方微信公众号“美团点评技术团队”。现在就拿出手机，扫一扫：<br><img src="http://tech.meituan.com/img/qrcode_for_gh.jpg" alt=""><br>公众号二维码</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://tech.meituan.com/hardware-accelerate.html&quot;&gt;子健&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在手机客户端尤其是Android应用的开发过程中，我们经常会接触到“硬件加速”这个词。由于操作系统对底层软硬件封装非常完善，上层软件开发者往往对硬件加速的底层原理了解很少，也不清楚了解底层原理的意义，因此常会有一些误解，如硬件加速是不是通过特殊算法实现页面渲染加速，或是通过硬件提高CPU/GPU运算速率实现渲染加速。&lt;/p&gt;
-&lt;p&gt;本文尝试从底层硬件原理，一直到上层代码实现，对硬件加速技术进行简单介绍，其中上层实现基于Android 6.0。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
-    
-    
-      <category term="Hardware Accelerate" scheme="http://ipcreator.me/tags/Hardware-Accelerate/"/>
-    
-      <category term="CPU" scheme="http://ipcreator.me/tags/CPU/"/>
-    
-      <category term="GPU" scheme="http://ipcreator.me/tags/GPU/"/>
     
   </entry>
   
