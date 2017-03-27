@@ -375,9 +375,9 @@
         <title>Data Novo</title>
         <pubTime>2017-03-21T07:07:18.000Z</pubTime>
         
-        <tag>Patent</tag>
-         
         <tag>Data Novo</tag>
+         
+        <tag>Patent</tag>
          
          
            
@@ -2747,18 +2747,16 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
         <display>
-        <title>Base of Multimedia——Picture</title>
-        <pubTime>2017-02-27T03:04:06.000Z</pubTime>
+        <title>Anatomy of GPU</title>
+        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Picture</tag>
-         
-        <tag>Multimedia</tag>
+        <tag>GPU</tag>
          
          
            
@@ -2771,16 +2769,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
         <display>
-        <title>Anatomy of GPU</title>
-        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
+        <title>Base of Multimedia——Picture</title>
+        <pubTime>2017-02-27T03:04:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>GPU</tag>
+        <tag>Picture</tag>
+         
+        <tag>Multimedia</tag>
          
          
            
@@ -2817,18 +2817,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>Base of Multimedia——Color</title>
-        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
+        <title>Base of Multimedia——Video</title>
+        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
         <tag>Multimedia</tag>
          
-        <tag>Color</tag>
+        <tag>Video</tag>
          
          
            
@@ -2863,18 +2863,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>Base of Multimedia——Video</title>
-        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
+        <title>Base of Multimedia——Color</title>
+        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
         <tag>Multimedia</tag>
          
-        <tag>Video</tag>
+        <tag>Color</tag>
          
          
            
@@ -3000,9 +3000,9 @@
         <title>Beauty of English</title>
         <pubTime>2016-12-30T16:02:05.000Z</pubTime>
         
-        <tag>Beauty</tag>
-         
         <tag>Sentence</tag>
+         
+        <tag>Beauty</tag>
          
          
            
@@ -3366,11 +3366,11 @@
         <title>Essence of Android Hardware Accelerate</title>
         <pubTime>2017-02-26T14:57:06.000Z</pubTime>
         
-        <tag>GPU</tag>
+        <tag>Hardware Accelerate</tag>
          
         <tag>CPU</tag>
          
-        <tag>Hardware Accelerate</tag>
+        <tag>GPU</tag>
          
          
            
