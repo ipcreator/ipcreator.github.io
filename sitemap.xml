@@ -2,14 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ipcreator.me/2017/03/25/Ipr/patent-of-virus-detect-base-on-android-ui/</loc>
+    <loc>http://ipcreator.me/2017/03/27/MyView/why/</loc>
+    
+    <lastmod>2017-03-27T14:51:30.917Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
+    
+    <lastmod>2017-03-27T13:50:11.456Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/25/IPR/patent-of-virus-detect-base-on-android-ui/</loc>
     
     <lastmod>2017-03-27T10:28:01.891Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/03/25/Ipr/api-patent-query/</loc>
+    <loc>http://ipcreator.me/2017/03/25/IPR/api-patent-query/</loc>
     
     <lastmod>2017-03-27T10:27:41.130Z</lastmod>
     
@@ -870,13 +884,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
-    
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
     
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
@@ -884,9 +891,9 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
     
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     
   </url>
   
@@ -899,6 +906,13 @@
   
   <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
+    
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
     
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     
@@ -1062,13 +1076,6 @@
     <loc>http://ipcreator.me/2017/03/14/Program/Android/update-ui/</loc>
     
     <lastmod>2017-03-27T08:09:12.990Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
-    
-    <lastmod>2017-03-27T08:08:26.751Z</lastmod>
     
   </url>
   
