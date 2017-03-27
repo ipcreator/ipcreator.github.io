@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Deep Learning," />
+  <meta name="keywords" content="Application,Meituan,Deep Learning," />
 
 
 
@@ -89,16 +89,16 @@
 
 
 
-<meta name="description" content="huawolf
+<meta name="description" content="实例详解机器学习如何解决问题huawolf
 
-前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习">
+前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实例详解机器学习如何解决问题">
+<meta property="og:title" content="Examples of Machine Learning in Meituan">
 <meta property="og:url" content="http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/index.html">
 <meta property="og:site_name" content="IPCreator">
-<meta property="og:description" content="huawolf
+<meta property="og:description" content="实例详解机器学习如何解决问题huawolf
 
-前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习">
+前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列">
 <meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/extract_fea.png">
 <meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/model.png">
 <meta property="og:image" content="http://latex.codecogs.com/png.latex?h_{w}\left%20(%20x%20\right%20">
@@ -112,12 +112,12 @@
 <meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/coordinate_descent.jpg">
 <meta property="og:image" content="http://tech.meituan.com/img/how_to_ml/underfitting_overfitting.png">
 <meta property="og:image" content="http://tech.meituan.com/img/qrcode_for_gh.jpg">
-<meta property="og:updated_time" content="2017-02-27T05:43:01.735Z">
+<meta property="og:updated_time" content="2017-03-27T09:04:59.626Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="实例详解机器学习如何解决问题">
-<meta name="twitter:description" content="huawolf
+<meta name="twitter:title" content="Examples of Machine Learning in Meituan">
+<meta name="twitter:description" content="实例详解机器学习如何解决问题huawolf
 
-前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习">
+前言随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列">
 <meta name="twitter:image" content="http://tech.meituan.com/img/how_to_ml/extract_fea.png">
 
 
@@ -152,7 +152,7 @@
 
 
 
-  <title> 实例详解机器学习如何解决问题 | IPCreator </title>
+  <title> Examples of Machine Learning in Meituan | IPCreator </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -322,7 +322,7 @@
             
             
               
-                实例详解机器学习如何解决问题
+                Examples of Machine Learning in Meituan
               
             
           </h1>
@@ -387,7 +387,7 @@
 
           
           
-             <span id="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/" class="leancloud_visitors" data-flag-title="实例详解机器学习如何解决问题">
+             <span id="/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/" class="leancloud_visitors" data-flag-title="Examples of Machine Learning in Meituan">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,7 +416,7 @@
       
 
       
-        <p><a href="http://tech.meituan.com/mt-mlinaction-how-to-ml.html" target="_blank" rel="external">huawolf</a></p>
+        <h2 id="实例详解机器学习如何解决问题"><a href="#实例详解机器学习如何解决问题" class="headerlink" title="实例详解机器学习如何解决问题"></a>实例详解机器学习如何解决问题</h2><p><a href="http://tech.meituan.com/mt-mlinaction-how-to-ml.html" target="_blank" rel="external">huawolf</a></p>
 <p><img src="http://tech.meituan.com/img/how_to_ml/extract_fea.png" alt=""></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着大数据时代的到来，机器学习成为解决问题的一种重要且关键的工具。不管是工业界还是学术界，机器学习都是一个炙手可热的方向，但是学术界和工业界对机器学习的研究各有侧重，学术界侧重于对机器学习理论的研究，工业界侧重于如何用机器学习来解决实际问题。我们结合美团在机器学习上的实践，进行一个实战（InAction）系列的介绍（带“机器学习InAction系列”标签的文章），介绍机器学习在解决工业界问题的实战中所需的基本技术、经验和技巧。本文主要结合实际问题，概要地介绍机器学习解决实际问题的整个流程，包括对问题建模、准备训练数据、抽取特征、训练模型和优化模型等关键环节；另外几篇则会对这些关键环节进行更深入地介绍。</p>
 <p>下文分为1）机器学习的概述，2）对问题建模，3）准备训练数据，4）抽取特征，5）训练模型，6）优化模型，7）总结 共7个章节进行介绍。</p>
@@ -518,7 +518,7 @@ DEAL B2属于POIB，人均50以上，访购率底；
     </li>
     <li class="post-copyright-link">
       <strong>Post link:</strong>
-      <a href="http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/" title="实例详解机器学习如何解决问题">http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/</a>
+      <a href="http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/" title="Examples of Machine Learning in Meituan">http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright Notice: </strong>
@@ -534,6 +534,10 @@ DEAL B2属于POIB，人均50以上，访购率底；
       
         <div class="post-tags">
           
+            <a href="/tags/Application/" rel="tag"># Application</a>
+          
+            <a href="/tags/Meituan/" rel="tag"># Meituan</a>
+          
             <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
           
         </div>
@@ -547,8 +551,8 @@ DEAL B2属于POIB，人均50以上，访购率底；
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/" rel="next" title="机器学习中的数据清洗与特征处理综述">
-                <i class="fa fa-chevron-left"></i> 机器学习中的数据清洗与特征处理综述
+              <a href="/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/" rel="next" title="Clean Data and Remark Features in Meituan">
+                <i class="fa fa-chevron-left"></i> Clean Data and Remark Features in Meituan
               </a>
             
           </div>
@@ -557,8 +561,8 @@ DEAL B2属于POIB，人均50以上，访购率底；
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/" rel="prev" title="聊聊clean code">
-                聊聊clean code <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/" rel="prev" title="Talking About Clean Code">
+                Talking About Clean Code <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -609,7 +613,7 @@ DEAL B2属于POIB，人均50以上，访购率底；
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/"
-           data-title="实例详解机器学习如何解决问题" data-url="http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/">
+           data-title="Examples of Machine Learning in Meituan" data-url="http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/">
       </div>
     
   </div>
@@ -658,7 +662,7 @@ DEAL B2属于POIB，人均50以上，访购率底；
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">194</span>
+                <span class="site-state-item-count">201</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -669,7 +673,7 @@ DEAL B2属于POIB，人均50以上，访购率底；
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -680,7 +684,7 @@ DEAL B2属于POIB，人均50以上，访购率底；
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">199</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -749,35 +753,35 @@ DEAL B2属于POIB，人均50以上，访购率底；
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://book.douban.com/subject/25870384/" title="你的生命有什么可能" target="_blank">你的生命有什么可能</a>
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="超级个体" target="_blank">超级个体</a>
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://gelonghui.com/p/101767.html" title="人工智能的黄金时代" target="_blank">人工智能的黄金时代</a>
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="通往财富自由之路" target="_blank">通往财富自由之路</a>
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="把时间当作朋友" target="_blank">把时间当作朋友</a>
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="七年就是一辈子" target="_blank">七年就是一辈子</a>
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="人人都是工程师" target="_blank">人人都是工程师</a>
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="人人都能用英语" target="_blank">人人都能用英语</a>
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
                 </li>
               
             </ul>
@@ -799,7 +803,7 @@ DEAL B2属于POIB，人均50以上，访购率底；
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是机器学习？"><span class="nav-number">2.</span> <span class="nav-text">什么是机器学习？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是模型（model）？"><span class="nav-number">3.</span> <span class="nav-text">什么是模型（model）？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要用机器学习解决问题？"><span class="nav-number">4.</span> <span class="nav-text">为什么要用机器学习解决问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习应该用于解决什么问题？"><span class="nav-number">5.</span> <span class="nav-text">机器学习应该用于解决什么问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对问题建模"><span class="nav-number">6.</span> <span class="nav-text">对问题建模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单个模型？多个模型？如何来选择？"><span class="nav-number">7.</span> <span class="nav-text">单个模型？多个模型？如何来选择？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型选择"><span class="nav-number">8.</span> <span class="nav-text">模型选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备训练数据"><span class="nav-number">9.</span> <span class="nav-text">准备训练数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意点："><span class="nav-number">9.1.</span> <span class="nav-text">注意点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见问题及解决办法"><span class="nav-number">9.2.</span> <span class="nav-text">常见问题及解决办法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访购率问题的训练数据"><span class="nav-number">9.3.</span> <span class="nav-text">访购率问题的训练数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽取特征"><span class="nav-number">10.</span> <span class="nav-text">抽取特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特征归一化"><span class="nav-number">10.1.</span> <span class="nav-text">特征归一化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征选择"><span class="nav-number">10.2.</span> <span class="nav-text">特征选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练模型"><span class="nav-number">11.</span> <span class="nav-text">训练模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化算法"><span class="nav-number">11.1.</span> <span class="nav-text">优化算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化模型"><span class="nav-number">12.</span> <span class="nav-text">优化模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Underfitting-amp-Overfitting"><span class="nav-number">12.1.</span> <span class="nav-text">Underfitting & Overfitting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么解决Underfitting和Overfitting问题？"><span class="nav-number">12.2.</span> <span class="nav-text">怎么解决Underfitting和Overfitting问题？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">13.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实例详解机器学习如何解决问题"><span class="nav-number">1.</span> <span class="nav-text">实例详解机器学习如何解决问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是机器学习？"><span class="nav-number">3.</span> <span class="nav-text">什么是机器学习？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是模型（model）？"><span class="nav-number">4.</span> <span class="nav-text">什么是模型（model）？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要用机器学习解决问题？"><span class="nav-number">5.</span> <span class="nav-text">为什么要用机器学习解决问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习应该用于解决什么问题？"><span class="nav-number">6.</span> <span class="nav-text">机器学习应该用于解决什么问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对问题建模"><span class="nav-number">7.</span> <span class="nav-text">对问题建模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单个模型？多个模型？如何来选择？"><span class="nav-number">8.</span> <span class="nav-text">单个模型？多个模型？如何来选择？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型选择"><span class="nav-number">9.</span> <span class="nav-text">模型选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备训练数据"><span class="nav-number">10.</span> <span class="nav-text">准备训练数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意点："><span class="nav-number">10.1.</span> <span class="nav-text">注意点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见问题及解决办法"><span class="nav-number">10.2.</span> <span class="nav-text">常见问题及解决办法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访购率问题的训练数据"><span class="nav-number">10.3.</span> <span class="nav-text">访购率问题的训练数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽取特征"><span class="nav-number">11.</span> <span class="nav-text">抽取特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特征归一化"><span class="nav-number">11.1.</span> <span class="nav-text">特征归一化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征选择"><span class="nav-number">11.2.</span> <span class="nav-text">特征选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练模型"><span class="nav-number">12.</span> <span class="nav-text">训练模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化算法"><span class="nav-number">12.1.</span> <span class="nav-text">优化算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化模型"><span class="nav-number">13.</span> <span class="nav-text">优化模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Underfitting-amp-Overfitting"><span class="nav-number">13.1.</span> <span class="nav-text">Underfitting & Overfitting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么解决Underfitting和Overfitting问题？"><span class="nav-number">13.2.</span> <span class="nav-text">怎么解决Underfitting和Overfitting问题？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">14.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>

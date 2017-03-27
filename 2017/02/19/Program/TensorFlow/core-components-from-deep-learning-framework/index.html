@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="AI,Deep Learning," />
+  <meta name="keywords" content="Tensor,Computation Graph,BLAS,cuBLAS,cuDNN," />
 
 
 
@@ -92,7 +92,7 @@
 <meta name="description" content="本文作者：恒亮
 许多初学者觉得深度学习框架抽象，虽然调用了几个函数/方法，计算了几个数学难题，但始终不能理解这些框架的全貌。为了更好地认识深度学习框架，也为了给一些想要自己亲手搭建深度学习框架的朋友提供一些基础性的指导，日前来自苏黎世联邦理工学院计算机科学系的硕士研究生Gokula Krishnan Santhanam在博客上撰文，概括了大部分深度学习框架都会包含的五大核心组件，为我们详细剖析了深">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深度学习框架太抽象？其实不外乎这五大核心组件">
+<meta property="og:title" content="Five Core Components of Deep Learning Framework">
 <meta property="og:url" content="http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="本文作者：恒亮
@@ -103,9 +103,9 @@
 <meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5880e0a603465.png?imageMogr2/format/jpg/quality/90">
 <meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5880e0965f90a.png?imageMogr2/format/jpg/quality/90">
 <meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5880e27618064.png?imageMogr2/format/jpg/quality/90">
-<meta property="og:updated_time" content="2017-02-19T06:03:00.878Z">
+<meta property="og:updated_time" content="2017-03-27T09:54:57.225Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="深度学习框架太抽象？其实不外乎这五大核心组件">
+<meta name="twitter:title" content="Five Core Components of Deep Learning Framework">
 <meta name="twitter:description" content="本文作者：恒亮
 许多初学者觉得深度学习框架抽象，虽然调用了几个函数/方法，计算了几个数学难题，但始终不能理解这些框架的全貌。为了更好地认识深度学习框架，也为了给一些想要自己亲手搭建深度学习框架的朋友提供一些基础性的指导，日前来自苏黎世联邦理工学院计算机科学系的硕士研究生Gokula Krishnan Santhanam在博客上撰文，概括了大部分深度学习框架都会包含的五大核心组件，为我们详细剖析了深">
 <meta name="twitter:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5880dff2d8158.png?imageMogr2/format/jpg/quality/90">
@@ -142,7 +142,7 @@
 
 
 
-  <title> 深度学习框架太抽象？其实不外乎这五大核心组件 | IPCreator </title>
+  <title> Five Core Components of Deep Learning Framework | IPCreator </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -312,7 +312,7 @@
             
             
               
-                深度学习框架太抽象？其实不外乎这五大核心组件
+                Five Core Components of Deep Learning Framework
               
             
           </h1>
@@ -350,8 +350,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
                   </a>
                 </span>
 
@@ -377,7 +377,7 @@
 
           
           
-             <span id="/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/" class="leancloud_visitors" data-flag-title="深度学习框架太抽象？其实不外乎这五大核心组件">
+             <span id="/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/" class="leancloud_visitors" data-flag-title="Five Core Components of Deep Learning Framework">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -484,7 +484,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>Post link:</strong>
-      <a href="http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/" title="深度学习框架太抽象？其实不外乎这五大核心组件">http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</a>
+      <a href="http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/" title="Five Core Components of Deep Learning Framework">http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright Notice: </strong>
@@ -500,9 +500,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/AI/" rel="tag"># AI</a>
+            <a href="/tags/Tensor/" rel="tag"># Tensor</a>
           
-            <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
+            <a href="/tags/Computation-Graph/" rel="tag"># Computation Graph</a>
+          
+            <a href="/tags/BLAS/" rel="tag"># BLAS</a>
+          
+            <a href="/tags/cuBLAS/" rel="tag"># cuBLAS</a>
+          
+            <a href="/tags/cuDNN/" rel="tag"># cuDNN</a>
           
         </div>
       
@@ -515,8 +521,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/" rel="next" title="机器学习年度 20 大开源项目花落谁家？（Python 版）">
-                <i class="fa fa-chevron-left"></i> 机器学习年度 20 大开源项目花落谁家？（Python 版）
+              <a href="/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/" rel="next" title="Right Way of Learning Machine Learning">
+                <i class="fa fa-chevron-left"></i> Right Way of Learning Machine Learning
               </a>
             
           </div>
@@ -525,8 +531,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/19/BusinessAI/the-future-of-personal-terminal/" rel="prev" title="智能手机 + 机器学习 = 个人终端的未来">
-                智能手机 + 机器学习 = 个人终端的未来 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/19/BusinessAI/the-future-of-personal-terminal/" rel="prev" title="Future of Personal Terminal">
+                Future of Personal Terminal <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -577,7 +583,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/"
-           data-title="深度学习框架太抽象？其实不外乎这五大核心组件" data-url="http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/">
+           data-title="Five Core Components of Deep Learning Framework" data-url="http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/">
       </div>
     
   </div>
@@ -626,7 +632,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">194</span>
+                <span class="site-state-item-count">201</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -637,7 +643,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -648,7 +654,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">199</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -717,35 +723,35 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://book.douban.com/subject/25870384/" title="你的生命有什么可能" target="_blank">你的生命有什么可能</a>
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="超级个体" target="_blank">超级个体</a>
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://gelonghui.com/p/101767.html" title="人工智能的黄金时代" target="_blank">人工智能的黄金时代</a>
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="通往财富自由之路" target="_blank">通往财富自由之路</a>
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="把时间当作朋友" target="_blank">把时间当作朋友</a>
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="七年就是一辈子" target="_blank">七年就是一辈子</a>
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="人人都是工程师" target="_blank">人人都是工程师</a>
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="人人都能用英语" target="_blank">人人都能用英语</a>
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
                 </li>
               
             </ul>

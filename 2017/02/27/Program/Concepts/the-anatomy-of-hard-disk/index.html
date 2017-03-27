@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="File System," />
+  <meta name="keywords" content="Basic Concept,File System," />
 
 
 
@@ -93,7 +93,7 @@
 
 本来想写个文件系统的专题，结果发现对硬盘的内部架构和存储原理还是比较模糊，因为不了解“一点”硬盘的存储原理对文件系统的认识老是感觉镜花水月，不踏实。经过搜集整理资料就由了本文的问世。借用Bean_lee兄一句话：成果和荣耀归于前辈。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="硬盘的存储原理和内部架构">
+<meta property="og:title" content="Anatomy of Hard Disk">
 <meta property="og:url" content="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="wjlkoorey
@@ -109,9 +109,9 @@
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_1353334399LCDw.jpg">
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_1353333904wZ21.jpg">
 <meta property="og:image" content="http://blog.chinaunix.net/attachment/201211/19/23069658_1353334783PHx3.gif">
-<meta property="og:updated_time" content="2017-02-27T05:39:34.066Z">
+<meta property="og:updated_time" content="2017-03-27T10:02:18.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="硬盘的存储原理和内部架构">
+<meta name="twitter:title" content="Anatomy of Hard Disk">
 <meta name="twitter:description" content="wjlkoorey
 
 本来想写个文件系统的专题，结果发现对硬盘的内部架构和存储原理还是比较模糊，因为不了解“一点”硬盘的存储原理对文件系统的认识老是感觉镜花水月，不踏实。经过搜集整理资料就由了本文的问世。借用Bean_lee兄一句话：成果和荣耀归于前辈。">
@@ -149,7 +149,7 @@
 
 
 
-  <title> 硬盘的存储原理和内部架构 | IPCreator </title>
+  <title> Anatomy of Hard Disk | IPCreator </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -319,7 +319,7 @@
             
             
               
-                硬盘的存储原理和内部架构
+                Anatomy of Hard Disk
               
             
           </h1>
@@ -357,8 +357,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/Program/" itemprop="url" rel="index">
+                    <span itemprop="name">Program</span>
                   </a>
                 </span>
 
@@ -384,7 +384,7 @@
 
           
           
-             <span id="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/" class="leancloud_visitors" data-flag-title="硬盘的存储原理和内部架构">
+             <span id="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/" class="leancloud_visitors" data-flag-title="Anatomy of Hard Disk">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -478,7 +478,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>Post link:</strong>
-      <a href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/" title="硬盘的存储原理和内部架构">http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/</a>
+      <a href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/" title="Anatomy of Hard Disk">http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright Notice: </strong>
@@ -494,6 +494,8 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Basic-Concept/" rel="tag"># Basic Concept</a>
+          
             <a href="/tags/File-System/" rel="tag"># File System</a>
           
         </div>
@@ -507,8 +509,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/27/Program/Concepts/the-anatomy-of-GPU/" rel="next" title="显示卡的“心脏” GPU工作原理介绍">
-                <i class="fa fa-chevron-left"></i> 显示卡的“心脏” GPU工作原理介绍
+              <a href="/2017/02/27/Program/Concepts/the-anatomy-of-GPU/" rel="next" title="Anatomy of GPU">
+                <i class="fa fa-chevron-left"></i> Anatomy of GPU
               </a>
             
           </div>
@@ -517,8 +519,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/" rel="prev" title="小议Linux系统下的文件系统">
-                小议Linux系统下的文件系统 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/" rel="prev" title="File System of Linux">
+                File System of Linux <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -569,7 +571,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/"
-           data-title="硬盘的存储原理和内部架构" data-url="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/">
+           data-title="Anatomy of Hard Disk" data-url="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/">
       </div>
     
   </div>
@@ -609,7 +611,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">194</span>
+                <span class="site-state-item-count">201</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -620,7 +622,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -631,7 +633,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">199</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -700,35 +702,35 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://book.douban.com/subject/25870384/" title="你的生命有什么可能" target="_blank">你的生命有什么可能</a>
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="超级个体" target="_blank">超级个体</a>
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://gelonghui.com/p/101767.html" title="人工智能的黄金时代" target="_blank">人工智能的黄金时代</a>
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="通往财富自由之路" target="_blank">通往财富自由之路</a>
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="把时间当作朋友" target="_blank">把时间当作朋友</a>
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="七年就是一辈子" target="_blank">七年就是一辈子</a>
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="人人都是工程师" target="_blank">人人都是工程师</a>
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="人人都能用英语" target="_blank">人人都能用英语</a>
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
                 </li>
               
             </ul>

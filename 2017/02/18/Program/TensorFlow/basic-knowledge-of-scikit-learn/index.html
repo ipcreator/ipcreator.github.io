@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="AI,Machine Learning,Scikit," />
+  <meta name="keywords" content="Scikit," />
 
 
 
@@ -89,26 +89,29 @@
 
 
 
-<meta name="description" content="作者：雷锋网 恒亮
-对Python语言有所了解的科研人员可能都知道SciPy——一个开源的基于Python的科学计算工具包。基于SciPy，目前开发者们针对不同的应用领域已经发展出了为数众多的分支版本，它们被统一称为Scikits，即SciPy工具包的意思。而在这些分支版本中，最有名，也是专门面向机器学习的一个就是Scikit-learn。
-Scikit-learn项目最早由数据科学家 David">
+<meta name="description" content="基于SciPy的众多分支版本中，最有名，也是专门面向机器学习的就是Scikit-learn。
+
+作者：雷锋网 恒亮
+对Python语言有所了解的科研人员可能都知道SciPy——一个开源的基于Python的科学计算工具包。基于SciPy，目前开发者们针对不同的应用领域已经发展出了为数众多的分支版本，它们被统一称为Scikits，即SciPy工具包的意思。而在这些分支版本中，最有名，也是专门面向机器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scikit-learn入门指南">
+<meta property="og:title" content="Introduction of Scikit-learn">
 <meta property="og:url" content="http://ipcreator.me/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/index.html">
 <meta property="og:site_name" content="IPCreator">
-<meta property="og:description" content="作者：雷锋网 恒亮
-对Python语言有所了解的科研人员可能都知道SciPy——一个开源的基于Python的科学计算工具包。基于SciPy，目前开发者们针对不同的应用领域已经发展出了为数众多的分支版本，它们被统一称为Scikits，即SciPy工具包的意思。而在这些分支版本中，最有名，也是专门面向机器学习的一个就是Scikit-learn。
-Scikit-learn项目最早由数据科学家 David">
+<meta property="og:description" content="基于SciPy的众多分支版本中，最有名，也是专门面向机器学习的就是Scikit-learn。
+
+作者：雷锋网 恒亮
+对Python语言有所了解的科研人员可能都知道SciPy——一个开源的基于Python的科学计算工具包。基于SciPy，目前开发者们针对不同的应用领域已经发展出了为数众多的分支版本，它们被统一称为Scikits，即SciPy工具包的意思。而在这些分支版本中，最有名，也是专门面向机器">
 <meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/588354590d9b4.png?imageMogr2/format/jpg/quality/90">
 <meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/58835330012c6.jpg?imageMogr2/format/jpg/quality/90">
 <meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/5883532f1329c.jpg?imageMogr2/format/jpg/quality/90">
 <meta property="og:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/58835330b6cf2.jpg?imageMogr2/format/jpg/quality/90">
-<meta property="og:updated_time" content="2017-02-19T06:02:30.217Z">
+<meta property="og:updated_time" content="2017-03-27T05:04:53.965Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scikit-learn入门指南">
-<meta name="twitter:description" content="作者：雷锋网 恒亮
-对Python语言有所了解的科研人员可能都知道SciPy——一个开源的基于Python的科学计算工具包。基于SciPy，目前开发者们针对不同的应用领域已经发展出了为数众多的分支版本，它们被统一称为Scikits，即SciPy工具包的意思。而在这些分支版本中，最有名，也是专门面向机器学习的一个就是Scikit-learn。
-Scikit-learn项目最早由数据科学家 David">
+<meta name="twitter:title" content="Introduction of Scikit-learn">
+<meta name="twitter:description" content="基于SciPy的众多分支版本中，最有名，也是专门面向机器学习的就是Scikit-learn。
+
+作者：雷锋网 恒亮
+对Python语言有所了解的科研人员可能都知道SciPy——一个开源的基于Python的科学计算工具包。基于SciPy，目前开发者们针对不同的应用领域已经发展出了为数众多的分支版本，它们被统一称为Scikits，即SciPy工具包的意思。而在这些分支版本中，最有名，也是专门面向机器">
 <meta name="twitter:image" content="http://static.leiphone.com/uploads/new/article/740_740/201701/588354590d9b4.png?imageMogr2/format/jpg/quality/90">
 
 
@@ -143,7 +146,7 @@ Scikit-learn项目最早由数据科学家 David">
 
 
 
-  <title> Scikit-learn入门指南 | IPCreator </title>
+  <title> Introduction of Scikit-learn | IPCreator </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -313,7 +316,7 @@ Scikit-learn项目最早由数据科学家 David">
             
             
               
-                Scikit-learn入门指南
+                Introduction of Scikit-learn
               
             
           </h1>
@@ -351,8 +354,8 @@ Scikit-learn项目最早由数据科学家 David">
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
                   </a>
                 </span>
 
@@ -378,7 +381,7 @@ Scikit-learn项目最早由数据科学家 David">
 
           
           
-             <span id="/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/" class="leancloud_visitors" data-flag-title="Scikit-learn入门指南">
+             <span id="/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/" class="leancloud_visitors" data-flag-title="Introduction of Scikit-learn">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -407,7 +410,10 @@ Scikit-learn项目最早由数据科学家 David">
       
 
       
-        <p>作者：<a href="http://www.leiphone.com/news/201701/ZJMTak4Y8ch3Nwd0.html" target="_blank" rel="external">雷锋网 恒亮</a></p>
+        <blockquote>
+<p>基于SciPy的众多分支版本中，最有名，也是专门面向机器学习的就是Scikit-learn。</p>
+</blockquote>
+<p>作者：<a href="http://www.leiphone.com/news/201701/ZJMTak4Y8ch3Nwd0.html" target="_blank" rel="external">雷锋网 恒亮</a></p>
 <p>对Python语言有所了解的科研人员可能都知道SciPy——一个开源的基于Python的科学计算工具包。基于SciPy，目前开发者们针对不同的应用领域已经发展出了为数众多的分支版本，它们被统一称为Scikits，即SciPy工具包的意思。而在这些分支版本中，最有名，也是专门面向机器学习的一个就是Scikit-learn。</p>
 <p>Scikit-learn项目最早由数据科学家 David Cournapeau 在 2007 年发起，需要NumPy和SciPy等其他包的支持，是Python语言中专门针对机器学习应用而发展起来的一款开源框架。</p>
 <p>和其他众多的开源项目一样，Scikit-learn目前主要由社区成员自发进行维护。可能是由于维护成本的限制，Scikit-learn相比其他项目要显得更为保守。这主要体现在两个方面：一是Scikit-learn从来不做除机器学习领域之外的其他扩展，二是Scikit-learn从来不采用未经广泛验证的算法。</p>
@@ -479,7 +485,7 @@ Scikit-learn项目最早由数据科学家 David">
     </li>
     <li class="post-copyright-link">
       <strong>Post link:</strong>
-      <a href="http://ipcreator.me/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/" title="Scikit-learn入门指南">http://ipcreator.me/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/</a>
+      <a href="http://ipcreator.me/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/" title="Introduction of Scikit-learn">http://ipcreator.me/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright Notice: </strong>
@@ -495,10 +501,6 @@ Scikit-learn项目最早由数据科学家 David">
       
         <div class="post-tags">
           
-            <a href="/tags/AI/" rel="tag"># AI</a>
-          
-            <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
-          
             <a href="/tags/Scikit/" rel="tag"># Scikit</a>
           
         </div>
@@ -512,8 +514,8 @@ Scikit-learn项目最早由数据科学家 David">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/18/Program/TensorFlow/big-data-resources/" rel="next" title="大数据/数据挖掘/推荐系统/机器学习相关资源">
-                <i class="fa fa-chevron-left"></i> 大数据/数据挖掘/推荐系统/机器学习相关资源
+              <a href="/2017/02/18/Program/TensorFlow/big-data-resources/" rel="next" title="Resources of Big Data/Data Mining/Recommendation System/Machine Learning">
+                <i class="fa fa-chevron-left"></i> Resources of Big Data/Data Mining/Recommendation System/Machine Learning
               </a>
             
           </div>
@@ -522,8 +524,8 @@ Scikit-learn项目最早由数据科学家 David">
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/19/Program/Concepts/learn-journey-of-git/" rel="prev" title="Git教程">
-                Git教程 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/19/Program/Tools/learn-journey-of-git/" rel="prev" title="Tutorials of Git">
+                Tutorials of Git <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -574,7 +576,7 @@ Scikit-learn项目最早由数据科学家 David">
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/"
-           data-title="Scikit-learn入门指南" data-url="http://ipcreator.me/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/">
+           data-title="Introduction of Scikit-learn" data-url="http://ipcreator.me/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/">
       </div>
     
   </div>
@@ -614,7 +616,7 @@ Scikit-learn项目最早由数据科学家 David">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">194</span>
+                <span class="site-state-item-count">201</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -625,7 +627,7 @@ Scikit-learn项目最早由数据科学家 David">
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -636,7 +638,7 @@ Scikit-learn项目最早由数据科学家 David">
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">199</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -705,35 +707,35 @@ Scikit-learn项目最早由数据科学家 David">
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://book.douban.com/subject/25870384/" title="你的生命有什么可能" target="_blank">你的生命有什么可能</a>
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="超级个体" target="_blank">超级个体</a>
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://gelonghui.com/p/101767.html" title="人工智能的黄金时代" target="_blank">人工智能的黄金时代</a>
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="通往财富自由之路" target="_blank">通往财富自由之路</a>
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="把时间当作朋友" target="_blank">把时间当作朋友</a>
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="七年就是一辈子" target="_blank">七年就是一辈子</a>
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="人人都是工程师" target="_blank">人人都是工程师</a>
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="人人都能用英语" target="_blank">人人都能用英语</a>
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
                 </li>
               
             </ul>

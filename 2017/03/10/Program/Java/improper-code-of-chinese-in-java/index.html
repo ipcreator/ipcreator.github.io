@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java," />
+  <meta name="keywords" content="Charset,ASCII,GBK,Unicode,UTF8," />
 
 
 
@@ -93,7 +93,7 @@
 出现乱码的原因各式各样但根本原因就是编码转换过程中的格式不一样，所以我们只需要了解了java在运行过程中是如何来完成编码和解码的，乱码也许就真不是什么问题了。
 在前面三篇博客中LZ说明了各种编码的来由、编码规则，尤其是Unicode编码更是重点阐述。接着两篇是说明java内部是如何来完成编码解码工作的，分三种情况（IO、servlet/JSP、数据库）来阐述编码转换过程。最后就是j">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java中文乱码解决之道">
+<meta property="og:title" content="The Way of Solving Charset Problem in Java.">
 <meta property="og:url" content="http://ipcreator.me/2017/03/10/Program/Java/improper-code-of-chinese-in-java/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="出处：树上月
@@ -128,9 +128,9 @@
 <meta property="og:image" content="http://images.cnitblog.com/blog/381060/201501/200900337195704.jpg">
 <meta property="og:image" content="http://images.cnitblog.com/blog/381060/201501/151917069013985.png">
 <meta property="og:image" content="http://images.cnitblog.com/blog/381060/201501/210902582502811.png">
-<meta property="og:updated_time" content="2017-03-10T03:05:59.298Z">
+<meta property="og:updated_time" content="2017-03-27T09:58:41.996Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java中文乱码解决之道">
+<meta name="twitter:title" content="The Way of Solving Charset Problem in Java.">
 <meta name="twitter:description" content="出处：树上月
 出现乱码的原因各式各样但根本原因就是编码转换过程中的格式不一样，所以我们只需要了解了java在运行过程中是如何来完成编码和解码的，乱码也许就真不是什么问题了。
 在前面三篇博客中LZ说明了各种编码的来由、编码规则，尤其是Unicode编码更是重点阐述。接着两篇是说明java内部是如何来完成编码解码工作的，分三种情况（IO、servlet/JSP、数据库）来阐述编码转换过程。最后就是j">
@@ -168,7 +168,7 @@
 
 
 
-  <title> java中文乱码解决之道 | IPCreator </title>
+  <title> The Way of Solving Charset Problem in Java. | IPCreator </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -338,7 +338,7 @@
             
             
               
-                java中文乱码解决之道
+                The Way of Solving Charset Problem in Java.
               
             
           </h1>
@@ -376,8 +376,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -403,7 +403,7 @@
 
           
           
-             <span id="/2017/03/10/Program/Java/improper-code-of-chinese-in-java/" class="leancloud_visitors" data-flag-title="java中文乱码解决之道">
+             <span id="/2017/03/10/Program/Java/improper-code-of-chinese-in-java/" class="leancloud_visitors" data-flag-title="The Way of Solving Charset Problem in Java.">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -785,7 +785,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>Post link:</strong>
-      <a href="http://ipcreator.me/2017/03/10/Program/Java/improper-code-of-chinese-in-java/" title="java中文乱码解决之道">http://ipcreator.me/2017/03/10/Program/Java/improper-code-of-chinese-in-java/</a>
+      <a href="http://ipcreator.me/2017/03/10/Program/Java/improper-code-of-chinese-in-java/" title="The Way of Solving Charset Problem in Java.">http://ipcreator.me/2017/03/10/Program/Java/improper-code-of-chinese-in-java/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright Notice: </strong>
@@ -801,7 +801,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
+            <a href="/tags/Charset/" rel="tag"># Charset</a>
+          
+            <a href="/tags/ASCII/" rel="tag"># ASCII</a>
+          
+            <a href="/tags/GBK/" rel="tag"># GBK</a>
+          
+            <a href="/tags/Unicode/" rel="tag"># Unicode</a>
+          
+            <a href="/tags/UTF8/" rel="tag"># UTF8</a>
           
         </div>
       
@@ -814,8 +822,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/10/Program/Java/java-crawler/" rel="next" title="Java豆瓣电影爬虫——小爬虫成长记（附源码）">
-                <i class="fa fa-chevron-left"></i> Java豆瓣电影爬虫——小爬虫成长记（附源码）
+              <a href="/2017/03/10/Program/Java/java-crawler/" rel="next" title="Java Douban Crawler">
+                <i class="fa fa-chevron-left"></i> Java Douban Crawler
               </a>
             
           </div>
@@ -824,8 +832,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/10/Program/Java/anatomy-of-java-io/" rel="prev" title="Java I/O 总结">
-                Java I/O 总结 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/10/Program/Java/anatomy-of-java-io/" rel="prev" title="The Summary of Java I/O">
+                The Summary of Java I/O <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -876,7 +884,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/10/Program/Java/improper-code-of-chinese-in-java/"
-           data-title="java中文乱码解决之道" data-url="http://ipcreator.me/2017/03/10/Program/Java/improper-code-of-chinese-in-java/">
+           data-title="The Way of Solving Charset Problem in Java." data-url="http://ipcreator.me/2017/03/10/Program/Java/improper-code-of-chinese-in-java/">
       </div>
     
   </div>
@@ -925,7 +933,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">194</span>
+                <span class="site-state-item-count">201</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -936,7 +944,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -947,7 +955,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">199</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -1016,35 +1024,35 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://book.douban.com/subject/25870384/" title="你的生命有什么可能" target="_blank">你的生命有什么可能</a>
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="超级个体" target="_blank">超级个体</a>
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://gelonghui.com/p/101767.html" title="人工智能的黄金时代" target="_blank">人工智能的黄金时代</a>
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="通往财富自由之路" target="_blank">通往财富自由之路</a>
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="把时间当作朋友" target="_blank">把时间当作朋友</a>
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="七年就是一辈子" target="_blank">七年就是一辈子</a>
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="人人都是工程师" target="_blank">人人都是工程师</a>
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="人人都能用英语" target="_blank">人人都能用英语</a>
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
                 </li>
               
             </ul>

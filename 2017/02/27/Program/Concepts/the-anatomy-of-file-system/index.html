@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="File System," />
+  <meta name="keywords" content="Basic Concept,Linux,File System," />
 
 
 
@@ -93,7 +93,7 @@
 Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的新手们就会被文件系统这个概念弄得晕头转向，恰好我当年正好属于后者。
 从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的一种新型的日志文件系统)，那个年代经常听到说“我要把C盘格式化成ntfs格式，D盘格式化成fat32格式”。一到Linux下，很多入">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小议Linux系统下的文件系统">
+<meta property="og:title" content="File System of Linux">
 <meta property="og:url" content="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="wjlkoorey
@@ -102,9 +102,9 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
 <meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/linux%E7%9B%AE%E5%BD%95.png">
 <meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/Linux%E4%B8%8D%E5%90%8C%E7%9A%84%E5%8F%91%E8%A1%8C%E7%89%88%E9%83%BD%E5%AD%98%E5%9C%A8%E5%A6%82%E4%B8%8B%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.jpg">
 <meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/VFS%E6%9D%A5%E5%B1%8F%E8%94%BD%E4%B8%8B%E5%B1%82%E5%90%84%E7%A7%8D%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82%E5%92%8C%E5%B7%AE%E5%BC%82.jpg">
-<meta property="og:updated_time" content="2017-02-27T05:38:05.833Z">
+<meta property="og:updated_time" content="2017-03-27T08:55:53.032Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小议Linux系统下的文件系统">
+<meta name="twitter:title" content="File System of Linux">
 <meta name="twitter:description" content="wjlkoorey
 Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的新手们就会被文件系统这个概念弄得晕头转向，恰好我当年正好属于后者。
 从windows下转到Linux的童鞋听到最多的应该是fat32和ntfs(在windows 2000之后所出现的一种新型的日志文件系统)，那个年代经常听到说“我要把C盘格式化成ntfs格式，D盘格式化成fat32格式”。一到Linux下，很多入">
@@ -142,7 +142,7 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
 
 
 
-  <title> 小议Linux系统下的文件系统 | IPCreator </title>
+  <title> File System of Linux | IPCreator </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -312,7 +312,7 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
             
             
               
-                小议Linux系统下的文件系统
+                File System of Linux
               
             
           </h1>
@@ -350,8 +350,8 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/Program/" itemprop="url" rel="index">
+                    <span itemprop="name">Program</span>
                   </a>
                 </span>
 
@@ -377,7 +377,7 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
 
           
           
-             <span id="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/" class="leancloud_visitors" data-flag-title="小议Linux系统下的文件系统">
+             <span id="/2017/02/27/Program/Concepts/the-anatomy-of-file-system/" class="leancloud_visitors" data-flag-title="File System of Linux">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -449,7 +449,7 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
     </li>
     <li class="post-copyright-link">
       <strong>Post link:</strong>
-      <a href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/" title="小议Linux系统下的文件系统">http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</a>
+      <a href="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/" title="File System of Linux">http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright Notice: </strong>
@@ -465,6 +465,10 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
       
         <div class="post-tags">
           
+            <a href="/tags/Basic-Concept/" rel="tag"># Basic Concept</a>
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
             <a href="/tags/File-System/" rel="tag"># File System</a>
           
         </div>
@@ -478,8 +482,8 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/" rel="next" title="硬盘的存储原理和内部架构">
-                <i class="fa fa-chevron-left"></i> 硬盘的存储原理和内部架构
+              <a href="/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/" rel="next" title="Anatomy of Hard Disk">
+                <i class="fa fa-chevron-left"></i> Anatomy of Hard Disk
               </a>
             
           </div>
@@ -488,8 +492,8 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/27/Program/Concepts/start-up-of-linux/" rel="prev" title="从头构建自己的Linux系统">
-                从头构建自己的Linux系统 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/27/Program/Concepts/start-up-of-linux/" rel="prev" title="Build your own Linux System">
+                Build your own Linux System <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -540,7 +544,7 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/27/Program/Concepts/the-anatomy-of-file-system/"
-           data-title="小议Linux系统下的文件系统" data-url="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/">
+           data-title="File System of Linux" data-url="http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/">
       </div>
     
   </div>
@@ -589,7 +593,7 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">194</span>
+                <span class="site-state-item-count">201</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -600,7 +604,7 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -611,7 +615,7 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">199</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -680,35 +684,35 @@ Linux的老江湖们对这个概念当然不会陌生，然而刚接触Linux的�
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://book.douban.com/subject/25870384/" title="你的生命有什么可能" target="_blank">你的生命有什么可能</a>
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="超级个体" target="_blank">超级个体</a>
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://gelonghui.com/p/101767.html" title="人工智能的黄金时代" target="_blank">人工智能的黄金时代</a>
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="通往财富自由之路" target="_blank">通往财富自由之路</a>
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="把时间当作朋友" target="_blank">把时间当作朋友</a>
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="七年就是一辈子" target="_blank">七年就是一辈子</a>
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="人人都是工程师" target="_blank">人人都是工程师</a>
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="人人都能用英语" target="_blank">人人都能用英语</a>
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
                 </li>
               
             </ul>

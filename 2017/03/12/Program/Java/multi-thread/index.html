@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java," />
+  <meta name="keywords" content="Multithread,Multiprocess," />
 
 
 
@@ -92,7 +92,7 @@
 <meta name="description" content="作者: luoweifu
 什么是线程什么是线程？线程与进程与有什么关系？这是一个非常抽象的问题，也是一个特别广的话题，涉及到非常多的知识。我不能确保能把它讲的话，也不能确保讲的内容全部都正确。即使这样，我也希望尽可能地把他讲通俗一点，讲的明白一点，因为这是个一直困扰我很久的，扑朔迷离的知识领域，希望通过我的理解揭开它一层一层神秘的面纱。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="编程思想之多线程与多进程">
+<meta property="og:title" content="Concepts of Multiprocess and Multithread">
 <meta property="og:url" content="http://ipcreator.me/2017/03/12/Program/Java/multi-thread/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="作者: luoweifu
@@ -114,9 +114,9 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20150628203115567">
 <meta property="og:image" content="http://img.blog.csdn.net/20150628203427692">
 <meta property="og:image" content="http://img.blog.csdn.net/20150628204041010">
-<meta property="og:updated_time" content="2017-03-13T11:47:16.809Z">
+<meta property="og:updated_time" content="2017-03-27T07:03:48.998Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="编程思想之多线程与多进程">
+<meta name="twitter:title" content="Concepts of Multiprocess and Multithread">
 <meta name="twitter:description" content="作者: luoweifu
 什么是线程什么是线程？线程与进程与有什么关系？这是一个非常抽象的问题，也是一个特别广的话题，涉及到非常多的知识。我不能确保能把它讲的话，也不能确保讲的内容全部都正确。即使这样，我也希望尽可能地把他讲通俗一点，讲的明白一点，因为这是个一直困扰我很久的，扑朔迷离的知识领域，希望通过我的理解揭开它一层一层神秘的面纱。">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20150623201226625?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVvd2VpZnU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
@@ -153,7 +153,7 @@
 
 
 
-  <title> 编程思想之多线程与多进程 | IPCreator </title>
+  <title> Concepts of Multiprocess and Multithread | IPCreator </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -323,7 +323,7 @@
             
             
               
-                编程思想之多线程与多进程
+                Concepts of Multiprocess and Multithread
               
             
           </h1>
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -388,7 +388,7 @@
 
           
           
-             <span id="/2017/03/12/Program/Java/multi-thread/" class="leancloud_visitors" data-flag-title="编程思想之多线程与多进程">
+             <span id="/2017/03/12/Program/Java/multi-thread/" class="leancloud_visitors" data-flag-title="Concepts of Multiprocess and Multithread">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -474,7 +474,7 @@
 <h2 id="创建线程"><a href="#创建线程" class="headerlink" title="创建线程"></a>创建线程</h2><p>单线程程序简单明了，但有时无法满足特定的需求。如一个文字处理的程序，我在打印文章的同时也要能对文字进行编辑，如果是单线程的程序则要等打印机打印完成之后你才能对文字进行编辑，但打印的过程一般比较漫长，这是我们无法容忍的。如果采用多线程，打印的时候可以单独开一个线程去打印，主线程可以继续进行文字编辑。在程序需要同时执行多个任务时，可以采用多线程。</p>
 <p>在程序需要同时执行多个任务时，可以采用多线程。<strong>Java给多线程编程提供了内置的支持，提供了两种创建线程方法：1.通过实现Runable接口；2.通过继承Thread类。</strong></p>
 <p>Thread是JDK实现的对线程支持的类，Thread类本身实现了Runnable接口，所以Runnable是显示创建线程必须实现的接口; Runnable只有一个run方法，所以不管通过哪种方式创建线程，都必须实现run方法。我们可以看一个例子。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * User: luoweifu</div><div class="line"> * Date: 15-5-24</div><div class="line"> * Time: 下午9:30</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> */</div><div class="line"></div><div class="line">/**</div><div class="line"> * 通过实现Runnable方法</div><div class="line"> */</div><div class="line">class ThreadA implements Runnable &#123;</div><div class="line">   private Thread thread;</div><div class="line">   private String threadName;</div><div class="line">   public ThreadA(String threadName) &#123;</div><div class="line">      thread = new Thread(this, threadName);</div><div class="line">      this.threadName = threadName;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   //实现run方法</div><div class="line">   public void run() &#123;</div><div class="line">      for (int i = 0; i &lt; 100; i ++) &#123;</div><div class="line">         System.out.println(threadName + &quot;: &quot; + i);</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   public void start() &#123;</div><div class="line">      thread.start();</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 继承Thread的方法</div><div class="line"> */</div><div class="line">class ThreadB extends Thread &#123;</div><div class="line">   private String threadName;</div><div class="line"></div><div class="line">   public ThreadB(String threadName) &#123;</div><div class="line">      super(threadName);</div><div class="line">      this.threadName = threadName;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   //实现run方法</div><div class="line">   public void run() &#123;</div><div class="line">      for (int i = 0; i &lt; 100; i ++) &#123;</div><div class="line">         System.out.println(threadName + &quot;: &quot; + i);</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class MultiThread&#123;</div><div class="line"></div><div class="line">   public static void main(String args[]) &#123;</div><div class="line">      ThreadA threadA = new ThreadA(&quot;ThreadA&quot;);</div><div class="line">      ThreadB threadB = new ThreadB(&quot;ThreadB&quot;);</div><div class="line">      threadA.start();</div><div class="line">      threadB.start();</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * Created with IntelliJ IDEA.</div><div class="line"> * User: luoweifu</div><div class="line"> * Date: 15-5-24</div><div class="line"> * Time: 下午9:30</div><div class="line"> * To change this template use File | Settings | File Templates.</div><div class="line"> */</div><div class="line"></div><div class="line">/**</div><div class="line"> * 通过实现Runnable方法</div><div class="line"> */</div><div class="line">class ThreadA implements Runnable &#123;</div><div class="line">   private Thread thread;</div><div class="line">   private String threadName;</div><div class="line">   public ThreadA(String threadName) &#123;</div><div class="line">      thread = new Thread(this, threadName);</div><div class="line">      this.threadName = threadName;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   //实现run方法</div><div class="line">   public void run() &#123;</div><div class="line">      for (int i = 0; i &lt; 100; i ++) &#123;</div><div class="line">         System.out.println(threadName + &quot;: &quot; + i);</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   public void start() &#123;</div><div class="line">      thread.start();</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 继承Thread的方法</div><div class="line"> */</div><div class="line">class ThreadB extends Thread &#123;</div><div class="line">   private String threadName;</div><div class="line"></div><div class="line">   public ThreadB(String threadName) &#123;</div><div class="line">      super(threadName);</div><div class="line">      this.threadName = threadName;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   //实现run方法</div><div class="line">   public void run() &#123;</div><div class="line">      for (int i = 0; i &lt; 100; i ++) &#123;</div><div class="line">         System.out.println(threadName + &quot;: &quot; + i);</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class Multithread&#123;</div><div class="line"></div><div class="line">   public static void main(String args[]) &#123;</div><div class="line">      ThreadA threadA = new ThreadA(&quot;ThreadA&quot;);</div><div class="line">      ThreadB threadB = new ThreadB(&quot;ThreadB&quot;);</div><div class="line">      threadA.start();</div><div class="line">      threadB.start();</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>说明：上面的例子中例举了两种实现线程的方式。<strong>大部分情况下选择实现Runnable接口的方式会优于继承Thread的方式</strong>，因为：</p>
 <ol>
 <li>从 Thread 类继承会强加类层次；</li>
@@ -564,7 +564,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>Post link:</strong>
-      <a href="http://ipcreator.me/2017/03/12/Program/Java/multi-thread/" title="编程思想之多线程与多进程">http://ipcreator.me/2017/03/12/Program/Java/multi-thread/</a>
+      <a href="http://ipcreator.me/2017/03/12/Program/Java/multi-thread/" title="Concepts of Multiprocess and Multithread">http://ipcreator.me/2017/03/12/Program/Java/multi-thread/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright Notice: </strong>
@@ -580,7 +580,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
+            <a href="/tags/Multithread/" rel="tag"># Multithread</a>
+          
+            <a href="/tags/Multiprocess/" rel="tag"># Multiprocess</a>
           
         </div>
       
@@ -593,8 +595,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/12/MyView/Movie/ordinary-life/" rel="next" title="平凡的世界">
-                <i class="fa fa-chevron-left"></i> 平凡的世界
+              <a href="/2017/03/12/MyView/Movie/ordinary-life/" rel="next" title="Ordinary Life">
+                <i class="fa fa-chevron-left"></i> Ordinary Life
               </a>
             
           </div>
@@ -603,8 +605,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/12/Program/Android/multi-thread-in-android/" rel="prev" title="Android线程">
-                Android线程 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/12/Program/Android/multi-thread-in-android/" rel="prev" title="Android Thread">
+                Android Thread <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -655,7 +657,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/12/Program/Java/multi-thread/"
-           data-title="编程思想之多线程与多进程" data-url="http://ipcreator.me/2017/03/12/Program/Java/multi-thread/">
+           data-title="Concepts of Multiprocess and Multithread" data-url="http://ipcreator.me/2017/03/12/Program/Java/multi-thread/">
       </div>
     
   </div>
@@ -704,7 +706,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">194</span>
+                <span class="site-state-item-count">201</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -715,7 +717,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -726,7 +728,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">199</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -795,35 +797,35 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://book.douban.com/subject/25870384/" title="你的生命有什么可能" target="_blank">你的生命有什么可能</a>
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="超级个体" target="_blank">超级个体</a>
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://gelonghui.com/p/101767.html" title="人工智能的黄金时代" target="_blank">人工智能的黄金时代</a>
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="通往财富自由之路" target="_blank">通往财富自由之路</a>
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="把时间当作朋友" target="_blank">把时间当作朋友</a>
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="七年就是一辈子" target="_blank">七年就是一辈子</a>
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="人人都是工程师" target="_blank">人人都是工程师</a>
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="人人都能用英语" target="_blank">人人都能用英语</a>
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
                 </li>
               
             </ul>

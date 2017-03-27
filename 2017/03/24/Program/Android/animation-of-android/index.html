@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android," />
+  <meta name="keywords" content="Animation," />
 
 
 
@@ -92,7 +92,7 @@
 <meta name="description" content="作者：郭霖
 Android系统在一开始的时候就给我们提供了两种实现动画效果的方式，逐帧动画(frame-by-frame animation)和补间动画(tweened animation)。逐帧动画的工作原理很简单，其实就是将一个完整的动画拆分成一张张单独的图片，然后再将它们连贯起来进行播放，类似于动画片的工作原理。补间动画则是可以对View进行一系列的动画操作，包括淡入淡出、缩放、平移、旋转四">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android属性动画完全解析">
+<meta property="og:title" content="Anatomy of Android Property Animation">
 <meta property="og:url" content="http://ipcreator.me/2017/03/24/Program/Android/animation-of-android/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="作者：郭霖
@@ -101,9 +101,9 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
 <meta property="og:image" content="http://img.blog.csdn.net/20150403174704189?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ3VvbGluX2Jsb2c=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20150406161443130">
 <meta property="og:image" content="http://img.blog.csdn.net/20150406161421215">
-<meta property="og:updated_time" content="2017-03-24T03:57:26.037Z">
+<meta property="og:updated_time" content="2017-03-27T07:49:47.427Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android属性动画完全解析">
+<meta name="twitter:title" content="Anatomy of Android Property Animation">
 <meta name="twitter:description" content="作者：郭霖
 Android系统在一开始的时候就给我们提供了两种实现动画效果的方式，逐帧动画(frame-by-frame animation)和补间动画(tweened animation)。逐帧动画的工作原理很简单，其实就是将一个完整的动画拆分成一张张单独的图片，然后再将它们连贯起来进行播放，类似于动画片的工作原理。补间动画则是可以对View进行一系列的动画操作，包括淡入淡出、缩放、平移、旋转四">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20150504225554203">
@@ -140,7 +140,7 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
 
 
 
-  <title> Android属性动画完全解析 | IPCreator </title>
+  <title> Anatomy of Android Property Animation | IPCreator </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -310,7 +310,7 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
             
             
               
-                Android属性动画完全解析
+                Anatomy of Android Property Animation
               
             
           </h1>
@@ -348,8 +348,8 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
                   </a>
                 </span>
 
@@ -375,7 +375,7 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
 
           
           
-             <span id="/2017/03/24/Program/Android/animation-of-android/" class="leancloud_visitors" data-flag-title="Android属性动画完全解析">
+             <span id="/2017/03/24/Program/Android/animation-of-android/" class="leancloud_visitors" data-flag-title="Anatomy of Android Property Animation">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -467,7 +467,7 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
     </li>
     <li class="post-copyright-link">
       <strong>Post link:</strong>
-      <a href="http://ipcreator.me/2017/03/24/Program/Android/animation-of-android/" title="Android属性动画完全解析">http://ipcreator.me/2017/03/24/Program/Android/animation-of-android/</a>
+      <a href="http://ipcreator.me/2017/03/24/Program/Android/animation-of-android/" title="Anatomy of Android Property Animation">http://ipcreator.me/2017/03/24/Program/Android/animation-of-android/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright Notice: </strong>
@@ -483,7 +483,7 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
+            <a href="/tags/Animation/" rel="tag"># Animation</a>
           
         </div>
       
@@ -496,8 +496,8 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/23/Program/TensorFlow/ai-chips/" rel="next" title="AI芯片的几种选择">
-                <i class="fa fa-chevron-left"></i> AI芯片的几种选择
+              <a href="/2017/03/23/Program/TensorFlow/ai-chips/" rel="next" title="Choices of AI Chips">
+                <i class="fa fa-chevron-left"></i> Choices of AI Chips
               </a>
             
           </div>
@@ -506,8 +506,8 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/24/Program/Android/MyApp/my-favor-music-player/" rel="prev" title="SmartMusicPlayer">
-                SmartMusicPlayer <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/24/Program/Android/MyApp/my-favor-music-player/" rel="prev" title="Smart MusicPlayer">
+                Smart MusicPlayer <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -558,7 +558,7 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/24/Program/Android/animation-of-android/"
-           data-title="Android属性动画完全解析" data-url="http://ipcreator.me/2017/03/24/Program/Android/animation-of-android/">
+           data-title="Anatomy of Android Property Animation" data-url="http://ipcreator.me/2017/03/24/Program/Android/animation-of-android/">
       </div>
     
   </div>
@@ -607,7 +607,7 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">194</span>
+                <span class="site-state-item-count">201</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -618,7 +618,7 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -629,7 +629,7 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">199</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -698,35 +698,35 @@ Android系统在一开始的时候就给我们提供了两种实现动画效果�
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://book.douban.com/subject/25870384/" title="你的生命有什么可能" target="_blank">你的生命有什么可能</a>
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="超级个体" target="_blank">超级个体</a>
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://gelonghui.com/p/101767.html" title="人工智能的黄金时代" target="_blank">人工智能的黄金时代</a>
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="通往财富自由之路" target="_blank">通往财富自由之路</a>
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="把时间当作朋友" target="_blank">把时间当作朋友</a>
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="七年就是一辈子" target="_blank">七年就是一辈子</a>
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="人人都是工程师" target="_blank">人人都是工程师</a>
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="人人都能用英语" target="_blank">人人都能用英语</a>
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
                 </li>
               
             </ul>

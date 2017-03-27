@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android," />
+  <meta name="keywords" content="MySQL,Optimization," />
 
 
 
@@ -92,14 +92,14 @@
 <meta name="description" content="NeverMore
 MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为绝大多数互联网公司的首选关系型数据库。虽然性能出色，但所谓“好马配好鞍”，如何能够更好的使用它，已经成为开发工程师的必修课，我们经常会从职位描述上看到诸如“精通MySQL”、“SQL语句优化”、“了解数据库原理”等要求。我们知道一般的应用系统，读写比例在10:1左右，而且插入操作和一般的更新操作很少出现性能问题，遇到最">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL索引原理及慢查询优化">
+<meta property="og:title" content="MySQL Index principle and optimization">
 <meta property="og:url" content="http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/index.html">
 <meta property="og:site_name" content="IPCreator">
 <meta property="og:description" content="NeverMore
 MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为绝大多数互联网公司的首选关系型数据库。虽然性能出色，但所谓“好马配好鞍”，如何能够更好的使用它，已经成为开发工程师的必修课，我们经常会从职位描述上看到诸如“精通MySQL”、“SQL语句优化”、“了解数据库原理”等要求。我们知道一般的应用系统，读写比例在10:1左右，而且插入操作和一般的更新操作很少出现性能问题，遇到最">
-<meta property="og:updated_time" content="2017-02-27T05:40:54.717Z">
+<meta property="og:updated_time" content="2017-03-27T07:23:04.627Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL索引原理及慢查询优化">
+<meta name="twitter:title" content="MySQL Index principle and optimization">
 <meta name="twitter:description" content="NeverMore
 MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为绝大多数互联网公司的首选关系型数据库。虽然性能出色，但所谓“好马配好鞍”，如何能够更好的使用它，已经成为开发工程师的必修课，我们经常会从职位描述上看到诸如“精通MySQL”、“SQL语句优化”、“了解数据库原理”等要求。我们知道一般的应用系统，读写比例在10:1左右，而且插入操作和一般的更新操作很少出现性能问题，遇到最">
 
@@ -135,7 +135,7 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
 
 
 
-  <title> MySQL索引原理及慢查询优化 | IPCreator </title>
+  <title> MySQL Index principle and optimization | IPCreator </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -305,7 +305,7 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
             
             
               
-                MySQL索引原理及慢查询优化
+                MySQL Index principle and optimization
               
             
           </h1>
@@ -343,8 +343,8 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/个人/" itemprop="url" rel="index">
-                    <span itemprop="name">个人</span>
+                  <a href="/categories/Program/" itemprop="url" rel="index">
+                    <span itemprop="name">Program</span>
                   </a>
                 </span>
 
@@ -370,7 +370,7 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
 
           
           
-             <span id="/2017/02/26/Program/Concepts/the-essence-of-mysql-index/" class="leancloud_visitors" data-flag-title="MySQL索引原理及慢查询优化">
+             <span id="/2017/02/26/Program/Concepts/the-essence-of-mysql-index/" class="leancloud_visitors" data-flag-title="MySQL Index principle and optimization">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -480,7 +480,7 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
     </li>
     <li class="post-copyright-link">
       <strong>Post link:</strong>
-      <a href="http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/" title="MySQL索引原理及慢查询优化">http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/</a>
+      <a href="http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/" title="MySQL Index principle and optimization">http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright Notice: </strong>
@@ -496,7 +496,9 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          
+            <a href="/tags/Optimization/" rel="tag"># Optimization</a>
           
         </div>
       
@@ -509,8 +511,8 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/26/Program/Android/history-of-v4-and-v7/" rel="next" title="Android Support Library的前世今生">
-                <i class="fa fa-chevron-left"></i> Android Support Library的前世今生
+              <a href="/2017/02/26/Program/Android/history-of-v4-and-v7/" rel="next" title="History of Android Support Library">
+                <i class="fa fa-chevron-left"></i> History of Android Support Library
               </a>
             
           </div>
@@ -519,8 +521,8 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/26/Program/Android/dynamic-load-android-dex-from-meituan/" rel="prev" title="美团Android DEX自动拆包及动态加载简介">
-                美团Android DEX自动拆包及动态加载简介 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/26/Program/Android/dynamic-load-android-dex-from-meituan/" rel="prev" title="Dynamic Load Android DEX  by Meituan">
+                Dynamic Load Android DEX  by Meituan <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -571,7 +573,7 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/26/Program/Concepts/the-essence-of-mysql-index/"
-           data-title="MySQL索引原理及慢查询优化" data-url="http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/">
+           data-title="MySQL Index principle and optimization" data-url="http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/">
       </div>
     
   </div>
@@ -611,7 +613,7 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">194</span>
+                <span class="site-state-item-count">201</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -622,7 +624,7 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -633,7 +635,7 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">199</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -702,35 +704,35 @@ MySQL凭借着出色的性能、低廉的成本、丰富的资源，已经成为
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://book.douban.com/subject/25870384/" title="你的生命有什么可能" target="_blank">你的生命有什么可能</a>
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="超级个体" target="_blank">超级个体</a>
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://gelonghui.com/p/101767.html" title="人工智能的黄金时代" target="_blank">人工智能的黄金时代</a>
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="通往财富自由之路" target="_blank">通往财富自由之路</a>
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="把时间当作朋友" target="_blank">把时间当作朋友</a>
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="七年就是一辈子" target="_blank">七年就是一辈子</a>
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="人人都是工程师" target="_blank">人人都是工程师</a>
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="人人都能用英语" target="_blank">人人都能用英语</a>
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
                 </li>
               
             </ul>

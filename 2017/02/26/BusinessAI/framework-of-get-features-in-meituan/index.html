@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Deep Learning," />
+  <meta name="keywords" content="Application,Meituan,Deep Learning,Feature,Framework," />
 
 
 
@@ -89,13 +89,13 @@
 
 
 
-<meta name="description" content="海文
+<meta name="description" content="外卖排序系统特征生产框架海文
 背景外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="外卖排序系统特征生产框架">
+<meta property="og:title" content="Framework of Getting Features in Meituan">
 <meta property="og:url" content="http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/index.html">
 <meta property="og:site_name" content="IPCreator">
-<meta property="og:description" content="海文
+<meta property="og:description" content="外卖排序系统特征生产框架海文
 背景外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。">
 <meta property="og:image" content="http://tech.meituan.com/img/feature_pipeline/001.png">
 <meta property="og:image" content="http://tech.meituan.com/img/feature_pipeline/002.png">
@@ -109,10 +109,10 @@
 <meta property="og:image" content="http://tech.meituan.com/img/feature_pipeline/010.png">
 <meta property="og:image" content="http://tech.meituan.com/img/feature_pipeline/011.png">
 <meta property="og:image" content="http://tech.meituan.com/img/qrcode_for_gh.jpg">
-<meta property="og:updated_time" content="2017-02-27T05:43:35.136Z">
+<meta property="og:updated_time" content="2017-03-27T09:04:17.222Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="外卖排序系统特征生产框架">
-<meta name="twitter:description" content="海文
+<meta name="twitter:title" content="Framework of Getting Features in Meituan">
+<meta name="twitter:description" content="外卖排序系统特征生产框架海文
 背景外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。">
 <meta name="twitter:image" content="http://tech.meituan.com/img/feature_pipeline/001.png">
 
@@ -148,7 +148,7 @@
 
 
 
-  <title> 外卖排序系统特征生产框架 | IPCreator </title>
+  <title> Framework of Getting Features in Meituan | IPCreator </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -318,7 +318,7 @@
             
             
               
-                外卖排序系统特征生产框架
+                Framework of Getting Features in Meituan
               
             
           </h1>
@@ -383,7 +383,7 @@
 
           
           
-             <span id="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/" class="leancloud_visitors" data-flag-title="外卖排序系统特征生产框架">
+             <span id="/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/" class="leancloud_visitors" data-flag-title="Framework of Getting Features in Meituan">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -412,7 +412,7 @@
       
 
       
-        <p><a href="http://tech.meituan.com/feature_pipeline.html" target="_blank" rel="external">海文</a></p>
+        <h2 id="外卖排序系统特征生产框架"><a href="#外卖排序系统特征生产框架" class="headerlink" title="外卖排序系统特征生产框架"></a>外卖排序系统特征生产框架</h2><p><a href="http://tech.meituan.com/feature_pipeline.html" target="_blank" rel="external">海文</a></p>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="http://tech.meituan.com/img/feature_pipeline/001.png" alt=""><br>外卖的排序策略是由机器学习模型驱动的，模型迭代效率制约着策略优化效果。如上图所示，在排序系统里，特征是最为基础的部分：有了特征之后，我们离线训练出模型，然后将特征和模型一起推送给线上排序服务使用。特征生产Pipeline对于策略迭代的效率起着至关重要的作用。经过实践中的积累和提炼，我们整理出一套通用的特征生产框架，大大节省开发量，提高策略迭代效率。</p>
    <a id="more"></a>
 <p>外卖排序系统使用GBDT（Gradient Boosting Decision Tree）树模型，比较复杂。受限于计算能力，除了上下文特征（如时间、地域、终端类型、距离等）之外，目前使用的主要是一些宽泛的统计特征，比如商家销量、商家单均价、用户的品类偏好等。这些特征的生产流程包括：离线的统计、离线到在线的同步、在线的加载等。<br><img src="http://tech.meituan.com/img/feature_pipeline/002.png" alt=""><br>   图2 特征生产流程</p>
@@ -475,7 +475,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>Post link:</strong>
-      <a href="http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/" title="外卖排序系统特征生产框架">http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/</a>
+      <a href="http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/" title="Framework of Getting Features in Meituan">http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright Notice: </strong>
@@ -491,7 +491,15 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Application/" rel="tag"># Application</a>
+          
+            <a href="/tags/Meituan/" rel="tag"># Meituan</a>
+          
             <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
+          
+            <a href="/tags/Feature/" rel="tag"># Feature</a>
+          
+            <a href="/tags/Framework/" rel="tag"># Framework</a>
           
         </div>
       
@@ -504,8 +512,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/26/BusinessAI/deep-learning-in-meituan/" rel="next" title="深度学习在美团点评的应用">
-                <i class="fa fa-chevron-left"></i> 深度学习在美团点评的应用
+              <a href="/2017/02/26/BusinessAI/deep-learning-in-meituan/" rel="next" title="Deep Learning in Meituan">
+                <i class="fa fa-chevron-left"></i> Deep Learning in Meituan
               </a>
             
           </div>
@@ -514,8 +522,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/26/BusinessAI/online-learning-in-meituan/" rel="prev" title="Online Learning算法理论与实践">
-                Online Learning算法理论与实践 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/26/BusinessAI/online-learning-in-meituan/" rel="prev" title="Online Learning Algorithm Theory and Practice">
+                Online Learning Algorithm Theory and Practice <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -566,7 +574,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/26/BusinessAI/framework-of-get-features-in-meituan/"
-           data-title="外卖排序系统特征生产框架" data-url="http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/">
+           data-title="Framework of Getting Features in Meituan" data-url="http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/">
       </div>
     
   </div>
@@ -615,7 +623,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">194</span>
+                <span class="site-state-item-count">201</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -626,7 +634,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -637,7 +645,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">199</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -706,35 +714,35 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://book.douban.com/subject/25870384/" title="你的生命有什么可能" target="_blank">你的生命有什么可能</a>
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="超级个体" target="_blank">超级个体</a>
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://gelonghui.com/p/101767.html" title="人工智能的黄金时代" target="_blank">人工智能的黄金时代</a>
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="通往财富自由之路" target="_blank">通往财富自由之路</a>
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="把时间当作朋友" target="_blank">把时间当作朋友</a>
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="七年就是一辈子" target="_blank">七年就是一辈子</a>
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="人人都是工程师" target="_blank">人人都是工程师</a>
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="人人都能用英语" target="_blank">人人都能用英语</a>
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
                 </li>
               
             </ul>
@@ -756,7 +764,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#外卖排序系统特征生产框架"><span class="nav-number">1.</span> <span class="nav-text">外卖排序系统特征生产框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li></ol></div>
             
 
           </div>
