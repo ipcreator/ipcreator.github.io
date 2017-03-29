@@ -139,9 +139,9 @@
         <title>Block Canary——Android Performance Monitor</title>
         <pubTime>2017-03-29T08:48:06.000Z</pubTime>
         
-        <tag>Third Library</tag>
-         
         <tag>Block Canary</tag>
+         
+        <tag>Third Library</tag>
          
          
            
@@ -163,13 +163,13 @@
         
         <tag>Investment</tag>
          
+        <tag>Education</tag>
+         
         <tag>AI</tag>
          
         <tag>5G</tag>
          
         <tag>IPR</tag>
-         
-        <tag>Education</tag>
          
          
            
@@ -341,11 +341,11 @@
         <title>Butter Knife——Field and method binding for Android views</title>
         <pubTime>2017-03-29T03:16:06.000Z</pubTime>
         
+        <tag>Third Library</tag>
+         
         <tag>Jake Wharton</tag>
          
         <tag>Butter Knife</tag>
-         
-        <tag>Third Library</tag>
          
          
            
@@ -919,9 +919,9 @@
         <title>Data Novo</title>
         <pubTime>2017-03-21T07:07:18.000Z</pubTime>
         
-        <tag>Patent</tag>
-         
         <tag>Data Novo</tag>
+         
+        <tag>Patent</tag>
          
          
            
@@ -991,9 +991,9 @@
         <title>Some Good Learning Habits from Liu Weipeng</title>
         <pubTime>2017-03-22T05:42:06.000Z</pubTime>
         
-        <tag>Habit</tag>
-         
         <tag>Share</tag>
+         
+        <tag>Habit</tag>
          
         <tag>Liu Weipeng</tag>
          
@@ -1455,9 +1455,9 @@
         <title>White Paper of Machine Learning of Google</title>
         <pubTime>2017-02-19T15:57:00.000Z</pubTime>
         
-        <tag>Google</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>Google</tag>
          
         <tag>White Paper</tag>
          
@@ -1957,15 +1957,15 @@
         
         <tag>Tensorflow</tag>
          
+        <tag>CNTK</tag>
+         
+        <tag>MXNet</tag>
+         
         <tag>DeepMind Lab</tag>
          
         <tag>Universe</tag>
          
         <tag>FastText</tag>
-         
-        <tag>CNTK</tag>
-         
-        <tag>MXNet</tag>
          
         <tag>SystemML</tag>
          
@@ -2171,9 +2171,9 @@
         <title>Supercharging Android Apps with TensorFlow</title>
         <pubTime>2017-02-17T02:26:06.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Application</tag>
+         
+        <tag>Android</tag>
          
         <tag>Tensorflow</tag>
          
@@ -2800,9 +2800,9 @@
         <title>AI on Earphone</title>
         <pubTime>2017-02-13T06:21:06.000Z</pubTime>
         
-        <tag>Application</tag>
-         
         <tag>Earphone</tag>
+         
+        <tag>Application</tag>
          
          
            
@@ -2822,9 +2822,9 @@
         <title>AI on Terminal of Google</title>
         <pubTime>2017-02-19T15:59:56.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Google</tag>
+         
+        <tag>Android</tag>
          
         <tag>Wear</tag>
          
@@ -2846,9 +2846,9 @@
         <title>Machine Learning</title>
         <pubTime>2017-03-27T01:58:06.000Z</pubTime>
         
-        <tag>Basic Concept</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>Basic Concept</tag>
          
          
            
@@ -2868,9 +2868,9 @@
         <title>Clean Data and Remark Features in Meituan</title>
         <pubTime>2017-02-26T14:24:06.000Z</pubTime>
         
-        <tag>Meituan</tag>
-         
         <tag>Application</tag>
+         
+        <tag>Meituan</tag>
          
         <tag>Deep Learning</tag>
          
@@ -2892,9 +2892,9 @@
         <title>Deep Learning in Meituan</title>
         <pubTime>2017-02-26T13:56:06.000Z</pubTime>
         
-        <tag>Meituan</tag>
-         
         <tag>Application</tag>
+         
+        <tag>Meituan</tag>
          
         <tag>Deep Learning</tag>
          
@@ -2916,9 +2916,9 @@
         <title>Examples of Machine Learning in Meituan</title>
         <pubTime>2017-02-26T14:34:06.000Z</pubTime>
         
-        <tag>Meituan</tag>
-         
         <tag>Application</tag>
+         
+        <tag>Meituan</tag>
          
         <tag>Deep Learning</tag>
          
@@ -2940,9 +2940,9 @@
         <title>Online Learning Algorithm Theory and Practice</title>
         <pubTime>2017-02-26T14:13:06.000Z</pubTime>
         
-        <tag>Meituan</tag>
-         
         <tag>Application</tag>
+         
+        <tag>Meituan</tag>
          
         <tag>Deep Learning</tag>
          
@@ -2968,9 +2968,9 @@
         <title>Framework of Getting Features in Meituan</title>
         <pubTime>2017-02-26T14:04:06.000Z</pubTime>
         
-        <tag>Meituan</tag>
-         
         <tag>Application</tag>
+         
+        <tag>Meituan</tag>
          
         <tag>Deep Learning</tag>
          
@@ -2996,9 +2996,9 @@
         <title>Deep FFM Theory and Practice in Meituan</title>
         <pubTime>2017-02-26T14:20:06.000Z</pubTime>
         
-        <tag>Meituan</tag>
-         
         <tag>Application</tag>
+         
+        <tag>Meituan</tag>
          
         <tag>Deep Learning</tag>
          
@@ -3195,30 +3195,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    <data>
-        <display>
-        <title>Base of Multimedia——Picture</title>
-        <pubTime>2017-02-27T03:04:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Picture</tag>
-         
-        <tag>Multimedia</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
@@ -3241,18 +3217,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
         <display>
-        <title>File System of Linux</title>
-        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
+        <title>Base of Multimedia——Picture</title>
+        <pubTime>2017-02-27T03:04:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Linux</tag>
+        <tag>Picture</tag>
          
-        <tag>File System</tag>
+        <tag>Multimedia</tag>
          
          
            
@@ -3289,21 +3265,23 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>AI vs Machine Learning</title>
-        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
+        <title>File System of Linux</title>
+        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Machine Learning</tag>
+        <tag>Linux</tag>
+         
+        <tag>File System</tag>
          
          
            
              
-              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
           
         </display>
     </data>
@@ -3328,6 +3306,28 @@
            
              
               <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>AI vs Machine Learning</title>
+        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
+        
+        <tag>Machine Learning</tag>
+         
+        <tag>Basic Concept</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
           
         </display>
     </data>
@@ -4458,11 +4458,11 @@
         
         <tag>Tensorflow</tag>
          
+        <tag>Caffe</tag>
+         
         <tag>CNTK</tag>
          
         <tag>MXNet</tag>
-         
-        <tag>Caffe</tag>
          
         <tag>Torch</tag>
          
@@ -4574,11 +4574,11 @@
         <title>Regular Expression of C++、Java、JavaScript</title>
         <pubTime>2017-03-13T12:08:06.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>Java</tag>
          
         <tag>C++</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>Regular Expression</tag>
          

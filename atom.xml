@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>IPCreator</title>
+  <title>For life</title>
   <subtitle>Growing up is the only password.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -9,7 +9,7 @@
   <id>http://ipcreator.me/</id>
   
   <author>
-    <name>For life</name>
+    <name>IPCreator</name>
     
   </author>
   
@@ -113,9 +113,9 @@
       <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
     
     
-      <category term="Third Library" scheme="http://ipcreator.me/tags/Third-Library/"/>
-    
       <category term="Block Canary" scheme="http://ipcreator.me/tags/Block-Canary/"/>
+    
+      <category term="Third Library" scheme="http://ipcreator.me/tags/Third-Library/"/>
     
   </entry>
   
@@ -271,45 +271,11 @@
       <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
     
     
+      <category term="Third Library" scheme="http://ipcreator.me/tags/Third-Library/"/>
+    
       <category term="Jake Wharton" scheme="http://ipcreator.me/tags/Jake-Wharton/"/>
     
       <category term="Butter Knife" scheme="http://ipcreator.me/tags/Butter-Knife/"/>
-    
-      <category term="Third Library" scheme="http://ipcreator.me/tags/Third-Library/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Why I Insist on Writing Blog</title>
-    <link href="http://ipcreator.me/2017/03/29/MyView/Original/why-i-write-blog/"/>
-    <id>http://ipcreator.me/2017/03/29/MyView/Original/why-i-write-blog/</id>
-    <published>2017-03-29T01:19:06.000Z</published>
-    <updated>2017-03-29T09:11:38.933Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/blog.jpg" alt=""></p>
-<blockquote>
-<p>Improving your  ability of deep thinking by writing<br>Record your  learning and growing up<br>Gain new insights through reviewing old materials<br>Force myself to Using English</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="For-Yourself"><a href="#For-Yourself" class="headerlink" title="For Yourself"></a>For Yourself</h2><h2 id="Share-for-Others"><a href="#Share-for-Others" class="headerlink" title="Share for Others"></a>Share for Others</h2><h2 id="Other-people"><a href="#Other-people" class="headerlink" title="Other people"></a>Other people</h2><h3 id="计算机从业者的技术成长学习之路"><a href="#计算机从业者的技术成长学习之路" class="headerlink" title="计算机从业者的技术成长学习之路"></a><a href="http://blog.zhaiyifan.cn/2016/04/28/about-learning/" target="_blank" rel="external">计算机从业者的技术成长学习之路</a></h3><blockquote>
-<p>写博客是为了什么？<br>至少对我来说，写下的东西更多是对自己的一个总结和交待。如果我能写下来，至少能证明我有信心自己确实是这么去理解的，没有去坑人。另外，姑且也算是一种成长的足迹吧，偶尔自己还会去看看笔记。<br>分享也是目的之一，希望大家能互相进步，这样才能促进发展。<br>写博客也好，写一些笔记也好，点点滴滴也是对自己的一种整理。</p>
-</blockquote>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="http://blog.zhaiyifan.cn/2016/04/28/about-learning/" target="_blank" rel="external">计算机从业者的技术成长学习之路</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/blog.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Improving your  ability of deep thinking by writing&lt;br&gt;Record your  learning and growing up&lt;br&gt;Gain new insights through reviewing old materials&lt;br&gt;Force myself to Using English&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
-    
-    
-      <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
     
   </entry>
   
@@ -349,6 +315,40 @@
       &lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/Learn-English.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Using  is the only and the best way of learning English.&lt;br&gt;Program skills depend  on English.&lt;br&gt;You can appreciate and taste more precious beauty things , such as great mind, good books, fabulous music, touching movies…&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
+    
+    
+      <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Why I Insist on Writing Blog</title>
+    <link href="http://ipcreator.me/2017/03/29/MyView/Original/why-i-write-blog/"/>
+    <id>http://ipcreator.me/2017/03/29/MyView/Original/why-i-write-blog/</id>
+    <published>2017-03-29T01:19:06.000Z</published>
+    <updated>2017-03-29T09:11:38.933Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/blog.jpg" alt=""></p>
+<blockquote>
+<p>Improving your  ability of deep thinking by writing<br>Record your  learning and growing up<br>Gain new insights through reviewing old materials<br>Force myself to Using English</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="For-Yourself"><a href="#For-Yourself" class="headerlink" title="For Yourself"></a>For Yourself</h2><h2 id="Share-for-Others"><a href="#Share-for-Others" class="headerlink" title="Share for Others"></a>Share for Others</h2><h2 id="Other-people"><a href="#Other-people" class="headerlink" title="Other people"></a>Other people</h2><h3 id="计算机从业者的技术成长学习之路"><a href="#计算机从业者的技术成长学习之路" class="headerlink" title="计算机从业者的技术成长学习之路"></a><a href="http://blog.zhaiyifan.cn/2016/04/28/about-learning/" target="_blank" rel="external">计算机从业者的技术成长学习之路</a></h3><blockquote>
+<p>写博客是为了什么？<br>至少对我来说，写下的东西更多是对自己的一个总结和交待。如果我能写下来，至少能证明我有信心自己确实是这么去理解的，没有去坑人。另外，姑且也算是一种成长的足迹吧，偶尔自己还会去看看笔记。<br>分享也是目的之一，希望大家能互相进步，这样才能促进发展。<br>写博客也好，写一些笔记也好，点点滴滴也是对自己的一种整理。</p>
+</blockquote>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="http://blog.zhaiyifan.cn/2016/04/28/about-learning/" target="_blank" rel="external">计算机从业者的技术成长学习之路</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/blog.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Improving your  ability of deep thinking by writing&lt;br&gt;Record your  learning and growing up&lt;br&gt;Gain new insights through reviewing old materials&lt;br&gt;Force myself to Using English&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -495,6 +495,73 @@
   </entry>
   
   <entry>
+    <title>The Legend of 1900</title>
+    <link href="http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/"/>
+    <id>http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/</id>
+    <published>2017-03-28T11:38:18.000Z</published>
+    <updated>2017-03-29T04:18:01.307Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p><strong>Make you cry，laugh  touching and thinking</strong><br>Crying for  his loneliness and ending of  the story.<br>Touching by the wonderful melody.<br>Laughing for those humor lines.<br>Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?</p>
+</blockquote>
+<p><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp" alt=""></p>
+<a id="more"></a>
+<p>导演: 朱塞佩·托纳多雷<br>编剧: 亚利桑德罗·巴里克 / 朱塞佩·托纳多雷<br>主演: 蒂姆·罗斯 / 普路特·泰勒·文斯 / 比尔·努恩 / 梅兰尼·蒂埃里 / 阿尔贝托·巴斯克斯<br>类型: 剧情 / 音乐<br>制片国家/地区: 意大利<br>语言: 英语 / 法语<br>上映日期: 1998-10-28(意大利)<br>片长: 165分钟 / 120分钟(法国版) / 169分钟(加长版)<br>又名: 声光伴我飞(港) / 一九零零的传奇 / 1900海上钢琴师 / 传奇1900 / The Legend of 1900<br>IMDb链接: <a href="http://www.imdb.com/title/tt0120731" target="_blank" rel="external">tt0120731</a></p>
+<p>本片讲述了一个钢琴天才传奇的一生。</p>
+<p>　　1900年，Virginian号豪华邮轮上，一个孤儿被遗弃在头等舱，由船上的水手抚养长大，取名1900（蒂姆•罗斯 饰）。1900慢慢长大，显示出了无师自通的非凡钢琴天赋，在船上的乐队表演钢琴，每个听过他演奏的人，都被深深打动。爵士 乐鼻祖杰尼听说了1900的高超技艺，专门上船和他比赛，最后自叹弗如，黯然离去。<br>　　可惜，这一切的事情都发生在海上，1900从来不愿踏上陆地，直到有一天，他爱上了一个女孩，情愫在琴键上流淌。他会不会为了爱情，踏上陆地开始新的生活，用他的琴声惊艳世界？他将怎样谱写自己非凡的人生。 ©豆瓣</p>
+<h2 id="大人者，不失其赤子之心者也"><a href="#大人者，不失其赤子之心者也" class="headerlink" title="大人者，不失其赤子之心者也"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">大人者，不失其赤子之心者也</a></h2><p>市侩们总是抱着捧杀的态度来看待天才的，这也无足多怪。重要的是，天才如何看待自己的选择。</p>
+<p>许多人把实现自我价值同“功成名就”和“飞黄腾达”联系在一起，其中不乏某些天才。他们为此奋斗一生，也许终能得偿所愿。然而，功成名就之后呢？罗马帝国的战胜者凯旋时，一个奴隶会在他耳边轻轻私语：“一切荣华富贵，都是过眼烟云！”这道出了所有成功者风光无限的背后那不为人知的空虚——曾经追求的，固然已经得到，现在拥有的，也将归于破灭。其中的幸运者，还能像张翰那样“人生贵得适意尔，何能羁宦数千里以要名爵!”全身而退；不幸者，恐怕只能哀叹“吾欲与若复牵黄犬俱出上蔡东门逐狡兔，岂可得乎！”人生的荣辱，不过是一个围城。城里的人想冲出去，城外的人想冲进来。待到一切荣光都已失去，他们还会为当初的选择而感到骄傲，抑或后悔吗？</p>
+<blockquote>
+<p>“你知道琴上88个键一个不多一个也不少，琴键是有限的，但你是无限的，在这些键上所能创造出来的音乐，那才是无限的，这个我喜欢，也是我愿意做的，但是在舷梯上，摆在我面前的琴键有成千上万，永远也数不完的琴键”，“而在这个无限大的键盘上，你根本就无法去演奏”，“天呐，你没有看见那些街道吗？有上千条！你怎么去选择那一个？”。窝囊废似的一番话，彻底关死了1900通往成功与显赫的道路。似乎很难想象这样一个才华横溢的人会选择一条破船作为归宿，甚至宁愿最终被几吨炸药所终结。其实，1900是幸运的，他不入围城，自觉放弃未来的诱惑与烦嚣，换来对已经拥有的执着与坚守。也就无怨无悔，虽死何憾？老子云：知其雄 ，守其雌 ，为天下溪。为天下溪 常德不离 复归於婴儿。想必直到生命终结的那一刻，1900依然可以骄傲地宣称：“大人者，不失其赤子之心者也。”</p>
+</blockquote>
+<h2 id="俗人理解不了的幸福"><a href="#俗人理解不了的幸福" class="headerlink" title="俗人理解不了的幸福"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">俗人理解不了的幸福</a></h2><p>大概只有小号手是愿意聆听1900的内心而非琴声的人，他不理解他，但是他尊重他。他用尊重成全了1900完整的独立。我看到有人说如果他是那胖子他就会把1900敲昏然后拖下船。我想这样的想法也就注定他成不了那个胖子，成不了1900唯一的真正的朋友。</p>
+<p>如果我们较真一点，假设小号手真的把1900弄下船了，故事将怎样延伸？我们都知道，落魄的小号手没有能力去为朋友找一艘新的船，找88个琴键和尽头。1900将无可避免被磨去棱角和平庸，落入红尘变成一个凡人。</p>
+<p>活着，还是活得安心。这也是个问题。凡人的选择是无论如何先活下去再说，”活着”这件事情本身比什么都重要。而天才则把心灵的舒适看得更重，生死则次之。所以凡人可以忍辱，天才却情愿玉碎。每一种人都获得了他最看重的东西，说起来谁也不比谁亏。</p>
+<p>差异导致孤独。葆存了差异性的ET在承受异样目光的同时也承受着巨大的孤独，远超出凡人的孤独。凡人们如我们虽然也还都残留一些差异，但大致面貌八九不离十。我们失恋了后觉得痛苦比谁的都大，我们拥抱心爱的人自认比谁都幸福。但一个残酷的事实是：每个人的痛苦和幸福都没什么区别。我们在不断重复，千篇一律。</p>
+<p>我们丢了个性却换来了共鸣。我们借助艺术寻找通感，在人性中相交叉的部分，抹着眼泪互相慰藉，或者说，互相平衡（原来有人比我还惨啊，这下心里舒坦多了）。而被称为天才的人站在人群之外，忧郁地注视这群有些像他又不是他的物种。用他们ET的本能将那些交叉部分，提炼、放大、直抵内心。那些永远无法交叉的部分，则作为孤独的源头，令他们永远无法融入人群。他们只有躲在自己的轮船里，躲在自己的内心世界里，孤独地活着，然后死去。</p>
+<h2 id="我们无处安放的孤独"><a href="#我们无处安放的孤独" class="headerlink" title="我们无处安放的孤独"></a><a href="https://movie.douban.com/review/1316127/" target="_blank" rel="external">我们无处安放的孤独</a></h2><p>我一直觉得1900的一生是存在主义思想的体现，他藐视规则，藐视这个社会认可的规则，他害怕上岸其实是拒绝上岸，藐视上岸。他重自身的存在大于外界对自身的认可，他可以轻易打败爵士乐的开山祖师并对他表示鄙夷，他可以靠他的才华赚取无数的名利但是他拒绝音乐与自身的分离，他可以用音乐去探究所有人的心灵，可以在音乐里去旅行，可以寻觅到自己的爱情，但是他没有常人那样去要去追，他轻轻地将这些丢进了大海，他将迈向陆地的脚收回。</p>
+<p>在存在主义者看来，人生活在一个与自己对立的、失望的世界之中，人在世界上的地位是不确定的。绝对自由的人也是烦恼和无所依靠的孤独者。人虽然有选择的自由，但他面对的未来的生活却是混沌而没有目标的。他只是盲目地走向未来，他只知道人生的真实的终结就是死亡。死亡作为人生的最后归宿，对于个人的存在具有非常重要的意义。 所以存在主义者都是悲观者，在他们眼里，人生是一场悲剧。</p>
+<blockquote>
+<p>“城市那么大，看不到尽头，我停下来不是因为所见是因为所不见，是因为看不见的东西。连绵不绝的城市什么都有，就是没有尽头，我需要看见世界的尽头。上了岸，何去何从？爱一个女人，住一间屋，买一块地，望一个景，走一条死路，太多的选择我无所适从。漫漫无尽，思前想后你不怕精神崩溃？那样的日子怎样过？我无法遗弃这艘船，宁可遗弃自己的生命。”</p>
+</blockquote>
+<p>后来我才知道生活的大多数时候其实是孤独的，是我们心里无处安放的孤独，不被这个世界所认可的孤独。1900是孤独的，所以他选择一辈子不上岸，和那座海上浮城共生共死，而我们呢？我们没有一座属于自己的城，让我们来安放我们的孤独，让我们来逃避自己不喜欢的一切，所以我们比1900更孤独更可怜。</p>
+<h2 id="微尘世界，我们都已是最好的钢琴手。"><a href="#微尘世界，我们都已是最好的钢琴手。" class="headerlink" title="微尘世界，我们都已是最好的钢琴手。"></a><a href="https://movie.douban.com/review/1971957/" target="_blank" rel="external">微尘世界，我们都已是最好的钢琴手。</a></h2><p>1900代表着一种理想，代表着这个尘世中的多数人，注定不会付诸行动，却会始终心怀向往的理想。矗立在那里，自由，决绝，而悲伤。</p>
+<p>我们是生活在“外面的世界”里的人。这个世界的意义在于“传承”。就像一个游戏，每个人都是其中的玩家，然而获得的任务，却是如何使这个游戏永远存在。赡养父母，繁衍后代，诸多必须背负的责任令前行显得缓慢而艰难。然而我们的人生对于整个游戏而言，存在的时间或许只有一秒，或者更短。也唯有越短暂，这个游戏的运行时间才会越长，才有可能，“永不结束”。<br>这样一想会不会又心有不甘呢？辛苦奋斗的一生，其实不过一粒微尘，轻得仿佛随时都会消失。<br>然而在闭上眼的那一瞬还会不会含笑着想起，自己的孩子在不久前，正带领他们的孩子在绿草地上放起风筝；会不会含笑着想起，自己曾拥有良人在侧，从此不再无枝可依；会不会含笑着想起更久远的从前，父母曾令你无忧无虑，而那些萌生的小情绪，或许唯有感慨地大笑出声，无奈地摇摇头，道一句，那时真小。<br>会不会想起那些温暖的片段，想起自己曾经的付出与所得，带着回望的沧桑，感怀，和崭新的希望。<br>　　　　<br>我们为什么不会像1900一样，选择在漫天火光中永沉海底。这样壮烈，却获得永生的自由？</p>
+<blockquote>
+<p>因为，因为我们一直生活在这个“外面的世界”，清楚地看见它的混乱，却因为某一瞬间体验到的那些温情，那些无以伦比的美好，而心甘情愿地忍受着它所给予的伤害，努力弹奏出最华美的人生乐章。</p>
+</blockquote>
+<p>我们或许从来都不是天才，但是我们至少能做到勤恳、踏实。我们从坚硬和纯白开始，学会圆滑，学会世故，但内心深处，终究会一直记得，这一生所做的种种妥协，不过是为了在这个微尘世界，在这架上帝给予的钢琴上，创作出独属于自己的旋律与琴音。</p>
+<h2 id="我们都是宅男"><a href="#我们都是宅男" class="headerlink" title="我们都是宅男"></a><a href="https://movie.douban.com/review/1238757/" target="_blank" rel="external">我们都是宅男</a></h2><p>我们或许没有《海上钢琴师》中的1900看的更加清楚，他一生生活在邮轮上，他不愿离开一个让他感到安定自由、无忧无虑的空间，他永远没有踏上陆地，开启他的“远大前程”，在我们看来，他是自闭的，但是，他也是最清醒的，在最后无比绚烂的死亡中，他走的孤独而坦然。</p>
+<p>和1900对无限的恐惧相反，现代人正是在追逐着无限，我们贪大，贪全，贪广，房子要住大的，哪怕被每月的房贷压的生活质量下降；交际圈要交广些，哪怕每天疲于奔命于并不让自己愉快的应酬；旅游要走遍世界，哪怕其实只是疲惫的赶着在一个又一个景点的人群中拍照；炒股也有“不涨到翻倍不痛快”，哪怕每天被指数折磨的大喜大悲。还是看看这个“宅男”1900，反观自己，其实我们都是宅男，我们都是在自己营造的世界里生活，我们总有个无形或有形的圈子，但是似乎“开疆扩土”是人的本能，我们总是希望这个世界更大些，更广些。其实，并不是因为你走遍了这个城市的大街小巷，你的世界便扩展到了整个城市，哪怕真的这样，你也只是有了个城市这样一个更大的宅子。所以，1900不贪求太多，他一生都在一艘船上生活，这是有限的；但是他一生都有音乐相伴快乐的生活，这是无限的，快乐而自在的生活才是无限的。正如我们拼命拓展的交际网永远是有限的，但是和其中几个真正的知己在一起的快乐才是无限的。</p>
+<p>1900在邮轮上有自己的快乐，也伴随着一些悲伤，但是，快乐从来不是仅仅以空间的广度来评判的，就如你有一笔钱，可以买大房子简装修，也可以买小房子按照自己的意愿精装修（当然，精装修的意义不是买一堆豪华家俱的堆砌）。1900选择在一个相对狭小的世界里精心构筑他的世界，安逸而愉快。而在我们看来，这样的小小的快乐永远是“有病”的，就如我们如果看到一个人沉溺于数学而废寝忘食，会认为他是一个科学怪人，为他随时可能的英年早逝而悲哀；如果看到一个人长期执着的在农村搞什么社会试验而履受挫折，会认为他是一个理想主义者，为他干些“不实际”的事情而悲哀。诸如此类的事情还有很多，我们总是很自恋，常常看到他人沉浸于一些比较“独特”的事物而不问世事而感到“悲哀”，而对他们表示不解和“同情”，特别当这些人甚至为之折寿或是如1900那样“找死”后，更是如此。其实，生活方式本来没有定义，其实想想，1900在一艘船上就活的那么滋润，一些人一天到晚在屋子里闷头看武侠小说、漫画书就那么快活，我们这些号称精神健康，性格乐观的人却常常无名的不停唠叨“真郁闷”，这时的我们是不是会突然感到一丝沮丧，而对宅男们有些羡慕，同时意识到，其实我们都不过是在自己的世界里有喜有乐的宅男。</p>
+<h2 id="漂流在大海上的音乐浮城"><a href="#漂流在大海上的音乐浮城" class="headerlink" title="漂流在大海上的音乐浮城"></a><a href="https://movie.douban.com/review/1000830/" target="_blank" rel="external">漂流在大海上的音乐浮城</a></h2><p>对于1900而言，音乐，是用来娱乐自己的——他永远为了自己而弹奏着，永远不让自己的音乐和自己分离。</p>
+<p>1900的存在很特别么？未必，他的生命因为没有踏足过真实世界而显得尤为纯净和清澈，甚至纯净和清澈得不能够生活在这个真实的现实世界里。最适宜他生活的地方，是Virginian，一个漂浮在海上的乌托邦，一个能够让1900这样纯粹且单纯的音乐圣徒栖息的地方。他不能，也不应该走进我们的世界，我们的世界对于1900而言，太肮脏，太复杂了。</p>
+<p>究竟是1900把自己禁锢在狭小的空间里了，还是我们让陆地桎梏了我们自身？城市里有着成千的街道，我们迷失于其中，看不到天的尽头，而大海以其广博的胸襟，容忍并珍藏了1900这个特异的存在，也甚至是因为大海的广博，1900看到了世界的尽头。</p>
+<blockquote>
+<p>当影片行进到最后，Max问及1900为何不愿意离开Virginian的那一瞬间，我们就不难理解1900的答案了——琴键太大，音乐无从而生；城市太大，我们无从而生……</p>
+</blockquote>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1]<a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">海上钢琴师 La leggenda del pianista sull’oceano (1998)</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Make you cry，laugh  touching and thinking&lt;/strong&gt;&lt;br&gt;Crying for  his loneliness and ending of  the story.&lt;br&gt;Touching by the wonderful melody.&lt;br&gt;Laughing for those humor lines.&lt;br&gt;Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
+    
+    
+      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
+    
+      <category term="Movie" scheme="http://ipcreator.me/tags/Movie/"/>
+    
+  </entry>
+  
+  <entry>
     <title>The Beauty of Life</title>
     <link href="http://ipcreator.me/2017/03/28/MyView/Original/beauty-of-life/"/>
     <id>http://ipcreator.me/2017/03/28/MyView/Original/beauty-of-life/</id>
@@ -635,73 +702,6 @@
     
     
       <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Legend of 1900</title>
-    <link href="http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/"/>
-    <id>http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/</id>
-    <published>2017-03-28T11:38:18.000Z</published>
-    <updated>2017-03-29T04:18:01.307Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p><strong>Make you cry，laugh  touching and thinking</strong><br>Crying for  his loneliness and ending of  the story.<br>Touching by the wonderful melody.<br>Laughing for those humor lines.<br>Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?</p>
-</blockquote>
-<p><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp" alt=""></p>
-<a id="more"></a>
-<p>导演: 朱塞佩·托纳多雷<br>编剧: 亚利桑德罗·巴里克 / 朱塞佩·托纳多雷<br>主演: 蒂姆·罗斯 / 普路特·泰勒·文斯 / 比尔·努恩 / 梅兰尼·蒂埃里 / 阿尔贝托·巴斯克斯<br>类型: 剧情 / 音乐<br>制片国家/地区: 意大利<br>语言: 英语 / 法语<br>上映日期: 1998-10-28(意大利)<br>片长: 165分钟 / 120分钟(法国版) / 169分钟(加长版)<br>又名: 声光伴我飞(港) / 一九零零的传奇 / 1900海上钢琴师 / 传奇1900 / The Legend of 1900<br>IMDb链接: <a href="http://www.imdb.com/title/tt0120731" target="_blank" rel="external">tt0120731</a></p>
-<p>本片讲述了一个钢琴天才传奇的一生。</p>
-<p>　　1900年，Virginian号豪华邮轮上，一个孤儿被遗弃在头等舱，由船上的水手抚养长大，取名1900（蒂姆•罗斯 饰）。1900慢慢长大，显示出了无师自通的非凡钢琴天赋，在船上的乐队表演钢琴，每个听过他演奏的人，都被深深打动。爵士 乐鼻祖杰尼听说了1900的高超技艺，专门上船和他比赛，最后自叹弗如，黯然离去。<br>　　可惜，这一切的事情都发生在海上，1900从来不愿踏上陆地，直到有一天，他爱上了一个女孩，情愫在琴键上流淌。他会不会为了爱情，踏上陆地开始新的生活，用他的琴声惊艳世界？他将怎样谱写自己非凡的人生。 ©豆瓣</p>
-<h2 id="大人者，不失其赤子之心者也"><a href="#大人者，不失其赤子之心者也" class="headerlink" title="大人者，不失其赤子之心者也"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">大人者，不失其赤子之心者也</a></h2><p>市侩们总是抱着捧杀的态度来看待天才的，这也无足多怪。重要的是，天才如何看待自己的选择。</p>
-<p>许多人把实现自我价值同“功成名就”和“飞黄腾达”联系在一起，其中不乏某些天才。他们为此奋斗一生，也许终能得偿所愿。然而，功成名就之后呢？罗马帝国的战胜者凯旋时，一个奴隶会在他耳边轻轻私语：“一切荣华富贵，都是过眼烟云！”这道出了所有成功者风光无限的背后那不为人知的空虚——曾经追求的，固然已经得到，现在拥有的，也将归于破灭。其中的幸运者，还能像张翰那样“人生贵得适意尔，何能羁宦数千里以要名爵!”全身而退；不幸者，恐怕只能哀叹“吾欲与若复牵黄犬俱出上蔡东门逐狡兔，岂可得乎！”人生的荣辱，不过是一个围城。城里的人想冲出去，城外的人想冲进来。待到一切荣光都已失去，他们还会为当初的选择而感到骄傲，抑或后悔吗？</p>
-<blockquote>
-<p>“你知道琴上88个键一个不多一个也不少，琴键是有限的，但你是无限的，在这些键上所能创造出来的音乐，那才是无限的，这个我喜欢，也是我愿意做的，但是在舷梯上，摆在我面前的琴键有成千上万，永远也数不完的琴键”，“而在这个无限大的键盘上，你根本就无法去演奏”，“天呐，你没有看见那些街道吗？有上千条！你怎么去选择那一个？”。窝囊废似的一番话，彻底关死了1900通往成功与显赫的道路。似乎很难想象这样一个才华横溢的人会选择一条破船作为归宿，甚至宁愿最终被几吨炸药所终结。其实，1900是幸运的，他不入围城，自觉放弃未来的诱惑与烦嚣，换来对已经拥有的执着与坚守。也就无怨无悔，虽死何憾？老子云：知其雄 ，守其雌 ，为天下溪。为天下溪 常德不离 复归於婴儿。想必直到生命终结的那一刻，1900依然可以骄傲地宣称：“大人者，不失其赤子之心者也。”</p>
-</blockquote>
-<h2 id="俗人理解不了的幸福"><a href="#俗人理解不了的幸福" class="headerlink" title="俗人理解不了的幸福"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">俗人理解不了的幸福</a></h2><p>大概只有小号手是愿意聆听1900的内心而非琴声的人，他不理解他，但是他尊重他。他用尊重成全了1900完整的独立。我看到有人说如果他是那胖子他就会把1900敲昏然后拖下船。我想这样的想法也就注定他成不了那个胖子，成不了1900唯一的真正的朋友。</p>
-<p>如果我们较真一点，假设小号手真的把1900弄下船了，故事将怎样延伸？我们都知道，落魄的小号手没有能力去为朋友找一艘新的船，找88个琴键和尽头。1900将无可避免被磨去棱角和平庸，落入红尘变成一个凡人。</p>
-<p>活着，还是活得安心。这也是个问题。凡人的选择是无论如何先活下去再说，”活着”这件事情本身比什么都重要。而天才则把心灵的舒适看得更重，生死则次之。所以凡人可以忍辱，天才却情愿玉碎。每一种人都获得了他最看重的东西，说起来谁也不比谁亏。</p>
-<p>差异导致孤独。葆存了差异性的ET在承受异样目光的同时也承受着巨大的孤独，远超出凡人的孤独。凡人们如我们虽然也还都残留一些差异，但大致面貌八九不离十。我们失恋了后觉得痛苦比谁的都大，我们拥抱心爱的人自认比谁都幸福。但一个残酷的事实是：每个人的痛苦和幸福都没什么区别。我们在不断重复，千篇一律。</p>
-<p>我们丢了个性却换来了共鸣。我们借助艺术寻找通感，在人性中相交叉的部分，抹着眼泪互相慰藉，或者说，互相平衡（原来有人比我还惨啊，这下心里舒坦多了）。而被称为天才的人站在人群之外，忧郁地注视这群有些像他又不是他的物种。用他们ET的本能将那些交叉部分，提炼、放大、直抵内心。那些永远无法交叉的部分，则作为孤独的源头，令他们永远无法融入人群。他们只有躲在自己的轮船里，躲在自己的内心世界里，孤独地活着，然后死去。</p>
-<h2 id="我们无处安放的孤独"><a href="#我们无处安放的孤独" class="headerlink" title="我们无处安放的孤独"></a><a href="https://movie.douban.com/review/1316127/" target="_blank" rel="external">我们无处安放的孤独</a></h2><p>我一直觉得1900的一生是存在主义思想的体现，他藐视规则，藐视这个社会认可的规则，他害怕上岸其实是拒绝上岸，藐视上岸。他重自身的存在大于外界对自身的认可，他可以轻易打败爵士乐的开山祖师并对他表示鄙夷，他可以靠他的才华赚取无数的名利但是他拒绝音乐与自身的分离，他可以用音乐去探究所有人的心灵，可以在音乐里去旅行，可以寻觅到自己的爱情，但是他没有常人那样去要去追，他轻轻地将这些丢进了大海，他将迈向陆地的脚收回。</p>
-<p>在存在主义者看来，人生活在一个与自己对立的、失望的世界之中，人在世界上的地位是不确定的。绝对自由的人也是烦恼和无所依靠的孤独者。人虽然有选择的自由，但他面对的未来的生活却是混沌而没有目标的。他只是盲目地走向未来，他只知道人生的真实的终结就是死亡。死亡作为人生的最后归宿，对于个人的存在具有非常重要的意义。 所以存在主义者都是悲观者，在他们眼里，人生是一场悲剧。</p>
-<blockquote>
-<p>“城市那么大，看不到尽头，我停下来不是因为所见是因为所不见，是因为看不见的东西。连绵不绝的城市什么都有，就是没有尽头，我需要看见世界的尽头。上了岸，何去何从？爱一个女人，住一间屋，买一块地，望一个景，走一条死路，太多的选择我无所适从。漫漫无尽，思前想后你不怕精神崩溃？那样的日子怎样过？我无法遗弃这艘船，宁可遗弃自己的生命。”</p>
-</blockquote>
-<p>后来我才知道生活的大多数时候其实是孤独的，是我们心里无处安放的孤独，不被这个世界所认可的孤独。1900是孤独的，所以他选择一辈子不上岸，和那座海上浮城共生共死，而我们呢？我们没有一座属于自己的城，让我们来安放我们的孤独，让我们来逃避自己不喜欢的一切，所以我们比1900更孤独更可怜。</p>
-<h2 id="微尘世界，我们都已是最好的钢琴手。"><a href="#微尘世界，我们都已是最好的钢琴手。" class="headerlink" title="微尘世界，我们都已是最好的钢琴手。"></a><a href="https://movie.douban.com/review/1971957/" target="_blank" rel="external">微尘世界，我们都已是最好的钢琴手。</a></h2><p>1900代表着一种理想，代表着这个尘世中的多数人，注定不会付诸行动，却会始终心怀向往的理想。矗立在那里，自由，决绝，而悲伤。</p>
-<p>我们是生活在“外面的世界”里的人。这个世界的意义在于“传承”。就像一个游戏，每个人都是其中的玩家，然而获得的任务，却是如何使这个游戏永远存在。赡养父母，繁衍后代，诸多必须背负的责任令前行显得缓慢而艰难。然而我们的人生对于整个游戏而言，存在的时间或许只有一秒，或者更短。也唯有越短暂，这个游戏的运行时间才会越长，才有可能，“永不结束”。<br>这样一想会不会又心有不甘呢？辛苦奋斗的一生，其实不过一粒微尘，轻得仿佛随时都会消失。<br>然而在闭上眼的那一瞬还会不会含笑着想起，自己的孩子在不久前，正带领他们的孩子在绿草地上放起风筝；会不会含笑着想起，自己曾拥有良人在侧，从此不再无枝可依；会不会含笑着想起更久远的从前，父母曾令你无忧无虑，而那些萌生的小情绪，或许唯有感慨地大笑出声，无奈地摇摇头，道一句，那时真小。<br>会不会想起那些温暖的片段，想起自己曾经的付出与所得，带着回望的沧桑，感怀，和崭新的希望。<br>　　　　<br>我们为什么不会像1900一样，选择在漫天火光中永沉海底。这样壮烈，却获得永生的自由？</p>
-<blockquote>
-<p>因为，因为我们一直生活在这个“外面的世界”，清楚地看见它的混乱，却因为某一瞬间体验到的那些温情，那些无以伦比的美好，而心甘情愿地忍受着它所给予的伤害，努力弹奏出最华美的人生乐章。</p>
-</blockquote>
-<p>我们或许从来都不是天才，但是我们至少能做到勤恳、踏实。我们从坚硬和纯白开始，学会圆滑，学会世故，但内心深处，终究会一直记得，这一生所做的种种妥协，不过是为了在这个微尘世界，在这架上帝给予的钢琴上，创作出独属于自己的旋律与琴音。</p>
-<h2 id="我们都是宅男"><a href="#我们都是宅男" class="headerlink" title="我们都是宅男"></a><a href="https://movie.douban.com/review/1238757/" target="_blank" rel="external">我们都是宅男</a></h2><p>我们或许没有《海上钢琴师》中的1900看的更加清楚，他一生生活在邮轮上，他不愿离开一个让他感到安定自由、无忧无虑的空间，他永远没有踏上陆地，开启他的“远大前程”，在我们看来，他是自闭的，但是，他也是最清醒的，在最后无比绚烂的死亡中，他走的孤独而坦然。</p>
-<p>和1900对无限的恐惧相反，现代人正是在追逐着无限，我们贪大，贪全，贪广，房子要住大的，哪怕被每月的房贷压的生活质量下降；交际圈要交广些，哪怕每天疲于奔命于并不让自己愉快的应酬；旅游要走遍世界，哪怕其实只是疲惫的赶着在一个又一个景点的人群中拍照；炒股也有“不涨到翻倍不痛快”，哪怕每天被指数折磨的大喜大悲。还是看看这个“宅男”1900，反观自己，其实我们都是宅男，我们都是在自己营造的世界里生活，我们总有个无形或有形的圈子，但是似乎“开疆扩土”是人的本能，我们总是希望这个世界更大些，更广些。其实，并不是因为你走遍了这个城市的大街小巷，你的世界便扩展到了整个城市，哪怕真的这样，你也只是有了个城市这样一个更大的宅子。所以，1900不贪求太多，他一生都在一艘船上生活，这是有限的；但是他一生都有音乐相伴快乐的生活，这是无限的，快乐而自在的生活才是无限的。正如我们拼命拓展的交际网永远是有限的，但是和其中几个真正的知己在一起的快乐才是无限的。</p>
-<p>1900在邮轮上有自己的快乐，也伴随着一些悲伤，但是，快乐从来不是仅仅以空间的广度来评判的，就如你有一笔钱，可以买大房子简装修，也可以买小房子按照自己的意愿精装修（当然，精装修的意义不是买一堆豪华家俱的堆砌）。1900选择在一个相对狭小的世界里精心构筑他的世界，安逸而愉快。而在我们看来，这样的小小的快乐永远是“有病”的，就如我们如果看到一个人沉溺于数学而废寝忘食，会认为他是一个科学怪人，为他随时可能的英年早逝而悲哀；如果看到一个人长期执着的在农村搞什么社会试验而履受挫折，会认为他是一个理想主义者，为他干些“不实际”的事情而悲哀。诸如此类的事情还有很多，我们总是很自恋，常常看到他人沉浸于一些比较“独特”的事物而不问世事而感到“悲哀”，而对他们表示不解和“同情”，特别当这些人甚至为之折寿或是如1900那样“找死”后，更是如此。其实，生活方式本来没有定义，其实想想，1900在一艘船上就活的那么滋润，一些人一天到晚在屋子里闷头看武侠小说、漫画书就那么快活，我们这些号称精神健康，性格乐观的人却常常无名的不停唠叨“真郁闷”，这时的我们是不是会突然感到一丝沮丧，而对宅男们有些羡慕，同时意识到，其实我们都不过是在自己的世界里有喜有乐的宅男。</p>
-<h2 id="漂流在大海上的音乐浮城"><a href="#漂流在大海上的音乐浮城" class="headerlink" title="漂流在大海上的音乐浮城"></a><a href="https://movie.douban.com/review/1000830/" target="_blank" rel="external">漂流在大海上的音乐浮城</a></h2><p>对于1900而言，音乐，是用来娱乐自己的——他永远为了自己而弹奏着，永远不让自己的音乐和自己分离。</p>
-<p>1900的存在很特别么？未必，他的生命因为没有踏足过真实世界而显得尤为纯净和清澈，甚至纯净和清澈得不能够生活在这个真实的现实世界里。最适宜他生活的地方，是Virginian，一个漂浮在海上的乌托邦，一个能够让1900这样纯粹且单纯的音乐圣徒栖息的地方。他不能，也不应该走进我们的世界，我们的世界对于1900而言，太肮脏，太复杂了。</p>
-<p>究竟是1900把自己禁锢在狭小的空间里了，还是我们让陆地桎梏了我们自身？城市里有着成千的街道，我们迷失于其中，看不到天的尽头，而大海以其广博的胸襟，容忍并珍藏了1900这个特异的存在，也甚至是因为大海的广博，1900看到了世界的尽头。</p>
-<blockquote>
-<p>当影片行进到最后，Max问及1900为何不愿意离开Virginian的那一瞬间，我们就不难理解1900的答案了——琴键太大，音乐无从而生；城市太大，我们无从而生……</p>
-</blockquote>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1]<a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">海上钢琴师 La leggenda del pianista sull’oceano (1998)</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Make you cry，laugh  touching and thinking&lt;/strong&gt;&lt;br&gt;Crying for  his loneliness and ending of  the story.&lt;br&gt;Touching by the wonderful melody.&lt;br&gt;Laughing for those humor lines.&lt;br&gt;Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
-    
-    
-      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
-    
-      <category term="Movie" scheme="http://ipcreator.me/tags/Movie/"/>
     
   </entry>
   
@@ -1169,56 +1169,6 @@
   </entry>
   
   <entry>
-    <title>Machine Learning</title>
-    <link href="http://ipcreator.me/2017/03/27/BusinessAI/concept-of-machine-learning/"/>
-    <id>http://ipcreator.me/2017/03/27/BusinessAI/concept-of-machine-learning/</id>
-    <published>2017-03-27T01:58:06.000Z</published>
-    <updated>2017-03-27T09:06:23.123Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/330px-Hopfield-net.png" alt=""></p>
-<p>机器学习是人工智能的一个分支。人工智能的研究是从以“推理”为重点到以“知识”为重点，再到以“学习”为重点，一条自然、清晰的脉络。</p>
-<p>机器学习是实现人工智能的一个途径，即以机器学习为手段解决人工智能中的问题。机器学习在近30多年已发展为一门多领域交叉学科，涉及概率论、统计学、逼近论、凸分析、计算复杂性理论等多门学科。</p>
-<p>机器学习理论主要是设计和分析一些让计算机可以自动“学习”的算法。机器学习算法是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。因为学习算法中涉及了大量的统计学理论，机器学习与推断统计学联系尤为密切，也被称为统计学习理论。</p>
-<a id="more"></a>
-<h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h1><p>机器学习是人工智能的一个分支。人工智能的研究是从以“推理”为重点到以“知识”为重点，再到以“学习”为重点，一条自然、清晰的脉络。显然，机器学习是实现人工智能的一个途径，即以机器学习为手段解决人工智能中的问题。机器学习在近30多年已发展为一门多领域交叉学科，涉及概率论、统计学、逼近论、凸分析、计算复杂性理论等多门学科。机器学习理论主要是设计和分析一些让计算机可以自动“学习”的算法。机器学习算法是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。因为学习算法中涉及了大量的统计学理论，机器学习与推断统计学联系尤为密切，也被称为统计学习理论。算法设计方面，机器学习理论关注可以实现的，行之有效的学习算法。很多推论问题属于无程序可循难度，所以部分的机器学习研究是开发容易处理的近似算法。</p>
-<p>机器学习已广泛应用于数据挖掘、计算机视觉、自然语言处理、生物特征识别、搜索引擎、医学诊断、检测信用卡欺诈、证券市场分析、DNA序列测序、语音和手写识别、战略游戏和机器人等领域。</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>机器学习有下面几种定义：<br>机器学习是一门人工智能的科学，该领域的主要研究对象是人工智能，特别是如何在经验学习中改善具体算法的性能。<br>机器学习是对能通过经验自动改进的计算机算法的研究。<br>机器学习是用数据或以往的经验，以此优化计算机程序的性能标准。<br>一种经常引用的英文定义是：</p>
-<blockquote>
-<p>A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.</p>
-</blockquote>
-<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>机器学习可以分成下面几种类别：</p>
-<h3 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h3><p>从给定的训练数据集中学习出一个函数，当新的数据到来时，可以根据这个函数预测结果。监督学习的训练集要求是包括输入和输出，也可以说是特征和目标。训练集中的目标是由人标注的。常见的监督学习算法包括回归分析和统计分类。</p>
-<h3 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h3><p>与监督学习相比，训练集没有人为标注的结果。常见的无监督学习算法有聚类。</p>
-<h3 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h3><p>介于监督学习与无监督学习之间。</p>
-<h3 id="增强学习"><a href="#增强学习" class="headerlink" title="增强学习"></a>增强学习</h3><p>通过观察来学习做成如何的动作。每个动作都会对环境有所影响，学习对象根据观察到的周围环境的反馈来做出判断。</p>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>具体的机器学习算法有：</p>
-<h3 id="构造间隔理论分布：聚类分析和模式识别"><a href="#构造间隔理论分布：聚类分析和模式识别" class="headerlink" title="构造间隔理论分布：聚类分析和模式识别"></a>构造间隔理论分布：聚类分析和模式识别</h3><p>人工神经网络<br>决策树<br>感知器<br>支持向量机<br>集成学习AdaBoost<br>降维与度量学习<br>聚类<br>贝叶斯分类器</p>
-<h3 id="构造条件概率：回归分析和统计分类"><a href="#构造条件概率：回归分析和统计分类" class="headerlink" title="构造条件概率：回归分析和统计分类"></a>构造条件概率：回归分析和统计分类</h3><p>高斯过程回归<br>线性判别分析<br>最近邻居法<br>径向基函数核</p>
-<h3 id="通过再生模型构造概率密度函数"><a href="#通过再生模型构造概率密度函数" class="headerlink" title="通过再生模型构造概率密度函数"></a>通过再生模型构造概率密度函数</h3><p>最大期望算法<br>概率图模型：包括贝叶斯网和Markov随机场<br>Generative Topographic Mapping</p>
-<h3 id="近似推断技术"><a href="#近似推断技术" class="headerlink" title="近似推断技术"></a>近似推断技术</h3><p>马尔可夫链<br>蒙特卡罗方法<br>变分法</p>
-<h3 id="最优化"><a href="#最优化" class="headerlink" title="最优化"></a>最优化</h3><p>大多数以上方法，直接或者间接使用最优化算法。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" target="_blank" rel="external">机器学习</a><br>Bishop, C. M. (1995). 《模式识别神经网络》，牛津大学出版社。ISBN 0-19-853864-2<br>Bishop, C. M. (2006). 《模式识别与机器学习》，Springer。ISBN 978-0-387-31073-2<br>Richard O. Duda, Peter E. Hart, David G. Stork (2001) 《模式分类》（第2版）, Wiley, New York, ISBN 0-471-05669-3.<br>MacKay, D. J. C. (2003). 《信息理论、推理和学习算法》，剑桥大学出版社。ISBN 0-521-64298-1<br>Mitchell, T. (1997). 《机器学习》, McGraw Hill. ISBN 0-07-042807-7<br>Sholom Weiss, Casimir Kulikowski (1991). Computer Systems That Learn, Morgan Kaufmann. ISBN 1-55860-065-5</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ong8f1obl.bkt.clouddn.com/330px-Hopfield-net.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;机器学习是人工智能的一个分支。人工智能的研究是从以“推理”为重点到以“知识”为重点，再到以“学习”为重点，一条自然、清晰的脉络。&lt;/p&gt;
-&lt;p&gt;机器学习是实现人工智能的一个途径，即以机器学习为手段解决人工智能中的问题。机器学习在近30多年已发展为一门多领域交叉学科，涉及概率论、统计学、逼近论、凸分析、计算复杂性理论等多门学科。&lt;/p&gt;
-&lt;p&gt;机器学习理论主要是设计和分析一些让计算机可以自动“学习”的算法。机器学习算法是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。因为学习算法中涉及了大量的统计学理论，机器学习与推断统计学联系尤为密切，也被称为统计学习理论。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="AI" scheme="http://ipcreator.me/categories/AI/"/>
-    
-    
-      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
-    
-      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Floating Point</title>
     <link href="http://ipcreator.me/2017/03/27/Program/Concepts/float/"/>
     <id>http://ipcreator.me/2017/03/27/Program/Concepts/float/</id>
@@ -1262,6 +1212,56 @@
       <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
     
       <category term="Floating point" scheme="http://ipcreator.me/tags/Floating-point/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Machine Learning</title>
+    <link href="http://ipcreator.me/2017/03/27/BusinessAI/concept-of-machine-learning/"/>
+    <id>http://ipcreator.me/2017/03/27/BusinessAI/concept-of-machine-learning/</id>
+    <published>2017-03-27T01:58:06.000Z</published>
+    <updated>2017-03-27T09:06:23.123Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/330px-Hopfield-net.png" alt=""></p>
+<p>机器学习是人工智能的一个分支。人工智能的研究是从以“推理”为重点到以“知识”为重点，再到以“学习”为重点，一条自然、清晰的脉络。</p>
+<p>机器学习是实现人工智能的一个途径，即以机器学习为手段解决人工智能中的问题。机器学习在近30多年已发展为一门多领域交叉学科，涉及概率论、统计学、逼近论、凸分析、计算复杂性理论等多门学科。</p>
+<p>机器学习理论主要是设计和分析一些让计算机可以自动“学习”的算法。机器学习算法是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。因为学习算法中涉及了大量的统计学理论，机器学习与推断统计学联系尤为密切，也被称为统计学习理论。</p>
+<a id="more"></a>
+<h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h1><p>机器学习是人工智能的一个分支。人工智能的研究是从以“推理”为重点到以“知识”为重点，再到以“学习”为重点，一条自然、清晰的脉络。显然，机器学习是实现人工智能的一个途径，即以机器学习为手段解决人工智能中的问题。机器学习在近30多年已发展为一门多领域交叉学科，涉及概率论、统计学、逼近论、凸分析、计算复杂性理论等多门学科。机器学习理论主要是设计和分析一些让计算机可以自动“学习”的算法。机器学习算法是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。因为学习算法中涉及了大量的统计学理论，机器学习与推断统计学联系尤为密切，也被称为统计学习理论。算法设计方面，机器学习理论关注可以实现的，行之有效的学习算法。很多推论问题属于无程序可循难度，所以部分的机器学习研究是开发容易处理的近似算法。</p>
+<p>机器学习已广泛应用于数据挖掘、计算机视觉、自然语言处理、生物特征识别、搜索引擎、医学诊断、检测信用卡欺诈、证券市场分析、DNA序列测序、语音和手写识别、战略游戏和机器人等领域。</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>机器学习有下面几种定义：<br>机器学习是一门人工智能的科学，该领域的主要研究对象是人工智能，特别是如何在经验学习中改善具体算法的性能。<br>机器学习是对能通过经验自动改进的计算机算法的研究。<br>机器学习是用数据或以往的经验，以此优化计算机程序的性能标准。<br>一种经常引用的英文定义是：</p>
+<blockquote>
+<p>A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.</p>
+</blockquote>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>机器学习可以分成下面几种类别：</p>
+<h3 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h3><p>从给定的训练数据集中学习出一个函数，当新的数据到来时，可以根据这个函数预测结果。监督学习的训练集要求是包括输入和输出，也可以说是特征和目标。训练集中的目标是由人标注的。常见的监督学习算法包括回归分析和统计分类。</p>
+<h3 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h3><p>与监督学习相比，训练集没有人为标注的结果。常见的无监督学习算法有聚类。</p>
+<h3 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h3><p>介于监督学习与无监督学习之间。</p>
+<h3 id="增强学习"><a href="#增强学习" class="headerlink" title="增强学习"></a>增强学习</h3><p>通过观察来学习做成如何的动作。每个动作都会对环境有所影响，学习对象根据观察到的周围环境的反馈来做出判断。</p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>具体的机器学习算法有：</p>
+<h3 id="构造间隔理论分布：聚类分析和模式识别"><a href="#构造间隔理论分布：聚类分析和模式识别" class="headerlink" title="构造间隔理论分布：聚类分析和模式识别"></a>构造间隔理论分布：聚类分析和模式识别</h3><p>人工神经网络<br>决策树<br>感知器<br>支持向量机<br>集成学习AdaBoost<br>降维与度量学习<br>聚类<br>贝叶斯分类器</p>
+<h3 id="构造条件概率：回归分析和统计分类"><a href="#构造条件概率：回归分析和统计分类" class="headerlink" title="构造条件概率：回归分析和统计分类"></a>构造条件概率：回归分析和统计分类</h3><p>高斯过程回归<br>线性判别分析<br>最近邻居法<br>径向基函数核</p>
+<h3 id="通过再生模型构造概率密度函数"><a href="#通过再生模型构造概率密度函数" class="headerlink" title="通过再生模型构造概率密度函数"></a>通过再生模型构造概率密度函数</h3><p>最大期望算法<br>概率图模型：包括贝叶斯网和Markov随机场<br>Generative Topographic Mapping</p>
+<h3 id="近似推断技术"><a href="#近似推断技术" class="headerlink" title="近似推断技术"></a>近似推断技术</h3><p>马尔可夫链<br>蒙特卡罗方法<br>变分法</p>
+<h3 id="最优化"><a href="#最优化" class="headerlink" title="最优化"></a>最优化</h3><p>大多数以上方法，直接或者间接使用最优化算法。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" target="_blank" rel="external">机器学习</a><br>Bishop, C. M. (1995). 《模式识别神经网络》，牛津大学出版社。ISBN 0-19-853864-2<br>Bishop, C. M. (2006). 《模式识别与机器学习》，Springer。ISBN 978-0-387-31073-2<br>Richard O. Duda, Peter E. Hart, David G. Stork (2001) 《模式分类》（第2版）, Wiley, New York, ISBN 0-471-05669-3.<br>MacKay, D. J. C. (2003). 《信息理论、推理和学习算法》，剑桥大学出版社。ISBN 0-521-64298-1<br>Mitchell, T. (1997). 《机器学习》, McGraw Hill. ISBN 0-07-042807-7<br>Sholom Weiss, Casimir Kulikowski (1991). Computer Systems That Learn, Morgan Kaufmann. ISBN 1-55860-065-5</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ong8f1obl.bkt.clouddn.com/330px-Hopfield-net.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;机器学习是人工智能的一个分支。人工智能的研究是从以“推理”为重点到以“知识”为重点，再到以“学习”为重点，一条自然、清晰的脉络。&lt;/p&gt;
+&lt;p&gt;机器学习是实现人工智能的一个途径，即以机器学习为手段解决人工智能中的问题。机器学习在近30多年已发展为一门多领域交叉学科，涉及概率论、统计学、逼近论、凸分析、计算复杂性理论等多门学科。&lt;/p&gt;
+&lt;p&gt;机器学习理论主要是设计和分析一些让计算机可以自动“学习”的算法。机器学习算法是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。因为学习算法中涉及了大量的统计学理论，机器学习与推断统计学联系尤为密切，也被称为统计学习理论。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="AI" scheme="http://ipcreator.me/categories/AI/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
+    
+      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
     
   </entry>
   
@@ -1401,6 +1401,93 @@
     
     
       <category term="History" scheme="http://ipcreator.me/tags/History/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Santana——Smooth</title>
+    <link href="http://ipcreator.me/2017/03/27/MyView/Music/santana-smooth/"/>
+    <id>http://ipcreator.me/2017/03/27/MyView/Music/santana-smooth/</id>
+    <published>2017-03-26T23:42:06.000Z</published>
+    <updated>2017-03-29T04:18:01.287Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://om845dfwl.bkt.clouddn.com/Santanasmooth.jpg" alt=""></p>
+<p><a href="https://en.wikipedia.org/wiki/Smooth_(song" target="_blank" rel="external">From Wikipedia, the free encyclopedia</a>)</p>
+<p>“Smooth” is a collaboration between Latin rock band Santana and Matchbox Twenty vocalist Rob Thomas. The song was written by Thomas, DeGaetano, and Itaal Shur, produced by Matt Serletic and sung by Thomas. It won three Grammy Awards: <strong>Record of the Year</strong>, <strong>Song of the Year</strong>, and <strong>Best Pop Collaboration with Vocals</strong>. Not only was it the final number-one Hot 100 hit of the 1990s, it was also the number-two Hot 100 hit of the 20th century. “Smooth” is the only song to appear on two decade-end Billboard charts. As of 2013, “Smooth” is ranked the second most successful song of all time by Billboard.</p>
+<a id="more"></a>
+<h2 id="SANTANA-LYRICS"><a href="#SANTANA-LYRICS" class="headerlink" title="SANTANA LYRICS"></a>SANTANA LYRICS</h2><p>“Smooth”<br>(feat. Rob Thomas)</p>
+<p>Man, it’s a hot one<br>Like seven inches from the midday sun<br>Well, I hear you whisper and the words melt everyone<br>But you stay so cool</p>
+<p>My muñequita,<br>My Spanish Harlem Mona Lisa<br>You’re my reason for reason<br>The step in my groove, yeah.</p>
+<p>[Bridge]<br>And if you said, “This life ain’t good enough.”<br>I would give my world to lift you up<br>I could change my life to better suit your mood<br>Because you’re so smooth</p>
+<p>[Chorus]<br>And it’s just like the ocean under the moon<br>Well, that’s the same as the emotion that I get from you<br>You got the kind of loving that can be so smooth, yeah.<br>Gimme your heart, make it real<br>Or else forget about it</p>
+<p>Well, I’ll tell you one thing<br>If you would leave it’d be a crying shame<br>In every breath and every word<br>I hear your name calling me out</p>
+<p>Out from the barrio,<br>You hear my rhythm on your radio<br>You feel the turning of the world so soft and slow<br>Turning you ‘round and ‘round</p>
+<p>[Bridge]</p>
+<p>[Chorus]</p>
+<p>[Chorus]</p>
+<p>Or else forget about it<br>Or else forget about it<br>Oh, let’s don’t forget about it<br>(Gimme your heart, make it real)<br>Let’s don’t forget about it (hey)<br>Let’s don’t forget about it (no oh no oh)<br>Let’s don’t forget about it (no no no oh)<br>Let’s don’t forget about it (hey no no oh)<br>Let’s don’t forget about it (hey hey hey)</p>
+<h2 id="SANTANA-歌词"><a href="#SANTANA-歌词" class="headerlink" title="SANTANA 歌词"></a>SANTANA 歌词</h2><p>Man it’s a hot one<br>天,这是多么性感的人。</p>
+<p>Like seven inches from the midday sun<br>就像站在正午7英尺近的太阳下。</p>
+<p>I hear you whisper &amp; the words melt everyone<br> 我听到你的轻声细语,且说得如此动人。</p>
+<p>But you stay so cool<br>但是你太难以接近。</p>
+<p>My muñequita, my Spanish harlem mona lisa<br>你是我的骑士,我的西班牙黑珍珠蒙娜丽莎。</p>
+<p>Your my reason for reason<br>你是我生存的理由。</p>
+<p>The step in my groove<br> (认识你的那段时间)是我(一生中的)最佳时刻。</p>
+<p>And if you say this life ain’t good enough<br>如果你说这样的生活不够好。</p>
+<p>I would give my world to lift you up<br>我会贡献出我的世界以使你满足。</p>
+<p>I could change my life to better suit your mood<br>我会改变自己的生活以适应你的喜好。</p>
+<p>Cause you’re so smooth<br>因为你是如此的柔美。</p>
+<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
+<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
+<p>You got the kind of lovin that can be so smooth<br> 你拥有一种柔美的爱。</p>
+<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>I’ll tell you one thing<br> 我要告诉你一件事。</p>
+<p>If you would leave it would be a crying shame<br>如果你离去,我将无地自容。</p>
+<p>In every breath and every word<br>我每声每息都听见你的名字</p>
+<p>I hear your name calling me out<br>在向我呼唤</p>
+<p>Out from the barrio,<br>在西班牙地区以外的地方,</p>
+<p>you hear my rhythm from your radio<br>你会从电台里听到我的音乐。</p>
+<p>You feel the turning of the world so soft and slow<br>让你感到这世界转动得如此地温柔而舒缓。</p>
+<p>Turning you round and round<br>带着你转啊转着。</p>
+<p>And if you say this life ain’t good enough<br>如果你说这样的生活不够好。</p>
+<p>I would give my world to lift you up<br>我会贡献出我的世界以使你满足。</p>
+<p>I could change my life to better suit your mood<br>我会改变自己的生活以适应你的喜好。</p>
+<p>Cause you’re so smooth<br>因为你是如此的柔美。</p>
+<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
+<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
+<p>You got the kind of lovin that can be so smooth<br>你拥有一种柔美的爱。</p>
+<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
+<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
+<p>You got the kind of lovin that can be so smooth<br>你拥有一种柔美的爱。</p>
+<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://en.wikipedia.org/wiki/Smooth_(song" target="_blank" rel="external">Smooth (song)</a>)<br><a href="http://blog.sina.com.cn/s/blog_477cd8220100og3f.html" target="_blank" rel="external">每天一首英文歌 歌词翻译 Smooth【Santana】</a><br><a href="https://answers.yahoo.com/question/index?qid=20070615142236AAQPwtU" target="_blank" rel="external">What does it mean-My mu-equita, my Spanish harlem mona lisa Your my reason for reason the step in my groove?</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://om845dfwl.bkt.clouddn.com/Santanasmooth.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Smooth_(song&quot;&gt;From Wikipedia, the free encyclopedia&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;“Smooth” is a collaboration between Latin rock band Santana and Matchbox Twenty vocalist Rob Thomas. The song was written by Thomas, DeGaetano, and Itaal Shur, produced by Matt Serletic and sung by Thomas. It won three Grammy Awards: &lt;strong&gt;Record of the Year&lt;/strong&gt;, &lt;strong&gt;Song of the Year&lt;/strong&gt;, and &lt;strong&gt;Best Pop Collaboration with Vocals&lt;/strong&gt;. Not only was it the final number-one Hot 100 hit of the 1990s, it was also the number-two Hot 100 hit of the 20th century. “Smooth” is the only song to appear on two decade-end Billboard charts. As of 2013, “Smooth” is ranked the second most successful song of all time by Billboard.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
+    
+    
+      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
+    
+      <category term="Music" scheme="http://ipcreator.me/tags/Music/"/>
     
   </entry>
   
@@ -1904,93 +1991,6 @@
       <category term="Knowledge Framework" scheme="http://ipcreator.me/tags/Knowledge-Framework/"/>
     
       <category term="Skill Graph" scheme="http://ipcreator.me/tags/Skill-Graph/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Santana——Smooth</title>
-    <link href="http://ipcreator.me/2017/03/27/MyView/Music/santana-smooth/"/>
-    <id>http://ipcreator.me/2017/03/27/MyView/Music/santana-smooth/</id>
-    <published>2017-03-26T23:42:06.000Z</published>
-    <updated>2017-03-29T04:18:01.287Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://om845dfwl.bkt.clouddn.com/Santanasmooth.jpg" alt=""></p>
-<p><a href="https://en.wikipedia.org/wiki/Smooth_(song" target="_blank" rel="external">From Wikipedia, the free encyclopedia</a>)</p>
-<p>“Smooth” is a collaboration between Latin rock band Santana and Matchbox Twenty vocalist Rob Thomas. The song was written by Thomas, DeGaetano, and Itaal Shur, produced by Matt Serletic and sung by Thomas. It won three Grammy Awards: <strong>Record of the Year</strong>, <strong>Song of the Year</strong>, and <strong>Best Pop Collaboration with Vocals</strong>. Not only was it the final number-one Hot 100 hit of the 1990s, it was also the number-two Hot 100 hit of the 20th century. “Smooth” is the only song to appear on two decade-end Billboard charts. As of 2013, “Smooth” is ranked the second most successful song of all time by Billboard.</p>
-<a id="more"></a>
-<h2 id="SANTANA-LYRICS"><a href="#SANTANA-LYRICS" class="headerlink" title="SANTANA LYRICS"></a>SANTANA LYRICS</h2><p>“Smooth”<br>(feat. Rob Thomas)</p>
-<p>Man, it’s a hot one<br>Like seven inches from the midday sun<br>Well, I hear you whisper and the words melt everyone<br>But you stay so cool</p>
-<p>My muñequita,<br>My Spanish Harlem Mona Lisa<br>You’re my reason for reason<br>The step in my groove, yeah.</p>
-<p>[Bridge]<br>And if you said, “This life ain’t good enough.”<br>I would give my world to lift you up<br>I could change my life to better suit your mood<br>Because you’re so smooth</p>
-<p>[Chorus]<br>And it’s just like the ocean under the moon<br>Well, that’s the same as the emotion that I get from you<br>You got the kind of loving that can be so smooth, yeah.<br>Gimme your heart, make it real<br>Or else forget about it</p>
-<p>Well, I’ll tell you one thing<br>If you would leave it’d be a crying shame<br>In every breath and every word<br>I hear your name calling me out</p>
-<p>Out from the barrio,<br>You hear my rhythm on your radio<br>You feel the turning of the world so soft and slow<br>Turning you ‘round and ‘round</p>
-<p>[Bridge]</p>
-<p>[Chorus]</p>
-<p>[Chorus]</p>
-<p>Or else forget about it<br>Or else forget about it<br>Oh, let’s don’t forget about it<br>(Gimme your heart, make it real)<br>Let’s don’t forget about it (hey)<br>Let’s don’t forget about it (no oh no oh)<br>Let’s don’t forget about it (no no no oh)<br>Let’s don’t forget about it (hey no no oh)<br>Let’s don’t forget about it (hey hey hey)</p>
-<h2 id="SANTANA-歌词"><a href="#SANTANA-歌词" class="headerlink" title="SANTANA 歌词"></a>SANTANA 歌词</h2><p>Man it’s a hot one<br>天,这是多么性感的人。</p>
-<p>Like seven inches from the midday sun<br>就像站在正午7英尺近的太阳下。</p>
-<p>I hear you whisper &amp; the words melt everyone<br> 我听到你的轻声细语,且说得如此动人。</p>
-<p>But you stay so cool<br>但是你太难以接近。</p>
-<p>My muñequita, my Spanish harlem mona lisa<br>你是我的骑士,我的西班牙黑珍珠蒙娜丽莎。</p>
-<p>Your my reason for reason<br>你是我生存的理由。</p>
-<p>The step in my groove<br> (认识你的那段时间)是我(一生中的)最佳时刻。</p>
-<p>And if you say this life ain’t good enough<br>如果你说这样的生活不够好。</p>
-<p>I would give my world to lift you up<br>我会贡献出我的世界以使你满足。</p>
-<p>I could change my life to better suit your mood<br>我会改变自己的生活以适应你的喜好。</p>
-<p>Cause you’re so smooth<br>因为你是如此的柔美。</p>
-<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
-<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
-<p>You got the kind of lovin that can be so smooth<br> 你拥有一种柔美的爱。</p>
-<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>I’ll tell you one thing<br> 我要告诉你一件事。</p>
-<p>If you would leave it would be a crying shame<br>如果你离去,我将无地自容。</p>
-<p>In every breath and every word<br>我每声每息都听见你的名字</p>
-<p>I hear your name calling me out<br>在向我呼唤</p>
-<p>Out from the barrio,<br>在西班牙地区以外的地方,</p>
-<p>you hear my rhythm from your radio<br>你会从电台里听到我的音乐。</p>
-<p>You feel the turning of the world so soft and slow<br>让你感到这世界转动得如此地温柔而舒缓。</p>
-<p>Turning you round and round<br>带着你转啊转着。</p>
-<p>And if you say this life ain’t good enough<br>如果你说这样的生活不够好。</p>
-<p>I would give my world to lift you up<br>我会贡献出我的世界以使你满足。</p>
-<p>I could change my life to better suit your mood<br>我会改变自己的生活以适应你的喜好。</p>
-<p>Cause you’re so smooth<br>因为你是如此的柔美。</p>
-<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
-<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
-<p>You got the kind of lovin that can be so smooth<br>你拥有一种柔美的爱。</p>
-<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
-<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
-<p>You got the kind of lovin that can be so smooth<br>你拥有一种柔美的爱。</p>
-<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://en.wikipedia.org/wiki/Smooth_(song" target="_blank" rel="external">Smooth (song)</a>)<br><a href="http://blog.sina.com.cn/s/blog_477cd8220100og3f.html" target="_blank" rel="external">每天一首英文歌 歌词翻译 Smooth【Santana】</a><br><a href="https://answers.yahoo.com/question/index?qid=20070615142236AAQPwtU" target="_blank" rel="external">What does it mean-My mu-equita, my Spanish harlem mona lisa Your my reason for reason the step in my groove?</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://om845dfwl.bkt.clouddn.com/Santanasmooth.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Smooth_(song&quot;&gt;From Wikipedia, the free encyclopedia&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;“Smooth” is a collaboration between Latin rock band Santana and Matchbox Twenty vocalist Rob Thomas. The song was written by Thomas, DeGaetano, and Itaal Shur, produced by Matt Serletic and sung by Thomas. It won three Grammy Awards: &lt;strong&gt;Record of the Year&lt;/strong&gt;, &lt;strong&gt;Song of the Year&lt;/strong&gt;, and &lt;strong&gt;Best Pop Collaboration with Vocals&lt;/strong&gt;. Not only was it the final number-one Hot 100 hit of the 1990s, it was also the number-two Hot 100 hit of the 20th century. “Smooth” is the only song to appear on two decade-end Billboard charts. As of 2013, “Smooth” is ranked the second most successful song of all time by Billboard.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
-    
-    
-      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
-    
-      <category term="Music" scheme="http://ipcreator.me/tags/Music/"/>
     
   </entry>
   
@@ -3855,9 +3855,9 @@
       <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
     
     
-      <category term="Habit" scheme="http://ipcreator.me/tags/Habit/"/>
-    
       <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
+    
+      <category term="Habit" scheme="http://ipcreator.me/tags/Habit/"/>
     
       <category term="Liu Weipeng" scheme="http://ipcreator.me/tags/Liu-Weipeng/"/>
     
@@ -4083,13 +4083,13 @@
     
       <category term="Investment" scheme="http://ipcreator.me/tags/Investment/"/>
     
+      <category term="Education" scheme="http://ipcreator.me/tags/Education/"/>
+    
       <category term="AI" scheme="http://ipcreator.me/tags/AI/"/>
     
       <category term="5G" scheme="http://ipcreator.me/tags/5G/"/>
     
       <category term="IPR" scheme="http://ipcreator.me/tags/IPR/"/>
-    
-      <category term="Education" scheme="http://ipcreator.me/tags/Education/"/>
     
   </entry>
   
@@ -4230,9 +4230,9 @@
       <category term="AI" scheme="http://ipcreator.me/categories/AI/"/>
     
     
-      <category term="Patent" scheme="http://ipcreator.me/tags/Patent/"/>
-    
       <category term="Data Novo" scheme="http://ipcreator.me/tags/Data-Novo/"/>
+    
+      <category term="Patent" scheme="http://ipcreator.me/tags/Patent/"/>
     
   </entry>
   
@@ -5161,11 +5161,11 @@
       <category term="Tools" scheme="http://ipcreator.me/categories/Tools/"/>
     
     
-      <category term="JavaScript" scheme="http://ipcreator.me/tags/JavaScript/"/>
-    
       <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
     
       <category term="C++" scheme="http://ipcreator.me/tags/C/"/>
+    
+      <category term="JavaScript" scheme="http://ipcreator.me/tags/JavaScript/"/>
     
       <category term="Regular Expression" scheme="http://ipcreator.me/tags/Regular-Expression/"/>
     
@@ -6584,6 +6584,33 @@ bw.close();
   </entry>
   
   <entry>
+    <title>Git Automatically</title>
+    <link href="http://ipcreator.me/2017/03/09/Program/Tools/auto-git-daily/"/>
+    <id>http://ipcreator.me/2017/03/09/Program/Tools/auto-git-daily/</id>
+    <published>2017-03-08T23:30:06.000Z</published>
+    <updated>2017-03-27T09:52:38.109Z</updated>
+    
+    <content type="html"><![CDATA[<p>能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…</p>
+ <a id="more"></a>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">@title auto update blog articles and git push</div><div class="line"></div><div class="line">set fileSource=D:\IPCreatorBlog\source</div><div class="line">set fileDestination=C:\IPCreatorBlogGit\blog\source</div><div class="line">set gitDir=C:\IPCreatorBlogGit\blog</div><div class="line"></div><div class="line">cls</div><div class="line"></div><div class="line">cd %fileDestination%</div><div class="line">rd /s/q %fileDestination%</div><div class="line">Xcopy /e %fileSource% %fileDestination%</div><div class="line"></div><div class="line">cd %gitDir%</div><div class="line">git add -v .</div><div class="line">git commit -m &quot;Update blog daily&quot;</div><div class="line">git push</div><div class="line"></div><div class="line">pause</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> user@LAPTOP-082RQVIH MINGW64 /c/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git config --global alias.blog &apos;!git add . &amp;&amp; git commit -m &quot;blog update&quot; &amp;&amp; git push&apos;**                                                                                                                          </div><div class="line">user@LAPTOP-082RQVIH MINGW64 /c/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git blog**</div><div class="line">On branch master</div><div class="line">Your branch is up-to-date with &apos;origin/master&apos;.</div><div class="line">nothing to commit, working tree clean</div></pre></td></tr></table></figure>
+<p> 更多参考：<br> <a href="https://www.zybuluo.com/yangfch3/note/338252" target="_blank" rel="external">Windows批处理(cmd/bat)使用小记</a><br> <a href="http://xstarcd.github.io/wiki/windows/windows_cmd_summary_commands.html" target="_blank" rel="external">批处理常用命令总结 - 批处理命令简介</a><br> <a href="https://segmentfault.com/q/1010000000263597" target="_blank" rel="external">Git批处理脚本</a><br> <a href="https://www.zhihu.com/question/38962022" target="_blank" rel="external">请问如何写一个批处理自动打开 gitbash，然后自动执行一系列git命令（windows平台）？</a><br> <a href="https://docs.google.com/document/d/1IjrCvTqL3J92DPXNzkCPYRi6Ftb2v6aCbncpxh9ozy4/edit" target="_blank" rel="external">Chrome-启动参数</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://ipcreator.me/categories/Tools/"/>
+    
+    
+      <category term="Git" scheme="http://ipcreator.me/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Thinking in Java</title>
     <link href="http://ipcreator.me/2017/03/09/Program/Java/thinking-in-java/"/>
     <id>http://ipcreator.me/2017/03/09/Program/Java/thinking-in-java/</id>
@@ -6614,33 +6641,6 @@ bw.close();
     
     
       <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git Automatically</title>
-    <link href="http://ipcreator.me/2017/03/09/Program/Tools/auto-git-daily/"/>
-    <id>http://ipcreator.me/2017/03/09/Program/Tools/auto-git-daily/</id>
-    <published>2017-03-08T23:30:06.000Z</published>
-    <updated>2017-03-27T09:52:38.109Z</updated>
-    
-    <content type="html"><![CDATA[<p>能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…</p>
- <a id="more"></a>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">@title auto update blog articles and git push</div><div class="line"></div><div class="line">set fileSource=D:\IPCreatorBlog\source</div><div class="line">set fileDestination=C:\IPCreatorBlogGit\blog\source</div><div class="line">set gitDir=C:\IPCreatorBlogGit\blog</div><div class="line"></div><div class="line">cls</div><div class="line"></div><div class="line">cd %fileDestination%</div><div class="line">rd /s/q %fileDestination%</div><div class="line">Xcopy /e %fileSource% %fileDestination%</div><div class="line"></div><div class="line">cd %gitDir%</div><div class="line">git add -v .</div><div class="line">git commit -m &quot;Update blog daily&quot;</div><div class="line">git push</div><div class="line"></div><div class="line">pause</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> user@LAPTOP-082RQVIH MINGW64 /c/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git config --global alias.blog &apos;!git add . &amp;&amp; git commit -m &quot;blog update&quot; &amp;&amp; git push&apos;**                                                                                                                          </div><div class="line">user@LAPTOP-082RQVIH MINGW64 /c/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git blog**</div><div class="line">On branch master</div><div class="line">Your branch is up-to-date with &apos;origin/master&apos;.</div><div class="line">nothing to commit, working tree clean</div></pre></td></tr></table></figure>
-<p> 更多参考：<br> <a href="https://www.zybuluo.com/yangfch3/note/338252" target="_blank" rel="external">Windows批处理(cmd/bat)使用小记</a><br> <a href="http://xstarcd.github.io/wiki/windows/windows_cmd_summary_commands.html" target="_blank" rel="external">批处理常用命令总结 - 批处理命令简介</a><br> <a href="https://segmentfault.com/q/1010000000263597" target="_blank" rel="external">Git批处理脚本</a><br> <a href="https://www.zhihu.com/question/38962022" target="_blank" rel="external">请问如何写一个批处理自动打开 gitbash，然后自动执行一系列git命令（windows平台）？</a><br> <a href="https://docs.google.com/document/d/1IjrCvTqL3J92DPXNzkCPYRi6Ftb2v6aCbncpxh9ozy4/edit" target="_blank" rel="external">Chrome-启动参数</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Tools" scheme="http://ipcreator.me/categories/Tools/"/>
-    
-    
-      <category term="Git" scheme="http://ipcreator.me/tags/Git/"/>
     
   </entry>
   
