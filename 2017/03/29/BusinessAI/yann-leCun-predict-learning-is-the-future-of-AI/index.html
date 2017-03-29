@@ -1,0 +1,1078 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Yann LeCun,Prediction Learning," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="IPCreator" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="在一票难求的Yann LeCun清华演讲当天上午，LeCun本人现身中国科学院自动化研究所，参与了一个“限制级”的高端私享会，CSDN记者整理了以下三条重要摘要。
+
+我对什么感兴趣
+我怎样看Human-like learning
+请把自己当做一名科学家">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Yann LeCun——Prediction Learning is the Future of AI">
+<meta property="og:url" content="http://ipcreator.me/2017/03/29/BusinessAI/yann-leCun-predict-learning-is-the-future-of-AI/index.html">
+<meta property="og:site_name" content="IPCreator">
+<meta property="og:description" content="在一票难求的Yann LeCun清华演讲当天上午，LeCun本人现身中国科学院自动化研究所，参与了一个“限制级”的高端私享会，CSDN记者整理了以下三条重要摘要。
+
+我对什么感兴趣
+我怎样看Human-like learning
+请把自己当做一名科学家">
+<meta property="og:image" content="http://img.blog.csdn.net/20170323205555509">
+<meta property="og:updated_time" content="2017-03-29T01:13:18.861Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Yann LeCun——Prediction Learning is the Future of AI">
+<meta name="twitter:description" content="在一票难求的Yann LeCun清华演讲当天上午，LeCun本人现身中国科学院自动化研究所，参与了一个“限制级”的高端私享会，CSDN记者整理了以下三条重要摘要。
+
+我对什么感兴趣
+我怎样看Human-like learning
+请把自己当做一名科学家">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170323205555509">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'L2TAEB8639',
+      apiKey: '86bd00c4f7ef2396081856beb1cf9a7d',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ipcreator.me/2017/03/29/BusinessAI/yann-leCun-predict-learning-is-the-future-of-AI/"/>
+
+
+
+
+
+  <title> Yann LeCun——Prediction Learning is the Future of AI | IPCreator </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IPCreator</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Growing up is the only password.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/03/29/BusinessAI/yann-leCun-predict-learning-is-the-future-of-AI/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="For life">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/square_header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IPCreator">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Yann LeCun——Prediction Learning is the Future of AI
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-29T07:36:06+08:00">
+                2017-03-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/29/BusinessAI/yann-leCun-predict-learning-is-the-future-of-AI/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/29/BusinessAI/yann-leCun-predict-learning-is-the-future-of-AI/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/03/29/BusinessAI/yann-leCun-predict-learning-is-the-future-of-AI/" class="leancloud_visitors" data-flag-title="Yann LeCun——Prediction Learning is the Future of AI">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://img.blog.csdn.net/20170323205555509" alt=""></p>
+<p>在一票难求的Yann LeCun清华演讲当天上午，LeCun本人现身中国科学院自动化研究所，参与了一个“限制级”的高端私享会，CSDN记者整理了以下三条重要摘要。</p>
+<ol>
+<li>我对什么感兴趣</li>
+<li>我怎样看Human-like learning</li>
+<li>请把自己当做一名科学家</li>
+</ol>
+<a id="more"></a>
+<h2 id="我对什么感兴趣"><a href="#我对什么感兴趣" class="headerlink" title="我对什么感兴趣"></a>我对什么感兴趣</h2><blockquote>
+<p>非监督学习以及预测学习</p>
+</blockquote>
+<p>迄今为止，在机器学习以及深度学习领域，我们已经取得了一些成功，这些成功都依赖于监督学习。监督学习有它本身的局限性，因为需要很多数据，并且这些数据需要经过人工标注，数据的背后需要很多的知识作为支撑。所以问题就转化成了我们如何让机器像动物和人类一样能够从现实世界自动学习，这样一来我们就需要搞清楚动物和人类学习背后的原理。</p>
+<p>有些人认为，人类的学习方式是增强学习。而我个人认为，人类的学习方式是<strong>非监督学习，且是以预测为驱动的。</strong> 所以我们的大脑其实是一个预测引擎，从一定程度上说，能够预测是机器通往智能道路上的一道关卡。如果我们知道如何用深度学习或者其他的算法使得机器能够通过预测来解决问题的话，那么我们在制造更智能的机器的路上就取得了一个非常大的进步。</p>
+<p>以科学家的视角来看，我对智能的本质，不论是人类智能还是人工智能都很感兴趣。从实用的角度来说，这也并不冲突，在很多的人工智能应用中，机器需要对这个世界有广泛的知识储备，甚至机器需要能够理解他们自己。举例来说，如果你想要开发一个对话系统或者虚拟助手，这种很有趣且很实用的系统。这种时候，机器就需要如前面所说的，对世界有的广泛的知识储备。据我所知，这种量级的知识储备不能够通过监督学习或者增强学习来达到。这也是我对非监督学习以及预测学习感兴趣的原因。</p>
+<h2 id="我怎样看Human-like-learning"><a href="#我怎样看Human-like-learning" class="headerlink" title="我怎样看Human-like learning"></a>我怎样看Human-like learning</h2><blockquote>
+<p>如果你说你现在就能做出这样的机器…<br>Come on！别骗自己了</p>
+</blockquote>
+<p>因为现在我们还不知道如何让机器像人类一样思考，所以当我们讨论Human-like machine的时候，我们是在讨论一个还不存在的东西。所以就出现了正反两派。但是在我看来，那些现在就声称他们能够或者已经做出Human-like learning的人是夸大其词了。但Human-like learning确实是一个重要的研究方向。</p>
+<p>要达到Human-like learning，或许需要监督、非监督以及增强学习的结合。拿预测做例子，比如说我放一个苹果在桌子上，然后我离开了，苹果可能会呆在桌子上也可能会滚下来，除非我们有一个预测模型，否则到底会发生什么是很难预测的。对于我们人类来说，如果我们知道这个桌子承不住这个苹果的话，苹果就会掉下来。所以说我们到底要如何教会机器理解这个世界，不仅要考虑到这个世界很大，还要考虑到这个世界充满了巧合和外力作用。</p>
+<p>我们用力推一个东西它会动，推另一个东西它可能不会动。所以说对事物的区分和预测是我们人类对世界认知的一个体现。问题在于，这种预测不是任务导向型的（Task oriented ），而是任务独立型的（Task independent），所以有很多时候机器学到的事情可能对我们没有用，这就是为什么我们需要监督学习和增强学习来让机器学习对我们有用的事情。</p>
+<p>现在经典的人工智能系统都是监督学习与增强学习的结合，这是很多研究人员、很多后起之秀正在从事的领域，是现在很多AI系统的一个共性。相信在座的很多人都从事过人工智能在感知层面的工作，我们从现实世界中提取信号以供机器学习，这是人工智能的第一步，还有第二步就是让机器能够对现实世界中将要发生的事情进行预测，以及对事物将会保留在何种状态进行预测。</p>
+<p>所以近期大家越来越强调AI系统的整体性，即perception、prediction、reasoning、planning以及底层的监督、非监督、强化学习算法。AI一直以来在游戏方面表现得非常活跃，现在AI也能参与到一些实时的策略类游戏中了，例如星球大战这类游戏。这是对AI系统的一个很好的测试，因为接下来这些系统将会被用到现实世界中，这是一个非常令人激动的研究方向。</p>
+<h2 id="请把自己当做一名科学家"><a href="#请把自己当做一名科学家" class="headerlink" title="请把自己当做一名科学家"></a>请把自己当做一名科学家</h2><blockquote>
+<p>首批造飞机的工程师一定懂仿生学</p>
+</blockquote>
+<p>对于深度学习的研究者来说，你们很幸运处于最好的时代。我相信，几年之后，人工智能将会对交通、医疗、生物、科学等诸多领域产生革命性的改变，而你们将要参与其中。</p>
+<p>当代科学有三大未解问题：宇宙由什么组成、生命的本质是什么、人脑是如何工作的。我们正在从事的，正是这个探寻本质的过程。人工智能表面看起来是计算机科学相关的问题，但其实它关系到更多更广泛的科学研究。就像多年以前工程师们试图造飞机时一样，在一切都还未知的情况下，工程师需要考虑很多与工程制造看似不相关的问题，例如生物学的理论等。</p>
+<p>我们虽说是计算机科学研究人员，但由于人工智能涉及到的范围之广，研究者对其他相关领域的涉猎也非常重要。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="http://geek.csdn.net/news/detail/188777" target="_blank" rel="external">CNN之父Yann LeCun：预测学习才是AI的未来</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>Post author:</strong>
+      For life
+    </li>
+    <li class="post-copyright-link">
+      <strong>Post link:</strong>
+      <a href="http://ipcreator.me/2017/03/29/BusinessAI/yann-leCun-predict-learning-is-the-future-of-AI/" title="Yann LeCun——Prediction Learning is the Future of AI">http://ipcreator.me/2017/03/29/BusinessAI/yann-leCun-predict-learning-is-the-future-of-AI/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright Notice: </strong>
+      All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Yann-LeCun/" rel="tag"># Yann LeCun</a>
+          
+            <a href="/tags/Prediction-Learning/" rel="tag"># Prediction Learning</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/28/MyView/Original/beauty-of-life/" rel="next" title="The Beauty of Life">
+                <i class="fa fa-chevron-left"></i> The Beauty of Life
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/29/BusinessAI/Jiang-tao--only-2%-persons-can-be-winner-of-AI/" rel="prev" title="Jiang Tao——Only 2% Persons Can be Winner of AI">
+                Jiang Tao——Only 2% Persons Can be Winner of AI <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/29/BusinessAI/yann-leCun-predict-learning-is-the-future-of-AI/"
+           data-title="Yann LeCun——Prediction Learning is the Future of AI" data-url="http://ipcreator.me/2017/03/29/BusinessAI/yann-leCun-predict-learning-is-the-future-of-AI/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/img/square_header.jpg"
+               alt="For life" />
+          <p class="site-author-name" itemprop="name">For life</p>
+           
+              <p class="site-description motion-element" itemprop="description">For life, growing up is the only password.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">212</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">210</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ipcreator" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" title="blog">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  blog
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#我对什么感兴趣"><span class="nav-number">1.</span> <span class="nav-text">我对什么感兴趣</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我怎样看Human-like-learning"><span class="nav-number">2.</span> <span class="nav-text">我怎样看Human-like learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请把自己当做一名科学家"><span class="nav-number">3.</span> <span class="nav-text">请把自己当做一名科学家</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">For life</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ipcreator"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TfzAWJSzk2L4jpj4gHaNsMbp-gzGzoHsz", "PXNkGhS05PxL7rV3N8gDlAQe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+</body>
+</html>

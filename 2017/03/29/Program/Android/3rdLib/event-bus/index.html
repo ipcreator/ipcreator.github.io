@@ -1,0 +1,1100 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Third Library,Event Bus," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="IPCreator" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="EventBus is an open-source library for Android using the publisher/subscriber pattern for loose coupling. EventBus enables central communication to decoupled classes with just a few lines of code – s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EventBus——the  No.1 Open Source Event Library for Android">
+<meta property="og:url" content="http://ipcreator.me/2017/03/29/Program/Android/3rdLib/event-bus/index.html">
+<meta property="og:site_name" content="IPCreator">
+<meta property="og:description" content="EventBus is an open-source library for Android using the publisher/subscriber pattern for loose coupling. EventBus enables central communication to decoupled classes with just a few lines of code – s">
+<meta property="og:image" content="https://github.com/greenrobot/EventBus/raw/master/EventBus-Publish-Subscribe.png">
+<meta property="og:image" content="https://github.com/android10/Sample-Data/raw/master/Android-CleanArchitecture/clean_architecture.png">
+<meta property="og:image" content="https://github.com/android10/Sample-Data/raw/master/Android-CleanArchitecture/clean_architecture_layers.png">
+<meta property="og:image" content="https://github.com/android10/Sample-Data/raw/master/Android-CleanArchitecture/clean_architecture_layers_details.png">
+<meta property="og:updated_time" content="2017-03-29T10:59:27.759Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="EventBus——the  No.1 Open Source Event Library for Android">
+<meta name="twitter:description" content="EventBus is an open-source library for Android using the publisher/subscriber pattern for loose coupling. EventBus enables central communication to decoupled classes with just a few lines of code – s">
+<meta name="twitter:image" content="https://github.com/greenrobot/EventBus/raw/master/EventBus-Publish-Subscribe.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'L2TAEB8639',
+      apiKey: '86bd00c4f7ef2396081856beb1cf9a7d',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ipcreator.me/2017/03/29/Program/Android/3rdLib/event-bus/"/>
+
+
+
+
+
+  <title> EventBus——the  No.1 Open Source Event Library for Android | IPCreator </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IPCreator</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Growing up is the only password.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/03/29/Program/Android/3rdLib/event-bus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="For life">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/square_header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IPCreator">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                EventBus——the  No.1 Open Source Event Library for Android
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-29T15:26:06+08:00">
+                2017-03-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/29/Program/Android/3rdLib/event-bus/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/29/Program/Android/3rdLib/event-bus/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/03/29/Program/Android/3rdLib/event-bus/" class="leancloud_visitors" data-flag-title="EventBus——the  No.1 Open Source Event Library for Android">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://github.com/greenrobot/EventBus/raw/master/EventBus-Publish-Subscribe.png" alt=""></p>
+<p>EventBus is an open-source library for Android using the publisher/subscriber pattern for loose coupling. EventBus enables central communication to decoupled classes with just a few lines of code – simplifying the code, removing dependencies, and speeding up app development.</p>
+<a id="more"></a>
+<h2 id="EventBus…"><a href="#EventBus…" class="headerlink" title="EventBus…"></a>EventBus…</h2><ul>
+<li>simplifies the communication between components<ul>
+<li>decouples event senders and receivers</li>
+<li>performs well with Activities, Fragments, and background threads</li>
+<li>avoids complex and error-prone dependencies and life cycle issues</li>
+</ul>
+</li>
+<li>makes your code simpler</li>
+<li>is fast</li>
+<li>is tiny (~50k jar)</li>
+<li>is proven in practice by apps with 100,000,000+ installs</li>
+<li>has advanced features like delivery threads, subscriber priorities, etc.</li>
+</ul>
+<h2 id="EventBus-in-3-steps"><a href="#EventBus-in-3-steps" class="headerlink" title="EventBus in 3 steps"></a>EventBus in 3 steps</h2><h3 id="Step-1-Define-events"><a href="#Step-1-Define-events" class="headerlink" title="Step 1: Define events"></a>Step 1: Define events</h3><p> Events are POJO (plain old Java object) without any specific requirements.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public class MessageEvent &#123;</div><div class="line"></div><div class="line">    public final String message;</div><div class="line"></div><div class="line">    public MessageEvent(String message) &#123;</div><div class="line">        this.message = message;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Step-2-Prepare-subscribers"><a href="#Step-2-Prepare-subscribers" class="headerlink" title="Step 2: Prepare subscribers"></a>Step 2: Prepare subscribers</h3><p> Subscribers implement event handling methods (also called “subscriber methods”) that will be called when an event is posted. These are defined with the @Subscribe annotation.</p>
+<p> Note that with EventBus 3 the method name can be chosen freely (no naming conventions like in EventBus 2).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// This method will be called when a MessageEvent is posted (in the UI thread for Toast)</div><div class="line">@Subscribe(threadMode = ThreadMode.MAIN)</div><div class="line">public void onMessageEvent(MessageEvent event) &#123;</div><div class="line">    Toast.makeText(getActivity(), event.message, Toast.LENGTH_SHORT).show();</div><div class="line">&#125;</div><div class="line"></div><div class="line">// This method will be called when a SomeOtherEvent is posted</div><div class="line">@Subscribe</div><div class="line">public void handleSomethingElse(SomeOtherEvent event) &#123;</div><div class="line">    doSomethingWith(event);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> Subscribers also need to register themselves to and unregister from the bus. Only while subscribers are registered, they will receive events. In Android, in activities and fragments you should usually register according to their life cycle. For most cases onStart/onStop works fine:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void onStart() &#123;</div><div class="line">    super.onStart();</div><div class="line">    EventBus.getDefault().register(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line">@Override</div><div class="line">public void onStop() &#123;</div><div class="line">    EventBus.getDefault().unregister(this);</div><div class="line">    super.onStop();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Step-3-Post-events"><a href="#Step-3-Post-events" class="headerlink" title="Step 3: Post events"></a>Step 3: Post events</h3><p> Post an event from any part of your code. All currently registered subscribers matching the event type will receive it.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">EventBus.getDefault().post(new MessageEvent(&quot;Hello everyone!&quot;));</div></pre></td></tr></table></figure>
+<p><strong>Read the full <a href="http://greenrobot.org/eventbus/documentation/how-to-get-started/" target="_blank" rel="external">getting started guide</a>.</strong></p>
+<h2 id="Add-EventBus-to-your-project"><a href="#Add-EventBus-to-your-project" class="headerlink" title="Add EventBus to your project"></a>Add EventBus to your project</h2><p>Please ensure that you are using the latest version by <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.greenrobot%22%20AND%20a%3A%22eventbus%22" target="_blank" rel="external">checking here</a></p>
+<p>Gradle:<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">compile</span> <span class="string">'org.greenrobot:eventbus:3.0.0'</span></div></pre></td></tr></table></figure></p>
+<p>Maven:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.greenrobot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>eventbus<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.0.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.greenrobot%22%20AND%20a%3A%22eventbus%22" target="_blank" rel="external">Or download EventBus from Maven Central</a></p>
+<h2 id="Homepage-Documentation-Links"><a href="#Homepage-Documentation-Links" class="headerlink" title="Homepage, Documentation, Links"></a>Homepage, Documentation, Links</h2><p>For more details on EventBus please check <a href="http://greenrobot.org/eventbus" target="_blank" rel="external">EventBus’ website</a>. Here are some direct links you may find useful:</p>
+<p><a href="http://greenrobot.org/eventbus/features/" target="_blank" rel="external">Features</a></p>
+<p><a href="http://greenrobot.org/eventbus/documentation/" target="_blank" rel="external">Documentation</a></p>
+<p><a href="http://greenrobot.org/eventbus/changelog/" target="_blank" rel="external">Changelog</a></p>
+<p><a href="http://greenrobot.org/eventbus/documentation/faq/" target="_blank" rel="external">FAQ</a></p>
+<p>How does EventBus compare to other solutions, like Otto from Square? Check this <a href="COMPARISON.md">comparison</a>.</p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Copyright (C) 2012-2016 Markus Junginger, greenrobot (<a href="http://greenrobot.org" target="_blank" rel="external">http://greenrobot.org</a>)</p>
+<p>EventBus binaries and source code can be used according to the <a href="LICENSE">Apache License, Version 2.0</a>.</p>
+<h2 id="More-Open-Source-by-greenrobot"><a href="#More-Open-Source-by-greenrobot" class="headerlink" title="More Open Source by greenrobot"></a>More Open Source by greenrobot</h2><p><a href="https://github.com/greenrobot/greenrobot-common" target="_blank" rel="external"><strong>greenrobot-common</strong></a> is a set of utility classes and hash functions for Android &amp; Java projects.</p>
+<p><a href="https://github.com/greenrobot/greenDAO" target="_blank" rel="external"><strong>greenDAO</strong></a> is an ORM optimized for Android: it maps database tables to Java objects and uses code generation for optimal speed.</p>
+<p><a href="https://plus.google.com/b/114381455741141514652/+GreenrobotDe/posts" target="_blank" rel="external">Follow us on Google+</a> or check our <a href="http://greenrobot.org/" target="_blank" rel="external">homepage</a> to stay up to date.</p>
+<h2 id="EventBus源码分析-3"><a href="#EventBus源码分析-3" class="headerlink" title="EventBus源码分析[3]"></a>EventBus源码分析<sup>[3]</sup></h2><p>EventBus的好处是显而易见的，完全解耦了请求链之间的关系，避免了请求者被长持有，又比广播更轻量，比LocalBroadcast则更强大，接口也简单实用。缺点的话，像是各种Event的定义是一个工作量。</p>
+<h2 id="EventBus-otto-LocalBroadcast的选择-4"><a href="#EventBus-otto-LocalBroadcast的选择-4" class="headerlink" title="EventBus, otto, LocalBroadcast的选择[4]"></a>EventBus, otto, LocalBroadcast的选择<sup>[4]</sup></h2><ol>
+<li>greenrobot的EventBus</li>
+<li>square的otto</li>
+<li>android support包里提供的LocalBroadcast</li>
+</ol>
+<p>三者都是类似订阅/发布的模式，降低了耦合度。与callback比起来，这种事件总线的模式使得两个类没有直接的依赖关系，对架构来说进行了解耦，把双向依赖变成了单向依赖，在大型项目中尤其显得重要。</p>
+<h3 id="Why-publish-subscribe"><a href="#Why-publish-subscribe" class="headerlink" title="Why publish/subscribe"></a>Why publish/subscribe</h3><p>一方面，callback很容易产生内存泄露，如I/O、网络操作持有了Activity/Fragment的引用，导致不能及时释放，而团队中也很难保证每个成员都足够优秀在写callback的时候能使用弱引用或静态变量。相比起来订阅/发布者模式则比较简单，直接在BaseActivity的onDestroy释放掉，避免了可能的坑。</p>
+<p>另外，从可扩展性、可维护性的角度来说，callback也更局限，比如以前某个接口是告诉上层网络数据拉回来了，现在我们希望扩展，这个接口也支持直接告诉上层数据库拉回来了，向上层屏蔽数据来源，如果用callback，则在一次回调结束后，没有办法再次进行回调了。页面必须自己去处理数据来源和拉数据的逻辑。</p>
+<p>虽然有些over-architect的嫌疑，但是<a href="https://github.com/android10/Android-CleanArchitecture" target="_blank" rel="external">Android-CleanArchitecture</a> 确实是一种很clean的architecture，而其也正是通过观察者/订阅者模式来实现了单向依赖。</p>
+<h3 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h3><p>EventBus的github上就有其和otto的比较： <a href="https://github.com/greenrobot/EventBus/blob/master/COMPARISON.md" target="_blank" rel="external">EventBus vs Otto</a></p>
+<p>总的来说，两者功能差的不多，otto多了Event producers (e.g. for coding cached events)，而EventBus则多了各种线程的处理、订阅者继承、sticky event等。</p>
+<p>但从性能来说，由于otto使用了基于反射的annotation，而和EventBus产生了一定的差距（内部应该还有一些其他问题导致的性能差异，待研究）</p>
+<p><strong>三者都不支持跨进程，LocalBroadcast内部其实使用的是Handler，所以其实更像是一个utils类。</strong></p>
+<p>如果要做选择的话，LocalBroadcast更轻量，otto相比起api更好用，而EventBus则拥有很棒的线程模型，我投EventBus一票，因为onEvent的各种线程回调真的很方便。</p>
+<h2 id="Android-Clean-Architecture-5"><a href="#Android-Clean-Architecture-5" class="headerlink" title="Android Clean Architecture[5]"></a>Android Clean Architecture<sup>[5]</sup></h2><h3 id="Clean-architecture"><a href="#Clean-architecture" class="headerlink" title="Clean architecture"></a>Clean architecture</h3><p><img src="https://github.com/android10/Sample-Data/raw/master/Android-CleanArchitecture/clean_architecture.png" alt=""></p>
+<h3 id="Architectural-approach"><a href="#Architectural-approach" class="headerlink" title="Architectural approach"></a>Architectural approach</h3><p><img src="https://github.com/android10/Sample-Data/raw/master/Android-CleanArchitecture/clean_architecture_layers.png" alt=""></p>
+<h3 id="Architectural-reactive-approach"><a href="#Architectural-reactive-approach" class="headerlink" title="Architectural reactive approach"></a>Architectural reactive approach</h3><p><img src="https://github.com/android10/Sample-Data/raw/master/Android-CleanArchitecture/clean_architecture_layers_details.png" alt=""></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="https://github.com/greenrobot/EventBus" target="_blank" rel="external">EventBus</a><br>[2]<a href="http://greenrobot.org/eventbus/documentation/how-to-get-started/" target="_blank" rel="external">How to get started with EventBus in 3 steps</a><br>[3]<a href="http://blog.zhaiyifan.cn/2015/08/20/EventBus-source/" target="_blank" rel="external">EventBus源码分析</a><br>[4]<a href="http://blog.zhaiyifan.cn/2015/08/17/EventBus:otto:LocalBroadcast%E7%9A%84%E9%80%89%E6%8B%A9/" target="_blank" rel="external">EventBus, otto, LocalBroadcast的选择</a><br>[5]<a href="https://github.com/android10/Android-CleanArchitecture" target="_blank" rel="external">Android-CleanArchitecture</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>Post author:</strong>
+      For life
+    </li>
+    <li class="post-copyright-link">
+      <strong>Post link:</strong>
+      <a href="http://ipcreator.me/2017/03/29/Program/Android/3rdLib/event-bus/" title="EventBus——the  No.1 Open Source Event Library for Android">http://ipcreator.me/2017/03/29/Program/Android/3rdLib/event-bus/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright Notice: </strong>
+      All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Third-Library/" rel="tag"># Third Library</a>
+          
+            <a href="/tags/Event-Bus/" rel="tag"># Event Bus</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/29/Program/Android/3rdLib/butterknife/" rel="next" title="Butter Knife——Field and method binding for Android views">
+                <i class="fa fa-chevron-left"></i> Butter Knife——Field and method binding for Android views
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/29/Program/Android/3rdLib/block-canary/" rel="prev" title="Block Canary——Android Performance Monitor">
+                Block Canary——Android Performance Monitor <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/29/Program/Android/3rdLib/event-bus/"
+           data-title="EventBus——the  No.1 Open Source Event Library for Android" data-url="http://ipcreator.me/2017/03/29/Program/Android/3rdLib/event-bus/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/img/square_header.jpg"
+               alt="For life" />
+          <p class="site-author-name" itemprop="name">For life</p>
+           
+              <p class="site-description motion-element" itemprop="description">For life, growing up is the only password.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">212</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">210</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ipcreator" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" title="blog">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  blog
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EventBus…"><span class="nav-number">1.</span> <span class="nav-text">EventBus…</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EventBus-in-3-steps"><span class="nav-number">2.</span> <span class="nav-text">EventBus in 3 steps</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-1-Define-events"><span class="nav-number">2.1.</span> <span class="nav-text">Step 1: Define events</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-2-Prepare-subscribers"><span class="nav-number">2.2.</span> <span class="nav-text">Step 2: Prepare subscribers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-3-Post-events"><span class="nav-number">2.3.</span> <span class="nav-text">Step 3: Post events</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-EventBus-to-your-project"><span class="nav-number">3.</span> <span class="nav-text">Add EventBus to your project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Homepage-Documentation-Links"><span class="nav-number">4.</span> <span class="nav-text">Homepage, Documentation, Links</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#License"><span class="nav-number">5.</span> <span class="nav-text">License</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-Open-Source-by-greenrobot"><span class="nav-number">6.</span> <span class="nav-text">More Open Source by greenrobot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EventBus源码分析-3"><span class="nav-number">7.</span> <span class="nav-text">EventBus源码分析[3]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EventBus-otto-LocalBroadcast的选择-4"><span class="nav-number">8.</span> <span class="nav-text">EventBus, otto, LocalBroadcast的选择[4]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Why-publish-subscribe"><span class="nav-number">8.1.</span> <span class="nav-text">Why publish/subscribe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比较"><span class="nav-number">8.2.</span> <span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android-Clean-Architecture-5"><span class="nav-number">9.</span> <span class="nav-text">Android Clean Architecture[5]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Clean-architecture"><span class="nav-number">9.1.</span> <span class="nav-text">Clean architecture</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Architectural-approach"><span class="nav-number">9.2.</span> <span class="nav-text">Architectural approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Architectural-reactive-approach"><span class="nav-number">9.3.</span> <span class="nav-text">Architectural reactive approach</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">10.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">For life</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ipcreator"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TfzAWJSzk2L4jpj4gHaNsMbp-gzGzoHsz", "PXNkGhS05PxL7rV3N8gDlAQe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+</body>
+</html>
