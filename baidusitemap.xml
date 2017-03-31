@@ -4,16 +4,59 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/30/Program/Android/3rdLib/catagory-of-open-sources-projects-of-android/</loc>
-    <lastmod>2017-03-30T15:17:56.065Z</lastmod>
+    <loc>http://ipcreator.me/2017/03/30/MyView/Original/why-i-insist-on-practicing-deliberately-eveyday/</loc>
+    <lastmod>2017-03-31T13:32:30.483Z</lastmod>
     <data>
         <display>
-        <title>Android Open Source Projects Organized by Trinea</title>
-        <pubTime>2017-03-30T14:24:06.000Z</pubTime>
+        <title>Why I Insist on Practicing Deliberately Everyday</title>
+        <pubTime>2017-03-30T12:17:06.000Z</pubTime>
         
-        <tag>Third Library</tag>
+        <tag>Share</tag>
          
-        <tag>Trinea</tag>
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/MyView/English/computer-english-words/</loc>
+    <lastmod>2017-03-31T13:20:04.587Z</lastmod>
+    <data>
+        <display>
+        <title>Professional Words of Computer</title>
+        <pubTime>2017-03-25T16:00:00.000Z</pubTime>
+        
+        <tag>Word</tag>
+         
+        <tag>Profession</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/31/Program/Android/Design/architecture-of-android-app/</loc>
+    <lastmod>2017-03-31T13:13:57.678Z</lastmod>
+    <data>
+        <display>
+        <title>Android Architecture Blueprints</title>
+        <pubTime>2017-03-31T08:41:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Architecture</tag>
          
          
            
@@ -26,8 +69,114 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/03/31/MyView/Original/keep-your-independency/</loc>
+    <lastmod>2017-03-31T13:13:17.197Z</lastmod>
+    <data>
+        <display>
+        <title>Keep your Independency</title>
+        <pubTime>2017-03-31T12:51:06.000Z</pubTime>
+        
+        <tag>Share</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/MyView/English/love-words/</loc>
+    <lastmod>2017-03-31T13:07:06.082Z</lastmod>
+    <data>
+        <display>
+        <title>Love English Words</title>
+        <pubTime>2017-02-21T23:44:05.000Z</pubTime>
+        
+        <tag>Word</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/31/MyView/English/english-is-a-friend-for-everybody/</loc>
+    <lastmod>2017-03-31T08:46:49.048Z</lastmod>
+    <data>
+        <display>
+        <title>English is a Friend for Everyone</title>
+        <pubTime>2017-03-31T08:40:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/31/MyView/Original/investment/</loc>
+    <lastmod>2017-03-31T08:27:00.154Z</lastmod>
+    <data>
+        <display>
+        <title>Famous Financial Experts'  Views of Investment</title>
+        <pubTime>2017-03-31T06:56:06.000Z</pubTime>
+        
+        <tag>Investment</tag>
+         
+        <tag>House</tag>
+         
+        <tag>Stock</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/31/Program/Java/what-is-reflection-in-java/</loc>
+    <lastmod>2017-03-31T08:21:09.339Z</lastmod>
+    <data>
+        <display>
+        <title>Concept of Reflection in Java</title>
+        <pubTime>2017-03-30T23:35:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Reflection</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://ipcreator.me/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/03/30/Program/Tools/github-cheat-sheet/</loc>
-    <lastmod>2017-03-30T15:15:02.574Z</lastmod>
+    <lastmod>2017-03-31T08:12:03.423Z</lastmod>
     <data>
         <display>
         <title>GitHub Cheat Sheet</title>
@@ -50,48 +199,8 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/30/Program/Android/android-knowledge-base/</loc>
-    <lastmod>2017-03-30T15:14:04.922Z</lastmod>
-    <data>
-        <display>
-        <title>Useful Android Resources</title>
-        <pubTime>2017-03-30T12:13:06.000Z</pubTime>
-        
-        <tag>Resource</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/30/MyView/Original/why-i-insist-on-practicing-deliberately-eveyday/</loc>
-    <lastmod>2017-03-30T15:13:07.180Z</lastmod>
-    <data>
-        <display>
-        <title>Why I Insist on Practicing Deliberately Everyday</title>
-        <pubTime>2017-03-30T12:17:06.000Z</pubTime>
-        
-        <tag>Share</tag>
-         
-         
-           
-             
-              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/03/29/MyView/Original/why-i-write-blog/</loc>
-    <lastmod>2017-03-30T15:12:48.726Z</lastmod>
+    <lastmod>2017-03-31T07:23:45.059Z</lastmod>
     <data>
         <display>
         <title>Why I Insist on Writing Blog</title>
@@ -110,14 +219,280 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/03/19/MyView/Original/why-stay-in-big-cities/</loc>
+    <lastmod>2017-03-31T07:13:30.970Z</lastmod>
+    <data>
+        <display>
+        <title>Experience Decides Destiny</title>
+        <pubTime>2017-03-19T13:51:18.000Z</pubTime>
+        
+        <tag>Share</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/22/MyView/Original/big-trend/</loc>
+    <lastmod>2017-03-31T05:38:20.787Z</lastmod>
+    <data>
+        <display>
+        <title>Big Trends</title>
+        <pubTime>2017-03-22T00:18:06.000Z</pubTime>
+        
+        <tag>Investment</tag>
+         
+        <tag>AI</tag>
+         
+        <tag>5G</tag>
+         
+        <tag>IPR</tag>
+         
+        <tag>Education</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/31/Program/Java/deep-learning-of-java/</loc>
+    <lastmod>2017-03-31T04:33:40.194Z</lastmod>
+    <data>
+        <display>
+        <title>Java Deep Adventure</title>
+        <pubTime>2017-03-31T04:16:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>IO</tag>
+         
+        <tag>Reflection</tag>
+         
+        <tag>Byte Code</tag>
+         
+        <tag>Class Loader</tag>
+         
+        <tag>Thread</tag>
+         
+        <tag>Garbage Collector</tag>
+         
+        <tag>Generic</tag>
+         
+        <tag>Annotation</tag>
+         
+        <tag>Security</tag>
+         
+        <tag>Serialization</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://ipcreator.me/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/03/30/Program/Java/design-pattern-in-android/</loc>
-    <lastmod>2017-03-30T14:57:24.688Z</lastmod>
+    <lastmod>2017-03-31T04:07:23.545Z</lastmod>
     <data>
         <display>
         <title>Design Pattern in Android</title>
         <pubTime>2017-03-30T12:17:06.000Z</pubTime>
         
         <tag>Design Pattern</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/31/BusinessAI/andrew%20ng-artificial-intelligence-is-the-new-electricity/</loc>
+    <lastmod>2017-03-31T02:48:17.679Z</lastmod>
+    <data>
+        <display>
+        <title>Artificial Intelligence is the New Electricity</title>
+        <pubTime>2017-03-31T02:10:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Andrew Ng</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
+    <lastmod>2017-03-31T02:05:42.220Z</lastmod>
+    <data>
+        <display>
+        <title>Tips of  Android Studio</title>
+        <pubTime>2017-03-03T00:31:06.000Z</pubTime>
+        
+        <tag>Android Studio</tag>
+         
+        <tag>Tip</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
+    <lastmod>2017-03-31T02:05:17.673Z</lastmod>
+    <data>
+        <display>
+        <title>Android Dev Bugs</title>
+        <pubTime>2017-03-08T14:59:06.000Z</pubTime>
+        
+        <tag>Bugs</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/31/Program/Android/3rdLib/findbugs/</loc>
+    <lastmod>2017-03-31T02:00:05.228Z</lastmod>
+    <data>
+        <display>
+        <title>FindBugs™ - Find Bugs in Java Programs</title>
+        <pubTime>2017-03-30T23:06:06.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Third Library</tag>
+         
+        <tag>Find Bugs</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/30/Program/Android/3rdLib/quality-tools-for-Android/</loc>
+    <lastmod>2017-03-30T23:42:12.634Z</lastmod>
+    <data>
+        <display>
+        <title>Quality Tools for Android</title>
+        <pubTime>2017-03-30T12:18:06.000Z</pubTime>
+        
+        <tag>Findbugs</tag>
+         
+        <tag>Checkstyle</tag>
+         
+        <tag>PMD</tag>
+         
+        <tag>Lint</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/MyView/deep-thinking-change-my-life/</loc>
+    <lastmod>2017-03-30T23:11:10.391Z</lastmod>
+    <data>
+        <display>
+        <title>Best Practice of Deep Thinking</title>
+        <pubTime>2017-03-26T00:29:06.000Z</pubTime>
+        
+        <tag>Health</tag>
+         
+        <tag>Share</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/30/Program/Android/3rdLib/catagory-of-open-sources-projects-of-android/</loc>
+    <lastmod>2017-03-30T15:17:56.065Z</lastmod>
+    <data>
+        <display>
+        <title>Android Open Source Projects Organized by Trinea</title>
+        <pubTime>2017-03-30T14:24:06.000Z</pubTime>
+        
+        <tag>Third Library</tag>
+         
+        <tag>Trinea</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/30/Program/Android/android-knowledge-base/</loc>
+    <lastmod>2017-03-30T15:14:04.922Z</lastmod>
+    <data>
+        <display>
+        <title>Useful Android Resources</title>
+        <pubTime>2017-03-30T12:13:06.000Z</pubTime>
+        
+        <tag>Resource</tag>
          
          
            
@@ -198,75 +573,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
-    <lastmod>2017-03-30T13:36:23.271Z</lastmod>
-    <data>
-        <display>
-        <title>Android Dev Bugs</title>
-        <pubTime>2017-03-08T14:59:06.000Z</pubTime>
-        
-        <tag>Bugs</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/30/Program/Android/3rdLib/quality-tools-for-Android/</loc>
-    <lastmod>2017-03-30T13:36:05.356Z</lastmod>
-    <data>
-        <display>
-        <title>Quality Tools for Android</title>
-        <pubTime>2017-03-30T12:18:06.000Z</pubTime>
-        
-        <tag>Findbugs</tag>
-         
-        <tag>Checkstyle</tag>
-         
-        <tag>PMD</tag>
-         
-        <tag>Lint</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/26/MyView/English/computer-english-words/</loc>
-    <lastmod>2017-03-30T09:03:33.187Z</lastmod>
-    <data>
-        <display>
-        <title>Professional Words of Computer</title>
-        <pubTime>2017-03-25T16:00:00.000Z</pubTime>
-        
-        <tag>Word</tag>
-         
-        <tag>Profession</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/03/27/MyView/my-core-competitiveness/</loc>
     <lastmod>2017-03-30T08:53:31.042Z</lastmod>
     <data>
@@ -289,54 +595,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/22/MyView/English/love-words/</loc>
-    <lastmod>2017-03-30T04:11:18.658Z</lastmod>
-    <data>
-        <display>
-        <title>Love English Words</title>
-        <pubTime>2017-02-21T23:44:05.000Z</pubTime>
-        
-        <tag>Word</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/22/MyView/Original/big-trend/</loc>
-    <lastmod>2017-03-30T03:28:22.888Z</lastmod>
-    <data>
-        <display>
-        <title>Big Trends</title>
-        <pubTime>2017-03-22T00:18:06.000Z</pubTime>
-        
-        <tag>Investment</tag>
-         
-        <tag>AI</tag>
-         
-        <tag>5G</tag>
-         
-        <tag>IPR</tag>
-         
-        <tag>Education</tag>
-         
-         
-           
-             
-              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/03/08/Program/Android/glance-of-file-directory/</loc>
     <lastmod>2017-03-30T03:23:00.028Z</lastmod>
     <data>
@@ -345,50 +603,6 @@
         <pubTime>2017-03-08T14:59:06.000Z</pubTime>
         
         <tag>File Directory</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/26/MyView/deep-thinking-change-my-life/</loc>
-    <lastmod>2017-03-30T02:04:03.454Z</lastmod>
-    <data>
-        <display>
-        <title>Best Practice of Deep Thinking</title>
-        <pubTime>2017-03-26T00:29:06.000Z</pubTime>
-        
-        <tag>Health</tag>
-         
-        <tag>Share</tag>
-         
-         
-           
-             
-              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
-    <lastmod>2017-03-29T22:49:01.069Z</lastmod>
-    <data>
-        <display>
-        <title>Tips of  Android Studio</title>
-        <pubTime>2017-03-03T00:31:06.000Z</pubTime>
-        
-        <tag>Android Studio</tag>
-         
-        <tag>Tip</tag>
          
          
            
@@ -1304,26 +1518,6 @@
            
              
               <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/19/MyView/Original/why-stay-in-big-cities/</loc>
-    <lastmod>2017-03-27T10:06:39.881Z</lastmod>
-    <data>
-        <display>
-        <title>Experience Decides Destiny</title>
-        <pubTime>2017-03-19T13:51:18.000Z</pubTime>
-        
-        <tag>Share</tag>
-         
-         
-           
-             
-              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
           
         </display>
     </data>
@@ -2751,28 +2945,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/13/MyView/English/english-is-a-friend-for-everybody/</loc>
-    <lastmod>2017-03-27T09:24:24.718Z</lastmod>
-    <data>
-        <display>
-        <title>English is a Friend for Everyone</title>
-        <pubTime>2017-01-13T10:19:06.000Z</pubTime>
-        
-        <tag>English</tag>
-         
-        <tag>Friend</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/01/20/MyShare/financial-philosophy./</loc>
     <lastmod>2017-03-27T09:22:03.413Z</lastmod>
     <data>
@@ -3457,28 +3629,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    <data>
-        <display>
-        <title>Anatomy of GPU</title>
-        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>GPU</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
@@ -3503,23 +3653,43 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
         <display>
-        <title>Base of Multimedia——Color</title>
-        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
+        <title>Anatomy of GPU</title>
+        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Multimedia</tag>
-         
-        <tag>Color</tag>
+        <tag>GPU</tag>
          
          
            
              
               <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>AI vs Machine Learning</title>
+        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
           
         </display>
     </data>
@@ -3551,21 +3721,23 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>AI vs Machine Learning</title>
-        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
+        <title>Base of Multimedia——Color</title>
+        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Machine Learning</tag>
+        <tag>Multimedia</tag>
+         
+        <tag>Color</tag>
          
          
            
              
-              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
           
         </display>
     </data>
