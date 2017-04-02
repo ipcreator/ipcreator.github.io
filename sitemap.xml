@@ -2,6 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
+    
+    <lastmod>2017-04-02T15:06:49.064Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/02/Program/Android/deep-learning-of-android-by-luoshengyang/</loc>
+    
+    <lastmod>2017-04-02T14:57:49.059Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/MyView/English/computer-english-words/</loc>
+    
+    <lastmod>2017-04-02T14:04:06.275Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/02/Program/Tools/gradle/</loc>
+    
+    <lastmod>2017-04-02T12:27:41.688Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/31/Program/Android/Design/ui-app/</loc>
+    
+    <lastmod>2017-04-02T10:43:25.649Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/02/Program/Android/Design/permission-checker/</loc>
+    
+    <lastmod>2017-04-02T10:34:09.485Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
+    
+    <lastmod>2017-03-31T14:12:04.026Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/03/30/MyView/Original/why-i-insist-on-practicing-deliberately-eveyday/</loc>
     
     <lastmod>2017-03-31T13:32:30.483Z</lastmod>
@@ -12,13 +61,6 @@
     <loc>http://ipcreator.me/about/index.html</loc>
     
     <lastmod>2017-03-31T13:21:02.808Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/26/MyView/English/computer-english-words/</loc>
-    
-    <lastmod>2017-03-31T13:20:04.587Z</lastmod>
     
   </url>
   
@@ -110,20 +152,6 @@
     <loc>http://ipcreator.me/2017/03/31/BusinessAI/andrew%20ng-artificial-intelligence-is-the-new-electricity/</loc>
     
     <lastmod>2017-03-31T02:48:17.679Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
-    
-    <lastmod>2017-03-31T02:05:42.220Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
-    
-    <lastmod>2017-03-31T02:05:17.673Z</lastmod>
     
   </url>
   
@@ -1150,13 +1178,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
-    
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
     
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
@@ -1164,14 +1185,21 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
+    
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
     
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
     
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     
@@ -1185,7 +1213,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
+    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
     
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     

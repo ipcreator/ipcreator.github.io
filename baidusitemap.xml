@@ -4,6 +4,160 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
+    <lastmod>2017-04-02T15:06:49.064Z</lastmod>
+    <data>
+        <display>
+        <title>Android Dev Bugs</title>
+        <pubTime>2017-03-08T14:59:06.000Z</pubTime>
+        
+        <tag>Bugs</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/02/Program/Android/deep-learning-of-android-by-luoshengyang/</loc>
+    <lastmod>2017-04-02T14:57:49.059Z</lastmod>
+    <data>
+        <display>
+        <title>Deep Analysis and Learning of Android</title>
+        <pubTime>2017-04-02T14:53:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Luo Shengyang</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/MyView/English/computer-english-words/</loc>
+    <lastmod>2017-04-02T14:04:06.275Z</lastmod>
+    <data>
+        <display>
+        <title>Professional Words of Computer</title>
+        <pubTime>2017-03-25T16:00:00.000Z</pubTime>
+        
+        <tag>Word</tag>
+         
+        <tag>Profession</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/02/Program/Tools/gradle/</loc>
+    <lastmod>2017-04-02T12:27:41.688Z</lastmod>
+    <data>
+        <display>
+        <title>How to Use Gradle</title>
+        <pubTime>2017-04-02T10:39:06.000Z</pubTime>
+        
+        <tag>Gradle</tag>
+         
+        <tag>Tool</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/31/Program/Android/Design/ui-app/</loc>
+    <lastmod>2017-04-02T10:43:25.649Z</lastmod>
+    <data>
+        <display>
+        <title>App Architecture of Best Practice</title>
+        <pubTime>2017-03-30T23:35:06.000Z</pubTime>
+        
+        <tag>Best Practice</tag>
+         
+        <tag>UI</tag>
+         
+        <tag>Architecture</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/02/Program/Android/Design/permission-checker/</loc>
+    <lastmod>2017-04-02T10:34:09.485Z</lastmod>
+    <data>
+        <display>
+        <title>Permissions on Android</title>
+        <pubTime>2017-04-02T06:55:06.000Z</pubTime>
+        
+        <tag>Best Practice</tag>
+         
+        <tag>Permission</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
+    <lastmod>2017-03-31T14:12:04.026Z</lastmod>
+    <data>
+        <display>
+        <title>Tips of  Android Studio</title>
+        <pubTime>2017-03-03T00:31:06.000Z</pubTime>
+        
+        <tag>Android Studio</tag>
+         
+        <tag>Tip</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/03/30/MyView/Original/why-i-insist-on-practicing-deliberately-eveyday/</loc>
     <lastmod>2017-03-31T13:32:30.483Z</lastmod>
     <data>
@@ -23,28 +177,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/26/MyView/English/computer-english-words/</loc>
-    <lastmod>2017-03-31T13:20:04.587Z</lastmod>
-    <data>
-        <display>
-        <title>Professional Words of Computer</title>
-        <pubTime>2017-03-25T16:00:00.000Z</pubTime>
-        
-        <tag>Word</tag>
-         
-        <tag>Profession</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://ipcreator.me/2017/03/31/Program/Android/Design/architecture-of-android-app/</loc>
@@ -342,48 +474,6 @@
            
              
               <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
-    <lastmod>2017-03-31T02:05:42.220Z</lastmod>
-    <data>
-        <display>
-        <title>Tips of  Android Studio</title>
-        <pubTime>2017-03-03T00:31:06.000Z</pubTime>
-        
-        <tag>Android Studio</tag>
-         
-        <tag>Tip</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/08/Program/Android/android-trouble-resolver/</loc>
-    <lastmod>2017-03-31T02:05:17.673Z</lastmod>
-    <data>
-        <display>
-        <title>Android Dev Bugs</title>
-        <pubTime>2017-03-08T14:59:06.000Z</pubTime>
-        
-        <tag>Bugs</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
           
         </display>
     </data>
@@ -3629,6 +3719,28 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
+    <data>
+        <display>
+        <title>Anatomy of GPU</title>
+        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>GPU</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
@@ -3653,50 +3765,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    <data>
-        <display>
-        <title>Anatomy of GPU</title>
-        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>GPU</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>AI vs Machine Learning</title>
-        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Machine Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
@@ -3709,6 +3777,30 @@
         <tag>Linux</tag>
          
         <tag>File System</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>Base of Multimedia——Video</title>
+        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Multimedia</tag>
+         
+        <tag>Video</tag>
          
          
            
@@ -3745,23 +3837,21 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
+    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>Base of Multimedia——Video</title>
-        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
+        <title>AI vs Machine Learning</title>
+        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Multimedia</tag>
-         
-        <tag>Video</tag>
+        <tag>Machine Learning</tag>
          
          
            
              
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
           
         </display>
     </data>
