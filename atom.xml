@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-04-02T14:57:49.059Z</updated>
+  <updated>2017-04-03T16:12:47.094Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -14,6 +14,200 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Great Spirits on Github</title>
+    <link href="http://ipcreator.me/2017/04/03/Program/Android/3rdLib/great-spirit-on-github/"/>
+    <id>http://ipcreator.me/2017/04/03/Program/Android/3rdLib/great-spirit-on-github/</id>
+    <published>2017-04-03T09:36:06.000Z</published>
+    <updated>2017-04-03T16:12:47.094Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>Less is More!<br>Codes speak louder than Lectures</p>
+</blockquote>
+<p><img src="http://okkntqe2h.bkt.clouddn.com/Art_Mata_Nui_Space_Travel.jpg" alt=""></p>
+<p>Great Spirits show How Powerful and Wonderful codes are!</p>
+<a id="more"></a>  
+<h2 id="Jake-Wharton"><a href="#Jake-Wharton" class="headerlink" title="Jake Wharton"></a>Jake Wharton</h2><p><img src="http://ong8f1obl.bkt.clouddn.com/jake%20wharton.jpg" alt=""></p>
+<p>##greenrobot<br><img src="https://avatars0.githubusercontent.com/u/242242?v=3&amp;s=460" alt=""></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://github.com/JakeWharton" target="_blank" rel="external">Jake Wharton</a><br><a href="https://github.com/greenrobot" target="_blank" rel="external">greenrobot</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Less is More!&lt;br&gt;Codes speak louder than Lectures&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/Art_Mata_Nui_Space_Travel.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Great Spirits show How Powerful and Wonderful codes are!&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
+    
+    
+      <category term="Jake Wharton" scheme="http://ipcreator.me/tags/Jake-Wharton/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Compile Process of Android Application</title>
+    <link href="http://ipcreator.me/2017/04/03/Program/Android/Design/compile-process-of-apk/"/>
+    <id>http://ipcreator.me/2017/04/03/Program/Android/Design/compile-process-of-apk/</id>
+    <published>2017-04-03T03:44:06.000Z</published>
+    <updated>2017-04-03T04:52:52.001Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/android_build_detail.png" alt=""></p>
+<blockquote>
+<p>编译–&gt;DEX–&gt;打包–&gt;签名和对齐</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Package-Process"><a href="#Package-Process" class="headerlink" title="Package Process"></a>Package Process</h2><p><img src="http://upload-images.jianshu.io/upload_images/2839011-28f3fb0ca3af7d9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>上面这张图对上面的步骤以及每步用到的工具进行了细分，概括如下：</p>
+<p>Java编译器对工程本身的java代码进行编译，这些java代码有三个来源：app的源代码，由资源文件生成的R文件(aapt工具)，以及有aidl文件生成的java接口文件(aidl工具)。产出为.class文件。</p>
+<p>.class文件和依赖的三方库文件通过dex工具生成Delvik虚拟机可执行的.dex文件，可能有一个或多个，包含了所有的class信息，包括项目自身的class和依赖的class。产出为.dex文件。</p>
+<p>apkbuilder工具将.dex文件和编译后的资源文件生成未经签名对齐的apk文件。这里编译后的资源文件包括两部分，一是由aapt编译产生的编译后的资源文件，二是依赖的三方库里的资源文件。产出为未经签名的.apk文件。</p>
+<p>分别由Jarsigner和zipalign对apk文件进行签名和对齐，生成最终的apk文件。</p>
+<p>可以将整个打包过程概括为以下几步：</p>
+<ol>
+<li>通过aapt打包res资源文件，生成R.java、resources.arsc和res文件（二进制 &amp; 非二进制如res/raw和pic保持原样）</li>
+<li>处理.aidl文件，生成对应的Java接口文件</li>
+<li>通过Java Compiler编译R.java、Java接口文件、Java源文件，生成.class文件</li>
+<li>通过dex命令，将.class文件和第三方库中的.class文件处理生成classes.dex</li>
+<li>通过apkbuilder工具，将aapt生成的resources.arsc和res文件、assets文件和classes.dex一起打包生成apk</li>
+<li>通过Jarsigner工具，对上面的apk进行debug或release签名<br>通过zipalign工具，将签名后的apk进行对齐处理。</li>
+</ol>
+<p>关于zipalign工具，根据名字就知道是个zip文件对齐的工具。使得apk中的资源文件偏离文件起始位置4个字节，从而可以通过mmap()直接访问，从而减少RAM占用。</p>
+<p>下图是谷歌官网给出的一个典型的apk构建的过程，比较概括。主要包括两个过程，首先是编译过程，编译的内容包括本工程的文件以及依赖的各种库文件，编译的输出包括dex文件和编译后的资源文件。然后是打包过程。配合Keystore对第一步的输出进行签名对齐，生成最终的apk文件。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2839011-58310b412bae9a01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="APK-Content"><a href="#APK-Content" class="headerlink" title="APK Content"></a>APK Content</h2><p>apk包内容包括：</p>
+<ol>
+<li>classes.dex…</li>
+<li>resources.arsc</li>
+<li>assets</li>
+<li>res</li>
+<li>AndroidManifest.xml</li>
+<li>META-INF<br>7.<br>其中：<br>res中图片和raw文件下内容保持原样，res中其他xml文件内容均转化为二进制形式；assets文件内容保持原样<br>res中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要<strong>AssetManager</strong>类</li>
+</ol>
+<h2 id="Gradle-Process"><a href="#Gradle-Process" class="headerlink" title="Gradle Process"></a>Gradle Process</h2><p>Android工程通过gradle文件管理各项配置，gradle文件利用DSL（Domain Specific Language）语言描述配置，并使用Groovy语言处理编译逻辑。一个典型的Android工程结构如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2839011-0ba953a3e93d0d19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://img.blog.csdn.net/20151027092414376" alt=""></p>
+<p>在这里gradle文件分布在几个不同的层级，Project层级以及Module层级。</p>
+<ol>
+<li>Project层级的settings.gradle描述的是该Project包含哪些Module<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">include &apos;:presentation&apos;, &apos;:qamodel&apos;, &apos;:chatcommonmodule&apos;, &apos;:qa&apos;, &apos;:unlimit&apos;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Project层级的build.gradle描述的是作用于所有Module的配置，包括gradle版本等。</p>
+<ol>
+<li>Module层级的build.gradle。每个Module下都有一个作用于该Module的build.gradle文件，描述了该Module相关的配置。这些配置主要包括：BuildTypes，ProductFlavors，Dependency，SigningSettings等。</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><img src="https://gss0.baidu.com/7LsWdDW5_xN3otqbppnN2DJv/doc/pic/item/0bd162d9f2d3572c49ef6f258313632762d0c33e.jpg" alt=""><br>[1]<a href="http://blog.csdn.net/yanbober/article/details/49408489" target="_blank" rel="external">Android应用开发编译框架流程与IDE及Gradle概要</a><br>[2]<a href="https://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e?pn=1&amp;isFromWenku=1" target="_blank" rel="external">Android Gradle权威指南</a><br>[3]<a href="http://www.jianshu.com/p/9df3c3b6067a" target="_blank" rel="external">Gradle 完整指南（Android）</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ong8f1obl.bkt.clouddn.com/android_build_detail.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;编译–&amp;gt;DEX–&amp;gt;打包–&amp;gt;签名和对齐&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
+    
+    
+      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
+    
+      <category term="Gradle" scheme="http://ipcreator.me/tags/Gradle/"/>
+    
+      <category term="Compile" scheme="http://ipcreator.me/tags/Compile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Improve Code Inspection with Annotations</title>
+    <link href="http://ipcreator.me/2017/04/03/Program/Java/improve-code-inspection-with-annotations/"/>
+    <id>http://ipcreator.me/2017/04/03/Program/Java/improve-code-inspection-with-annotations/</id>
+    <published>2017-04-03T03:44:06.000Z</published>
+    <updated>2017-04-03T15:34:12.974Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://developer.android.com/studio/images/write/indirect-permissions-warning_2-2_2x.png?hl=zh-cn" alt=""></p>
+<ol>
+<li><a href="#What&#39;s-Annotation?">What’s Annotation?</a></li>
+<li><a href="#Why-use-Annotation?">Why use Annotation?</a></li>
+<li><a href="#How-to-Use-Annotation?">How to Use Annotation?</a></li>
+<li><a href="#Pitfall">Pitfall</a></li>
+<li><a href="#Best-Practice">Best Practice</a></li>
+</ol>
+<a id="more"></a>
+<h2 id="What’s-Annotation"><a href="#What’s-Annotation" class="headerlink" title="What’s Annotation?"></a>What’s Annotation?</h2><h3 id="Annotation"><a href="#Annotation" class="headerlink" title="Annotation"></a>Annotation</h3><h4 id="interface"><a href="#interface" class="headerlink" title="@interface"></a>@interface</h4><p>@interface是java中用于声明注解类的关键字.使用该注解表示将自动继承java.lang.annotation.Annotation类,该过程交给编译器完成.需要注意:在定义注解时,不能继承其他注解或接口.</p>
+<p>元注解：<br>元注解的作用就是负责注解其他注解。Java5.0定义了4个标准的meta-annotation类型，它们被用来提供对其它 annotation类型作说明。Java5.0定义的元注解：<br>@Target,<br>@Retention,<br>@Documented,<br>@Inherited</p>
+<h4 id="Target："><a href="#Target：" class="headerlink" title="@Target："></a>@Target：</h4><p>该注解用于定义注解的作用目标,即注解可以用在什么地方,比如是用于方法上还是用于字段上,该注解接受以下参数:</p>
+<p>作用目标    含义<br>@Target(ElementType.TYPE)    用于接口(注解本质上也是接口),类,枚举<br>@Target(ElementType.FIELD)    用于字段,枚举常量<br>@Target(ElementType.METHOD)    用于方法<br>@Target(ElementType.PARAMETER)    用于方法参数<br>@Target(ElementType.CONSTRUCTOR)    用于构造参数<br>@Target(ElementType.LOCAL_VARIABLE)    用于局部变量<br>@Target(ElementType.ANNOTATION_TYPE)    用于注解<br>@Target(ElementType.PACKAGE)    用于包</p>
+<p>,通过@interface,@Retention,@Target已经可以完整的定义一个注解</p>
+<h4 id="Retention："><a href="#Retention：" class="headerlink" title="@Retention："></a>@Retention：</h4><p>对Annotation的“生命周期”限制：某些Annotation仅出现在源代码中，而被编译器丢弃；而另一些却被编译在class文件中；编译在class文件中的Annotation可能会被虚拟机忽略，而另一些在class被装载时将被读取。<br>作用：表示需要在什么级别保存该注释信息，用于描述注解的生命周期（即：被描述的注解在什么范围内有效）<br>RetentionPolicy.SOURCE:在源文件中有效<br>RetentionPolicy.CLASS:在class文件中有效<br>RetentionPolicy.RUNTIME:在运行时有效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@Target(ElementType.FIELD)</div><div class="line">@Retention(RetentionPolicy.RUNTIME)</div><div class="line">public @interface Column &#123;</div><div class="line">    public String name() default &quot;fieldName&quot;;</div><div class="line">    public boolean defaultDBValue() default false;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Column注解的的RetentionPolicy的属性值是RUTIME,这样注解处理器可以通过反射，获取到该注解的属性值，从而去做一些运行时的逻辑处理。</p>
+<h4 id="Documented"><a href="#Documented" class="headerlink" title="@Documented:"></a>@Documented:</h4><p>该注解用于描述其它类型的annotation应该被javadoc文档化,出现在api doc中.<br>比如使用该注解的@Target会出出现在api说明中.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@Documented</div><div class="line">@Retention(RetentionPolicy.RUNTIME)</div><div class="line">@Target(ElementType.ANNOTATION_TYPE)</div><div class="line">public @interface Target &#123;</div><div class="line">    ElementType[] value();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20161222232726578?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGQ4NjQxNDAxMzA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<h4 id="Inherited："><a href="#Inherited：" class="headerlink" title="@Inherited："></a>@Inherited：</h4><p>是一个标记注解，@Inherited阐述了某个被标注的类型是被继承的。如果一个使用了@Inherited修饰的annotation类型被用于一个class，则这个annotation将被用于该class的子类。</p>
+<p>注意：当@Inherited的Retention是RetentionPolicy.RUNTIME，则反射API增强了这种继承性。如果我们使用java.lang.reflect去查询一个@Inherited annotation类型的annotation时，反射代码检查将展开工作：检查class和其父类，直到发现指定的annotation类型被发现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@Inherited</div><div class="line">public @interface Greeting &#123;</div><div class="line">    public enum FontColor&#123; BULE,RED,GREEN&#125;;</div><div class="line">    String name();</div><div class="line">    FontColor fontColor() default FontColor.GREEN;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="注解参数"><a href="#注解参数" class="headerlink" title="注解参数"></a>注解参数</h4><p>参数成员只能用基本类型byte,short,char,int,long,float,double,boolean八种基本数据类型和 String,Enum,Class,annotations等数据类型,以及这一些类型的数组。</p>
+<h4 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h4><p>注解元素必须有确定的值，要么在定义注解的默认值中指定，要么在使用注解时指定，非基本类型的注解元素的值不可为null。因此, 使用空字符串或0作为默认值是一种常用的做法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@Target(ElementType.FIELD)</div><div class="line">@Retention(RetentionPolicy.RUNTIME)</div><div class="line">@Documented</div><div class="line">public @interface FruitProvider &#123;</div><div class="line">    public int id() default -1;</div><div class="line">    public String name() default &quot;&quot;;</div><div class="line">    public String address() default &quot;&quot;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@Target(ElementType.FIELD)</div><div class="line">@Retention(RetentionPolicy.RUNTIME)</div><div class="line">@Documented</div><div class="line">public @interface FruitProvider &#123;</div><div class="line">    public int value() default -1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="系统注解"><a href="#系统注解" class="headerlink" title="系统注解"></a>系统注解</h4><p>java设计者已经为我们自定义了几个常用的注解,我们称之为系统注解,主要是这三个:</p>
+<p>系统注解    含义<br>@Override    用于修饰方法,表示此方法重写了父类方法<br>像@Override这样,没有成员定义的注解称之为标记注解.</p>
+<p>@Deprecated    用于修饰方法,表示此方法已经过时<br>需要注意@Deprecated和@deprecated这两者的区别,前者被javac识别和处理,而后者则是被javadoc工具识别和处理.因此当我们需要在源码标记某个方法已经过时应该使用@Deprecated,如果需要在文档中说明则使用@deprecated</p>
+<p>@SuppressWarnnings    该注解用于告诉编译器忽视某类编译警告<br>该注解被用于有选择的关闭编译器对类,方法,成员变量即变量初始化的警告.该注解可接受以下参数:</p>
+<p>参数    含义<br>deprecated    使用已过时类,方法,变量<br>unchecked    执行了未检查的转告时的警告,如使用集合是为使用泛型来制定集合保存时的类型<br>fallthrough    使用switch,但是没有break时<br>path    类路径,源文件路径等有不存在的路径<br>serial    可序列化的类上缺少serialVersionUID定义时的警告<br>finally    任何finally字句不能正常完成时的警告<br>all    以上所有情况的警告</p>
+<h4 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h4><p>了解完系统注解之后,现在我们就可以自己来定义注解了,通过上面@Override的实例,不难看出定义注解的格式如下:</p>
+<p>public @interface 注解名 {定义体}</p>
+<p>定义体就是方法的集合,每个方法实则是声明了一个配置参数.方法的名称作为配置参数的名称,方法的返回值类型就是配置参数的类型.和普通的方法不一样,可以通过default关键字来声明配置参数的默认值.</p>
+<p>需要注意:</p>
+<ol>
+<li>此处只能使用public或者默认的default两个权限修饰符</li>
+<li>配置参数的类型只能使用基本类型(byte,boolean,char,short,int,long,float,double)和String,Enum,Class,annotation</li>
+<li>对于只含有一个配置参数的注解,参数名建议设置中value,即方法名为value</li>
+<li>配置参数一旦设置,其参数值必须有确定的值,要不在使用注解的时候指定,要不在定义注解的时候使用default为其设置默认值,对于非基本类型的参数值来说,其不能为null.<br>像@Override这样,没有成员定义的注解称之为标记注解.</li>
+</ol>
+<h3 id="注解处理器"><a href="#注解处理器" class="headerlink" title="注解处理器"></a>注解处理器</h3><p>根据注解的特性,注解处理器可以分为<strong>运行时注解处理</strong>和<strong>编译时注解处理器</strong>.运行时处理器需要借助反射机制实现,而编译时处理器则需要借助APT来实现.</p>
+<h2 id="Why-use-Annotation"><a href="#Why-use-Annotation" class="headerlink" title="Why use Annotation?"></a>Why use Annotation?</h2><p>Annotations allow you to provide hints to code inspections tools like Lint, to help detect these more subtle code problems. They are added as metadata tags that you attach to variables, parameters, and return values to inspect method return values, passed parameters, local variables, and fields. When used with code inspections tools, annotations can help you detect problems, such as null pointer exceptions and resource type conflicts.</p>
+<h2 id="How-to-Use-Annotation"><a href="#How-to-Use-Annotation" class="headerlink" title="How to Use Annotation?"></a>How to Use Annotation?</h2><p>Android supports a variety of annotations through the <a href="https://developer.android.com/topic/libraries/support-library/features.html?hl=zh-cn#annotations" target="_blank" rel="external">Annotations Support Library</a>. You can access the library through the <a href="https://developer.android.com/reference/android/support/annotation/package-summary.html?hl=zh-cn" target="_blank" rel="external">android.support.annotation</a> package.</p>
+<h3 id="Nullness-Annotations"><a href="#Nullness-Annotations" class="headerlink" title="Nullness Annotations"></a>Nullness Annotations</h3><h3 id="线程注解-UiThread-WorkerThread-…"><a href="#线程注解-UiThread-WorkerThread-…" class="headerlink" title="线程注解: @UiThread, @WorkerThread, …"></a>线程注解: @UiThread, @WorkerThread, …</h3><p>(Support library 22.2及其之后版本支持.)</p>
+<p>如果你的方法只能在指定的线程类型中被调用，那么你就可以使用以下4个注解来标注它：<br>@UiThread<br>@MainThread<br>@WorkerThread<br>@BinderThread<br>如果一个类中的所有方法都有相同的线程需求，那么你可以注解类本身。比如android.view.View，就被用@UiThread标注。</p>
+<p>关于线程注解使用的一个很好的例子就是AsyncTask：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@WorkerThread</div><div class="line">protected abstract Result doInBackground(Params... params);</div><div class="line"></div><div class="line">@MainThread</div><div class="line">protected void onProgressUpdate(Progress... values) &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>@UiThread还是@MainThread?</p>
+<p>在进程里只有一个主线程。这个就是@MainThread。同时这个线程也是一个@UiThread。比如activity的主要窗口就运行在这个线程上。然而它也有能力为应用创建其他线程。这很少见，一般具备这样功能的都是系统进程。通常是把和生命周期有关的用@MainThread标注，和View层级结构相关的用@UiThread标注。但是由于@MainThread本质上是一个@UiThread，而大部分情况下@UiThread又是一个@MainThread，所以工具(lint ,Android Studio,等等)可以把他们互换，所以你能在一个可以调用@MainThread方法的地方也能调用@UiThread方法，反之亦然。</p>
+<p>值约束: @Size, @IntRange, @FloatRange</p>
+<h2 id="Pitfall"><a href="#Pitfall" class="headerlink" title="Pitfall"></a>Pitfall</h2><h2 id="Best-Practice"><a href="#Best-Practice" class="headerlink" title="Best Practice"></a>Best Practice</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="https://developer.android.com/studio/write/annotations.html?hl=zh-cn#adding-annotations" target="_blank" rel="external">Improve Code Inspection with Annotations</a><br>[2]<a href="http://www.flysnow.org/2015/08/13/android-tech-docs-support-annotations.html" target="_blank" rel="external">Android注解支持(Support Annotations)</a><br>[3]<a href="https://juejin.im/entry/58df5e5c2f301e006208b307" target="_blank" rel="external">性能最佳实践: 在开发中避免使用枚举</a><br>[4]<a href="https://joyrun.github.io/2016/07/18/java-annotation/" target="_blank" rel="external">Java Annotation最佳入门实践</a><br>[5]<a href="https://joyrun.github.io/2016/07/19/AptHelloWorld/" target="_blank" rel="external">Android APT（编译时代码生成）最佳实践</a><br>[6]<a href="https://joyrun.github.io/2016/08/01/ActivityRouter/" target="_blank" rel="external">ActivityRouter路由框架：通过注解实现URL打开Activity</a><br>[7]<a href="http://blog.csdn.net/dd864140130/article/details/53875814" target="_blank" rel="external">基础篇：带你从头到尾玩转注解</a><br>[8]<a href="http://blog.csdn.net/dd864140130/article/details/53957691" target="_blank" rel="external">拓展篇：注解处理器最佳实践</a><br>[9]<a href="http://www.infoq.com/cn/articles/cf-java-annotation?utm_source=articles_about_java-depth-adventure&amp;utm_medium=link&amp;utm_campaign=java-depth-adventure" target="_blank" rel="external">Java深度历险（六）——Java注解</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://developer.android.com/studio/images/write/indirect-permissions-warning_2-2_2x.png?hl=zh-cn&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;#What&amp;#39;s-Annotation?&quot;&gt;What’s Annotation?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#Why-use-Annotation?&quot;&gt;Why use Annotation?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#How-to-Use-Annotation?&quot;&gt;How to Use Annotation?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#Pitfall&quot;&gt;Pitfall&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#Best-Practice&quot;&gt;Best Practice&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
+    
+    
+      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
+    
+      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
+    
+      <category term="Annotation" scheme="http://ipcreator.me/tags/Annotation/"/>
+    
+  </entry>
   
   <entry>
     <title>Deep Analysis and Learning of Android</title>
@@ -66,11 +260,11 @@
     <link href="http://ipcreator.me/2017/04/02/Program/Tools/gradle/"/>
     <id>http://ipcreator.me/2017/04/02/Program/Tools/gradle/</id>
     <published>2017-04-02T10:39:06.000Z</published>
-    <updated>2017-04-02T12:27:41.688Z</updated>
+    <updated>2017-04-03T05:47:35.573Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://lookcode-wordpress.stor.sinaapp.com/uploads/2016/01/20160121074552943.png" alt=""></p>
+    <content type="html"><![CDATA[<p><img src="https://gradle.org/images/homepage/gradle-org-hero.png" alt=""></p>
 <blockquote>
-<p>Gradle is a powerful tool than you can image!</p>
+<p>Gradle is a powerful tool than you can image!<br>Accelerate developer productivity</p>
 </blockquote>
 <ol>
 <li><a href="#What&#39;s-the-Gradle?">What’s the Gradle?</a></li>
@@ -85,6 +279,9 @@
 </blockquote>
 <p>Gradle（英[g’reɪdl]）是一个任务驱动型的构建工具，是一个依赖管理工具，更是一个编程框架。<br>它抛弃了基于XML的各种繁琐配置，取而代之的是一种基于Groovy的内部领域特定（DSL）语言。<br>在android studio中，我们使用这个工具可以完成app的编译打包等工作。</p>
 <h3 id="Basic-Gradle-Component"><a href="#Basic-Gradle-Component" class="headerlink" title="Basic Gradle Component"></a>Basic Gradle Component</h3><p>每一个build.gradle文件代表着一个Project。Tasks在build.gradle中定义。当初始化构建进程时，gradle会基于build文件，集合所有的Project和Tasks,一个Tasks包含了一系列动作，然后它们将会按照顺序执行，一个动作就是一段被执行的代码，很像Java中的方法。</p>
+<blockquote>
+<p>Gradle实际上是一个容器，实现真正的功能的都是Gradle的插件Plugin，而Plugin中又定义了各式各样的Task，这一个个的Task是执行任务的基本单元。</p>
+</blockquote>
 <h4 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h4><p>每一个待编译的工程（可以是一个jar包，一个web应用，或者一个android app等）都称为一个Project。</p>
 <h4 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h4><p>每一个Project在构建的时候都包含一系列的Task。一个Task其实就是构建过程中一个原子性的操作。比如一个Android APK的编译可能包含：</p>
 <ul>
@@ -96,7 +293,11 @@
 <li>签名Task等。</li>
 </ul>
 <h3 id="Plugin"><a href="#Plugin" class="headerlink" title="Plugin"></a>Plugin</h3><p>Gradle是一个框架，作为框架，它负责定义流程和规则。而具体的编译工作则是通过插件的方式来完成的。比如编译Java有Java插件，编译Groovy有Groovy插件，编译Android APP有Android APP插件，编译Android Library有Android Library插件。<br>简单来说，插件就是一系列任务的集合，主要作用是把一些重复利用的逻辑打包，这样就可以在不同的项目中可以重复的使用。<br>要使用插件，可以通过引入依赖的方式添加。</p>
-<h2 id="Why-use-Gradle"><a href="#Why-use-Gradle" class="headerlink" title="Why use Gradle?"></a>Why use Gradle?</h2><h3 id="Goals-of-the-new-Build-System（使用gradle的目的）"><a href="#Goals-of-the-new-Build-System（使用gradle的目的）" class="headerlink" title="Goals of the new Build System（使用gradle的目的）"></a>Goals of the new Build System（使用gradle的目的）</h3><ol>
+<h2 id="Why-use-Gradle"><a href="#Why-use-Gradle" class="headerlink" title="Why use Gradle?"></a>Why use Gradle?</h2><p>From mobile apps to microservices, from small startups to big enterprises, Gradle helps teams build, automate and deliver better software, faster.</p>
+<h3 id="Build-Anything"><a href="#Build-Anything" class="headerlink" title="Build Anything"></a>Build Anything</h3><p><img src="https://gradle.org/images/homepage/build-anything.png" alt=""><br>Write in Java, C++, Python or your language of choice. Package for deployment on any platform. Go monorepo or multi-repo. And rely on Gradle’s unparalleled versatility to build it all.</p>
+<h3 id="Automate-Everything"><a href="#Automate-Everything" class="headerlink" title="Automate Everything"></a>Automate Everything</h3><p><img src="https://gradle.org/images/homepage/automate-everything.png" alt=""><br>Use Gradle’s rich API and mature ecosystem of plugins and integrations to get ambitious about automation. Model, integrate and systematize the delivery of your software from end to end.</p>
+<h3 id="Deliver-Faster"><a href="#Deliver-Faster" class="headerlink" title="Deliver Faster"></a>Deliver Faster</h3><p><img src="https://gradle.org/images/homepage/deliver-faster.png" alt=""><br>Scale out development with elegant, blazing-fast builds. From compile avoidance to advanced caching and beyond, we pursue performance relentlessly so your team can deliver continuously.</p>
+<h3 id="Goals-of-the-new-Build-System（使用gradle的目的）"><a href="#Goals-of-the-new-Build-System（使用gradle的目的）" class="headerlink" title="Goals of the new Build System（使用gradle的目的）"></a>Goals of the new Build System（使用gradle的目的）</h3><ol>
 <li>Make it easy to reuse code and resources</li>
 <li>Make it easy to create several variants of an 3. application, either for multi-apk distribution or for different flavors of an application</li>
 <li>Make it easy to configure, extend and customize the build process</li>
@@ -173,14 +374,19 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line"></div><div class="line">    compileSdkVersion rootProject.ext.compileSdkVersion</div><div class="line"></div><div class="line">    buildToolsVersion rootProject.ext.buildToolsVersion</div><div class="line"></div><div class="line">   defaultConfig &#123;</div><div class="line"></div><div class="line">      applicationId &quot;com.xxx.xxx&quot;</div><div class="line"></div><div class="line">      minSdkVersion rootProject.ext.minSdkVersion</div><div class="line"></div><div class="line">      targetSdkVersion rootProject.ext.targetSdkVersion</div><div class="line"></div><div class="line">      versionCode rootProject.ext.versionCode</div><div class="line"></div><div class="line">      versionName rootProject.ext.versionName</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="resValue-定义资源"><a href="#resValue-定义资源" class="headerlink" title="resValue 定义资源"></a>resValue 定义资源</h3><p>例如resValue “string” 就是字符串资源，可以用R.String 来引用对应的字符串资源</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">     defaultConfig &#123;</div><div class="line">         resValue &quot;string&quot;, &quot;build_time&quot;, buildTime()</div><div class="line">         resValue &quot;string&quot;, &quot;build_host&quot;, hostName()</div><div class="line">         resValue &quot;string&quot;, &quot;build_revision&quot;, revision()</div><div class="line">      &#125;</div><div class="line"> &#125;</div><div class="line"></div><div class="line">  def buildTime() &#123;</div><div class="line">     return new Date().format(&quot;yyyy-MM-dd HH:mm:ss&quot;)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  def hostName() &#123;</div><div class="line">     return System.getProperty(&quot;user.name&quot;) + &quot;@&quot; +InetAddress.localHost.hostName</div><div class="line">   &#125;</div><div class="line"></div><div class="line">  def revision() &#123;</div><div class="line">    def code = new ByteArrayOutputStream()</div><div class="line">       exec &#123;</div><div class="line">          commandLine &apos;git&apos;, &apos;rev-parse&apos;, &apos;--short&apos;, &apos;HEAD&apos;</div><div class="line">          standardOutput = code</div><div class="line">        &#125;</div><div class="line">    return code.toString()</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="http://www.lcode.org/%E4%BC%98%E9%9B%85%E7%9A%84android-studio%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE-%E5%B8%B8%E7%94%A8%E5%BA%93%E5%92%8C%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" target="_blank" rel="external">优雅的Android Studio项目配置–常用库和版本管理</a><br>[2]<a href="http://www.ratdream.com/2016/09/09/%E4%BC%98%E9%9B%85%E7%9A%84%E7%AE%A1%E7%90%86%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" target="_blank" rel="external">优雅的管理第三方库</a><br>[3]<a href="http://www.jianshu.com/p/88fb3876d92d" target="_blank" rel="external">Gradle从入门到了解</a></p>
+<h3 id="属性默认值"><a href="#属性默认值" class="headerlink" title="属性默认值"></a>属性默认值</h3><p>如果某个属性的值没有使用DSL设置，这个属性将会使用某些默认值，下表展示了默认值的处理过程。</p>
+<p>属性名    DSL对象中的默认值   默认值</p>
+<p>Property Name     Default value in DSL object     Default value<br>versionCode     -1     value from manifest if present<br>versionName     null     value from manifest if present<br>minSdkVersion     -1     value from manifest if present<br>targetSdkVersion     -1     value from manifest if present<br>applicationId     null     value from manifest if present<br>testApplicationId     null     applicationId + “.test”<br>testInstrumentationRunner     null     android.test.InstrumentationTestRunner<br>signingConfig     null     null<br>proguardFile     N/A (set only)     N/A (set only)<br>proguardFiles     N/A (set only)     N/A (set only)</p>
+<p>如果你想在build脚本中使用自定义的逻辑来查询这些属性，第二列中的值就很重要。比如，你可以编写如下的代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (android.defaultConfig.testInstrumentationRunner == <span class="keyword">null</span>) &#123;  </div><div class="line">   <span class="comment">// assign a better default...  </span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果属性的值仍然是null，那么在构建的时候，就会使用第三列的默认值，但是DSL元素中并不包含这些默认值，因此你不能在程序中查询这些值。这样做的目的是仅在必要的时候（构建时）才会去解析manifest内容。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="http://www.lcode.org/%E4%BC%98%E9%9B%85%E7%9A%84android-studio%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE-%E5%B8%B8%E7%94%A8%E5%BA%93%E5%92%8C%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" target="_blank" rel="external">优雅的Android Studio项目配置–常用库和版本管理</a><br>[2]<a href="http://www.ratdream.com/2016/09/09/%E4%BC%98%E9%9B%85%E7%9A%84%E7%AE%A1%E7%90%86%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" target="_blank" rel="external">优雅的管理第三方库</a><br>[3]<a href="http://www.jianshu.com/p/88fb3876d92d" target="_blank" rel="external">Gradle从入门到了解</a><br>[4]<a href="http://www.jianshu.com/p/9dcec4a14c52" target="_blank" rel="external">Gradle for Android 问题总结</a><br>[5]<a href="https://www.gitbook.com/book/dongchuan/gradle-user-guide-/details" target="_blank" rel="external">Gradle User Guide 中文版</a><br>[6]<a href="http://unclechen.github.io/2015/10/22/Android-Studio-Gradle%E5%AE%9E%E8%B7%B5%E4%B9%8B%E5%A4%9A%E6%B8%A0%E9%81%93%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%93%E5%8C%85+%E7%89%88%E6%9C%AC%E5%8F%B7%E7%AE%A1%E7%90%86/" target="_blank" rel="external">Android Studio Gradle实践之多渠道自动化打包+版本号管理</a><br>[7]<a href="http://blog.csdn.net/lzyzsd/article/category/2795779" target="_blank" rel="external">深入浅出Android Gradle构建系统</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://lookcode-wordpress.stor.sinaapp.com/uploads/2016/01/20160121074552943.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://gradle.org/images/homepage/gradle-org-hero.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Gradle is a powerful tool than you can image!&lt;/p&gt;
+&lt;p&gt;Gradle is a powerful tool than you can image!&lt;br&gt;Accelerate developer productivity&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;#What&amp;#39;s-the-Gradle?&quot;&gt;What’s the Gradle?&lt;/a&gt;&lt;/li&gt;
@@ -7462,6 +7668,53 @@
   </entry>
   
   <entry>
+    <title>Why I Insist on Using English</title>
+    <link href="http://ipcreator.me/2017/03/29/MyView/English/why-i-insist-on-using-english/"/>
+    <id>http://ipcreator.me/2017/03/29/MyView/English/why-i-insist-on-using-english/</id>
+    <published>2017-03-29T01:19:06.000Z</published>
+    <updated>2017-04-03T15:34:12.945Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/Learn-English.jpg" alt=""></p>
+<blockquote>
+<p>Using  is the only and the best way of learning English.<br>Program skills depend  on English.<br>You can appreciate and taste more precious beauty things , such as great mind, good books, fabulous music, touching movies…</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Sentence-5"><a href="#Sentence-5" class="headerlink" title="Sentence[5]"></a>Sentence<sup>[5]<sup></sup></sup></h2><p>He who knows others is learned, and he who knows himself is wise.</p>
+<p>To conquer yourself is more powerful than to defeat other people.</p>
+<p>Study serve the practical purpose.</p>
+<p>Knowledge is action, action is knowledge.</p>
+<p>Don’t forget why start off, otherwise it is difficult to achieve the ultimate goal.</p>
+<p>Many people start a career with a dream, then get busy forgetting it.</p>
+<p>Without purpose, the days would have ended, as such days always end, in disintegration.</p>
+<p>If you set your goals ridiculously high and it’s a failure, you will fail above everyone else’s success.</p>
+<p><strong>Our plans miscarry because they have no aim. If one does not know to which port one is sailing, no wind is favorable.</strong></p>
+<h2 id="Article-4"><a href="#Article-4" class="headerlink" title="Article[4]"></a>Article<sup>[4]<sup></sup></sup></h2><h3 id="Youth"><a href="#Youth" class="headerlink" title="Youth"></a>Youth</h3><p>Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life.</p>
+<p>Youth means a temperamental predominance of courage over timidity, of the appetite for adventure over the love of ease. This often exists in a man of 60 more than a boy of 20. Nobody grows old merely by a number of years. We grow old by deserting our ideals.</p>
+<p><strong>Years may wrinkle the skin, but to give up enthusiasm wrinkles the soul. Worry, fear, self-distrust bows the heart and turns the spirit back to dust.</strong></p>
+<p>Whether 60 or 16, there is in every human being’s heart the lure of wonders, the unfailing child appetite for what’s next and the joy of the game of living. In the center of your heart and my heart, there is a wireless station; so long as it receives messages of beauty, hope, cheer, courage and power from man and from the infinite, so long as you are young.</p>
+<p>When your aerials are down, and your spirit is covered with snows of cynicism and the ice of pessimism, then you’ve grown old, even at 20; but as long as your aerials are up, to catch waves of optimism, there’s hope you may die young at 80.</p>
+<h2 id="Music-8"><a href="#Music-8" class="headerlink" title="Music[8]"></a>Music<sup>[8]<sup></sup></sup></h2><p>Santana——Smooth</p>
+<h2 id="Movie-9"><a href="#Movie-9" class="headerlink" title="Movie[9]"></a>Movie<sup>[9]<sup></sup></sup></h2><p>Billy Lynn’s Long Halftime Walk</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="/2017/01/20/MyView/English/how-to-use-english/">How to Use English</a><br>[2]<a href="/2017/01/13/MyView/English/english-is-a-friend-for-everybody/">English is a Friend for Everyone</a><br>[3]<a href="/2017/02/22/MyView/English/my-translations/">Quotes by Famous People</a><br>[4]<a href="/2017/02/21/MyView/English/beautiful-article-of-english/">Beautiful Articles of English</a><br>[5]<a href="/2016/12/31/MyView/English/view-of-english/">Beauty of English</a><br>[6]<a href="/2017/03/26/MyView/English/computer-english-words/">Professional Words of Computer</a><br>[7]<a href="/2017/02/22/MyView/English/love-words/">Love English Words</a><br>[8]<a href="/2017/03/27/MyView/Music/santana-smooth/">Santana——Smooth</a><br>[9]<a href="/2017/03/08/MyView/Movie/billy-lynn&#39;s-long-halftime-walk/">Billy Lynn’s Long Halftime Walk</a><br>[10]<a href="https://movie.douban.com/top250" target="_blank" rel="external">Douban Movie Top250</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/Learn-English.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Using  is the only and the best way of learning English.&lt;br&gt;Program skills depend  on English.&lt;br&gt;You can appreciate and taste more precious beauty things , such as great mind, good books, fabulous music, touching movies…&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="English" scheme="http://ipcreator.me/categories/English/"/>
+    
+    
+      <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Why I Insist on Writing Blog</title>
     <link href="http://ipcreator.me/2017/03/29/MyView/Original/why-i-write-blog/"/>
     <id>http://ipcreator.me/2017/03/29/MyView/Original/why-i-write-blog/</id>
@@ -7586,53 +7839,6 @@
       &lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/blog.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Improving your  ability of deep thinking by writing&lt;br&gt;Record your  learning and growing up&lt;br&gt;Gain new insights through reviewing old materials&lt;br&gt;Force myself to Using English&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
-    
-    
-      <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Why I Insist on Using English</title>
-    <link href="http://ipcreator.me/2017/03/29/MyView/English/why-i-insist-on-using-english/"/>
-    <id>http://ipcreator.me/2017/03/29/MyView/English/why-i-insist-on-using-english/</id>
-    <published>2017-03-29T01:19:06.000Z</published>
-    <updated>2017-03-29T05:27:10.883Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://okkntqe2h.bkt.clouddn.com/Learn-English.jpg" alt=""></p>
-<blockquote>
-<p>Using  is the only and the best way of learning English.<br>Program skills depend  on English.<br>You can appreciate and taste more precious beauty things , such as great mind, good books, fabulous music, touching movies…</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="Sentence-5"><a href="#Sentence-5" class="headerlink" title="Sentence[5]"></a>Sentence<sup>[5]<sup></sup></sup></h2><p>He who knows others is learned, and he who knows himself is wise.</p>
-<p>To conquer yourself is more powerful than to defeat other people.</p>
-<p>Study serve the practical purpose.</p>
-<p>Knowledge is action, action is knowledge.</p>
-<p>Don’t forget why start off, otherwise it is difficult to achieve the ultimate goal.</p>
-<p>Many people start a career with a dream, then get busy forgetting it.</p>
-<p>Without purpose, the days would have ended, as such days always end, in disintegration.</p>
-<p>If you set your goals ridiculously high and it’s a failure, you will fail above everyone else’s success.</p>
-<p><strong>Our plans miscarry because they have no aim. If one does not know to which port one is sailing, no wind is favorable.</strong></p>
-<h2 id="Article-4"><a href="#Article-4" class="headerlink" title="Article[4]"></a>Article<sup>[4]<sup></sup></sup></h2><h3 id="Youth"><a href="#Youth" class="headerlink" title="Youth"></a>Youth</h3><p>Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life.</p>
-<p>Youth means a temperamental predominance of courage over timidity, of the appetite for adventure over the love of ease. This often exists in a man of 60 more than a boy of 20. Nobody grows old merely by a number of years. We grow old by deserting our ideals.</p>
-<p><strong>Years may wrinkle the skin, but to give up enthusiasm wrinkles the soul. Worry, fear, self-distrust bows the heart and turns the spirit back to dust.</strong></p>
-<p>Whether 60 or 16, there is in every human being’s heart the lure of wonders, the unfailing child appetite for what’s next and the joy of the game of living. In the center of your heart and my heart, there is a wireless station; so long as it receives messages of beauty, hope, cheer, courage and power from man and from the infinite, so long as you are young.</p>
-<p>When your aerials are down, and your spirit is covered with snows of cynicism and the ice of pessimism, then you’ve grown old, even at 20; but as long as your aerials are up, to catch waves of optimism, there’s hope you may die young at 80.</p>
-<h2 id="Music-8"><a href="#Music-8" class="headerlink" title="Music[8]"></a>Music<sup>[8]<sup></sup></sup></h2><p>Santana——Smooth</p>
-<h2 id="Movie-9"><a href="#Movie-9" class="headerlink" title="Movie[9]"></a>Movie<sup>[9]<sup></sup></sup></h2><p>Billy Lynn’s Long Halftime Walk</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="/2017/01/20/MyView/English/how-to-use-english/">How to Use English</a><br>[2]<a href="/2017/01/13/MyView/English/english-is-a-friend-for-everybody/">English is a Friend for Everyone</a><br>[3]<a href="/2017/02/22/MyView/English/my-translations/">Quotes by Famous People</a><br>[4]<a href="/2017/02/21/MyView/English/beautiful-article-of-english/">Beautiful Articles of English</a><br>[5]<a href="/2016/12/31/MyView/English/view-of-english/">Beauty of English</a><br>[6]<a href="/2017/03/26/MyView/English/computer-english-words/">Professional Words of Computer</a><br>[7]<a href="/2017/02/22/MyView/English/love-words/">Love English Words</a><br>[8]<a href="/2017/03/27/MyView/Music/santana-smooth/">Santana——Smooth</a><br>[9]<a href="/2017/03/08/MyView/Movie/billy-lynn&#39;s-long-halftime-walk/">Billy Lynn’s Long Halftime Walk</a><br>[10]<a href="https://movie.douban.com/top250" target="_blank" rel="external">Douban Movie Top250</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://okkntqe2h.bkt.clouddn.com/Learn-English.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Using  is the only and the best way of learning English.&lt;br&gt;Program skills depend  on English.&lt;br&gt;You can appreciate and taste more precious beauty things , such as great mind, good books, fabulous music, touching movies…&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -8453,53 +8659,6 @@
   </entry>
   
   <entry>
-    <title>Floating Point</title>
-    <link href="http://ipcreator.me/2017/03/27/Program/Concepts/float/"/>
-    <id>http://ipcreator.me/2017/03/27/Program/Concepts/float/</id>
-    <published>2017-03-27T01:58:06.000Z</published>
-    <updated>2017-03-27T10:02:18.866Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/Float_mantissa_exponent.png" alt=""></p>
-<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><p>在计算机科学中，浮点（英语：floating point，缩写为FP）是一种对于实数的近似值数值表现法，由一个有效数字（即尾数）加上幂数来表示，通常是乘以某个基数的整数次指数得到。以这种表示法表示的数值，称为浮点数（floating-point number）。利用浮点进行运算，称为浮点计算，这种运算通常伴随着因为无法精确表示而进行的近似或舍入。</p>
-<a id="more"></a>
-<p>这种表示方法类似于基数为10的科学记数法，在计算机上，通常使用2为基数的幂数来表示。一个浮点数a由两个数m和e来表示：a = m × b^e。在任意一个这样的系统中，我们选择一个基数b（记数系统的基）和精度p（即使用多少位来存储）。m（即尾数）是形如±d.ddd…ddd的p位数（每一位是一个介于0到b-1之间的整数，包括0和b-1）。如果m的第一位是非0整数，m称作正规化的。有一些描述使用一个单独的符号位（s 代表+或者-）来表示正负，这样m必须是正的。e是指数。</p>
-<p>这种表示法的设计，来自于对于值的表现范围，与精密度之间的取舍：可以在某个固定长度的存储空间内表示出某个实数的近似值。例如，一个指数范围为±4的4位十进制浮点数可以用来表示43210，4.321或0.0004321，但是没有足够的精度来表示432.123和43212.3（必须近似为432.1和43210）。当然，实际使用的位数通常远大于4。<br>此外，浮点数表示法通常还包括一些特别的数值：+∞和−∞（正负无穷大）以及NaN（’Not a Number’）。无穷大用于数太大而无法表示的时候，NaN则指示非法操作或者无法定义的结果。<br>其中，无穷大，可表示为inf，在内存中的值是阶码为全1，尾数全0。而NaN在内存中的值则是阶码全1，尾数不全0。</p>
-<h3 id="计算机的浮点数"><a href="#计算机的浮点数" class="headerlink" title="计算机的浮点数"></a>计算机的浮点数</h3><p>浮点指的是带有小数的数值，浮点运算即是小数的四则运算，常用来测量电脑运算速度。大部分计算机采用二进制（b=2）的表示方法。位（bit）是衡量浮点数所需存储空间的单位，通常为32位或64位，分别被叫作单精度和双精度。有一些计算机提供更大的浮点数，例如英特尔公司的浮点运算单元Intel8087协处理器（以及其被集成进x86处理器中的后代产品）提供80位长的浮点数，用于存储浮点运算的中间结果。还有一些系统提供128位的浮点数（通常用软件实现）。</p>
-<h3 id="浮点数的标准"><a href="#浮点数的标准" class="headerlink" title="浮点数的标准"></a>浮点数的标准</h3><p>在电脑使用的浮点数被电气电子工程师协会（IEEE）规范化为IEEE 754。</p>
-<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p>π的值可以表示为π = 3.1415926…10（十进制）。当在一个支持17位尾数的计算机中表示时，它会变为0.11001001000011111 × 2^2。</p>
-<h3 id="准确性"><a href="#准确性" class="headerlink" title="准确性"></a>准确性</h3><p>由于浮点数不能表达所有实数，浮点运算与相应的数学运算有所差异，有时此差异极为显著。<br>比如，二进制浮点数不能表达0.1和0.01，0.1的平方既不是准确的0.01，也不是最接近0.01的可表达的数。单精度（24比特）浮点数表示0.1的结果为<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3cc0c417147d35e6a577cbf56c88600d17b5b9d1" alt=""><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/801cf7477f2d78a751e2f9469059824a28cc9265" alt=""><br>即<br>0.100000001490116119384765625<br>此数的平方是<br>0.010000000298023226097399174250313080847263336181640625<br>但最接近0.01的可表达的数是<br>0.009999999776482582092285156250<br>浮点数也不能表达圆周率<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9be4ba0bb8df3af72e90a0535fabcc17431e540a" alt="">，所以<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/34d582abaef83367f85ead3cba0d03900851c5fb" alt="">不等于正无穷，也不会溢出。下面的C语言代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">double pi = 3.1415926535897932384626433832795;</div><div class="line">double z = tan(pi/2.0);</div></pre></td></tr></table></figure></p>
-<p>的计算结果为16331239353195370.0，如果用单精度浮点数，则结果为−22877332.0。同样的，<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c01b1f6c3bf7f8586a1bf6103afea822725d53cf" alt=""><br>由于浮点数计算过程中丢失了精度，浮点运算的性质与数学运算有所不同。浮点加法和乘法不匹配结合律和分配律。</p>
-<h2 id="单精度浮点数"><a href="#单精度浮点数" class="headerlink" title="单精度浮点数"></a>单精度浮点数</h2><p>单精度浮点数格式是一种计算机数据格式，在计算机存储器中占用4个字节（32 bits），利用“浮点”（浮动小数点）的方法，可以表示一个范围很大的数值。<br>在IEEE 754-2008的定义中，32-bit base 2格式被正式称为binary32格式。这种格式在IEEE 754-1985被定义为single，即单精度。需要注意的是，在更早的一些计算机系统中，也存在着其他4字节的浮点数格式。</p>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>第1位表示正负，中间8位表示指数，后23位储存有效数位（有效数位是24位）。<br>正负号0代表正，1代表负。<br>指数可以是二补码；或0到255，前半代表负，127代表零，后半代表正。<br>有效数位最左手边的1并不会储存，因为它一定存在（二进制的第一个有效数字必定是1）。换言之，有效数位是24位，实际储存23位。<br><img src="http://ong8f1obl.bkt.clouddn.com/single%20float%20point.jpg" alt=""></p>
-<h2 id="双精度浮点数"><a href="#双精度浮点数" class="headerlink" title="双精度浮点数"></a>双精度浮点数</h2><p>双精度浮点数（double）是计算机使用的一种数据类型。比起单精度浮点数，双精度浮点数(double)使用 64 位（8字节） 来存储一个浮点数。 它可以表示十进制的15或16位有效数字，其可以表示的数字的绝对值范围大约是<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9c07267b5bfa31654492905ea02d28eae470f716" alt=""></p>
-<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p>sign bit(符号): 用来表示正负号<br>exponent(指数): 用来表示次方数<br>mantissa(尾数): 用来表示精确度<br><img src="http://ong8f1obl.bkt.clouddn.com/General_double_precision_float.png" alt=""></p>
-<h3 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h3><p>0代表数值为正，1代表数值为负。</p>
-<h3 id="指数"><a href="#指数" class="headerlink" title="指数"></a>指数</h3><p>类比整型使用所有位为 0 的数字表示数值“0”，双精度浮点数表示 0 时指数部分也为 0。若如此，便可能产生冲突：比如全 0 的数字可能表示“0”，也可能表示<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/23dd92324d8b592a21be50a44cf2c48dba20e3f2" alt="">（参考下文“尾数”的解释）。于是此处规定：<br><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/22cb404192ab64c4954a3263c51ec5202928e520" alt="">用来代表带符号的 0（尾数为 0）或下溢数（尾数不为 0）。<br><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f24e15fbd966772fe4a91b3da51a54562f7a6647" alt="">用来代表无穷大（尾数为 0）或NaN（尾数不为 0）。<br>其他：代表 2 的（exponent-0x3ff）次方。</p>
-<h3 id="尾数"><a href="#尾数" class="headerlink" title="尾数"></a>尾数</h3><p>在二进制的“科学记号”，数字被表示为：<br><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40d1a2e7879ca1fe008f5d9b7796ea520c0227ee" alt=""><br>为了最大限度提高精确度，可以要求尾数规格化，把尾数处理到大于等于1而小于2的区间内，便可省去前导的“1”。例如：</p>
-<p><img src="http://ong8f1obl.bkt.clouddn.com/double%20float.jpg" alt=""></p>
-<p>于是，可得以下形式：<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45b5245fa64a99f69255fb29eee882430b6b30f7" alt=""></p>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>根据以上的叙述，一个双精度浮点数所代表的数值为：<br><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7983ffbff10fe08e4741b16cb180f8bde8ef31b7" alt=""></p>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">3ff0 0000 0000 0000   = 1</div><div class="line"> c000 0000 0000 0000   = -2</div><div class="line"> 7fef ffff ffff ffff   ~ 1.7976931348623157 x 10308 (Max Double)</div><div class="line"> 3fd5 5555 5555 5555   ~ 1/3</div><div class="line"> 0000 0000 0000 0000   = 0</div><div class="line"> 8000 0000 0000 0000   = -0</div><div class="line"> 7ff0 0000 0000 0000   = 無限大</div><div class="line"> fff0 0000 0000 0000   = 負無限大</div></pre></td></tr></table></figure>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://zh.wikipedia.org/wiki/%E6%B5%AE%E7%82%B9%E6%95%B0" target="_blank" rel="external">浮点数</a><br><a href="https://zh.wikipedia.org/wiki/%E5%96%AE%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8" target="_blank" rel="external">单精度浮点数</a><br><a href="https://zh.wikipedia.org/wiki/%E9%9B%99%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8" target="_blank" rel="external">双精度浮点数</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ong8f1obl.bkt.clouddn.com/Float_mantissa_exponent.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;浮点数&quot;&gt;&lt;a href=&quot;#浮点数&quot; class=&quot;headerlink&quot; title=&quot;浮点数&quot;&gt;&lt;/a&gt;浮点数&lt;/h2&gt;&lt;p&gt;在计算机科学中，浮点（英语：floating point，缩写为FP）是一种对于实数的近似值数值表现法，由一个有效数字（即尾数）加上幂数来表示，通常是乘以某个基数的整数次指数得到。以这种表示法表示的数值，称为浮点数（floating-point number）。利用浮点进行运算，称为浮点计算，这种运算通常伴随着因为无法精确表示而进行的近似或舍入。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Program" scheme="http://ipcreator.me/categories/Program/"/>
-    
-    
-      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
-    
-      <category term="Floating point" scheme="http://ipcreator.me/tags/Floating-point/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Machine Learning</title>
     <link href="http://ipcreator.me/2017/03/27/BusinessAI/concept-of-machine-learning/"/>
     <id>http://ipcreator.me/2017/03/27/BusinessAI/concept-of-machine-learning/</id>
@@ -8546,6 +8705,53 @@
       <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
     
       <category term="Machine Learning" scheme="http://ipcreator.me/tags/Machine-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Floating Point</title>
+    <link href="http://ipcreator.me/2017/03/27/Program/Concepts/float/"/>
+    <id>http://ipcreator.me/2017/03/27/Program/Concepts/float/</id>
+    <published>2017-03-27T01:58:06.000Z</published>
+    <updated>2017-03-27T10:02:18.866Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/Float_mantissa_exponent.png" alt=""></p>
+<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><p>在计算机科学中，浮点（英语：floating point，缩写为FP）是一种对于实数的近似值数值表现法，由一个有效数字（即尾数）加上幂数来表示，通常是乘以某个基数的整数次指数得到。以这种表示法表示的数值，称为浮点数（floating-point number）。利用浮点进行运算，称为浮点计算，这种运算通常伴随着因为无法精确表示而进行的近似或舍入。</p>
+<a id="more"></a>
+<p>这种表示方法类似于基数为10的科学记数法，在计算机上，通常使用2为基数的幂数来表示。一个浮点数a由两个数m和e来表示：a = m × b^e。在任意一个这样的系统中，我们选择一个基数b（记数系统的基）和精度p（即使用多少位来存储）。m（即尾数）是形如±d.ddd…ddd的p位数（每一位是一个介于0到b-1之间的整数，包括0和b-1）。如果m的第一位是非0整数，m称作正规化的。有一些描述使用一个单独的符号位（s 代表+或者-）来表示正负，这样m必须是正的。e是指数。</p>
+<p>这种表示法的设计，来自于对于值的表现范围，与精密度之间的取舍：可以在某个固定长度的存储空间内表示出某个实数的近似值。例如，一个指数范围为±4的4位十进制浮点数可以用来表示43210，4.321或0.0004321，但是没有足够的精度来表示432.123和43212.3（必须近似为432.1和43210）。当然，实际使用的位数通常远大于4。<br>此外，浮点数表示法通常还包括一些特别的数值：+∞和−∞（正负无穷大）以及NaN（’Not a Number’）。无穷大用于数太大而无法表示的时候，NaN则指示非法操作或者无法定义的结果。<br>其中，无穷大，可表示为inf，在内存中的值是阶码为全1，尾数全0。而NaN在内存中的值则是阶码全1，尾数不全0。</p>
+<h3 id="计算机的浮点数"><a href="#计算机的浮点数" class="headerlink" title="计算机的浮点数"></a>计算机的浮点数</h3><p>浮点指的是带有小数的数值，浮点运算即是小数的四则运算，常用来测量电脑运算速度。大部分计算机采用二进制（b=2）的表示方法。位（bit）是衡量浮点数所需存储空间的单位，通常为32位或64位，分别被叫作单精度和双精度。有一些计算机提供更大的浮点数，例如英特尔公司的浮点运算单元Intel8087协处理器（以及其被集成进x86处理器中的后代产品）提供80位长的浮点数，用于存储浮点运算的中间结果。还有一些系统提供128位的浮点数（通常用软件实现）。</p>
+<h3 id="浮点数的标准"><a href="#浮点数的标准" class="headerlink" title="浮点数的标准"></a>浮点数的标准</h3><p>在电脑使用的浮点数被电气电子工程师协会（IEEE）规范化为IEEE 754。</p>
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p>π的值可以表示为π = 3.1415926…10（十进制）。当在一个支持17位尾数的计算机中表示时，它会变为0.11001001000011111 × 2^2。</p>
+<h3 id="准确性"><a href="#准确性" class="headerlink" title="准确性"></a>准确性</h3><p>由于浮点数不能表达所有实数，浮点运算与相应的数学运算有所差异，有时此差异极为显著。<br>比如，二进制浮点数不能表达0.1和0.01，0.1的平方既不是准确的0.01，也不是最接近0.01的可表达的数。单精度（24比特）浮点数表示0.1的结果为<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3cc0c417147d35e6a577cbf56c88600d17b5b9d1" alt=""><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/801cf7477f2d78a751e2f9469059824a28cc9265" alt=""><br>即<br>0.100000001490116119384765625<br>此数的平方是<br>0.010000000298023226097399174250313080847263336181640625<br>但最接近0.01的可表达的数是<br>0.009999999776482582092285156250<br>浮点数也不能表达圆周率<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9be4ba0bb8df3af72e90a0535fabcc17431e540a" alt="">，所以<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/34d582abaef83367f85ead3cba0d03900851c5fb" alt="">不等于正无穷，也不会溢出。下面的C语言代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">double pi = 3.1415926535897932384626433832795;</div><div class="line">double z = tan(pi/2.0);</div></pre></td></tr></table></figure></p>
+<p>的计算结果为16331239353195370.0，如果用单精度浮点数，则结果为−22877332.0。同样的，<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c01b1f6c3bf7f8586a1bf6103afea822725d53cf" alt=""><br>由于浮点数计算过程中丢失了精度，浮点运算的性质与数学运算有所不同。浮点加法和乘法不匹配结合律和分配律。</p>
+<h2 id="单精度浮点数"><a href="#单精度浮点数" class="headerlink" title="单精度浮点数"></a>单精度浮点数</h2><p>单精度浮点数格式是一种计算机数据格式，在计算机存储器中占用4个字节（32 bits），利用“浮点”（浮动小数点）的方法，可以表示一个范围很大的数值。<br>在IEEE 754-2008的定义中，32-bit base 2格式被正式称为binary32格式。这种格式在IEEE 754-1985被定义为single，即单精度。需要注意的是，在更早的一些计算机系统中，也存在着其他4字节的浮点数格式。</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>第1位表示正负，中间8位表示指数，后23位储存有效数位（有效数位是24位）。<br>正负号0代表正，1代表负。<br>指数可以是二补码；或0到255，前半代表负，127代表零，后半代表正。<br>有效数位最左手边的1并不会储存，因为它一定存在（二进制的第一个有效数字必定是1）。换言之，有效数位是24位，实际储存23位。<br><img src="http://ong8f1obl.bkt.clouddn.com/single%20float%20point.jpg" alt=""></p>
+<h2 id="双精度浮点数"><a href="#双精度浮点数" class="headerlink" title="双精度浮点数"></a>双精度浮点数</h2><p>双精度浮点数（double）是计算机使用的一种数据类型。比起单精度浮点数，双精度浮点数(double)使用 64 位（8字节） 来存储一个浮点数。 它可以表示十进制的15或16位有效数字，其可以表示的数字的绝对值范围大约是<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9c07267b5bfa31654492905ea02d28eae470f716" alt=""></p>
+<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p>sign bit(符号): 用来表示正负号<br>exponent(指数): 用来表示次方数<br>mantissa(尾数): 用来表示精确度<br><img src="http://ong8f1obl.bkt.clouddn.com/General_double_precision_float.png" alt=""></p>
+<h3 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h3><p>0代表数值为正，1代表数值为负。</p>
+<h3 id="指数"><a href="#指数" class="headerlink" title="指数"></a>指数</h3><p>类比整型使用所有位为 0 的数字表示数值“0”，双精度浮点数表示 0 时指数部分也为 0。若如此，便可能产生冲突：比如全 0 的数字可能表示“0”，也可能表示<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/23dd92324d8b592a21be50a44cf2c48dba20e3f2" alt="">（参考下文“尾数”的解释）。于是此处规定：<br><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/22cb404192ab64c4954a3263c51ec5202928e520" alt="">用来代表带符号的 0（尾数为 0）或下溢数（尾数不为 0）。<br><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f24e15fbd966772fe4a91b3da51a54562f7a6647" alt="">用来代表无穷大（尾数为 0）或NaN（尾数不为 0）。<br>其他：代表 2 的（exponent-0x3ff）次方。</p>
+<h3 id="尾数"><a href="#尾数" class="headerlink" title="尾数"></a>尾数</h3><p>在二进制的“科学记号”，数字被表示为：<br><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40d1a2e7879ca1fe008f5d9b7796ea520c0227ee" alt=""><br>为了最大限度提高精确度，可以要求尾数规格化，把尾数处理到大于等于1而小于2的区间内，便可省去前导的“1”。例如：</p>
+<p><img src="http://ong8f1obl.bkt.clouddn.com/double%20float.jpg" alt=""></p>
+<p>于是，可得以下形式：<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45b5245fa64a99f69255fb29eee882430b6b30f7" alt=""></p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>根据以上的叙述，一个双精度浮点数所代表的数值为：<br><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7983ffbff10fe08e4741b16cb180f8bde8ef31b7" alt=""></p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">3ff0 0000 0000 0000   = 1</div><div class="line"> c000 0000 0000 0000   = -2</div><div class="line"> 7fef ffff ffff ffff   ~ 1.7976931348623157 x 10308 (Max Double)</div><div class="line"> 3fd5 5555 5555 5555   ~ 1/3</div><div class="line"> 0000 0000 0000 0000   = 0</div><div class="line"> 8000 0000 0000 0000   = -0</div><div class="line"> 7ff0 0000 0000 0000   = 無限大</div><div class="line"> fff0 0000 0000 0000   = 負無限大</div></pre></td></tr></table></figure>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://zh.wikipedia.org/wiki/%E6%B5%AE%E7%82%B9%E6%95%B0" target="_blank" rel="external">浮点数</a><br><a href="https://zh.wikipedia.org/wiki/%E5%96%AE%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8" target="_blank" rel="external">单精度浮点数</a><br><a href="https://zh.wikipedia.org/wiki/%E9%9B%99%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8" target="_blank" rel="external">双精度浮点数</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ong8f1obl.bkt.clouddn.com/Float_mantissa_exponent.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;浮点数&quot;&gt;&lt;a href=&quot;#浮点数&quot; class=&quot;headerlink&quot; title=&quot;浮点数&quot;&gt;&lt;/a&gt;浮点数&lt;/h2&gt;&lt;p&gt;在计算机科学中，浮点（英语：floating point，缩写为FP）是一种对于实数的近似值数值表现法，由一个有效数字（即尾数）加上幂数来表示，通常是乘以某个基数的整数次指数得到。以这种表示法表示的数值，称为浮点数（floating-point number）。利用浮点进行运算，称为浮点计算，这种运算通常伴随着因为无法精确表示而进行的近似或舍入。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Program" scheme="http://ipcreator.me/categories/Program/"/>
+    
+    
+      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
+    
+      <category term="Floating point" scheme="http://ipcreator.me/tags/Floating-point/"/>
     
   </entry>
   
@@ -9447,7 +9653,7 @@
     <link href="http://ipcreator.me/2017/03/26/MyView/deep-thinking-change-my-life/"/>
     <id>http://ipcreator.me/2017/03/26/MyView/deep-thinking-change-my-life/</id>
     <published>2017-03-26T00:29:06.000Z</published>
-    <updated>2017-03-30T23:11:10.391Z</updated>
+    <updated>2017-04-03T15:33:14.446Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://zhibimo.com/read/xiaolai/zuo-xiang-qi-cheng/images/meditation-posture.png" alt=""></p>
 <blockquote>
@@ -9548,18 +9754,24 @@
 <h2 id="个人实践之路"><a href="#个人实践之路" class="headerlink" title="个人实践之路"></a>个人实践之路</h2><h3 id="有益效果"><a href="#有益效果" class="headerlink" title="有益效果"></a>有益效果</h3><p>1、有助于集中和控制注意力<br>2、有利于大脑的放松<br>3、有助于提升晚上深度睡眠时间</p>
 <p><em>03.15</em>：大脑疲惫时，边走边想<br>            10~30分钟，可以快速恢复精力</p>
 <p><em>03.26</em>：四个完整周期，深度睡眠1小时<br>            八个完整周期，深度睡眠2小时</p>
-<p><em>03.30</em>：断点续传机制<br>            两连击、三连发<br>            共性规律，以头为起点的垂直线上各个Point，为双数<br>            对称：</p>
-<pre><code>1. 左手指尖到肩：7
-2. 肩到头到颈：**10**
-3. 从颈到右手再回到颈：24
-4. 从颈经丹田到腹部：26
-5. 腹部到左胯：27
-6. 左胯回到腹部：**40**
-7. 腹部到右胯：41
-8. 右胯再回到腹部：**54**
-9. 腹部回到颈：**56**
-10. 颈回到左手指尖：63
-</code></pre><p><em>03.31</em> ：16个完整的周期，成功进入Deep Sleep</p>
+<p><em>03.30</em>：断点续传机制<br>            两连击、三连发<br>            共性规律，以头为起点的垂直线上各个Point，为双数</p>
+<blockquote>
+<p>对称：</p>
+<ol>
+<li>左手指尖到肩：7</li>
+<li>肩到头到颈：<strong>10</strong></li>
+<li>从颈到右手再回到颈：24</li>
+<li>从颈经丹田到腹部：26</li>
+<li>腹部到左胯：27</li>
+<li>左胯回到腹部：<strong>40</strong></li>
+<li>腹部到右胯：41</li>
+<li>右胯再回到腹部：<strong>54</strong></li>
+<li>腹部回到颈：<strong>56</strong></li>
+<li>颈回到左手指尖：63</li>
+</ol>
+</blockquote>
+<p><em>03.31</em> ：16个完整的周期，成功进入Deep Sleep</p>
+<p><em>04.03</em>：传授给家人，用画笔指点，初步练习，熟能生巧</p>
 <h3 id="创新实践"><a href="#创新实践" class="headerlink" title="创新实践"></a>创新实践</h3><p>将注意力想象成一个球<br>先从跳动开始，再到滑动<br>跳动/滑动的节奏，先慢后快<br>从左手/右手/左脚/右脚，轮流遍历<br>每遍都应该是同一个总数字，如果不对，重来<br>后面可以从串行到并行，从一个球到两个球，三个球和四个球</p>
 <h3 id="家人推广"><a href="#家人推广" class="headerlink" title="家人推广"></a>家人推广</h3><p>从老婆、老妈到老姐<br>榜样就是力量</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://zhibimo.com/books/xiaolai/zuo-xiang-qi-cheng" target="_blank" rel="external">坐享其成</a><br><a href="/2017/01/02/MyShare/iGet/lixiaolai-lead-to-freedom-of-wealth/">通往财富自由之路</a></p>
@@ -9801,7 +10013,7 @@
     <link href="http://ipcreator.me/2017/03/26/MyView/English/computer-english-words/"/>
     <id>http://ipcreator.me/2017/03/26/MyView/English/computer-english-words/</id>
     <published>2017-03-25T16:00:00.000Z</published>
-    <updated>2017-04-02T14:04:06.275Z</updated>
+    <updated>2017-04-03T06:46:04.718Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/375px-ForgettingCurve.svg.png" alt=""></p>
 <blockquote>
@@ -9855,8 +10067,15 @@
 <h3 id="suppress-1"><a href="#suppress-1" class="headerlink" title="suppress"></a>suppress</h3><p>英 [səˈpres]   美 [səˈprɛs]<br>     CET6 | 考研 | IELTS | TOEFL<br>vt.  镇压，压制; 止住，忍住; 禁止发表; 阻止…的生长（或发展）;<br>变形 过去分词: suppressed 过去式: suppressed 现在分词: suppressing 第三人称单数: suppresses</p>
 <h3 id="groovy"><a href="#groovy" class="headerlink" title="groovy"></a>groovy</h3><p>英 [ˈgru:vi]   美 [ˈɡruvi]  </p>
 <p>adj.  绝妙的; 槽的，沟的; 流行的; 最佳状态的;</p>
-<h3 id="retrofit"><a href="#retrofit" class="headerlink" title="retrofit"></a>retrofit</h3><p>英 [ˈretrəʊfɪt]   美 [ˈretroʊfɪt]  </p>
-<p>n.  式样翻新，花样翻新;<br>vt.  给机器设备装配（新部件），翻新，改型;<br>变形 过去分词: retrofitted 复数: retrofits 过去式: retrofitted 现在分词: retrofitting 第三人称单数: retrofits</p>
+<h3 id="retrofit"><a href="#retrofit" class="headerlink" title="retrofit"></a>retrofit</h3><p>英 [ˈretrəʊfɪt]   美 [ˈretroʊfɪt]<br>n.  式样翻新，花样翻新;<br>vt.  给机器设备装配（新部件），翻新，改型;<br>变形 过去分词: retrofitted 复数: retrofits 过去式: retrofitted 现在分词: retrofitting 第三人称单数: retrofits</p>
+<h3 id="minify"><a href="#minify" class="headerlink" title="minify"></a>minify</h3><p>英 [‘mɪnɪfaɪ]   美 [‘mɪnɪˌfaɪ]<br>v.  缩小;<br>变形 过去分词: minified 过去式: minified 现在分词: minifying 第三人称单数: minifies</p>
+<h3 id="camel"><a href="#camel" class="headerlink" title="camel"></a>camel</h3><p>英 [ˈkæml]   美 [ˈkæməl]<br>     CET4 | CET6 | 考研<br>n.  骆驼;<br>变形 复数: camels<br>CAMEL<br>abbr.  customized application for mobile network enhanced logic 移动网增强逻辑的定制应用; customized applications for mobile enhanced logic 移动增强逻辑的定型应用;</p>
+<h3 id="unparalleled"><a href="#unparalleled" class="headerlink" title="unparalleled"></a>unparalleled</h3><p>英 [ʌnˈpærəleld]   美 [ʌnˈpærəˌlɛld]<br>     TOEFL<br>adj.  无比的，无双的，空前的; 空前的; 盖世;</p>
+<h3 id="versatility"><a href="#versatility" class="headerlink" title="versatility"></a>versatility</h3><p>英 [ˌvɜ:sə’tɪlətɪ]   美 [ˌvɜsə’tɪlətɪ]<br>n.  多才多艺; 多用途; 可转动性; 易变;</p>
+<h3 id="integration"><a href="#integration" class="headerlink" title="integration"></a>integration</h3><p>英 [ˌɪntɪˈgreɪʃn]   美 [ˌɪntɪˈɡreʃən]<br>n.  结合; 整合; 一体化; （不同肤色、种族、宗教信仰等的人的）混合;</p>
+<h3 id="systematize"><a href="#systematize" class="headerlink" title="systematize"></a>systematize</h3><p>英 [ˈsɪstəmətaɪz]   美 [ˈsɪstəməˌtaɪz]<br>     TOEFL<br>vt.  使系统化，使成体系;<br>变形 过去分词: systematized 过去式: systematized 现在分词: systematizing 第三人称单数: systematizes</p>
+<h3 id="scale"><a href="#scale" class="headerlink" title="scale"></a>scale</h3><p>英 [skeɪl]   美 [skel]<br>     CET4 | CET6 | 考研 | IELTS | TOEFL | GRE<br>n.  规模; 比例（尺）; 鱼鳞; 级别;<br>vt.  测量; 攀登; 刮去…的鳞片;<br>vi.  衡量; 攀登; （鳞屑）脱落; 生水垢;<br>变形 过去分词: scaled 复数: scales 过去式: scaled 现在分词: scaling 第三人称单数: scales</p>
+<h3 id="retention"><a href="#retention" class="headerlink" title="retention"></a>retention</h3><p>英 [rɪˈtenʃn]   美 [rɪˈtɛnʃən]<br>     考研 | IELTS | GRE<br>n.  保留; 记忆力，保持力; 滞留，扣留; 闭尿;</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://zh.wikipedia.org/wiki/%E8%B5%AB%E5%B0%94%E6%9B%BC%C2%B7%E8%89%BE%E5%AE%BE%E6%B5%A9%E6%96%AF" target="_blank" rel="external">赫尔曼·艾宾浩斯 Hermann Ebbinghaus </a><br><a href="https://zh.wikipedia.org/wiki/%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF" target="_blank" rel="external">遗忘曲线 Forgetting curve</a></p>
 ]]></content>
     
@@ -10031,61 +10250,6 @@
   </entry>
   
   <entry>
-    <title>Stetho——A Debug Bridge for Android Applications</title>
-    <link href="http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/"/>
-    <id>http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/</id>
-    <published>2017-03-25T13:29:06.000Z</published>
-    <updated>2017-03-27T10:04:47.015Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://facebook.github.io/stetho/static/logo.png" alt=""><br><a href="https://github.com/facebook/stetho" target="_blank" rel="external">Stetho</a></p>
-<p>Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.</p>
-<a id="more"></a>
-<h1 id="Stetho"><a href="#Stetho" class="headerlink" title="Stetho "></a>Stetho <a href="https://travis-ci.org/facebook/stetho" target="_blank" rel="external"><img src="https://travis-ci.org/facebook/stetho.svg?branch=master" alt="Build Status"></a></h1><h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h3 id="Chrome-DevTools"><a href="#Chrome-DevTools" class="headerlink" title="Chrome DevTools"></a>Chrome DevTools</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-discovery.png" alt=""><br>The integration with the Chrome DevTools frontend is implemented using a client/server protocol which the Stetho software provides for your application. Once your application is integrated, simply navigate to chrome://inspect and click “Inspect” to get started!</p>
-<h3 id="Database-Inspection"><a href="#Database-Inspection" class="headerlink" title="Database Inspection"></a>Database Inspection</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-sqlite.png" alt=""><br>SQLite databases can be visualized and interactively explored with full read/write capabilities.</p>
-<h3 id="View-Hierarchy"><a href="#View-Hierarchy" class="headerlink" title="View Hierarchy"></a>View Hierarchy</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-elements.png" alt=""><br>View hierarchy support for ICS (API 15) and up! Lots of goodies such as instances virtually placed in the hierarchy, view highlighting, and the ability to tap on a view to jump to its position in the hierarchy.</p>
-<p><a href="https://facebook.github.io/stetho" target="_blank" rel="external">Stetho</a> is a sophisticated debug bridge for Android applications. When enabled,<br>developers have access to the Chrome Developer Tools feature natively part of<br>the Chrome desktop browser. Developers can also choose to enable the optional<br><code>dumpapp</code> tool which offers a powerful command-line interface to application<br>internals.</p>
-<p>Once you complete the set-up instructions below, just start your app and point<br>your laptop browser to <code>chrome://inspect</code>.  Click the “Inspect” button to<br>begin.</p>
-<h2 id="Set-up"><a href="#Set-up" class="headerlink" title="Set-up"></a>Set-up</h2><h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><p>Download <a href="https://github.com/facebook/stetho/releases/latest" target="_blank" rel="external">the latest JARs</a> or grab via Gradle:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho:1.4.2'</span></div></pre></td></tr></table></figure></p>
-<p>or Maven:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.facebook.stetho<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>stetho<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>Only the main <code>stetho</code> dependency is strictly required; however, you may also wish to use one of the network helpers:</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-okhttp3:1.4.2'</span></div></pre></td></tr></table></figure>
-<p>or:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-urlconnection:1.4.2'</span></div></pre></td></tr></table></figure></p>
-<p>You can also enable a JavaScript console with:</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-js-rhino:1.4.2'</span></div></pre></td></tr></table></figure>
-<p>For more details on how to customize the JavaScript runtime see <a href="stetho-js-rhino/">stetho-js-rhino</a>.</p>
-<h3 id="Putting-it-together"><a href="#Putting-it-together" class="headerlink" title="Putting it together"></a>Putting it together</h3><p>Integrating with Stetho is intended to be seamless and straightforward for<br>most existing Android applications.  There is a simple initialization step<br>which occurs in your <code>Application</code> class:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApplication</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate();</div><div class="line">    Stetho.initializeWithDefaults(<span class="keyword">this</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>This brings up most of the default configuration but does not enable some<br>additional hooks (most notably, network inspection).  See below for specific<br>details on individual subsystems.</p>
-<h3 id="Enable-network-inspection"><a href="#Enable-network-inspection" class="headerlink" title="Enable network inspection"></a>Enable network inspection</h3><p>If you are using the popular <a href="https://github.com/square/okhttp" target="_blank" rel="external">OkHttp</a><br>library at the 3.x release, you can use the<br><a href="https://github.com/square/okhttp/wiki/Interceptors" target="_blank" rel="external">Interceptors</a> system to<br>automatically hook into your existing stack.  This is currently the simplest<br>and most straightforward way to enable network inspection:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> OkHttpClient.Builder()</div><div class="line">    .addNetworkInterceptor(<span class="keyword">new</span> StethoInterceptor())</div><div class="line">    .build()</div></pre></td></tr></table></figure>
-<p>Note that okhttp 2.x will work as well, but with slightly different syntax and you must use the <code>stetho-okhttp</code> artifact (not <code>stetho-okhttp3</code>).</p>
-<p>As interceptors can modify the request and response, add the Stetho interceptor after all others to get an accurate view of the network traffic.</p>
-<p>If you are using <code>HttpURLConnection</code>, you can use <code>StethoURLConnectionManager</code><br>to assist with integration though you should be aware that there are some<br>caveats with this approach.  In particular, you must explicitly add<br><code>Accept-Encoding: gzip</code> to the request headers and manually handle compressed<br>responses in order for Stetho to report compressed payload sizes.</p>
-<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
-<h2 id="Going-further"><a href="#Going-further" class="headerlink" title="Going further"></a>Going further</h2><h3 id="Custom-dumpapp-plugins"><a href="#Custom-dumpapp-plugins" class="headerlink" title="Custom dumpapp plugins"></a>Custom dumpapp plugins</h3><p>Custom plugins are the preferred means of extending the <code>dumpapp</code> system and<br>can be added easily during configuration.  Simply replace your configuration<br>step as such:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Stetho.initialize(Stetho.newInitializerBuilder(context)</div><div class="line">    .enableDumpapp(<span class="keyword">new</span> DumperPluginsProvider() &#123;</div><div class="line">      <span class="meta">@Override</span></div><div class="line">      <span class="function"><span class="keyword">public</span> Iterable&lt;DumperPlugin&gt; <span class="title">get</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Stetho.DefaultDumperPluginsBuilder(context)</div><div class="line">            .provide(<span class="keyword">new</span> MyDumperPlugin())</div><div class="line">            .finish();</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">    .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(context))</div><div class="line">    .build())</div></pre></td></tr></table></figure>
-<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
-<h2 id="Improve-Stetho"><a href="#Improve-Stetho" class="headerlink" title="Improve Stetho!"></a>Improve Stetho!</h2><p>See the <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> file for how to help out.</p>
-<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Stetho is BSD-licensed. We also provide an additional patent grant.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://facebook.github.io/stetho/static/logo.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/facebook/stetho&quot;&gt;Stetho&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
-    
-    
-      <category term="Debug" scheme="http://ipcreator.me/tags/Debug/"/>
-    
-      <category term="Stetho" scheme="http://ipcreator.me/tags/Stetho/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Fast Android Networking</title>
     <link href="http://ipcreator.me/2017/03/25/Program/Android/fast-android-networking/"/>
     <id>http://ipcreator.me/2017/03/25/Program/Android/fast-android-networking/</id>
@@ -10256,6 +10420,61 @@
       <category term="OkHttp" scheme="http://ipcreator.me/tags/OkHttp/"/>
     
       <category term="Okio" scheme="http://ipcreator.me/tags/Okio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Stetho——A Debug Bridge for Android Applications</title>
+    <link href="http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/"/>
+    <id>http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/</id>
+    <published>2017-03-25T13:29:06.000Z</published>
+    <updated>2017-03-27T10:04:47.015Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://facebook.github.io/stetho/static/logo.png" alt=""><br><a href="https://github.com/facebook/stetho" target="_blank" rel="external">Stetho</a></p>
+<p>Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.</p>
+<a id="more"></a>
+<h1 id="Stetho"><a href="#Stetho" class="headerlink" title="Stetho "></a>Stetho <a href="https://travis-ci.org/facebook/stetho" target="_blank" rel="external"><img src="https://travis-ci.org/facebook/stetho.svg?branch=master" alt="Build Status"></a></h1><h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h3 id="Chrome-DevTools"><a href="#Chrome-DevTools" class="headerlink" title="Chrome DevTools"></a>Chrome DevTools</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-discovery.png" alt=""><br>The integration with the Chrome DevTools frontend is implemented using a client/server protocol which the Stetho software provides for your application. Once your application is integrated, simply navigate to chrome://inspect and click “Inspect” to get started!</p>
+<h3 id="Database-Inspection"><a href="#Database-Inspection" class="headerlink" title="Database Inspection"></a>Database Inspection</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-sqlite.png" alt=""><br>SQLite databases can be visualized and interactively explored with full read/write capabilities.</p>
+<h3 id="View-Hierarchy"><a href="#View-Hierarchy" class="headerlink" title="View Hierarchy"></a>View Hierarchy</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-elements.png" alt=""><br>View hierarchy support for ICS (API 15) and up! Lots of goodies such as instances virtually placed in the hierarchy, view highlighting, and the ability to tap on a view to jump to its position in the hierarchy.</p>
+<p><a href="https://facebook.github.io/stetho" target="_blank" rel="external">Stetho</a> is a sophisticated debug bridge for Android applications. When enabled,<br>developers have access to the Chrome Developer Tools feature natively part of<br>the Chrome desktop browser. Developers can also choose to enable the optional<br><code>dumpapp</code> tool which offers a powerful command-line interface to application<br>internals.</p>
+<p>Once you complete the set-up instructions below, just start your app and point<br>your laptop browser to <code>chrome://inspect</code>.  Click the “Inspect” button to<br>begin.</p>
+<h2 id="Set-up"><a href="#Set-up" class="headerlink" title="Set-up"></a>Set-up</h2><h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><p>Download <a href="https://github.com/facebook/stetho/releases/latest" target="_blank" rel="external">the latest JARs</a> or grab via Gradle:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho:1.4.2'</span></div></pre></td></tr></table></figure></p>
+<p>or Maven:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.facebook.stetho<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>stetho<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Only the main <code>stetho</code> dependency is strictly required; however, you may also wish to use one of the network helpers:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-okhttp3:1.4.2'</span></div></pre></td></tr></table></figure>
+<p>or:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-urlconnection:1.4.2'</span></div></pre></td></tr></table></figure></p>
+<p>You can also enable a JavaScript console with:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-js-rhino:1.4.2'</span></div></pre></td></tr></table></figure>
+<p>For more details on how to customize the JavaScript runtime see <a href="stetho-js-rhino/">stetho-js-rhino</a>.</p>
+<h3 id="Putting-it-together"><a href="#Putting-it-together" class="headerlink" title="Putting it together"></a>Putting it together</h3><p>Integrating with Stetho is intended to be seamless and straightforward for<br>most existing Android applications.  There is a simple initialization step<br>which occurs in your <code>Application</code> class:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApplication</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate();</div><div class="line">    Stetho.initializeWithDefaults(<span class="keyword">this</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This brings up most of the default configuration but does not enable some<br>additional hooks (most notably, network inspection).  See below for specific<br>details on individual subsystems.</p>
+<h3 id="Enable-network-inspection"><a href="#Enable-network-inspection" class="headerlink" title="Enable network inspection"></a>Enable network inspection</h3><p>If you are using the popular <a href="https://github.com/square/okhttp" target="_blank" rel="external">OkHttp</a><br>library at the 3.x release, you can use the<br><a href="https://github.com/square/okhttp/wiki/Interceptors" target="_blank" rel="external">Interceptors</a> system to<br>automatically hook into your existing stack.  This is currently the simplest<br>and most straightforward way to enable network inspection:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> OkHttpClient.Builder()</div><div class="line">    .addNetworkInterceptor(<span class="keyword">new</span> StethoInterceptor())</div><div class="line">    .build()</div></pre></td></tr></table></figure>
+<p>Note that okhttp 2.x will work as well, but with slightly different syntax and you must use the <code>stetho-okhttp</code> artifact (not <code>stetho-okhttp3</code>).</p>
+<p>As interceptors can modify the request and response, add the Stetho interceptor after all others to get an accurate view of the network traffic.</p>
+<p>If you are using <code>HttpURLConnection</code>, you can use <code>StethoURLConnectionManager</code><br>to assist with integration though you should be aware that there are some<br>caveats with this approach.  In particular, you must explicitly add<br><code>Accept-Encoding: gzip</code> to the request headers and manually handle compressed<br>responses in order for Stetho to report compressed payload sizes.</p>
+<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
+<h2 id="Going-further"><a href="#Going-further" class="headerlink" title="Going further"></a>Going further</h2><h3 id="Custom-dumpapp-plugins"><a href="#Custom-dumpapp-plugins" class="headerlink" title="Custom dumpapp plugins"></a>Custom dumpapp plugins</h3><p>Custom plugins are the preferred means of extending the <code>dumpapp</code> system and<br>can be added easily during configuration.  Simply replace your configuration<br>step as such:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Stetho.initialize(Stetho.newInitializerBuilder(context)</div><div class="line">    .enableDumpapp(<span class="keyword">new</span> DumperPluginsProvider() &#123;</div><div class="line">      <span class="meta">@Override</span></div><div class="line">      <span class="function"><span class="keyword">public</span> Iterable&lt;DumperPlugin&gt; <span class="title">get</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Stetho.DefaultDumperPluginsBuilder(context)</div><div class="line">            .provide(<span class="keyword">new</span> MyDumperPlugin())</div><div class="line">            .finish();</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">    .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(context))</div><div class="line">    .build())</div></pre></td></tr></table></figure>
+<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
+<h2 id="Improve-Stetho"><a href="#Improve-Stetho" class="headerlink" title="Improve Stetho!"></a>Improve Stetho!</h2><p>See the <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> file for how to help out.</p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Stetho is BSD-licensed. We also provide an additional patent grant.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://facebook.github.io/stetho/static/logo.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/facebook/stetho&quot;&gt;Stetho&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
+    
+    
+      <category term="Debug" scheme="http://ipcreator.me/tags/Debug/"/>
+    
+      <category term="Stetho" scheme="http://ipcreator.me/tags/Stetho/"/>
     
   </entry>
   
@@ -13913,99 +14132,6 @@ bw.close();
     
     
       <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Codota——Find the Right Code</title>
-    <link href="http://ipcreator.me/2017/03/09/Program/codota-ai-programming/"/>
-    <id>http://ipcreator.me/2017/03/09/Program/codota-ai-programming/</id>
-    <published>2017-03-09T01:55:06.000Z</published>
-    <updated>2017-03-27T09:48:27.500Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s3.amazonaws.com/codota_pages/images/codebrain.gif" alt=""></p>
-<p>The AI pair programmer.Anywhere you read or write code.<br><a href="https://www.codota.com/" target="_blank" rel="external">Codota</a> helps developers create better software, faster by providing insights learned from all the code in the world. The CodeBrain is an evolving model that reflects Codota’s unique knowledge of how software is built.</p>
- <a id="more"></a>
-<p><img src="https://searchcode.com/static/searchcode_logo.png" alt=""><br><a href="https://searchcode.com/" target="_blank" rel="external">https://searchcode.com/</a><br>Search over 20 billion lines of code from 7,000,000 projects</p>
-<p><img src="https://ssl.gstatic.com/codesite/ph/images/search-48.gif" alt=""><br>Android Open Source Project - Issue Tracker<br><a href="https://code.google.com/p/android/issues/list" target="_blank" rel="external">https://code.google.com/p/android/issues/list</a></p>
-<p><img src="http://androidxref.com/images/title.png" alt=""><br><a href="http://androidxref.com/" target="_blank" rel="external">http://androidxref.com/</a></p>
-<p><img src="http://grepcode.com/static/app/images/logo-rel.gif" alt=""><br>You could try searching for list, hadoop, android, or something else</p>
-<p><img src="http://xref.opersys.com/img/Android-Logo-Alpha.png" alt=""><br><a href="http://xref.opersys.com/" target="_blank" rel="external">http://xref.opersys.com/</a><br>Welcome to the Android Cross Reference !<br>Browse Google AOSP source tree and search for references.</p>
-<p><a href="http://androiddrawables.com/#" target="_blank" rel="external">Android™ Drawables</a><br>Compare and contrast drawables, based on version.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/codota_pages/images/codebrain.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;The AI pair programmer.Anywhere you read or write code.&lt;br&gt;&lt;a href=&quot;https://www.codota.com/&quot;&gt;Codota&lt;/a&gt; helps developers create better software, faster by providing insights learned from all the code in the world. The CodeBrain is an evolving model that reflects Codota’s unique knowledge of how software is built.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Tools" scheme="http://ipcreator.me/categories/Tools/"/>
-    
-    
-      <category term="Codota" scheme="http://ipcreator.me/tags/Codota/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Thinking in Java</title>
-    <link href="http://ipcreator.me/2017/03/09/Program/Java/thinking-in-java/"/>
-    <id>http://ipcreator.me/2017/03/09/Program/Java/thinking-in-java/</id>
-    <published>2017-03-08T23:30:06.000Z</published>
-    <updated>2017-03-27T05:50:44.870Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://img3.doubanio.com/lpic/s27243455.jpg" alt=""><br>本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在Bruce Eckel的文字亲和力和小而直接的编程示例面前也会化解于无形。从Java的基础语法到最高级特性（深入的面向对象概念、多线程、自动项目构建、单元测试和调试等），本书都能逐步指导你轻松掌握。<br>从本书获得的各项大奖以及来自世界各地的读者评论中，不难看出这是一本经典之作。本书的作者拥有多年教学经验，对C、C++以及Java语言都有独到、深入的见解，以通俗易懂及小而直接的示例解释了一个个晦涩抽象的概念。本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、Java I/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书。<br><a href="https://book.douban.com/subject/2130190/" target="_blank" rel="external">]第4版</a>特点：<br>适合初学者与专业人员的经典的面向对象叙述方式，为更新的Java SE5/6增加了新的示例和章节。<br> 测验框架显示程序输出。</p>
- <a id="more"></a>
-<p>作者简介  · · · · · ·<br>Bruce Eckel是MindView公司（www.MindView.net）的总裁，该公司向客户提供软件咨询和培训。他是C++标准委员会拥有表决权的成员之一，拥有应用物理学学士和计算机工程硕士学位。除本书外，他还是《C++编程思想》的作者，并与人合著了《C++编程思想 第2卷》（这两本书的英文影印版及中文版均已由机械工业出版社引进出版）及其他著作。他已经发表了150多篇论文，还经常参加世界各地的研讨会并进行演讲。</p>
-<p>目录  · · · · · ·<br>读者评论<br>前言<br>简介</p>
-<p>第1章 对象导论<br>1.1 抽象过程<br>1.2 每个对象都有一个接口<br>1.3 每个对象都提供服务<br>1.4 被隐藏的具体实现<br>1.5 复用具体实现<br>1.6 继承<br>1.6.1 “是一个”（is-a）与“像是一个”（is-like-a）关系<br>1.7 伴随多态的可互换对象<br>1.8 单根继承结构<br>1.9 容器<br>1.9.1 参数化类型（范型）<br>1.10 对象的创建和生命期<br>1.11 异常处理：处理错误<br>1.12 并发编程<br>1.13 Java与Internet<br>1.13.1 Web是什么<br>1.13.2 客户端编程<br>1.13.3 服务器端编程<br>1.22 总结</p>
-<p>第2章 一切都是对象<br>2.1 用引用操纵对象<br>2.2 必须由你创建所有对象<br>2.2.1 存储到什么地方<br>2.2.2 特例：基本类型<br>2.2.3 Java中的数组<br>2.3 永远不需要销毁对象<br>2.3.1 作用域<br>2.3.2 对象的作用域<br>2.4 创建新的数据类型：类<br>2.4.1 域和方法<br>2.4.2 基本成员默认值<br>2.5 方法、参数和返回值<br>2.5.1 参数列表<br>2.6 构建一个Java程序<br>2.6.1 名字可见性<br>2.6.2 运用其他构件<br>2.6.3 static 关键字<br>2.7 你的第一个Java程序<br>编译和运行<br>2.8 注释和嵌入式文档<br>2.8.1 注释文档<br>2.8.2 语法<br>2.8.3 嵌入式HTML<br>2.8.4 一些标签示例<br>2.8.5 文档示例<br>2.9 编码风格<br>2.10 总结<br>2.11 练习</p>
-<p>第3章 操作符<br>3.1 更简单的打印语句<br>3.2 使用Java操作符<br>3.3 优先级<br>3.4 赋值<br>3.4.1 方法调用中的别名问题<br>3.5 算术操作符<br>3.5.1 一元加、减操作符<br>3.6 自动递增和递减<br>3.7 关系操作符<br>3.7.1 测试对象的等价性<br>3.8 逻辑操作符<br>3.8.1 短路<br>3.9 直接常量<br>3.9.1 指数记数法<br>3.10 按位操作符<br>3.11 移位操作符<br>3.12 三元操作符 if-else<br>3.13 字符串操作符 + 和 +=<br>3.14 使用操作符时常犯的错误<br>3.15 类型转换操作符<br>3.15.1 截尾和舍入<br>3.15.2提升<br>3.16 Java没有“sizeof”<br>3.17 操作符小结<br>3.18 总结</p>
-<p>第4章 控制执行流程<br>4.1 true和false<br>4.2 if-else<br>4.3 迭代<br>4.3.1 do-while<br>4.3.2 for<br>4.3.3 逗号操作符<br>4.4 Foreach语法<br>4.5 return<br>4.6 break和 continue<br>4.7 臭名昭著的“goto”<br>4.8 switch<br>4.9 总结</p>
-<p>第5章 初始化与清理<br>5.1 用构造器确保初始化<br>5.2 方法重载<br>5.2.1 区分重载方法<br>5.2.2 涉及基本类型的重载<br>5.2.3 以返回值区分重载方法<br>5.3 缺省构造器<br>5.4 this关键字<br>5.4.1 在构造器中调用构造器<br>5.4.2 static的含义<br>5.5 清理：终结处理和垃圾回收<br>5.5.1 finalize()的用途何在<br>5.5.2 你必须实施清理<br>5.5.3 终结条件<br>5.5.4 垃圾回收器如何工作<br>5.6 成员初始化<br>5.6.1 指定初始化<br>5.7 构造器初始化<br>5.7.1 初始化顺序<br>5.7.2. 静态数据的初始化<br>5.7.3. 显式的静态初始化<br>5.7.4. 非静态实例初始化<br>5.8 数组初始化<br>5.8.1 可变参数列表<br>5.9 枚举类型<br>5.10 总结</p>
-<p>第6章 访问权限控制<br>第7章 复用类<br>第8章 多态<br>第9章 接口<br>第10章 内部类<br>第11章 持有对象<br>第12章 通过异常处理错误<br>第13章 字符串<br>第14章 类型信息<br>第15章 泛型<br>第16章 数组<br>第17章 容器深入研究<br>第18章 Java I/O系统<br>第19章 枚举类型<br>第20章 注解<br>第21章 并发<br>第22章 图形化用户界面</p>
-<p>附录A 补充材料<br>可下载的补充材料<br>Thinking in C：Java的基础<br>Java编程思想 研讨课<br>Hands-on Java研讨课CD<br>Thinking in Objects研讨课<br>Thinking in Enterprise Java<br>Thinking in Patterns(with Java)<br>Thinking in Patterns研讨课<br>设计咨询与复审</p>
-<p>附录B 资源<br>软件<br>编辑器与IDE<br>书籍<br>分析与设计<br>Python<br>我的著作列表<br>索引</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://img3.doubanio.com/lpic/s27243455.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在Bruce Eckel的文字亲和力和小而直接的编程示例面前也会化解于无形。从Java的基础语法到最高级特性（深入的面向对象概念、多线程、自动项目构建、单元测试和调试等），本书都能逐步指导你轻松掌握。&lt;br&gt;从本书获得的各项大奖以及来自世界各地的读者评论中，不难看出这是一本经典之作。本书的作者拥有多年教学经验，对C、C++以及Java语言都有独到、深入的见解，以通俗易懂及小而直接的示例解释了一个个晦涩抽象的概念。本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、Java I/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书。&lt;br&gt;&lt;a href=&quot;https://book.douban.com/subject/2130190/&quot;&gt;]第4版&lt;/a&gt;特点：&lt;br&gt;适合初学者与专业人员的经典的面向对象叙述方式，为更新的Java SE5/6增加了新的示例和章节。&lt;br&gt; 测验框架显示程序输出。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Java" scheme="http://ipcreator.me/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://ipcreator.me/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git Automatically</title>
-    <link href="http://ipcreator.me/2017/03/09/Program/Tools/auto-git-daily/"/>
-    <id>http://ipcreator.me/2017/03/09/Program/Tools/auto-git-daily/</id>
-    <published>2017-03-08T23:30:06.000Z</published>
-    <updated>2017-03-27T09:52:38.109Z</updated>
-    
-    <content type="html"><![CDATA[<p>能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…</p>
- <a id="more"></a>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">@title auto update blog articles and git push</div><div class="line"></div><div class="line">set fileSource=D:\IPCreatorBlog\source</div><div class="line">set fileDestination=C:\IPCreatorBlogGit\blog\source</div><div class="line">set gitDir=C:\IPCreatorBlogGit\blog</div><div class="line"></div><div class="line">cls</div><div class="line"></div><div class="line">cd %fileDestination%</div><div class="line">rd /s/q %fileDestination%</div><div class="line">Xcopy /e %fileSource% %fileDestination%</div><div class="line"></div><div class="line">cd %gitDir%</div><div class="line">git add -v .</div><div class="line">git commit -m &quot;Update blog daily&quot;</div><div class="line">git push</div><div class="line"></div><div class="line">pause</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> user@LAPTOP-082RQVIH MINGW64 /c/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git config --global alias.blog &apos;!git add . &amp;&amp; git commit -m &quot;blog update&quot; &amp;&amp; git push&apos;**                                                                                                                          </div><div class="line">user@LAPTOP-082RQVIH MINGW64 /c/IPCreatorBlogGit/blog (master)</div><div class="line">$ **git blog**</div><div class="line">On branch master</div><div class="line">Your branch is up-to-date with &apos;origin/master&apos;.</div><div class="line">nothing to commit, working tree clean</div></pre></td></tr></table></figure>
-<p> 更多参考：<br> <a href="https://www.zybuluo.com/yangfch3/note/338252" target="_blank" rel="external">Windows批处理(cmd/bat)使用小记</a><br> <a href="http://xstarcd.github.io/wiki/windows/windows_cmd_summary_commands.html" target="_blank" rel="external">批处理常用命令总结 - 批处理命令简介</a><br> <a href="https://segmentfault.com/q/1010000000263597" target="_blank" rel="external">Git批处理脚本</a><br> <a href="https://www.zhihu.com/question/38962022" target="_blank" rel="external">请问如何写一个批处理自动打开 gitbash，然后自动执行一系列git命令（windows平台）？</a><br> <a href="https://docs.google.com/document/d/1IjrCvTqL3J92DPXNzkCPYRi6Ftb2v6aCbncpxh9ozy4/edit" target="_blank" rel="external">Chrome-启动参数</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;能够用命令行或者批处理的，尽量自动化，提高效率，时间就是生命…&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Tools" scheme="http://ipcreator.me/categories/Tools/"/>
-    
-    
-      <category term="Git" scheme="http://ipcreator.me/tags/Git/"/>
     
   </entry>
   
