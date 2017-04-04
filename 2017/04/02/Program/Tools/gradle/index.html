@@ -116,7 +116,7 @@ Best pratice of Gradle">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1540618-748838a135f668f7?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1877523-1d659e89e94e09ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1877523-2d02903a027a69f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-04-03T05:47:35.573Z">
+<meta property="og:updated_time" content="2017-04-03T16:50:53.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Use Gradle">
 <meta name="twitter:description" content="Gradle is a powerful tool than you can image!Accelerate developer productivity
@@ -542,7 +542,7 @@ Best pratice of Gradle">
 <p>Property Name     Default value in DSL object     Default value<br>versionCode     -1     value from manifest if present<br>versionName     null     value from manifest if present<br>minSdkVersion     -1     value from manifest if present<br>targetSdkVersion     -1     value from manifest if present<br>applicationId     null     value from manifest if present<br>testApplicationId     null     applicationId + “.test”<br>testInstrumentationRunner     null     android.test.InstrumentationTestRunner<br>signingConfig     null     null<br>proguardFile     N/A (set only)     N/A (set only)<br>proguardFiles     N/A (set only)     N/A (set only)</p>
 <p>如果你想在build脚本中使用自定义的逻辑来查询这些属性，第二列中的值就很重要。比如，你可以编写如下的代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (android.defaultConfig.testInstrumentationRunner == <span class="keyword">null</span>) &#123;  </div><div class="line">   <span class="comment">// assign a better default...  </span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>如果属性的值仍然是null，那么在构建的时候，就会使用第三列的默认值，但是DSL元素中并不包含这些默认值，因此你不能在程序中查询这些值。这样做的目的是仅在必要的时候（构建时）才会去解析manifest内容。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="http://www.lcode.org/%E4%BC%98%E9%9B%85%E7%9A%84android-studio%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE-%E5%B8%B8%E7%94%A8%E5%BA%93%E5%92%8C%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" target="_blank" rel="external">优雅的Android Studio项目配置–常用库和版本管理</a><br>[2]<a href="http://www.ratdream.com/2016/09/09/%E4%BC%98%E9%9B%85%E7%9A%84%E7%AE%A1%E7%90%86%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" target="_blank" rel="external">优雅的管理第三方库</a><br>[3]<a href="http://www.jianshu.com/p/88fb3876d92d" target="_blank" rel="external">Gradle从入门到了解</a><br>[4]<a href="http://www.jianshu.com/p/9dcec4a14c52" target="_blank" rel="external">Gradle for Android 问题总结</a><br>[5]<a href="https://www.gitbook.com/book/dongchuan/gradle-user-guide-/details" target="_blank" rel="external">Gradle User Guide 中文版</a><br>[6]<a href="http://unclechen.github.io/2015/10/22/Android-Studio-Gradle%E5%AE%9E%E8%B7%B5%E4%B9%8B%E5%A4%9A%E6%B8%A0%E9%81%93%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%93%E5%8C%85+%E7%89%88%E6%9C%AC%E5%8F%B7%E7%AE%A1%E7%90%86/" target="_blank" rel="external">Android Studio Gradle实践之多渠道自动化打包+版本号管理</a><br>[7]<a href="http://blog.csdn.net/lzyzsd/article/category/2795779" target="_blank" rel="external">深入浅出Android Gradle构建系统</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="http://www.lcode.org/%E4%BC%98%E9%9B%85%E7%9A%84android-studio%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE-%E5%B8%B8%E7%94%A8%E5%BA%93%E5%92%8C%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" target="_blank" rel="external">优雅的Android Studio项目配置–常用库和版本管理</a><br>[2]<a href="http://www.ratdream.com/2016/09/09/%E4%BC%98%E9%9B%85%E7%9A%84%E7%AE%A1%E7%90%86%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" target="_blank" rel="external">优雅的管理第三方库</a><br>[3]<a href="http://www.jianshu.com/p/88fb3876d92d" target="_blank" rel="external">Gradle从入门到了解</a><br>[4]<a href="http://www.jianshu.com/p/9dcec4a14c52" target="_blank" rel="external">Gradle for Android 问题总结</a><br>[5]<a href="https://www.gitbook.com/book/dongchuan/gradle-user-guide-/details" target="_blank" rel="external">Gradle User Guide 中文版</a><br>[6]<a href="http://unclechen.github.io/2015/10/22/Android-Studio-Gradle%E5%AE%9E%E8%B7%B5%E4%B9%8B%E5%A4%9A%E6%B8%A0%E9%81%93%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%93%E5%8C%85+%E7%89%88%E6%9C%AC%E5%8F%B7%E7%AE%A1%E7%90%86/" target="_blank" rel="external">Android Studio Gradle实践之多渠道自动化打包+版本号管理</a><br>[7]<a href="http://blog.csdn.net/lzyzsd/article/category/2795779" target="_blank" rel="external">深入浅出Android Gradle构建系统</a><br>[8]<a href="http://www.jianshu.com/p/b2c3192c2c1d" target="_blank" rel="external">在Android Studio中建立和维护团队通用库</a><br><a href="http://www.jianshu.com/p/9df3c3b6067a" target="_blank" rel="external">Gradle 完整指南（Android）</a><br><a href="https://www.gitbook.com/book/dongchuan/gradle-user-guide-/details" target="_blank" rel="external">Gradle User Guide 中文版</a></p>
 
       
     </div>
@@ -713,7 +713,7 @@ Best pratice of Gradle">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">236</span>
+                <span class="site-state-item-count">241</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -735,7 +735,7 @@ Best pratice of Gradle">
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">238</span>
+                <span class="site-state-item-count">241</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

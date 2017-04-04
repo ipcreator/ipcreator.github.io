@@ -1,0 +1,1119 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Permissions Dispatcher," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="For life" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Permissions Dispatcher provides a simple annotation-based API to handle runtime permissions in Android Marshmallow, 100% reflection-free.
+This library lifts the burden that comes with writing a bunch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Permissions Dispatcher">
+<meta property="og:url" content="http://ipcreator.me/2017/04/04/Program/Android/3rdLib/permissions-dispatcher/index.html">
+<meta property="og:site_name" content="For life">
+<meta property="og:description" content="Permissions Dispatcher provides a simple annotation-based API to handle runtime permissions in Android Marshmallow, 100% reflection-free.
+This library lifts the burden that comes with writing a bunch">
+<meta property="og:image" content="https://raw.githubusercontent.com/hotchemi/PermissionsDispatcher/master/art/logo.png">
+<meta property="og:image" content="https://api.bintray.com/packages/hotchemi/maven/permissionsdispatcher/images/download.svg">
+<meta property="og:updated_time" content="2017-04-04T02:27:00.739Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Permissions Dispatcher">
+<meta name="twitter:description" content="Permissions Dispatcher provides a simple annotation-based API to handle runtime permissions in Android Marshmallow, 100% reflection-free.
+This library lifts the burden that comes with writing a bunch">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/hotchemi/PermissionsDispatcher/master/art/logo.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'L2TAEB8639',
+      apiKey: '86bd00c4f7ef2396081856beb1cf9a7d',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ipcreator.me/2017/04/04/Program/Android/3rdLib/permissions-dispatcher/"/>
+
+
+
+
+
+  <title> Permissions Dispatcher | For life </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">For life</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Growing up is the only password.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/04/04/Program/Android/3rdLib/permissions-dispatcher/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IPCreator">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/ipheader.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="For life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Permissions Dispatcher
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-04T10:26:06+08:00">
+                2017-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/04/Program/Android/3rdLib/permissions-dispatcher/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/04/Program/Android/3rdLib/permissions-dispatcher/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/04/Program/Android/3rdLib/permissions-dispatcher/" class="leancloud_visitors" data-flag-title="Permissions Dispatcher">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://raw.githubusercontent.com/hotchemi/PermissionsDispatcher/master/art/logo.png" alt=""></p>
+<p>Permissions Dispatcher provides a simple annotation-based API to handle runtime permissions in Android Marshmallow, 100% reflection-free.</p>
+<p>This library lifts the burden that comes with writing a bunch of check statements whether a permission has been granted or not from you, in order to keep your code clean and safe.</p>
+ <a id="more"></a>
+<h1 id="Permissions-Dispatcher"><a href="#Permissions-Dispatcher" class="headerlink" title="Permissions Dispatcher"></a>Permissions Dispatcher</h1><h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p> Here’s a minimum example, in which we register a <code>MainActivity</code> which requires <code>Manifest.permission.CAMERA</code>.</p>
+<h3 id="0-Prepare-AndroidManifest"><a href="#0-Prepare-AndroidManifest" class="headerlink" title="0. Prepare AndroidManifest"></a>0. Prepare AndroidManifest</h3><p> Add the following line to <code>AndroidManifest.xml</code>:</p>
+<p> <code>&lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&gt;</code></p>
+<h3 id="1-Attach-annotations"><a href="#1-Attach-annotations" class="headerlink" title="1. Attach annotations"></a>1. Attach annotations</h3><p> PermissionsDispatcher introduces only a few annotations, keeping its general API concise:</p>
+<blockquote>
+<p>NOTE: Annotated methods must not be <code>private</code>.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Annotation</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@RuntimePermissions</code></td>
+<td><strong>✓</strong></td>
+<td>Register an <code>Activity</code> or <code>Fragment</code> to handle permissions</td>
+</tr>
+<tr>
+<td><code>@NeedsPermission</code></td>
+<td><strong>✓</strong></td>
+<td>Annotate a method which performs the action that requires one or more permissions</td>
+</tr>
+<tr>
+<td><code>@OnShowRationale</code></td>
+<td></td>
+<td>Annotate a method which explains why the permission/s is/are needed. It passes in a <code>PermissionRequest</code> object which can be used to continue or abort the current permission request upon user input</td>
+</tr>
+<tr>
+<td><code>@OnPermissionDenied</code></td>
+<td></td>
+<td>Annotate a method which is invoked if the user doesn’t grant the permissions</td>
+</tr>
+<tr>
+<td><code>@OnNeverAskAgain</code></td>
+<td></td>
+<td>Annotate a method which is invoked if the user chose to have the device “never ask again” about a permission</td>
+</tr>
+</tbody>
+</table>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RuntimePermissions</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@NeedsPermission</span>(Manifest.permission.CAMERA)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">showCamera</span><span class="params">()</span> </span>&#123;</div><div class="line">        getSupportFragmentManager().beginTransaction()</div><div class="line">                .replace(R.id.sample_content_fragment, CameraPreviewFragment.newInstance())</div><div class="line">                .addToBackStack(<span class="string">"camera"</span>)</div><div class="line">                .commitAllowingStateLoss();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@OnShowRationale</span>(Manifest.permission.CAMERA)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">showRationaleForCamera</span><span class="params">(<span class="keyword">final</span> PermissionRequest request)</span> </span>&#123;</div><div class="line">        <span class="keyword">new</span> AlertDialog.Builder(<span class="keyword">this</span>)</div><div class="line">            .setMessage(R.string.permission_camera_rationale)</div><div class="line">            .setPositiveButton(R.string.button_allow, (dialog, button) -&gt; request.proceed())</div><div class="line">            .setNegativeButton(R.string.button_deny, (dialog, button) -&gt; request.cancel())</div><div class="line">            .show();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@OnPermissionDenied</span>(Manifest.permission.CAMERA)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">showDeniedForCamera</span><span class="params">()</span> </span>&#123;</div><div class="line">        Toast.makeText(<span class="keyword">this</span>, R.string.permission_camera_denied, Toast.LENGTH_SHORT).show();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@OnNeverAskAgain</span>(Manifest.permission.CAMERA)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">showNeverAskForCamera</span><span class="params">()</span> </span>&#123;</div><div class="line">        Toast.makeText(<span class="keyword">this</span>, R.string.permission_camera_neverask, Toast.LENGTH_SHORT).show();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-Delegate-to-generated-class"><a href="#2-Delegate-to-generated-class" class="headerlink" title="2. Delegate to generated class"></a>2. Delegate to generated class</h3><p> Upon compilation, PermissionsDispatcher generates a class for <code>MainActivityPermissionsDispatcher</code>([Activity Name] + PermissionsDispatcher), which you can use to safely access these permission-protected methods.</p>
+<p> The only step you have to do is delegating the work to this helper class:</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">    setContentView(R.layout.activity_main);</div><div class="line">    findViewById(R.id.button_camera).setOnClickListener(v -&gt; &#123;</div><div class="line">      <span class="comment">// <span class="doctag">NOTE:</span> delegate the permission handling to generated method</span></div><div class="line">      MainActivityPermissionsDispatcher.showCameraWithCheck(<span class="keyword">this</span>);</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onRequestPermissionsResult</span><span class="params">(<span class="keyword">int</span> requestCode, @NonNull String[] permissions, @NonNull <span class="keyword">int</span>[] grantResults)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onRequestPermissionsResult(requestCode, permissions, grantResults);</div><div class="line">    <span class="comment">// <span class="doctag">NOTE:</span> delegate the permission handling to generated method</span></div><div class="line">    MainActivityPermissionsDispatcher.onRequestPermissionsResult(<span class="keyword">this</span>, requestCode, grantResults);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> Check out the <a href="https://github.com/hotchemi/PermissionsDispatcher/tree/master/sample" target="_blank" rel="external">sample</a> and <a href="https://github.com/hotchemi/PermissionsDispatcher/blob/master/art/MainActivityPermissionsDispatcher.java" target="_blank" rel="external">generated class</a> for more details.</p>
+<h2 id="Getting-Special-Permissions"><a href="#Getting-Special-Permissions" class="headerlink" title="Getting Special Permissions"></a>Getting Special Permissions</h2><p> PermissionsDispatcher takes care of special permissions <code>Manifest.permission.SYSTEM_ALERT_WINDOW</code> and <code>Manifest.permission.WRITE_SETTINGS</code>.</p>
+<p> The following sample is to grant <code>SYSTEM_ALERT_WINDOW</code>.</p>
+<h3 id="0-Prepare-AndroidManifest-1"><a href="#0-Prepare-AndroidManifest-1" class="headerlink" title="0. Prepare AndroidManifest"></a>0. Prepare AndroidManifest</h3><p> Add the following line to <code>AndroidManifest.xml</code>:</p>
+<p> <code>&lt;uses-permission android:name=&quot;android.permission.SYSTEM_ALERT_WINDOW&quot; /&gt;</code></p>
+<h3 id="1-Attach-annotations-1"><a href="#1-Attach-annotations-1" class="headerlink" title="1. Attach annotations"></a>1. Attach annotations</h3><p> It’s the same as other permissions:</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RuntimePermissions</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@NeedsPermission</span>(Manifest.permission.SYSTEM_ALERT_WINDOW)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">systemAlertWindow</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@OnShowRationale</span>(Manifest.permission.SYSTEM_ALERT_WINDOW)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">systemAlertWindowOnShowRationale</span><span class="params">(<span class="keyword">final</span> PermissionRequest request)</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@OnPermissionDenied</span>(Manifest.permission.SYSTEM_ALERT_WINDOW)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">systemAlertWindowOnPermissionDenied</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@OnNeverAskAgain</span>(Manifest.permission.SYSTEM_ALERT_WINDOW)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">systemAlertWindowOnNeverAskAgain</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-Delegate-to-generated-class-1"><a href="#2-Delegate-to-generated-class-1" class="headerlink" title="2. Delegate to generated class"></a>2. Delegate to generated class</h3><p> Unlike other permissions, special permissions require to call the delegation method at <code>onActivityResult</code>:</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">    setContentView(R.layout.activity_main);</div><div class="line">    findViewById(R.id.button_system_alert_window).setOnClickListener(v -&gt; &#123;</div><div class="line">      <span class="comment">// <span class="doctag">NOTE:</span> delegate the permission handling to generated method</span></div><div class="line">      MainActivityPermissionsDispatcher.systemAlertWindowWithCheck(<span class="keyword">this</span>);</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onActivityResult</span><span class="params">(<span class="keyword">int</span> requestCode, <span class="keyword">int</span> resultCode, Intent data)</span> </span>&#123;</div><div class="line">    MainActivityPermissionsDispatcher.onActivityResult(<span class="keyword">this</span>, requestCode);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="maxSdkVersion"><a href="#maxSdkVersion" class="headerlink" title="maxSdkVersion"></a>maxSdkVersion</h2><p> <a href="https://developer.android.com/guide/topics/manifest/uses-permission-element.html" target="_blank" rel="external">\<uses-permission\></uses-permission\></a> has an attribute call <code>maxSdkVersion</code>. PermissionsDispatcher support the feature as well.</p>
+<p> The following sample is for declaring <code>Manifest.permisison.WRITE_EXTERNAL_STORAGE</code> up to API level 18.</p>
+<h3 id="0-AndroidManifest"><a href="#0-AndroidManifest" class="headerlink" title="0. AndroidManifest"></a>0. AndroidManifest</h3><p> Declare the permission with <code>maxSdkVersion</code> attribute</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span></span></div><div class="line">     <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span></div><div class="line">     <span class="attr">android:maxSdkVersion</span>=<span class="string">"18"</span> /&gt;</div></pre></td></tr></table></figure>
+<h3 id="1-Attach-annotations-with-maxSdkVersion"><a href="#1-Attach-annotations-with-maxSdkVersion" class="headerlink" title="1. Attach annotations with maxSdkVersion"></a>1. Attach annotations with <code>maxSdkVersion</code></h3> <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RuntimePermissions</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@NeedsPermission</span>(value = Manifest.permission.WRITE_EXTERNAL_STORAGE, maxSdkVersion = <span class="number">18</span>)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getStorage</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><ul>
+<li>PermissionsDispatcher depends on the <code>support-v4</code> library by default, in order to be able to use some permission compat classes.</li>
+<li>You can use this library with JDK 1.6 or up, but we test library’s behaviour on the JDK 1.8 because it has been becoming the default of Android development.</li>
+<li><p>PermissionsDispatcher bundles ProGuard rules in its aar. No extra settings are required.</p>
+<h3 id="Fragment-Support"><a href="#Fragment-Support" class="headerlink" title="Fragment Support"></a>Fragment Support</h3><p>PermissionsDispatcher is supported on <strong>API levels 4 and up</strong>, with which you get support for annotating <code>android.app.Activity</code> and <code>android.support.v4.app.Fragment</code> sub-classes out of the box.</p>
+<p>In case you rely on <code>android.app.Fragment</code> in your app, you can use these with PermissionsDispatcher as well!</p>
+<p>Simply add a dependency on the <code>support-v13</code> library alongside PermissionsDispatcher in your project, and it will enable support for native fragments.</p>
+<h3 id="For-AndroidAnnotations-users"><a href="#For-AndroidAnnotations-users" class="headerlink" title="For AndroidAnnotations users"></a>For AndroidAnnotations users</h3><p>If you use <a href="http://androidannotations.org/" target="_blank" rel="external">AndroidAnnotations</a>, you need to add <a href="https://github.com/AleksanderMielczarek/AndroidAnnotationsPermissionsDispatcherPlugin" target="_blank" rel="external">AndroidAnnotationsPermissionsDispatcherPlugin</a> to your dependencies so PermissionsDispatcher’s looks for AA’s subclasses (your project won’t compile otherwise).</p>
+<h2 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h2><p>To add it to your project, include the following in your <strong>app module</strong> <code>build.gradle</code> file:</p>
+<p><code>${latest.version}</code> is <a href="https://bintray.com/hotchemi/maven/permissionsdispatcher/_latestVersion" target="_blank" rel="external"><img src="https://api.bintray.com/packages/hotchemi/maven/permissionsdispatcher/images/download.svg" alt="Download"></a></p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">  compile <span class="string">'com.github.hotchemi:permissionsdispatcher:$&#123;latest.version&#125;'</span></div><div class="line">  annotationProcessor <span class="string">'com.github.hotchemi:permissionsdispatcher-processor:$&#123;latest.version&#125;'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Snapshots of the development version are available in <a href="https://oss.jfrog.org/oss-snapshot-local/" target="_blank" rel="external">JFrog’s snapshots repository</a>.<br>Add the repo below to download <code>SNAPSHOT</code> releases.</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">repositories &#123;</div><div class="line">  jcenter()</div><div class="line">  maven &#123; url <span class="string">'http://oss.jfrog.org/artifactory/oss-snapshot-local/'</span> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>Post author:</strong>
+      IPCreator
+    </li>
+    <li class="post-copyright-link">
+      <strong>Post link:</strong>
+      <a href="http://ipcreator.me/2017/04/04/Program/Android/3rdLib/permissions-dispatcher/" title="Permissions Dispatcher">http://ipcreator.me/2017/04/04/Program/Android/3rdLib/permissions-dispatcher/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright Notice: </strong>
+      All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Permissions-Dispatcher/" rel="tag"># Permissions Dispatcher</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/04/MyShare/persuing-personal-value/" rel="next" title="Persuing Your Personal Value">
+                <i class="fa fa-chevron-left"></i> Persuing Your Personal Value
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/04/Program/Android/3rdLib/easy-permissions/" rel="prev" title="Easy Permissions">
+                Easy Permissions <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/04/Program/Android/3rdLib/permissions-dispatcher/"
+           data-title="Permissions Dispatcher" data-url="http://ipcreator.me/2017/04/04/Program/Android/3rdLib/permissions-dispatcher/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/img/ipheader.png"
+               alt="IPCreator" />
+          <p class="site-author-name" itemprop="name">IPCreator</p>
+           
+              <p class="site-description motion-element" itemprop="description">For life, growing up is the only password.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">241</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">241</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ipcreator" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" title="blog">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  blog
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Permissions-Dispatcher"><span class="nav-number">1.</span> <span class="nav-text">Permissions Dispatcher</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Usage"><span class="nav-number">1.1.</span> <span class="nav-text">Usage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-Prepare-AndroidManifest"><span class="nav-number">1.1.1.</span> <span class="nav-text">0. Prepare AndroidManifest</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Attach-annotations"><span class="nav-number">1.1.2.</span> <span class="nav-text">1. Attach annotations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Delegate-to-generated-class"><span class="nav-number">1.1.3.</span> <span class="nav-text">2. Delegate to generated class</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-Special-Permissions"><span class="nav-number">1.2.</span> <span class="nav-text">Getting Special Permissions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-Prepare-AndroidManifest-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">0. Prepare AndroidManifest</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Attach-annotations-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">1. Attach annotations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Delegate-to-generated-class-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">2. Delegate to generated class</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#maxSdkVersion"><span class="nav-number">1.3.</span> <span class="nav-text">maxSdkVersion</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-AndroidManifest"><span class="nav-number">1.3.1.</span> <span class="nav-text">0. AndroidManifest</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Attach-annotations-with-maxSdkVersion"><span class="nav-number">1.3.2.</span> <span class="nav-text">1. Attach annotations with maxSdkVersion</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Note"><span class="nav-number">1.4.</span> <span class="nav-text">Note</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Fragment-Support"><span class="nav-number">1.4.1.</span> <span class="nav-text">Fragment Support</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#For-AndroidAnnotations-users"><span class="nav-number">1.4.2.</span> <span class="nav-text">For AndroidAnnotations users</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Download"><span class="nav-number">1.5.</span> <span class="nav-text">Download</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IPCreator</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ipcreator"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TfzAWJSzk2L4jpj4gHaNsMbp-gzGzoHsz", "PXNkGhS05PxL7rV3N8gDlAQe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+</body>
+</html>
