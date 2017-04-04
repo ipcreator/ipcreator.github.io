@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/04/04/Program/Tools/ubuntu/</loc>
+    <lastmod>2017-04-04T14:34:12.377Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu</title>
+        <pubTime>2017-04-04T09:01:06.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>VmWare</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="http://ipcreator.me/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/04/Program/Tools/gradle-and-android/</loc>
+    <lastmod>2017-04-04T09:00:17.503Z</lastmod>
+    <data>
+        <display>
+        <title>Android Gradle</title>
+        <pubTime>2017-04-04T08:29:06.000Z</pubTime>
+        
+        <tag>Gradle</tag>
+         
+        <tag>Tool</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/04/04/Program/Android/3rdLib/easy-permissions/</loc>
     <lastmod>2017-04-04T02:45:15.951Z</lastmod>
     <data>
@@ -3951,6 +3995,30 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
+    <data>
+        <display>
+        <title>Base of Multimedia——Picture</title>
+        <pubTime>2017-02-27T03:04:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Picture</tag>
+         
+        <tag>Multimedia</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
@@ -3973,18 +4041,40 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
+    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>Base of Multimedia——Picture</title>
-        <pubTime>2017-02-27T03:04:06.000Z</pubTime>
+        <title>AI vs Machine Learning</title>
+        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Picture</tag>
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>Base of Multimedia——Color</title>
+        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
          
         <tag>Multimedia</tag>
+         
+        <tag>Color</tag>
          
          
            
@@ -4033,52 +4123,6 @@
         <tag>Multimedia</tag>
          
         <tag>Video</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>AI vs Machine Learning</title>
-        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Machine Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>Base of Multimedia——Color</title>
-        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Multimedia</tag>
-         
-        <tag>Color</tag>
          
          
            

@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/04/04/Program/Tools/ubuntu/</loc>
+    
+    <lastmod>2017-04-04T14:34:12.377Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/04/Program/Tools/gradle-and-android/</loc>
+    
+    <lastmod>2017-04-04T09:00:17.503Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/04/04/Program/Android/3rdLib/easy-permissions/</loc>
     
     <lastmod>2017-04-04T02:45:15.951Z</lastmod>
@@ -1255,13 +1269,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
-    
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
     
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
@@ -1269,16 +1276,9 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
     
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
-    
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     
   </url>
   
@@ -1291,6 +1291,20 @@
   
   <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
+    
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
+    
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
     
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     
