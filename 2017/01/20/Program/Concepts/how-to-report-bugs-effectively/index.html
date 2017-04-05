@@ -113,7 +113,7 @@
 所报告的问题是由于用户的过失而产生的；
 所报告的问题是由于其他程序的错误而产生的；
 所报告的问题是由于网络">
-<meta property="og:updated_time" content="2017-03-27T10:02:18.839Z">
+<meta property="og:updated_time" content="2017-04-05T13:59:03.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Report Bugs Effectively">
 <meta name="twitter:description" content="作者：Simon Tatham 专业的自由软件程序员翻译：Dasn
@@ -505,7 +505,7 @@
 <p>In this essay I’ll try to state clearly what makes a good bug report. Ideally I would like everybody in the world to read this essay before reporting any bugs to anybody. Certainly I would like everybody who reports bugs to me to have read it.</p>
 <p>In a nutshell, the aim of a bug report is to enable the programmer to see the program failing in front of them. You can either show them in person, or give them careful and detailed instructions on how to make it fail. If they can make it fail, they will try to gather extra information until they know the cause. If they can’t make it fail, they will have to ask you to gather that information for them.</p>
 <p>In bug reports, try to make very clear what are actual facts (“I was at the computer and this happened”) and what are speculations (“I think the problem might be this”). Leave out speculations if you want to, but don’t leave out facts.</p>
-<p>When you report a bug, you are doing so because you want the bug fixed. There is no point in swearing at the programmer or being deliberately unhelpful: it may be their fault and your problem, and you might be right to be angry with them, but the bug will get fixed faster if you help them by supplying all the information they need. Remember also that if the program is free, then the author is providing it out of kindness, so if too many people are rude to them then they may stop feeling kind.</p>
+<p>When you report a bug, you are doing so because you want the bug fixed. There is no point in swearing at the programmer or being deliberate unhelpful: it may be their fault and your problem, and you might be right to be angry with them, but the bug will get fixed faster if you help them by supplying all the information they need. Remember also that if the program is free, then the author is providing it out of kindness, so if too many people are rude to them then they may stop feeling kind.</p>
 <p>“It doesn’t work.”</p>
 <p>Give the programmer some credit for basic intelligence: if the program really didn’t work at all, they would probably have noticed. Since they haven’t noticed, it must be working for them. Therefore, either you are doing something differently from them, or your environment is different from theirs. They need information; providing this information is the purpose of a bug report. More information is almost always better than less.</p>
 <p>Many programs, particularly free ones, publish their list of known bugs. If you can find a list of known bugs, it’s worth reading it to see if the bug you’ve just found is already known or not. If it’s already known, it probably isn’t worth reporting again, but if you think you have more information than the report in the bug list, you might want to contact the programmer anyway. They might be able to fix the bug more easily if you can give them information they didn’t already have.</p>
@@ -552,7 +552,7 @@
 <p>Writing clearly is essential in a bug report. If the programmer can’t tell what you meant, you might as well not have said anything.</p>
 <p>I get bug reports from all around the world. Many of them are from non-native English speakers, and a lot of those apologise for their poor English. In general, the bug reports with apologies for their poor English are actually very clear and useful. All the most unclear reports come from native English speakers who assume that I will understand them even if they don’t make any effort to be clear or precise.</p>
 <p>Be specific. If you can do the same thing two different ways, state which one you used. “I selected Load” might mean “I clicked on Load” or “I pressed Alt-L”. Say which you did. Sometimes it matters.<br>Be verbose. Give more information rather than less. If you say too much, the programmer can ignore some of it. If you say too little, they have to come back and ask more questions. One bug report I received was a single sentence; every time I asked for more information, the reporter would reply with another single sentence. It took me several weeks to get a useful amount of information, because it turned up one short sentence at a time.<br>Be careful of pronouns. Don’t use words like “it”, or references like “the window”, when it’s unclear what they mean. Consider this: “I started FooApp. It put up a warning window. I tried to close it and it crashed.” It isn’t clear what the user tried to close. Did they try to close the warning window, or the whole of FooApp? It makes a difference. Instead, you could say “I started FooApp, which put up a warning window. I tried to close the warning window, and FooApp crashed.” This is longer and more repetitive, but also clearer and less easy to misunderstand.<br>Read what you wrote. Read the report back to yourself, and see if you think it’s clear. If you have listed a sequence of actions which should produce the failure, try following them yourself, to see if you missed a step.<br>Summary</p>
-<p>The first aim of a bug report is to let the programmer see the failure with their own eyes. If you can’t be with them to make it fail in front of them, give them detailed instructions so that they can make it fail for themselves.<br>In case the first aim doesn’t succeed, and the programmer can’t see it failing themselves, the second aim of a bug report is to describe what went wrong. Describe everything in detail. State what you saw, and also state what you expected to see. Write down the error messages, especially if they have numbers in.<br>When your computer does something unexpected, freeze. Do nothing until you’re calm, and don’t do anything that you think might be dangerous.<br>By all means try to diagnose the fault yourself if you think you can, but if you do, you should still report the symptoms as well.<br>Be ready to provide extra information if the programmer needs it. If they didn’t need it, they wouldn’t be asking for it. They aren’t being deliberately awkward. Have version numbers at your fingertips, because they will probably be needed.<br>Write clearly. Say what you mean, and make sure it can’t be misinterpreted.<br>Above all, be precise. Programmers like precision.<br>Disclaimer: I’ve never actually seen a mongoose or an antelope. My zoology may be inaccurate.</p>
+<p>The first aim of a bug report is to let the programmer see the failure with their own eyes. If you can’t be with them to make it fail in front of them, give them detailed instructions so that they can make it fail for themselves.<br>In case the first aim doesn’t succeed, and the programmer can’t see it failing themselves, the second aim of a bug report is to describe what went wrong. Describe everything in detail. State what you saw, and also state what you expected to see. Write down the error messages, especially if they have numbers in.<br>When your computer does something unexpected, freeze. Do nothing until you’re calm, and don’t do anything that you think might be dangerous.<br>By all means try to diagnose the fault yourself if you think you can, but if you do, you should still report the symptoms as well.<br>Be ready to provide extra information if the programmer needs it. If they didn’t need it, they wouldn’t be asking for it. They aren’t being deliberate awkward. Have version numbers at your fingertips, because they will probably be needed.<br>Write clearly. Say what you mean, and make sure it can’t be misinterpreted.<br>Above all, be precise. Programmers like precision.<br>Disclaimer: I’ve never actually seen a mongoose or an antelope. My zoology may be inaccurate.</p>
 <p>$Id$</p>
 <p>Copyright © 1999 Simon Tatham.<br>This document is OpenContent.<br>You may copy and use the text under the terms of the OpenContent Licence.</p>
 <p>This article is not specific to any particular program.</p>
@@ -726,7 +726,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">246</span>
+                <span class="site-state-item-count">251</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -748,7 +748,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">245</span>
+                <span class="site-state-item-count">248</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
