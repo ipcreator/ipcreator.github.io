@@ -4,8 +4,50 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/04/05/Program/Tools/linux-trouble-resolver/</loc>
+    <lastmod>2017-04-05T05:18:22.272Z</lastmod>
+    <data>
+        <display>
+        <title>Linux Trouble Resolver</title>
+        <pubTime>2017-04-05T04:46:06.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="http://ipcreator.me/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/MyView/English/love-words/</loc>
+    <lastmod>2017-04-05T05:17:17.772Z</lastmod>
+    <data>
+        <display>
+        <title>Love English Words</title>
+        <pubTime>2017-02-21T23:44:05.000Z</pubTime>
+        
+        <tag>Word</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/04/04/Program/Tools/ubuntu/</loc>
-    <lastmod>2017-04-04T14:34:12.377Z</lastmod>
+    <lastmod>2017-04-05T05:12:09.842Z</lastmod>
     <data>
         <display>
         <title>Ubuntu</title>
@@ -15,10 +57,118 @@
          
         <tag>VmWare</tag>
          
+        <tag>VirtualBox</tag>
+         
          
            
              
               <breadCrumb title="Tools" url="http://ipcreator.me/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/05/Program/Tools/shell/</loc>
+    <lastmod>2017-04-05T04:32:00.779Z</lastmod>
+    <data>
+        <display>
+        <title>Shell</title>
+        <pubTime>2017-04-05T04:25:06.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Shell</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="http://ipcreator.me/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/05/Program/Tools/linux/</loc>
+    <lastmod>2017-04-05T04:25:18.136Z</lastmod>
+    <data>
+        <display>
+        <title>Linux</title>
+        <pubTime>2017-04-04T22:13:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="http://ipcreator.me/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/MyView/English/computer-english-words/</loc>
+    <lastmod>2017-04-05T01:26:13.437Z</lastmod>
+    <data>
+        <display>
+        <title>Professional Words of Computer</title>
+        <pubTime>2017-03-25T16:00:00.000Z</pubTime>
+        
+        <tag>Word</tag>
+         
+        <tag>Profession</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/teach-yourself-programming-in-ten-years/</loc>
+    <lastmod>2017-04-05T00:05:10.654Z</lastmod>
+    <data>
+        <display>
+        <title>Teach Yourself Programming in Ten Years</title>
+        <pubTime>2017-01-20T09:22:06.000Z</pubTime>
+        
+        <tag>Algorithm</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/MyView/English/love-sentencns/</loc>
+    <lastmod>2017-04-04T23:08:36.485Z</lastmod>
+    <data>
+        <display>
+        <title>Love English Sentences</title>
+        <pubTime>2017-02-22T00:13:05.000Z</pubTime>
+        
+        <tag>Sentence</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
           
         </display>
     </data>
@@ -123,26 +273,6 @@
            
              
               <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/22/MyView/English/love-words/</loc>
-    <lastmod>2017-04-04T00:41:49.093Z</lastmod>
-    <data>
-        <display>
-        <title>Love English Words</title>
-        <pubTime>2017-02-21T23:44:05.000Z</pubTime>
-        
-        <tag>Word</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
           
         </display>
     </data>
@@ -467,28 +597,6 @@
            
              
               <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/26/MyView/English/computer-english-words/</loc>
-    <lastmod>2017-04-03T06:46:04.718Z</lastmod>
-    <data>
-        <display>
-        <title>Professional Words of Computer</title>
-        <pubTime>2017-03-25T16:00:00.000Z</pubTime>
-        
-        <tag>Word</tag>
-         
-        <tag>Profession</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
           
         </display>
     </data>
@@ -4041,28 +4149,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>AI vs Machine Learning</title>
-        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Machine Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
@@ -4087,30 +4173,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>File System of Linux</title>
-        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>File System</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
@@ -4123,6 +4185,52 @@
         <tag>Multimedia</tag>
          
         <tag>Video</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>AI vs Machine Learning</title>
+        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>File System of Linux</title>
+        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>File System</tag>
          
          
            
@@ -4194,26 +4302,6 @@
            
              
               <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/22/MyView/English/love-sentencns/</loc>
-    <lastmod>2017-03-27T08:38:30.562Z</lastmod>
-    <data>
-        <display>
-        <title>Love English Sentences</title>
-        <pubTime>2017-02-22T00:13:05.000Z</pubTime>
-        
-        <tag>Sentence</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
           
         </display>
     </data>
@@ -4760,26 +4848,6 @@
            
              
               <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/teach-yourself-programming-in-ten-years/</loc>
-    <lastmod>2017-03-27T07:28:47.056Z</lastmod>
-    <data>
-        <display>
-        <title>Teach Yourself Programming in Ten Years</title>
-        <pubTime>2017-01-20T09:22:06.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
           
         </display>
     </data>

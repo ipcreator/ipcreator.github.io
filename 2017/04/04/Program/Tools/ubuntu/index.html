@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ubuntu,VmWare," />
+  <meta name="keywords" content="Ubuntu,VmWare,VirtualBox," />
 
 
 
@@ -106,7 +106,10 @@ From LXD to Kubernetes to Docker, learn how">
 <meta property="og:image" content="http://img.blog.csdn.net/20161029203358409?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="http://img.blog.csdn.net/20161029203436760?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="https://img.sysgeek.cn/img/chrome-45-beta-release-ubuntu-install.jpg">
-<meta property="og:updated_time" content="2017-04-04T14:34:12.377Z">
+<meta property="og:image" content="http://img0.ph.126.net/PxDLqA1WefLAWC7lMIvgkQ==/6619092984561493299.png?_=4810428">
+<meta property="og:image" content="http://img1.ph.126.net/ZupdYn02Hx-dWhjz3hknYg==/6608862028864914337.png?_=4810428">
+<meta property="og:image" content="http://img0.ph.126.net/gBF7PKc11Wq5C8xKUXjCSQ==/6599272088448577647.png?_=4810428">
+<meta property="og:updated_time" content="2017-04-05T05:12:09.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu">
 <meta name="twitter:description" content="Ubuntu is an open source software platform that runs from the cloud, to the smartphone, to all your things
@@ -432,7 +435,32 @@ From LXD to Kubernetes to Docker, learn how">
 </blockquote>
 <p>【解决过程】<br>1、把普通用户名加入到vboxsf之中。因为你的用户名不在vboxsf这个用户组。<br>下面添加boarmy到vboxsf这个用户组。<br>boarmy@boarmy-Ubuntu:~$ sudo adduser boarmy vboxsf<br>正在添加用户”boarmy”到”vboxsf”组…<br>正在将用户“boarmy”加入到“vboxsf”组中<br>完成。<br>crifan@crifan-Ubuntu:~$<br>2.再去用命令行操作：<br>boarmy@boarmy-Ubuntu:~$ ls /media/sf_bak<br>但是还是无法访问共享文件夹。<br>3、重启Ubuntu看看是否有用。<br>结果真正可以用上共享文件夹了：</p>
 <h2 id="鸟哥的Linux私房菜"><a href="#鸟哥的Linux私房菜" class="headerlink" title="鸟哥的Linux私房菜"></a><a href="http://download.csdn.net/detail/wjx342529/9803037" target="_blank" rel="external">鸟哥的Linux私房菜</a></h2><p>《鸟哥的Linux私房菜:基础学习篇》是最具知名度的Linux入门书《鸟哥的Linux私房菜基础学习篇》的最新版，全面而详细地介绍了Linux操作系统。全书分为5个部分：第一部分着重说明Linux的起源及功能，如何规划和安装Linux主机；第二部分介绍Linux的文件系统、文件、目录与磁盘的管理；第三部分介绍文字模式接口shell和管理系统的好帮手shell脚本，另外还介绍了文字编辑器vi和vim的使用方法；第四部分介绍了对于系统安全非常重要的Linux账号的管理，以及主机系统与程序的管理，如查看进程、任务分配和作业管理；第五部分介绍了系统管理员(root)的管理事项，如了解系统运行状况、系统服务，针对登录文件进行解析，对系统进行备份以及核心的管理等。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://www.ubuntu.com/" target="_blank" rel="external">Ubuntu</a><br><a href="http://download.pchome.net/system/sysenhance/download-10841.html" target="_blank" rel="external">VirtualBox官方中文版5.1.18.114002</a><br><a href="http://download.csdn.net/detail/zl199307/9612475" target="_blank" rel="external">think in java4 中文版</a><br><a href="http://download.csdn.net/detail/tangzy09/4305467" target="_blank" rel="external">think in java 4 English</a><br><a href="http://download.csdn.net/detail/foxmails/309302" target="_blank" rel="external">张孝祥Java就业培训教程pdf版+源代码</a><br><a href="http://download.csdn.net/detail/wutianke/8388621" target="_blank" rel="external">Ubuntu官方图书（第七版）</a><br><a href="http://www.xxzs.tv/newsdetail/17" target="_blank" rel="external">【教程】如何开启VT（CPU虚拟化）</a><br><a href="https://www.sysgeek.cn/15-things-to-do-after-installing-ubuntu-16-04-lts/" target="_blank" rel="external">Ubuntu 16.04 LTS安装好之后需要做的15件事</a><br><a href="https://www.sysgeek.cn/install-numix-in-ubuntu/" target="_blank" rel="external">如何在Ubuntu中安装Numix主题和图标</a><br><a href="https://www.sysgeek.cn/additional-icon-packs-linux/" target="_blank" rel="external">[推荐]适用于Linux的5款最佳桌面图标集</a></p>
+<h2 id="Ubuntu-安装-Android-Studio-的步骤"><a href="#Ubuntu-安装-Android-Studio-的步骤" class="headerlink" title="Ubuntu 安装 Android Studio 的步骤"></a><a href="https://github.com/Bakumon/blog/issues/4" target="_blank" rel="external">Ubuntu 安装 Android Studio 的步骤</a></h2><p>linux:环境变量设置.bashrc及相关<br>假定想添加的环境变量路径为：/opt/my-tools/Android-sdk/tools</p>
+<p>1 进入用户的根目录<br>cd   $HOME  或 cd ~<br>2 然后打开.bashrc若不存在则新建.bashrc文件<br>vi   .bashrc<br>3 在.bashrc页面最后加上想要加的路径<br>export PATH=$PATH:/opt/my-tools/android-sdk/tools<br>4 最后执行<br>source ~/.bashrc<br>至此环境变量起作用了</p>
+<h2 id="Ubuntu-x64安装Android-studio-全部步骤和问题解决"><a href="#Ubuntu-x64安装Android-studio-全部步骤和问题解决" class="headerlink" title="Ubuntu x64安装Android studio 全部步骤和问题解决"></a><a href="http://www.cnblogs.com/javacoding/p/5636512.html" target="_blank" rel="external">Ubuntu x64安装Android studio 全部步骤和问题解决</a></h2><p><a href="http://www.cnblogs.com/liunanjava/p/4810428.html" target="_blank" rel="external">设置SDK Manager国内源和国内代理</a><br>        打开SDK Managerl界面，可能会界面下文可能会一直卡在获取“dl-ssl.google.com”里面数据的状态  ，打开Tools–&gt;options，设置代理网址，网址可在之前的<a href="http://tools.android-studio.org/中找到。" target="_blank" rel="external">http://tools.android-studio.org/中找到。</a><br>        例如我选择的是ubuntu.buct.cn，那么在此填入服务器ubuntu.buct.cn，端口80，再勾选上下面的两项</p>
+<p><img src="http://img0.ph.126.net/PxDLqA1WefLAWC7lMIvgkQ==/6619092984561493299.png?_=4810428" alt=""></p>
+<p>安装时候，有时会提示可能还会出现在获取“dl-ssl.google.com”下来的 数据卡 住了很时间，可以这样修改，在Tools–&gt;Manage Add-on Sites–&gt;User Defined Sites里面，点击New添加国内的镜像XML文件，这里的XML文件我们可以从刚才的代理镜像源里面得到，</p>
+<p><img src="http://img1.ph.126.net/ZupdYn02Hx-dWhjz3hknYg==/6608862028864914337.png?_=4810428" alt=""></p>
+<p> 将源里面的所有目录下的xml文件添加到New里面，然后将Official Add-on Sites里面的Disable All，此时再更新就是我们添加的源里面的列表了</p>
+<p> <img src="http://img0.ph.126.net/gBF7PKc11Wq5C8xKUXjCSQ==/6599272088448577647.png?_=4810428" alt=""></p>
+<p><a href="http://www.cnblogs.com/yymn/p/5698623.html" target="_blank" rel="external">嵌入式 Linux下永久生效环境变量bashrc</a></p>
+<h3 id="1）-bashrc文件"><a href="#1）-bashrc文件" class="headerlink" title="1） .bashrc文件"></a>1） .bashrc文件</h3><pre><code>在linux系统普通用户目录（cd /home/xxx）或root用户目录（cd /root）下，用指令ls -al可以看到4个隐藏文件，
+
+.bash_history   记录之前输入的命令
+
+.bash_logout    当你退出时执行的命令
+
+.bash_profile    当你登入shell时执行
+
+.bashrc             当你登入shell时执行
+
+  请注意后两个的区别：&apos;.bash_profile&apos;只在会话开始时被读取一次，而&apos;.bashrc&apos;则每次打开新的终端时，都要被读取。
+
+  这些文件是每一位用户对终端功能和属性设置，修改.bashrc可以改变环境变量PATH、别名alias和提示符。具体如何修改会在下面做介绍。
+
+  除了可以修改用户目录下的.bashrc文件外，还可以修改如“/etc/profile”文件、“/etc/bashrc”文件及目录“/etc /profile.d”下的文件。但是修改/etc路径下的配置文件将会应用到整个系统，属于系统级的配置，而修改用户目录下的.bashrc则只是限制在用户应用上，属于用户级设置。两者在应用范围上有所区别，建议如需修改的话，修改用户目录下的.bashrc，即无需root权限，也不会影响其他用户。
+</code></pre><p><a href="http://blog.csdn.net/chenchong08/article/details/7833242" target="_blank" rel="external">Linux中profile、bashrc、bash_profile之间的区别和联系</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://www.ubuntu.com/" target="_blank" rel="external">Ubuntu</a><br><a href="http://download.pchome.net/system/sysenhance/download-10841.html" target="_blank" rel="external">VirtualBox官方中文版5.1.18.114002</a><br><a href="http://download.csdn.net/detail/zl199307/9612475" target="_blank" rel="external">think in java4 中文版</a><br><a href="http://download.csdn.net/detail/tangzy09/4305467" target="_blank" rel="external">think in java 4 English</a><br><a href="http://download.csdn.net/detail/foxmails/309302" target="_blank" rel="external">张孝祥Java就业培训教程pdf版+源代码</a><br><a href="http://download.csdn.net/detail/wutianke/8388621" target="_blank" rel="external">Ubuntu官方图书（第七版）</a><br><a href="http://www.xxzs.tv/newsdetail/17" target="_blank" rel="external">【教程】如何开启VT（CPU虚拟化）</a><br><a href="https://www.sysgeek.cn/15-things-to-do-after-installing-ubuntu-16-04-lts/" target="_blank" rel="external">Ubuntu 16.04 LTS安装好之后需要做的15件事</a><br><a href="https://www.sysgeek.cn/install-numix-in-ubuntu/" target="_blank" rel="external">如何在Ubuntu中安装Numix主题和图标</a><br><a href="https://www.sysgeek.cn/additional-icon-packs-linux/" target="_blank" rel="external">[推荐]适用于Linux的5款最佳桌面图标集</a><br><a href="https://www.sysgeek.cn/simplescreenrecorder-screen-recording-ubuntu/" target="_blank" rel="external">如何使用SimpleScreenRecorder进行Ubuntu屏幕录制</a></p>
 
       
     </div>
@@ -481,6 +509,8 @@ From LXD to Kubernetes to Docker, learn how">
           
             <a href="/tags/VmWare/" rel="tag"># VmWare</a>
           
+            <a href="/tags/VirtualBox/" rel="tag"># VirtualBox</a>
+          
         </div>
       
 
@@ -501,6 +531,10 @@ From LXD to Kubernetes to Docker, learn how">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/05/Program/Tools/linux/" rel="prev" title="Linux">
+                Linux <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -599,7 +633,7 @@ From LXD to Kubernetes to Docker, learn how">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">243</span>
+                <span class="site-state-item-count">246</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -621,7 +655,7 @@ From LXD to Kubernetes to Docker, learn how">
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">243</span>
+                <span class="site-state-item-count">245</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -740,7 +774,7 @@ From LXD to Kubernetes to Docker, learn how">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Download-Ubuntu-Desktop"><span class="nav-number">1.</span> <span class="nav-text">Download Ubuntu Desktop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VirtualBox"><span class="nav-number">2.</span> <span class="nav-text">VirtualBox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hoxx-VPN-Proxy"><span class="nav-number">3.</span> <span class="nav-text">Hoxx VPN Proxy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu-16-04安装sogou-拼音输入法"><span class="nav-number">4.</span> <span class="nav-text">Ubuntu 16.04安装sogou 拼音输入法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu-16-04-安装—-搜狗、Chrome、git、JDK、Eclipse"><span class="nav-number">5.</span> <span class="nav-text">Ubuntu 16.04 安装—-搜狗、Chrome、git、JDK、Eclipse</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VirtualBox中的Ubuntu没有权限访问共享文件夹sf-win7-to-ubuntu"><span class="nav-number">6.</span> <span class="nav-text">VirtualBox中的Ubuntu没有权限访问共享文件夹sf_win7_to_ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸟哥的Linux私房菜"><span class="nav-number">7.</span> <span class="nav-text">鸟哥的Linux私房菜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">8.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Download-Ubuntu-Desktop"><span class="nav-number">1.</span> <span class="nav-text">Download Ubuntu Desktop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VirtualBox"><span class="nav-number">2.</span> <span class="nav-text">VirtualBox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hoxx-VPN-Proxy"><span class="nav-number">3.</span> <span class="nav-text">Hoxx VPN Proxy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu-16-04安装sogou-拼音输入法"><span class="nav-number">4.</span> <span class="nav-text">Ubuntu 16.04安装sogou 拼音输入法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu-16-04-安装—-搜狗、Chrome、git、JDK、Eclipse"><span class="nav-number">5.</span> <span class="nav-text">Ubuntu 16.04 安装—-搜狗、Chrome、git、JDK、Eclipse</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VirtualBox中的Ubuntu没有权限访问共享文件夹sf-win7-to-ubuntu"><span class="nav-number">6.</span> <span class="nav-text">VirtualBox中的Ubuntu没有权限访问共享文件夹sf_win7_to_ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸟哥的Linux私房菜"><span class="nav-number">7.</span> <span class="nav-text">鸟哥的Linux私房菜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu-安装-Android-Studio-的步骤"><span class="nav-number">8.</span> <span class="nav-text">Ubuntu 安装 Android Studio 的步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu-x64安装Android-studio-全部步骤和问题解决"><span class="nav-number">9.</span> <span class="nav-text">Ubuntu x64安装Android studio 全部步骤和问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）-bashrc文件"><span class="nav-number">9.1.</span> <span class="nav-text">1） .bashrc文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">10.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
