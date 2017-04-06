@@ -4,7 +4,257 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/04/04/Program/Tools/gradle-and-android/</loc>
+    <loc>http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/</loc>
+    <lastmod>2017-04-06T13:54:36.273Z</lastmod>
+    <data>
+        <display>
+        <title>Basic Concept of Java</title>
+        <pubTime>2017-04-06T13:18:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://ipcreator.me/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/06/English/basic-concept-of-grammar/</loc>
+    <lastmod>2017-04-06T09:28:58.139Z</lastmod>
+    <data>
+        <display>
+        <title>Basic Concept of English——Grammar</title>
+        <pubTime>2017-04-05T23:46:10.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Grammar</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/06/Program/Tools/Computer/char-decode/</loc>
+    <lastmod>2017-04-06T05:52:28.322Z</lastmod>
+    <data>
+        <display>
+        <title>Basic Concept of Java——Charset</title>
+        <pubTime>2017-04-05T23:46:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Charset</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://ipcreator.me/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/10/Program/Java/improper-code-of-chinese-in-java/</loc>
+    <lastmod>2017-04-06T04:25:04.691Z</lastmod>
+    <data>
+        <display>
+        <title>The Way of Solving Charset Problem in Java.</title>
+        <pubTime>2017-03-10T02:41:06.000Z</pubTime>
+        
+        <tag>Charset</tag>
+         
+        <tag>ASCII</tag>
+         
+        <tag>GBK</tag>
+         
+        <tag>Unicode</tag>
+         
+        <tag>UTF8</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://ipcreator.me/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/English/computer-english-words/</loc>
+    <lastmod>2017-04-06T03:35:49.798Z</lastmod>
+    <data>
+        <display>
+        <title>Professional Words of Computer</title>
+        <pubTime>2017-03-25T16:00:00.000Z</pubTime>
+        
+        <tag>Word</tag>
+         
+        <tag>Profession</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-deliberately-practice/</loc>
+    <lastmod>2017-04-06T00:45:36.051Z</lastmod>
+    <data>
+        <display>
+        <title>Meta Skill——Deliberate Practice</title>
+        <pubTime>2017-04-05T13:48:06.000Z</pubTime>
+        
+        <tag>Meta Skill</tag>
+         
+        <tag>Deliberate Practice</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/06/English/basic-concept-of-spelling/</loc>
+    <lastmod>2017-04-05T23:55:12.119Z</lastmod>
+    <data>
+        <display>
+        <title>Basic Concept of English——Pronunciation</title>
+        <pubTime>2017-04-05T23:46:08.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Pronunciation</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/06/English/basic-concept-of-vocabulary/</loc>
+    <lastmod>2017-04-05T23:51:53.541Z</lastmod>
+    <data>
+        <display>
+        <title>Basic Concept of English——Vocabulary</title>
+        <pubTime>2017-04-05T23:46:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Vocabulary</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/06/readme/</loc>
+    <lastmod>2017-04-05T23:24:45.739Z</lastmod>
+    <data>
+        <display>
+        <title>Principles of IPCreator's Blog</title>
+        <pubTime>2017-04-05T22:55:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Best Practice</tag>
+         
+        <tag>Meta Skill</tag>
+         
+        <tag>Pitfall</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/English/love-words/</loc>
+    <lastmod>2017-04-05T23:20:01.223Z</lastmod>
+    <data>
+        <display>
+        <title>Love English Words</title>
+        <pubTime>2017-02-21T23:44:05.000Z</pubTime>
+        
+        <tag>Word</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-retrieve/</loc>
+    <lastmod>2017-04-05T23:04:39.471Z</lastmod>
+    <data>
+        <display>
+        <title>Meta Skill——Retrieve</title>
+        <pubTime>2017-04-05T12:55:06.000Z</pubTime>
+        
+        <tag>Google</tag>
+         
+        <tag>English</tag>
+         
+        <tag>Meta Skill</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/04/Program/Tools/Gradle/gradle-and-android/</loc>
     <lastmod>2017-04-05T14:32:55.957Z</lastmod>
     <data>
         <display>
@@ -26,7 +276,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/04/05/Program/Tools/shell/</loc>
+    <loc>http://ipcreator.me/2017/04/05/Program/Tools/Linux/shell/</loc>
     <lastmod>2017-04-05T14:31:48.624Z</lastmod>
     <data>
         <display>
@@ -68,53 +318,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/04/05/MyView/Original/meta-skill-search/</loc>
-    <lastmod>2017-04-05T14:28:23.302Z</lastmod>
-    <data>
-        <display>
-        <title>Meta Skill——Search</title>
-        <pubTime>2017-04-05T12:55:06.000Z</pubTime>
-        
-        <tag>Google</tag>
-         
-        <tag>English</tag>
-         
-        <tag>Meta Skill</tag>
-         
-         
-           
-             
-              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/04/05/MyView/Original/meta-skill-deliberately-practice/</loc>
-    <lastmod>2017-04-05T14:20:16.809Z</lastmod>
-    <data>
-        <display>
-        <title>Meta Skill——Deliberate Practice</title>
-        <pubTime>2017-04-05T13:48:06.000Z</pubTime>
-        
-        <tag>Meta Skill</tag>
-         
-        <tag>Deliberate Practice</tag>
-         
-         
-           
-             
-              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/04/05/Program/Tools/linux-trouble-resolver/</loc>
+    <loc>http://ipcreator.me/2017/04/05/Program/Tools/Linux/linux-trouble-resolver/</loc>
     <lastmod>2017-04-05T14:02:01.599Z</lastmod>
     <data>
         <display>
@@ -136,7 +340,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/30/MyView/Original/why-i-insist-on-practicing-deliberately-eveyday/</loc>
+    <loc>http://ipcreator.me/2017/03/30/MyView/Original/Why/why-i-insist-on-practicing-deliberately-eveyday/</loc>
     <lastmod>2017-04-05T14:01:20.284Z</lastmod>
     <data>
         <display>
@@ -178,7 +382,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/10/MyShare/live-your-life/</loc>
+    <loc>http://ipcreator.me/2017/01/10/MyView/Share/live-your-life/</loc>
     <lastmod>2017-04-05T13:59:03.742Z</lastmod>
     <data>
         <display>
@@ -202,7 +406,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/how-to-report-bugs-effectively/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Advice/how-to-report-bugs-effectively/</loc>
     <lastmod>2017-04-05T13:59:03.739Z</lastmod>
     <data>
         <display>
@@ -222,27 +426,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/22/MyView/English/love-words/</loc>
-    <lastmod>2017-04-05T13:51:24.440Z</lastmod>
-    <data>
-        <display>
-        <title>Love English Words</title>
-        <pubTime>2017-02-21T23:44:05.000Z</pubTime>
-        
-        <tag>Word</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/04/05/MyView/Original/meta-skill-innovation/</loc>
+    <loc>http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-innovation/</loc>
     <lastmod>2017-04-05T13:46:57.237Z</lastmod>
     <data>
         <display>
@@ -264,7 +448,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/04/05/MyView/Original/meta-skill-english/</loc>
+    <loc>http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-english/</loc>
     <lastmod>2017-04-05T13:46:42.567Z</lastmod>
     <data>
         <display>
@@ -284,29 +468,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/26/MyView/English/computer-english-words/</loc>
-    <lastmod>2017-04-05T12:49:40.568Z</lastmod>
-    <data>
-        <display>
-        <title>Professional Words of Computer</title>
-        <pubTime>2017-03-25T16:00:00.000Z</pubTime>
-        
-        <tag>Word</tag>
-         
-        <tag>Profession</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/04/04/Program/Tools/ubuntu/</loc>
+    <loc>http://ipcreator.me/2017/04/04/Program/Tools/Linux/ubuntu/</loc>
     <lastmod>2017-04-05T05:12:09.842Z</lastmod>
     <data>
         <display>
@@ -330,7 +492,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/04/05/Program/Tools/linux/</loc>
+    <loc>http://ipcreator.me/2017/04/05/Program/Tools/Linux/linux/</loc>
     <lastmod>2017-04-05T04:25:18.136Z</lastmod>
     <data>
         <display>
@@ -352,7 +514,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/teach-yourself-programming-in-ten-years/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Advice/teach-yourself-programming-in-ten-years/</loc>
     <lastmod>2017-04-05T00:05:10.654Z</lastmod>
     <data>
         <display>
@@ -372,7 +534,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/22/MyView/English/love-sentencns/</loc>
+    <loc>http://ipcreator.me/2017/02/22/English/love-sentencns/</loc>
     <lastmod>2017-04-04T23:08:36.485Z</lastmod>
     <data>
         <display>
@@ -454,7 +616,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/04/04/MyShare/persuing-personal-value/</loc>
+    <loc>http://ipcreator.me/2017/04/04/MyView/Share/persuing-personal-value/</loc>
     <lastmod>2017-04-04T01:02:59.577Z</lastmod>
     <data>
         <display>
@@ -494,7 +656,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/04/04/BusinessAI/mit-technology-review.md/10-breakthrough-technologies-2017/</loc>
+    <loc>http://ipcreator.me/2017/04/04/AI/Business/10-breakthrough-technologies-2017/</loc>
     <lastmod>2017-04-04T00:37:26.636Z</lastmod>
     <data>
         <display>
@@ -558,7 +720,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/04/02/Program/Tools/gradle/</loc>
+    <loc>http://ipcreator.me/2017/04/02/Program/Tools/Gradle/gradle/</loc>
     <lastmod>2017-04-03T16:50:53.600Z</lastmod>
     <data>
         <display>
@@ -628,7 +790,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/21/MyView/English/beautiful-article-of-english/</loc>
+    <loc>http://ipcreator.me/2017/02/21/English/beautiful-article-of-english/</loc>
     <lastmod>2017-04-03T16:14:48.518Z</lastmod>
     <data>
         <display>
@@ -648,7 +810,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/22/MyView/English/my-translations/</loc>
+    <loc>http://ipcreator.me/2017/02/22/English/my-translations/</loc>
     <lastmod>2017-04-03T16:14:04.760Z</lastmod>
     <data>
         <display>
@@ -668,7 +830,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2016/12/31/MyView/English/view-of-english/</loc>
+    <loc>http://ipcreator.me/2016/12/31/English/view-of-english/</loc>
     <lastmod>2017-04-03T16:13:57.229Z</lastmod>
     <data>
         <display>
@@ -710,7 +872,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Tools/learn-journey-of-git/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/Tools/Git/learn-journey-of-git/</loc>
     <lastmod>2017-04-03T16:05:31.958Z</lastmod>
     <data>
         <display>
@@ -756,7 +918,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/29/MyView/English/why-i-insist-on-using-english/</loc>
+    <loc>http://ipcreator.me/2017/03/29/English/why-i-insist-on-using-english/</loc>
     <lastmod>2017-04-03T15:34:12.945Z</lastmod>
     <data>
         <display>
@@ -887,7 +1049,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/31/MyView/English/english-is-a-friend-for-everybody/</loc>
+    <loc>http://ipcreator.me/2017/03/31/English/english-is-a-friend-for-everybody/</loc>
     <lastmod>2017-03-31T08:46:49.048Z</lastmod>
     <data>
         <display>
@@ -953,7 +1115,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/30/Program/Tools/github-cheat-sheet/</loc>
+    <loc>http://ipcreator.me/2017/03/30/Program/Tools/Git/github-cheat-sheet/</loc>
     <lastmod>2017-03-31T08:12:03.423Z</lastmod>
     <data>
         <display>
@@ -977,7 +1139,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/29/MyView/Original/why-i-write-blog/</loc>
+    <loc>http://ipcreator.me/2017/03/29/MyView/Original/Why/why-i-write-blog/</loc>
     <lastmod>2017-03-31T07:23:45.059Z</lastmod>
     <data>
         <display>
@@ -997,7 +1159,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/19/MyView/Original/why-stay-in-big-cities/</loc>
+    <loc>http://ipcreator.me/2017/03/19/MyView/Original/Why/why-stay-in-big-cities/</loc>
     <lastmod>2017-03-31T07:13:30.970Z</lastmod>
     <data>
         <display>
@@ -1105,7 +1267,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/31/BusinessAI/andrew%20ng-artificial-intelligence-is-the-new-electricity/</loc>
+    <loc>http://ipcreator.me/2017/03/31/AI/Business/andrew%20ng-artificial-intelligence-is-the-new-electricity/</loc>
     <lastmod>2017-03-31T02:48:17.679Z</lastmod>
     <data>
         <display>
@@ -1507,7 +1669,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/29/BusinessAI/yann-leCun-predict-learning-is-the-future-of-AI/</loc>
+    <loc>http://ipcreator.me/2017/03/29/AI/Business/yann-leCun-predict-learning-is-the-future-of-AI/</loc>
     <lastmod>2017-03-29T01:13:18.861Z</lastmod>
     <data>
         <display>
@@ -1529,7 +1691,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/29/BusinessAI/Jiang-tao--only-2%25-persons-can-be-winner-of-AI/</loc>
+    <loc>http://ipcreator.me/2017/03/29/AI/Business/Jiang-tao--only-2%25-persons-can-be-winner-of-AI/</loc>
     <lastmod>2017-03-29T01:13:16.967Z</lastmod>
     <data>
         <display>
@@ -1651,7 +1813,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/lixiaolai-lead-to-freedom-of-wealth/</loc>
+    <loc>http://ipcreator.me/2017/01/02/MyView/Share/iGet/lixiaolai-lead-to-freedom-of-wealth/</loc>
     <lastmod>2017-03-28T00:01:05.936Z</lastmod>
     <data>
         <display>
@@ -1677,7 +1839,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/27/MyView/Original/why/</loc>
+    <loc>http://ipcreator.me/2017/03/27/MyView/Original/Why/why/</loc>
     <lastmod>2017-03-27T14:51:30.917Z</lastmod>
     <data>
         <display>
@@ -1697,7 +1859,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/25/IPR/patent-of-virus-detect-base-on-android-ui/</loc>
+    <loc>http://ipcreator.me/2017/03/25/MyView/IPR/patent-of-virus-detect-base-on-android-ui/</loc>
     <lastmod>2017-03-27T10:28:01.891Z</lastmod>
     <data>
         <display>
@@ -1719,7 +1881,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/25/IPR/api-patent-query/</loc>
+    <loc>http://ipcreator.me/2017/03/25/MyView/IPR/api-patent-query/</loc>
     <lastmod>2017-03-27T10:27:41.130Z</lastmod>
     <data>
         <display>
@@ -1739,7 +1901,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/05/MyView/MyPast/my-article-for-newspaper/</loc>
+    <loc>http://ipcreator.me/2017/01/05/MyView/Original/Past/my-article-for-newspaper/</loc>
     <lastmod>2017-03-27T10:27:28.466Z</lastmod>
     <data>
         <display>
@@ -1761,7 +1923,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/04/MyView/MyPast/my-patent-list/</loc>
+    <loc>http://ipcreator.me/2017/01/04/MyView/Original/Past/my-patent-list/</loc>
     <lastmod>2017-03-27T10:27:09.961Z</lastmod>
     <data>
         <display>
@@ -1781,7 +1943,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/how-to-ask-questions-the-smart-way/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Advice/how-to-ask-questions-the-smart-way/</loc>
     <lastmod>2017-03-27T10:25:30.095Z</lastmod>
     <data>
         <display>
@@ -1823,7 +1985,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/19/MyView/Original/why-insist-on-reading/</loc>
+    <loc>http://ipcreator.me/2017/03/19/MyView/Original/Why/why-insist-on-reading/</loc>
     <lastmod>2017-03-27T10:23:56.707Z</lastmod>
     <data>
         <display>
@@ -1843,7 +2005,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/14/Program/Concepts/brain-and-chips/</loc>
+    <loc>http://ipcreator.me/2017/02/14/AI/Basic%20Concept/brain-and-chips/</loc>
     <lastmod>2017-03-27T10:21:31.144Z</lastmod>
     <data>
         <display>
@@ -1863,7 +2025,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/Program/Concepts/ai-and-algorithms/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/TensorFlow/ai-and-algorithms/</loc>
     <lastmod>2017-03-27T10:19:39.585Z</lastmod>
     <data>
         <display>
@@ -1905,7 +2067,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/23/Program/TensorFlow/ai-chips/</loc>
+    <loc>http://ipcreator.me/2017/03/23/AI/TensorFlow/ai-chips/</loc>
     <lastmod>2017-03-27T10:18:11.069Z</lastmod>
     <data>
         <display>
@@ -1925,7 +2087,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/22/BusinessAI/views-of-chenghao-about-ai/</loc>
+    <loc>http://ipcreator.me/2017/03/22/AI/Business/views-of-chenghao-about-ai/</loc>
     <lastmod>2017-03-27T10:11:58.118Z</lastmod>
     <data>
         <display>
@@ -1945,7 +2107,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/BusinessAI/generate-lyric-from-lyric-of-jay/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/Business/generate-lyric-from-lyric-of-jay/</loc>
     <lastmod>2017-03-27T10:11:58.113Z</lastmod>
     <data>
         <display>
@@ -1969,7 +2131,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/BusinessAI/how-to-find-ai-start-up-firm/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/Business/how-to-find-ai-start-up-firm/</loc>
     <lastmod>2017-03-27T10:11:58.109Z</lastmod>
     <data>
         <display>
@@ -1991,7 +2153,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/12/MyShare/everybody-can-be-engineer/</loc>
+    <loc>http://ipcreator.me/2017/01/12/MyView/Share/everybody-can-be-engineer/</loc>
     <lastmod>2017-03-27T10:11:58.097Z</lastmod>
     <data>
         <display>
@@ -2015,7 +2177,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/14/MyShare/take-time-as-friend/</loc>
+    <loc>http://ipcreator.me/2017/01/14/MyView/Share/take-time-as-friend/</loc>
     <lastmod>2017-03-27T10:11:58.091Z</lastmod>
     <data>
         <display>
@@ -2035,7 +2197,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/21/BusinessAI/datanovo/</loc>
+    <loc>http://ipcreator.me/2017/03/21/AI/Business/datanovo/</loc>
     <lastmod>2017-03-27T10:11:26.139Z</lastmod>
     <data>
         <display>
@@ -2057,7 +2219,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/19/MyShare/credits-of-death%20/</loc>
+    <loc>http://ipcreator.me/2017/01/19/MyView/Share/credits-of-death%20/</loc>
     <lastmod>2017-03-27T10:10:12.228Z</lastmod>
     <data>
         <display>
@@ -2083,7 +2245,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/some-thoughts-of-fusheng/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/Business/some-thoughts-of-fusheng/</loc>
     <lastmod>2017-03-27T10:09:45.987Z</lastmod>
     <data>
         <display>
@@ -2107,7 +2269,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/22/MyShare/learning-habits/</loc>
+    <loc>http://ipcreator.me/2017/03/22/MyView/Share/learning-habits/</loc>
     <lastmod>2017-03-27T10:08:25.384Z</lastmod>
     <data>
         <display>
@@ -2321,7 +2483,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/27/Program/Concepts/float/</loc>
+    <loc>http://ipcreator.me/2017/03/27/Program/Tools/Computer/float/</loc>
     <lastmod>2017-03-27T10:02:18.866Z</lastmod>
     <data>
         <display>
@@ -2343,7 +2505,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/27/Program/Concepts/history-of-ai-in-china/</loc>
+    <loc>http://ipcreator.me/2017/03/27/AI/Basic%20Concept/history-of-ai-in-china/</loc>
     <lastmod>2017-03-27T10:02:18.861Z</lastmod>
     <data>
         <display>
@@ -2365,7 +2527,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/02/Program/Concepts/history-of-open-source/</loc>
+    <loc>http://ipcreator.me/2017/03/02/Program/Tools/Open%20Source/history-of-open-source/</loc>
     <lastmod>2017-03-27T10:02:18.856Z</lastmod>
     <data>
         <display>
@@ -2389,7 +2551,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/how-to-become-a-hacker/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Advice/how-to-become-a-hacker/</loc>
     <lastmod>2017-03-27T10:02:18.845Z</lastmod>
     <data>
         <display>
@@ -2409,7 +2571,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/right-way-of-master-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/TensorFlow/right-way-of-master-machine-learning/</loc>
     <lastmod>2017-03-27T10:02:18.834Z</lastmod>
     <data>
         <display>
@@ -2429,7 +2591,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-hard-disk/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-hard-disk/</loc>
     <lastmod>2017-03-27T10:02:18.830Z</lastmod>
     <data>
         <display>
@@ -2451,7 +2613,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/26/Program/Concepts/the-ways-of-keep-code-clean/</loc>
+    <loc>http://ipcreator.me/2017/02/26/Program/Tools/Code%20Refactor/the-ways-of-keep-code-clean/</loc>
     <lastmod>2017-03-27T10:02:18.825Z</lastmod>
     <data>
         <display>
@@ -2471,7 +2633,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/want-to-start-a-startup-great-hacker/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Advice/want-to-start-a-startup-great-hacker/</loc>
     <lastmod>2017-03-27T10:02:18.820Z</lastmod>
     <data>
         <display>
@@ -2491,7 +2653,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/want-to-start-a-startup-undergraduate/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Advice/want-to-start-a-startup-undergraduate/</loc>
     <lastmod>2017-03-27T10:02:18.815Z</lastmod>
     <data>
         <display>
@@ -2511,7 +2673,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/white-paper-of-google-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/TensorFlow/white-paper-of-google-machine-learning/</loc>
     <lastmod>2017-03-27T10:02:18.810Z</lastmod>
     <data>
         <display>
@@ -2535,7 +2697,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/14/Program/Concepts/ppt-of-andrew-ng/</loc>
+    <loc>http://ipcreator.me/2017/02/14/AI/Business/ppt-of-andrew-ng/</loc>
     <lastmod>2017-03-27T10:01:03.473Z</lastmod>
     <data>
         <display>
@@ -2557,7 +2719,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/software-release-practice-howto/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Advice/software-release-practice-howto/</loc>
     <lastmod>2017-03-27T10:00:34.616Z</lastmod>
     <data>
         <display>
@@ -2577,7 +2739,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/start-up-of-linux/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/start-up-of-linux/</loc>
     <lastmod>2017-03-27T10:00:23.929Z</lastmod>
     <data>
         <display>
@@ -2656,34 +2818,6 @@
            
              
               <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/10/Program/Java/improper-code-of-chinese-in-java/</loc>
-    <lastmod>2017-03-27T09:58:41.996Z</lastmod>
-    <data>
-        <display>
-        <title>The Way of Solving Charset Problem in Java.</title>
-        <pubTime>2017-03-10T02:41:06.000Z</pubTime>
-        
-        <tag>Charset</tag>
-         
-        <tag>ASCII</tag>
-         
-        <tag>GBK</tag>
-         
-        <tag>Unicode</tag>
-         
-        <tag>UTF8</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://ipcreator.me/categories/Java/"/>
           
         </display>
     </data>
@@ -2813,7 +2947,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/Tools/tools-of-python/</loc>
+    <loc>http://ipcreator.me/2017/02/18/Program/Tools/Python/tools-of-python/</loc>
     <lastmod>2017-03-27T09:55:17.548Z</lastmod>
     <data>
         <display>
@@ -2833,7 +2967,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/25-open-source-projects-of-machine-learning-java/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/TensorFlow/25-open-source-projects-of-machine-learning-java/</loc>
     <lastmod>2017-03-27T09:54:57.245Z</lastmod>
     <data>
         <display>
@@ -2857,7 +2991,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/Program/TensorFlow/ai-and-machine-learning-need-more-open-sources/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/TensorFlow/ai-and-machine-learning-need-more-open-sources/</loc>
     <lastmod>2017-03-27T09:54:57.240Z</lastmod>
     <data>
         <display>
@@ -2879,7 +3013,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/09/Program/TensorFlow/ai-in-java/</loc>
+    <loc>http://ipcreator.me/2017/03/09/AI/TensorFlow/ai-in-java/</loc>
     <lastmod>2017-03-27T09:54:57.236Z</lastmod>
     <data>
         <display>
@@ -2901,7 +3035,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/changes-by-google-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/18/AI/TensorFlow/changes-by-google-tensorflow/</loc>
     <lastmod>2017-03-27T09:54:57.230Z</lastmod>
     <data>
         <display>
@@ -2923,7 +3057,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/core-components-from-deep-learning-framework/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/TensorFlow/core-components-from-deep-learning-framework/</loc>
     <lastmod>2017-03-27T09:54:57.225Z</lastmod>
     <data>
         <display>
@@ -2951,7 +3085,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/Program/TensorFlow/good-understanding-of-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/TensorFlow/good-understanding-of-tensorflow/</loc>
     <lastmod>2017-03-27T09:54:57.219Z</lastmod>
     <data>
         <display>
@@ -2971,7 +3105,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/17/Program/TensorFlow/history-of-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/17/AI/TensorFlow/history-of-tensorflow/</loc>
     <lastmod>2017-03-27T09:54:57.214Z</lastmod>
     <data>
         <display>
@@ -2991,7 +3125,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/14/Program/TensorFlow/how-to-train-deep-neural-network/</loc>
+    <loc>http://ipcreator.me/2017/02/14/AI/TensorFlow/how-to-train-deep-neural-network/</loc>
     <lastmod>2017-03-27T09:53:10.435Z</lastmod>
     <data>
         <display>
@@ -3011,7 +3145,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/17/Program/TensorFlow/platforms-of-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/17/AI/TensorFlow/platforms-of-tensorflow/</loc>
     <lastmod>2017-03-27T09:52:54.707Z</lastmod>
     <data>
         <display>
@@ -3043,7 +3177,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/Program/TensorFlow/quick-learning-of-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/TensorFlow/quick-learning-of-tensorflow/</loc>
     <lastmod>2017-03-27T09:52:38.134Z</lastmod>
     <data>
         <display>
@@ -3063,7 +3197,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/17/Program/TensorFlow/setup-of-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/17/AI/TensorFlow/setup-of-tensorflow/</loc>
     <lastmod>2017-03-27T09:52:38.129Z</lastmod>
     <data>
         <display>
@@ -3083,7 +3217,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/Program/TensorFlow/simple-understanding-of-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/TensorFlow/simple-understanding-of-tensorflow/</loc>
     <lastmod>2017-03-27T09:52:38.124Z</lastmod>
     <data>
         <display>
@@ -3103,7 +3237,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/17/Program/TensorFlow/tensorflow-android-stand-alone-demo/</loc>
+    <loc>http://ipcreator.me/2017/02/17/AI/TensorFlow/tensorflow-android-stand-alone-demo/</loc>
     <lastmod>2017-03-27T09:52:38.119Z</lastmod>
     <data>
         <display>
@@ -3125,7 +3259,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/13/Program/Tools/anatomy-of-regular-expression/</loc>
+    <loc>http://ipcreator.me/2017/03/13/Program/Tools/Regular%20Expression/anatomy-of-regular-expression/</loc>
     <lastmod>2017-03-27T09:52:38.115Z</lastmod>
     <data>
         <display>
@@ -3145,7 +3279,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/09/Program/Tools/auto-git-daily/</loc>
+    <loc>http://ipcreator.me/2017/03/09/Program/Tools/Git/auto-git-daily/</loc>
     <lastmod>2017-03-27T09:52:38.109Z</lastmod>
     <data>
         <display>
@@ -3165,7 +3299,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/26/Program/Tools/baiduyun-search/</loc>
+    <loc>http://ipcreator.me/2017/03/26/Program/Tools/Others/baiduyun-search/</loc>
     <lastmod>2017-03-27T09:52:38.104Z</lastmod>
     <data>
         <display>
@@ -3185,7 +3319,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/13/Program/Tools/brief-introduction-of-regular-expression/</loc>
+    <loc>http://ipcreator.me/2017/03/13/Program/Tools/Regular%20Expression/brief-introduction-of-regular-expression/</loc>
     <lastmod>2017-03-27T09:52:38.100Z</lastmod>
     <data>
         <display>
@@ -3205,7 +3339,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/14/Program/TensorFlow/pytorch-of-facebook/</loc>
+    <loc>http://ipcreator.me/2017/02/14/AI/TensorFlow/pytorch-of-facebook/</loc>
     <lastmod>2017-03-27T09:52:34.485Z</lastmod>
     <data>
         <display>
@@ -3227,7 +3361,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/17/Program/TensorFlow/supercharging-android-apps-with-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/17/AI/TensorFlow/supercharging-android-apps-with-tensorflow/</loc>
     <lastmod>2017-03-27T09:51:56.683Z</lastmod>
     <data>
         <display>
@@ -3251,7 +3385,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/23/Program/Tools/ic-chip/</loc>
+    <loc>http://ipcreator.me/2017/03/23/Program/Tools/Computer/ic-chip/</loc>
     <lastmod>2017-03-27T09:50:04.697Z</lastmod>
     <data>
         <display>
@@ -3273,7 +3407,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/22/Program/Tools/the-meaning-of-cross-wall/</loc>
+    <loc>http://ipcreator.me/2017/03/22/Program/Tools/Google/the-meaning-of-cross-wall/</loc>
     <lastmod>2017-03-27T09:48:58.862Z</lastmod>
     <data>
         <display>
@@ -3295,7 +3429,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/09/Program/codota-ai-programming/</loc>
+    <loc>http://ipcreator.me/2017/03/09/AI/TensorFlow/codota-ai-programming/</loc>
     <lastmod>2017-03-27T09:48:27.500Z</lastmod>
     <data>
         <display>
@@ -3315,7 +3449,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/26/Program/special-thanks/</loc>
+    <loc>http://ipcreator.me/2017/03/26/MyView/special-thanks/</loc>
     <lastmod>2017-03-27T09:48:11.163Z</lastmod>
     <data>
         <display>
@@ -3335,7 +3469,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/20/Program/my-views-of-learning-program/</loc>
+    <loc>http://ipcreator.me/2017/02/20/MyView/my-views-of-learning-program/</loc>
     <lastmod>2017-03-27T09:48:06.377Z</lastmod>
     <data>
         <display>
@@ -3375,7 +3509,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/27/BusinessAI/concept-of-ai/</loc>
+    <loc>http://ipcreator.me/2017/03/27/AI/Business/concept-of-ai/</loc>
     <lastmod>2017-03-27T09:36:48.456Z</lastmod>
     <data>
         <display>
@@ -3395,7 +3529,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/gudian-super-individual/</loc>
+    <loc>http://ipcreator.me/2017/01/02/MyView/Share/iGet/gudian-super-individual/</loc>
     <lastmod>2017-03-27T09:33:07.195Z</lastmod>
     <data>
         <display>
@@ -3421,7 +3555,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/liuxuefeng-classic-music/</loc>
+    <loc>http://ipcreator.me/2017/01/02/MyView/Share/iGet/liuxuefeng-classic-music/</loc>
     <lastmod>2017-03-27T09:32:04.637Z</lastmod>
     <data>
         <display>
@@ -3447,7 +3581,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/lixiang-reference-of-business-inside/</loc>
+    <loc>http://ipcreator.me/2017/01/02/MyView/Share/iGet/lixiang-reference-of-business-inside/</loc>
     <lastmod>2017-03-27T09:30:48.432Z</lastmod>
     <data>
         <display>
@@ -3473,7 +3607,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/luozhenyu-logic-thinking/</loc>
+    <loc>http://ipcreator.me/2017/01/02/MyView/Share/iGet/luozhenyu-logic-thinking/</loc>
     <lastmod>2017-03-27T09:28:43.924Z</lastmod>
     <data>
         <display>
@@ -3499,7 +3633,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/wangyuquan-front-guard/</loc>
+    <loc>http://ipcreator.me/2017/01/02/MyView/Share/iGet/wangyuquan-front-guard/</loc>
     <lastmod>2017-03-27T09:27:52.228Z</lastmod>
     <data>
         <display>
@@ -3525,7 +3659,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/iGet/wujun-letters-from-silicon-valley/</loc>
+    <loc>http://ipcreator.me/2017/01/02/MyView/Share/iGet/wujun-letters-from-silicon-valley/</loc>
     <lastmod>2017-03-27T09:27:23.852Z</lastmod>
     <data>
         <display>
@@ -3551,7 +3685,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/MyShare/financial-philosophy./</loc>
+    <loc>http://ipcreator.me/2017/01/20/MyView/Share/financial-philosophy./</loc>
     <lastmod>2017-03-27T09:22:03.413Z</lastmod>
     <data>
         <display>
@@ -3573,7 +3707,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/MyView/English/how-to-use-english/</loc>
+    <loc>http://ipcreator.me/2017/01/20/English/how-to-use-english/</loc>
     <lastmod>2017-03-27T09:21:12.857Z</lastmod>
     <data>
         <display>
@@ -3593,7 +3727,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Tools/how-to-use-google/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Tools/Google/how-to-use-google/</loc>
     <lastmod>2017-03-27T09:19:55.693Z</lastmod>
     <data>
         <display>
@@ -3613,7 +3747,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/view-of-scientific-discovery/</loc>
+    <loc>http://ipcreator.me/2017/01/02/MyView/Share/view-of-scientific-discovery/</loc>
     <lastmod>2017-03-27T09:17:56.461Z</lastmod>
     <data>
         <display>
@@ -3635,7 +3769,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/02/MyShare/pictures-of-year-wikipedia/</loc>
+    <loc>http://ipcreator.me/2017/01/02/MyView/Share/pictures-of-year-wikipedia/</loc>
     <lastmod>2017-03-27T09:17:31.979Z</lastmod>
     <data>
         <display>
@@ -3657,7 +3791,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/15/MyShare/reborn-every-7-years/</loc>
+    <loc>http://ipcreator.me/2017/01/15/MyView/Share/reborn-every-7-years/</loc>
     <lastmod>2017-03-27T09:17:00.654Z</lastmod>
     <data>
         <display>
@@ -3679,7 +3813,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/16/MyShare/retirement-speech-of-HP-president/</loc>
+    <loc>http://ipcreator.me/2017/01/16/MyView/Share/retirement-speech-of-HP-president/</loc>
     <lastmod>2017-03-27T09:16:11.500Z</lastmod>
     <data>
         <display>
@@ -3703,7 +3837,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/MyShare/sit-idle-and-enjoy-the-fruits/</loc>
+    <loc>http://ipcreator.me/2017/01/20/MyView/Share/sit-idle-and-enjoy-the-fruits/</loc>
     <lastmod>2017-03-27T09:14:59.522Z</lastmod>
     <data>
         <display>
@@ -3725,7 +3859,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/19/MyShare/summary-and-table-of-principles/</loc>
+    <loc>http://ipcreator.me/2017/01/19/MyView/Share/summary-and-table-of-principles/</loc>
     <lastmod>2017-03-27T09:12:53.387Z</lastmod>
     <data>
         <display>
@@ -3749,7 +3883,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/11/MyShare/to-be-a-super-individual/</loc>
+    <loc>http://ipcreator.me/2017/01/11/MyView/Share/to-be-a-super-individual/</loc>
     <lastmod>2017-03-27T09:11:45.010Z</lastmod>
     <data>
         <display>
@@ -3769,7 +3903,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/18/MyShare/unfinished-life/</loc>
+    <loc>http://ipcreator.me/2017/01/18/MyView/Share/unfinished-life/</loc>
     <lastmod>2017-03-27T09:10:55.799Z</lastmod>
     <data>
         <display>
@@ -3789,7 +3923,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/17/MyShare/wisdom-of-choose/</loc>
+    <loc>http://ipcreator.me/2017/01/17/MyView/Share/wisdom-of-choose/</loc>
     <lastmod>2017-03-27T09:09:43.345Z</lastmod>
     <data>
         <display>
@@ -3809,7 +3943,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/BusinessAI/ai-on-ear-phone/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/Business/ai-on-ear-phone/</loc>
     <lastmod>2017-03-27T09:08:51.322Z</lastmod>
     <data>
         <display>
@@ -3831,7 +3965,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ai-on-terminal-of-google/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/Business/ai-on-terminal-of-google/</loc>
     <lastmod>2017-03-27T09:07:40.495Z</lastmod>
     <data>
         <display>
@@ -3855,7 +3989,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/27/BusinessAI/concept-of-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/03/27/AI/Business/concept-of-machine-learning/</loc>
     <lastmod>2017-03-27T09:06:23.123Z</lastmod>
     <data>
         <display>
@@ -3877,7 +4011,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/data-clean-and-remark-feature-in-meituan/</loc>
+    <loc>http://ipcreator.me/2017/02/26/AI/Business/data-clean-and-remark-feature-in-meituan/</loc>
     <lastmod>2017-03-27T09:06:01.590Z</lastmod>
     <data>
         <display>
@@ -3901,7 +4035,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/deep-learning-in-meituan/</loc>
+    <loc>http://ipcreator.me/2017/02/26/AI/Meituan/deep-learning-in-meituan/</loc>
     <lastmod>2017-03-27T09:04:59.631Z</lastmod>
     <data>
         <display>
@@ -3925,7 +4059,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/example-of-machine-learning-in-meituan/</loc>
+    <loc>http://ipcreator.me/2017/02/26/AI/Meituan/example-of-machine-learning-in-meituan/</loc>
     <lastmod>2017-03-27T09:04:59.626Z</lastmod>
     <data>
         <display>
@@ -3949,7 +4083,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/online-learning-in-meituan/</loc>
+    <loc>http://ipcreator.me/2017/02/26/AI/Meituan/online-learning-in-meituan/</loc>
     <lastmod>2017-03-27T09:04:36.824Z</lastmod>
     <data>
         <display>
@@ -3977,7 +4111,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/framework-of-get-features-in-meituan/</loc>
+    <loc>http://ipcreator.me/2017/02/26/AI/Meituan/framework-of-get-features-in-meituan/</loc>
     <lastmod>2017-03-27T09:04:17.222Z</lastmod>
     <data>
         <display>
@@ -4005,7 +4139,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/26/BusinessAI/ffm-learning-in-meituan/</loc>
+    <loc>http://ipcreator.me/2017/02/26/AI/Meituan/ffm-learning-in-meituan/</loc>
     <lastmod>2017-03-27T09:04:12.311Z</lastmod>
     <data>
         <display>
@@ -4075,7 +4209,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/golden-age-of-artificial-intelligence/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/Business/golden-age-of-artificial-intelligence/</loc>
     <lastmod>2017-03-27T08:58:34.936Z</lastmod>
     <data>
         <display>
@@ -4099,7 +4233,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/BusinessAI/google-raisr/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/Business/google-raisr/</loc>
     <lastmod>2017-03-27T08:57:42.189Z</lastmod>
     <data>
         <display>
@@ -4121,7 +4255,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/26/BusinessAI/learning-resource-of-ai/</loc>
+    <loc>http://ipcreator.me/2017/03/26/AI/TensorFlow/learning-resource-of-ai/</loc>
     <lastmod>2017-03-27T08:56:28.873Z</lastmod>
     <data>
         <display>
@@ -4145,7 +4279,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/Program/TensorFlow/basic-concept-and-operation-of-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/TensorFlow/basic-concept-and-operation-of-tensorflow/</loc>
     <lastmod>2017-03-27T08:55:53.042Z</lastmod>
     <data>
         <display>
@@ -4165,7 +4299,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/the-unix-and-internet-fundamentals-howto/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Tools/Linux/the-unix-and-internet-fundamentals-howto/</loc>
     <lastmod>2017-03-27T08:55:53.040Z</lastmod>
     <data>
         <display>
@@ -4187,7 +4321,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-sound/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-sound/</loc>
     <lastmod>2017-03-27T08:55:53.036Z</lastmod>
     <data>
         <display>
@@ -4211,7 +4345,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-picture/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-picture/</loc>
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
         <display>
@@ -4235,7 +4369,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-GPU/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-GPU/</loc>
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
         <display>
@@ -4257,77 +4391,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-video/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>Base of Multimedia——Video</title>
-        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Multimedia</tag>
-         
-        <tag>Video</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-essence-of-color/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>Base of Multimedia——Color</title>
-        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Multimedia</tag>
-         
-        <tag>Color</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/15/Program/Concepts/ai-vs-machine-learning/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>AI vs Machine Learning</title>
-        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Machine Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-file-system/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
@@ -4351,7 +4415,77 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/BusinessAI/recognize-license-number-of-car/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>Base of Multimedia——Video</title>
+        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Multimedia</tag>
+         
+        <tag>Video</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-color/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>Base of Multimedia——Color</title>
+        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Multimedia</tag>
+         
+        <tag>Color</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/15/AI/TensorFlow/ai-vs-machine-learning/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>AI vs Machine Learning</title>
+        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/13/AI/Business/recognize-license-number-of-car/</loc>
     <lastmod>2017-03-27T08:54:19.337Z</lastmod>
     <data>
         <display>
@@ -4373,7 +4507,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/ten-truths-of-ai-star-up-firm/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/Business/ten-truths-of-ai-star-up-firm/</loc>
     <lastmod>2017-03-27T08:52:19.521Z</lastmod>
     <data>
         <display>
@@ -4395,7 +4529,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/BusinessAI/the-future-of-personal-terminal/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/Business/the-future-of-personal-terminal/</loc>
     <lastmod>2017-03-27T08:51:17.255Z</lastmod>
     <data>
         <display>
@@ -4457,7 +4591,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/03/MyView/MyPast/my-resume/</loc>
+    <loc>http://ipcreator.me/2017/01/03/MyView/Original/Past/my-resume/</loc>
     <lastmod>2017-03-27T08:21:59.754Z</lastmod>
     <data>
         <display>
@@ -4537,7 +4671,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/27/BusinessAI/history-of-ai/</loc>
+    <loc>http://ipcreator.me/2017/03/27/AI/Basic%20Concept/history-of-ai/</loc>
     <lastmod>2017-03-27T08:12:35.726Z</lastmod>
     <data>
         <display>
@@ -4917,7 +5051,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/Concepts/learn-journey-of-python/</loc>
+    <loc>http://ipcreator.me/2017/02/19/Program/Tools/Python/learn-journey-of-python/</loc>
     <lastmod>2017-03-27T07:32:19.738Z</lastmod>
     <data>
         <display>
@@ -4939,7 +5073,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/Concepts/super-intelligence-individual/</loc>
+    <loc>http://ipcreator.me/2017/02/18/AI/Basic%20Concept/super-intelligence-individual/</loc>
     <lastmod>2017-03-27T07:29:22.021Z</lastmod>
     <data>
         <display>
@@ -4963,7 +5097,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-cpu/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-cpu/</loc>
     <lastmod>2017-03-27T07:28:30.449Z</lastmod>
     <data>
         <display>
@@ -4983,7 +5117,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-linux-library/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-linux-library/</loc>
     <lastmod>2017-03-27T07:27:14.227Z</lastmod>
     <data>
         <display>
@@ -5005,7 +5139,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Concepts/the-anatomy-of-network-programming/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-network-programming/</loc>
     <lastmod>2017-03-27T07:24:26.428Z</lastmod>
     <data>
         <display>
@@ -5027,7 +5161,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/the-art-of-unix-programming/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Tools/Linux/the-art-of-unix-programming/</loc>
     <lastmod>2017-03-27T07:24:03.377Z</lastmod>
     <data>
         <display>
@@ -5047,7 +5181,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/26/Program/Concepts/the-essence-of-mysql-index/</loc>
+    <loc>http://ipcreator.me/2017/02/26/Program/Tools/Data%20Base/the-essence-of-mysql-index/</loc>
     <lastmod>2017-03-27T07:23:04.627Z</lastmod>
     <data>
         <display>
@@ -5069,7 +5203,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/TensorFlow/awesome-machine-learning/</loc>
     <lastmod>2017-03-27T07:03:49.002Z</lastmod>
     <data>
         <display>
@@ -5111,7 +5245,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/things-every-hacker-once-knew/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Advice/things-every-hacker-once-knew/</loc>
     <lastmod>2017-03-27T06:52:43.865Z</lastmod>
     <data>
         <display>
@@ -5131,7 +5265,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/01/20/Program/Concepts/advice-for-computer-science-college-students/</loc>
+    <loc>http://ipcreator.me/2017/01/20/Program/Advice/advice-for-computer-science-college-students/</loc>
     <lastmod>2017-03-27T06:04:24.631Z</lastmod>
     <data>
         <display>
@@ -5213,7 +5347,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/20-open-source-projects-of-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/TensorFlow/20-open-source-projects-of-machine-learning/</loc>
     <lastmod>2017-03-27T05:34:03.431Z</lastmod>
     <data>
         <display>
@@ -5237,7 +5371,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/28-open-source-projects-of-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/TensorFlow/28-open-source-projects-of-machine-learning/</loc>
     <lastmod>2017-03-27T05:31:50.429Z</lastmod>
     <data>
         <display>
@@ -5259,7 +5393,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/19/Program/TensorFlow/awesome-deep-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/19/AI/TensorFlow/awesome-deep-learning/</loc>
     <lastmod>2017-03-27T05:30:13.727Z</lastmod>
     <data>
         <display>
@@ -5279,7 +5413,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/17/Program/TensorFlow/applications-of-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/17/AI/TensorFlow/applications-of-tensorflow/</loc>
     <lastmod>2017-03-27T05:28:48.935Z</lastmod>
     <data>
         <display>
@@ -5299,7 +5433,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/basic-knowledge-of-scikit-learn/</loc>
+    <loc>http://ipcreator.me/2017/02/18/AI/TensorFlow/basic-knowledge-of-scikit-learn/</loc>
     <lastmod>2017-03-27T05:04:53.965Z</lastmod>
     <data>
         <display>
@@ -5319,7 +5453,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/Program/TensorFlow/benchmark-of-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/TensorFlow/benchmark-of-machine-learning/</loc>
     <lastmod>2017-03-27T05:04:09.331Z</lastmod>
     <data>
         <display>
@@ -5347,7 +5481,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/18/Program/TensorFlow/big-data-resources/</loc>
+    <loc>http://ipcreator.me/2017/02/18/AI/TensorFlow/big-data-resources/</loc>
     <lastmod>2017-03-27T05:01:51.832Z</lastmod>
     <data>
         <display>
@@ -5373,7 +5507,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/13/Program/TensorFlow/gentle-understanding-of-tensorflow/</loc>
+    <loc>http://ipcreator.me/2017/02/13/AI/Basic%20Concept/gentle-understanding-of-tensorflow/</loc>
     <lastmod>2017-03-27T04:57:03.616Z</lastmod>
     <data>
         <display>
@@ -5393,7 +5527,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/17/Program/TensorFlow/tensorflow-android-camera-demo/</loc>
+    <loc>http://ipcreator.me/2017/02/17/AI/TensorFlow/tensorflow-android-camera-demo/</loc>
     <lastmod>2017-03-27T04:46:56.310Z</lastmod>
     <data>
         <display>
@@ -5417,7 +5551,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/17/Program/TensorFlow/visual-interactive-guide-basics-neural-networks/</loc>
+    <loc>http://ipcreator.me/2017/02/17/AI/TensorFlow/visual-interactive-guide-basics-neural-networks/</loc>
     <lastmod>2017-03-27T04:46:02.663Z</lastmod>
     <data>
         <display>
@@ -5437,7 +5571,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/13/Program/Tools/regular-expression-in-java/</loc>
+    <loc>http://ipcreator.me/2017/03/13/Program/Tools/Regular%20Expression/regular-expression-in-java/</loc>
     <lastmod>2017-03-27T04:44:46.706Z</lastmod>
     <data>
         <display>
@@ -5463,7 +5597,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/21/Program/csdn/</loc>
+    <loc>http://ipcreator.me/2017/03/21/Program/Tools/Others/csdn/</loc>
     <lastmod>2017-03-27T04:41:26.853Z</lastmod>
     <data>
         <display>
@@ -5483,7 +5617,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/12/Program/google-styleguide/</loc>
+    <loc>http://ipcreator.me/2017/02/12/Program/Tools/Google/google-styleguide/</loc>
     <lastmod>2017-03-27T04:28:28.687Z</lastmod>
     <data>
         <display>
@@ -5505,7 +5639,7 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/15/Program/techniques-of-atom-editor/</loc>
+    <loc>http://ipcreator.me/2017/02/15/Program/Tools/Atom/techniques-of-atom-editor/</loc>
     <lastmod>2017-03-27T04:23:46.035Z</lastmod>
     <data>
         <display>

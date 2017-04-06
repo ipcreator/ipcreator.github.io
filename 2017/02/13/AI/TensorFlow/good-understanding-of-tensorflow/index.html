@@ -1,0 +1,1146 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Tensorflow," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="For life" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="作者：Soon Hin Khor
+原文：The Gentlest Introduction to Tensorflow – Part 1The Gentlest Introduction to Tensorflow – Part 2
+机器之心编译  参与：Rick、吴攀、李亚洲
+　　本文是日本东京 TensorFlow 聚会联合组织者 Hin Khor 所写的 TensorFlow 系列介绍文章的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deep | Everybody can Understand Tensorflow">
+<meta property="og:url" content="http://ipcreator.me/2017/02/13/AI/TensorFlow/good-understanding-of-tensorflow/index.html">
+<meta property="og:site_name" content="For life">
+<meta property="og:description" content="作者：Soon Hin Khor
+原文：The Gentlest Introduction to Tensorflow – Part 1The Gentlest Introduction to Tensorflow – Part 2
+机器之心编译  参与：Rick、吴攀、李亚洲
+　　本文是日本东京 TensorFlow 聚会联合组织者 Hin Khor 所写的 TensorFlow 系列介绍文章的">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185277647855356.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185279041726078.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185279256541303.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185279285052628.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280380207018.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280411397531.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280649945725.JPEG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280668810785.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280848415395.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280912702237.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281063120052.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281081618132.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281243718944.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281258485201.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281275279024.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281684475306.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281695953428.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281721325983.JPEG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281759945694.JPEG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185282154874143.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185282788501777.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283024917706.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283050555281.PNG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283119696947.JPEG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283140122068.JPEG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283229448084.JPEG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283435404926.JPEG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283453741114.JPEG">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283466611340.PNG">
+<meta property="og:image" content="http://stackoverflow.com/questions/33919948/how-to-set-adaptive-learning-rate-for-gradientdescentoptimizer；但这里进行了总结。
+　　使用梯度下降优化的变体
+　　TensorFlow 带有多种支持学习率变化的梯度下降优化器，例如 tf.train.AdagradientOptimizer 和 tf.train.AdamOptimizer.
+　　使用 tf.placeholder 调整学习率
+　　如同前面所看到的，如果我们在这个例子中声明了 tf.placeholder 来设置学习率，然后在 tf.train.GradientDescentOptimizer 中使用它，我们可以在每个训练 epoch 向其送入一个不同的值，这很像我们给 x 和 y_ 送入不同的数据点，这也是每个 epoch 的 tf.placeholders.
+　　我们需要 2 个小修改：
+　　# 修改 [B] ，将 'learn_rate' 设置为'tf.placeholder'
+　　# 并将其提供给'learning_rate'参数名tf.train.GradientDescentOptimizer
+　　learn_rate = tf.placeholder(tf.float32, shape=[]">
+<meta property="og:updated_time" content="2017-03-27T09:54:57.219Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deep | Everybody can Understand Tensorflow">
+<meta name="twitter:description" content="作者：Soon Hin Khor
+原文：The Gentlest Introduction to Tensorflow – Part 1The Gentlest Introduction to Tensorflow – Part 2
+机器之心编译  参与：Rick、吴攀、李亚洲
+　　本文是日本东京 TensorFlow 聚会联合组织者 Hin Khor 所写的 TensorFlow 系列介绍文章的">
+<meta name="twitter:image" content="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185277647855356.PNG">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'L2TAEB8639',
+      apiKey: '86bd00c4f7ef2396081856beb1cf9a7d',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ipcreator.me/2017/02/13/AI/TensorFlow/good-understanding-of-tensorflow/"/>
+
+
+
+
+
+  <title> Deep | Everybody can Understand Tensorflow | For life </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">For life</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Growing up is the only password.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/02/13/AI/TensorFlow/good-understanding-of-tensorflow/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IPCreator">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/ipheader.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="For life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Deep | Everybody can Understand Tensorflow
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T08:51:06+08:00">
+                2017-02-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/13/AI/TensorFlow/good-understanding-of-tensorflow/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/AI/TensorFlow/good-understanding-of-tensorflow/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/02/13/AI/TensorFlow/good-understanding-of-tensorflow/" class="leancloud_visitors" data-flag-title="Deep | Everybody can Understand Tensorflow">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="http://blog.csdn.net/lenbow/article/details/52152766" target="_blank" rel="external">作者：Soon Hin Khor</a></p>
+<p>原文：<a href="http://www.kdnuggets.com/2016/08/gentlest-introduction-tensorflow-part-1.html" target="_blank" rel="external">The Gentlest Introduction to Tensorflow – Part 1</a><br><a href="http://www.kdnuggets.com/2016/08/gentlest-introduction-tensorflow-part-2.html/2" target="_blank" rel="external">The Gentlest Introduction to Tensorflow – Part 2</a></p>
+<p>机器之心编译  参与：Rick、吴攀、李亚洲</p>
+<p>　　本文是日本东京 TensorFlow 聚会联合组织者 Hin Khor 所写的 TensorFlow 系列介绍文章的前两部分，自称给出了关于 TensorFlow 的 gentlest 的介绍。这两部分谈到单一特征问题的线性回归问题以及训练（training）的含义，机器之心将继续关注本系列文章的后续更新。</p>
+  <a id="more"></a>
+<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><p>　　引言</p>
+<p>　　我们要解决的是一个过于简单且不现实的问题，但其好的一面是便于我们了解机器学习和 TensorFlow 的概念。我们要预测一个基于单一特征（房间面积/平方米）的单标量输出（房价/美元）。这样做消除了处理多维数据的需要，使我们能够在 TensorFlow 中只专注于确定、实现以及训练模型。</p>
+<p>　　<strong>机器学习简介</strong></p>
+<p>　　我们从一组收集到的数据点开始（见下图），每个数据点代表两个值之间的关系——输出（房价）与影响因素（房子面积）。</p>
+<p><img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185277647855356.PNG" alt=""><br>　　<br>　　然而我们无法预测没有数据点的特征的值（见上图）。</p>
+<p>　　我们可以使用机器学习来挖掘它们之间的关系（见下图的「最佳拟合预测曲线」），即给定一个不属于数据点的特征值，我们可以准确地预测出输出（特征值和预测线的交点）。</p>
+<p><img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185279041726078.PNG" alt="">
+　　</p>
+<h3 id="步骤一：选择一个模型"><a href="#步骤一：选择一个模型" class="headerlink" title="步骤一：选择一个模型"></a>步骤一：选择一个模型</h3><p>　　1.模型种类</p>
+<p>　　为了使用机器学习来做预测，我们需要选择一个能够拟合收集到的数据的最佳模型。</p>
+<p>　　我们可以选择一个线性（直线）模型，并通过改变其陡度/梯度和位置对其进行调整，从而匹配数据点。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185279256541303.PNG" alt=""></p>
+<p>　　我们也可以选择一个指数（曲线）模型，并通过改变其曲率（curvature）和位置对其进行调整，从而匹配同一数据点集。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185279285052628.PNG" alt=""></p>
+<p>　　2.成本函数</p>
+<p>　　为了比较哪个模型拟合得更严密，<strong>数学上我们将最佳拟合定义为一个需要被最小化的成本函数。</strong> 成本函数的一个简单样例是每个数据点所代表的实际输出与预测输出之间偏差的绝对值总和（实际结果到最佳拟合曲线的垂直投影）。用图表表示，成本函数被描述为下表中蓝色线段的长度和。<br>　　注意：更准确地说，成本函数往往是实际输出和预测输出之间的方差，因为差值有时是负数；这也称为最小二乘法。</p>
+<p>　　3.线性模型简介</p>
+<p>　　秉持简洁精神，我们将使用线性模型来对数据点进行建模。线性模型的数学表示是：<br>　　y = W.x + b<br>　　Where:<br>　　x: house size, in sqm<br>　　y: predicted house price, in $<br>　　为了调整模型来更好地拟合数据点，我们可以这样做：</p>
+<p>　　调整 W 来改变线性模型的梯度<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280380207018.PNG" alt=""><br>　　调整 b 来改变线性模型的位置<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280411397531.PNG" alt=""><br>　　通过使用许多个 W、b 的值，最终我们可以找到一个最佳拟合线性模型，能够将成本函数降到最小。<br>　　除了随机尝试不同的值，有没有一个更好的方法来快速找到 W、b 的值？</p>
+<p>　　4.梯度下降<br>　　如果你试图从山上下降到最低点，你的视角就是这个样子。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280649945725.JPEG" alt=""><br>　　下降趋势并不明显！其最佳方式是执行梯度下降：<br>　　在当前位置以最陡的下降梯度确定方向<br>　　在该方向上采取步长 X<br>　　重复 &amp; 刷新；这就是训练过程<br>　　<strong>最小化成本函数是类似的，因为成本函数就像是起伏的山，我们想要找到其中的最低点，我们可以通过梯度下降类似地实现。</strong><br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280668810785.PNG" alt=""><br>　　现在我们有了线性模型、成本函数和梯度下降的概念，可以开始使用 TensorFlow 了。</p>
+<h3 id="步骤二：在TensorFlow-中建立模型"><a href="#步骤二：在TensorFlow-中建立模型" class="headerlink" title="步骤二：在TensorFlow 中建立模型"></a>步骤二：在TensorFlow 中建立模型</h3><p>　　1.TensorFlow 中的线性模型<br>　　TensorFlow 的2个基本组件是：<br>　　占位符（Placeholder）：表示执行梯度下降时将实际数据值输入到模型中的一个入口点。例如房子面积 (x) 和房价 (y_)。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280848415395.PNG" alt=""><br>　　变量：表示我们试图寻找的能够使成本函数降到最小的「good」值的变量，例如 W 和 b。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185280912702237.PNG" alt=""><br>　　然后 TensorFlow 中的线性模型 (y = W.x + b) 就是：<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281063120052.PNG" alt=""></p>
+<p>　　2.TensorFlow 中的成本函数<br>　　与将数据点的实际房价 (y_) 输入模型类似，我们创建一个占位符。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281081618132.PNG" alt=""><br>　　成本函数的最小方差就是：<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281243718944.PNG" alt=""></p>
+<p>　　3.数据<br>　　由于没有房价(y_) 和房子面积 (x) 的实际数据点，我们就生成它们。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281258485201.PNG" alt=""><br>　　简单起见，我们将房价 (ys) 设置成永远是房子面积 (xs) 的 2 倍。</p>
+<p>　　4.梯度下降<br>　　有了线性模型、成本函数和数据，我们就可以开始执行梯度下降从而最小化代价函数，以获得 W、b 的「good」值。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281275279024.PNG" alt=""><br>　　0.00001 是我们每次进行训练时在最陡的梯度方向上所采取的「步」长；它也被称作学习率（learning rate）。</p>
+<h3 id="步骤三：训练模型"><a href="#步骤三：训练模型" class="headerlink" title="步骤三：训练模型"></a>步骤三：训练模型</h3><p>　　训练包含以预先确定好的次数执行梯度下降，或者是直到成本函数低于某个预先确定的临界值为止。</p>
+<p>　　1.TensorFlow 的怪异<br>　　所有变量都需要在训练开始时进行初始化，否则它们可能会带有之前执行过程中的残余值。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281684475306.PNG" alt=""></p>
+<p>　　2.TensorFlow 会话<br>　　虽然 TensorFlow 是一个 Python 库，Python 是一种解释性的语言，但是默认情况下不把 TensorFlow 运算用作解释性能的原因，因此不执行上面的 init 。相反 TensorFlow 是在一个会话中进行；创建一个会话 (sess) 然后使用 sess.run() 去执行。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281695953428.PNG" alt=""><br>　　类似地我们在一个循环中调用 withinsess.run() 来执行上面的 train<em>step。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281721325983.JPEG" alt=""><br>　　你需要将由 x, y</em> 所组成的实际数据输入再提供给输入，因为 TensorFlow 将 train<em>step 分解为它的从属项：<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185281759945694.JPEG" alt=""><br>　　从属项的底部是占位符 x，y</em>；而且正如我们之前提到的，tf.placeholders 是用来表示所要提供的实际数据点值房价 (y_) 和房子面积 (x) 的位置。<br>　　结果<br>　　循环中的 print 语句将显示 TensorFlow 如何在每次迭代中学习 W 和 b 的「good」值。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185282154874143.PNG" alt=""></p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>　　我们已经以最简单的形式学习了机器学习；<strong>从一个单一特征预测结果。</strong>（为简单起见）我们选择了一个线性模型来拟合我们的数据点，定义一个成本函数来表示最佳拟合，并通过反复调整其梯度变量 W 与位置变量 b 来训练我们的模型，使成本函数降到最小。</p>
+<h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><p>　　简单回顾</p>
+<p>　　在上一部分，我们使用 TensorFlow 构建并学习了一个带有单一特征的线性回归模型——给定一个特征值（房屋面积/平方米），我们可以预测输出（房价/美元）。</p>
+<p>　　下面是一些总结：<br>　　我们有一些房屋面积和房价的数据（灰色点）<br>　　我们使用线性回归对这些数据进行了建模（红色虚线）<br>　　我们通过训练该线性回归模型的 W（权重）和 b（偏置）找到了最小化「成本」（竖直蓝色实线的长度总和，这些蓝线代表了预测和实际输出之间的差异）的「最好」模型<br>　　给定任意房屋面积，我们可以使用该线性模型预测房价（带箭头的蓝色虚线）<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185282788501777.PNG" alt=""><br>　　一张图解释线性回归</p>
+<pre><code>在机器学习文献中，我们常常看到「训练（training）」这个词。在这一部分，我们将在 TensorFlow 中理解「训练」的含义。
+</code></pre><p>　　线性回归建模<br>　　Linear Model (in TF notation): y = tf.matmul(x,W) + b<br>　　线性回归的目标是寻找 W 和 b，这样对于给定的任意特征值 x，我们可以通过将 W、b 和 x 的值代入到模型中得到预测 y。<br>　　但是为了找到能准确做出预测的 W 和 b 的值，我们需要使用可用的数据（许多实际特征 x 和实际输出 y_ 的配对，注意下划线）来「训练」该模型。</p>
+<p>　　解释「训练」<br>　　为了找到最佳的 W 和 b 值，我们可以从任意的 W 和 b 值开始。我们也需要定义一个成本函数，该函数可以衡量对于一个给定特征值 x 预测输出 y 和实际输出 y_ 之间差异。为了简单起见，我们使用最简单的最小均方误差（MSE：minimum squared error）作为我们的成本函数。<br>　　Cost function (in TF notation): tf.reduce<em>mean(tf.square(y</em> - y))<br>　　通过最小化成本函数，我们可以得到很好的 W 和 b 值。<br>　　我们的训练代码实际上非常简单，并且用 [A, B, C, D] 进行了注释，后面我们还会谈到这些代码。完整代码请访问：<a href="https://github.com/nethsix/gentle_tensorflow/blob/master/code/linear_regression_one_feature_using_mini_batch_with_tensorboard.py" target="_blank" rel="external">https://github.com/nethsix/gentle_tensorflow/blob/master/code/linear_regression_one_feature_using_mini_batch_with_tensorboard.py</a></p>
+<p>　　# … (省略) 变量/常量声明 …</p>
+<p>　　# [A] TensorFlow图<br>　　y = tf.matmul(x,W) + b<br>　　cost = tf.reduce<em>mean(tf.square(y</em>-y))</p>
+<p>　　# [B] 用固定「学习率（learn_rate）」训练<br>　　learn_rate = 0.1<br>　　train_step =<br>　　tf.train.GradientDescentOptimizer(learn_rate).minimize(cost)<br>　　for i in range(steps):</p>
+<p>　　# [C] 准备数据点<br>　　# … (省略) 准备作为x和y的数据点的代码 …</p>
+<p>　　# [D] 在每个步骤/epoch将数据送入’train<em>step’<br>　　feed = { x: xs, y</em>: ys }<br>　　sess.run(train_step, feed_dict=feed)</p>
+<p>　　我们的线性模型和成本函数[A]可以表示成下面的 TensorFlow 图：<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283024917706.PNG" alt=""><br>　　创造一个带有模型和成本函数的 TensorFlow 图，并使用一些值初始化 W 和 b<br>　　接下来，我们选择一个数据点 (x, y_) [C]，然后将其送入[D] TensorFlow 图，从而得到预测 y 和相应的成本。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283050555281.PNG" alt=""><br>　　使用单个数据点计算预测 y 和成本</p>
+<p>　　为了得到更好的 W 和 b，我们使用TensorFlow 的 tf.train.GradientDescentOptimizer [B]执行梯度下降以降低成本。用非技术的术语来说：给定当前成本，并基于成本岁其它变量（即 W 和 b）的变化方式，优化器（optimizer）将对 W 和 b 执行一些小调整（递增或递减）以使我们的预测更好地契合那个单个数据点。</p>
+<p>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283119696947.JPEG" alt=""><br>　　基于当前的成本，决定如何调整 W 和 b 以提升预测 y 和降低成本</p>
+<p>　　训练周期中的最后步骤是在调整 W 和 b 对它们进行更新。注意这里的「周期」用机器学习的术语来说是「epoch」。<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283140122068.JPEG" alt=""><br>　　在下一训练 epoch 的迭代前，通过调整 W 和 b 对它们进行更新</p>
+<p>　　在下一训练 epoch 中，重复这些步骤，但使用一个不同的数据点！<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283229448084.JPEG" alt=""><br>　　使用不同的数据点进行训练</p>
+<p>　　使用各种数据点泛化（generalize）我们的模型，即学习可被用于预测任何特征值的 W 和 b 值。注意：<br>　　在大部分情况下，数据点越多，模型的学习和泛化就越好</p>
+<p>　　如果你训练的 epoch 比数据点还多，你可以重复使用数据点，这不成问题。梯度下降优化总是会同时使用数据点及其成本（根据该 epoch 的 W 和 b 值从数据点中计算得到）来对 W 和 b 值进行调整；该优化器也许之前已经见过了这个数据点，但成本并不一样，因此它还是可以学到新的东西，并以不同的方式调整 W 和 b 值。</p>
+<p>　　你可以用固定数量的 epoch 训练一个模型，直到其达到令人满意的成本阈值。</p>
+<p>　　训练变量</p>
+<p>　　1.随机、mini-batch、batch</p>
+<p>　　在上面的训练中，我们在每个 epoch 送入单个数据点。这被称为随机梯度下降（stochastic gradient descent）。我们也可以在每个 epoch 送入一堆数据点，这被称为 mini-batch 梯度下降，或者甚至在一个 epoch 一次性送入所有的数据点，这被称为 batch 梯度下降。请看下图的比较，注意这 3 张图的 2 处不同：<br>　　每个 epoch 送入 TensorFlow 图（TF.Graph）的数据点的数量（图右上方）<br>　　梯度下降优化在调整 W 和 b 值时所考虑的数据点的数量（图右下方）<br>　　随机梯度下降<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283435404926.JPEG" alt=""><br>　　mini-batch 梯度下降<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283453741114.JPEG" alt=""><br>　　batch 梯度下降</p>
+<p>　　每张图中的数据点的数量有 2 个含义。当数据点更多时：<br>　　计算成本和执行梯度下降所需的计算资源（减法、平方、加法）会增加<br>　　模型的学习和泛化的速度增加<br>　　选择随机、mini-batch、batch 梯度下降的优缺点总结在下图中：<br>　　<img src="http://n1.itc.cn/img8/wb/recom/2016/08/22/147185283466611340.PNG" alt=""><br>　　选择随机、mini-batch、batch 梯度下降的优缺点<br>　　要在随机/mini-batch/batch 梯度下降之间切换，我们只需要在将数据点送入训练步骤[D]之前将这些数据点分成不同的 batch 大小，即为 [C] 使用如下的代码片段：<br>　　# <em> all_xs: 所有的特征值<br>　　# </em> all_ys: 所有的输出值<br>　　# datapoint_size: all_xs/all_ys 中点/项的数量<br>　　# batch_size: 配置如下:<br>　　# 1: 随机模型<br>　　# integer &lt; datapoint_size: mini-batch模式<br>　　# datapoint_size: batch模式<br>　　# i: 当前epoch数量<br>　　if datapoint_size == batch_size:<br>　　# Batch 模式，所以选择所有数据点从 index 0 开始<br>　　batch_start_idx = 0<br>　　elif datapoint_size &lt; batch_size:<br>　　# 不可能<br>　　raise ValueError(“datapoint_size: %d, must be greater than<br>　　batch_size: %d” % (datapoint_size, batch_size))<br>　　else:<br>　　# 随机/mini-batch模式: 从所有可能的数据点中分批选择数据点<br>　　batch_start_idx = (i * batch_size) % (datapoint_size — batch_size)<br>　　batch_end_idx = batch_start_idx + batch_size<br>　　batch_xs = all_xs[batch_start_idx:batch_end_idx]<br>　　batch_ys = all_ys[batch_start_idx:batch_end_idx]<br>　　# 将分批的数据点定义为xs, ys, 它们会被送入 ‘train_step’训练步骤<br>　　xs = np.array(batch_xs)<br>　　ys = np.array(batch_ys)</p>
+<p>　　2.学习率变化<br>　　学习率（learn rate）是指梯度下降调整 W 和 b 递增或递减的速度。学习率较小时，处理过程会更慢，但肯定能得到更小成本；而当学习率更大时，我们可以更快地得到最小成本，但有「冲过头」的风险，导致我们没法找到最小成本。<br>　　为了克服这一问题，许多机器学习实践者选择开始时使用较大的学习率（假设开始时的成本离最小成本还很远），然后随每个 epoch 而逐渐降低学习率。<br>　　TensorFlow 提供了 2 种方法可以做到这一点，详细解释可参考：<img src="http://stackoverflow.com/questions/33919948/how-to-set-adaptive-learning-rate-for-gradientdescentoptimizer；但这里进行了总结。
+　　使用梯度下降优化的变体
+　　TensorFlow 带有多种支持学习率变化的梯度下降优化器，例如 tf.train.AdagradientOptimizer 和 tf.train.AdamOptimizer.
+　　使用 tf.placeholder 调整学习率
+　　如同前面所看到的，如果我们在这个例子中声明了 tf.placeholder 来设置学习率，然后在 tf.train.GradientDescentOptimizer 中使用它，我们可以在每个训练 epoch 向其送入一个不同的值，这很像我们给 x 和 y_ 送入不同的数据点，这也是每个 epoch 的 tf.placeholders.
+　　我们需要 2 个小修改：
+　　# 修改 [B] ，将 &#39;learn_rate&#39; 设置为&#39;tf.placeholder&#39;
+　　# 并将其提供给&#39;learning_rate&#39;参数名tf.train.GradientDescentOptimizer
+　　learn_rate = tf.placeholder(tf.float32, shape=[]" alt=""><br>　　train_step = tf.train.GradientDescentOptimizer(<br>　　learning_rate=learn_rate).minimize(cost)<br>　　# 修改[D]，包含送入一个’learn_rate’值,<br>　　# 即 ‘initial_learn<em>rate’（初始学习率）除以’i’ (当前epoch数)<br>　　# 注: 这是过于简化的，仅用作示例<br>　　feed = { x: xs, y</em>: ys, learn_rate: initial_learn_rate/i }<br>　　sess.run(train_step, feed_dict=feed)</p>
+<h2 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h2><p>　　我们解释了机器学习中「训练（training）」的含义，以及在 TensorFlow 中通过模型和成本定义、然后循环通过训练步骤（将数据点送入梯度下降优化器）来进行训练的方式。我们还讨论了训练中的常见变量，即改变模型学习时每个 epoch 所用的数据点的大小和改变梯度下降优化器的学习率。</p>
+<p>　　后续内容<br>　　创建 Tensor Board 来可视化 Tensorflow 的执行，从而检测我们的模型、成本函数或梯度下降中的问题<br>　　使用多个特征表达线性回归<br>　　©本文由机器之心编译，转载请联系本公众号获得授权。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>Post author:</strong>
+      IPCreator
+    </li>
+    <li class="post-copyright-link">
+      <strong>Post link:</strong>
+      <a href="http://ipcreator.me/2017/02/13/AI/TensorFlow/good-understanding-of-tensorflow/" title="Deep | Everybody can Understand Tensorflow">http://ipcreator.me/2017/02/13/AI/TensorFlow/good-understanding-of-tensorflow/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright Notice: </strong>
+      All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Tensorflow/" rel="tag"># Tensorflow</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/13/AI/TensorFlow/basic-concept-and-operation-of-tensorflow/" rel="next" title="Basic Concept of Tensorflow">
+                <i class="fa fa-chevron-left"></i> Basic Concept of Tensorflow
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/13/AI/Basic Concept/gentle-understanding-of-tensorflow/" rel="prev" title="Gentlest Tensorflow">
+                Gentlest Tensorflow <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/13/AI/TensorFlow/good-understanding-of-tensorflow/"
+           data-title="Deep | Everybody can Understand Tensorflow" data-url="http://ipcreator.me/2017/02/13/AI/TensorFlow/good-understanding-of-tensorflow/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/img/ipheader.png"
+               alt="IPCreator" />
+          <p class="site-author-name" itemprop="name">IPCreator</p>
+           
+              <p class="site-description motion-element" itemprop="description">For life, growing up is the only password.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">257</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">252</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ipcreator" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" title="blog">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  blog
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一部分"><span class="nav-number">1.</span> <span class="nav-text">第一部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤一：选择一个模型"><span class="nav-number">1.1.</span> <span class="nav-text">步骤一：选择一个模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤二：在TensorFlow-中建立模型"><span class="nav-number">1.2.</span> <span class="nav-text">步骤二：在TensorFlow 中建立模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤三：训练模型"><span class="nav-number">1.3.</span> <span class="nav-text">步骤三：训练模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">1.4.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二部分"><span class="nav-number">2.</span> <span class="nav-text">第二部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结-1"><span class="nav-number">3.</span> <span class="nav-text">小结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IPCreator</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ipcreator"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TfzAWJSzk2L4jpj4gHaNsMbp-gzGzoHsz", "PXNkGhS05PxL7rV3N8gDlAQe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+</body>
+</html>

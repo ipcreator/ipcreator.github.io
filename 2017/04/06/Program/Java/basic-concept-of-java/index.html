@@ -1,0 +1,1284 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Basic Concept," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="For life" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Java is a good Coffee for programmer
+
+见过最多的，也最可悲的是—— 永远不相信自己所有的问题就出在自己从来都不肯耐心把最基础的东西弄清楚弄明白。[1]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Basic Concept of Java">
+<meta property="og:url" content="http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/index.html">
+<meta property="og:site_name" content="For life">
+<meta property="og:description" content="Java is a good Coffee for programmer
+
+见过最多的，也最可悲的是—— 永远不相信自己所有的问题就出在自己从来都不肯耐心把最基础的东西弄清楚弄明白。[1]">
+<meta property="og:image" content="http://ong8f1obl.bkt.clouddn.com/java.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/1.1.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/1.1-.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/1.22.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/1.2.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/2.4.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/2.14.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/2.18.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/3.14.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/3.15.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/3.16.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/3.17.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/3.21.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/3.22-0.jpg">
+<meta property="og:image" content="http://onzc6nld3.bkt.clouddn.com/3.22-1.jpg">
+<meta property="og:updated_time" content="2017-04-06T13:54:36.273Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Basic Concept of Java">
+<meta name="twitter:description" content="Java is a good Coffee for programmer
+
+见过最多的，也最可悲的是—— 永远不相信自己所有的问题就出在自己从来都不肯耐心把最基础的东西弄清楚弄明白。[1]">
+<meta name="twitter:image" content="http://ong8f1obl.bkt.clouddn.com/java.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'L2TAEB8639',
+      apiKey: '86bd00c4f7ef2396081856beb1cf9a7d',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/"/>
+
+
+
+
+
+  <title> Basic Concept of Java | For life </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">For life</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Growing up is the only password.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IPCreator">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/ipheader.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="For life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Basic Concept of Java
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-06T21:18:06+08:00">
+                2017-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/06/Program/Java/basic-concept-of-java/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/06/Program/Java/basic-concept-of-java/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/06/Program/Java/basic-concept-of-java/" class="leancloud_visitors" data-flag-title="Basic Concept of Java">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://ong8f1obl.bkt.clouddn.com/java.jpg" alt=""></p>
+<blockquote>
+<p>Java is a good Coffee for programmer</p>
+</blockquote>
+<p>见过最多的，也最可悲的是—— 永远不相信自己所有的问题就出在自己从来都不肯耐心把最基础的东西弄清楚弄明白。<sup>[1]<sup></sup></sup></p>
+<a id="more"></a>
+<h2 id="On-job-Training-2"><a href="#On-job-Training-2" class="headerlink" title="On job Training[2]"></a>On job Training<sup>[2]<sup></sup></sup></h2><h3 id="启发编程思想，培养编程感觉"><a href="#启发编程思想，培养编程感觉" class="headerlink" title="启发编程思想，培养编程感觉"></a>启发编程思想，培养编程感觉</h3><p>用程序来解决生活中的实际问题</p>
+<blockquote>
+<p>How –&gt; Why</p>
+</blockquote>
+<h3 id="Java-virtual-machine"><a href="#Java-virtual-machine" class="headerlink" title="Java virtual machine"></a>Java virtual machine</h3><p>可运行Java字节码的假想计算机</p>
+<p>javac：编译器<br>java: 解析器，是一个Jvm</p>
+<p>javac 将java源程序翻译为jvm可执行代码——java字节码，这一编译过程同c/c++有些不同，当C编译器生成一个对象的代码时，该代码是为在某一特定硬件平台运行而产生的。因此，在编译过程中，编译程序通过查表将所有对符号的引用转换为特定的内存偏移量，以保证程序的运行。</p>
+<p>java编译器却不将对变量和方法的引用编译为数值引用，也不确定程序执行过程中的内存布局，而是将这些符号引用信息保留在字节码中，由解析器在运行过程中创立内存布局，然后再通过查表来确定一个方法所在的地址，这样就有效保证了java的可移植性和安全性。</p>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/1.1.jpg" alt=""></p>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/1.1-.jpg" alt=""></p>
+<p>运行jvm字节码的工作是由解析器来完成</p>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/1.22.jpg" alt=""></p>
+<ol>
+<li>代码的装入</li>
+</ol>
+<p>由class loader完成，其负责装入运行一个程序需要的所有代码，这也包括程序代码中的类所继承的类和被其调用的类。当类装载器装入一个类时，该类被放在自己的名字空间中。除了通过符号引用自己名字空间以外的类，类之间没有其他办法可以影响其他类。在本台计算机上的所有类都在同一地址空间内，而所有从外部引进的类，都有一个自己独立的名字空间。这使得本地类通过共享相同的名字空间获得较高的运行效率，同时又保证它们与从外部引进的类不会相互影响。</p>
+<p>当装入了运行程序需要的所有类后，解析器便可确定整个可执行程序的内存布局。解析器为符号引用于特定的地址空间建立对应关系及查询表。通过在这一阶段确定代码的内存布局，java很好地解决了由超类改变而使子类崩溃的问题，同时也防止了代码对地址的非法访问。</p>
+<ol>
+<li><p>代码的校验<br>被装入的代码由字节码校验器进行检查，校验器可发现操作数栈溢出、非法数据类型转化等多种错误。通过校验后，代码便开始执行。</p>
+</li>
+<li><p>代码的执行<br>Java字节码的执行有两种方式：<br>A、即时编译方式<br>  解析器先将字节码编译成机器码，然后再执行该机器码。<br>B、解析执行方式<br>   解析器通过每次解析并执行一小段代码来完成java字节码程序的所有操作。<br>通常采用的是第二种方法。由于jvm规格描述具有足够的灵活性，这使得将字节码翻译为机器代码的工作具有较高的效率，对于那些对运行速度要求较高的应用程序，解析器可将java字节码即时编译为机器码，从而很好地保证了java代码的可移植性和高性能。</p>
+</li>
+</ol>
+<h3 id="Java-Garbage-Collector"><a href="#Java-Garbage-Collector" class="headerlink" title="Java Garbage Collector"></a>Java Garbage Collector</h3><p>Java类的实例对象和数组所需的存储空间是在堆上分配的，解析器具体承担为类实例分配空间的工作。解析器在为一个实例对象分配完存储空间后，便开始记录对该实例对象所占用的内存区域的使用。一旦对象使用完毕，便将其回收到垃圾箱中。</p>
+<p>在java语言中，除了new语句外没有其他方法为一个对象申请和释放内存。对内存进行释放和回收的工作是由java运行体统承担的，这允许java运行系统的设计者自己决定碎片回收的方法。</p>
+<p>在java程序运行过程中，一个垃圾回收器会不定时地被唤起检查是否有不再被使用的对象，并释放它们占用的内存空间，垃圾回收器不由程序员控制，也无规律可循，并不会一产生垃圾，它就被唤起，甚至有可能到程序终止，它都没有启动的机会。</p>
+<p>不同的jvm采用不同的回收策略，一般有两种比较常用：</p>
+<ol>
+<li><p>复制式回收策略<br>先将正在运行中的程序暂停，然后把正在被使用的所有对象从他们所在的堆内存里复制到另一块堆内存，那些不再被使用的对象所占据的内存空间就被释放掉。</p>
+</li>
+<li><p>自省式回收策略<br>检测所有正在使用的对象，并为它们标注，完成这项工作后再将所有不再被使用的对象所占据的内存空间一次释放。</p>
+</li>
+</ol>
+<p>Java把内存划分成两种，一种是栈内存，另一种是堆内存。</p>
+<p>在方法中定义的一些基本类型的变量和对象的引用变量都是在方法的栈内存中分配，当在一段代码块（也就是一对花括号{}之间）定义一个变量时，java就在栈中为这个变量分配内存空间，当超过变量的作用域后，java会自动释放掉为该变量所分配的内存空间，该内存空间可以立即被另作他用。</p>
+<p>堆内存用来存放由new创建的对象和数组，在堆中分配的内存，由java虚拟机的gc来管理，在堆中产生一个数组或对象后，还可以在栈中定义一个特殊的变量，让栈中的这个变量的取值等于数组或对象在堆内存中的首地址，栈中的这个变量就成了数组或对象的引用变量，以后就可以在程序中使用栈中的引用变量来访问堆中的数组或对象，引用变量就相当于是为数组或对象起的一个名称（叫代号也行）。引用变量时普通的变量，定义时在栈中分配，引用变量在程序运行到其作用域之外后被释放，而数组和对象本身在堆中分配，即使程序运行到使用new产生数组和对象的语句所在的代码块之外，数组和对象本身占据的内存不会被释放，数组和对象在没有引用变量指向它时，才会变为垃圾，不再被使用，但仍然占据内存空间不放，在随后一个不确定的时间呗GC释放，这也是java比较占内存的原因。</p>
+<blockquote>
+<p>Java内部还是有指针的，只是把指针的概念对用户隐藏起来了。</p>
+</blockquote>
+<h3 id="Pitfall"><a href="#Pitfall" class="headerlink" title="Pitfall"></a>Pitfall</h3><h4 id="Path"><a href="#Path" class="headerlink" title="Path"></a>Path</h4><p>与java有关的环境变量对空格和中文是非常敏感的<br>java -verbose，显示JVM详细的加载过程</p>
+<p>环境变量：OS中定义的变量，可供操作系统上所有应用程序使用<br>Windows：在cmd中，用set命令查看，是用户和系统环境变量的总和<br>path：设置供OS去寻找和执行应用程序的路径，当前目录–&gt;Path设置的目录，以最先找到的为准<br>Windows，用;分隔，Linux用:分隔<br>Windows，用%variable%取值，Linux用$variable取值</p>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/1.2.jpg" alt=""></p>
+<p>classpath：jvm按照classpath环境变量指定的目录顺序去查找这个类，以最先找到的为准，注意：与linux类似，jvm只会到classpath指定的目录中去寻找类，而不会自动在当前目录中去寻找</p>
+<p>.代表java虚拟机运行时的当前工作目录</p>
+<p>系统Windows，用;分隔，Linux用:分隔</p>
+<h3 id="Java-Class"><a href="#Java-Class" class="headerlink" title="Java Class"></a>Java Class</h3><p>Java中的程序必须以类的形式存在，一个类要被解析器直接启动运行，必须要有main方法，jvm运行时，首先会调用main方法，main方法的写法是固定的，public static void main(String[] args)</p>
+<p>如果在class前没有public修饰符，命名可以是一切合法的名称，而带有public，必须与源文件同名</p>
+<p>xxx.java中可以定义多个class，javac之后，产生多个class文件，能直接用java启动的只有那个含有main函数的类</p>
+<h3 id="Java-Grammar"><a href="#Java-Grammar" class="headerlink" title="Java Grammar"></a>Java Grammar</h3><p>java是严格区分大小写的<br>java所有的程序代码分为结构定义和功能执行语句，一条语句可以写在若干行上，功能执行语句的最后必须用;结束。</p>
+<p>java程序中一句连续的字符串不能分开在两行中写，如果太长，可以分成两个字符串，再用+号连起来，然后在+处断行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">单行注释//</div><div class="line">多行注释/*   */</div><div class="line">文档注释/**  */</div></pre></td></tr></table></figure>
+<p>多行注释可以嵌套单行注释，但是不能嵌套多行注释</p>
+<p>标识符，不能以数字开头，不能是java中的保留关键字</p>
+<blockquote>
+<p>正确的路有一条，错误的路千万条，何苦要去记住哪些错误的路呢？永远用字幕开头，尽量不要包含其他的符号。</p>
+</blockquote>
+<p>注意：Java中没有sizeof、goto、const这些关键字，但不能用goto、const作为变量名。</p>
+<h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4><ol>
+<li><p>整型常量<br>十六进制0x开头<br>八进制0开头<br>长整型l结尾</p>
+</li>
+<li><p>浮点数常量<br>单精度f/F结尾<br>双精度d/D结尾<br>小数常量的默认类型为double<br>float类型后面一定要加f/F</p>
+</li>
+<li><p>布尔常量<br>true和false</p>
+</li>
+<li><p>字符常量<br>java中的字符占用两个字节，是用unicode码表示的。<br>单引号<br>还可以用unicode码值来表示对应的字符</p>
+</li>
+<li><p>字符串常量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&quot;&quot;</div><div class="line">\反斜杠转义字符</div><div class="line">\\</div><div class="line">\r回车</div><div class="line">\n换行</div><div class="line">\t制表符</div><div class="line">\b退格键</div></pre></td></tr></table></figure>
+</li>
+<li><p>null常量<br>表示引用的对象为空</p>
+</li>
+</ol>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>用一个变量定义一块内存以后，程序就可以用变量名代表这块内存中的数据。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> x=<span class="number">0</span>,y;</div><div class="line">y=x+<span class="number">3</span>;</div></pre></td></tr></table></figure></p>
+<p>先取出x代表的那块内存单元的数，加上3，然后把结果放到y所在的那块内存单元。</p>
+<p>Java基本变量类型，都是小写：<br>整数：byte,,short,int,long<br>浮点：float，double<br>字符：char （与c语言不同，java的字符占两个字节，是unicode编码的）<br>布尔：boolean</p>
+<p>注意：java语言中没有无符号的数据类型</p>
+<p>引用类型：类、接口、数组</p>
+<p>计算机里只有数值，当你在内存中看到一个数值时，这个数值可能代表各种意义，比如你看到的文字、图像和听到的声音等都是使用数字形式来表示的，生活中的数值也可以代表其他意义，如1234可以代表密码、存款额、电报信息等，根据上下线索，我们能够知道这些数值代表的意义。其实字符也是一个数字，当要给一个字符变量赋值时，就可以直接用整数，如97对应字符’a’，使用char ch=97 将字符a赋值给变量ch，如果我们要将字符x赋值给一个char变量，该填一个怎样的整数呢？显然，不太容易记住每个字符所对应的数字，所以，我们就用单引号加上这个字符本身来表示那个字符对应的数字，如char ch=’x’。</p>
+<p>变量的作用域（scope）<br>在c/c++/java里，一对花括号中间的部分就是一个代码块，代码块决定其中定义的变量的作用域。</p>
+<p>局部变量在进行取值操作前必须被初始化或进行过赋值操作，否则会出现编译错误</p>
+<h4 id="基本数据类型之间的转换"><a href="#基本数据类型之间的转换" class="headerlink" title="基本数据类型之间的转换"></a>基本数据类型之间的转换</h4><ol>
+<li><p>自动（隐式）<br>同时满足两个条件：<br>A、两种类型彼此兼容；<br>B、目标类型的取值范围要大于源类型。</p>
+</li>
+<li><p>强制（显式）<br>类型不兼容或者取值范围要小于源类型</p>
+</li>
+</ol>
+<p>字符串可以使用+同其他的数据类型相连形成一个新的字符串(将其他数据类型值默认转化为十进制)</p>
+<p>源和目标分别是两个大小不同的内存块（由变量及数据的类型来决定），将源数据赋值给目标内存的过程，就是用目标内存块去套取源内存中的数据，能套多少算多少。</p>
+<ol>
+<li>表达式的数据类型自动提升</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">byte</span> b = <span class="number">5</span>;</div><div class="line">b = b-<span class="number">2</span>;</div><div class="line">System.out.println(b);</div></pre></td></tr></table></figure>
+<p>在表达式取值时，变量值被自动提升为int类型</p>
+<blockquote>
+<p>b = (byte)(b-2)</p>
+</blockquote>
+<p>java定义了若干适用于表达式的类型提升规则<br>A、所有的byte类型、short类型和char类型的值将被提升到int类型；<br>B、如果一个操作数是long类型，计算结果就是long类型<br>C、如果一个操作数是float类型，计算结果就是float类型<br>D、如果一个操作数是double类型，计算结果就是double类型</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p><img src="http://onzc6nld3.bkt.clouddn.com/2.4.jpg" alt=""></p>
+<p>方法要接收调用程序传递进来的参数，必须为每个传递进来的参数定义一个变量。如果方法没有return语句，编译时，系统会自动在方法的最后添加一个return。</p>
+<p>void：不知道是什么类型，可定义方法时又非要填写一个返回值类型，就用它充数吧。</p>
+<h4 id="方法的重载-overload"><a href="#方法的重载-overload" class="headerlink" title="方法的重载(overload)"></a>方法的重载(overload)</h4><p>java的编译器很聪明，能够根据调用方法时所传递的参数的个数和类型选择相应的函数，重载方法的参数列表必须不同，要么是参数的个数不同，要么是参数的类型不同。重载方法的返回值类型可以相同，也可以不同。</p>
+<blockquote>
+<p>如果两个方法的参数类型和个数完全一样，返回值类型不同，行不行？如果你是java的设计者，而且你的用户在程序里编写了这样的两个方法，在调用时，你能根据他所传递的参数来为他选择到底该用哪个吗？没有办法吧！那就是不能这样做。学编程不需要死记硬背，靠的是动脑筋来思考，这样的学习才能做到举一反三、触类旁通。</p>
+</blockquote>
+<h3 id="Java中的运算符"><a href="#Java中的运算符" class="headerlink" title="Java中的运算符"></a>Java中的运算符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">“+”除字符串相加功能外，还能降字符串与其他的数据类型相连成一个新的字符串，条件是表达式中至少有一个字符串，如&quot;x&quot;+123的结果是&quot;x123&quot;</div><div class="line">如果对负数取模，可以把模数符号忽略不计，如5%(-2)=1，但是被模数是负数就另当别论了如(-5)%(-2)=-1</div><div class="line">/，整数除和小数除是有区别的，整数之间做除法，只保留整数部分而舍弃小数部分。3510/1000*1000=3000</div></pre></td></tr></table></figure>
+<p>为了避免将比较运算符==误写成=，有经验的程序员干脆写成if(3==x)，将常量放在==前面，这样万一写错，编译器就会报错。</p>
+<p><strong>逻辑运算符</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&amp; 或者|无论任何情况，&amp;两边的表达式都会参与计算</div><div class="line">&amp;&amp; 或者||当左边为false时，则将不会计算其右边的表达式</div></pre></td></tr></table></figure></p>
+<p>XOR异或，只有当^连接的两个布尔表达式的值不相同时，该组合才返回true值。</p>
+<p><strong>移位运算符</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;左移</div><div class="line">&gt;&gt;右移</div><div class="line">&gt;&gt;&gt;无符号右移</div></pre></td></tr></table></figure></p>
+<p>右移时，如果最高位是0，左边移空的高位就填入0<br>如果最高位是1，左边移空的高位就填入1<br>无符号右移，不管高位是0还是1，左边移空的高位都填入0</p>
+<p>移位运算符适用数据类型有byte、short、char、int、long</p>
+<ol>
+<li>对低于int类型的操作数将先自动转换为int类型再移位；</li>
+<li>对于int类型整数移位a&gt;&gt;b，系统先将b对32取模，得到的结果才是真正移位的位数。</li>
+<li>对于long类型整数移位时a&gt;&gt;b，则是先将移位位数对64取模。</li>
+</ol>
+<p>移位能为我们实现整数除以或乘以2的n次方的效果，如x&gt;&gt;1的结果和x/2的结果是一样的，x&lt;&lt;2和x*4的结果也是一样的。一个数左移n位，就等于这个数乘以2的n次方，一个数右移n位，就等于这个数除以2的n次方。</p>
+<blockquote>
+<p>注意：移位不会改变变量本身的值</p>
+</blockquote>
+<p>经验分享：不要在一行中编写太复杂的表达式，也就是不要在一行中进行太多的运算，除可读性差之外，还极容易出错。多用括号分成多条语句，括号的优先级是最高的。</p>
+<h3 id="程序的流程控制"><a href="#程序的流程控制" class="headerlink" title="程序的流程控制"></a>程序的流程控制</h3><p>结构化程序设计角度：</p>
+<ol>
+<li>顺序</li>
+<li>选择</li>
+<li>循环</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">对于if x then y，还有一种更简洁的写法</div><div class="line">变量 = 布尔表达式?语句1:语句2</div></pre></td></tr></table></figure>
+<p>求绝对值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">y= x&gt;0?x:-x</div></pre></td></tr></table></figure></p>
+<p>在java中，if和elseif括号中的表达式的结果必须是布尔型的，这一点和c/c++不一样</p>
+<p>switch语句判断条件可以接受byte,short,int,char类型，不接受其它类型<br>case是一旦碰到第一次匹配，如果没有break，就会继续执行。</p>
+<p>注意while表达式的括号后一定不要加;</p>
+<p>do while语句的结尾处多了一个分号;</p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>数组是多个相同类型数据的组合，实现对这些数据的统一管理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int [] x = new int[100];</div><div class="line">int x[] = new int[100];</div></pre></td></tr></table></figure></p>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/2.14.jpg" alt=""></p>
+<p>数组的静态初始化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int a = &#123;1,2,3,4&#125;;</div><div class="line">int a[] = new int[]&#123;3,4,5&#125;;</div></pre></td></tr></table></figure></p>
+<p>注意：在java语言中声明数组时，无论用何种方式定义数组，都不能指定其长度。</p>
+<p>多维数组，在java中并没有真正的多维数组，只有数组的数组，虽然在应用上很像C语言中的多维数组，但还是有区别的。在C语言中定义一个二维数组，必须是一个x*y二维矩阵块，类似我们通常所见到的棋盘。</p>
+<p>Java中多维数组不一定是规则矩阵形式</p>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/2.18.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">int [][] xx = &#123;&#123;3,2,7&#125;,&#123;1,5&#125;,&#123;6&#125;&#125;</div></pre></td></tr></table></figure></p>
+<p>与一维数组一样，在声明多维数组时不能指定其长度。</p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>什么是面向对象，这是一个相对概念，是相对面向过程而言的。<br>要理解什么是幸福，要先理解什么是痛苦一样的道理。</p>
+<h3 id="面向过程"><a href="#面向过程" class="headerlink" title="面向过程"></a>面向过程</h3><p>Windows窗口–&gt;结构体<br>HideWindow、MoveWindow，接收参数<br>谓语与宾语的关系，程序的重心集中在方法（谓语）上</p>
+<h3 id="面向对象-1"><a href="#面向对象-1" class="headerlink" title="面向对象"></a>面向对象</h3><p>Windows窗口，主体，有属性，<br>有动作（方法，Hide,Move…）<br>主语与谓语的关系，程序的重点集中在主体/对象（主语）上</p>
+<p>封装性，用类封装了数据和方法<br>真正能体现面向对象的强大优势的地方，是在面向对象的继承与多态性方面<br>封装性是面向对象的根源和最根本的属性</p>
+<p>封装：Encapsulation<br>继承：Inheritance<br>多态：Polymorphism</p>
+<p>面向对象的编程思想力图使在计算机语言中对事物的描述与现实世界中该事物的本来面目尽可能地一致，类和对象就是面向对象方法的核心概念。类时对某一类事物的描述，是抽象的、概念上的定义，对象是实际存在的该类事物的个体，因而也成实例（Instance）。</p>
+<p>面向对象程序设计的重点是类的设计。</p>
+<p>类的属性：类的成员变量<br>类的方法：类的成员方法<br>一个类中的方法可以直接访问同类中的任何成员（包括成员变量和成员方法）</p>
+<p>注意：方法中的变量若与类成员变量同名，则该方法中对这个变量名的访问时局部变量而非成员变量。</p>
+<p>对象的引用句柄是在栈中分配的一个变量，对象本身是在堆中分配的，原理同之前讲过的数组一样。</p>
+<p>当一个对象被创建时，会对其中各种类型的成员变量自动进行初始化赋值，除了基本数据类型之外的变量类型都是引用类型。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">byte</span>、<span class="keyword">short</span>、<span class="keyword">int</span>： <span class="number">0</span></div><div class="line"><span class="keyword">long</span>:<span class="number">0L</span></div><div class="line"><span class="keyword">float</span>:<span class="number">0.0F</span></div><div class="line"><span class="keyword">double</span>:<span class="number">0.0</span>D</div><div class="line"><span class="keyword">char</span>：<span class="string">'\u0000'</span>（表示为空）</div><div class="line"><span class="keyword">boolean</span>：<span class="keyword">false</span></div><div class="line">All reference type：<span class="keyword">null</span></div></pre></td></tr></table></figure></p>
+<h3 id="对象的比较"><a href="#对象的比较" class="headerlink" title="对象的比较"></a>对象的比较</h3><p>==用于比较两个变量的值是否相等<br>equals()方法用于比较两个对象的内容是否一致</p>
+<p>equls方法是String类的一个成员方法，用于比较两个引用变量所指向的对象的内容是否相等，就像比较两个人的长相是否一样。</p>
+<h3 id="匿名对象"><a href="#匿名对象" class="headerlink" title="匿名对象"></a>匿名对象</h3><p>创建完对象，在调用该对象的方法时，也可以不定义对象的句柄，而直接调用这个对象的方法。这样的对象叫做匿名对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Person p1 = new Person();</div><div class="line">p1.show();</div><div class="line"></div><div class="line">// 这句代码执行完，这个对象也就变成了垃圾</div><div class="line">new Person().show();</div></pre></td></tr></table></figure>
+<p>使用匿名对象的两种情况：<br>A、如果对一个对象只需要进行一次方法调用<br>B、将匿名对象作为实参传递给一个方法调用</p>
+<h3 id="类的封装"><a href="#类的封装" class="headerlink" title="类的封装"></a>类的封装</h3><p>如果外面的程序可以随意修改一个类的成员变量，会造成不可预料的程序错误，就像一个人的身高，不能被外部随意修改，只能通过各种摄取营养的方法去修改这个属性。</p>
+<p>为了实现良好的封装性，通常将类的成员变量声明为private，再通过public的方法来对这个变量进行访问。</p>
+<p>一个类通常就是一个小的模块，模块设计追求强内聚（许多功能尽量在类的内部独立完成，不让外面干预），弱耦合（提供给外部尽量少的方法调用）。</p>
+<h4 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h4><ol>
+<li>它具有与类相同的名称</li>
+<li>它不含返回值</li>
+<li>它不能在方法中用return语句返回一个值</li>
+</ol>
+<p>构造方法在程序设计中非常有用，它可以为类的成员变量进行初始化工作。<br>每一个人一出生就必须先洗澡。</p>
+<p>注意：在构造方法里不含返回值的概念是不同于void的，对于public void这样的写法就不再是构造方法，而变成了普通方法。</p>
+<p>构造方法的重载<br>new 类名(参数列表)</p>
+<p>在执行构造方法中的代码之前，进行属性的显式初始化，也就是执行在定义成员变量时就对其进行赋值的语句。</p>
+<p>在java的每个类里都至少有一个构造方法，如果没有定义，系统会自动为这个类产生一个默认的构造方法，没有参数，方法体中也没有任何代码，即什么也不做。</p>
+<p>一旦定义了构造方法，系统就不再产生默认的构造方法。</p>
+<p>经验：只要定义有参数的构造方法，都最好再定义一个无参数的构造方法。构造函数一般都是public的，因为它们在对象产生时，会被系统自动调用。</p>
+<p>每个成员方法内部，都有一个this引用变量，指向调用这个方法的对象。<br><img src="http://onzc6nld3.bkt.clouddn.com/3.14.jpg" alt=""></p>
+<blockquote>
+<p>对于一个方法来说，只要是对象，它就可以调用，它根本就不区分是不是自己所属的那个对象。</p>
+</blockquote>
+<p>this应用场景：<br>A、想通过构造方法将外部传入的参数赋值给类成员变量，构造方法的形式参数名称与类的成员变量名相同；</p>
+<p>B、假设有一个容器类和一个部件类，在容器类的某个方法中要创建部件类的实例对象，而部件类的构造方法要接收一个代表其所在容器的参数。</p>
+<p>C、我们可以在一个构造方法里调用其他重载的构造方法，不是用构造方法名，而是用this（参数列表）的形式，根据其中的参数列表，选择相应的构造方法。</p>
+<h3 id="GC有关的知识"><a href="#GC有关的知识" class="headerlink" title="GC有关的知识"></a>GC有关的知识</h3><blockquote>
+<p>皮之不存毛将焉附，如果对象都不存在，又怎么能够调用它的方法，无论是构造方法被调用，还是析构方法被调用，对象都在内存中存在。</p>
+</blockquote>
+<p>Java的finalize()方法的作用类似c++中的析构方法，finalize()方法是在对象被当成垃圾从内存中释放前调用，而不是在对象变成垃圾前调用，垃圾回收器的启用不由程序员控制，业务规律可循，并不会一产生垃圾，它就被唤起，甚至有可能到程序终止，它都没有启动的机会。</p>
+<p>System.gc()，强制启动垃圾回收器来回收垃圾。</p>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/3.15.jpg" alt=""></p>
+<blockquote>
+<p>读代码时，不是专盯代码本身，而是要看内存状态。</p>
+</blockquote>
+<h3 id="函数的参数传递"><a href="#函数的参数传递" class="headerlink" title="函数的参数传递"></a>函数的参数传递</h3><h4 id="基本数据类型的参数传递"><a href="#基本数据类型的参数传递" class="headerlink" title="基本数据类型的参数传递"></a>基本数据类型的参数传递</h4><p>基本类型的变量作为实参传递，并不能改变这个变量的值。<br><img src="http://onzc6nld3.bkt.clouddn.com/3.16.jpg" alt=""></p>
+<h4 id="引用数据类型的参数传递"><a href="#引用数据类型的参数传递" class="headerlink" title="引用数据类型的参数传递"></a>引用数据类型的参数传递</h4><p>一个对象可以有多个句柄（名称/引用）<br><img src="http://onzc6nld3.bkt.clouddn.com/3.17.jpg" alt=""></p>
+<blockquote>
+<p>Java语言在给被调用方法的参数赋值时，只采用传值的方式。所以，基本类型数据传递的是该数据的值本身，引用类型数据传递的也是这个变量的值本身，即对象的引用（句柄），而非对象本身，通过方法调用，可以改变对象的内容，但是对象的引用是不能改变的。对于数组，也属于引用类型。</p>
+</blockquote>
+<h3 id="static关键字"><a href="#static关键字" class="headerlink" title="static关键字"></a>static关键字</h3><h4 id="static-变量"><a href="#static-变量" class="headerlink" title="static 变量"></a>static 变量</h4><p>有时候，我们希望无论是否产生了对象，或无论产生了多少对象的情况下，某些特定的数据在内存空间里只有一份，例如所有的中国人都有国家名称，每一个中国人都共享这个国家名称，不必在每一个中国人的实例对象中都单独分配一个用于代表国家名称的变量。</p>
+<p>静态变量在某种程度上与其他语言的全局变量相类似，如果不是私有的就可以在类的外部进行访问，此时不需要产生类的实例对象，只需要类名就可以引用。对于静态成员变量，我们叫类属性(class attributes)</p>
+<p>用static标识符修饰的变量，它们在类被载入时创建，只要类存在，static变量就存在。</p>
+<h4 id="static-方法"><a href="#static-方法" class="headerlink" title="static 方法"></a>static 方法</h4><p>对于静态成员方法，我们叫类方法(class method)，采用static关键字说明类的属性和方法不属于类的某个实例对象。</p>
+<p>注意：</p>
+<ol>
+<li>在静态方法里只能直接调用同类中其他的静态成员（包括变量和方法），而不能直接访问类中的非静态成员。这是因为，对于非静态的方法和变量，需要先创建类的实例对象后才可使用。</li>
+<li>静态方法不能以任何方式引用this和super关键字，道理同1</li>
+<li>main()方法是静态的，因此jvm在执行main方法时不创建main方法所在的类的实例对象，因而在main方法中，不能直接访问该类中的非静态成员，必须创建该类的一个实例对象后，才能通过这个对象去访问类中的非静态成员。</li>
+</ol>
+<h4 id="静态代码块"><a href="#静态代码块" class="headerlink" title="静态代码块"></a>静态代码块</h4><p>static block，当类被载入时，静态代码块被执行，且只被执行一次，静态块经常用来进行类属性的初始化。尽管产生了类的多个实例对象，但其中的静态代码块只被执行一次。</p>
+<p>当一个程序用到了其他的类，才会去装载那个类。</p>
+<blockquote>
+<p>类是在第一次被使用的时候才被装载，而不是在程序启动时就装载程序中所有可能要用到的类。</p>
+</blockquote>
+<h4 id="单态设计模式"><a href="#单态设计模式" class="headerlink" title="单态设计模式"></a>单态设计模式</h4><p>设计模式是在大量的实践总结和理论化之后优选的代码结构、编程风格以及解决问题的思考方式。设计模式就像是经典的棋谱，不同的棋局，我们用不同的棋谱，免得自己再去思考和摸索。</p>
+<p>了解和掌握设计模式，这也是java开发者提高自身素质的一个很好选择。</p>
+<p>单态设计模式：在整个软件系统中，对某个类只能存在一个对象实例，并且该类只提供一个取得其对象实例的方法。</p>
+<ol>
+<li>将类的构造方法的访问权限设置为private，这样，就不能用new操作符在类的外部产生类的对象了，但在类的内部仍可以产生该类的对象。</li>
+</ol>
+<h4 id="理解main方法的语法"><a href="#理解main方法的语法" class="headerlink" title="理解main方法的语法"></a>理解main方法的语法</h4><h4 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h4><p>在一个类内部定义类，这就是嵌套类（nested classes），也叫内部类。<br>嵌套类可以直接访问嵌套它的类的成员，包括private成员，但是嵌套类的成员却不能被嵌套它的类直接访问。</p>
+<p>在类中直接定义的嵌套类的使用范围，仅限于这个类的内部，A类中定义了一个B类，那么B为A所知，却不被A的外面所知。内部类可以声明为private或protected。</p>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/3.21.jpg" alt=""></p>
+<p>在内部类对象保存了一个对外部类对象的引用，当内部类的成员方法中访问某一变量时，如果在该方法和内部类中都没有定义过这个变量，调用就会被传递给内部类中保存的那个外部类对象的引用，通过那个外部类对象的引用去调用这个变量，在内部类中调用外部类的方法也是一样的道理。</p>
+<p>应用场景：<br>当一个类中的程序代码要用到另一个类的实例对象，而另一个类中的程序代码又要访问第一个类中的成员，将另一个类做成第一个类的内部类，程序代码就要容易编写得多。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> out_i = <span class="number">100</span>;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</div><div class="line">		Inner in = <span class="keyword">new</span> Inner();</div><div class="line">		in.display();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="class"><span class="keyword">class</span> <span class="title">Inner</span></span>&#123;</div><div class="line">		<span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span></div><div class="line">		&#123;</div><div class="line">			System.out.println(<span class="string">"display out_i = "</span> + out_i);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果用static修饰一个内部类，这个类就相当于是一个外部定义的类。<br>非static内部类中，成员是不能声明为static的。</p>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/3.22-0.jpg" alt=""><br><img src="http://onzc6nld3.bkt.clouddn.com/3.22-1.jpg" alt=""></p>
+<p>内部类也可以通过创建对象从外部类之外被调用，只要将内部类声明为public即可。</p>
+<p>内部类Inner被声明为public，在外部就可以创建其外部类Outer的实例对象，再通过Outer类的实例对象创建Inner类的实例对象，就可以使用Inner类的实例对象来调用内部类Inner中的方法了。</p>
+<p>嵌套类也可以在程序块的范围内定义。如，在方法中，或甚至在for循环体内部等。</p>
+<p>在方法中定义的内部类只能访问方法中的final类型的局部变量，因为用final定义的局部变量相当于是一个常量，它的生命周期超出方法运行的生命周期。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/chapter6.html" target="_blank" rel="external">everyone-can-use-english</a><br>[2]<a href="">Java就业教程张孝祥PDF版.pdf</a><br>[3]<a href="">Think In  Java(中文第四版).pdf</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>Post author:</strong>
+      IPCreator
+    </li>
+    <li class="post-copyright-link">
+      <strong>Post link:</strong>
+      <a href="http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/" title="Basic Concept of Java">http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright Notice: </strong>
+      All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Basic-Concept/" rel="tag"># Basic Concept</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/06/English/basic-concept-of-grammar/" rel="next" title="Basic Concept of English——Grammar">
+                <i class="fa fa-chevron-left"></i> Basic Concept of English——Grammar
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/06/Program/Java/basic-concept-of-java/"
+           data-title="Basic Concept of Java" data-url="http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/img/ipheader.png"
+               alt="IPCreator" />
+          <p class="site-author-name" itemprop="name">IPCreator</p>
+           
+              <p class="site-description motion-element" itemprop="description">For life, growing up is the only password.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">257</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">252</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ipcreator" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" title="blog">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  blog
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#On-job-Training-2"><span class="nav-number">1.</span> <span class="nav-text">On job Training[2]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启发编程思想，培养编程感觉"><span class="nav-number">1.1.</span> <span class="nav-text">启发编程思想，培养编程感觉</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-virtual-machine"><span class="nav-number">1.2.</span> <span class="nav-text">Java virtual machine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-Garbage-Collector"><span class="nav-number">1.3.</span> <span class="nav-text">Java Garbage Collector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pitfall"><span class="nav-number">1.4.</span> <span class="nav-text">Pitfall</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Path"><span class="nav-number">1.4.1.</span> <span class="nav-text">Path</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-Class"><span class="nav-number">1.5.</span> <span class="nav-text">Java Class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-Grammar"><span class="nav-number">1.6.</span> <span class="nav-text">Java Grammar</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常量"><span class="nav-number">1.6.1.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量"><span class="nav-number">1.6.2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本数据类型之间的转换"><span class="nav-number">1.6.3.</span> <span class="nav-text">基本数据类型之间的转换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">1.7.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法的重载-overload"><span class="nav-number">1.7.1.</span> <span class="nav-text">方法的重载(overload)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java中的运算符"><span class="nav-number">1.8.</span> <span class="nav-text">Java中的运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序的流程控制"><span class="nav-number">1.9.</span> <span class="nav-text">程序的流程控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">1.10.</span> <span class="nav-text">数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象"><span class="nav-number">2.</span> <span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向过程"><span class="nav-number">2.1.</span> <span class="nav-text">面向过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象-1"><span class="nav-number">2.2.</span> <span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象的比较"><span class="nav-number">2.3.</span> <span class="nav-text">对象的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名对象"><span class="nav-number">2.4.</span> <span class="nav-text">匿名对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类的封装"><span class="nav-number">2.5.</span> <span class="nav-text">类的封装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造方法"><span class="nav-number">2.5.1.</span> <span class="nav-text">构造方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GC有关的知识"><span class="nav-number">2.6.</span> <span class="nav-text">GC有关的知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数的参数传递"><span class="nav-number">2.7.</span> <span class="nav-text">函数的参数传递</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本数据类型的参数传递"><span class="nav-number">2.7.1.</span> <span class="nav-text">基本数据类型的参数传递</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引用数据类型的参数传递"><span class="nav-number">2.7.2.</span> <span class="nav-text">引用数据类型的参数传递</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static关键字"><span class="nav-number">2.8.</span> <span class="nav-text">static关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#static-变量"><span class="nav-number">2.8.1.</span> <span class="nav-text">static 变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#static-方法"><span class="nav-number">2.8.2.</span> <span class="nav-text">static 方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静态代码块"><span class="nav-number">2.8.3.</span> <span class="nav-text">静态代码块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单态设计模式"><span class="nav-number">2.8.4.</span> <span class="nav-text">单态设计模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#理解main方法的语法"><span class="nav-number">2.8.5.</span> <span class="nav-text">理解main方法的语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内部类"><span class="nav-number">2.8.6.</span> <span class="nav-text">内部类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">3.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IPCreator</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ipcreator"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TfzAWJSzk2L4jpj4gHaNsMbp-gzGzoHsz", "PXNkGhS05PxL7rV3N8gDlAQe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+</body>
+</html>
