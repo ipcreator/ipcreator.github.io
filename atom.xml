@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-04-06T13:54:36.273Z</updated>
+  <updated>2017-04-07T13:08:10.045Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -16,11 +16,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>My Views of Happiness</title>
+    <link href="http://ipcreator.me/2017/04/07/MyView/it-happens-to-me-by-accident/"/>
+    <id>http://ipcreator.me/2017/04/07/MyView/it-happens-to-me-by-accident/</id>
+    <published>2017-04-07T06:45:06.000Z</published>
+    <updated>2017-04-07T13:08:10.045Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/Happiness-is-a.png" alt=""></p>
+<blockquote>
+<p>Healthy, Family, Enterprise, Thanksgiving<br>Love her，accompany her.</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Healthy"><a href="#Healthy" class="headerlink" title="Healthy"></a>Healthy</h2><h3 id="Walking"><a href="#Walking" class="headerlink" title="Walking"></a>Walking</h3><h3 id="Sleeping"><a href="#Sleeping" class="headerlink" title="Sleeping"></a>Sleeping</h3><h3 id="Diet"><a href="#Diet" class="headerlink" title="Diet"></a>Diet</h3><h3 id="Mentality"><a href="#Mentality" class="headerlink" title="Mentality"></a>Mentality</h3><h2 id="Family"><a href="#Family" class="headerlink" title="Family"></a>Family</h2><h3 id="Resposibility"><a href="#Resposibility" class="headerlink" title="Resposibility"></a>Resposibility</h3><h3 id="Independency"><a href="#Independency" class="headerlink" title="Independency"></a>Independency</h3><h2 id="Enterprise"><a href="#Enterprise" class="headerlink" title="Enterprise"></a>Enterprise</h2><h3 id="Growing-up"><a href="#Growing-up" class="headerlink" title="Growing up"></a>Growing up</h3><h3 id="Startup"><a href="#Startup" class="headerlink" title="Startup"></a>Startup</h3><h2 id="Thanksgiving"><a href="#Thanksgiving" class="headerlink" title="Thanksgiving"></a>Thanksgiving</h2><h3 id="Face-to-Reality"><a href="#Face-to-Reality" class="headerlink" title="Face to Reality"></a>Face to Reality</h3><h3 id="Appreciation"><a href="#Appreciation" class="headerlink" title="Appreciation"></a>Appreciation</h3><h3 id="Try-your-best"><a href="#Try-your-best" class="headerlink" title="Try your best"></a>Try your best</h3><h3 id="Let-it-Go"><a href="#Let-it-Go" class="headerlink" title="Let it Go"></a>Let it Go</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ong8f1obl.bkt.clouddn.com/Happiness-is-a.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Healthy, Family, Enterprise, Thanksgiving&lt;br&gt;Love her，accompany her.&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
+    
+    
+      <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Basic Concept of Java</title>
     <link href="http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/"/>
     <id>http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/</id>
     <published>2017-04-06T13:18:06.000Z</published>
-    <updated>2017-04-06T13:54:36.273Z</updated>
+    <updated>2017-04-07T13:41:23.243Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/java.jpg" alt=""></p>
 <blockquote>
@@ -33,7 +63,7 @@
 <p>How –&gt; Why</p>
 </blockquote>
 <h3 id="Java-virtual-machine"><a href="#Java-virtual-machine" class="headerlink" title="Java virtual machine"></a>Java virtual machine</h3><p>可运行Java字节码的假想计算机</p>
-<p>javac：编译器<br>java: 解析器，是一个Jvm</p>
+<p>javac：编译器，在javac命令中，可以使用通配符来指定一次编译多个源文件<br>java: 解析器，启动一个Jvm</p>
 <p>javac 将java源程序翻译为jvm可执行代码——java字节码，这一编译过程同c/c++有些不同，当C编译器生成一个对象的代码时，该代码是为在某一特定硬件平台运行而产生的。因此，在编译过程中，编译程序通过查表将所有对符号的引用转换为特定的内存偏移量，以保证程序的运行。</p>
 <p>java编译器却不将对变量和方法的引用编译为数值引用，也不确定程序执行过程中的内存布局，而是将这些符号引用信息保留在字节码中，由解析器在运行过程中创立内存布局，然后再通过查表来确定一个方法所在的地址，这样就有效保证了java的可移植性和安全性。</p>
 <p><img src="http://onzc6nld3.bkt.clouddn.com/1.1.jpg" alt=""></p>
@@ -254,7 +284,156 @@
 <p>内部类Inner被声明为public，在外部就可以创建其外部类Outer的实例对象，再通过Outer类的实例对象创建Inner类的实例对象，就可以使用Inner类的实例对象来调用内部类Inner中的方法了。</p>
 <p>嵌套类也可以在程序块的范围内定义。如，在方法中，或甚至在for循环体内部等。</p>
 <p>在方法中定义的内部类只能访问方法中的final类型的局部变量，因为用final定义的局部变量相当于是一个常量，它的生命周期超出方法运行的生命周期。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/chapter6.html" target="_blank" rel="external">everyone-can-use-english</a><br>[2]<a href="">Java就业教程张孝祥PDF版.pdf</a><br>[3]<a href="">Think In  Java(中文第四版).pdf</a></p>
+<h3 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h3><p>关键字：extends</p>
+<ol>
+<li>java只支持单继承，不允许多重继承，即：一个子类只能有一个父类</li>
+<li>一个类可以被多个类继承</li>
+<li>可以有多层继承</li>
+<li>子类继承父类所有的成员变量和成员方法，但不继承父类的构造方法。在子类的构造方法中可使用语句super(参数列表)调用父类的构造方法。</li>
+<li>如果子类的构造方法中没有显式地调用父类的构造方法，也没有使用this关键字调用重载的其它构造方法，则在产生子类的实例对象时，系统默认调用父类无参数的构造方法。</li>
+<li>如果子类构造方法中没有显式地调用父类构造方法，而父类中又没有无参数的构造方法，则编译出错。经验：我们在定义类时，只要定义了有参数的构造方法，通常都还需要定义一个无参数的构造方法。</li>
+</ol>
+<h3 id="子类对象实例化过程"><a href="#子类对象实例化过程" class="headerlink" title="子类对象实例化过程"></a>子类对象实例化过程</h3><ol>
+<li>分配成员变量的存储空间并进行默认的初始化；</li>
+<li>绑定构造方法参数，就是new Class(实际参数列表)中所传递进的参数赋值给构造方法中的形式参数变量；</li>
+<li>如有this()调用，则调用相应的重载构造方法，被调用的重载构造方法的执行流程结束后，回到当前构造方法，当前构造方法直接跳转到步骤6执行；</li>
+<li>显式或隐式追溯调用父类的构造方法（一直到Object类为止，Object是所有java类的最顶层父类），父类的构造方法又从步骤2开始对父类执行这些流程，父类的构造方法的执行流程结束后，回到当前构造方法，当前构造方法继续往下执行。</li>
+<li>进行实例变量的显式初始化操作，也就是执行在定义成员变量时就对其进行赋值的语句。</li>
+<li>执行当前构造方法的方法体中的程序代码。</li>
+</ol>
+<p>注意：this()方法调用语句与this.school=school的区别，前者指调用其他的构造方法，后者是一个普通的赋值语句。</p>
+<p>为什么？</p>
+<ol>
+<li>为什么super(…)和this(…)调用语句不能同时在一个构造函数中出现？</li>
+<li>为什么super(…)或this(…)调用语句只能作为构造函数的第一句出现？</li>
+</ol>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/4.1.jpg" alt=""></p>
+<h3 id="覆盖父类的方法"><a href="#覆盖父类的方法" class="headerlink" title="覆盖父类的方法"></a>覆盖父类的方法</h3><p>覆盖方法必须和被覆盖方法具有相同的方法名称、参数列表和返回值类型<br>覆盖方法时，不能使用比父类中被覆盖的方法更严格的访问权限，如父类的方法时public，子类的方法就不能是private。</p>
+<h3 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h3><ol>
+<li>在java中声明类、属性和方法时，可使用关键字final来修饰。</li>
+<li>final标记的类不能被继承。</li>
+<li>final标记的方法不能被子类重写；</li>
+<li>final标记的变量（成员变量或局部变量）即成为常量（这个常量也只能在这个类的内部使用，不能在类的外部直接使用，当用public static final共同标记常量时，这个常量就成了全局的常量，并且只能在定义时赋值，java中的全局常量也放在一个类中定义），只能赋值一次。final标记的成员变量必须在声明的同时或在该类的构造方法中显式赋值，然后才能使用。</li>
+<li>方法中定义的内置类只能访问该方法内的final类型的局部变量，用final定义的局部变量相当于是一个常量，它的生命周期超出方法运行的生命周期。将一个形参定义成final也是可以的，这就限定了我们在方法中修改形式参数的值。</li>
+</ol>
+<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>Java中可以定义一些不含方法体的方法，它的方法体的实现交给该类的子类根据自己的情况去实现，这样的方法就是抽象方法，包含抽象方法的类就叫抽象类，一个抽象类中可以有一个或多个抽象方法。任何带有抽象方法的类都必须声明为抽象类。</p>
+<p>修饰符：abstract<br>抽象类不能被实例化<br>抽象方法只需声明，而不需实现。</p>
+<p>抽象类的子类必须覆盖所有的抽象方法后才能被实例化，否则这个子类还是个抽象类。</p>
+<p>abstract 返回值类型 抽象方法(参数列表)</p>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>如果一个抽象类中的所有方法都是抽象的，就可以将这个类用另外一种方式来定义，也就是接口定义。</p>
+<p>接口是抽象方法和常量值的定义的集合，从本质上讲，接口是一种特殊的抽象类，这种类中只包含常量和方法的定义，而没有变量和方法的实现。</p>
+<p>即使没有显式地将其中的成员用public关键字标识，但这些成员都是public访问类型的。</p>
+<p>接口里的变量默认是用public static final标识的，所以，接口中定义的变量就是全局静态常量。</p>
+<ol>
+<li>可以用extends关键字去继承一个已有的接口</li>
+<li>也可以定义一个类，用implements关键字去实现一个接口中的所有方法</li>
+<li>还可以去定义一个抽象类，用implements关键字去实现一个接口中定义的部分方法</li>
+</ol>
+<blockquote>
+<p>在java中，设计接口的目的是为了让类不必受限于单一继承的关系，而可以灵活地同时继承一些共有的特性，从而达到多重继承的目的，而且避免了C++中多重继承的复杂关系所产生的问题。多重继承的危险性在于一个类有可能继承了同一个方法的不同实现，对接口来讲绝不会发生这种情况，因为接口没有任何实现。</p>
+</blockquote>
+<p>一个类可以在继承一个父类的同时，实现一个或多个接口，extends关键字必须位于implements关键字之前。</p>
+<ol>
+<li>实现一个接口就是要实现该接口的所有方法（抽象类除外）</li>
+<li>接口中的方法都是抽象的</li>
+<li>多个无关的类可以实现同一个接口</li>
+<li>一个类可以实现多个无关的接口</li>
+</ol>
+<blockquote>
+<p>调用者和被调用者必须共同遵守某一限定，调用者按照这个限定进行方法调用，被调用者按照这个限定进行方法实现，在面向对象的编程语言中，这种限定就是通过接口类来表示的，主板和各种PCI卡就是按照PCI接口进行约定的。</p>
+</blockquote>
+<p>java编译器并不能根据一个类中有哪些方法，就知道它是某个类的子类的，编译器只能从extends和implements关键字上来了解。</p>
+<h3 id="对象的多态性"><a href="#对象的多态性" class="headerlink" title="对象的多态性"></a>对象的多态性</h3><h4 id="对象的类型转换"><a href="#对象的类型转换" class="headerlink" title="对象的类型转换"></a>对象的类型转换</h4><ol>
+<li>子类转换成父类</li>
+<li>父类转换成子类<br>强制转换：目的是让编译器进行语法检查时开点后门，放你过关，强制类型转换并不是要对内存中的对象大动手术，不是要将男人变成女人。</li>
+</ol>
+<p>强制类型转换的前提是程序员提前就知道要转换的父类引用类型对象的本来面目确实是子类类型的。</p>
+<blockquote>
+<p>可以用instanceof判断是否一个类实现了某个接口，也可以用它来判断一个实例对象是否属于一个类。</p>
+</blockquote>
+<h4 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h4><p>Object类时java类层中的最高层类，是所有类的超类，java中任何一个类都是它的子类，由于所有类都是object衍生出来的，所以object的方法适用于所有类。</p>
+<p>Object中有一个equals方法，用于比较两个对象是否相等，默认值为false，为了确保准确，自定义类中必须覆盖Object类的equals方法。</p>
+<h4 id="多态性"><a href="#多态性" class="headerlink" title="多态性"></a>多态性</h4><ol>
+<li>应用程序不必为每一个派生类（子类）编写功能调用，只需要对抽象基类进行处理即可。</li>
+<li>派生类的功能可以被基类的方法或引用变量调用，这叫后向兼容，可以提高程序的可扩充性和可维护性。</li>
+</ol>
+<h4 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h4><p>内部类可以声明是抽象类或是一个接口，它可以被另外一个内部类来继承或实现，内部类可以继承外部类，也可以用final关键字修饰。</p>
+<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><p>异常定义了程序中遇到的非致命的错误，而不是编译时的语法错误，如程序打开一个不存在的文件，网络连接中断，操作数越界，装载一个不存在的类等…</p>
+<p>当try代码块中的程序发生了异常，系统将这个异常发生的代码行号，类别等信息封装到一个对象中，并将这个对象传递给catch代码块。</p>
+<h4 id="throws关键字"><a href="#throws关键字" class="headerlink" title="throws关键字"></a>throws关键字</h4><p>定义方法时用throws关键字声明了它有可能发生异常，调用者就必须使用try…catch语句进行处理，这叫防患于未然。</p>
+<p>在a调用方法中不处理，继续throws，一直到main方法<br>java中一个方法时可以被声明成抛出多个异常的。</p>
+<p>Exception类是所有异常类的父类，除了ArithmeticException、NullPointerException、ArrayIndexOutOfBoundsException等系统异常外，我们也可以定义自己的异常类。</p>
+<p>java是通过throw关键字抛出异常对象的<br>throw 异常对象;</p>
+<p>在一个方法内使用throw关键字抛出了异常对象，如果该方法内部没有用try…catch语句对这个抛出的异常进行处理，则此方法应声明抛出异常，而由该方法的调用者负责处理。</p>
+<p>我们可以在一个方法中使用throw、try…catch语句来实现程序的跳转<br><img src="http://onzc6nld3.bkt.clouddn.com/4.4.4.jpg" alt=""></p>
+<h4 id="finally关键字"><a href="#finally关键字" class="headerlink" title="finally关键字"></a>finally关键字</h4><p>finally语句中的代码不管异常是否被捕获总是要被执行的。<br>finally中的代码块不能被执行的唯一情况是：在被保护代码块中执行了System.exit()</p>
+<p>注意：</p>
+<ol>
+<li>一个方法被覆盖时，覆盖它的方法必须抛出相同的异常或异常的子类；</li>
+<li>如果父类抛出多个异常，那么重写（覆盖）方法必须抛出那些异常的一个子集，也就是说，不能抛出新的异常。</li>
+</ol>
+<p>java没有goto语句，它保留goto关键字只是为了让程序员不要搞混。java利用带标号的break和continue语句来取代goto。java中严格定义的异常处理机制使goto没有再存在的必要，取消这种随意跳转的语句有利于优化代码以及保持系统的健壮性和安全性。</p>
+<blockquote>
+<p>java异常强制我们去考虑程序的强健性和安全性</p>
+</blockquote>
+<h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><p>java通过引入package机制，提供类的多层类命名空间。</p>
+<p>位于包中的每个类的完整名称都应该是包名与类名的组合。<br>同一个包中的类相互访问，不用指定包名。</p>
+<blockquote>
+<p>同是中国的两个城市，使用时非要加个中国前缀，也是行得通的，但让人听起来就有点像汉奸了</p>
+</blockquote>
+<p>如果从外部访问一个包中的类，必须使用类的完整名称。<br>虚拟机在装载带有包名的类时，会先找到classpath环境变量指定的目录，再在这些目录中，按照与包名层次相对应的目录结构去查找class文件。</p>
+<p>在编译时，让javac来生成与包名层次相对应的目录结构，而不必手工去创建。</p>
+<p>javac -d  . Test.java</p>
+<p>. 代表当前目录</p>
+<p>如果没有-d选项，.class文件存放在当前工作目录</p>
+<p>位于在包中的类，在文件系统中的存放位置，必须有与包名层次相对应的目录结构。在package语句中，用.来指明包的层次。</p>
+<p>虚拟机在装载带有包名的类时，会先找到classpath环境变量指定的目录，再在这些目录中，按照与包名层次相对应的目录结构去查找class文件。</p>
+<ol>
+<li>即使java/class文件名相同，但其中包含的类的完整名称却不一定相同。</li>
+<li>同一个包中的类不必位于同样的目录，因为java是通过classpath去寻找顶层包名。</li>
+</ol>
+<p>包名必须在程序中通过package语句指定，而不是靠目录结构来指定，先要有了包名后，才需要相应的目录结构。</p>
+<p>包声明放在源文件的最前面，每个源文件只能声明一个包。</p>
+<p>在实际应用中，虽然编译了一个修改过的java源文件，但运行可能是某个旧的class文件，特别是旧的class文件所在的目录再classpath环境变量中的位置，位于新的class文件所在的目录的前面，问题就更加隐蔽了。</p>
+<p>当我们在编译过程中遇到了问题，有时并不是程序本身所带来的问题，需要我们放眼全局，思路更加开阔一些，从多个方面去思考和解决问题。</p>
+<h4 id="import"><a href="#import" class="headerlink" title="import"></a>import</h4><p>父包和子包之间，能从语意上表示某种血缘和亲近关系，但父包和子包在使用上没有任何关系，如父包中的类调用子包中的类，必须引用子包的全名，而不能省略父包名部分。</p>
+<p>import一个包中所有的类，并不会import这个包中的子包中的类，如果程序中用到了子包的类，需要再次对子包作单独引入。</p>
+<h4 id="jdk中的常用包"><a href="#jdk中的常用包" class="headerlink" title="jdk中的常用包"></a>jdk中的常用包</h4><ol>
+<li>java.lang<br>包含一些java语言的核心类，如String、Math、Integer、System和Thread，提供常用功能；</li>
+</ol>
+<p>java1.2以后的版本中，java.lang这个包会自动被导入，对于其中的类，不需要使用import语句来做导入，如System类</p>
+<ol>
+<li><p>java.io<br>包含能提供多种输入/输出功能的类</p>
+</li>
+<li><p>java.util<br>包含一些实用工具类，如定义系统特性、使用与日期日历相关的函数。</p>
+</li>
+<li><p>java.net<br>包含执行与网络相关的操作的类</p>
+</li>
+</ol>
+<h3 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h3><p>访问修饰符共有4个：default、public、protected、private</p>
+<h4 id="类成员"><a href="#类成员" class="headerlink" title="类成员"></a>类成员</h4><p>private<br>不能在方法体内声明的变量前加private修饰符</p>
+<p>default 默认访问控制：default、friendly、package<br>对于默认访问控制成员，可以被这个包中的其它类访问。如果一个子类与父类位于不同的包中，子类也不能访问父类中的默认访问控制成员。</p>
+<p>protect：既可以被同一个包中的其他类访问，也可以被不同包中的子类访问。</p>
+<p>public：所有类，不管访问类与被访问类是否在同一个包中。</p>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/4.1table.jpg" alt=""></p>
+<h4 id="类"><a href="#类" class="headerlink" title="类"></a>类</h4><p>只有两种访问权限<br>即：public和默认</p>
+<p>父类不能是private和protected，否则子类无法继承<br>public修饰的类能被所有的类访问，<br>默认修饰的类，只能被同一包中的所有类访问。</p>
+<h3 id="java命名习惯"><a href="#java命名习惯" class="headerlink" title="java命名习惯"></a>java命名习惯</h3><ol>
+<li>包名中的字母一律小写，如xxyyzz</li>
+<li>类名、接口名应当使用名词，每个单词的首字母大写，如XxYyZz</li>
+<li>方法名，第一个单词小写，后面每个单词的首字母大写，如xxYyZz</li>
+<li>变量名，第一个单词小写，后面每个单词的首字母大写，如xxYyZz</li>
+<li>常量名中的每一个字母一律大写，如XXXYYYZZZ</li>
+</ol>
+<h3 id="使用jar文件"><a href="#使用jar文件" class="headerlink" title="使用jar文件"></a>使用jar文件</h3><p>我们用的jdk中的包与类主要在jdk的安装目录的jre\lib\rt.jara文件中，由于java虚拟机会自动找到这个jar包，所以我们在使用这个jar包的类时，无需再用classpath来指向它们的位置。</p>
+<p>jar: java archive file</p>
+<p>jar文件是一种压缩文件，与常见的zip压缩文件格式兼容，习惯上称之为jar包，我们将开发的类压缩到jar文件中，以jar包的方式提供给别人使用。只要别人的classpath环境变量的设置中包含这个jar文件，java虚拟机就能自动在内存中解压这个jar文件，把这个jar文件当做一个目录，在这个jar文件中去寻找所需要的类及包名所对应的目录结构。</p>
+<p><img src="http://onzc6nld3.bkt.clouddn.com/4.7.jpg" alt=""></p>
+<h4 id="jar-命令详解"><a href="#jar-命令详解" class="headerlink" title="jar 命令详解"></a>jar 命令详解</h4><p>jar命令是随jdk自动安装的，存放在jdk安装目录下的bin目录中。</p>
+<p>jar命令可以用来对大量的类进行压缩，然后存为jar文件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">Usage: jar &#123;ctxui&#125;[vfmn0PMe] [jar-file] [manifest-file] [entry-point] [-C dir] files ...</div><div class="line">Options:</div><div class="line">    -c  create new archive</div><div class="line">    -t  list table of contents for archive</div><div class="line">    -x  extract named (or all) files from archive</div><div class="line">    -u  update existing archive</div><div class="line">    -v  generate verbose output on standard output</div><div class="line">    -f  specify archive file name</div><div class="line">    -m  include manifest information from specified manifest file</div><div class="line">    -n  perform Pack200 normalization after creating a new archive</div><div class="line">    -e  specify application entry point for stand-alone application</div><div class="line">        bundled into an executable jar file</div><div class="line">    -0  store only; use no ZIP compression</div><div class="line">    -P  preserve leading '/' (absolute path) and ".." (parent directory) components from file names</div><div class="line">    -M  do not create a manifest file for the entries</div><div class="line">    -i  generate index information for the specified jar files</div><div class="line">    -C  change to the specified directory and include the following file</div><div class="line">If any file is a directory then it is processed recursively.</div><div class="line">The manifest file name, the archive file name and the entry point name are</div><div class="line">specified in the same order as the 'm', 'f' and 'e' flags.</div><div class="line"></div><div class="line">Example 1: to archive two class files into an archive called classes.jar:</div><div class="line">       jar cvf classes.jar Foo.class Bar.class</div><div class="line">Example 2: use an existing manifest file 'mymanifest' and archive all the</div><div class="line">           files in the foo/ directory into 'classes.jar':</div><div class="line">       jar cvfm classes.jar mymanifest -C foo/ .</div></pre></td></tr></table></figure>
+<p>注意：使用jar压缩文件夹时，在生成的jar文件中会保留在jar命令中所出现的路径名</p>
+<h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/chapter6.html" target="_blank" rel="external">everyone-can-use-english</a><br>[2]<a href="">Java就业教程张孝祥PDF版.pdf</a><br>[3]<a href="">Think In  Java(中文第四版).pdf</a></p>
 ]]></content>
     
     <summary type="html">
@@ -386,38 +565,6 @@
   </entry>
   
   <entry>
-    <title>Basic Concept of English——Vocabulary</title>
-    <link href="http://ipcreator.me/2017/04/06/English/basic-concept-of-vocabulary/"/>
-    <id>http://ipcreator.me/2017/04/06/English/basic-concept-of-vocabulary/</id>
-    <published>2017-04-05T23:46:06.000Z</published>
-    <updated>2017-04-05T23:51:53.541Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/vocabulary.png" alt=""></p>
-<blockquote>
-<p>Vocabulary is the basis of English pyramid.</p>
-</blockquote>
-<a id="more"></a>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ong8f1obl.bkt.clouddn.com/vocabulary.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Vocabulary is the basis of English pyramid.&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="English" scheme="http://ipcreator.me/categories/English/"/>
-    
-    
-      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
-    
-      <category term="Vocabulary" scheme="http://ipcreator.me/tags/Vocabulary/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Basic Concept of Java——Charset</title>
     <link href="http://ipcreator.me/2017/04/06/Program/Tools/Computer/char-decode/"/>
     <id>http://ipcreator.me/2017/04/06/Program/Tools/Computer/char-decode/</id>
@@ -492,6 +639,38 @@
       <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
     
       <category term="Charset" scheme="http://ipcreator.me/tags/Charset/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Basic Concept of English——Vocabulary</title>
+    <link href="http://ipcreator.me/2017/04/06/English/basic-concept-of-vocabulary/"/>
+    <id>http://ipcreator.me/2017/04/06/English/basic-concept-of-vocabulary/</id>
+    <published>2017-04-05T23:46:06.000Z</published>
+    <updated>2017-04-05T23:51:53.541Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/vocabulary.png" alt=""></p>
+<blockquote>
+<p>Vocabulary is the basis of English pyramid.</p>
+</blockquote>
+<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ong8f1obl.bkt.clouddn.com/vocabulary.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Vocabulary is the basis of English pyramid.&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="English" scheme="http://ipcreator.me/categories/English/"/>
+    
+    
+      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
+    
+      <category term="Vocabulary" scheme="http://ipcreator.me/tags/Vocabulary/"/>
     
   </entry>
   
@@ -629,52 +808,6 @@
   </entry>
   
   <entry>
-    <title>Meta Skill——English</title>
-    <link href="http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-english/"/>
-    <id>http://ipcreator.me/2017/04/05/Meta Skill/meta-skill-english/</id>
-    <published>2017-04-05T12:55:06.000Z</published>
-    <updated>2017-04-05T13:46:42.567Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/english-collocations-2.jpg" alt=""></p>
-<blockquote>
-<p>Using is the correct way of learning English</p>
-</blockquote>
-<ol>
-<li>English skill decides the ability of research.</li>
-<li>The improvement of program depends on English.</li>
-<li>English let you experience more wonderful life.</li>
-</ol>
-<a id="more"></a>
-<h2 id="Research"><a href="#Research" class="headerlink" title="Research"></a>Research</h2><p>Search the Fucking Web<br>Google is beyond  your imagination</p>
-<h2 id="Program"><a href="#Program" class="headerlink" title="Program"></a>Program</h2><h3 id="Manual-Document"><a href="#Manual-Document" class="headerlink" title="Manual Document"></a>Manual Document</h3><p>Read The Fucking Manual<br>Platform API<br>Java API<br>Android API<br>Third Party Library<br>…</p>
-<h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3><p>Read The Fucking Codes<br>Open Source Resources<br>…</p>
-<h3 id="Tool"><a href="#Tool" class="headerlink" title="Tool"></a>Tool</h3><p>Android Studio<br>Git/Github<br>Linux/VIM<br>Atom/Source Insight<br>…</p>
-<h2 id="Life"><a href="#Life" class="headerlink" title="Life"></a>Life</h2><p>Beautiful Word/Sentence<br>Fabulous Music<br>Excellent Movie<br>Wonderful Book<br>…</p>
-<h2 id="Best-Practice"><a href="#Best-Practice" class="headerlink" title="Best Practice"></a>Best Practice</h2><h3 id="Program-1"><a href="#Program-1" class="headerlink" title="Program"></a>Program</h3><p>Ubuntu<br>Vim</p>
-<h3 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h3><h3 id="Writing-Blog"><a href="#Writing-Blog" class="headerlink" title="Writing Blog"></a>Writing Blog</h3><h3 id="Appreciation"><a href="#Appreciation" class="headerlink" title="Appreciation"></a>Appreciation</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/english-collocations-2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Using is the correct way of learning English&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;English skill decides the ability of research.&lt;/li&gt;
-&lt;li&gt;The improvement of program depends on English.&lt;/li&gt;
-&lt;li&gt;English let you experience more wonderful life.&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="English" scheme="http://ipcreator.me/categories/English/"/>
-    
-    
-      <category term="Meta Skill" scheme="http://ipcreator.me/tags/Meta-Skill/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Meta Skill——Innovation</title>
     <link href="http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-innovation/"/>
     <id>http://ipcreator.me/2017/04/05/Meta Skill/meta-skill-innovation/</id>
@@ -756,6 +889,52 @@
       <category term="Google" scheme="http://ipcreator.me/tags/Google/"/>
     
       <category term="English" scheme="http://ipcreator.me/tags/English/"/>
+    
+      <category term="Meta Skill" scheme="http://ipcreator.me/tags/Meta-Skill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Meta Skill——English</title>
+    <link href="http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-english/"/>
+    <id>http://ipcreator.me/2017/04/05/Meta Skill/meta-skill-english/</id>
+    <published>2017-04-05T12:55:06.000Z</published>
+    <updated>2017-04-05T13:46:42.567Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/english-collocations-2.jpg" alt=""></p>
+<blockquote>
+<p>Using is the correct way of learning English</p>
+</blockquote>
+<ol>
+<li>English skill decides the ability of research.</li>
+<li>The improvement of program depends on English.</li>
+<li>English let you experience more wonderful life.</li>
+</ol>
+<a id="more"></a>
+<h2 id="Research"><a href="#Research" class="headerlink" title="Research"></a>Research</h2><p>Search the Fucking Web<br>Google is beyond  your imagination</p>
+<h2 id="Program"><a href="#Program" class="headerlink" title="Program"></a>Program</h2><h3 id="Manual-Document"><a href="#Manual-Document" class="headerlink" title="Manual Document"></a>Manual Document</h3><p>Read The Fucking Manual<br>Platform API<br>Java API<br>Android API<br>Third Party Library<br>…</p>
+<h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3><p>Read The Fucking Codes<br>Open Source Resources<br>…</p>
+<h3 id="Tool"><a href="#Tool" class="headerlink" title="Tool"></a>Tool</h3><p>Android Studio<br>Git/Github<br>Linux/VIM<br>Atom/Source Insight<br>…</p>
+<h2 id="Life"><a href="#Life" class="headerlink" title="Life"></a>Life</h2><p>Beautiful Word/Sentence<br>Fabulous Music<br>Excellent Movie<br>Wonderful Book<br>…</p>
+<h2 id="Best-Practice"><a href="#Best-Practice" class="headerlink" title="Best Practice"></a>Best Practice</h2><h3 id="Program-1"><a href="#Program-1" class="headerlink" title="Program"></a>Program</h3><p>Ubuntu<br>Vim</p>
+<h3 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h3><h3 id="Writing-Blog"><a href="#Writing-Blog" class="headerlink" title="Writing Blog"></a>Writing Blog</h3><h3 id="Appreciation"><a href="#Appreciation" class="headerlink" title="Appreciation"></a>Appreciation</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/english-collocations-2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Using is the correct way of learning English&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;English skill decides the ability of research.&lt;/li&gt;
+&lt;li&gt;The improvement of program depends on English.&lt;/li&gt;
+&lt;li&gt;English let you experience more wonderful life.&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="English" scheme="http://ipcreator.me/categories/English/"/>
+    
     
       <category term="Meta Skill" scheme="http://ipcreator.me/tags/Meta-Skill/"/>
     
@@ -2550,41 +2729,6 @@
   </entry>
   
   <entry>
-    <title>App Architecture of Best Practice</title>
-    <link href="http://ipcreator.me/2017/03/31/Program/Android/Design/ui-app/"/>
-    <id>http://ipcreator.me/2017/03/31/Program/Android/Design/ui-app/</id>
-    <published>2017-03-30T23:35:06.000Z</published>
-    <updated>2017-04-03T16:52:48.870Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/androidstudio.jpg" alt=""><br>More Little, More Fast,<br>More Safe, More Flexible<br>More Smart, More Power,</p>
-<a id="more"></a>
-<h2 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h2><h2 id="Third-Library"><a href="#Third-Library" class="headerlink" title="Third Library"></a>Third Library</h2><h2 id="Static-Code-Inspect-Tool"><a href="#Static-Code-Inspect-Tool" class="headerlink" title="Static Code Inspect Tool"></a>Static Code Inspect Tool</h2><p>###</p>
-<p>###</p>
-<p>###</p>
-<h2 id="Dynamic-Running-Checker"><a href="#Dynamic-Running-Checker" class="headerlink" title="Dynamic Running Checker"></a>Dynamic Running Checker</h2><p>###</p>
-<p>###</p>
-<p>###</p>
-<h2 id="Confige-Tool"><a href="#Confige-Tool" class="headerlink" title="Confige Tool"></a>Confige Tool</h2><h3 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h3><h2 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h2><h3 id="QiNiu"><a href="#QiNiu" class="headerlink" title="QiNiu"></a>QiNiu</h3><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://blog.csdn.net/sbsujjbcy/article/details/50707696" target="_blank" rel="external">MVP模式在Android开发中的最佳实践</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/androidstudio.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;More Little, More Fast,&lt;br&gt;More Safe, More Flexible&lt;br&gt;More Smart, More Power,&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
-    
-    
-      <category term="Best Practice" scheme="http://ipcreator.me/tags/Best-Practice/"/>
-    
-      <category term="UI" scheme="http://ipcreator.me/tags/UI/"/>
-    
-      <category term="Architecture" scheme="http://ipcreator.me/tags/Architecture/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Concept of Reflection in Java</title>
     <link href="http://ipcreator.me/2017/03/31/Program/Java/what-is-reflection-in-java/"/>
     <id>http://ipcreator.me/2017/03/31/Program/Java/what-is-reflection-in-java/</id>
@@ -2675,6 +2819,41 @@
       <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
     
       <category term="Reflection" scheme="http://ipcreator.me/tags/Reflection/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>App Architecture of Best Practice</title>
+    <link href="http://ipcreator.me/2017/03/31/Program/Android/Design/ui-app/"/>
+    <id>http://ipcreator.me/2017/03/31/Program/Android/Design/ui-app/</id>
+    <published>2017-03-30T23:35:06.000Z</published>
+    <updated>2017-04-03T16:52:48.870Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/androidstudio.jpg" alt=""><br>More Little, More Fast,<br>More Safe, More Flexible<br>More Smart, More Power,</p>
+<a id="more"></a>
+<h2 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h2><h2 id="Third-Library"><a href="#Third-Library" class="headerlink" title="Third Library"></a>Third Library</h2><h2 id="Static-Code-Inspect-Tool"><a href="#Static-Code-Inspect-Tool" class="headerlink" title="Static Code Inspect Tool"></a>Static Code Inspect Tool</h2><p>###</p>
+<p>###</p>
+<p>###</p>
+<h2 id="Dynamic-Running-Checker"><a href="#Dynamic-Running-Checker" class="headerlink" title="Dynamic Running Checker"></a>Dynamic Running Checker</h2><p>###</p>
+<p>###</p>
+<p>###</p>
+<h2 id="Confige-Tool"><a href="#Confige-Tool" class="headerlink" title="Confige Tool"></a>Confige Tool</h2><h3 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h3><h2 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h2><h3 id="QiNiu"><a href="#QiNiu" class="headerlink" title="QiNiu"></a>QiNiu</h3><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://blog.csdn.net/sbsujjbcy/article/details/50707696" target="_blank" rel="external">MVP模式在Android开发中的最佳实践</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/androidstudio.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;More Little, More Fast,&lt;br&gt;More Safe, More Flexible&lt;br&gt;More Smart, More Power,&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
+    
+    
+      <category term="Best Practice" scheme="http://ipcreator.me/tags/Best-Practice/"/>
+    
+      <category term="UI" scheme="http://ipcreator.me/tags/UI/"/>
+    
+      <category term="Architecture" scheme="http://ipcreator.me/tags/Architecture/"/>
     
   </entry>
   
@@ -9507,73 +9686,6 @@
   </entry>
   
   <entry>
-    <title>The Legend of 1900</title>
-    <link href="http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/"/>
-    <id>http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/</id>
-    <published>2017-03-28T11:38:18.000Z</published>
-    <updated>2017-03-29T04:18:01.307Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p><strong>Make you cry，laugh  touching and thinking</strong><br>Crying for  his loneliness and ending of  the story.<br>Touching by the wonderful melody.<br>Laughing for those humor lines.<br>Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?</p>
-</blockquote>
-<p><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp" alt=""></p>
-<a id="more"></a>
-<p>导演: 朱塞佩·托纳多雷<br>编剧: 亚利桑德罗·巴里克 / 朱塞佩·托纳多雷<br>主演: 蒂姆·罗斯 / 普路特·泰勒·文斯 / 比尔·努恩 / 梅兰尼·蒂埃里 / 阿尔贝托·巴斯克斯<br>类型: 剧情 / 音乐<br>制片国家/地区: 意大利<br>语言: 英语 / 法语<br>上映日期: 1998-10-28(意大利)<br>片长: 165分钟 / 120分钟(法国版) / 169分钟(加长版)<br>又名: 声光伴我飞(港) / 一九零零的传奇 / 1900海上钢琴师 / 传奇1900 / The Legend of 1900<br>IMDb链接: <a href="http://www.imdb.com/title/tt0120731" target="_blank" rel="external">tt0120731</a></p>
-<p>本片讲述了一个钢琴天才传奇的一生。</p>
-<p>　　1900年，Virginian号豪华邮轮上，一个孤儿被遗弃在头等舱，由船上的水手抚养长大，取名1900（蒂姆•罗斯 饰）。1900慢慢长大，显示出了无师自通的非凡钢琴天赋，在船上的乐队表演钢琴，每个听过他演奏的人，都被深深打动。爵士 乐鼻祖杰尼听说了1900的高超技艺，专门上船和他比赛，最后自叹弗如，黯然离去。<br>　　可惜，这一切的事情都发生在海上，1900从来不愿踏上陆地，直到有一天，他爱上了一个女孩，情愫在琴键上流淌。他会不会为了爱情，踏上陆地开始新的生活，用他的琴声惊艳世界？他将怎样谱写自己非凡的人生。 ©豆瓣</p>
-<h2 id="大人者，不失其赤子之心者也"><a href="#大人者，不失其赤子之心者也" class="headerlink" title="大人者，不失其赤子之心者也"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">大人者，不失其赤子之心者也</a></h2><p>市侩们总是抱着捧杀的态度来看待天才的，这也无足多怪。重要的是，天才如何看待自己的选择。</p>
-<p>许多人把实现自我价值同“功成名就”和“飞黄腾达”联系在一起，其中不乏某些天才。他们为此奋斗一生，也许终能得偿所愿。然而，功成名就之后呢？罗马帝国的战胜者凯旋时，一个奴隶会在他耳边轻轻私语：“一切荣华富贵，都是过眼烟云！”这道出了所有成功者风光无限的背后那不为人知的空虚——曾经追求的，固然已经得到，现在拥有的，也将归于破灭。其中的幸运者，还能像张翰那样“人生贵得适意尔，何能羁宦数千里以要名爵!”全身而退；不幸者，恐怕只能哀叹“吾欲与若复牵黄犬俱出上蔡东门逐狡兔，岂可得乎！”人生的荣辱，不过是一个围城。城里的人想冲出去，城外的人想冲进来。待到一切荣光都已失去，他们还会为当初的选择而感到骄傲，抑或后悔吗？</p>
-<blockquote>
-<p>“你知道琴上88个键一个不多一个也不少，琴键是有限的，但你是无限的，在这些键上所能创造出来的音乐，那才是无限的，这个我喜欢，也是我愿意做的，但是在舷梯上，摆在我面前的琴键有成千上万，永远也数不完的琴键”，“而在这个无限大的键盘上，你根本就无法去演奏”，“天呐，你没有看见那些街道吗？有上千条！你怎么去选择那一个？”。窝囊废似的一番话，彻底关死了1900通往成功与显赫的道路。似乎很难想象这样一个才华横溢的人会选择一条破船作为归宿，甚至宁愿最终被几吨炸药所终结。其实，1900是幸运的，他不入围城，自觉放弃未来的诱惑与烦嚣，换来对已经拥有的执着与坚守。也就无怨无悔，虽死何憾？老子云：知其雄 ，守其雌 ，为天下溪。为天下溪 常德不离 复归於婴儿。想必直到生命终结的那一刻，1900依然可以骄傲地宣称：“大人者，不失其赤子之心者也。”</p>
-</blockquote>
-<h2 id="俗人理解不了的幸福"><a href="#俗人理解不了的幸福" class="headerlink" title="俗人理解不了的幸福"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">俗人理解不了的幸福</a></h2><p>大概只有小号手是愿意聆听1900的内心而非琴声的人，他不理解他，但是他尊重他。他用尊重成全了1900完整的独立。我看到有人说如果他是那胖子他就会把1900敲昏然后拖下船。我想这样的想法也就注定他成不了那个胖子，成不了1900唯一的真正的朋友。</p>
-<p>如果我们较真一点，假设小号手真的把1900弄下船了，故事将怎样延伸？我们都知道，落魄的小号手没有能力去为朋友找一艘新的船，找88个琴键和尽头。1900将无可避免被磨去棱角和平庸，落入红尘变成一个凡人。</p>
-<p>活着，还是活得安心。这也是个问题。凡人的选择是无论如何先活下去再说，”活着”这件事情本身比什么都重要。而天才则把心灵的舒适看得更重，生死则次之。所以凡人可以忍辱，天才却情愿玉碎。每一种人都获得了他最看重的东西，说起来谁也不比谁亏。</p>
-<p>差异导致孤独。葆存了差异性的ET在承受异样目光的同时也承受着巨大的孤独，远超出凡人的孤独。凡人们如我们虽然也还都残留一些差异，但大致面貌八九不离十。我们失恋了后觉得痛苦比谁的都大，我们拥抱心爱的人自认比谁都幸福。但一个残酷的事实是：每个人的痛苦和幸福都没什么区别。我们在不断重复，千篇一律。</p>
-<p>我们丢了个性却换来了共鸣。我们借助艺术寻找通感，在人性中相交叉的部分，抹着眼泪互相慰藉，或者说，互相平衡（原来有人比我还惨啊，这下心里舒坦多了）。而被称为天才的人站在人群之外，忧郁地注视这群有些像他又不是他的物种。用他们ET的本能将那些交叉部分，提炼、放大、直抵内心。那些永远无法交叉的部分，则作为孤独的源头，令他们永远无法融入人群。他们只有躲在自己的轮船里，躲在自己的内心世界里，孤独地活着，然后死去。</p>
-<h2 id="我们无处安放的孤独"><a href="#我们无处安放的孤独" class="headerlink" title="我们无处安放的孤独"></a><a href="https://movie.douban.com/review/1316127/" target="_blank" rel="external">我们无处安放的孤独</a></h2><p>我一直觉得1900的一生是存在主义思想的体现，他藐视规则，藐视这个社会认可的规则，他害怕上岸其实是拒绝上岸，藐视上岸。他重自身的存在大于外界对自身的认可，他可以轻易打败爵士乐的开山祖师并对他表示鄙夷，他可以靠他的才华赚取无数的名利但是他拒绝音乐与自身的分离，他可以用音乐去探究所有人的心灵，可以在音乐里去旅行，可以寻觅到自己的爱情，但是他没有常人那样去要去追，他轻轻地将这些丢进了大海，他将迈向陆地的脚收回。</p>
-<p>在存在主义者看来，人生活在一个与自己对立的、失望的世界之中，人在世界上的地位是不确定的。绝对自由的人也是烦恼和无所依靠的孤独者。人虽然有选择的自由，但他面对的未来的生活却是混沌而没有目标的。他只是盲目地走向未来，他只知道人生的真实的终结就是死亡。死亡作为人生的最后归宿，对于个人的存在具有非常重要的意义。 所以存在主义者都是悲观者，在他们眼里，人生是一场悲剧。</p>
-<blockquote>
-<p>“城市那么大，看不到尽头，我停下来不是因为所见是因为所不见，是因为看不见的东西。连绵不绝的城市什么都有，就是没有尽头，我需要看见世界的尽头。上了岸，何去何从？爱一个女人，住一间屋，买一块地，望一个景，走一条死路，太多的选择我无所适从。漫漫无尽，思前想后你不怕精神崩溃？那样的日子怎样过？我无法遗弃这艘船，宁可遗弃自己的生命。”</p>
-</blockquote>
-<p>后来我才知道生活的大多数时候其实是孤独的，是我们心里无处安放的孤独，不被这个世界所认可的孤独。1900是孤独的，所以他选择一辈子不上岸，和那座海上浮城共生共死，而我们呢？我们没有一座属于自己的城，让我们来安放我们的孤独，让我们来逃避自己不喜欢的一切，所以我们比1900更孤独更可怜。</p>
-<h2 id="微尘世界，我们都已是最好的钢琴手。"><a href="#微尘世界，我们都已是最好的钢琴手。" class="headerlink" title="微尘世界，我们都已是最好的钢琴手。"></a><a href="https://movie.douban.com/review/1971957/" target="_blank" rel="external">微尘世界，我们都已是最好的钢琴手。</a></h2><p>1900代表着一种理想，代表着这个尘世中的多数人，注定不会付诸行动，却会始终心怀向往的理想。矗立在那里，自由，决绝，而悲伤。</p>
-<p>我们是生活在“外面的世界”里的人。这个世界的意义在于“传承”。就像一个游戏，每个人都是其中的玩家，然而获得的任务，却是如何使这个游戏永远存在。赡养父母，繁衍后代，诸多必须背负的责任令前行显得缓慢而艰难。然而我们的人生对于整个游戏而言，存在的时间或许只有一秒，或者更短。也唯有越短暂，这个游戏的运行时间才会越长，才有可能，“永不结束”。<br>这样一想会不会又心有不甘呢？辛苦奋斗的一生，其实不过一粒微尘，轻得仿佛随时都会消失。<br>然而在闭上眼的那一瞬还会不会含笑着想起，自己的孩子在不久前，正带领他们的孩子在绿草地上放起风筝；会不会含笑着想起，自己曾拥有良人在侧，从此不再无枝可依；会不会含笑着想起更久远的从前，父母曾令你无忧无虑，而那些萌生的小情绪，或许唯有感慨地大笑出声，无奈地摇摇头，道一句，那时真小。<br>会不会想起那些温暖的片段，想起自己曾经的付出与所得，带着回望的沧桑，感怀，和崭新的希望。<br>　　　　<br>我们为什么不会像1900一样，选择在漫天火光中永沉海底。这样壮烈，却获得永生的自由？</p>
-<blockquote>
-<p>因为，因为我们一直生活在这个“外面的世界”，清楚地看见它的混乱，却因为某一瞬间体验到的那些温情，那些无以伦比的美好，而心甘情愿地忍受着它所给予的伤害，努力弹奏出最华美的人生乐章。</p>
-</blockquote>
-<p>我们或许从来都不是天才，但是我们至少能做到勤恳、踏实。我们从坚硬和纯白开始，学会圆滑，学会世故，但内心深处，终究会一直记得，这一生所做的种种妥协，不过是为了在这个微尘世界，在这架上帝给予的钢琴上，创作出独属于自己的旋律与琴音。</p>
-<h2 id="我们都是宅男"><a href="#我们都是宅男" class="headerlink" title="我们都是宅男"></a><a href="https://movie.douban.com/review/1238757/" target="_blank" rel="external">我们都是宅男</a></h2><p>我们或许没有《海上钢琴师》中的1900看的更加清楚，他一生生活在邮轮上，他不愿离开一个让他感到安定自由、无忧无虑的空间，他永远没有踏上陆地，开启他的“远大前程”，在我们看来，他是自闭的，但是，他也是最清醒的，在最后无比绚烂的死亡中，他走的孤独而坦然。</p>
-<p>和1900对无限的恐惧相反，现代人正是在追逐着无限，我们贪大，贪全，贪广，房子要住大的，哪怕被每月的房贷压的生活质量下降；交际圈要交广些，哪怕每天疲于奔命于并不让自己愉快的应酬；旅游要走遍世界，哪怕其实只是疲惫的赶着在一个又一个景点的人群中拍照；炒股也有“不涨到翻倍不痛快”，哪怕每天被指数折磨的大喜大悲。还是看看这个“宅男”1900，反观自己，其实我们都是宅男，我们都是在自己营造的世界里生活，我们总有个无形或有形的圈子，但是似乎“开疆扩土”是人的本能，我们总是希望这个世界更大些，更广些。其实，并不是因为你走遍了这个城市的大街小巷，你的世界便扩展到了整个城市，哪怕真的这样，你也只是有了个城市这样一个更大的宅子。所以，1900不贪求太多，他一生都在一艘船上生活，这是有限的；但是他一生都有音乐相伴快乐的生活，这是无限的，快乐而自在的生活才是无限的。正如我们拼命拓展的交际网永远是有限的，但是和其中几个真正的知己在一起的快乐才是无限的。</p>
-<p>1900在邮轮上有自己的快乐，也伴随着一些悲伤，但是，快乐从来不是仅仅以空间的广度来评判的，就如你有一笔钱，可以买大房子简装修，也可以买小房子按照自己的意愿精装修（当然，精装修的意义不是买一堆豪华家俱的堆砌）。1900选择在一个相对狭小的世界里精心构筑他的世界，安逸而愉快。而在我们看来，这样的小小的快乐永远是“有病”的，就如我们如果看到一个人沉溺于数学而废寝忘食，会认为他是一个科学怪人，为他随时可能的英年早逝而悲哀；如果看到一个人长期执着的在农村搞什么社会试验而履受挫折，会认为他是一个理想主义者，为他干些“不实际”的事情而悲哀。诸如此类的事情还有很多，我们总是很自恋，常常看到他人沉浸于一些比较“独特”的事物而不问世事而感到“悲哀”，而对他们表示不解和“同情”，特别当这些人甚至为之折寿或是如1900那样“找死”后，更是如此。其实，生活方式本来没有定义，其实想想，1900在一艘船上就活的那么滋润，一些人一天到晚在屋子里闷头看武侠小说、漫画书就那么快活，我们这些号称精神健康，性格乐观的人却常常无名的不停唠叨“真郁闷”，这时的我们是不是会突然感到一丝沮丧，而对宅男们有些羡慕，同时意识到，其实我们都不过是在自己的世界里有喜有乐的宅男。</p>
-<h2 id="漂流在大海上的音乐浮城"><a href="#漂流在大海上的音乐浮城" class="headerlink" title="漂流在大海上的音乐浮城"></a><a href="https://movie.douban.com/review/1000830/" target="_blank" rel="external">漂流在大海上的音乐浮城</a></h2><p>对于1900而言，音乐，是用来娱乐自己的——他永远为了自己而弹奏着，永远不让自己的音乐和自己分离。</p>
-<p>1900的存在很特别么？未必，他的生命因为没有踏足过真实世界而显得尤为纯净和清澈，甚至纯净和清澈得不能够生活在这个真实的现实世界里。最适宜他生活的地方，是Virginian，一个漂浮在海上的乌托邦，一个能够让1900这样纯粹且单纯的音乐圣徒栖息的地方。他不能，也不应该走进我们的世界，我们的世界对于1900而言，太肮脏，太复杂了。</p>
-<p>究竟是1900把自己禁锢在狭小的空间里了，还是我们让陆地桎梏了我们自身？城市里有着成千的街道，我们迷失于其中，看不到天的尽头，而大海以其广博的胸襟，容忍并珍藏了1900这个特异的存在，也甚至是因为大海的广博，1900看到了世界的尽头。</p>
-<blockquote>
-<p>当影片行进到最后，Max问及1900为何不愿意离开Virginian的那一瞬间，我们就不难理解1900的答案了——琴键太大，音乐无从而生；城市太大，我们无从而生……</p>
-</blockquote>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1]<a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">海上钢琴师 La leggenda del pianista sull’oceano (1998)</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Make you cry，laugh  touching and thinking&lt;/strong&gt;&lt;br&gt;Crying for  his loneliness and ending of  the story.&lt;br&gt;Touching by the wonderful melody.&lt;br&gt;Laughing for those humor lines.&lt;br&gt;Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
-    
-    
-      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
-    
-      <category term="Movie" scheme="http://ipcreator.me/tags/Movie/"/>
-    
-  </entry>
-  
-  <entry>
     <title>The Beauty of Life</title>
     <link href="http://ipcreator.me/2017/03/28/MyView/Original/beauty-of-life/"/>
     <id>http://ipcreator.me/2017/03/28/MyView/Original/beauty-of-life/</id>
@@ -9714,6 +9826,73 @@
     
     
       <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Legend of 1900</title>
+    <link href="http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/"/>
+    <id>http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/</id>
+    <published>2017-03-28T11:38:18.000Z</published>
+    <updated>2017-03-29T04:18:01.307Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p><strong>Make you cry，laugh  touching and thinking</strong><br>Crying for  his loneliness and ending of  the story.<br>Touching by the wonderful melody.<br>Laughing for those humor lines.<br>Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?</p>
+</blockquote>
+<p><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp" alt=""></p>
+<a id="more"></a>
+<p>导演: 朱塞佩·托纳多雷<br>编剧: 亚利桑德罗·巴里克 / 朱塞佩·托纳多雷<br>主演: 蒂姆·罗斯 / 普路特·泰勒·文斯 / 比尔·努恩 / 梅兰尼·蒂埃里 / 阿尔贝托·巴斯克斯<br>类型: 剧情 / 音乐<br>制片国家/地区: 意大利<br>语言: 英语 / 法语<br>上映日期: 1998-10-28(意大利)<br>片长: 165分钟 / 120分钟(法国版) / 169分钟(加长版)<br>又名: 声光伴我飞(港) / 一九零零的传奇 / 1900海上钢琴师 / 传奇1900 / The Legend of 1900<br>IMDb链接: <a href="http://www.imdb.com/title/tt0120731" target="_blank" rel="external">tt0120731</a></p>
+<p>本片讲述了一个钢琴天才传奇的一生。</p>
+<p>　　1900年，Virginian号豪华邮轮上，一个孤儿被遗弃在头等舱，由船上的水手抚养长大，取名1900（蒂姆•罗斯 饰）。1900慢慢长大，显示出了无师自通的非凡钢琴天赋，在船上的乐队表演钢琴，每个听过他演奏的人，都被深深打动。爵士 乐鼻祖杰尼听说了1900的高超技艺，专门上船和他比赛，最后自叹弗如，黯然离去。<br>　　可惜，这一切的事情都发生在海上，1900从来不愿踏上陆地，直到有一天，他爱上了一个女孩，情愫在琴键上流淌。他会不会为了爱情，踏上陆地开始新的生活，用他的琴声惊艳世界？他将怎样谱写自己非凡的人生。 ©豆瓣</p>
+<h2 id="大人者，不失其赤子之心者也"><a href="#大人者，不失其赤子之心者也" class="headerlink" title="大人者，不失其赤子之心者也"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">大人者，不失其赤子之心者也</a></h2><p>市侩们总是抱着捧杀的态度来看待天才的，这也无足多怪。重要的是，天才如何看待自己的选择。</p>
+<p>许多人把实现自我价值同“功成名就”和“飞黄腾达”联系在一起，其中不乏某些天才。他们为此奋斗一生，也许终能得偿所愿。然而，功成名就之后呢？罗马帝国的战胜者凯旋时，一个奴隶会在他耳边轻轻私语：“一切荣华富贵，都是过眼烟云！”这道出了所有成功者风光无限的背后那不为人知的空虚——曾经追求的，固然已经得到，现在拥有的，也将归于破灭。其中的幸运者，还能像张翰那样“人生贵得适意尔，何能羁宦数千里以要名爵!”全身而退；不幸者，恐怕只能哀叹“吾欲与若复牵黄犬俱出上蔡东门逐狡兔，岂可得乎！”人生的荣辱，不过是一个围城。城里的人想冲出去，城外的人想冲进来。待到一切荣光都已失去，他们还会为当初的选择而感到骄傲，抑或后悔吗？</p>
+<blockquote>
+<p>“你知道琴上88个键一个不多一个也不少，琴键是有限的，但你是无限的，在这些键上所能创造出来的音乐，那才是无限的，这个我喜欢，也是我愿意做的，但是在舷梯上，摆在我面前的琴键有成千上万，永远也数不完的琴键”，“而在这个无限大的键盘上，你根本就无法去演奏”，“天呐，你没有看见那些街道吗？有上千条！你怎么去选择那一个？”。窝囊废似的一番话，彻底关死了1900通往成功与显赫的道路。似乎很难想象这样一个才华横溢的人会选择一条破船作为归宿，甚至宁愿最终被几吨炸药所终结。其实，1900是幸运的，他不入围城，自觉放弃未来的诱惑与烦嚣，换来对已经拥有的执着与坚守。也就无怨无悔，虽死何憾？老子云：知其雄 ，守其雌 ，为天下溪。为天下溪 常德不离 复归於婴儿。想必直到生命终结的那一刻，1900依然可以骄傲地宣称：“大人者，不失其赤子之心者也。”</p>
+</blockquote>
+<h2 id="俗人理解不了的幸福"><a href="#俗人理解不了的幸福" class="headerlink" title="俗人理解不了的幸福"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">俗人理解不了的幸福</a></h2><p>大概只有小号手是愿意聆听1900的内心而非琴声的人，他不理解他，但是他尊重他。他用尊重成全了1900完整的独立。我看到有人说如果他是那胖子他就会把1900敲昏然后拖下船。我想这样的想法也就注定他成不了那个胖子，成不了1900唯一的真正的朋友。</p>
+<p>如果我们较真一点，假设小号手真的把1900弄下船了，故事将怎样延伸？我们都知道，落魄的小号手没有能力去为朋友找一艘新的船，找88个琴键和尽头。1900将无可避免被磨去棱角和平庸，落入红尘变成一个凡人。</p>
+<p>活着，还是活得安心。这也是个问题。凡人的选择是无论如何先活下去再说，”活着”这件事情本身比什么都重要。而天才则把心灵的舒适看得更重，生死则次之。所以凡人可以忍辱，天才却情愿玉碎。每一种人都获得了他最看重的东西，说起来谁也不比谁亏。</p>
+<p>差异导致孤独。葆存了差异性的ET在承受异样目光的同时也承受着巨大的孤独，远超出凡人的孤独。凡人们如我们虽然也还都残留一些差异，但大致面貌八九不离十。我们失恋了后觉得痛苦比谁的都大，我们拥抱心爱的人自认比谁都幸福。但一个残酷的事实是：每个人的痛苦和幸福都没什么区别。我们在不断重复，千篇一律。</p>
+<p>我们丢了个性却换来了共鸣。我们借助艺术寻找通感，在人性中相交叉的部分，抹着眼泪互相慰藉，或者说，互相平衡（原来有人比我还惨啊，这下心里舒坦多了）。而被称为天才的人站在人群之外，忧郁地注视这群有些像他又不是他的物种。用他们ET的本能将那些交叉部分，提炼、放大、直抵内心。那些永远无法交叉的部分，则作为孤独的源头，令他们永远无法融入人群。他们只有躲在自己的轮船里，躲在自己的内心世界里，孤独地活着，然后死去。</p>
+<h2 id="我们无处安放的孤独"><a href="#我们无处安放的孤独" class="headerlink" title="我们无处安放的孤独"></a><a href="https://movie.douban.com/review/1316127/" target="_blank" rel="external">我们无处安放的孤独</a></h2><p>我一直觉得1900的一生是存在主义思想的体现，他藐视规则，藐视这个社会认可的规则，他害怕上岸其实是拒绝上岸，藐视上岸。他重自身的存在大于外界对自身的认可，他可以轻易打败爵士乐的开山祖师并对他表示鄙夷，他可以靠他的才华赚取无数的名利但是他拒绝音乐与自身的分离，他可以用音乐去探究所有人的心灵，可以在音乐里去旅行，可以寻觅到自己的爱情，但是他没有常人那样去要去追，他轻轻地将这些丢进了大海，他将迈向陆地的脚收回。</p>
+<p>在存在主义者看来，人生活在一个与自己对立的、失望的世界之中，人在世界上的地位是不确定的。绝对自由的人也是烦恼和无所依靠的孤独者。人虽然有选择的自由，但他面对的未来的生活却是混沌而没有目标的。他只是盲目地走向未来，他只知道人生的真实的终结就是死亡。死亡作为人生的最后归宿，对于个人的存在具有非常重要的意义。 所以存在主义者都是悲观者，在他们眼里，人生是一场悲剧。</p>
+<blockquote>
+<p>“城市那么大，看不到尽头，我停下来不是因为所见是因为所不见，是因为看不见的东西。连绵不绝的城市什么都有，就是没有尽头，我需要看见世界的尽头。上了岸，何去何从？爱一个女人，住一间屋，买一块地，望一个景，走一条死路，太多的选择我无所适从。漫漫无尽，思前想后你不怕精神崩溃？那样的日子怎样过？我无法遗弃这艘船，宁可遗弃自己的生命。”</p>
+</blockquote>
+<p>后来我才知道生活的大多数时候其实是孤独的，是我们心里无处安放的孤独，不被这个世界所认可的孤独。1900是孤独的，所以他选择一辈子不上岸，和那座海上浮城共生共死，而我们呢？我们没有一座属于自己的城，让我们来安放我们的孤独，让我们来逃避自己不喜欢的一切，所以我们比1900更孤独更可怜。</p>
+<h2 id="微尘世界，我们都已是最好的钢琴手。"><a href="#微尘世界，我们都已是最好的钢琴手。" class="headerlink" title="微尘世界，我们都已是最好的钢琴手。"></a><a href="https://movie.douban.com/review/1971957/" target="_blank" rel="external">微尘世界，我们都已是最好的钢琴手。</a></h2><p>1900代表着一种理想，代表着这个尘世中的多数人，注定不会付诸行动，却会始终心怀向往的理想。矗立在那里，自由，决绝，而悲伤。</p>
+<p>我们是生活在“外面的世界”里的人。这个世界的意义在于“传承”。就像一个游戏，每个人都是其中的玩家，然而获得的任务，却是如何使这个游戏永远存在。赡养父母，繁衍后代，诸多必须背负的责任令前行显得缓慢而艰难。然而我们的人生对于整个游戏而言，存在的时间或许只有一秒，或者更短。也唯有越短暂，这个游戏的运行时间才会越长，才有可能，“永不结束”。<br>这样一想会不会又心有不甘呢？辛苦奋斗的一生，其实不过一粒微尘，轻得仿佛随时都会消失。<br>然而在闭上眼的那一瞬还会不会含笑着想起，自己的孩子在不久前，正带领他们的孩子在绿草地上放起风筝；会不会含笑着想起，自己曾拥有良人在侧，从此不再无枝可依；会不会含笑着想起更久远的从前，父母曾令你无忧无虑，而那些萌生的小情绪，或许唯有感慨地大笑出声，无奈地摇摇头，道一句，那时真小。<br>会不会想起那些温暖的片段，想起自己曾经的付出与所得，带着回望的沧桑，感怀，和崭新的希望。<br>　　　　<br>我们为什么不会像1900一样，选择在漫天火光中永沉海底。这样壮烈，却获得永生的自由？</p>
+<blockquote>
+<p>因为，因为我们一直生活在这个“外面的世界”，清楚地看见它的混乱，却因为某一瞬间体验到的那些温情，那些无以伦比的美好，而心甘情愿地忍受着它所给予的伤害，努力弹奏出最华美的人生乐章。</p>
+</blockquote>
+<p>我们或许从来都不是天才，但是我们至少能做到勤恳、踏实。我们从坚硬和纯白开始，学会圆滑，学会世故，但内心深处，终究会一直记得，这一生所做的种种妥协，不过是为了在这个微尘世界，在这架上帝给予的钢琴上，创作出独属于自己的旋律与琴音。</p>
+<h2 id="我们都是宅男"><a href="#我们都是宅男" class="headerlink" title="我们都是宅男"></a><a href="https://movie.douban.com/review/1238757/" target="_blank" rel="external">我们都是宅男</a></h2><p>我们或许没有《海上钢琴师》中的1900看的更加清楚，他一生生活在邮轮上，他不愿离开一个让他感到安定自由、无忧无虑的空间，他永远没有踏上陆地，开启他的“远大前程”，在我们看来，他是自闭的，但是，他也是最清醒的，在最后无比绚烂的死亡中，他走的孤独而坦然。</p>
+<p>和1900对无限的恐惧相反，现代人正是在追逐着无限，我们贪大，贪全，贪广，房子要住大的，哪怕被每月的房贷压的生活质量下降；交际圈要交广些，哪怕每天疲于奔命于并不让自己愉快的应酬；旅游要走遍世界，哪怕其实只是疲惫的赶着在一个又一个景点的人群中拍照；炒股也有“不涨到翻倍不痛快”，哪怕每天被指数折磨的大喜大悲。还是看看这个“宅男”1900，反观自己，其实我们都是宅男，我们都是在自己营造的世界里生活，我们总有个无形或有形的圈子，但是似乎“开疆扩土”是人的本能，我们总是希望这个世界更大些，更广些。其实，并不是因为你走遍了这个城市的大街小巷，你的世界便扩展到了整个城市，哪怕真的这样，你也只是有了个城市这样一个更大的宅子。所以，1900不贪求太多，他一生都在一艘船上生活，这是有限的；但是他一生都有音乐相伴快乐的生活，这是无限的，快乐而自在的生活才是无限的。正如我们拼命拓展的交际网永远是有限的，但是和其中几个真正的知己在一起的快乐才是无限的。</p>
+<p>1900在邮轮上有自己的快乐，也伴随着一些悲伤，但是，快乐从来不是仅仅以空间的广度来评判的，就如你有一笔钱，可以买大房子简装修，也可以买小房子按照自己的意愿精装修（当然，精装修的意义不是买一堆豪华家俱的堆砌）。1900选择在一个相对狭小的世界里精心构筑他的世界，安逸而愉快。而在我们看来，这样的小小的快乐永远是“有病”的，就如我们如果看到一个人沉溺于数学而废寝忘食，会认为他是一个科学怪人，为他随时可能的英年早逝而悲哀；如果看到一个人长期执着的在农村搞什么社会试验而履受挫折，会认为他是一个理想主义者，为他干些“不实际”的事情而悲哀。诸如此类的事情还有很多，我们总是很自恋，常常看到他人沉浸于一些比较“独特”的事物而不问世事而感到“悲哀”，而对他们表示不解和“同情”，特别当这些人甚至为之折寿或是如1900那样“找死”后，更是如此。其实，生活方式本来没有定义，其实想想，1900在一艘船上就活的那么滋润，一些人一天到晚在屋子里闷头看武侠小说、漫画书就那么快活，我们这些号称精神健康，性格乐观的人却常常无名的不停唠叨“真郁闷”，这时的我们是不是会突然感到一丝沮丧，而对宅男们有些羡慕，同时意识到，其实我们都不过是在自己的世界里有喜有乐的宅男。</p>
+<h2 id="漂流在大海上的音乐浮城"><a href="#漂流在大海上的音乐浮城" class="headerlink" title="漂流在大海上的音乐浮城"></a><a href="https://movie.douban.com/review/1000830/" target="_blank" rel="external">漂流在大海上的音乐浮城</a></h2><p>对于1900而言，音乐，是用来娱乐自己的——他永远为了自己而弹奏着，永远不让自己的音乐和自己分离。</p>
+<p>1900的存在很特别么？未必，他的生命因为没有踏足过真实世界而显得尤为纯净和清澈，甚至纯净和清澈得不能够生活在这个真实的现实世界里。最适宜他生活的地方，是Virginian，一个漂浮在海上的乌托邦，一个能够让1900这样纯粹且单纯的音乐圣徒栖息的地方。他不能，也不应该走进我们的世界，我们的世界对于1900而言，太肮脏，太复杂了。</p>
+<p>究竟是1900把自己禁锢在狭小的空间里了，还是我们让陆地桎梏了我们自身？城市里有着成千的街道，我们迷失于其中，看不到天的尽头，而大海以其广博的胸襟，容忍并珍藏了1900这个特异的存在，也甚至是因为大海的广博，1900看到了世界的尽头。</p>
+<blockquote>
+<p>当影片行进到最后，Max问及1900为何不愿意离开Virginian的那一瞬间，我们就不难理解1900的答案了——琴键太大，音乐无从而生；城市太大，我们无从而生……</p>
+</blockquote>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1]<a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">海上钢琴师 La leggenda del pianista sull’oceano (1998)</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Make you cry，laugh  touching and thinking&lt;/strong&gt;&lt;br&gt;Crying for  his loneliness and ending of  the story.&lt;br&gt;Touching by the wonderful melody.&lt;br&gt;Laughing for those humor lines.&lt;br&gt;Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
+    
+    
+      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
+    
+      <category term="Movie" scheme="http://ipcreator.me/tags/Movie/"/>
     
   </entry>
   
@@ -11535,7 +11714,7 @@
     <link href="http://ipcreator.me/2017/03/26/English/computer-english-words/"/>
     <id>http://ipcreator.me/2017/03/26/English/computer-english-words/</id>
     <published>2017-03-25T16:00:00.000Z</published>
-    <updated>2017-04-06T03:35:49.798Z</updated>
+    <updated>2017-04-07T13:09:14.493Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/375px-ForgettingCurve.svg.png" alt=""></p>
 <blockquote>
@@ -11545,7 +11724,10 @@
 <p>考察从记忆开始，1天后大部分内容被遗忘掉，但是一天之后的遗忘率开变得平缓。</p>
 <p>20分后，42%被遗忘掉，58%被记住。<br>1小时后，56%被遗忘掉，44%被记住。<br>1天后，74%被遗忘掉，26%被记住。<br>1周后，77%被遗忘掉，23%被记住。<br>1个月后，79%被遗忘掉，21%被记住。</p>
 <a id="more"></a>
-<h2 id="Mathematics"><a href="#Mathematics" class="headerlink" title="Mathematics"></a>Mathematics</h2><h3 id="formula"><a href="#formula" class="headerlink" title="formula"></a>formula</h3><p>英 [‘fɔːmjʊlə]  美 [‘fɔrmjələ]<br>n. [数] 公式，准则；配方；婴儿食品<br>[ 复数 formulas或formulae ]</p>
+<h2 id="Mathematics"><a href="#Mathematics" class="headerlink" title="Mathematics"></a>Mathematics</h2><h3 id="divisor"><a href="#divisor" class="headerlink" title="divisor"></a>divisor</h3><p>英 [dɪˈvaɪzə(r)]   美 [dɪˈvaɪzɚ]  </p>
+<p>n.  &lt;数&gt;除数; 分水设备; 因子;</p>
+<h3 id="arithmetic"><a href="#arithmetic" class="headerlink" title="arithmetic"></a>arithmetic</h3><p>英 [əˈrɪθmətɪk]   美 [əˈrɪθmɪtɪk]<br>     CET4 | CET6 | 考研 | IELTS | TOEFL<br>n.  算术，计算; 算法;<br>变形 复数: arithmetics</p>
+<h3 id="formula"><a href="#formula" class="headerlink" title="formula"></a>formula</h3><p>英 [‘fɔːmjʊlə]  美 [‘fɔrmjələ]<br>n. [数] 公式，准则；配方；婴儿食品<br>[ 复数 formulas或formulae ]</p>
 <h3 id="curve"><a href="#curve" class="headerlink" title="curve"></a>curve</h3><p>英 [kɜːv]  美 [kɝv]<br>n. 曲线；弯曲；曲线球；曲线图表<br>vt. 弯；使弯曲<br>vi. 成曲形<br>adj. 弯曲的；曲线形的<br>[ 过去式 curved 过去分词 curved 现在分词 curving ]</p>
 <h2 id="Data-Type"><a href="#Data-Type" class="headerlink" title="Data Type"></a>Data Type</h2><h3 id="mantissa"><a href="#mantissa" class="headerlink" title="mantissa"></a>mantissa</h3><p>英 [mæn’tɪsə]  美 [mæn’tɪsə]<br>n. [数] 尾数；假数；定点部分；小数部分<br>n. (Mantissa)人名；(刚(布))曼蒂萨</p>
 <h3 id="exponent"><a href="#exponent" class="headerlink" title="exponent"></a>exponent</h3><p>英 [ɪk’spəʊnənt; ek-]  美 [ɪk’sponənt]<br>n. [数] 指数；典型；说明者，说明物<br>n. 倡导者，鼓吹者，代表者，拥护者<br>adj. 说明的</p>
@@ -11601,6 +11783,9 @@
 <h3 id="purge"><a href="#purge" class="headerlink" title="purge"></a>purge</h3><p>英 [pɜ:dʒ]   美 [pɜrdʒ]<br>     IELTS | GRE<br>vt.  清除，（使）净化; （使）通便; 肃清;<br>n.  净化; &lt;医&gt;泻药; 整肃;<br>变形 过去分词: purged 复数: purges 过去式: purged 现在分词: purging 第三人称单数: purges</p>
 <h3 id="minify-1"><a href="#minify-1" class="headerlink" title="minify"></a>minify</h3><p>英 [‘mɪnɪfaɪ]   美 [‘mɪnɪˌfaɪ]<br>v.  缩小;<br>变形 过去分词: minified 过去式: minified 现在分词: minifying 第三人称单数: minifies</p>
 <h3 id="literal"><a href="#literal" class="headerlink" title="literal"></a>literal</h3><p>英 [ˈlɪtərəl]   美 [ˈlɪtərəl]<br>     CET6 | GRE<br>adj.  照字面的; 原义的; 逐字的; 平实的，避免夸张;<br>n.  [印]错排，文字上的错误;</p>
+<h3 id="implicit"><a href="#implicit" class="headerlink" title="implicit"></a>implicit</h3><p>英 [ɪmˈplɪsɪt]   美 [ɪmˈplɪsɪt]<br>     考研 | IELTS | TOEFL | GRE<br>adj.  不言明[含蓄]的; 无疑问的，绝对的; 成为一部份的; 内含的;</p>
+<h3 id="explicit"><a href="#explicit" class="headerlink" title="explicit"></a>explicit</h3><p>英 [ɪkˈsplɪsɪt]   美 [ɪkˈsplɪsɪt]<br>     CET6 | 考研 | IELTS | TOEFL | GRE<br>adj.  明确的，清楚的; 直言的; 详述的; 不隐瞒的;</p>
+<h3 id="archive"><a href="#archive" class="headerlink" title="archive"></a>archive</h3><p>英 [ˈɑ:kaɪv]   美 [ˈɑrkaɪv]<br>     IELTS | GRE<br>v.  存档;<br>n.  档案文件; 档案室;<br>变形 过去分词: archived 复数: archives 过去式: archived 现在分词: archiving 第三人称单数: archives</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://zh.wikipedia.org/wiki/%E8%B5%AB%E5%B0%94%E6%9B%BC%C2%B7%E8%89%BE%E5%AE%BE%E6%B5%A9%E6%96%AF" target="_blank" rel="external">赫尔曼·艾宾浩斯 Hermann Ebbinghaus </a><br><a href="https://zh.wikipedia.org/wiki/%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF" target="_blank" rel="external">遗忘曲线 Forgetting curve</a></p>
 ]]></content>
     
@@ -11775,6 +11960,61 @@
   </entry>
   
   <entry>
+    <title>Stetho——A Debug Bridge for Android Applications</title>
+    <link href="http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/"/>
+    <id>http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/</id>
+    <published>2017-03-25T13:29:06.000Z</published>
+    <updated>2017-03-27T10:04:47.015Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://facebook.github.io/stetho/static/logo.png" alt=""><br><a href="https://github.com/facebook/stetho" target="_blank" rel="external">Stetho</a></p>
+<p>Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.</p>
+<a id="more"></a>
+<h1 id="Stetho"><a href="#Stetho" class="headerlink" title="Stetho "></a>Stetho <a href="https://travis-ci.org/facebook/stetho" target="_blank" rel="external"><img src="https://travis-ci.org/facebook/stetho.svg?branch=master" alt="Build Status"></a></h1><h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h3 id="Chrome-DevTools"><a href="#Chrome-DevTools" class="headerlink" title="Chrome DevTools"></a>Chrome DevTools</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-discovery.png" alt=""><br>The integration with the Chrome DevTools frontend is implemented using a client/server protocol which the Stetho software provides for your application. Once your application is integrated, simply navigate to chrome://inspect and click “Inspect” to get started!</p>
+<h3 id="Database-Inspection"><a href="#Database-Inspection" class="headerlink" title="Database Inspection"></a>Database Inspection</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-sqlite.png" alt=""><br>SQLite databases can be visualized and interactively explored with full read/write capabilities.</p>
+<h3 id="View-Hierarchy"><a href="#View-Hierarchy" class="headerlink" title="View Hierarchy"></a>View Hierarchy</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-elements.png" alt=""><br>View hierarchy support for ICS (API 15) and up! Lots of goodies such as instances virtually placed in the hierarchy, view highlighting, and the ability to tap on a view to jump to its position in the hierarchy.</p>
+<p><a href="https://facebook.github.io/stetho" target="_blank" rel="external">Stetho</a> is a sophisticated debug bridge for Android applications. When enabled,<br>developers have access to the Chrome Developer Tools feature natively part of<br>the Chrome desktop browser. Developers can also choose to enable the optional<br><code>dumpapp</code> tool which offers a powerful command-line interface to application<br>internals.</p>
+<p>Once you complete the set-up instructions below, just start your app and point<br>your laptop browser to <code>chrome://inspect</code>.  Click the “Inspect” button to<br>begin.</p>
+<h2 id="Set-up"><a href="#Set-up" class="headerlink" title="Set-up"></a>Set-up</h2><h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><p>Download <a href="https://github.com/facebook/stetho/releases/latest" target="_blank" rel="external">the latest JARs</a> or grab via Gradle:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho:1.4.2'</span></div></pre></td></tr></table></figure></p>
+<p>or Maven:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.facebook.stetho<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>stetho<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Only the main <code>stetho</code> dependency is strictly required; however, you may also wish to use one of the network helpers:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-okhttp3:1.4.2'</span></div></pre></td></tr></table></figure>
+<p>or:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-urlconnection:1.4.2'</span></div></pre></td></tr></table></figure></p>
+<p>You can also enable a JavaScript console with:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-js-rhino:1.4.2'</span></div></pre></td></tr></table></figure>
+<p>For more details on how to customize the JavaScript runtime see <a href="stetho-js-rhino/">stetho-js-rhino</a>.</p>
+<h3 id="Putting-it-together"><a href="#Putting-it-together" class="headerlink" title="Putting it together"></a>Putting it together</h3><p>Integrating with Stetho is intended to be seamless and straightforward for<br>most existing Android applications.  There is a simple initialization step<br>which occurs in your <code>Application</code> class:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApplication</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate();</div><div class="line">    Stetho.initializeWithDefaults(<span class="keyword">this</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This brings up most of the default configuration but does not enable some<br>additional hooks (most notably, network inspection).  See below for specific<br>details on individual subsystems.</p>
+<h3 id="Enable-network-inspection"><a href="#Enable-network-inspection" class="headerlink" title="Enable network inspection"></a>Enable network inspection</h3><p>If you are using the popular <a href="https://github.com/square/okhttp" target="_blank" rel="external">OkHttp</a><br>library at the 3.x release, you can use the<br><a href="https://github.com/square/okhttp/wiki/Interceptors" target="_blank" rel="external">Interceptors</a> system to<br>automatically hook into your existing stack.  This is currently the simplest<br>and most straightforward way to enable network inspection:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> OkHttpClient.Builder()</div><div class="line">    .addNetworkInterceptor(<span class="keyword">new</span> StethoInterceptor())</div><div class="line">    .build()</div></pre></td></tr></table></figure>
+<p>Note that okhttp 2.x will work as well, but with slightly different syntax and you must use the <code>stetho-okhttp</code> artifact (not <code>stetho-okhttp3</code>).</p>
+<p>As interceptors can modify the request and response, add the Stetho interceptor after all others to get an accurate view of the network traffic.</p>
+<p>If you are using <code>HttpURLConnection</code>, you can use <code>StethoURLConnectionManager</code><br>to assist with integration though you should be aware that there are some<br>caveats with this approach.  In particular, you must explicitly add<br><code>Accept-Encoding: gzip</code> to the request headers and manually handle compressed<br>responses in order for Stetho to report compressed payload sizes.</p>
+<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
+<h2 id="Going-further"><a href="#Going-further" class="headerlink" title="Going further"></a>Going further</h2><h3 id="Custom-dumpapp-plugins"><a href="#Custom-dumpapp-plugins" class="headerlink" title="Custom dumpapp plugins"></a>Custom dumpapp plugins</h3><p>Custom plugins are the preferred means of extending the <code>dumpapp</code> system and<br>can be added easily during configuration.  Simply replace your configuration<br>step as such:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Stetho.initialize(Stetho.newInitializerBuilder(context)</div><div class="line">    .enableDumpapp(<span class="keyword">new</span> DumperPluginsProvider() &#123;</div><div class="line">      <span class="meta">@Override</span></div><div class="line">      <span class="function"><span class="keyword">public</span> Iterable&lt;DumperPlugin&gt; <span class="title">get</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Stetho.DefaultDumperPluginsBuilder(context)</div><div class="line">            .provide(<span class="keyword">new</span> MyDumperPlugin())</div><div class="line">            .finish();</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">    .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(context))</div><div class="line">    .build())</div></pre></td></tr></table></figure>
+<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
+<h2 id="Improve-Stetho"><a href="#Improve-Stetho" class="headerlink" title="Improve Stetho!"></a>Improve Stetho!</h2><p>See the <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> file for how to help out.</p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Stetho is BSD-licensed. We also provide an additional patent grant.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://facebook.github.io/stetho/static/logo.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/facebook/stetho&quot;&gt;Stetho&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
+    
+    
+      <category term="Debug" scheme="http://ipcreator.me/tags/Debug/"/>
+    
+      <category term="Stetho" scheme="http://ipcreator.me/tags/Stetho/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Fast Android Networking</title>
     <link href="http://ipcreator.me/2017/03/25/Program/Android/fast-android-networking/"/>
     <id>http://ipcreator.me/2017/03/25/Program/Android/fast-android-networking/</id>
@@ -11945,61 +12185,6 @@
       <category term="OkHttp" scheme="http://ipcreator.me/tags/OkHttp/"/>
     
       <category term="Okio" scheme="http://ipcreator.me/tags/Okio/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Stetho——A Debug Bridge for Android Applications</title>
-    <link href="http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/"/>
-    <id>http://ipcreator.me/2017/03/25/Program/Android/stetho-chrome/</id>
-    <published>2017-03-25T13:29:06.000Z</published>
-    <updated>2017-03-27T10:04:47.015Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://facebook.github.io/stetho/static/logo.png" alt=""><br><a href="https://github.com/facebook/stetho" target="_blank" rel="external">Stetho</a></p>
-<p>Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.</p>
-<a id="more"></a>
-<h1 id="Stetho"><a href="#Stetho" class="headerlink" title="Stetho "></a>Stetho <a href="https://travis-ci.org/facebook/stetho" target="_blank" rel="external"><img src="https://travis-ci.org/facebook/stetho.svg?branch=master" alt="Build Status"></a></h1><h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h3 id="Chrome-DevTools"><a href="#Chrome-DevTools" class="headerlink" title="Chrome DevTools"></a>Chrome DevTools</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-discovery.png" alt=""><br>The integration with the Chrome DevTools frontend is implemented using a client/server protocol which the Stetho software provides for your application. Once your application is integrated, simply navigate to chrome://inspect and click “Inspect” to get started!</p>
-<h3 id="Database-Inspection"><a href="#Database-Inspection" class="headerlink" title="Database Inspection"></a>Database Inspection</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-sqlite.png" alt=""><br>SQLite databases can be visualized and interactively explored with full read/write capabilities.</p>
-<h3 id="View-Hierarchy"><a href="#View-Hierarchy" class="headerlink" title="View Hierarchy"></a>View Hierarchy</h3><p><img src="http://facebook.github.io/stetho/static/images/inspector-elements.png" alt=""><br>View hierarchy support for ICS (API 15) and up! Lots of goodies such as instances virtually placed in the hierarchy, view highlighting, and the ability to tap on a view to jump to its position in the hierarchy.</p>
-<p><a href="https://facebook.github.io/stetho" target="_blank" rel="external">Stetho</a> is a sophisticated debug bridge for Android applications. When enabled,<br>developers have access to the Chrome Developer Tools feature natively part of<br>the Chrome desktop browser. Developers can also choose to enable the optional<br><code>dumpapp</code> tool which offers a powerful command-line interface to application<br>internals.</p>
-<p>Once you complete the set-up instructions below, just start your app and point<br>your laptop browser to <code>chrome://inspect</code>.  Click the “Inspect” button to<br>begin.</p>
-<h2 id="Set-up"><a href="#Set-up" class="headerlink" title="Set-up"></a>Set-up</h2><h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><p>Download <a href="https://github.com/facebook/stetho/releases/latest" target="_blank" rel="external">the latest JARs</a> or grab via Gradle:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho:1.4.2'</span></div></pre></td></tr></table></figure></p>
-<p>or Maven:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.facebook.stetho<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>stetho<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>Only the main <code>stetho</code> dependency is strictly required; however, you may also wish to use one of the network helpers:</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-okhttp3:1.4.2'</span></div></pre></td></tr></table></figure>
-<p>or:<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-urlconnection:1.4.2'</span></div></pre></td></tr></table></figure></p>
-<p>You can also enable a JavaScript console with:</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.facebook.stetho:stetho-js-rhino:1.4.2'</span></div></pre></td></tr></table></figure>
-<p>For more details on how to customize the JavaScript runtime see <a href="stetho-js-rhino/">stetho-js-rhino</a>.</p>
-<h3 id="Putting-it-together"><a href="#Putting-it-together" class="headerlink" title="Putting it together"></a>Putting it together</h3><p>Integrating with Stetho is intended to be seamless and straightforward for<br>most existing Android applications.  There is a simple initialization step<br>which occurs in your <code>Application</code> class:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApplication</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate();</div><div class="line">    Stetho.initializeWithDefaults(<span class="keyword">this</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>This brings up most of the default configuration but does not enable some<br>additional hooks (most notably, network inspection).  See below for specific<br>details on individual subsystems.</p>
-<h3 id="Enable-network-inspection"><a href="#Enable-network-inspection" class="headerlink" title="Enable network inspection"></a>Enable network inspection</h3><p>If you are using the popular <a href="https://github.com/square/okhttp" target="_blank" rel="external">OkHttp</a><br>library at the 3.x release, you can use the<br><a href="https://github.com/square/okhttp/wiki/Interceptors" target="_blank" rel="external">Interceptors</a> system to<br>automatically hook into your existing stack.  This is currently the simplest<br>and most straightforward way to enable network inspection:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> OkHttpClient.Builder()</div><div class="line">    .addNetworkInterceptor(<span class="keyword">new</span> StethoInterceptor())</div><div class="line">    .build()</div></pre></td></tr></table></figure>
-<p>Note that okhttp 2.x will work as well, but with slightly different syntax and you must use the <code>stetho-okhttp</code> artifact (not <code>stetho-okhttp3</code>).</p>
-<p>As interceptors can modify the request and response, add the Stetho interceptor after all others to get an accurate view of the network traffic.</p>
-<p>If you are using <code>HttpURLConnection</code>, you can use <code>StethoURLConnectionManager</code><br>to assist with integration though you should be aware that there are some<br>caveats with this approach.  In particular, you must explicitly add<br><code>Accept-Encoding: gzip</code> to the request headers and manually handle compressed<br>responses in order for Stetho to report compressed payload sizes.</p>
-<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
-<h2 id="Going-further"><a href="#Going-further" class="headerlink" title="Going further"></a>Going further</h2><h3 id="Custom-dumpapp-plugins"><a href="#Custom-dumpapp-plugins" class="headerlink" title="Custom dumpapp plugins"></a>Custom dumpapp plugins</h3><p>Custom plugins are the preferred means of extending the <code>dumpapp</code> system and<br>can be added easily during configuration.  Simply replace your configuration<br>step as such:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Stetho.initialize(Stetho.newInitializerBuilder(context)</div><div class="line">    .enableDumpapp(<span class="keyword">new</span> DumperPluginsProvider() &#123;</div><div class="line">      <span class="meta">@Override</span></div><div class="line">      <span class="function"><span class="keyword">public</span> Iterable&lt;DumperPlugin&gt; <span class="title">get</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Stetho.DefaultDumperPluginsBuilder(context)</div><div class="line">            .provide(<span class="keyword">new</span> MyDumperPlugin())</div><div class="line">            .finish();</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">    .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(context))</div><div class="line">    .build())</div></pre></td></tr></table></figure>
-<p>See the <a href="stetho-sample"><code>stetho-sample</code> project</a> for more details.</p>
-<h2 id="Improve-Stetho"><a href="#Improve-Stetho" class="headerlink" title="Improve Stetho!"></a>Improve Stetho!</h2><p>See the <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> file for how to help out.</p>
-<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Stetho is BSD-licensed. We also provide an additional patent grant.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://facebook.github.io/stetho/static/logo.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/facebook/stetho&quot;&gt;Stetho&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
-    
-    
-      <category term="Debug" scheme="http://ipcreator.me/tags/Debug/"/>
-    
-      <category term="Stetho" scheme="http://ipcreator.me/tags/Stetho/"/>
     
   </entry>
   
@@ -13900,51 +14085,6 @@
     
     
       <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hacksaw Ridge</title>
-    <link href="http://ipcreator.me/2017/03/19/MyView/Movie/hacksaw-ridge/"/>
-    <id>http://ipcreator.me/2017/03/19/MyView/Movie/hacksaw-ridge/</id>
-    <published>2017-03-19T10:30:18.000Z</published>
-    <updated>2017-03-29T04:18:01.297Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p><strong>Belief、Courage、One More</strong></p>
-</blockquote>
-<p><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2397337958.webp" alt=""></p>
-<a id="more"></a>
-<p>导演: 梅尔·吉布森<br>编剧: 安德鲁·奈特 / 罗伯特·申坎<br>主演: 安德鲁·加菲尔德 / 萨姆·沃辛顿 / 文斯·沃恩 / 雨果·维文 / 卢克·布雷西 / 更多…<br>类型: 剧情 / 动作 / 传记 / 历史 / 战争<br>官方网站: www.hacksawridge.movie/<br>制片国家/地区: 美国 / 澳大利亚<br>语言: 英语<br>上映日期: 2016-12-08(中国大陆) / 2016-11-04(美国)<br>片长: 139分钟(中国大陆) / 140分钟(美国)<br>又名: 钢锯岭 / 钢铁英雄(台) / The Conscientious Objector<br>IMDb链接: <a href="http://www.imdb.com/title/tt2119532" target="_blank" rel="external">tt2119532</a></p>
-<p>1945年，第二次世界大战接近尾声，作为邪恶轴心重要成员的日本，其嚣张态势已成强弩之末。是年，决定战局走向的冲绳岛战役拉开序幕，成千上万斗志昂扬的美国大兵被派往冲绳，等待他们的则是敌军重兵防守、凶险异常的钢锯岭。在这群人中间，却有一个不愿拿起武器的军医。他名叫戴斯蒙德·道斯（安德鲁·加菲尔德 Andrew Garfield 饰），来自美国的弗吉尼亚。太平洋爆发之际，瘦弱的戴斯蒙德志愿成为救死扶伤的军医而应征入伍。可因童年和家庭的原因，他始终不愿拿起枪支操练，为此宁愿背上拒服兵役的罪名被送上军事法庭。几经周折，戴斯蒙德最终和战友来到了钢锯岭。枪林弹雨，转瞬之间无数人应声倒地。在信仰和信念的支持下，戴斯蒙德仅凭一己之力拯救了数十条濒死的生命……<br>　　本片根据真人真事改编。</p>
-<p><a href="https://movie.douban.com/review/8276029/" target="_blank" rel="external">为人帅表</a></p>
-<p>信仰的力量竟会强大到如此地步，能让一个人舍生忘死。影片的最后，道斯被担架吊下钢锯岭，云层中一道阳光射下来，他就像是上帝派来拯救世人的天使。</p>
-<p><a href="https://movie.douban.com/review/8202847/" target="_blank" rel="external">方聿南</a></p>
-<p>战场上，每个人都在拼命抓住一把枪，就像溺水的人的把手伸向一把稻草一样急迫。而这个手无寸铁的年轻人，却坚定无畏地穿梭在枪林弹雨中，奔向每一个“医疗兵救救我”的发声之地。</p>
-<p>信仰不是一桩可以功利计算的生意，它是文明世界的人们赖以自我支撑的基石。就像道斯对未婚妻说的，如果我连信仰都没有了，无法想象还能怎么活着。<br><img src="https://img1.doubanio.com/view/thing_review/large/public/p384097.jpg" alt=""></p>
-<p><a href="https://movie.douban.com/review/8218469/" target="_blank" rel="external">zts</a></p>
-<p>我们总是把奖章送给死者和先烈，歌颂他们为国家和后人做出的牺牲。但我们是否曾想过，战士们其实最想要的嘉奖，是活着看到和平与胜利到来的那一天，而不是成为一具被缅怀的冰冷尸体。为国家而战和为自己而战并不矛盾，死亡在大多数情况下都是一件轻而易举的事情，相反，活着却难得多，而救活一个人，则难上加难。这也是为何一个战地医生如此打动人们的原因。他不仅减轻了士兵对死亡的恐惧，更重新定义了什么是勇敢和忠诚。</p>
-<p><img src="https://img3.doubanio.com/view/thing_review/large/public/p394215.jpg" alt=""></p>
-<p><img src="https://img5.doubanio.com/view/thing_review/large/public/p354266.jpg" alt=""></p>
-<p><img src="https://img3.doubanio.com/view/thing_review/large/public/p394221.jpg" alt=""></p>
-<p><img src="https://img3.doubanio.com/view/thing_review/large/public/p394234.jpg" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Belief、Courage、One More&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2397337958.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
-    
-    
-      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
-    
-      <category term="Movie" scheme="http://ipcreator.me/tags/Movie/"/>
     
   </entry>
   
