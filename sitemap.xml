@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/04/07/AI/Business/views-of-zhouhongyi-on-ai/</loc>
+    
+    <lastmod>2017-04-07T14:47:58.536Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/31/MyView/Original/investment/</loc>
+    
+    <lastmod>2017-04-07T14:42:42.211Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/</loc>
     
     <lastmod>2017-04-07T13:41:23.243Z</lastmod>
@@ -355,13 +369,6 @@
     <loc>http://ipcreator.me/2017/03/31/English/english-is-a-friend-for-everybody/</loc>
     
     <lastmod>2017-03-31T08:46:49.048Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/31/MyView/Original/investment/</loc>
-    
-    <lastmod>2017-03-31T08:27:00.154Z</lastmod>
     
   </url>
   
@@ -1388,13 +1395,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-GPU/</loc>
-    
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-picture/</loc>
     
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
@@ -1402,16 +1402,9 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-GPU/</loc>
     
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/15/AI/TensorFlow/ai-vs-machine-learning/</loc>
-    
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     
   </url>
   
@@ -1423,7 +1416,21 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
+    
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
+    
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/15/AI/TensorFlow/ai-vs-machine-learning/</loc>
     
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     

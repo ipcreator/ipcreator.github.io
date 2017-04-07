@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/04/07/AI/Business/views-of-zhouhongyi-on-ai/</loc>
+    <lastmod>2017-04-07T14:47:58.536Z</lastmod>
+    <data>
+        <display>
+        <title>周鸿袆:通用型的人工智能都是骗子,必须结合垂直领域</title>
+        <pubTime>2017-04-07T14:44:06.000Z</pubTime>
+        
+        <tag>Zhou Hongyi</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/31/MyView/Original/investment/</loc>
+    <lastmod>2017-04-07T14:42:42.211Z</lastmod>
+    <data>
+        <display>
+        <title>Famous Financial Experts'  Views of Investment</title>
+        <pubTime>2017-03-31T06:56:06.000Z</pubTime>
+        
+        <tag>Investment</tag>
+         
+        <tag>House</tag>
+         
+        <tag>Stock</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/</loc>
     <lastmod>2017-04-07T13:41:23.243Z</lastmod>
     <data>
@@ -1082,30 +1126,6 @@
            
              
               <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/03/31/MyView/Original/investment/</loc>
-    <lastmod>2017-03-31T08:27:00.154Z</lastmod>
-    <data>
-        <display>
-        <title>Famous Financial Experts'  Views of Investment</title>
-        <pubTime>2017-03-31T06:56:06.000Z</pubTime>
-        
-        <tag>Investment</tag>
-         
-        <tag>House</tag>
-         
-        <tag>Stock</tag>
-         
-         
-           
-             
-              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
           
         </display>
     </data>
@@ -4365,6 +4385,30 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-picture/</loc>
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
+    <data>
+        <display>
+        <title>Base of Multimedia——Picture</title>
+        <pubTime>2017-02-27T03:04:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Picture</tag>
+         
+        <tag>Multimedia</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-GPU/</loc>
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
@@ -4387,18 +4431,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-picture/</loc>
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-color/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>Base of Multimedia——Picture</title>
-        <pubTime>2017-02-27T03:04:06.000Z</pubTime>
+        <title>Base of Multimedia——Color</title>
+        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Picture</tag>
-         
         <tag>Multimedia</tag>
+         
+        <tag>Color</tag>
          
          
            
@@ -4435,52 +4479,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/15/AI/TensorFlow/ai-vs-machine-learning/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>AI vs Machine Learning</title>
-        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Machine Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-color/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>Base of Multimedia——Color</title>
-        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Multimedia</tag>
-         
-        <tag>Color</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
@@ -4498,6 +4496,28 @@
            
              
               <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/15/AI/TensorFlow/ai-vs-machine-learning/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>AI vs Machine Learning</title>
+        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
           
         </display>
     </data>
