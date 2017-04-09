@@ -2,23 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ipcreator.me/2017/04/08/MyView/Movie/life-of-pi/</loc>
-    
-    <lastmod>2017-04-08T14:36:48.508Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/</loc>
     
-    <lastmod>2017-04-08T14:02:17.736Z</lastmod>
+    <lastmod>2017-04-09T02:20:17.640Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ipcreator.me/2017/03/26/English/computer-english-words/</loc>
     
-    <lastmod>2017-04-08T12:28:55.208Z</lastmod>
+    <lastmod>2017-04-09T02:09:18.725Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/09/Program/Tools/Computer/the-basic-concepts-of-memory/</loc>
+    
+    <lastmod>2017-04-09T01:24:45.784Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/09/Program/Tools/C&C++/the-basic-concepts-of-c-compiler/</loc>
+    
+    <lastmod>2017-04-09T01:24:43.600Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/27/Program/Tools/Computer/float/</loc>
+    
+    <lastmod>2017-04-09T00:52:49.466Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/06/Program/Tools/Computer/char-decode/</loc>
+    
+    <lastmod>2017-04-09T00:46:21.431Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/09/Program/Tools/Python/the-basic-concepts-of-python/</loc>
+    
+    <lastmod>2017-04-08T23:17:53.192Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/09/Program/Tools/Linux/the-basic-concepts-of-linux-server/</loc>
+    
+    <lastmod>2017-04-08T23:16:22.651Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/09/Program/Tools/Linux/the-basic-concepts-of-linux/</loc>
+    
+    <lastmod>2017-04-08T23:06:41.252Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/08/MyView/Movie/life-of-pi/</loc>
+    
+    <lastmod>2017-04-08T14:36:48.508Z</lastmod>
     
   </url>
   
@@ -54,13 +103,6 @@
     <loc>http://ipcreator.me/2017/04/06/English/basic-concept-of-grammar/</loc>
     
     <lastmod>2017-04-06T09:28:58.139Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/04/06/Program/Tools/Computer/char-decode/</loc>
-    
-    <lastmod>2017-04-06T05:52:28.322Z</lastmod>
     
   </url>
   
@@ -814,13 +856,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/03/27/Program/Tools/Computer/float/</loc>
-    
-    <lastmod>2017-03-27T10:02:18.866Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/03/27/AI/Basic%20Concept/history-of-ai-in-china/</loc>
     
     <lastmod>2017-03-27T10:02:18.861Z</lastmod>
@@ -1402,13 +1437,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-GPU/</loc>
-    
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-picture/</loc>
     
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
@@ -1416,7 +1444,14 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-GPU/</loc>
+    
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/15/AI/TensorFlow/ai-vs-machine-learning/</loc>
     
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     
@@ -1430,7 +1465,7 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/15/AI/TensorFlow/ai-vs-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
     
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     

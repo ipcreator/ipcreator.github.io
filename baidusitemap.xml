@@ -4,31 +4,11 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/04/08/MyView/Movie/life-of-pi/</loc>
-    <lastmod>2017-04-08T14:36:48.508Z</lastmod>
-    <data>
-        <display>
-        <title>Life of Pi</title>
-        <pubTime>2017-04-07T23:03:18.000Z</pubTime>
-        
-        <tag>Movie</tag>
-         
-         
-           
-             
-              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/</loc>
-    <lastmod>2017-04-08T14:02:17.736Z</lastmod>
+    <lastmod>2017-04-09T02:20:17.640Z</lastmod>
     <data>
         <display>
-        <title>Basic Concept of Java</title>
+        <title>The Basic Concepts of Java</title>
         <pubTime>2017-04-06T13:18:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
@@ -45,7 +25,7 @@
     
   <url>
     <loc>http://ipcreator.me/2017/03/26/English/computer-english-words/</loc>
-    <lastmod>2017-04-08T12:28:55.208Z</lastmod>
+    <lastmod>2017-04-09T02:09:18.725Z</lastmod>
     <data>
         <display>
         <title>Professional Words of Computer</title>
@@ -59,6 +39,184 @@
            
              
               <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/09/Program/Tools/Computer/the-basic-concepts-of-memory/</loc>
+    <lastmod>2017-04-09T01:24:45.784Z</lastmod>
+    <data>
+        <display>
+        <title>The Basic Concepts of Memory</title>
+        <pubTime>2017-04-08T23:52:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Memory</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="http://ipcreator.me/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/09/Program/Tools/C&C++/the-basic-concepts-of-c-compiler/</loc>
+    <lastmod>2017-04-09T01:24:43.600Z</lastmod>
+    <data>
+        <display>
+        <title>The Basic Concepts of C Compiler</title>
+        <pubTime>2017-04-09T00:48:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>C</tag>
+         
+        <tag>Compiler</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="http://ipcreator.me/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/27/Program/Tools/Computer/float/</loc>
+    <lastmod>2017-04-09T00:52:49.466Z</lastmod>
+    <data>
+        <display>
+        <title>Floating Point</title>
+        <pubTime>2017-03-27T01:58:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Floating point</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/06/Program/Tools/Computer/char-decode/</loc>
+    <lastmod>2017-04-09T00:46:21.431Z</lastmod>
+    <data>
+        <display>
+        <title>Basic Concept of Java——Charset</title>
+        <pubTime>2017-04-05T23:46:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Charset</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://ipcreator.me/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/09/Program/Tools/Python/the-basic-concepts-of-python/</loc>
+    <lastmod>2017-04-08T23:17:53.192Z</lastmod>
+    <data>
+        <display>
+        <title>The Basic Concepts of Python</title>
+        <pubTime>2017-04-08T23:15:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="http://ipcreator.me/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/09/Program/Tools/Linux/the-basic-concepts-of-linux-server/</loc>
+    <lastmod>2017-04-08T23:16:22.651Z</lastmod>
+    <data>
+        <display>
+        <title>The Basic Concepts of Linux Server</title>
+        <pubTime>2017-04-08T22:43:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Server</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="http://ipcreator.me/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/09/Program/Tools/Linux/the-basic-concepts-of-linux/</loc>
+    <lastmod>2017-04-08T23:06:41.252Z</lastmod>
+    <data>
+        <display>
+        <title>The Basic Concepts of Linux</title>
+        <pubTime>2017-04-08T22:43:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="http://ipcreator.me/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/08/MyView/Movie/life-of-pi/</loc>
+    <lastmod>2017-04-08T14:36:48.508Z</lastmod>
+    <data>
+        <display>
+        <title>Life of Pi</title>
+        <pubTime>2017-04-07T23:03:18.000Z</pubTime>
+        
+        <tag>Movie</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
           
         </display>
     </data>
@@ -165,28 +323,6 @@
            
              
               <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/04/06/Program/Tools/Computer/char-decode/</loc>
-    <lastmod>2017-04-06T05:52:28.322Z</lastmod>
-    <data>
-        <display>
-        <title>Basic Concept of Java——Charset</title>
-        <pubTime>2017-04-05T23:46:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Charset</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://ipcreator.me/categories/Java/"/>
           
         </display>
     </data>
@@ -2543,28 +2679,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/27/Program/Tools/Computer/float/</loc>
-    <lastmod>2017-03-27T10:02:18.866Z</lastmod>
-    <data>
-        <display>
-        <title>Floating Point</title>
-        <pubTime>2017-03-27T01:58:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Floating point</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/03/27/AI/Basic%20Concept/history-of-ai-in-china/</loc>
     <lastmod>2017-03-27T10:02:18.861Z</lastmod>
     <data>
@@ -4405,28 +4519,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-GPU/</loc>
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    <data>
-        <display>
-        <title>Anatomy of GPU</title>
-        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>GPU</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-picture/</loc>
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
@@ -4451,23 +4543,43 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-GPU/</loc>
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     <data>
         <display>
-        <title>File System of Linux</title>
-        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
+        <title>Anatomy of GPU</title>
+        <pubTime>2017-02-27T00:58:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Linux</tag>
-         
-        <tag>File System</tag>
+        <tag>GPU</tag>
          
          
            
              
               <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/15/AI/TensorFlow/ai-vs-machine-learning/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>AI vs Machine Learning</title>
+        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
           
         </display>
     </data>
@@ -4499,21 +4611,23 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/15/AI/TensorFlow/ai-vs-machine-learning/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>AI vs Machine Learning</title>
-        <pubTime>2017-02-15T14:49:06.000Z</pubTime>
+        <title>File System of Linux</title>
+        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Machine Learning</tag>
+        <tag>Linux</tag>
+         
+        <tag>File System</tag>
          
          
            
              
-              <breadCrumb title="AI" url="http://ipcreator.me/categories/AI/"/>
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
           
         </display>
     </data>
