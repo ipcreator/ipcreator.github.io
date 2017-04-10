@@ -114,9 +114,9 @@
       author: 'Author'
     },
     algolia: {
-      applicationID: 'L2TAEB8639',
-      apiKey: '86bd00c4f7ef2396081856beb1cf9a7d',
-      indexName: 'blog',
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
@@ -442,180 +442,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/01/20/Program/Tools/Linux/the-art-of-unix-programming/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/01/20/Program/Advice/things-every-hacker-once-knew/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IPCreator">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/img/ipheader.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/20/Program/Advice/things-every-hacker-once-knew/" itemprop="url">
-                  Things Every Hacker Once Knew
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-20T19:16:06+08:00">
-                2017-01-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Program/" itemprop="url" rel="index">
-                    <span itemprop="name">Program</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/20/Program/Advice/things-every-hacker-once-knew/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/20/Program/Advice/things-every-hacker-once-knew/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/01/20/Program/Advice/things-every-hacker-once-knew/" class="leancloud_visitors" data-flag-title="Things Every Hacker Once Knew">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="http://www.catb.org/~esr/faqs/things-every-hacker-once-knew/">Things Every Hacker Once Knew</a></p>
-<p>by Eric S. Raymond <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#101;&#x73;&#x72;&#64;&#116;&#104;&#121;&#114;&#115;&#x75;&#115;&#x2e;&#x63;&#x6f;&#109;">&#101;&#x73;&#x72;&#64;&#116;&#104;&#121;&#114;&#115;&#x75;&#115;&#x2e;&#x63;&#x6f;&#109;</a></p>
-<p>One fine day in January 2017 I was reminded of something I had half-noticed a few times over the previous decade. That is, younger hackers don’t know the bit structure of ASCII and the meaning of the odder control characters in it.</p>
-<p>This is knowledge every fledgling hacker used to absorb through their pores. It’s nobody’s fault this changed; the obsolescence of hardware terminals and the near-obsolescence of the RS-232 protocol is what did it. Tools generate culture; sometimes, when a tool becomes obsolete, a bit of cultural commonality quietly evaporates. It can be difficult to notice that this has happened.</p>
-<p>This document is a collection of facts about ASCII and related technologies, notably hardware serial terminals and RS-232 and modems. This is lore that was at one time near-universal and is no longer. It’s not likely to be directly useful today - until you trip over some piece of still-functioning technology where it’s relevant (like a GPS puck), or it makes sense of some old-fart war story. Even so, it’s good to know anyway, for cultural-literacy reasons.</p>
-<p>One thing this collection has that tends to be indefinite in the minds of older hackers is calendar dates. Those of us who lived through all this tend to have remembered order and dependencies but not exact timing; here, I did the research to pin a lot of that down. I’ve noticed that people have a tendency to retrospectively back-date the technologies that interest them, so even if you did live through the era it describes you might get a few surprises from reading this.</p>
-<p>There are lots of references to Unix in here because I am mainly attempting to educate younger open-source hackers working on Unix-derived systems such as Linux and the BSDs. If those terms mean nothing to you, the rest of this document probably won’t either.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/01/20/Program/Advice/things-every-hacker-once-knew/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1357,6 +1183,177 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/01/20/MyView/Share/sit-idle-and-enjoy-the-fruits/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IPCreator">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/ipheader.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="For life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/20/MyView/Share/sit-idle-and-enjoy-the-fruits/" itemprop="url">
+                  Relieve Yourself by Focus Attention
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-20T02:10:06+08:00">
+                2017-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Personal/" itemprop="url" rel="index">
+                    <span itemprop="name">Personal</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/01/20/MyView/Share/sit-idle-and-enjoy-the-fruits/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/20/MyView/Share/sit-idle-and-enjoy-the-fruits/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/01/20/MyView/Share/sit-idle-and-enjoy-the-fruits/" class="leancloud_visitors" data-flag-title="Relieve Yourself by Focus Attention">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="坐享其成"><a href="#坐享其成" class="headerlink" title="坐享其成"></a>坐享其成</h2><p><a href="http://zhibimo.com/read/xiaolai/zuo-xiang-qi-cheng/">作者：李笑来</a></p>
+<blockquote>
+<p>坐享，也许是最简单的大脑锻炼方式，这也是人类莫名其妙地已经运用了两千五百年以上的大脑锻炼方式。已经有足够多的科学研究证明，它能使你的大脑皮层表面积加大，能使你的灰质变厚，它也能增强人们的免疫系统，它还能让人们摆脱抑郁症……<br>尽管简单，但也相当神奇。<br>虽然神奇，却又非常简单。</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/01/20/MyView/Share/sit-idle-and-enjoy-the-fruits/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1406,7 +1403,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">268</span>
+                <span class="site-state-item-count">267</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1428,7 +1425,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">257</span>
+                <span class="site-state-item-count">256</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

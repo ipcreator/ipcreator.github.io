@@ -179,9 +179,9 @@
         <title>Best Practice of Deep Thinking</title>
         <pubTime>2017-03-26T00:29:06.000Z</pubTime>
         
-        <tag>Health</tag>
-         
         <tag>Share</tag>
+         
+        <tag>Health</tag>
          
          
            
@@ -263,7 +263,7 @@
     
   <url>
     <loc>http://ipcreator.me/2017/03/27/Program/Tools/Computer/float/</loc>
-    <lastmod>2017-04-09T00:52:49.466Z</lastmod>
+    <lastmod>2017-04-09T01:24:38.552Z</lastmod>
     <data>
         <display>
         <title>Floating Point</title>
@@ -581,13 +581,13 @@
         <title>Principles of IPCreator's Blog</title>
         <pubTime>2017-04-05T22:55:06.000Z</pubTime>
         
-        <tag>Basic Concept</tag>
-         
-        <tag>Best Practice</tag>
-         
         <tag>Meta Skill</tag>
          
+        <tag>Basic Concept</tag>
+         
         <tag>Pitfall</tag>
+         
+        <tag>Best Practice</tag>
          
          
            
@@ -607,11 +607,11 @@
         <title>Meta Skill——Retrieve</title>
         <pubTime>2017-04-05T12:55:06.000Z</pubTime>
         
+        <tag>Meta Skill</tag>
+         
         <tag>Google</tag>
          
         <tag>English</tag>
-         
-        <tag>Meta Skill</tag>
          
          
            
@@ -759,9 +759,9 @@
         <title>Live your Life</title>
         <pubTime>2017-01-10T15:25:06.000Z</pubTime>
         
-        <tag>Life</tag>
-         
         <tag>Share</tag>
+         
+        <tag>Life</tag>
          
         <tag>Management</tag>
          
@@ -1227,9 +1227,9 @@
         <title>Tutorials of Git</title>
         <pubTime>2017-02-19T06:09:06.000Z</pubTime>
         
-        <tag>Tutorials</tag>
-         
         <tag>Git</tag>
+         
+        <tag>Tutorials</tag>
          
          
            
@@ -1295,9 +1295,9 @@
         
         <tag>Basic Concept</tag>
          
-        <tag>Gradle</tag>
-         
         <tag>Compile</tag>
+         
+        <tag>Gradle</tag>
          
          
            
@@ -1518,10 +1518,6 @@
         
         <tag>Basic Concept</tag>
          
-        <tag>IO</tag>
-         
-        <tag>Reflection</tag>
-         
         <tag>Byte Code</tag>
          
         <tag>Class Loader</tag>
@@ -1533,6 +1529,10 @@
         <tag>Generic</tag>
          
         <tag>Annotation</tag>
+         
+        <tag>Reflection</tag>
+         
+        <tag>IO</tag>
          
         <tag>Security</tag>
          
@@ -1714,9 +1714,9 @@
         <title>GitHub Android Libraries Top 100</title>
         <pubTime>2017-03-30T14:24:06.000Z</pubTime>
         
-        <tag>GitHub</tag>
-         
         <tag>Third Library</tag>
+         
+        <tag>GitHub</tag>
          
          
            
@@ -2416,11 +2416,11 @@
         <title>Generate Lyric from Lyrics of Jay</title>
         <pubTime>2017-02-13T06:30:00.000Z</pubTime>
         
+        <tag>Tensorflow</tag>
+         
         <tag>Application</tag>
          
         <tag>Lyric</tag>
-         
-        <tag>Tensorflow</tag>
          
          
            
@@ -2528,11 +2528,11 @@
         <title>Credits of Death By Kaifu Lee</title>
         <pubTime>2017-01-19T11:02:06.000Z</pubTime>
         
+        <tag>Share</tag>
+         
         <tag>Health</tag>
          
         <tag>Life</tag>
-         
-        <tag>Share</tag>
          
         <tag>Kaifu Lee</tag>
          
@@ -2962,9 +2962,9 @@
         <title>NIPS 2016：PPT of Andrew Ng</title>
         <pubTime>2017-02-14T06:39:06.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Andrew Ng</tag>
+         
+        <tag>Deep Learning</tag>
          
          
            
@@ -3502,9 +3502,9 @@
         <title>TensorFlow Android Stand-Alone Demo</title>
         <pubTime>2017-02-17T02:16:06.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Tensorflow</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -3626,11 +3626,11 @@
         <title>Supercharging Android Apps with TensorFlow</title>
         <pubTime>2017-02-17T02:26:06.000Z</pubTime>
         
-        <tag>Application</tag>
+        <tag>Tensorflow</tag>
          
         <tag>Android</tag>
          
-        <tag>Tensorflow</tag>
+        <tag>Application</tag>
          
          
            
@@ -4102,9 +4102,9 @@
         <title>Relieve Yourself by Focus Attention</title>
         <pubTime>2017-01-19T18:10:06.000Z</pubTime>
         
-        <tag>Health</tag>
-         
         <tag>Share</tag>
+         
+        <tag>Health</tag>
          
          
            
@@ -4348,6 +4348,8 @@
         <title>Online Learning Algorithm Theory and Practice</title>
         <pubTime>2017-02-26T14:13:06.000Z</pubTime>
         
+        <tag>Algorithm</tag>
+         
         <tag>Application</tag>
          
         <tag>Meituan</tag>
@@ -4355,8 +4357,6 @@
         <tag>Deep Learning</tag>
          
         <tag>Online</tag>
-         
-        <tag>Algorithm</tag>
          
          
            
@@ -4474,9 +4474,9 @@
         <title>Golden Era of AI</title>
         <pubTime>2017-02-19T15:59:59.000Z</pubTime>
         
-        <tag>Investment</tag>
-         
         <tag>Startup</tag>
+         
+        <tag>Investment</tag>
          
         <tag>Trend</tag>
          
@@ -4649,18 +4649,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-color/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>Base of Multimedia——Video</title>
-        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
+        <title>Base of Multimedia——Color</title>
+        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
         <tag>Multimedia</tag>
          
-        <tag>Video</tag>
+        <tag>Color</tag>
          
          
            
@@ -4695,30 +4695,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-color/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>Base of Multimedia——Color</title>
-        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Multimedia</tag>
-         
-        <tag>Color</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
@@ -4731,6 +4707,30 @@
         <tag>Linux</tag>
          
         <tag>File System</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>Base of Multimedia——Video</title>
+        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Multimedia</tag>
+         
+        <tag>Video</tag>
          
          
            
@@ -5090,9 +5090,9 @@
         <title>Great Open Source Frameworks of Android</title>
         <pubTime>2017-03-15T03:07:06.000Z</pubTime>
         
-        <tag>Framework</tag>
-         
         <tag>Open Source</tag>
+         
+        <tag>Framework</tag>
          
          
            
@@ -5207,28 +5207,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Android/awesome-articles-of-android/</loc>
-    <lastmod>2017-03-27T07:52:13.708Z</lastmod>
-    <data>
-        <display>
-        <title>Android Safety Battle——Anti-Compilation and Proguard</title>
-        <pubTime>2017-02-27T05:57:06.000Z</pubTime>
-        
-        <tag>Anti-Compilation</tag>
-         
-        <tag>Proguard</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/03/25/Program/Android/awesome-android-complete-reference/</loc>
     <lastmod>2017-03-27T07:50:25.667Z</lastmod>
     <data>
@@ -5296,9 +5274,9 @@
         <title>Tutorials of Python</title>
         <pubTime>2017-02-19T06:14:06.000Z</pubTime>
         
-        <tag>Tutorials</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Tutorials</tag>
          
          
            
@@ -5320,9 +5298,9 @@
         
         <tag>Machine Learning</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Open Source</tag>
+         
+        <tag>Algorithm</tag>
          
          
            
@@ -5772,9 +5750,9 @@
         <title>TensorFlow Android Camera Demo</title>
         <pubTime>2017-02-17T02:26:06.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Tensorflow</tag>
+         
+        <tag>Android</tag>
          
         <tag>Camera</tag>
          
