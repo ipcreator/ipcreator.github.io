@@ -1,0 +1,1062 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Debug,Android Studio," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="For life" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Fetch the log info
+Analyze the crash info
+Search the Google/Stack Overflow
+Summarize the process">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Analysis of Android Studio Debug Problem">
+<meta property="og:url" content="http://ipcreator.me/2017/04/10/Program/Android/analysis-of-debug-problem/index.html">
+<meta property="og:site_name" content="For life">
+<meta property="og:description" content="Fetch the log info
+Analyze the crash info
+Search the Google/Stack Overflow
+Summarize the process">
+<meta property="og:image" content="http://okkntqe2h.bkt.clouddn.com/android_debug_bridge-600x338.png">
+<meta property="og:updated_time" content="2017-04-10T02:52:50.640Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Analysis of Android Studio Debug Problem">
+<meta name="twitter:description" content="Fetch the log info
+Analyze the crash info
+Search the Google/Stack Overflow
+Summarize the process">
+<meta name="twitter:image" content="http://okkntqe2h.bkt.clouddn.com/android_debug_bridge-600x338.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: 'L2TAEB8639',
+      apiKey: '86bd00c4f7ef2396081856beb1cf9a7d',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ipcreator.me/2017/04/10/Program/Android/analysis-of-debug-problem/"/>
+
+
+
+
+
+  <title> Analysis of Android Studio Debug Problem | For life </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5aaaaf5c9bcea80a5c7d7a057b2d36b3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">For life</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Growing up is the only password.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ipcreator.me/2017/04/10/Program/Android/analysis-of-debug-problem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IPCreator">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/ipheader.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="For life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Analysis of Android Studio Debug Problem
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T10:50:06+08:00">
+                2017-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/10/Program/Android/analysis-of-debug-problem/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/10/Program/Android/analysis-of-debug-problem/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/10/Program/Android/analysis-of-debug-problem/" class="leancloud_visitors" data-flag-title="Analysis of Android Studio Debug Problem">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://okkntqe2h.bkt.clouddn.com/android_debug_bridge-600x338.png" alt=""></p>
+<ol>
+<li>Fetch the log info</li>
+<li>Analyze the crash info</li>
+<li>Search the Google/Stack Overflow</li>
+<li>Summarize the process</li>
+</ol>
+<a id="more"></a>
+<h2 id="Fetch-the-log-info"><a href="#Fetch-the-log-info" class="headerlink" title="Fetch the log info"></a>Fetch the log info</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">--------- beginning of crash</div><div class="line">04-10 10:03:48.492 7348-7355/me.ipcreator.ui.debug A/libc: Fatal signal 6 (SIGABRT), code -6 in tid 7355 (JDWP)</div><div class="line"></div><div class="line">                                                           [ 04-10 10:03:48.493  1282: 1282 W/         ]</div><div class="line">                                                           debuggerd: handling request: pid=7348 uid=10100 gid=10100 tid=7355</div><div class="line">04-10 10:03:48.551 7366-7366/? A/DEBUG: *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***</div><div class="line">04-10 10:03:48.551 7366-7366/? A/DEBUG: Build fingerprint: 'Android/sdk_google_phone_x86/generic_x86:7.1.1/NYC/3756122:userdebug/test-keys'</div><div class="line">04-10 10:03:48.551 7366-7366/? A/DEBUG: Revision: '0'</div><div class="line">04-10 10:03:48.551 7366-7366/? A/DEBUG: ABI: 'x86'</div><div class="line">04-10 10:03:48.551 7366-7366/? A/DEBUG: pid: 7348, tid: 7355, name: JDWP  &gt;&gt;&gt; me.ipcreator.ui.debug &lt;&lt;&lt;</div><div class="line">04-10 10:03:48.551 7366-7366/? A/DEBUG: signal 6 (SIGABRT), code -6 (SI_TKILL), fault addr --------</div><div class="line">04-10 10:03:48.551 7366-7366/? A/DEBUG: Abort message: 'art/runtime/jdwp/jdwp_event.cc:661] Check failed: Thread::Current() != GetDebugThread() (Thread::Current()=0xac58f400, GetDebugThread()=0xac58f400) Expected event thread'</div><div class="line">04-10 10:03:48.551 7366-7366/? A/DEBUG:     eax 00000000  ebx 00001cb4  ecx 00001cbb  edx 00000006</div><div class="line">04-10 10:03:48.551 7366-7366/? A/DEBUG:     esi b12d0978  edi b12d0920</div><div class="line">04-10 10:03:48.551 7366-7366/? A/DEBUG:     xcs 00000073  xds 0000007b  xes 0000007b  xfs 0000003b  xss 0000007b</div><div class="line">04-10 10:03:48.551 7366-7366/? A/DEBUG:     eip b6366424  ebp b12ceac8  esp b12cea6c  flags 00000296</div><div class="line">04-10 10:03:48.555 7366-7366/? A/DEBUG: backtrace:</div><div class="line">04-10 10:03:48.555 7366-7366/? A/DEBUG:     #00 pc ffffe424  [vdso:b6366000] (__kernel_vsyscall+16)</div><div class="line">04-10 10:03:48.555 7366-7366/? A/DEBUG:     #01 pc 0007a03c  /system/lib/libc.so (tgkill+28)</div><div class="line">04-10 10:03:48.555 7366-7366/? A/DEBUG:     #02 pc 00075885  /system/lib/libc.so (pthread_kill+85)</div><div class="line">04-10 10:03:48.555 7366-7366/? A/DEBUG:     #03 pc 0002785a  /system/lib/libc.so (raise+42)</div><div class="line">04-10 10:03:48.555 7366-7366/? A/DEBUG:     #04 pc 0001ee36  /system/lib/libc.so (abort+86)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #05 pc 005183c5  /system/lib/libart.so (_ZN3art7Runtime5AbortEPKc+565)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #06 pc 0011a5b3  /system/lib/libart.so (_ZN3art10LogMessageD1Ev+1747)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #07 pc 0039b74d  /system/lib/libart.so (_ZN3art4JDWP9JdwpState24AcquireJdwpTokenForEventEy+733)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #08 pc 0039acf3  /system/lib/libart.so (_ZN3art4JDWP9JdwpState29SendRequestAndPossiblySuspendEPNS0_9ExpandBufENS0_17JdwpSuspendPolicyEy+211)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #09 pc 003a0ec9  /system/lib/libart.so (_ZN3art4JDWP9JdwpState16PostClassPrepareEPNS_6mirror5ClassE+1705)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #10 pc 001c2a85  /system/lib/libart.so (_ZN3art3Dbg16PostClassPrepareEPNS_6mirror5ClassE+53)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #11 pc 001689fc  /system/lib/libart.so (_ZN3art11ClassLinker11DefineClassEPNS_6ThreadEPKcjNS_6HandleINS_6mirror11ClassLoaderEEERKNS_7DexFileERKNS9_8ClassDefE+1116)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #12 pc 001683e9  /system/lib/libart.so (_ZN3art11ClassLinker26FindClassInPathClassLoaderERNS_33ScopedObjectAccessAlreadyRunnableEPNS_6ThreadEPKcjNS_6HandleINS_6mirror11ClassLoaderEEEPPNS8_5ClassE+1865)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #13 pc 0016979b  /system/lib/libart.so (_ZN3art11ClassLinker9FindClassEPNS_6ThreadEPKcNS_6HandleINS_6mirror11ClassLoaderEEE+1163)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #14 pc 005a7a7a  /system/lib/libart.so (_ZN3art8verifier12RegTypeCache12ResolveClassEPKcPNS_6mirror11ClassLoaderE+186)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #15 pc 005a742d  /system/lib/libart.so (_ZN3art8verifier12RegTypeCache4FromEPNS_6mirror11ClassLoaderEPKcb+701)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #16 pc 005a70fd  /system/lib/libart.so (_ZN3art8verifier12RegTypeCache14FromDescriptorEPNS_6mirror11ClassLoaderEPKcb+77)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #17 pc 005862ed  /system/lib/libart.so (_ZN3art8verifier14MethodVerifier26ResolveClassAndCheckAccessEj+173)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #18 pc 005960c4  /system/lib/libart.so (_ZN3art8verifier14MethodVerifier27ResolveMethodAndCheckAccessEjNS0_10MethodTypeE+84)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #19 pc 0059265c  /system/lib/libart.so (_ZN3art8verifier14MethodVerifier20VerifyInvocationArgsEPKNS_11InstructionENS0_10MethodTypeEb+76)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #20 pc 00587e02  /system/lib/libart.so (_ZN3art8verifier14MethodVerifier25CodeFlowVerifyInstructionEPj+4914)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #21 pc 00585f96  /system/lib/libart.so (_ZN3art8verifier14MethodVerifier20CodeFlowVerifyMethodEv+358)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #22 pc 00581c9d  /system/lib/libart.so (_ZN3art8verifier14MethodVerifier14VerifyCodeFlowEv+973)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #23 pc 0057da56  /system/lib/libart.so (_ZN3art8verifier14MethodVerifier6VerifyEv+854)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #24 pc 0057c742  /system/lib/libart.so (_ZN3art8verifier14MethodVerifier12VerifyMethodEPNS_6ThreadEjPKNS_7DexFileENS_6HandleINS_6mirror8DexCacheEEENS7_INS8_11ClassLoaderEEEPKNS4_8ClassDefEPKNS4_8CodeItemEPNS_9ArtMethodEjPNS_17CompilerCallbacksEbNS_11LogSeverityEbPNSt3__112basic_stringIcNSO_11char_traitsIcEENSO_9allocatorIcEEEE+226)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #25 pc 0057c1c7  /system/lib/libart.so (_ZN3art8verifier14MethodVerifier13VerifyMethodsILb0EEENS1_11FailureDataEPNS_6ThreadEPNS_11ClassLinkerEPKNS_7DexFileEPKNS8_8ClassDefEPNS_21ClassDataItemIteratorENS_6HandleINS_6mirror8DexCacheEEENSG_INSH_11ClassLoaderEEEPNS_17CompilerCallbacksEbNS_11LogSeverityEbPNSt3__112basic_stringIcNSP_11char_traitsIcEENSP_9allocatorIcEEEE+791)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #26 pc 0057b1f9  /system/lib/libart.so (_ZN3art8verifier14MethodVerifier11VerifyClassEPNS_6ThreadEPKNS_7DexFileENS_6HandleINS_6mirror8DexCacheEEENS7_INS8_11ClassLoaderEEEPKNS4_8ClassDefEPNS_17CompilerCallbacksEbNS_11LogSeverityEPNSt3__112basic_stringIcNSJ_11char_traitsIcEENSJ_9allocatorIcEEEE+921)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #27 pc 0057a4b9  /system/lib/libart.so (_ZN3art8verifier14MethodVerifier11VerifyClassEPNS_6ThreadEPNS_6mirror5ClassEPNS_17CompilerCallbacksEbNS_11LogSeverityEPNSt3__112basic_stringIcNSA_11char_traitsIcEENSA_9allocatorIcEEEE+841)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #28 pc 00174386  /system/lib/libart.so (_ZN3art11ClassLinker11VerifyClassEPNS_6ThreadENS_6HandleINS_6mirror5ClassEEENS_11LogSeverityE+2102)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #29 pc 0017a406  /system/lib/libart.so (_ZN3art11ClassLinker15InitializeClassEPNS_6ThreadENS_6HandleINS_6mirror5ClassEEEbb+326)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #30 pc 00158dde  /system/lib/libart.so (_ZN3art11ClassLinker17EnsureInitializedEPNS_6ThreadENS_6HandleINS_6mirror5ClassEEEbb+222)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #31 pc 001b60da  /system/lib/libart.so (_ZN3artL17GetFieldValueImplEyyyPNS_4JDWP9ExpandBufEb+1866)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #32 pc 001b667e  /system/lib/libart.so (_ZN3art3Dbg19GetStaticFieldValueEyyPNS_4JDWP9ExpandBufE+78)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #33 pc 003a4c5d  /system/lib/libart.so (_ZN3art4JDWPL12RT_GetValuesEPNS0_9JdwpStateEPNS0_7RequestEPNS0_9ExpandBufE+141)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #34 pc 003a2ea4  /system/lib/libart.so (_ZN3art4JDWP9JdwpState14ProcessRequestEPNS0_7RequestEPNS0_9ExpandBufEPb+1044)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #35 pc 003ab570  /system/lib/libart.so (_ZN3art4JDWP9JdwpState12HandlePacketEv+192)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #36 pc 00678df3  /system/lib/libart.so (_ZN3art4JDWP12JdwpAdbState15ProcessIncomingEv+1139)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #37 pc 003ab9d1  /system/lib/libart.so (_ZN3art4JDWP9JdwpState3RunEv+593)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #38 pc 003aae50  /system/lib/libart.so (_ZN3art4JDWPL15StartJdwpThreadEPv+48)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #39 pc 00074fe2  /system/lib/libc.so (_ZL15__pthread_startPv+210)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #40 pc 0002029e  /system/lib/libc.so (__start_thread+30)</div><div class="line">04-10 10:03:48.556 7366-7366/? A/DEBUG:     #41 pc 0001e076  /system/lib/libc.so (__bionic_clone+70)</div><div class="line">04-10 10:03:48.863 1607-7371/system_process W/ActivityManager:   Force finishing activity me.ipcreator.ui.debug/org.ipcreator.ui.MainActivity</div></pre></td></tr></table></figure>
+<h2 id="Analyze-the-crash-info"><a href="#Analyze-the-crash-info" class="headerlink" title="Analyze the crash info"></a>Analyze the crash info</h2><blockquote>
+<p>04-10 10:03:48.551 7366-7366/? A/DEBUG: Abort message: ‘art/runtime/jdwp/jdwp_event.cc:661] Check failed: Thread::Current() != GetDebugThread() (Thread::Current()=0xac58f400, GetDebugThread()=0xac58f400) Expected event thread’</p>
+</blockquote>
+<h2 id="Search-the-Google-Stack-Overflow"><a href="#Search-the-Google-Stack-Overflow" class="headerlink" title="Search the Google/Stack Overflow"></a>Search the Google/Stack Overflow</h2><p>Problem could be related with Android version 7.x, i removed all the breakpoints in nested functions and it worked, tested with Android version 6.0 too, and it is working without problem.</p>
+<p>According to google developers team response, it was fixed on 12/1/2016 and will be applied in next release.</p>
+<p>In my case i had to disable Instant Run. It seems like Instant Run has all sorts of side effects and this can be one of them.<br>Note, in Android Studio, the is under File -&gt; Settings -&gt; Build, Execution, Deployment -&gt; Instant Run</p>
+<h2 id="Summarize-the-process"><a href="#Summarize-the-process" class="headerlink" title="Summarize the process"></a>Summarize the process</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://stackoverflow.com/questions/40618803/android-app-crashes-when-launched-in-debug-mode" target="_blank" rel="external">Android app crashes when launched in debug mode</a><br><a href="https://code.google.com/p/android/issues/detail?id=227513" target="_blank" rel="external"><br>Issue 227513:    art/runtime/jdwp/jdwp_event.cc:661] Check failed: Thread::Current() != GetDebugThread() (Thread::Current()=0x7ffeecc19400, GetDebugThread()=0x7ffeecc19400) Expected event thread</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>Post author:</strong>
+      IPCreator
+    </li>
+    <li class="post-copyright-link">
+      <strong>Post link:</strong>
+      <a href="http://ipcreator.me/2017/04/10/Program/Android/analysis-of-debug-problem/" title="Analysis of Android Studio Debug Problem">http://ipcreator.me/2017/04/10/Program/Android/analysis-of-debug-problem/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright Notice: </strong>
+      All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Debug/" rel="tag"># Debug</a>
+          
+            <a href="/tags/Android-Studio/" rel="tag"># Android Studio</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/09/MyView/to-be-the-master-of-yourself/" rel="next" title="Become Your Master of Life">
+                <i class="fa fa-chevron-left"></i> Become Your Master of Life
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/10/Program/Android/MyApp/ui/" rel="prev" title="UI">
+                UI <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/10/Program/Android/analysis-of-debug-problem/"
+           data-title="Analysis of Android Studio Debug Problem" data-url="http://ipcreator.me/2017/04/10/Program/Android/analysis-of-debug-problem/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/img/ipheader.png"
+               alt="IPCreator" />
+          <p class="site-author-name" itemprop="name">IPCreator</p>
+           
+              <p class="site-description motion-element" itemprop="description">For life, growing up is the only password.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">268</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">257</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ipcreator" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhuxuanlvzxl/home?wvr=5&lf=reg" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.163.com/zhuxuanlv@126/" target="_blank" title="blog">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  blog
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://book.douban.com/subject/25870384/" title="probabilities of life" target="_blank">probabilities of life</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.sina.com.cn/s/blog_4b09eac00102wnke.html" title="super individual" target="_blank">super individual</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://gelonghui.com/p/101767.html" title="golden era of AI" target="_blank">golden era of AI</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://h5.sao.cn/product/detail?alias=onhnfsdtybxb" title="leading to freedom of wealth" target="_blank">leading to freedom of wealth</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/ba-shi-jian-dang-zuo-peng-you/index.html" title="take time as a friend" target="_blank">take time as a friend</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/reborn-every-7-years/" title="reborn every 7 years" target="_blank">reborn every 7 years</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lixiaolai.com/2016/06/12/makecs-preface/" title="everyone can be engineer" target="_blank">everyone can be engineer</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/read/xiaolai/everyone-can-use-english/" title="everyone can use english" target="_blank">everyone can use english</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Fetch-the-log-info"><span class="nav-number">1.</span> <span class="nav-text">Fetch the log info</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Analyze-the-crash-info"><span class="nav-number">2.</span> <span class="nav-text">Analyze the crash info</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Search-the-Google-Stack-Overflow"><span class="nav-number">3.</span> <span class="nav-text">Search the Google/Stack Overflow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summarize-the-process"><span class="nav-number">4.</span> <span class="nav-text">Summarize the process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IPCreator</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ipcreator"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TfzAWJSzk2L4jpj4gHaNsMbp-gzGzoHsz", "PXNkGhS05PxL7rV3N8gDlAQe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+</body>
+</html>
