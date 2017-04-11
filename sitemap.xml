@@ -2,6 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/04/03/Program/Java/improve-code-inspection-with-annotations/</loc>
+    
+    <lastmod>2017-04-11T04:03:35.720Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/English/computer-english-words/</loc>
+    
+    <lastmod>2017-04-11T03:52:26.004Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/11/English/basic-concept-of-grammar/</loc>
+    
+    <lastmod>2017-04-11T03:48:02.077Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/English/love-sentences/</loc>
+    
+    <lastmod>2017-04-11T02:21:10.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/English/love-words/</loc>
+    
+    <lastmod>2017-04-11T02:19:02.627Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/11/Meta%20Skill/meta-skill-deliberately-practice/</loc>
+    
+    <lastmod>2017-04-11T02:03:51.830Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/11/English/my-using-of-english/</loc>
+    
+    <lastmod>2017-04-11T00:19:17.403Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/11/Program/Android/MyApp/search-my-blog/</loc>
+    
+    <lastmod>2017-04-10T22:57:47.916Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-retrieve/</loc>
+    
+    <lastmod>2017-04-10T22:18:13.246Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-innovation/</loc>
+    
+    <lastmod>2017-04-10T22:16:13.956Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/04/10/Program/Android/MyApp/ui/</loc>
     
     <lastmod>2017-04-10T13:38:42.751Z</lastmod>
@@ -44,13 +114,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/22/English/love-words/</loc>
-    
-    <lastmod>2017-04-09T11:37:41.654Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/01/01/MyView/Journey/view-of-journey/</loc>
     
     <lastmod>2017-04-09T11:29:11.607Z</lastmod>
@@ -61,13 +124,6 @@
     <loc>http://ipcreator.me/2017/03/26/MyView/deep-thinking-change-my-life/</loc>
     
     <lastmod>2017-04-09T11:18:04.603Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/03/26/English/computer-english-words/</loc>
-    
-    <lastmod>2017-04-09T02:09:18.725Z</lastmod>
     
   </url>
   
@@ -149,23 +205,9 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/04/06/English/basic-concept-of-grammar/</loc>
-    
-    <lastmod>2017-04-06T09:28:58.139Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/03/10/Program/Java/improper-code-of-chinese-in-java/</loc>
     
     <lastmod>2017-04-06T04:25:04.691Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-deliberately-practice/</loc>
-    
-    <lastmod>2017-04-06T00:45:36.051Z</lastmod>
     
   </url>
   
@@ -187,13 +229,6 @@
     <loc>http://ipcreator.me/2017/04/06/readme/</loc>
     
     <lastmod>2017-04-05T23:24:45.739Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-retrieve/</loc>
-    
-    <lastmod>2017-04-05T23:04:39.471Z</lastmod>
     
   </url>
   
@@ -254,13 +289,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-innovation/</loc>
-    
-    <lastmod>2017-04-05T13:46:57.237Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-english/</loc>
     
     <lastmod>2017-04-05T13:46:42.567Z</lastmod>
@@ -285,13 +313,6 @@
     <loc>http://ipcreator.me/2017/01/20/Program/Advice/teach-yourself-programming-in-ten-years/</loc>
     
     <lastmod>2017-04-05T00:05:10.654Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/22/English/love-sentencns/</loc>
-    
-    <lastmod>2017-04-04T23:08:36.485Z</lastmod>
     
   </url>
   
@@ -397,13 +418,6 @@
     <loc>http://ipcreator.me/2017/02/19/Program/Tools/Git/learn-journey-of-git/</loc>
     
     <lastmod>2017-04-03T16:05:31.958Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/04/03/Program/Java/improve-code-inspection-with-annotations/</loc>
-    
-    <lastmod>2017-04-03T15:34:12.974Z</lastmod>
     
   </url>
   
@@ -1465,13 +1479,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-picture/</loc>
-    
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-GPU/</loc>
     
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
@@ -1479,16 +1486,9 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-color/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-picture/</loc>
     
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/02/15/AI/TensorFlow/ai-vs-machine-learning/</loc>
-    
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
     
   </url>
   
@@ -1500,7 +1500,21 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-color/</loc>
+    
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
+    
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/15/AI/TensorFlow/ai-vs-machine-learning/</loc>
     
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     
