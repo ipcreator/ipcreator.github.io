@@ -4,6 +4,92 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/04/12/Program/Android/MyApp/bigbang/</loc>
+    <lastmod>2017-04-12T13:52:44.401Z</lastmod>
+    <data>
+        <display>
+        <title>Big Bang</title>
+        <pubTime>2017-04-12T13:18:06.000Z</pubTime>
+        
+        <tag>Open Source</tag>
+         
+        <tag>Application</tag>
+         
+        <tag>Big Bang</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/03/26/English/computer-english-words/</loc>
+    <lastmod>2017-04-12T13:51:54.466Z</lastmod>
+    <data>
+        <display>
+        <title>Professional Words of Computer</title>
+        <pubTime>2017-03-25T16:00:00.000Z</pubTime>
+        
+        <tag>Word</tag>
+         
+        <tag>Profession</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/English/love-sentences/</loc>
+    <lastmod>2017-04-12T13:49:40.837Z</lastmod>
+    <data>
+        <display>
+        <title>Love English Sentences</title>
+        <pubTime>2017-02-22T00:13:05.000Z</pubTime>
+        
+        <tag>Sentence</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/12/Program/Tools/Computer/foobar/</loc>
+    <lastmod>2017-04-12T13:16:43.327Z</lastmod>
+    <data>
+        <display>
+        <title>Foo & Bar</title>
+        <pubTime>2017-04-12T12:53:06.000Z</pubTime>
+        
+        <tag>Share</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
     <lastmod>2017-04-11T12:29:52.440Z</lastmod>
     <data>
@@ -48,28 +134,6 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/03/26/English/computer-english-words/</loc>
-    <lastmod>2017-04-11T07:40:07.349Z</lastmod>
-    <data>
-        <display>
-        <title>Professional Words of Computer</title>
-        <pubTime>2017-03-25T16:00:00.000Z</pubTime>
-        
-        <tag>Word</tag>
-         
-        <tag>Profession</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ipcreator.me/2017/04/03/Program/Java/improve-code-inspection-with-annotations/</loc>
     <lastmod>2017-04-11T04:03:35.720Z</lastmod>
     <data>
@@ -104,26 +168,6 @@
         <tag>Basic Concept</tag>
          
         <tag>Grammar</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/22/English/love-sentences/</loc>
-    <lastmod>2017-04-11T02:21:10.847Z</lastmod>
-    <data>
-        <display>
-        <title>Love English Sentences</title>
-        <pubTime>2017-02-22T00:13:05.000Z</pubTime>
-        
-        <tag>Sentence</tag>
          
          
            
@@ -4725,18 +4769,42 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-color/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>File System of Linux</title>
-        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
+        <title>Base of Multimedia——Color</title>
+        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Linux</tag>
+        <tag>Multimedia</tag>
          
-        <tag>File System</tag>
+        <tag>Color</tag>
+         
+         
+           
+             
+              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
+    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
+    <data>
+        <display>
+        <title>Base of Multimedia——Video</title>
+        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Multimedia</tag>
+         
+        <tag>Video</tag>
          
          
            
@@ -4771,42 +4839,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>Base of Multimedia——Video</title>
-        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
+        <title>File System of Linux</title>
+        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Multimedia</tag>
+        <tag>Linux</tag>
          
-        <tag>Video</tag>
-         
-         
-           
-             
-              <breadCrumb title="Program" url="http://ipcreator.me/categories/Program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-color/</loc>
-    <lastmod>2017-03-27T08:55:53.032Z</lastmod>
-    <data>
-        <display>
-        <title>Base of Multimedia——Color</title>
-        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
-        
-        <tag>Basic Concept</tag>
-         
-        <tag>Multimedia</tag>
-         
-        <tag>Color</tag>
+        <tag>File System</tag>
          
          
            

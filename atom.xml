@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ipcreator.me/"/>
-  <updated>2017-04-11T11:43:48.101Z</updated>
+  <updated>2017-04-12T13:52:44.401Z</updated>
   <id>http://ipcreator.me/</id>
   
   <author>
@@ -14,6 +14,123 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Big Bang</title>
+    <link href="http://ipcreator.me/2017/04/12/Program/Android/MyApp/bigbang/"/>
+    <id>http://ipcreator.me/2017/04/12/Program/Android/MyApp/bigbang/</id>
+    <published>2017-04-12T13:18:06.000Z</published>
+    <updated>2017-04-12T13:52:44.401Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/Screenshot_1492004365.png" alt=""></p>
+<blockquote>
+<p>Read –&gt; Write<br>Copy –&gt; Refactor –&gt; Innovate<br>Record –&gt; Using –&gt; Deepen –&gt; Systemize</p>
+</blockquote>
+<ol>
+<li>Learn the Basic Concepts and Framework of Android/Java/Linux/Computer.</li>
+<li>Read Code Following the Time Sequence.</li>
+<li>Read the Official Code Comments , API Docs, Sample Apps.</li>
+<li>Migrate and Optimize the Codes to Your Code Repositories.</li>
+</ol>
+<a id="more"></a>
+<h2 id="Snippets"><a href="#Snippets" class="headerlink" title="Snippets"></a>Snippets</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EnglishWordsParser</span> <span class="keyword">extends</span> <span class="title">SimpleParser</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String[] parse(String text) <span class="keyword">throws</span> SegmentException &#123;</div><div class="line">        List&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        String regex = <span class="string">"([\\w]+(\\'|\\-)*[\\w]+)|([\\w]+)"</span>;</div><div class="line">        Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);</div><div class="line">        Matcher matcher=pattern.matcher(text);</div><div class="line">        <span class="keyword">while</span> (matcher.find()) &#123;</div><div class="line">            result.add(matcher.group());</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result.toArray(<span class="keyword">new</span> String[<span class="number">0</span>]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Official-API-Comments"><a href="#Official-API-Comments" class="headerlink" title="Official API Comments"></a>Official API Comments</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">     * Attempts to find the next subsequence of the input sequence that matches</div><div class="line">     * the pattern.</div><div class="line">     *</div><div class="line">     * &lt;p&gt; This method starts at the beginning of this matcher&apos;s region, or, if</div><div class="line">     * a previous invocation of the method was successful and the matcher has</div><div class="line">     * not since been reset, at the first character not matched by the previous</div><div class="line">     * match.</div><div class="line">     *</div><div class="line">     * &lt;p&gt; If the match succeeds then more information can be obtained via the</div><div class="line">     * &lt;tt&gt;start&lt;/tt&gt;, &lt;tt&gt;end&lt;/tt&gt;, and &lt;tt&gt;group&lt;/tt&gt; methods.  &lt;/p&gt;</div><div class="line">     *</div><div class="line">     * @return  &lt;tt&gt;true&lt;/tt&gt; if, and only if, a subsequence of the input</div><div class="line">     *          sequence matches this matcher&apos;s pattern</div><div class="line">     */</div><div class="line">    public boolean find() &#123;</div><div class="line">        synchronized (this) &#123;</div><div class="line">            matchFound = findNextImpl(address, input, matchOffsets);</div><div class="line">        &#125;</div><div class="line">        return matchFound;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">     * Returns an array containing all of the elements in this list in</div><div class="line">     * proper sequence (from first to last element); the runtime type of</div><div class="line">     * the returned array is that of the specified array.  If the list fits</div><div class="line">     * in the specified array, it is returned therein.  Otherwise, a new</div><div class="line">     * array is allocated with the runtime type of the specified array and</div><div class="line">     * the size of this list.</div><div class="line">     *</div><div class="line">     * &lt;p&gt;If the list fits in the specified array with room to spare (i.e.,</div><div class="line">     * the array has more elements than the list), the element in the array</div><div class="line">     * immediately following the end of the list is set to &lt;tt&gt;null&lt;/tt&gt;.</div><div class="line">     * (This is useful in determining the length of the list &lt;i&gt;only&lt;/i&gt; if</div><div class="line">     * the caller knows that the list does not contain any null elements.)</div><div class="line">     *</div><div class="line">     * &lt;p&gt;Like the &#123;@link #toArray()&#125; method, this method acts as bridge between</div><div class="line">     * array-based and collection-based APIs.  Further, this method allows</div><div class="line">     * precise control over the runtime type of the output array, and may,</div><div class="line">     * under certain circumstances, be used to save allocation costs.</div><div class="line">     *</div><div class="line">     * &lt;p&gt;Suppose &lt;tt&gt;x&lt;/tt&gt; is a list known to contain only strings.</div><div class="line">     * The following code can be used to dump the list into a newly</div><div class="line">     * allocated array of &lt;tt&gt;String&lt;/tt&gt;:</div><div class="line">     *</div><div class="line">     * &lt;pre&gt;</div><div class="line">     *     String[] y = x.toArray(new String[0]);&lt;/pre&gt;</div><div class="line">     *</div><div class="line">     * Note that &lt;tt&gt;toArray(new Object[0])&lt;/tt&gt; is identical in function to</div><div class="line">     * &lt;tt&gt;toArray()&lt;/tt&gt;.</div><div class="line">     *</div><div class="line">     * @param a the array into which the elements of this list are to</div><div class="line">     *          be stored, if it is big enough; otherwise, a new array of the</div><div class="line">     *          same runtime type is allocated for this purpose.</div><div class="line">     * @return an array containing the elements of this list</div><div class="line">     * @throws ArrayStoreException if the runtime type of the specified array</div><div class="line">     *         is not a supertype of the runtime type of every element in</div><div class="line">     *         this list</div><div class="line">     * @throws NullPointerException if the specified array is null</div><div class="line">     */</div><div class="line">    &lt;T&gt; T[] toArray(T[] a);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/Screenshot_1492004365.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Read –&amp;gt; Write&lt;br&gt;Copy –&amp;gt; Refactor –&amp;gt; Innovate&lt;br&gt;Record –&amp;gt; Using –&amp;gt; Deepen –&amp;gt; Systemize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Learn the Basic Concepts and Framework of Android/Java/Linux/Computer.&lt;/li&gt;
+&lt;li&gt;Read Code Following the Time Sequence.&lt;/li&gt;
+&lt;li&gt;Read the Official Code Comments , API Docs, Sample Apps.&lt;/li&gt;
+&lt;li&gt;Migrate and Optimize the Codes to Your Code Repositories.&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
+    
+    
+      <category term="Open Source" scheme="http://ipcreator.me/tags/Open-Source/"/>
+    
+      <category term="Application" scheme="http://ipcreator.me/tags/Application/"/>
+    
+      <category term="Big Bang" scheme="http://ipcreator.me/tags/Big-Bang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Foo &amp; Bar</title>
+    <link href="http://ipcreator.me/2017/04/12/Program/Tools/Computer/foobar/"/>
+    <id>http://ipcreator.me/2017/04/12/Program/Tools/Computer/foobar/</id>
+    <published>2017-04-12T12:53:06.000Z</published>
+    <updated>2017-04-12T13:16:43.327Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/foobarbaz.png" alt=""></p>
+<ol>
+<li><p>“Foo” and “bar” as metasyntactic variables were popularised by MIT and DEC, the first references are in work on LISP and PDP-1 and Project MAC from 1964 onwards.</p>
+</li>
+<li><p>Many of these people were in MIT’s Tech Model Railroad Club, where we find the first documented use of “foo” in tech circles in 1959 (and a variant in 1958).</p>
+</li>
+<li><p>Both “foo” and “bar” (and even “baz”) were well known in popular culture, especially from Smokey Stover and Pogo comics, which will have been read by many TMRC members.</p>
+</li>
+<li><p>Also, it seems likely the military FUBAR(F*cked Up Beyond All Repair) contributed to their popularity.</p>
+</li>
+</ol>
+<blockquote>
+<p>编程里面的foo和bar就是我们小时候写作文里面的小明和小红。写作文的时候，当然情节最重要，花时间去想角色的名字太麻烦了，就干脆叫小明小红好了。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="维基百科上的解释"><a href="#维基百科上的解释" class="headerlink" title="维基百科上的解释"></a>维基百科上的解释</h2><p>原文：</p>
+<blockquote>
+<p>The terms foobar, foo, bar, baz and qux are sometimes used as placeholder names (also referred to as metasyntactic variables) in computer programming or computer-related documentation.[1] They have been used to name entities such as variables, functions, and commands whose purpose is unimportant and serve only to demonstrate a concept. The words themselves have no meaning in this usage. Foobar is sometimes used alone; foo, bar, and baz are sometimes used in that order, when multiple entities are needed.</p>
+</blockquote>
+<p>译文：</p>
+<blockquote>
+<p>术语foobar, foo, bar, baz 和qux经常在计算机编程或计算机相关的文档中被用作占位符的名字。当变量，函数，或命令本身不太重要的时候，foobar, foo,bar, baz 和qux就被用来充当这些实体的名字，这样做的目的仅仅是阐述一个概念，说明一个想法。这些术语本身相对于使用的场景来说没有任何意义。Foobar经常被单独使用；而当需要多个实体举例的时候，foo，bar，和baz则经常被按顺序使用。</p>
+</blockquote>
+<h2 id="Code-Sample-From-Google"><a href="#Code-Sample-From-Google" class="headerlink" title="Code Sample From Google"></a>Code Sample From Google</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String ACTION_FOO = <span class="string">"org.ipcreator.ui.apps.contact.service.action.FOO"</span>;</div><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String ACTION_BAZ = <span class="string">"org.ipcreator.ui.apps.contact.service.action.BAZ"</span>;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Handle action Foo in the provided background thread with the provided</div><div class="line"> * parameters.</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">handleActionFoo</span><span class="params">(String param1, String param2)</span> </span>&#123;</div><div class="line">    <span class="comment">// <span class="doctag">TODO:</span> Handle action Foo</span></div><div class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException(<span class="string">"Not yet implemented"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Handle action Baz in the provided background thread with the provided</div><div class="line"> * parameters.</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">handleActionBaz</span><span class="params">(String param1, String param2)</span> </span>&#123;</div><div class="line">    <span class="comment">// <span class="doctag">TODO:</span> Handle action Baz</span></div><div class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException(<span class="string">"Not yet implemented"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>foobar是计算机程序领域里的术语炒作，并无实际用途和参考意义。 在计算机程序设计与计算机技术的相关文档中，术语foobar是一个常见的无名氏化名，常被作为“伪变量”使用。</p>
+</blockquote>
+<p>单词“foobar”或分离的“foo”与“bar”常出现于程序设计的案例中，如同Hello World程序一样，它们常被用于向学习者介绍某种程序语言。<br>“foo”常被作为函数／方法的名称，而“bar”则常被用作变量名。<br>下面是一段通过“foo”和“bar”来演示如何在Java、C及C++中连接两个字符串的实例程序：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Java Code</span></div><div class="line">String foo = <span class="string">"Hello, "</span>;</div><div class="line">String bar = <span class="string">"World"</span>;</div><div class="line">System.out.println(foo + bar);</div><div class="line"><span class="comment">//Hello, World is printed to the screen by printing foo and bar</span></div></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// C code</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">   <span class="keyword">char</span> foo[] = <span class="string">"Hello,"</span>;</div><div class="line">   <span class="keyword">char</span> bar[] = <span class="string">"World!"</span>;</div><div class="line">   <span class="built_in">printf</span>(<span class="string">"%s %s\n"</span>, foo, bar);</div><div class="line"></div><div class="line">   <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// C++ code</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">   <span class="keyword">char</span> foo[] = <span class="string">"Hello,"</span>;</div><div class="line">   <span class="keyword">char</span> bar[] = <span class="string">"World!"</span>;</div><div class="line">   <span class="built_in">cout</span> &lt;&lt; foo &lt;&lt; <span class="string">" "</span> &lt;&lt; bar &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">   <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]<a href="http://www.cnblogs.com/javaee6/p/3756906.html" target="_blank" rel="external">编程中Foo, Bar 到底什么意思？</a><br>[2]<a href="https://zh.wikipedia.org/wiki/Foobar" target="_blank" rel="external">Foobar</a><br>[3]<a href="http://stackoverflow.com/questions/4868904/what-is-the-origin-of-foo-and-bar" target="_blank" rel="external">What is the origin of foo and bar? [closed]
+</a>[4]<a href="http://blog.csdn.net/qinxi/article/details/325875" target="_blank" rel="external">foo和bar词源</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ong8f1obl.bkt.clouddn.com/foobarbaz.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;“Foo” and “bar” as metasyntactic variables were popularised by MIT and DEC, the first references are in work on LISP and PDP-1 and Project MAC from 1964 onwards.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Many of these people were in MIT’s Tech Model Railroad Club, where we find the first documented use of “foo” in tech circles in 1959 (and a variant in 1958).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Both “foo” and “bar” (and even “baz”) were well known in popular culture, especially from Smokey Stover and Pogo comics, which will have been read by many TMRC members.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Also, it seems likely the military FUBAR(F*cked Up Beyond All Repair) contributed to their popularity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;编程里面的foo和bar就是我们小时候写作文里面的小明和小红。写作文的时候，当然情节最重要，花时间去想角色的名字太麻烦了，就干脆叫小明小红好了。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
+    
+    
+      <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
+    
+  </entry>
   
   <entry>
     <title>The Domain Names of Blog</title>
@@ -1638,38 +1755,6 @@
   </entry>
   
   <entry>
-    <title>Basic Concept of English——Vocabulary</title>
-    <link href="http://ipcreator.me/2017/04/06/English/basic-concept-of-vocabulary/"/>
-    <id>http://ipcreator.me/2017/04/06/English/basic-concept-of-vocabulary/</id>
-    <published>2017-04-05T23:46:06.000Z</published>
-    <updated>2017-04-05T23:51:53.541Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/vocabulary.png" alt=""></p>
-<blockquote>
-<p>Vocabulary is the basis of English pyramid.</p>
-</blockquote>
-<a id="more"></a>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ong8f1obl.bkt.clouddn.com/vocabulary.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Vocabulary is the basis of English pyramid.&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="English" scheme="http://ipcreator.me/categories/English/"/>
-    
-    
-      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
-    
-      <category term="Vocabulary" scheme="http://ipcreator.me/tags/Vocabulary/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Basic Concept of Java——Charset</title>
     <link href="http://ipcreator.me/2017/04/06/Program/Tools/Computer/char-decode/"/>
     <id>http://ipcreator.me/2017/04/06/Program/Tools/Computer/char-decode/</id>
@@ -1784,6 +1869,38 @@
   </entry>
   
   <entry>
+    <title>Basic Concept of English——Vocabulary</title>
+    <link href="http://ipcreator.me/2017/04/06/English/basic-concept-of-vocabulary/"/>
+    <id>http://ipcreator.me/2017/04/06/English/basic-concept-of-vocabulary/</id>
+    <published>2017-04-05T23:46:06.000Z</published>
+    <updated>2017-04-05T23:51:53.541Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/vocabulary.png" alt=""></p>
+<blockquote>
+<p>Vocabulary is the basis of English pyramid.</p>
+</blockquote>
+<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ong8f1obl.bkt.clouddn.com/vocabulary.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Vocabulary is the basis of English pyramid.&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="English" scheme="http://ipcreator.me/categories/English/"/>
+    
+    
+      <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
+    
+      <category term="Vocabulary" scheme="http://ipcreator.me/tags/Vocabulary/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Principles of IPCreator&#39;s Blog</title>
     <link href="http://ipcreator.me/2017/04/06/readme/"/>
     <id>http://ipcreator.me/2017/04/06/readme/</id>
@@ -1887,6 +2004,46 @@
   </entry>
   
   <entry>
+    <title>Meta Skill——Innovation</title>
+    <link href="http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-innovation/"/>
+    <id>http://ipcreator.me/2017/04/05/Meta Skill/meta-skill-innovation/</id>
+    <published>2017-04-05T12:55:06.000Z</published>
+    <updated>2017-04-10T22:16:13.956Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/innovation%20%281%29.jpg" alt=""></p>
+<blockquote>
+<p>Innovation brings unexpected pleasant surprise frequently.<br>A teacher should be good at drawing inferences about other cases from one instance.</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Three-Steps"><a href="#Three-Steps" class="headerlink" title="Three Steps"></a>Three Steps</h2><h3 id="Set-Goal"><a href="#Set-Goal" class="headerlink" title="Set Goal"></a>Set Goal</h3><h3 id="Find-Ways-by-Innovative-Thinking"><a href="#Find-Ways-by-Innovative-Thinking" class="headerlink" title="Find Ways by Innovative Thinking"></a>Find Ways by Innovative Thinking</h3><p>Sharpen your brain  and open your mind</p>
+<h3 id="Try-and-Correct"><a href="#Try-and-Correct" class="headerlink" title="Try and Correct"></a>Try and Correct</h3><p>Practice is the only truth.</p>
+<h2 id="Six-Common-Innovative-Thinking"><a href="#Six-Common-Innovative-Thinking" class="headerlink" title="Six Common Innovative Thinking"></a>Six Common Innovative Thinking</h2><h3 id="Reversed-Thinking"><a href="#Reversed-Thinking" class="headerlink" title="Reversed Thinking"></a>Reversed Thinking</h3><p><strong>A–&gt;B</strong>  ==&gt; <strong>B–&gt;A</strong></p>
+<h3 id="Exaggerated-Thinking"><a href="#Exaggerated-Thinking" class="headerlink" title="Exaggerated Thinking"></a>Exaggerated Thinking</h3><p><strong>A–&gt;B</strong>  ==&gt; <strong>10<em>A–&gt;20</em>B</strong></p>
+<h3 id="Composit-Thinking"><a href="#Composit-Thinking" class="headerlink" title="Composit Thinking"></a>Composit Thinking</h3><p>put two together and get three.<br><strong>A–&gt;B</strong>  ==&gt; <strong>AC–&gt;BD</strong></p>
+<h3 id="Lessened-Thinking"><a href="#Lessened-Thinking" class="headerlink" title="Lessened Thinking"></a>Lessened Thinking</h3><p><strong>A–&gt;B–&gt;C</strong>  ==&gt; <strong>A–&gt;C</strong></p>
+<h3 id="Changing-Order-Thinking"><a href="#Changing-Order-Thinking" class="headerlink" title="Changing Order Thinking"></a>Changing Order Thinking</h3><p><strong>A–&gt;B–&gt;C</strong>  ==&gt; <strong>A–&gt;C–&gt;B</strong></p>
+<h3 id="Revolution-Thinking"><a href="#Revolution-Thinking" class="headerlink" title="Revolution Thinking"></a>Revolution Thinking</h3><p><strong>A–&gt;B–&gt;C</strong>  ==&gt; <strong>D–&gt;E–&gt;C</strong></p>
+<h2 id="Best-Practice"><a href="#Best-Practice" class="headerlink" title="Best Practice"></a>Best Practice</h2><h3 id="Patent-Portfolio"><a href="#Patent-Portfolio" class="headerlink" title="Patent Portfolio"></a>Patent Portfolio</h3><h3 id="Program-Trouble-Resolver"><a href="#Program-Trouble-Resolver" class="headerlink" title="Program Trouble Resolver"></a>Program Trouble Resolver</h3><h3 id="Google-Search"><a href="#Google-Search" class="headerlink" title="Google Search"></a>Google Search</h3><h3 id="English-Learning"><a href="#English-Learning" class="headerlink" title="English Learning"></a>English Learning</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/innovation%20%281%29.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Innovation brings unexpected pleasant surprise frequently.&lt;br&gt;A teacher should be good at drawing inferences about other cases from one instance.&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
+    
+    
+      <category term="Meta Skill" scheme="http://ipcreator.me/tags/Meta-Skill/"/>
+    
+      <category term="Innovation" scheme="http://ipcreator.me/tags/Innovation/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Meta Skill——English</title>
     <link href="http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-english/"/>
     <id>http://ipcreator.me/2017/04/05/Meta Skill/meta-skill-english/</id>
@@ -1929,46 +2086,6 @@
     
     
       <category term="Meta Skill" scheme="http://ipcreator.me/tags/Meta-Skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Meta Skill——Innovation</title>
-    <link href="http://ipcreator.me/2017/04/05/Meta%20Skill/meta-skill-innovation/"/>
-    <id>http://ipcreator.me/2017/04/05/Meta Skill/meta-skill-innovation/</id>
-    <published>2017-04-05T12:55:06.000Z</published>
-    <updated>2017-04-10T22:16:13.956Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/innovation%20%281%29.jpg" alt=""></p>
-<blockquote>
-<p>Innovation brings unexpected pleasant surprise frequently.<br>A teacher should be good at drawing inferences about other cases from one instance.</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="Three-Steps"><a href="#Three-Steps" class="headerlink" title="Three Steps"></a>Three Steps</h2><h3 id="Set-Goal"><a href="#Set-Goal" class="headerlink" title="Set Goal"></a>Set Goal</h3><h3 id="Find-Ways-by-Innovative-Thinking"><a href="#Find-Ways-by-Innovative-Thinking" class="headerlink" title="Find Ways by Innovative Thinking"></a>Find Ways by Innovative Thinking</h3><p>Sharpen your brain  and open your mind</p>
-<h3 id="Try-and-Correct"><a href="#Try-and-Correct" class="headerlink" title="Try and Correct"></a>Try and Correct</h3><p>Practice is the only truth.</p>
-<h2 id="Six-Common-Innovative-Thinking"><a href="#Six-Common-Innovative-Thinking" class="headerlink" title="Six Common Innovative Thinking"></a>Six Common Innovative Thinking</h2><h3 id="Reversed-Thinking"><a href="#Reversed-Thinking" class="headerlink" title="Reversed Thinking"></a>Reversed Thinking</h3><p><strong>A–&gt;B</strong>  ==&gt; <strong>B–&gt;A</strong></p>
-<h3 id="Exaggerated-Thinking"><a href="#Exaggerated-Thinking" class="headerlink" title="Exaggerated Thinking"></a>Exaggerated Thinking</h3><p><strong>A–&gt;B</strong>  ==&gt; <strong>10<em>A–&gt;20</em>B</strong></p>
-<h3 id="Composit-Thinking"><a href="#Composit-Thinking" class="headerlink" title="Composit Thinking"></a>Composit Thinking</h3><p>put two together and get three.<br><strong>A–&gt;B</strong>  ==&gt; <strong>AC–&gt;BD</strong></p>
-<h3 id="Lessened-Thinking"><a href="#Lessened-Thinking" class="headerlink" title="Lessened Thinking"></a>Lessened Thinking</h3><p><strong>A–&gt;B–&gt;C</strong>  ==&gt; <strong>A–&gt;C</strong></p>
-<h3 id="Changing-Order-Thinking"><a href="#Changing-Order-Thinking" class="headerlink" title="Changing Order Thinking"></a>Changing Order Thinking</h3><p><strong>A–&gt;B–&gt;C</strong>  ==&gt; <strong>A–&gt;C–&gt;B</strong></p>
-<h3 id="Revolution-Thinking"><a href="#Revolution-Thinking" class="headerlink" title="Revolution Thinking"></a>Revolution Thinking</h3><p><strong>A–&gt;B–&gt;C</strong>  ==&gt; <strong>D–&gt;E–&gt;C</strong></p>
-<h2 id="Best-Practice"><a href="#Best-Practice" class="headerlink" title="Best Practice"></a>Best Practice</h2><h3 id="Patent-Portfolio"><a href="#Patent-Portfolio" class="headerlink" title="Patent Portfolio"></a>Patent Portfolio</h3><h3 id="Program-Trouble-Resolver"><a href="#Program-Trouble-Resolver" class="headerlink" title="Program Trouble Resolver"></a>Program Trouble Resolver</h3><h3 id="Google-Search"><a href="#Google-Search" class="headerlink" title="Google Search"></a>Google Search</h3><h3 id="English-Learning"><a href="#English-Learning" class="headerlink" title="English Learning"></a>English Learning</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/innovation%20%281%29.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Innovation brings unexpected pleasant surprise frequently.&lt;br&gt;A teacher should be good at drawing inferences about other cases from one instance.&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
-    
-    
-      <category term="Meta Skill" scheme="http://ipcreator.me/tags/Meta-Skill/"/>
-    
-      <category term="Innovation" scheme="http://ipcreator.me/tags/Innovation/"/>
     
   </entry>
   
@@ -3816,41 +3933,6 @@
   </entry>
   
   <entry>
-    <title>App Architecture of Best Practice</title>
-    <link href="http://ipcreator.me/2017/03/31/Program/Android/Design/ui-app/"/>
-    <id>http://ipcreator.me/2017/03/31/Program/Android/Design/ui-app/</id>
-    <published>2017-03-30T23:35:06.000Z</published>
-    <updated>2017-04-03T16:52:48.870Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/androidstudio.jpg" alt=""><br>More Little, More Fast,<br>More Safe, More Flexible<br>More Smart, More Power,</p>
-<a id="more"></a>
-<h2 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h2><h2 id="Third-Library"><a href="#Third-Library" class="headerlink" title="Third Library"></a>Third Library</h2><h2 id="Static-Code-Inspect-Tool"><a href="#Static-Code-Inspect-Tool" class="headerlink" title="Static Code Inspect Tool"></a>Static Code Inspect Tool</h2><p>###</p>
-<p>###</p>
-<p>###</p>
-<h2 id="Dynamic-Running-Checker"><a href="#Dynamic-Running-Checker" class="headerlink" title="Dynamic Running Checker"></a>Dynamic Running Checker</h2><p>###</p>
-<p>###</p>
-<p>###</p>
-<h2 id="Confige-Tool"><a href="#Confige-Tool" class="headerlink" title="Confige Tool"></a>Confige Tool</h2><h3 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h3><h2 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h2><h3 id="QiNiu"><a href="#QiNiu" class="headerlink" title="QiNiu"></a>QiNiu</h3><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://blog.csdn.net/sbsujjbcy/article/details/50707696" target="_blank" rel="external">MVP模式在Android开发中的最佳实践</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/androidstudio.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;More Little, More Fast,&lt;br&gt;More Safe, More Flexible&lt;br&gt;More Smart, More Power,&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
-    
-    
-      <category term="Best Practice" scheme="http://ipcreator.me/tags/Best-Practice/"/>
-    
-      <category term="UI" scheme="http://ipcreator.me/tags/UI/"/>
-    
-      <category term="Architecture" scheme="http://ipcreator.me/tags/Architecture/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Concept of Reflection in Java</title>
     <link href="http://ipcreator.me/2017/03/31/Program/Java/what-is-reflection-in-java/"/>
     <id>http://ipcreator.me/2017/03/31/Program/Java/what-is-reflection-in-java/</id>
@@ -3941,6 +4023,41 @@
       <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
     
       <category term="Reflection" scheme="http://ipcreator.me/tags/Reflection/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>App Architecture of Best Practice</title>
+    <link href="http://ipcreator.me/2017/03/31/Program/Android/Design/ui-app/"/>
+    <id>http://ipcreator.me/2017/03/31/Program/Android/Design/ui-app/</id>
+    <published>2017-03-30T23:35:06.000Z</published>
+    <updated>2017-04-03T16:52:48.870Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://om8nmvpn9.bkt.clouddn.com/androidstudio.jpg" alt=""><br>More Little, More Fast,<br>More Safe, More Flexible<br>More Smart, More Power,</p>
+<a id="more"></a>
+<h2 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h2><h2 id="Third-Library"><a href="#Third-Library" class="headerlink" title="Third Library"></a>Third Library</h2><h2 id="Static-Code-Inspect-Tool"><a href="#Static-Code-Inspect-Tool" class="headerlink" title="Static Code Inspect Tool"></a>Static Code Inspect Tool</h2><p>###</p>
+<p>###</p>
+<p>###</p>
+<h2 id="Dynamic-Running-Checker"><a href="#Dynamic-Running-Checker" class="headerlink" title="Dynamic Running Checker"></a>Dynamic Running Checker</h2><p>###</p>
+<p>###</p>
+<p>###</p>
+<h2 id="Confige-Tool"><a href="#Confige-Tool" class="headerlink" title="Confige Tool"></a>Confige Tool</h2><h3 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h3><h2 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h2><h3 id="QiNiu"><a href="#QiNiu" class="headerlink" title="QiNiu"></a>QiNiu</h3><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://blog.csdn.net/sbsujjbcy/article/details/50707696" target="_blank" rel="external">MVP模式在Android开发中的最佳实践</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://om8nmvpn9.bkt.clouddn.com/androidstudio.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;More Little, More Fast,&lt;br&gt;More Safe, More Flexible&lt;br&gt;More Smart, More Power,&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ipcreator.me/categories/Android/"/>
+    
+    
+      <category term="Best Practice" scheme="http://ipcreator.me/tags/Best-Practice/"/>
+    
+      <category term="UI" scheme="http://ipcreator.me/tags/UI/"/>
+    
+      <category term="Architecture" scheme="http://ipcreator.me/tags/Architecture/"/>
     
   </entry>
   
@@ -10773,73 +10890,6 @@
   </entry>
   
   <entry>
-    <title>The Legend of 1900</title>
-    <link href="http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/"/>
-    <id>http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/</id>
-    <published>2017-03-28T11:38:18.000Z</published>
-    <updated>2017-03-29T04:18:01.307Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p><strong>Make you cry，laugh  touching and thinking</strong><br>Crying for  his loneliness and ending of  the story.<br>Touching by the wonderful melody.<br>Laughing for those humor lines.<br>Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?</p>
-</blockquote>
-<p><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp" alt=""></p>
-<a id="more"></a>
-<p>导演: 朱塞佩·托纳多雷<br>编剧: 亚利桑德罗·巴里克 / 朱塞佩·托纳多雷<br>主演: 蒂姆·罗斯 / 普路特·泰勒·文斯 / 比尔·努恩 / 梅兰尼·蒂埃里 / 阿尔贝托·巴斯克斯<br>类型: 剧情 / 音乐<br>制片国家/地区: 意大利<br>语言: 英语 / 法语<br>上映日期: 1998-10-28(意大利)<br>片长: 165分钟 / 120分钟(法国版) / 169分钟(加长版)<br>又名: 声光伴我飞(港) / 一九零零的传奇 / 1900海上钢琴师 / 传奇1900 / The Legend of 1900<br>IMDb链接: <a href="http://www.imdb.com/title/tt0120731" target="_blank" rel="external">tt0120731</a></p>
-<p>本片讲述了一个钢琴天才传奇的一生。</p>
-<p>　　1900年，Virginian号豪华邮轮上，一个孤儿被遗弃在头等舱，由船上的水手抚养长大，取名1900（蒂姆•罗斯 饰）。1900慢慢长大，显示出了无师自通的非凡钢琴天赋，在船上的乐队表演钢琴，每个听过他演奏的人，都被深深打动。爵士 乐鼻祖杰尼听说了1900的高超技艺，专门上船和他比赛，最后自叹弗如，黯然离去。<br>　　可惜，这一切的事情都发生在海上，1900从来不愿踏上陆地，直到有一天，他爱上了一个女孩，情愫在琴键上流淌。他会不会为了爱情，踏上陆地开始新的生活，用他的琴声惊艳世界？他将怎样谱写自己非凡的人生。 ©豆瓣</p>
-<h2 id="大人者，不失其赤子之心者也"><a href="#大人者，不失其赤子之心者也" class="headerlink" title="大人者，不失其赤子之心者也"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">大人者，不失其赤子之心者也</a></h2><p>市侩们总是抱着捧杀的态度来看待天才的，这也无足多怪。重要的是，天才如何看待自己的选择。</p>
-<p>许多人把实现自我价值同“功成名就”和“飞黄腾达”联系在一起，其中不乏某些天才。他们为此奋斗一生，也许终能得偿所愿。然而，功成名就之后呢？罗马帝国的战胜者凯旋时，一个奴隶会在他耳边轻轻私语：“一切荣华富贵，都是过眼烟云！”这道出了所有成功者风光无限的背后那不为人知的空虚——曾经追求的，固然已经得到，现在拥有的，也将归于破灭。其中的幸运者，还能像张翰那样“人生贵得适意尔，何能羁宦数千里以要名爵!”全身而退；不幸者，恐怕只能哀叹“吾欲与若复牵黄犬俱出上蔡东门逐狡兔，岂可得乎！”人生的荣辱，不过是一个围城。城里的人想冲出去，城外的人想冲进来。待到一切荣光都已失去，他们还会为当初的选择而感到骄傲，抑或后悔吗？</p>
-<blockquote>
-<p>“你知道琴上88个键一个不多一个也不少，琴键是有限的，但你是无限的，在这些键上所能创造出来的音乐，那才是无限的，这个我喜欢，也是我愿意做的，但是在舷梯上，摆在我面前的琴键有成千上万，永远也数不完的琴键”，“而在这个无限大的键盘上，你根本就无法去演奏”，“天呐，你没有看见那些街道吗？有上千条！你怎么去选择那一个？”。窝囊废似的一番话，彻底关死了1900通往成功与显赫的道路。似乎很难想象这样一个才华横溢的人会选择一条破船作为归宿，甚至宁愿最终被几吨炸药所终结。其实，1900是幸运的，他不入围城，自觉放弃未来的诱惑与烦嚣，换来对已经拥有的执着与坚守。也就无怨无悔，虽死何憾？老子云：知其雄 ，守其雌 ，为天下溪。为天下溪 常德不离 复归於婴儿。想必直到生命终结的那一刻，1900依然可以骄傲地宣称：“大人者，不失其赤子之心者也。”</p>
-</blockquote>
-<h2 id="俗人理解不了的幸福"><a href="#俗人理解不了的幸福" class="headerlink" title="俗人理解不了的幸福"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">俗人理解不了的幸福</a></h2><p>大概只有小号手是愿意聆听1900的内心而非琴声的人，他不理解他，但是他尊重他。他用尊重成全了1900完整的独立。我看到有人说如果他是那胖子他就会把1900敲昏然后拖下船。我想这样的想法也就注定他成不了那个胖子，成不了1900唯一的真正的朋友。</p>
-<p>如果我们较真一点，假设小号手真的把1900弄下船了，故事将怎样延伸？我们都知道，落魄的小号手没有能力去为朋友找一艘新的船，找88个琴键和尽头。1900将无可避免被磨去棱角和平庸，落入红尘变成一个凡人。</p>
-<p>活着，还是活得安心。这也是个问题。凡人的选择是无论如何先活下去再说，”活着”这件事情本身比什么都重要。而天才则把心灵的舒适看得更重，生死则次之。所以凡人可以忍辱，天才却情愿玉碎。每一种人都获得了他最看重的东西，说起来谁也不比谁亏。</p>
-<p>差异导致孤独。葆存了差异性的ET在承受异样目光的同时也承受着巨大的孤独，远超出凡人的孤独。凡人们如我们虽然也还都残留一些差异，但大致面貌八九不离十。我们失恋了后觉得痛苦比谁的都大，我们拥抱心爱的人自认比谁都幸福。但一个残酷的事实是：每个人的痛苦和幸福都没什么区别。我们在不断重复，千篇一律。</p>
-<p>我们丢了个性却换来了共鸣。我们借助艺术寻找通感，在人性中相交叉的部分，抹着眼泪互相慰藉，或者说，互相平衡（原来有人比我还惨啊，这下心里舒坦多了）。而被称为天才的人站在人群之外，忧郁地注视这群有些像他又不是他的物种。用他们ET的本能将那些交叉部分，提炼、放大、直抵内心。那些永远无法交叉的部分，则作为孤独的源头，令他们永远无法融入人群。他们只有躲在自己的轮船里，躲在自己的内心世界里，孤独地活着，然后死去。</p>
-<h2 id="我们无处安放的孤独"><a href="#我们无处安放的孤独" class="headerlink" title="我们无处安放的孤独"></a><a href="https://movie.douban.com/review/1316127/" target="_blank" rel="external">我们无处安放的孤独</a></h2><p>我一直觉得1900的一生是存在主义思想的体现，他藐视规则，藐视这个社会认可的规则，他害怕上岸其实是拒绝上岸，藐视上岸。他重自身的存在大于外界对自身的认可，他可以轻易打败爵士乐的开山祖师并对他表示鄙夷，他可以靠他的才华赚取无数的名利但是他拒绝音乐与自身的分离，他可以用音乐去探究所有人的心灵，可以在音乐里去旅行，可以寻觅到自己的爱情，但是他没有常人那样去要去追，他轻轻地将这些丢进了大海，他将迈向陆地的脚收回。</p>
-<p>在存在主义者看来，人生活在一个与自己对立的、失望的世界之中，人在世界上的地位是不确定的。绝对自由的人也是烦恼和无所依靠的孤独者。人虽然有选择的自由，但他面对的未来的生活却是混沌而没有目标的。他只是盲目地走向未来，他只知道人生的真实的终结就是死亡。死亡作为人生的最后归宿，对于个人的存在具有非常重要的意义。 所以存在主义者都是悲观者，在他们眼里，人生是一场悲剧。</p>
-<blockquote>
-<p>“城市那么大，看不到尽头，我停下来不是因为所见是因为所不见，是因为看不见的东西。连绵不绝的城市什么都有，就是没有尽头，我需要看见世界的尽头。上了岸，何去何从？爱一个女人，住一间屋，买一块地，望一个景，走一条死路，太多的选择我无所适从。漫漫无尽，思前想后你不怕精神崩溃？那样的日子怎样过？我无法遗弃这艘船，宁可遗弃自己的生命。”</p>
-</blockquote>
-<p>后来我才知道生活的大多数时候其实是孤独的，是我们心里无处安放的孤独，不被这个世界所认可的孤独。1900是孤独的，所以他选择一辈子不上岸，和那座海上浮城共生共死，而我们呢？我们没有一座属于自己的城，让我们来安放我们的孤独，让我们来逃避自己不喜欢的一切，所以我们比1900更孤独更可怜。</p>
-<h2 id="微尘世界，我们都已是最好的钢琴手。"><a href="#微尘世界，我们都已是最好的钢琴手。" class="headerlink" title="微尘世界，我们都已是最好的钢琴手。"></a><a href="https://movie.douban.com/review/1971957/" target="_blank" rel="external">微尘世界，我们都已是最好的钢琴手。</a></h2><p>1900代表着一种理想，代表着这个尘世中的多数人，注定不会付诸行动，却会始终心怀向往的理想。矗立在那里，自由，决绝，而悲伤。</p>
-<p>我们是生活在“外面的世界”里的人。这个世界的意义在于“传承”。就像一个游戏，每个人都是其中的玩家，然而获得的任务，却是如何使这个游戏永远存在。赡养父母，繁衍后代，诸多必须背负的责任令前行显得缓慢而艰难。然而我们的人生对于整个游戏而言，存在的时间或许只有一秒，或者更短。也唯有越短暂，这个游戏的运行时间才会越长，才有可能，“永不结束”。<br>这样一想会不会又心有不甘呢？辛苦奋斗的一生，其实不过一粒微尘，轻得仿佛随时都会消失。<br>然而在闭上眼的那一瞬还会不会含笑着想起，自己的孩子在不久前，正带领他们的孩子在绿草地上放起风筝；会不会含笑着想起，自己曾拥有良人在侧，从此不再无枝可依；会不会含笑着想起更久远的从前，父母曾令你无忧无虑，而那些萌生的小情绪，或许唯有感慨地大笑出声，无奈地摇摇头，道一句，那时真小。<br>会不会想起那些温暖的片段，想起自己曾经的付出与所得，带着回望的沧桑，感怀，和崭新的希望。<br>　　　　<br>我们为什么不会像1900一样，选择在漫天火光中永沉海底。这样壮烈，却获得永生的自由？</p>
-<blockquote>
-<p>因为，因为我们一直生活在这个“外面的世界”，清楚地看见它的混乱，却因为某一瞬间体验到的那些温情，那些无以伦比的美好，而心甘情愿地忍受着它所给予的伤害，努力弹奏出最华美的人生乐章。</p>
-</blockquote>
-<p>我们或许从来都不是天才，但是我们至少能做到勤恳、踏实。我们从坚硬和纯白开始，学会圆滑，学会世故，但内心深处，终究会一直记得，这一生所做的种种妥协，不过是为了在这个微尘世界，在这架上帝给予的钢琴上，创作出独属于自己的旋律与琴音。</p>
-<h2 id="我们都是宅男"><a href="#我们都是宅男" class="headerlink" title="我们都是宅男"></a><a href="https://movie.douban.com/review/1238757/" target="_blank" rel="external">我们都是宅男</a></h2><p>我们或许没有《海上钢琴师》中的1900看的更加清楚，他一生生活在邮轮上，他不愿离开一个让他感到安定自由、无忧无虑的空间，他永远没有踏上陆地，开启他的“远大前程”，在我们看来，他是自闭的，但是，他也是最清醒的，在最后无比绚烂的死亡中，他走的孤独而坦然。</p>
-<p>和1900对无限的恐惧相反，现代人正是在追逐着无限，我们贪大，贪全，贪广，房子要住大的，哪怕被每月的房贷压的生活质量下降；交际圈要交广些，哪怕每天疲于奔命于并不让自己愉快的应酬；旅游要走遍世界，哪怕其实只是疲惫的赶着在一个又一个景点的人群中拍照；炒股也有“不涨到翻倍不痛快”，哪怕每天被指数折磨的大喜大悲。还是看看这个“宅男”1900，反观自己，其实我们都是宅男，我们都是在自己营造的世界里生活，我们总有个无形或有形的圈子，但是似乎“开疆扩土”是人的本能，我们总是希望这个世界更大些，更广些。其实，并不是因为你走遍了这个城市的大街小巷，你的世界便扩展到了整个城市，哪怕真的这样，你也只是有了个城市这样一个更大的宅子。所以，1900不贪求太多，他一生都在一艘船上生活，这是有限的；但是他一生都有音乐相伴快乐的生活，这是无限的，快乐而自在的生活才是无限的。正如我们拼命拓展的交际网永远是有限的，但是和其中几个真正的知己在一起的快乐才是无限的。</p>
-<p>1900在邮轮上有自己的快乐，也伴随着一些悲伤，但是，快乐从来不是仅仅以空间的广度来评判的，就如你有一笔钱，可以买大房子简装修，也可以买小房子按照自己的意愿精装修（当然，精装修的意义不是买一堆豪华家俱的堆砌）。1900选择在一个相对狭小的世界里精心构筑他的世界，安逸而愉快。而在我们看来，这样的小小的快乐永远是“有病”的，就如我们如果看到一个人沉溺于数学而废寝忘食，会认为他是一个科学怪人，为他随时可能的英年早逝而悲哀；如果看到一个人长期执着的在农村搞什么社会试验而履受挫折，会认为他是一个理想主义者，为他干些“不实际”的事情而悲哀。诸如此类的事情还有很多，我们总是很自恋，常常看到他人沉浸于一些比较“独特”的事物而不问世事而感到“悲哀”，而对他们表示不解和“同情”，特别当这些人甚至为之折寿或是如1900那样“找死”后，更是如此。其实，生活方式本来没有定义，其实想想，1900在一艘船上就活的那么滋润，一些人一天到晚在屋子里闷头看武侠小说、漫画书就那么快活，我们这些号称精神健康，性格乐观的人却常常无名的不停唠叨“真郁闷”，这时的我们是不是会突然感到一丝沮丧，而对宅男们有些羡慕，同时意识到，其实我们都不过是在自己的世界里有喜有乐的宅男。</p>
-<h2 id="漂流在大海上的音乐浮城"><a href="#漂流在大海上的音乐浮城" class="headerlink" title="漂流在大海上的音乐浮城"></a><a href="https://movie.douban.com/review/1000830/" target="_blank" rel="external">漂流在大海上的音乐浮城</a></h2><p>对于1900而言，音乐，是用来娱乐自己的——他永远为了自己而弹奏着，永远不让自己的音乐和自己分离。</p>
-<p>1900的存在很特别么？未必，他的生命因为没有踏足过真实世界而显得尤为纯净和清澈，甚至纯净和清澈得不能够生活在这个真实的现实世界里。最适宜他生活的地方，是Virginian，一个漂浮在海上的乌托邦，一个能够让1900这样纯粹且单纯的音乐圣徒栖息的地方。他不能，也不应该走进我们的世界，我们的世界对于1900而言，太肮脏，太复杂了。</p>
-<p>究竟是1900把自己禁锢在狭小的空间里了，还是我们让陆地桎梏了我们自身？城市里有着成千的街道，我们迷失于其中，看不到天的尽头，而大海以其广博的胸襟，容忍并珍藏了1900这个特异的存在，也甚至是因为大海的广博，1900看到了世界的尽头。</p>
-<blockquote>
-<p>当影片行进到最后，Max问及1900为何不愿意离开Virginian的那一瞬间，我们就不难理解1900的答案了——琴键太大，音乐无从而生；城市太大，我们无从而生……</p>
-</blockquote>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1]<a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">海上钢琴师 La leggenda del pianista sull’oceano (1998)</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Make you cry，laugh  touching and thinking&lt;/strong&gt;&lt;br&gt;Crying for  his loneliness and ending of  the story.&lt;br&gt;Touching by the wonderful melody.&lt;br&gt;Laughing for those humor lines.&lt;br&gt;Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
-    
-    
-      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
-    
-      <category term="Movie" scheme="http://ipcreator.me/tags/Movie/"/>
-    
-  </entry>
-  
-  <entry>
     <title>The Beauty of Life</title>
     <link href="http://ipcreator.me/2017/03/28/MyView/Original/beauty-of-life/"/>
     <id>http://ipcreator.me/2017/03/28/MyView/Original/beauty-of-life/</id>
@@ -10980,6 +11030,73 @@
     
     
       <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Legend of 1900</title>
+    <link href="http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/"/>
+    <id>http://ipcreator.me/2017/03/28/MyView/Movie/the-legend-of-1900/</id>
+    <published>2017-03-28T11:38:18.000Z</published>
+    <updated>2017-03-29T04:18:01.307Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p><strong>Make you cry，laugh  touching and thinking</strong><br>Crying for  his loneliness and ending of  the story.<br>Touching by the wonderful melody.<br>Laughing for those humor lines.<br>Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?</p>
+</blockquote>
+<p><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp" alt=""></p>
+<a id="more"></a>
+<p>导演: 朱塞佩·托纳多雷<br>编剧: 亚利桑德罗·巴里克 / 朱塞佩·托纳多雷<br>主演: 蒂姆·罗斯 / 普路特·泰勒·文斯 / 比尔·努恩 / 梅兰尼·蒂埃里 / 阿尔贝托·巴斯克斯<br>类型: 剧情 / 音乐<br>制片国家/地区: 意大利<br>语言: 英语 / 法语<br>上映日期: 1998-10-28(意大利)<br>片长: 165分钟 / 120分钟(法国版) / 169分钟(加长版)<br>又名: 声光伴我飞(港) / 一九零零的传奇 / 1900海上钢琴师 / 传奇1900 / The Legend of 1900<br>IMDb链接: <a href="http://www.imdb.com/title/tt0120731" target="_blank" rel="external">tt0120731</a></p>
+<p>本片讲述了一个钢琴天才传奇的一生。</p>
+<p>　　1900年，Virginian号豪华邮轮上，一个孤儿被遗弃在头等舱，由船上的水手抚养长大，取名1900（蒂姆•罗斯 饰）。1900慢慢长大，显示出了无师自通的非凡钢琴天赋，在船上的乐队表演钢琴，每个听过他演奏的人，都被深深打动。爵士 乐鼻祖杰尼听说了1900的高超技艺，专门上船和他比赛，最后自叹弗如，黯然离去。<br>　　可惜，这一切的事情都发生在海上，1900从来不愿踏上陆地，直到有一天，他爱上了一个女孩，情愫在琴键上流淌。他会不会为了爱情，踏上陆地开始新的生活，用他的琴声惊艳世界？他将怎样谱写自己非凡的人生。 ©豆瓣</p>
+<h2 id="大人者，不失其赤子之心者也"><a href="#大人者，不失其赤子之心者也" class="headerlink" title="大人者，不失其赤子之心者也"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">大人者，不失其赤子之心者也</a></h2><p>市侩们总是抱着捧杀的态度来看待天才的，这也无足多怪。重要的是，天才如何看待自己的选择。</p>
+<p>许多人把实现自我价值同“功成名就”和“飞黄腾达”联系在一起，其中不乏某些天才。他们为此奋斗一生，也许终能得偿所愿。然而，功成名就之后呢？罗马帝国的战胜者凯旋时，一个奴隶会在他耳边轻轻私语：“一切荣华富贵，都是过眼烟云！”这道出了所有成功者风光无限的背后那不为人知的空虚——曾经追求的，固然已经得到，现在拥有的，也将归于破灭。其中的幸运者，还能像张翰那样“人生贵得适意尔，何能羁宦数千里以要名爵!”全身而退；不幸者，恐怕只能哀叹“吾欲与若复牵黄犬俱出上蔡东门逐狡兔，岂可得乎！”人生的荣辱，不过是一个围城。城里的人想冲出去，城外的人想冲进来。待到一切荣光都已失去，他们还会为当初的选择而感到骄傲，抑或后悔吗？</p>
+<blockquote>
+<p>“你知道琴上88个键一个不多一个也不少，琴键是有限的，但你是无限的，在这些键上所能创造出来的音乐，那才是无限的，这个我喜欢，也是我愿意做的，但是在舷梯上，摆在我面前的琴键有成千上万，永远也数不完的琴键”，“而在这个无限大的键盘上，你根本就无法去演奏”，“天呐，你没有看见那些街道吗？有上千条！你怎么去选择那一个？”。窝囊废似的一番话，彻底关死了1900通往成功与显赫的道路。似乎很难想象这样一个才华横溢的人会选择一条破船作为归宿，甚至宁愿最终被几吨炸药所终结。其实，1900是幸运的，他不入围城，自觉放弃未来的诱惑与烦嚣，换来对已经拥有的执着与坚守。也就无怨无悔，虽死何憾？老子云：知其雄 ，守其雌 ，为天下溪。为天下溪 常德不离 复归於婴儿。想必直到生命终结的那一刻，1900依然可以骄傲地宣称：“大人者，不失其赤子之心者也。”</p>
+</blockquote>
+<h2 id="俗人理解不了的幸福"><a href="#俗人理解不了的幸福" class="headerlink" title="俗人理解不了的幸福"></a><a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">俗人理解不了的幸福</a></h2><p>大概只有小号手是愿意聆听1900的内心而非琴声的人，他不理解他，但是他尊重他。他用尊重成全了1900完整的独立。我看到有人说如果他是那胖子他就会把1900敲昏然后拖下船。我想这样的想法也就注定他成不了那个胖子，成不了1900唯一的真正的朋友。</p>
+<p>如果我们较真一点，假设小号手真的把1900弄下船了，故事将怎样延伸？我们都知道，落魄的小号手没有能力去为朋友找一艘新的船，找88个琴键和尽头。1900将无可避免被磨去棱角和平庸，落入红尘变成一个凡人。</p>
+<p>活着，还是活得安心。这也是个问题。凡人的选择是无论如何先活下去再说，”活着”这件事情本身比什么都重要。而天才则把心灵的舒适看得更重，生死则次之。所以凡人可以忍辱，天才却情愿玉碎。每一种人都获得了他最看重的东西，说起来谁也不比谁亏。</p>
+<p>差异导致孤独。葆存了差异性的ET在承受异样目光的同时也承受着巨大的孤独，远超出凡人的孤独。凡人们如我们虽然也还都残留一些差异，但大致面貌八九不离十。我们失恋了后觉得痛苦比谁的都大，我们拥抱心爱的人自认比谁都幸福。但一个残酷的事实是：每个人的痛苦和幸福都没什么区别。我们在不断重复，千篇一律。</p>
+<p>我们丢了个性却换来了共鸣。我们借助艺术寻找通感，在人性中相交叉的部分，抹着眼泪互相慰藉，或者说，互相平衡（原来有人比我还惨啊，这下心里舒坦多了）。而被称为天才的人站在人群之外，忧郁地注视这群有些像他又不是他的物种。用他们ET的本能将那些交叉部分，提炼、放大、直抵内心。那些永远无法交叉的部分，则作为孤独的源头，令他们永远无法融入人群。他们只有躲在自己的轮船里，躲在自己的内心世界里，孤独地活着，然后死去。</p>
+<h2 id="我们无处安放的孤独"><a href="#我们无处安放的孤独" class="headerlink" title="我们无处安放的孤独"></a><a href="https://movie.douban.com/review/1316127/" target="_blank" rel="external">我们无处安放的孤独</a></h2><p>我一直觉得1900的一生是存在主义思想的体现，他藐视规则，藐视这个社会认可的规则，他害怕上岸其实是拒绝上岸，藐视上岸。他重自身的存在大于外界对自身的认可，他可以轻易打败爵士乐的开山祖师并对他表示鄙夷，他可以靠他的才华赚取无数的名利但是他拒绝音乐与自身的分离，他可以用音乐去探究所有人的心灵，可以在音乐里去旅行，可以寻觅到自己的爱情，但是他没有常人那样去要去追，他轻轻地将这些丢进了大海，他将迈向陆地的脚收回。</p>
+<p>在存在主义者看来，人生活在一个与自己对立的、失望的世界之中，人在世界上的地位是不确定的。绝对自由的人也是烦恼和无所依靠的孤独者。人虽然有选择的自由，但他面对的未来的生活却是混沌而没有目标的。他只是盲目地走向未来，他只知道人生的真实的终结就是死亡。死亡作为人生的最后归宿，对于个人的存在具有非常重要的意义。 所以存在主义者都是悲观者，在他们眼里，人生是一场悲剧。</p>
+<blockquote>
+<p>“城市那么大，看不到尽头，我停下来不是因为所见是因为所不见，是因为看不见的东西。连绵不绝的城市什么都有，就是没有尽头，我需要看见世界的尽头。上了岸，何去何从？爱一个女人，住一间屋，买一块地，望一个景，走一条死路，太多的选择我无所适从。漫漫无尽，思前想后你不怕精神崩溃？那样的日子怎样过？我无法遗弃这艘船，宁可遗弃自己的生命。”</p>
+</blockquote>
+<p>后来我才知道生活的大多数时候其实是孤独的，是我们心里无处安放的孤独，不被这个世界所认可的孤独。1900是孤独的，所以他选择一辈子不上岸，和那座海上浮城共生共死，而我们呢？我们没有一座属于自己的城，让我们来安放我们的孤独，让我们来逃避自己不喜欢的一切，所以我们比1900更孤独更可怜。</p>
+<h2 id="微尘世界，我们都已是最好的钢琴手。"><a href="#微尘世界，我们都已是最好的钢琴手。" class="headerlink" title="微尘世界，我们都已是最好的钢琴手。"></a><a href="https://movie.douban.com/review/1971957/" target="_blank" rel="external">微尘世界，我们都已是最好的钢琴手。</a></h2><p>1900代表着一种理想，代表着这个尘世中的多数人，注定不会付诸行动，却会始终心怀向往的理想。矗立在那里，自由，决绝，而悲伤。</p>
+<p>我们是生活在“外面的世界”里的人。这个世界的意义在于“传承”。就像一个游戏，每个人都是其中的玩家，然而获得的任务，却是如何使这个游戏永远存在。赡养父母，繁衍后代，诸多必须背负的责任令前行显得缓慢而艰难。然而我们的人生对于整个游戏而言，存在的时间或许只有一秒，或者更短。也唯有越短暂，这个游戏的运行时间才会越长，才有可能，“永不结束”。<br>这样一想会不会又心有不甘呢？辛苦奋斗的一生，其实不过一粒微尘，轻得仿佛随时都会消失。<br>然而在闭上眼的那一瞬还会不会含笑着想起，自己的孩子在不久前，正带领他们的孩子在绿草地上放起风筝；会不会含笑着想起，自己曾拥有良人在侧，从此不再无枝可依；会不会含笑着想起更久远的从前，父母曾令你无忧无虑，而那些萌生的小情绪，或许唯有感慨地大笑出声，无奈地摇摇头，道一句，那时真小。<br>会不会想起那些温暖的片段，想起自己曾经的付出与所得，带着回望的沧桑，感怀，和崭新的希望。<br>　　　　<br>我们为什么不会像1900一样，选择在漫天火光中永沉海底。这样壮烈，却获得永生的自由？</p>
+<blockquote>
+<p>因为，因为我们一直生活在这个“外面的世界”，清楚地看见它的混乱，却因为某一瞬间体验到的那些温情，那些无以伦比的美好，而心甘情愿地忍受着它所给予的伤害，努力弹奏出最华美的人生乐章。</p>
+</blockquote>
+<p>我们或许从来都不是天才，但是我们至少能做到勤恳、踏实。我们从坚硬和纯白开始，学会圆滑，学会世故，但内心深处，终究会一直记得，这一生所做的种种妥协，不过是为了在这个微尘世界，在这架上帝给予的钢琴上，创作出独属于自己的旋律与琴音。</p>
+<h2 id="我们都是宅男"><a href="#我们都是宅男" class="headerlink" title="我们都是宅男"></a><a href="https://movie.douban.com/review/1238757/" target="_blank" rel="external">我们都是宅男</a></h2><p>我们或许没有《海上钢琴师》中的1900看的更加清楚，他一生生活在邮轮上，他不愿离开一个让他感到安定自由、无忧无虑的空间，他永远没有踏上陆地，开启他的“远大前程”，在我们看来，他是自闭的，但是，他也是最清醒的，在最后无比绚烂的死亡中，他走的孤独而坦然。</p>
+<p>和1900对无限的恐惧相反，现代人正是在追逐着无限，我们贪大，贪全，贪广，房子要住大的，哪怕被每月的房贷压的生活质量下降；交际圈要交广些，哪怕每天疲于奔命于并不让自己愉快的应酬；旅游要走遍世界，哪怕其实只是疲惫的赶着在一个又一个景点的人群中拍照；炒股也有“不涨到翻倍不痛快”，哪怕每天被指数折磨的大喜大悲。还是看看这个“宅男”1900，反观自己，其实我们都是宅男，我们都是在自己营造的世界里生活，我们总有个无形或有形的圈子，但是似乎“开疆扩土”是人的本能，我们总是希望这个世界更大些，更广些。其实，并不是因为你走遍了这个城市的大街小巷，你的世界便扩展到了整个城市，哪怕真的这样，你也只是有了个城市这样一个更大的宅子。所以，1900不贪求太多，他一生都在一艘船上生活，这是有限的；但是他一生都有音乐相伴快乐的生活，这是无限的，快乐而自在的生活才是无限的。正如我们拼命拓展的交际网永远是有限的，但是和其中几个真正的知己在一起的快乐才是无限的。</p>
+<p>1900在邮轮上有自己的快乐，也伴随着一些悲伤，但是，快乐从来不是仅仅以空间的广度来评判的，就如你有一笔钱，可以买大房子简装修，也可以买小房子按照自己的意愿精装修（当然，精装修的意义不是买一堆豪华家俱的堆砌）。1900选择在一个相对狭小的世界里精心构筑他的世界，安逸而愉快。而在我们看来，这样的小小的快乐永远是“有病”的，就如我们如果看到一个人沉溺于数学而废寝忘食，会认为他是一个科学怪人，为他随时可能的英年早逝而悲哀；如果看到一个人长期执着的在农村搞什么社会试验而履受挫折，会认为他是一个理想主义者，为他干些“不实际”的事情而悲哀。诸如此类的事情还有很多，我们总是很自恋，常常看到他人沉浸于一些比较“独特”的事物而不问世事而感到“悲哀”，而对他们表示不解和“同情”，特别当这些人甚至为之折寿或是如1900那样“找死”后，更是如此。其实，生活方式本来没有定义，其实想想，1900在一艘船上就活的那么滋润，一些人一天到晚在屋子里闷头看武侠小说、漫画书就那么快活，我们这些号称精神健康，性格乐观的人却常常无名的不停唠叨“真郁闷”，这时的我们是不是会突然感到一丝沮丧，而对宅男们有些羡慕，同时意识到，其实我们都不过是在自己的世界里有喜有乐的宅男。</p>
+<h2 id="漂流在大海上的音乐浮城"><a href="#漂流在大海上的音乐浮城" class="headerlink" title="漂流在大海上的音乐浮城"></a><a href="https://movie.douban.com/review/1000830/" target="_blank" rel="external">漂流在大海上的音乐浮城</a></h2><p>对于1900而言，音乐，是用来娱乐自己的——他永远为了自己而弹奏着，永远不让自己的音乐和自己分离。</p>
+<p>1900的存在很特别么？未必，他的生命因为没有踏足过真实世界而显得尤为纯净和清澈，甚至纯净和清澈得不能够生活在这个真实的现实世界里。最适宜他生活的地方，是Virginian，一个漂浮在海上的乌托邦，一个能够让1900这样纯粹且单纯的音乐圣徒栖息的地方。他不能，也不应该走进我们的世界，我们的世界对于1900而言，太肮脏，太复杂了。</p>
+<p>究竟是1900把自己禁锢在狭小的空间里了，还是我们让陆地桎梏了我们自身？城市里有着成千的街道，我们迷失于其中，看不到天的尽头，而大海以其广博的胸襟，容忍并珍藏了1900这个特异的存在，也甚至是因为大海的广博，1900看到了世界的尽头。</p>
+<blockquote>
+<p>当影片行进到最后，Max问及1900为何不愿意离开Virginian的那一瞬间，我们就不难理解1900的答案了——琴键太大，音乐无从而生；城市太大，我们无从而生……</p>
+</blockquote>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1]<a href="https://movie.douban.com/subject/1292001/" target="_blank" rel="external">海上钢琴师 La leggenda del pianista sull’oceano (1998)</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Make you cry，laugh  touching and thinking&lt;/strong&gt;&lt;br&gt;Crying for  his loneliness and ending of  the story.&lt;br&gt;Touching by the wonderful melody.&lt;br&gt;Laughing for those humor lines.&lt;br&gt;Deep thinking: In the big city, What’s your piano ? Where is your Virginia ?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p511146957.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
+    
+    
+      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
+    
+      <category term="Movie" scheme="http://ipcreator.me/tags/Movie/"/>
     
   </entry>
   
@@ -11730,93 +11847,6 @@ Console.WriteLine(d.ToString(&quot;0.0000000000000&quot;));
   </entry>
   
   <entry>
-    <title>Santana——Smooth</title>
-    <link href="http://ipcreator.me/2017/03/27/MyView/Music/santana-smooth/"/>
-    <id>http://ipcreator.me/2017/03/27/MyView/Music/santana-smooth/</id>
-    <published>2017-03-26T23:42:06.000Z</published>
-    <updated>2017-03-29T04:18:01.287Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://om845dfwl.bkt.clouddn.com/Santanasmooth.jpg" alt=""></p>
-<p><a href="https://en.wikipedia.org/wiki/Smooth_(song" target="_blank" rel="external">From Wikipedia, the free encyclopedia</a>)</p>
-<p>“Smooth” is a collaboration between Latin rock band Santana and Matchbox Twenty vocalist Rob Thomas. The song was written by Thomas, DeGaetano, and Itaal Shur, produced by Matt Serletic and sung by Thomas. It won three Grammy Awards: <strong>Record of the Year</strong>, <strong>Song of the Year</strong>, and <strong>Best Pop Collaboration with Vocals</strong>. Not only was it the final number-one Hot 100 hit of the 1990s, it was also the number-two Hot 100 hit of the 20th century. “Smooth” is the only song to appear on two decade-end Billboard charts. As of 2013, “Smooth” is ranked the second most successful song of all time by Billboard.</p>
-<a id="more"></a>
-<h2 id="SANTANA-LYRICS"><a href="#SANTANA-LYRICS" class="headerlink" title="SANTANA LYRICS"></a>SANTANA LYRICS</h2><p>“Smooth”<br>(feat. Rob Thomas)</p>
-<p>Man, it’s a hot one<br>Like seven inches from the midday sun<br>Well, I hear you whisper and the words melt everyone<br>But you stay so cool</p>
-<p>My muñequita,<br>My Spanish Harlem Mona Lisa<br>You’re my reason for reason<br>The step in my groove, yeah.</p>
-<p>[Bridge]<br>And if you said, “This life ain’t good enough.”<br>I would give my world to lift you up<br>I could change my life to better suit your mood<br>Because you’re so smooth</p>
-<p>[Chorus]<br>And it’s just like the ocean under the moon<br>Well, that’s the same as the emotion that I get from you<br>You got the kind of loving that can be so smooth, yeah.<br>Gimme your heart, make it real<br>Or else forget about it</p>
-<p>Well, I’ll tell you one thing<br>If you would leave it’d be a crying shame<br>In every breath and every word<br>I hear your name calling me out</p>
-<p>Out from the barrio,<br>You hear my rhythm on your radio<br>You feel the turning of the world so soft and slow<br>Turning you ‘round and ‘round</p>
-<p>[Bridge]</p>
-<p>[Chorus]</p>
-<p>[Chorus]</p>
-<p>Or else forget about it<br>Or else forget about it<br>Oh, let’s don’t forget about it<br>(Gimme your heart, make it real)<br>Let’s don’t forget about it (hey)<br>Let’s don’t forget about it (no oh no oh)<br>Let’s don’t forget about it (no no no oh)<br>Let’s don’t forget about it (hey no no oh)<br>Let’s don’t forget about it (hey hey hey)</p>
-<h2 id="SANTANA-歌词"><a href="#SANTANA-歌词" class="headerlink" title="SANTANA 歌词"></a>SANTANA 歌词</h2><p>Man it’s a hot one<br>天,这是多么性感的人。</p>
-<p>Like seven inches from the midday sun<br>就像站在正午7英尺近的太阳下。</p>
-<p>I hear you whisper &amp; the words melt everyone<br> 我听到你的轻声细语,且说得如此动人。</p>
-<p>But you stay so cool<br>但是你太难以接近。</p>
-<p>My muñequita, my Spanish harlem mona lisa<br>你是我的骑士,我的西班牙黑珍珠蒙娜丽莎。</p>
-<p>Your my reason for reason<br>你是我生存的理由。</p>
-<p>The step in my groove<br> (认识你的那段时间)是我(一生中的)最佳时刻。</p>
-<p>And if you say this life ain’t good enough<br>如果你说这样的生活不够好。</p>
-<p>I would give my world to lift you up<br>我会贡献出我的世界以使你满足。</p>
-<p>I could change my life to better suit your mood<br>我会改变自己的生活以适应你的喜好。</p>
-<p>Cause you’re so smooth<br>因为你是如此的柔美。</p>
-<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
-<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
-<p>You got the kind of lovin that can be so smooth<br> 你拥有一种柔美的爱。</p>
-<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>I’ll tell you one thing<br> 我要告诉你一件事。</p>
-<p>If you would leave it would be a crying shame<br>如果你离去,我将无地自容。</p>
-<p>In every breath and every word<br>我每声每息都听见你的名字</p>
-<p>I hear your name calling me out<br>在向我呼唤</p>
-<p>Out from the barrio,<br>在西班牙地区以外的地方,</p>
-<p>you hear my rhythm from your radio<br>你会从电台里听到我的音乐。</p>
-<p>You feel the turning of the world so soft and slow<br>让你感到这世界转动得如此地温柔而舒缓。</p>
-<p>Turning you round and round<br>带着你转啊转着。</p>
-<p>And if you say this life ain’t good enough<br>如果你说这样的生活不够好。</p>
-<p>I would give my world to lift you up<br>我会贡献出我的世界以使你满足。</p>
-<p>I could change my life to better suit your mood<br>我会改变自己的生活以适应你的喜好。</p>
-<p>Cause you’re so smooth<br>因为你是如此的柔美。</p>
-<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
-<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
-<p>You got the kind of lovin that can be so smooth<br>你拥有一种柔美的爱。</p>
-<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
-<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
-<p>You got the kind of lovin that can be so smooth<br>你拥有一种柔美的爱。</p>
-<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<p>Or else forget about it<br>否则就忘了它吧。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://en.wikipedia.org/wiki/Smooth_(song" target="_blank" rel="external">Smooth (song)</a>)<br><a href="http://blog.sina.com.cn/s/blog_477cd8220100og3f.html" target="_blank" rel="external">每天一首英文歌 歌词翻译 Smooth【Santana】</a><br><a href="https://answers.yahoo.com/question/index?qid=20070615142236AAQPwtU" target="_blank" rel="external">What does it mean-My mu-equita, my Spanish harlem mona lisa Your my reason for reason the step in my groove?</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://om845dfwl.bkt.clouddn.com/Santanasmooth.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Smooth_(song&quot;&gt;From Wikipedia, the free encyclopedia&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;“Smooth” is a collaboration between Latin rock band Santana and Matchbox Twenty vocalist Rob Thomas. The song was written by Thomas, DeGaetano, and Itaal Shur, produced by Matt Serletic and sung by Thomas. It won three Grammy Awards: &lt;strong&gt;Record of the Year&lt;/strong&gt;, &lt;strong&gt;Song of the Year&lt;/strong&gt;, and &lt;strong&gt;Best Pop Collaboration with Vocals&lt;/strong&gt;. Not only was it the final number-one Hot 100 hit of the 1990s, it was also the number-two Hot 100 hit of the 20th century. “Smooth” is the only song to appear on two decade-end Billboard charts. As of 2013, “Smooth” is ranked the second most successful song of all time by Billboard.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
-    
-    
-      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
-    
-      <category term="Music" scheme="http://ipcreator.me/tags/Music/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Core Competitiveness</title>
     <link href="http://ipcreator.me/2017/03/27/MyView/my-core-competitiveness/"/>
     <id>http://ipcreator.me/2017/03/27/MyView/my-core-competitiveness/</id>
@@ -12317,6 +12347,93 @@ Console.WriteLine(d.ToString(&quot;0.0000000000000&quot;));
       <category term="Knowledge Framework" scheme="http://ipcreator.me/tags/Knowledge-Framework/"/>
     
       <category term="Skill Graph" scheme="http://ipcreator.me/tags/Skill-Graph/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Santana——Smooth</title>
+    <link href="http://ipcreator.me/2017/03/27/MyView/Music/santana-smooth/"/>
+    <id>http://ipcreator.me/2017/03/27/MyView/Music/santana-smooth/</id>
+    <published>2017-03-26T23:42:06.000Z</published>
+    <updated>2017-03-29T04:18:01.287Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://om845dfwl.bkt.clouddn.com/Santanasmooth.jpg" alt=""></p>
+<p><a href="https://en.wikipedia.org/wiki/Smooth_(song" target="_blank" rel="external">From Wikipedia, the free encyclopedia</a>)</p>
+<p>“Smooth” is a collaboration between Latin rock band Santana and Matchbox Twenty vocalist Rob Thomas. The song was written by Thomas, DeGaetano, and Itaal Shur, produced by Matt Serletic and sung by Thomas. It won three Grammy Awards: <strong>Record of the Year</strong>, <strong>Song of the Year</strong>, and <strong>Best Pop Collaboration with Vocals</strong>. Not only was it the final number-one Hot 100 hit of the 1990s, it was also the number-two Hot 100 hit of the 20th century. “Smooth” is the only song to appear on two decade-end Billboard charts. As of 2013, “Smooth” is ranked the second most successful song of all time by Billboard.</p>
+<a id="more"></a>
+<h2 id="SANTANA-LYRICS"><a href="#SANTANA-LYRICS" class="headerlink" title="SANTANA LYRICS"></a>SANTANA LYRICS</h2><p>“Smooth”<br>(feat. Rob Thomas)</p>
+<p>Man, it’s a hot one<br>Like seven inches from the midday sun<br>Well, I hear you whisper and the words melt everyone<br>But you stay so cool</p>
+<p>My muñequita,<br>My Spanish Harlem Mona Lisa<br>You’re my reason for reason<br>The step in my groove, yeah.</p>
+<p>[Bridge]<br>And if you said, “This life ain’t good enough.”<br>I would give my world to lift you up<br>I could change my life to better suit your mood<br>Because you’re so smooth</p>
+<p>[Chorus]<br>And it’s just like the ocean under the moon<br>Well, that’s the same as the emotion that I get from you<br>You got the kind of loving that can be so smooth, yeah.<br>Gimme your heart, make it real<br>Or else forget about it</p>
+<p>Well, I’ll tell you one thing<br>If you would leave it’d be a crying shame<br>In every breath and every word<br>I hear your name calling me out</p>
+<p>Out from the barrio,<br>You hear my rhythm on your radio<br>You feel the turning of the world so soft and slow<br>Turning you ‘round and ‘round</p>
+<p>[Bridge]</p>
+<p>[Chorus]</p>
+<p>[Chorus]</p>
+<p>Or else forget about it<br>Or else forget about it<br>Oh, let’s don’t forget about it<br>(Gimme your heart, make it real)<br>Let’s don’t forget about it (hey)<br>Let’s don’t forget about it (no oh no oh)<br>Let’s don’t forget about it (no no no oh)<br>Let’s don’t forget about it (hey no no oh)<br>Let’s don’t forget about it (hey hey hey)</p>
+<h2 id="SANTANA-歌词"><a href="#SANTANA-歌词" class="headerlink" title="SANTANA 歌词"></a>SANTANA 歌词</h2><p>Man it’s a hot one<br>天,这是多么性感的人。</p>
+<p>Like seven inches from the midday sun<br>就像站在正午7英尺近的太阳下。</p>
+<p>I hear you whisper &amp; the words melt everyone<br> 我听到你的轻声细语,且说得如此动人。</p>
+<p>But you stay so cool<br>但是你太难以接近。</p>
+<p>My muñequita, my Spanish harlem mona lisa<br>你是我的骑士,我的西班牙黑珍珠蒙娜丽莎。</p>
+<p>Your my reason for reason<br>你是我生存的理由。</p>
+<p>The step in my groove<br> (认识你的那段时间)是我(一生中的)最佳时刻。</p>
+<p>And if you say this life ain’t good enough<br>如果你说这样的生活不够好。</p>
+<p>I would give my world to lift you up<br>我会贡献出我的世界以使你满足。</p>
+<p>I could change my life to better suit your mood<br>我会改变自己的生活以适应你的喜好。</p>
+<p>Cause you’re so smooth<br>因为你是如此的柔美。</p>
+<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
+<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
+<p>You got the kind of lovin that can be so smooth<br> 你拥有一种柔美的爱。</p>
+<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>I’ll tell you one thing<br> 我要告诉你一件事。</p>
+<p>If you would leave it would be a crying shame<br>如果你离去,我将无地自容。</p>
+<p>In every breath and every word<br>我每声每息都听见你的名字</p>
+<p>I hear your name calling me out<br>在向我呼唤</p>
+<p>Out from the barrio,<br>在西班牙地区以外的地方,</p>
+<p>you hear my rhythm from your radio<br>你会从电台里听到我的音乐。</p>
+<p>You feel the turning of the world so soft and slow<br>让你感到这世界转动得如此地温柔而舒缓。</p>
+<p>Turning you round and round<br>带着你转啊转着。</p>
+<p>And if you say this life ain’t good enough<br>如果你说这样的生活不够好。</p>
+<p>I would give my world to lift you up<br>我会贡献出我的世界以使你满足。</p>
+<p>I could change my life to better suit your mood<br>我会改变自己的生活以适应你的喜好。</p>
+<p>Cause you’re so smooth<br>因为你是如此的柔美。</p>
+<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
+<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
+<p>You got the kind of lovin that can be so smooth<br>你拥有一种柔美的爱。</p>
+<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>And just like the ocean under the moon<br>就像月光下的海洋。</p>
+<p>Well that’s the same emotion that I get from you<br>那种心绪就如同你给我的感觉一般。</p>
+<p>You got the kind of lovin that can be so smooth<br>你拥有一种柔美的爱。</p>
+<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Gimme your heart, make it real<br>给我你的爱,就此实现吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<p>Or else forget about it<br>否则就忘了它吧。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://en.wikipedia.org/wiki/Smooth_(song" target="_blank" rel="external">Smooth (song)</a>)<br><a href="http://blog.sina.com.cn/s/blog_477cd8220100og3f.html" target="_blank" rel="external">每天一首英文歌 歌词翻译 Smooth【Santana】</a><br><a href="https://answers.yahoo.com/question/index?qid=20070615142236AAQPwtU" target="_blank" rel="external">What does it mean-My mu-equita, my Spanish harlem mona lisa Your my reason for reason the step in my groove?</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://om845dfwl.bkt.clouddn.com/Santanasmooth.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Smooth_(song&quot;&gt;From Wikipedia, the free encyclopedia&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;“Smooth” is a collaboration between Latin rock band Santana and Matchbox Twenty vocalist Rob Thomas. The song was written by Thomas, DeGaetano, and Itaal Shur, produced by Matt Serletic and sung by Thomas. It won three Grammy Awards: &lt;strong&gt;Record of the Year&lt;/strong&gt;, &lt;strong&gt;Song of the Year&lt;/strong&gt;, and &lt;strong&gt;Best Pop Collaboration with Vocals&lt;/strong&gt;. Not only was it the final number-one Hot 100 hit of the 1990s, it was also the number-two Hot 100 hit of the 20th century. “Smooth” is the only song to appear on two decade-end Billboard charts. As of 2013, “Smooth” is ranked the second most successful song of all time by Billboard.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
+    
+    
+      <category term="English" scheme="http://ipcreator.me/tags/English/"/>
+    
+      <category term="Music" scheme="http://ipcreator.me/tags/Music/"/>
     
   </entry>
   
@@ -12850,7 +12967,7 @@ Console.WriteLine(d.ToString(&quot;0.0000000000000&quot;));
     <link href="http://ipcreator.me/2017/03/26/English/computer-english-words/"/>
     <id>http://ipcreator.me/2017/03/26/English/computer-english-words/</id>
     <published>2017-03-25T16:00:00.000Z</published>
-    <updated>2017-04-11T07:40:07.349Z</updated>
+    <updated>2017-04-12T13:51:54.466Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://ong8f1obl.bkt.clouddn.com/375px-ForgettingCurve.svg.png" alt=""></p>
 <blockquote>
@@ -12952,6 +13069,10 @@ Console.WriteLine(d.ToString(&quot;0.0000000000000&quot;));
 <h3 id="favicon"><a href="#favicon" class="headerlink" title="favicon"></a>favicon</h3><p>英 [‘fævɪkən]   美 [‘fævɪkən]<br>abbr.  偏爱图标; 网站图标(favorites icon);</p>
 <h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><p>英 [‘grep]   美 [‘grep]<br>[计] 检索目标行命令;</p>
 <h3 id="interval"><a href="#interval" class="headerlink" title="interval"></a>interval</h3><p>英 [ˈɪntəvl]   美 [ˈɪntərvl]<br>     CET4 | CET6 | 考研 | IELTS | TOEFL<br>n.  间隔; 幕间休息; （数学）区间;<br>变形 复数: intervals</p>
+<h3 id="parcel-1"><a href="#parcel-1" class="headerlink" title="parcel"></a>parcel</h3><p>英 [ˈpɑ:sl]   美 [ˈpɑrsl]<br>     CET4 | CET6 | 考研<br>n.  包袱，包裹; （土地的）一块; 一批，一群; （货物的）一宗;<br>vt.  分，区分; 把…划成部分后分配; 给…打成包裹; 把…拼在一起;<br>变形 过去分词: parcelled 复数: parcels 过去式: parcelled 现在分词: parcelling 第三人称单数: parcels</p>
+<h3 id="mock"><a href="#mock" class="headerlink" title="mock"></a>mock</h3><p>英 [mɒk]   美 [mɑk]<br>     CET6 | 考研 | IELTS | TOEFL | GRE<br>vt.&amp; vi.  愚弄，嘲弄;<br>vt.  使受挫折; 不尊重，蔑视;<br>adj.  仿制的; 模拟的; 虚假的; 不诚实的;<br>n.  （英国）模拟考试;<br>变形 过去分词: mocked 复数: mocks 过去式: mocked 现在分词: mocking 第三人称单数: mocks</p>
+<h3 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h3><p>英 [maɪˈgreɪt]   美 [ˈmaɪgreɪt]<br>     CET6 | 考研 | IELTS | TOEFL<br>vi.  迁移，移往; 移动; 随季节而移居;<br>vt.  使移居; 使移植;<br>变形 过去分词: migrated 过去式: migrated 现在分词: migrating 第三人称单数: migrates</p>
+<h3 id="systemize"><a href="#systemize" class="headerlink" title="systemize"></a>systemize</h3><p>英 [‘sɪstɪmaɪz]   美 [‘sɪstəmˌaɪz]<br>v.  组织起来，系统化;<br>变形 过去分词: systemized 过去式: systemized 现在分词: systemizing 第三人称单数: systemizes</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://zh.wikipedia.org/wiki/%E8%B5%AB%E5%B0%94%E6%9B%BC%C2%B7%E8%89%BE%E5%AE%BE%E6%B5%A9%E6%96%AF" target="_blank" rel="external">赫尔曼·艾宾浩斯 Hermann Ebbinghaus </a><br><a href="https://zh.wikipedia.org/wiki/%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF" target="_blank" rel="external">遗忘曲线 Forgetting curve</a></p>
 ]]></content>
     
@@ -14097,188 +14218,6 @@ Console.WriteLine(d.ToString(&quot;0.0000000000000&quot;));
       <category term="Basic Concept" scheme="http://ipcreator.me/tags/Basic-Concept/"/>
     
       <category term="IC" scheme="http://ipcreator.me/tags/IC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java Design Pattern</title>
-    <link href="http://ipcreator.me/2017/03/23/Program/Java/design-pattern/"/>
-    <id>http://ipcreator.me/2017/03/23/Program/Java/design-pattern/</id>
-    <published>2017-03-23T11:35:06.000Z</published>
-    <updated>2017-03-28T01:20:44.645Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://blog.csdn.net/guolin_blog" target="_blank" rel="external">作者：郭霖</a></p>
-<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1489338402459&amp;di=f354d44523b4c5d751414e4970189a88&amp;imgtype=0&amp;src=http%3A%2F%2Fsishuok.com%2Fforum%2Fupload%2F2012%2F8%2F21%2Fd9c285859566d753d86f1a44bc9f9a05__2.JPG" alt=""></p>
-<p>单例：保证一个类仅有一个实例，并提供一个访问它的全局访问点。<br>组合：将对象组合成树形结构以表示“部分-整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。</p>
-<p>策略：它定义了算法家庭，分别封装起来。让它们之间可以互相替换，此模式让算法的变化，不会影响到使用算法的客户。</p>
-<p>模板方法： 定义一个操作中的算法的骨架，而将一些步骤延迟到子类中，模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p>
-<p>适配器：将一个类的接口转换成客户希望的另外一个接口。适配器模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</p>
- <a id="more"></a>
-<p><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4232751296,330377077&amp;fm=23&amp;gp=0.jpg" alt=""></p>
-<p>在sLogUtil还没被初始化的时候才会进入到第3行，然后加上同步锁。等sLogUtil一但初始化完成了，就再也走不到第3行了，这样执行getInstance方法也不会再受到同步锁的影响，效率上会有一定的提升。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public static LogUtil getInstance() &#123;  </div><div class="line">    if (sLogUtil == null) &#123;  </div><div class="line">        synchronized (LogUtil.class) &#123;  </div><div class="line">            if (sLogUtil == null) &#123;  </div><div class="line">                sLogUtil = new LogUtil();  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">    return sLogUtil;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>A. 无论synchronized关键字加在方法上还是对象上，如果它作用的对象是非静态的，则它取得的锁是对象；如果synchronized作用的对象是一个静态方法或一个类，则它取得的锁是对类，该类所有的对象同一把锁。<br>B. 每个对象只有一个锁（lock）与之相关联，谁拿到这个锁谁就可以运行它所控制的那段代码。<br>C. 实现同步是要很大的系统开销作为代价的，甚至可能造成死锁，所以尽量避免无谓的同步控制。</p>
-<p>在AllStatistics的构造函数中将小说类书籍和科技类书籍作为子分类添加到了statistics列表当中，然后使用同样的方法在getBrowseCount和getSalesCount方法中统计出所有书籍的浏览量和销售量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">public interface Statistics &#123;  </div><div class="line"></div><div class="line">    int getBrowseCount();  </div><div class="line"></div><div class="line">    int getSalesCount();  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line">public class AllStatistics implements Statistics &#123;  </div><div class="line"></div><div class="line">    private List&lt;Statistics&gt; statistics = new ArrayList&lt;Statistics&gt;();  </div><div class="line"></div><div class="line">    public AllStatistics() &#123;  </div><div class="line">        statistics.add(new NovelStatistics());  </div><div class="line">        statistics.add(new TechnicalStatistics());  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public int getBrowseCount() &#123;  </div><div class="line">        int browseCount = 0;  </div><div class="line">        for (Statistics s : statistics) &#123;  </div><div class="line">            browseCount += s.getBrowseCount();  </div><div class="line">        &#125;  </div><div class="line">        return browseCount;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public int getSalesCount() &#123;  </div><div class="line">        int saleCount = 0;  </div><div class="line">        for (Statistics s : statistics) &#123;  </div><div class="line">            saleCount += s.getBrowseCount();  </div><div class="line">        &#125;  </div><div class="line">        return saleCount;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line">public interface Strategy &#123;  </div><div class="line"></div><div class="line">    String getSQL(String[] usernames);  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line">public class Strategy1 implements Strategy &#123;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public String getSQL(String[] usernames) &#123;  </div><div class="line">        StringBuilder sql = new StringBuilder(&quot;select * from user_info where &quot;);  </div><div class="line">        for (String user : usernames) &#123;  </div><div class="line">            sql.append(&quot;username = &apos;&quot;);  </div><div class="line">            sql.append(user);  </div><div class="line">            sql.append(&quot;&apos; or &quot;);  </div><div class="line">        &#125;  </div><div class="line">        sql.delete(sql.length() - &quot; or &quot;.length(), sql.length());  </div><div class="line">        return sql.toString();  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line"></div><div class="line">public class Strategy2 implements Strategy &#123;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public String getSQL(String[] usernames) &#123;  </div><div class="line">        StringBuilder sql = new StringBuilder(&quot;select * from user_info where &quot;);  </div><div class="line">        boolean needOr = false;  </div><div class="line">        for (String user : usernames) &#123;  </div><div class="line">            if (needOr) &#123;  </div><div class="line">                sql.append(&quot; or &quot;);  </div><div class="line">            &#125;  </div><div class="line">            sql.append(&quot;username = &apos;&quot;);  </div><div class="line">            sql.append(user);  </div><div class="line">            sql.append(&quot;&apos;&quot;);  </div><div class="line">            needOr = true;  </div><div class="line">        &#125;  </div><div class="line">        return sql.toString();  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line">public class QueryUtil &#123;  </div><div class="line"></div><div class="line">    public void findUserInfo(String[] usernames, Strategy strategy) throws Exception &#123;  </div><div class="line">        Class.forName(&quot;com.mysql.jdbc.Driver&quot;);  </div><div class="line">        Connection conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/test&quot;, &quot;root&quot;,  </div><div class="line">                &quot;123456&quot;);  </div><div class="line">        Statement stat = conn.createStatement();  </div><div class="line">        String sql = strategy.getSQL(usernames);  </div><div class="line">        System.out.println(sql);  </div><div class="line">        ResultSet resultSet = stat.executeQuery(sql);  </div><div class="line">        while (resultSet.next()) &#123;  </div><div class="line">            // 处理从数据库读出来的数据  </div><div class="line">        &#125;  </div><div class="line">        // 后面应将读到的数据组装成对象返回，这里略去。  </div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line"></div><div class="line">public class Test &#123;  </div><div class="line"></div><div class="line">    public static void main(String[] args) throws Exception &#123;  </div><div class="line">        QueryUtil query = new QueryUtil();  </div><div class="line">        query.findUserInfo(new String[] &#123; &quot;Tom&quot;, &quot;Jim&quot;, &quot;Anna&quot; &#125;, new Strategy1());  </div><div class="line">        query.findUserInfo(new String[] &#123; &quot;Jac&quot;, &quot;Joe&quot;, &quot;Rose&quot; &#125;, new Strategy2());  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div></pre></td><td class="code"><pre><div class="line">public abstract class Formatter &#123;  </div><div class="line"></div><div class="line">    public String formatBook(Book book, int format) &#123;  </div><div class="line">        beforeFormat();  </div><div class="line">        String result = formating(book);  </div><div class="line">        afterFormat();  </div><div class="line">        return result;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    protected void beforeFormat() &#123;  </div><div class="line">        System.out.println(&quot;format begins&quot;);  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    protected abstract String formating(Book book);  </div><div class="line"></div><div class="line">    protected void afterFormat() &#123;  </div><div class="line">        System.out.println(&quot;format finished&quot;);  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line">public class XMLFormatter extends Formatter &#123;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    protected String formating(Book book) &#123;  </div><div class="line">        String result = &quot;&quot;;  </div><div class="line">        result += &quot;&lt;book_name&gt;&quot; + book.getBookName() + &quot;&lt;/book_name&gt;\n&quot;;  </div><div class="line">        result += &quot;&lt;pages&gt;&quot; + book.getPages() + &quot;&lt;/pages&gt;\n&quot;;  </div><div class="line">        result += &quot;&lt;price&gt;&quot; + book.getPrice() + &quot;&lt;/price&gt;\n&quot;;  </div><div class="line">        result += &quot;&lt;author&gt;&quot; + book.getAuthor() + &quot;&lt;/author&gt;\n&quot;;  </div><div class="line">        result += &quot;&lt;isbn&gt;&quot; + book.getIsbn() + &quot;&lt;/isbn&gt;\n&quot;;  </div><div class="line">        return result;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line">public class JSONFormatter extends Formatter &#123;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    protected String formating(Book book) &#123;  </div><div class="line">        String result = &quot;&quot;;  </div><div class="line">        result += &quot;&#123;\n&quot;;  </div><div class="line">        result += &quot;\&quot;book_name\&quot; : \&quot;&quot; + book.getBookName() + &quot;\&quot;,\n&quot;;  </div><div class="line">        result += &quot;\&quot;pages\&quot; : \&quot;&quot; + book.getPages() + &quot;\&quot;,\n&quot;;  </div><div class="line">        result += &quot;\&quot;price\&quot; : \&quot;&quot; + book.getPrice() + &quot;\&quot;,\n&quot;;  </div><div class="line">        result += &quot;\&quot;author\&quot; : \&quot;&quot; + book.getAuthor() + &quot;\&quot;,\n&quot;;  </div><div class="line">        result += &quot;\&quot;isbn\&quot; : \&quot;&quot; + book.getIsbn() + &quot;\&quot;,\n&quot;;  </div><div class="line">        result += &quot;&#125;&quot;;  </div><div class="line">        return result;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line">public class YAMLFormatter extends Formatter &#123;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    protected String formating(Book book) &#123;  </div><div class="line">        String result = &quot;&quot;;  </div><div class="line">        result += &quot;book_name: &quot; + book.getBookName() + &quot;\n&quot;;  </div><div class="line">        result += &quot;pages: &quot; + book.getPages() + &quot;\n&quot;;  </div><div class="line">        result += &quot;price: &quot; + book.getPrice() + &quot;\n&quot;;  </div><div class="line">        result += &quot;author: &quot; + book.getAuthor() + &quot;\n&quot;;  </div><div class="line">        result += &quot;isbn: &quot; + book.getIsbn() + &quot;\n&quot;;  </div><div class="line">        return result;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line">public class Test &#123;  </div><div class="line"></div><div class="line">    public static void main(String[] args) throws Exception &#123;  </div><div class="line">        Book book = new Book();  </div><div class="line">        book.setBookName(&quot;Thinking in Java&quot;);  </div><div class="line">        book.setPages(880);  </div><div class="line">        book.setPrice(68);  </div><div class="line">        book.setAuthor(&quot;Bruce Eckel&quot;);  </div><div class="line">        book.setIsbn(&quot;9787111213826&quot;);  </div><div class="line">        XMLFormatter xmlFormatter = new XMLFormatter();  </div><div class="line">        String result = xmlFormatter.formatBook(book);  </div><div class="line">        System.out.println(result);  </div><div class="line"></div><div class="line">        JSONFormatter jsonFormatter = new JSONFormatter();  </div><div class="line">        result = jsonFormatter.formatBook(book);  </div><div class="line">        System.out.println(result);  </div><div class="line"></div><div class="line">        YAMLFormatter yamlFormatter = new YAMLFormatter();  </div><div class="line">String result = yamlFormatter.formatBook(book);  </div><div class="line">System.out.println(result);  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">public interface PlayerCount &#123;  </div><div class="line"></div><div class="line">    String getServerName();  </div><div class="line"></div><div class="line">    int getPlayerCount();  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line">public class ServerOne implements PlayerCount &#123;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public String getServerName() &#123;  </div><div class="line">        return &quot;一服&quot;;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public int getPlayerCount() &#123;  </div><div class="line">        return Utility.getOnlinePlayerCount(1);  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line">public class ServerTwo implements PlayerCount &#123;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public String getServerName() &#123;  </div><div class="line">        return &quot;二服&quot;;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public int getPlayerCount() &#123;  </div><div class="line">        return Utility.getOnlinePlayerCount(2);  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line">public class ServerThree implements PlayerCount &#123;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public String getServerName() &#123;  </div><div class="line">        return &quot;三服&quot;;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public int getPlayerCount() &#123;  </div><div class="line">        return Utility.getOnlinePlayerCount(3);  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">public class XMLBuilder &#123;  </div><div class="line"></div><div class="line">    public static String buildXML(PlayerCount player) &#123;  </div><div class="line">        StringBuilder builder = new StringBuilder();  </div><div class="line">        builder.append(&quot;&lt;root&gt;&quot;);  </div><div class="line">        builder.append(&quot;&lt;server&gt;&quot;).append(player.getServerName()).append(&quot;&lt;/server&gt;&quot;);  </div><div class="line">        builder.append(&quot;&lt;player_count&quot;).append(player.getPlayerCount()).append(&quot;&lt;/player_count&gt;&quot;);  </div><div class="line">        builder.append(&quot;&lt;/root&gt;&quot;);  </div><div class="line">        return builder.toString();  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;  </div><div class="line"></div><div class="line">XMLBuilder.buildXML(new ServerOne());  </div><div class="line">XMLBuilder.buildXML(new ServerTwo());</div><div class="line">XMLBuilder.buildXML(new ServerThree());</div></pre></td></tr></table></figure>
-<p>查询在线玩家数量的功能早就有了，使用的是ServerFirst这个类。当时写Utility.getOnlinePlayerCount()这个方法主要是为了针对新开的二服和三服，就没把一服的查询功能再重复做一遍。<br>Utility和ServerFirst这两个类都已经被打到Jar包里了，没法修改啊</p>
-<p>XMLBuilder中使用PlayerCount这个接口来拼装XML，而ServerFirst并没有实现PlayerCount这个接口，这个时候就需要一个适配器类来为XMLBuilder和ServerFirst之间搭起一座桥梁，毫无疑问，ServerOne就将充当适配器类的角色。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public class ServerOne implements PlayerCount &#123;  </div><div class="line"></div><div class="line">    private ServerFirst mServerFirst;  </div><div class="line"></div><div class="line">    public ServerOne() &#123;  </div><div class="line">        mServerFirst = new ServerFirst();  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public String getServerName() &#123;  </div><div class="line">        return &quot;一服&quot;;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    @Override  </div><div class="line">    public int getPlayerCount() &#123;  </div><div class="line">        return mServerFirst.getOnlinePlayerCount();  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>需要值得注意的一点是，适配器模式不并是那种会让架构变得更合理的模式，更多的时候它只是充当救火队员的角色，帮助解决由于前期架构设计不合理导致的接口不匹配的问题。</p>
-<h2 id="参考阅读"><a href="#参考阅读" class="headerlink" title="参考阅读"></a>参考阅读</h2><p><a href="http://blog.csdn.net/guolin_blog/article/details/8860649" target="_blank" rel="external">Java设计模式透析之 —— 单例(Singleton)</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/9153753" target="_blank" rel="external">Java设计模式透析之 —— 组合(Composite)</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/8986285" target="_blank" rel="external">Java设计模式透析之 —— 策略(Strategy)</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/8744002" target="_blank" rel="external">Java设计模式透析之 —— 模板(Template)</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/9400141" target="_blank" rel="external">Java设计模式透析之 —— 适配器(Adapter)</a><br> <a href="http://blog.csdn.net/luoweifu/article/details/46613015" target="_blank" rel="external"> Java中Synchronized的用法</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog&quot;&gt;作者：郭霖&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp;amp;sec=1489338402459&amp;amp;di=f354d44523b4c5d751414e4970189a88&amp;amp;imgtype=0&amp;amp;src=http%3A%2F%2Fsishuok.com%2Fforum%2Fupload%2F2012%2F8%2F21%2Fd9c285859566d753d86f1a44bc9f9a05__2.JPG&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;单例：保证一个类仅有一个实例，并提供一个访问它的全局访问点。&lt;br&gt;组合：将对象组合成树形结构以表示“部分-整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。&lt;/p&gt;
-&lt;p&gt;策略：它定义了算法家庭，分别封装起来。让它们之间可以互相替换，此模式让算法的变化，不会影响到使用算法的客户。&lt;/p&gt;
-&lt;p&gt;模板方法： 定义一个操作中的算法的骨架，而将一些步骤延迟到子类中，模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。&lt;/p&gt;
-&lt;p&gt;适配器：将一个类的接口转换成客户希望的另外一个接口。适配器模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Java" scheme="http://ipcreator.me/categories/Java/"/>
-    
-    
-      <category term="Design Pattern" scheme="http://ipcreator.me/tags/Design-Pattern/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Some Good Learning Habits from Liu Weipeng</title>
-    <link href="http://ipcreator.me/2017/03/22/MyView/Share/learning-habits/"/>
-    <id>http://ipcreator.me/2017/03/22/MyView/Share/learning-habits/</id>
-    <published>2017-03-22T05:42:06.000Z</published>
-    <updated>2017-03-27T10:08:25.384Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一直以来伴随我的一些学习习惯"><a href="#一直以来伴随我的一些学习习惯" class="headerlink" title="一直以来伴随我的一些学习习惯"></a>一直以来伴随我的一些学习习惯</h2><p>原文作者：<a href="http://mindhacks.cn/" target="_blank" rel="external">刘未鹏</a><br><a href="http://mindhacks.cn/2008/07/08/learning-habits-part1/" target="_blank" rel="external">一直以来伴随我的一些学习习惯(一)：学习与思考</a><br><a href="http://mindhacks.cn/2008/07/20/learning-habits-part2/" target="_blank" rel="external">一直以来伴随我的一些学习习惯(二)：时间管理</a><br><a href="http://mindhacks.cn/2008/09/17/learning-habits-part3/" target="_blank" rel="external">一直以来伴随我的一些学习习惯(三)：阅读方法</a><br><a href="http://mindhacks.cn/2008/12/05/learning-habits-part4/" target="_blank" rel="external">一直以来伴随我的一些学习习惯(四)：知识结构</a></p>
-   <a id="more"></a>
-<h2 id="一-：学习与思考"><a href="#一-：学习与思考" class="headerlink" title="(一)：学习与思考"></a>(一)：学习与思考</h2><ol>
-<li><p>Google&amp;Wiki（遇到问题做的第一件事情，也是学习某个东西做功课（homework）最先用到的东西。</p>
-</li>
-<li><p>看书挑剔，只看经典。如何选择经典，可以到网上做做功课，看看评价，综合分析一下。</p>
-</li>
-<li><p>做读书笔记。一是将自己阅读的时候的思考（包括闪念）总结下来，二是将书中的好例子摘抄下来。（这个习惯是一年前才养成的，发现受益极大。）有了google note，笔记可以加上tag，非常便于回顾，加深理解。我觉得，人与人学习的差距不在资质上，而在花在思考的时间和思考的深度上（后两者常常也是相关的）。</p>
-</li>
-<li><p>提到思考，我有一个小习惯。利用走路和吃饭的时候思考，还有睡觉前必然要弄一个问题放在脑子里面，在思考中迷糊入睡。发现这样一来往往在不知不觉中多出来大量的思考时间。</p>
-<p>4a. 将思考成为习惯还有一个很大的好处——避免焦虑。卡耐基用一整本书讲了一个有效的做法来避免焦虑——底线思考。然而实际上还有另一个有效的做法，就是投入地做另一件事情。不去想”喜马拉雅山上的猴子”的方法并不是使劲的告诉自己不去想”喜马拉雅山上的猴子”，因为那样等于就是脑袋里想了那只猴子，正确的做法是真的不去想那猴子，而是想别的。用别的东西充满工作记忆，其他的神经活动自然会被抑制（神经科学基本事实）。所以，感到焦虑的时候不妨思考吧，甚至完全可以去理性分析和思考导致焦虑的问题本身，将其拆解，分析来源，在不知不觉中，大脑的工作重心就从情绪模块转向了推理模块了，而且这思考也可能顺带更有效地解决了导致焦虑的问题呢:)</p>
-</li>
-<li><p>重要的事情优先（详见史蒂芬·柯维的《高效能人士的七个习惯》或《要事优先》）。尽量避免琐事骚扰，不重要的事情能不做就不做。有时候，紧急的事情往往只是当事人觉得必须马上做完才显得紧急或者干脆就是紧他人之急，最糟糕的就是纯属性格上原因觉得每件事情都得第一时间完成，很多看上去紧急的事情实际上并不是真的”不能再拖了”，有的干脆就并不需要或值得去做。有很多事情都是可以先放一放甚至完全let go的，否则的话就整天被所谓”紧急”的事情牵着鼻子走了。</p>
-</li>
-<li><p>重要的事情营造比较大的时间块来完成。比如一本好书，或者一个重要的知识点，最好不要切得太琐碎了看，否则看了后面忘了前面。不利于知识的组织&amp;联系。</p>
-</li>
-<li><p>多看心理学与思维的书，因为它们是跨学科的。知识分两种，一是我们通常所谓的知识，即领域知识。二是关于我们的大脑吸收知识的机制的知识，后者不妨称为元知识。虽说这也是领域知识，但跟其它的领域知识不同的是，它指导着我们学习其它所有的领域知识。</p>
-</li>
-<li><p>学习一项知识，必须问自己三个重要问题：1. 它的本质是什么。2. 它的第一原则是什么。3. 它的知识结构是怎样的。</p>
-<blockquote>
-<ol>
-<li>获得的多少并不取决于读了多少，而取决于思考了多少、多深。</li>
-</ol>
-</blockquote>
-</li>
-<li><p>善于利用小块时间，也就是《奇特的一生》中所说的“时间下脚料”，如何利用前面有几个方法。同时，也善于创造整块时间（如通过要事优先）。</p>
-</li>
-<li><p>关于习惯的养成，必须要说明的：经常看到有些人评论说，说说容易，做起来哪有那么容易啊（另一个无关习惯的“说起来容易做起来难”则是因为纸上谈兵不可能算计到所有现实中的因素，但那是另一个问题）。对此我要说的是，做起来当然不容易，所谓江山易改，本性难移。人的性格和认识事物的框架是长期积累养成的，并且人们非常珍视自己的信念（英语里面表达不相信某个东西叫做“I don’t buy it”）。从进化心理学上这是有依据的，一个经过时间检验的信念往往是更靠谱的。只不过可惜的是靠谱不代表最佳，一个信念能让你活下来并不代表能让你活得最好（详见《Mene Genes》，更多的例子参见《How we know what isn’t so》）。我们评判一个信念的标准是satisficing原则（即足够，能行就好，这个术语不是我提的，是大牛Herbert Simon提的），并不是optimizing原则。话说回来，为什么说起来容易做起来难，是因为“说”只是理性上承认正确，并没有考虑到我们每个人大脑中居住的那个非理性自我。这个自我以强大的情绪力量为动机，以习惯为己任，每时每刻都驱使着我们的行为。因为它掌握了“情绪”这个武器，所以我们只能时时拿它当大爷。不记得是哪位哲学家说的了，理性是感性的奴隶。那么，是不是就是说无法克服既有习惯了？以我的经验（以及观察到的别人的经验），还是可以的。第一条就是认识到习惯的改变绝不是一天两天的事情，承认它的难度。第二条就是如果你真想改掉习惯，就需要在过程中常常注意观察自己的行为，否则习惯会以一种你根本觉察不到的方式左右你的行为让你功亏一篑。有一个认知技巧也许可以缓解更改习惯过程中的不适：即把居住在内心的那个非理性自我当成你自己的孩子（你要去培养他），或者你的对手（你要去打败他）也行。总之不能当成自己，因为每个人都不想改变自己。这里转一个认知技巧的例子：李笑来老师在《把时间当作朋友》（顺便也推荐这本开放电子书）中提到他一个朋友用另一个认知技巧来克服背单词的枯燥的：</p>
-<p>因为，一共要搞定20,000个单词，而因此可能获得的奖学金是每年40,000美元左右——并且连续四年没有失业可能（后来的事实是，他直到五年之后才获得了博士学位）。当时的美元兑换人民币的汇率差不多是8:1，所以，大约应该相当于320,000元人民币。而如果一年的税后收入是320,000元人民币的话，那么税前就要赚取差不多400,000元人民币。那么，每个单词应该大约值20元人民币——这还只不过是这算了一年的收入而已。</p>
-<p>所以，他终于明白背单词是非常快乐的。他每天都强迫自己背下200个单词。而到了晚上验收效果的时候，每在确定记住了的单词前面画上一个勾的时候，他就要想象一下刚刚数过一张20元人民币的钞票。每天睡觉的时候总感觉心满意足，因为今天又赚了4000块！</p>
-<p>注意，这跟自我欺骗不同。一来，我们的情绪系统只能这般对付（《Synaptic Self》中提到，大脑中的新皮层（neocortex，所谓“理性”居住的地方，尤其是前额叶）在进化历史上是较为新近的年代才进化出来的，跟底层较原始的模块（如主管情绪的杏仁核）之间的神经网络沟通并不是合作无间，这就解释了为什么有些事情我们明明知道是对的，但就是不能说服自己，情绪还是在那里不依不挠的驱使你去做另一样事情）。二来，我们知道在干什么，所以不能算欺骗:P 总之，对于习惯的更改，除了最重要的一日三省，加上一些认知技巧（其实每个人都是自己的心理学家，你可以自己看看能不能想出什么法子）。其实是没有什么速效银弹的。但是，知难而不退嘛，值得做的事情几乎总是如此:)</p>
-</li>
-</ol>
-<h2 id="二-：时间管理"><a href="#二-：时间管理" class="headerlink" title="(二)：时间管理"></a>(二)：时间管理</h2><ol>
-<li>学习和思考的过程中常问自己的几个问题：</li>
-</ol>
-<p>你的问题到底是什么？（提醒自己思考不要偏离问题。）<br>OK，到现在为止，我到底有了什么收获呢？（提醒自己时不时去总结，整理学习的东西）。<br>设想自己正在将东西讲给别人听（有声思考；能否讲出来是判断是否真正理解的最佳办法）。<br>3.1 设想需要讲给一个不懂的人听。（迫使自己去挖掘知识背后最本质、往往也是最简单的解释）。<br>时常反省和注意自己的思维过程。尤其是当遇到无法理解或解决的问题之后，最需要将原先的思维过程回顾一遍，看看到底哪个环节被阻塞住了妨碍了理解。问题到底出在哪里。并分析以后需要加强哪方面的思维习惯，才能够不在同样或类似的时候被绊住。对此，将思维的大致脉络写下来是一个很好的习惯。<br>养成反驳自己的想法的习惯：在有一个想法的时候，习惯性地去反驳它，问自己“这个难道就一定成立吗？”、“有没有反例或例外？”、“果真如此吗？”之类的问题。（参见Critical Thinking）<br>人的思维天生就是极易流于表面来理解事物的（参见《Psychology of Problem Solving》第11章）。觉得自己理解了一个问题了么？条件反射性地问自己：你真的理解了吗？你真的理解了问题的本质了？问题的本质到底是什么？目前我的理解是什么？我对这个理解感到满意吗？这样的理解到底有什么建设性呢？等等。</p>
-<ol>
-<li>重视知识的本质：对于程序员来说这一点尤其重要，程序员行业的知识芜杂海量，而且总是在增长变化。很多人感叹跟不上新技术。应对这个问题的办法只能是：</li>
-</ol>
-<blockquote>
-<p>抓住不变量。大量的新技术其实只是一层皮，背后的支撑技术其实都是十来年不变的东西。底层知识永远都不过时。算法数据结构永远都不过时。基本的程序设计理论永远都不过时。良好的编码习惯永远都不过时。分析问题和解决问题的能力永远都不过时。强大的学习能力和旺盛的求知欲永远都不过时。你大脑的思维方式永远都不过时。</p>
-</blockquote>
-<ol>
-<li><p>重视积累的强大力量，万事提前准备：计划订长一点，自然就可以多获得准备的时间。设想你若干年后会在做什么事情，需要哪些技能，现在就开始准备。一个5年计划便可以让你获得从现在开始的5年准备时间。5年中每天腾出半个到一个小时专心于某一件事情，认准一个方向，每次走一点，其实不要说5年，两年就会发现会起到宏大的效应。长期订阅我的Blog的朋友们也一定注意到我基本上不写东西，一般一个月写上2篇就算多的了。但总结一段时间的学习和思考的习惯却一直都没有停止（博客文章对我来说是学习和思考的副产品，我并不为写文章而写文章），所以5年下来竟也写了不少东西。所以这就是一个简单的例子。你大致还可以从我的Blog看出来我一段时间关注的东西，一般来说，一段比较长的时间（少则半年至一年——譬如对心理学与思维的关注；多则几年——譬如对编程技术的关注），在这段时间内，我的业余时间会被一个主题所充斥。反之，如果不知道目的是什么，就不知道往哪个方向上使劲，就容易产生无用功。</p>
-</li>
-<li><p>抬起头来：人的思维是非常容易只见树木不见森林的（否则这个成语从哪来的呢？）。时不时抬起头来审视一下自己正在做的事情，问一问它（对现在或未来）有什么价值，是不是你真正希望做的。你学到的东西到底是什么？它们重要吗？你需要在这个时候学习这些吗？（见第2条）。你的时间就是你的资源，你投入这些资源来掌握知识，所以到底用来掌握哪些知识是一个很重要的问题。仅仅遵循兴趣是不够的，人会对很多次要的东西产生兴趣，并一头钻进去浪费好多时间。所以判断一个东西值不值得学习是很重要的。</p>
-</li>
-</ol>
-<p>杂项</p>
-<ol>
-<li><p>退订RSS：RSS Reader是个时间黑洞。就算mark all as read，在有大量feed的情况下，也会无形中消耗掉大量的时间。我们一旦订阅了某个RSS之后就会倾向于不肯退订它，心想也许某天有个重要的信息会从那里得到。这其实是源于人不肯”关上一扇门（即便门内的收益概率极小）”的心理（参见《Predictably Irrational》）；而实际上，关上一扇门，有时能够增大收益期望。仔细观察一下reader里面的feeds，有哪些是真正有价值的，把那些没价值的或者价值很小乃至于不值得每天被它骚扰的，全都退订掉。不要舍不得，那些一个星期都没出现让你眼睛一亮的内容的feed，很大的可能是永远也不会出现。就算可能，也别担心你会漏掉什么宝贵信息，真正宝贵的信息，在其他来源你也会接触到的。一开始我的Greader里面每天都有大量的新内容，每天都是1000+，但一段时间之后发现除了信息焦虑，实际上有价值的内容不多，现在，我很高兴地发现自己摆脱了这种状况，我持续不断地退订feeds，留下的内容越来越少，也越来越精，带来的阅读焦虑也越来越少。（顺便推荐一个东西，aideRSS，初步使用，感觉对订阅reddit这样的每天更新大量内容的feed很有用）。</p>
-</li>
-<li><p>有时间吗？总结总结最近得到的新知识吧。一般来说，我在一段时间内学习的一些东西总是会在这段时间内一直在脑子里打转，一有时间空隙（譬如走路，吃饭）它们就会自己蹦出来，促使我去进一步思考和总结。永远不要认为对一个知识的把握足够深刻，“理解”的感觉很多时候只是假象。学会反问自己对知识到底把握了多少，是很有价值的。（如何反问，前面的总结中有提到）。</p>
-</li>
-<li><p>有时间吗？看本书吧。（传统的）阅读和思考永远优于所谓的在互联网上汲取新知识，后者往往浅表、不系统、乃至根本没价值。</p>
-</li>
-<li><p>制定简要的阅读计划：选出最近认为对你最有价值的书，先总览一下，决定阅读的顺序（哪些章节可以优先阅读）。然后每天看一点。并利用走路、吃饭、乘车或其他不适合带着书和笔的时间来总结看过的内容，建立知识结构，抽取知识本质，与以往的大脑中的知识建立联系。（参见《奇特的一生》）</p>
-</li>
-</ol>
-<h2 id="三-：阅读方法"><a href="#三-：阅读方法" class="headerlink" title="(三)：阅读方法"></a>(三)：阅读方法</h2><p>这篇主要写一些学习（尤其是阅读）的基本方法。</p>
-<ol>
-<li><p>趁着对一件事情有热情的时候，一股脑儿把万事开头那个最难的阶段熬过去。万事开头难，因为从不了解到了解基本的一些事实，是一个新知识暴涨的阶段，这个时候的困难是最大的。有人熬不过去，觉得困难太大就放弃了。不过，狂热的兴趣可以抵消对困难的感觉，所以趁着对一件事情有热情的时候，开一个好头是很重要的。（当然，这并不是说持之以恒就不重要了）。当然，也许这个是因人而异的，对我来说我会在对一件事情有浓厚兴趣的时候非常专注地学习，把很多 groundworks 做掉。后面就会顺利一些了。</p>
-</li>
-<li><p>根据主题来查阅资料，而不是根据资料来查阅主题。以前读书的时候是一本一本的读，眼里看到的是一本一本的书，现在则是一章、甚至一节一节的读，眼中看到的不是一本一本的书，而是一堆一堆的章节，一个一个的知识主题，按照主题来阅读，你会发现读的时候不再是老老实实地一本书看完看另一本，而是非常频繁地从一本书跳到另一本书，从一处资料跳到另一处资料，从而来获得多个不同的人对同一个主题是如何讲解的。比如最近我发现在看蒙特卡罗算法时就查了十来处资料，其中有三四篇 paper 和六七本书；这是因为即便是经典的书，你也不能指望它对其中每一个主题的介绍都是尽善尽美的，有些书对某个主题（知识点）的介绍比较到位，有些书则对另一些知识点介绍得比较到位。而有时候一篇紧凑的 paper 比一本书上讲得还要好。我硬盘里面的书按主题分类，每个主题下面都有一堆书，当我需要学习某个主题的知识时（譬如贝叶斯学习或者神经网络），我会把里面涉及这个主题的书都翻开来，索引到相关章节，然后挑讲得好的看。那么，如何判断一个资料是好资料还是坏资料呢？</p>
-</li>
-<li><p>好资料，坏资料。好资料的特点：从问题出发；重点介绍方法背后的理念（ rationale ），注重直观解释，而不是方法的技术细节；按照方法被发明的时间流程来介绍（先是遇到了什么什么问题，然后怎样分析，推理，最后发现目前所使用的方法）。坏资料的特点是好资料的反面：上来就讲方法细节，仿佛某方法是从天上掉下来的，他们往往这样写“我们定义… 我们称… 我们进行以下几个步骤… ”。根本不讲为什么要用这个方法，人们最初是因为面对什么问题才想到这个方法的，其间又是怎样才想出了这么个方法的，方法背后的直观思想又是什么。实际上一个方法如果将其最终最简洁的形式直接表达出来往往丢失掉了绝大多数信息，这个丢掉的信息就是问题解决背后的思维过程。至于为什么大多数书做不到这一点，我在这里试着分析过。</p>
-</li>
-<li><p>学习一个东西之前，首先在大脑中积累充分的“疑惑感”。即弄清面临的问题到底是什么，在浏览方法本身之前，最好先使劲问问自己能想到什么方法。一个公认的事实是，你对问题的疑惑越大，在之前做的自己的思考越多，当看到解答之后印象就越深刻。记得大学里面的课本总是瀑布式地把整个知识结构一览无余地放在面前，读的过程倒是挺爽，连连点头，读完了很快又忘掉了，为什么？因为没有带着疑问去学习。</p>
-</li>
-<li><p>有选择地阅读。很多人觉得我读书速度很快，其实我只是有选择地阅读。这里的选择体现在两个地方，一是选择一本书中感兴趣的章节优先阅读。二是对一本书中技术性较弱或信息密度较低的部分快速地略读。一般来说，除了技术性非常强的书之外，大多数书的信息密度很低，有很多废话。一般来说在阅读的时候应该这样来切分内容：1. 问题是什么？2. 方案是什么？3. 例子是什么？如果是需要解释一个现象的（譬如《黑天鹅》），那么1. 现象是什么？2. 解释是什么？3. 支撑这个解释的理由是什么？4. 例子是什么？一般来说，这一二三四用不了多少字就可以写完了（如果假设只举一到两个精到的例子的话），这样的无废话著作的典型是《合作的进化》；那为什么有些书，明明核心观点就那点东西（顶多加上几个精要的例子罢了）却写得长得要命呢？因为人的思维都有一个“联想”的特点，写着写着就容易旁逸斜出，而且作者自己也往往觉得引申出去挺牛逼，有时候很多与主题无关的废话就掺和进来了；那么，阅读的时候就应该有选择性地滤掉这些不相干的废话；此外还有一种可能性就是大量冗余的例子。一般来说组织得比较好的书会有详细且一目了然的目录和索引，根据目录首先就可以滤掉一部分（比如某个子章节的内容你以前是看过的），然后有时候作者还会举很多冗余的例子，如果你已经觉得印象够深刻了这些例子完全可以不看（一些书就非常厚道地对每个观点只辅以一两个最最经典的例子，譬如《与众不同的心理学——如何正视心理学》，这样的书我最是喜欢）。</p>
-</li>
-<li><p>为什么看不懂？如果看不懂一个知识，一般有如下几个可能的原因：</p>
-</li>
-<li><p>你看得不够使劲。对此古人总结过——书读百遍其义自现。虽然这个规律不是任何时候都成立的，但是从认知科学的角度看是完全可以解释的，我们在阅读的时候，注意力往往会有选择性地关注其中的某一些“点”，而忽略了另一些“点”，于是一遍看下来可能因为某一些忽略导致无法理解整体。或者干脆看的时候就没注意其中一些细节但重要的东西。此外，大脑理解一个东西需要一定的处理时间，人脑的处理速度很慢，神经冲动每秒传输速度不过百米，所以不能指望看到哪懂到哪。最后，我们可能因为思维定势的原因会从某个特定的角度去看一句话而忽略了从不同角度去理解的可能性。对于这类情况，仔仔细细地再多读两遍，多试着去理解两遍，往往会“哦！原来这样。”地恍然大悟。</p>
-</li>
-<li>其中涉及到了你不懂的概念。这是技术性的不理解。这种情况就需要 Cross Reference 。如果一句话中用到了你不懂的概念，那就去查，现在很多书都是电子书，直接搜索一下，或者，对于纸书，看一下书后面的索引就行了。奇怪的是很多人看不懂也不分析一下为什么不懂，就直接放弃了。正如解决问题一样，问题卡住解决不了，第一时间要做的就是分析到底为什么解决不了，而不是直接求救。3. 作者讲述的顺序不对，你接着往下看，也许看到后面就明白了前面的了。</li>
-</ol>
-<p>杂项</p>
-<ol>
-<li><p>如何在阅读之前就能获得对一本书质量的大致评估。在深入阅读之前能够迅速评估一本书的质量可以节省很多时间。基本上有几个线索：1. 看作者。牛作者写的书一般都不错。2. 看目录和简介。一份好的目录和简介能够透露这本书质量的相当一部分信息。目录结构是否清晰，是否直白（而不是装神弄鬼），都是衡量的线索。3. 看 Amazon 上的评价，这里要注意的是，除了看整体打分之外，更要看打分最低的人是怎么说的，因为小众意见往往有可能来自那些真正懂行的人（除了来踢馆的），如果在打分最低的意见里面看不到真正有价值的反驳意见的话就相当肯定书是不错的了。4. 看样章。Amazon 上一般都可以随机浏览一些章节的，表达是否清晰，论证是否严谨，内容是否深刻，基本是几页纸就能看出来的。</p>
-</li>
-<li><p>如何搜寻到好书。几个线索：1. 同作者的著作。2. Amazon 相关推荐和主题相关的书列（类似豆瓣的豆列）。3. 一本好的著作（或一份好的资料——不管是书还是网页）在参考资料里面重点提到的其他著作。4. 有时对于一个主题，可以搜索到好心人总结的参考资源导引，那是最好不过的。</p>
-</li>
-</ol>
-<h2 id="四-：知识结构"><a href="#四-：知识结构" class="headerlink" title="(四)：知识结构"></a>(四)：知识结构</h2><p>自从建立了 TopLanguage 以来，发现在上面待的时间越来越多，与高手讨论问题是个粘性十足的事情，一方面，分享自己的认识是整理不成熟的想法的极好途径，另一方面，互相之间视角不同，所以往往自己忽视的地方会被别人发现。在讨论中不断精化既有的知识体系。以下这段基本上摘抄自（略有整理和添加）在 TopLanguage 上的发言：</p>
-<h3 id="抓住不变量"><a href="#抓住不变量" class="headerlink" title="抓住不变量"></a>抓住不变量</h3><p>我喜欢把知识分为essential的和non-essential的。对于前者采取提前深入掌握牢靠的办法，对于后者采取待用到的时刻RTM (Read the manual)方法（用本）。</p>
-<p>如何区分essential和non-essential的知识想必绝大多数时候大家心里都有数，我举几个例子：</p>
-<blockquote>
-<p>对程序员来说，硬件体系结构是essential的，操作系统的一些重要的实现机制是essential的，主流编程范式（OO、FP）是为了满足什么需求出现的（出现是为了解决什么问题），是怎么解决的，自身又引入了哪些新的问题，从而适用哪些场景）。这些我认为都是essential的。我想补充一点的是，并不是说硬件体系结构就要了解到逻辑门、晶体管层面才行（其实要了解到这个层面代价也很小，一两本好书就行了），也并不是说就要通读《Computer Architecture: Quantitative Approach》才行。而是关键要了解那些重要的思想（很长时间不变的东西），而不是很细的技术细节（易变的东西）。《Computer Systems: A Programmer’s Perspective》就是为此目的，针对程序员的需求总结出那些essential knowledge的好书。</p>
-</blockquote>
-<p>再来说一下为什么需要预先牢靠掌握这些essential的知识：</p>
-<p>根据Joel Spolsky同学的说法（原文），</p>
-<blockquote>
-<p>编程语言技术是对底层设备的封装，然而封装总是会出现漏洞的，于是程序员被迫下到“下水道”当中去解决问题，一旦往下走，漂亮的OO、N层抽象就不复存在了，这时候不具备坚硬的底层知识就会无法解决问题。简而言之就是这些底层知识会无可避免的需要用到，既然肯定会被用到那还是预先掌握的好，否则一来用到的时候再查是来不及的，因为essential的知识也往往正是那些需要较长时间消化掌握的东西，不像Ruby的mixin或closure这种翻一下manual就能掌握的东西。（英语也是这样的essential knowledge——上次在PyCN上看到一个招Python开发人员的帖子将英语列为必备技能，却并不将自然语言处理列为必备技能，正是因为英语不是可以临阵磨枪的东西，而且作为知识的主要载体，任何时候都少不了它，如果不具备英语能力，这个就会成为个人知识结构的短板或瓶颈，而且由于需要长时间才能获得这项能力，所以这个瓶颈将持续很长时间存在。我们曾经在 TopLanguage 上讨论过如何花最少的时间掌握英语）</p>
-</blockquote>
-<p>另一方面，在问题解决当中，如果不具备必要的知识，是根本无从思考的，再好的分析能力也并不是每个问题都能分析出该用哪些知识然后再去查手册的，很多时候是在工具和问题之间比较，联想，试探性的拼凑来解决问题；这就使得一个好的既有知识基变得至关重要。（实际上以上这个是一个较大的话题，希望有一天我能够把它详细展开说清:)）</p>
-<blockquote>
-<p>如果你不知道某个工具的存在，遇到问题的时候是很难想到需要使用这么样一个工具的，essential knowldge就是使用最为广泛的工具，编程当中遇到某些问题之后，如果缺乏底层知识，你甚至都不知道需要去补充哪些底层知识才能解决这个问题。</p>
-</blockquote>
-<p>你必须首先熟悉你的工具，才能有效地使用它（须知工具的强是无敌的，但这一切得以“了解你的工具”为前提，甚至得以“了解目前可能有哪些工具适合你的问题”为前提）。一门语言，你必须了解它的适用场景，不适用场景（比如继承能解决你的问题不代表继承就是解决你的问题的最适合的方案，须知问题是一个复杂系统，解决方案总是常常引入新的问题）。你必须了解它支持的主要编程范式，此外你还必须了解它的traps和pitfalls（缺陷和陷阱，如果不知道陷阱的存在，掉进去也不知道怎么掉的。）这些都是essential knowledge，如果不事先掌握，指望用的时候查manual，是很浪费时间的，而且正如第2点所说，正因为你不知道这些知识（如适用场景），从而用sub-optimal的方式使用了一门语言自己可能还不知道（最小白的例子是，如果你不知道语言支持foreach，那么可能每次都要写一个冗长的循环，较常见的例子是不知道有很方便的库设施可以解决手头的问题所以傻乎乎的自己写了一堆代码），</p>
-<p>因为人的评价标准常常是：只要解决了最醒目的问题并且引入的新问题尚能忍受，就行。注意，熟悉并非指熟悉所有细节，而是那些重要的，或者无法在需要用到的时候按需查找的知识。比如上面提到的：<strong>适用场景不适用场景，编程范式，主要语言特性，缺陷和陷阱。</strong></p>
-<p>当然，以上作为程序员的essential knowledge列表并不完备，关键是自己在学习新知识的时候带着第三只眼来敏锐地判断这个知识是否是不变量，或不易变的量，是否完全可以在用的时候查手册即可，还是需要提前掌握（一些判断方法在上文也有所提及）。并且学会在纷繁的知识中抽象出那些重要的，本质的，不变的东西。我在之前的part里面也提到我在学习新知识的时候常常问自己三个问题：该知识的（体系或层次）结构是什么、本质是什么、第一原则是什么。</p>
-<p>另外还有一些我认为是essential knowledge的例子：</p>
-<blockquote>
-<p>分析问题解决问题的思维方法（这个东西很难读一两本书就掌握，需要很长时间的锻炼和反思）、判断与决策的方法（生活中需要进行判断与决策的地方远远多于我们的想象），波普尔曾经说过：All Life is Problem-Solving。而判断与决策又是其中最常见的一类Problem Solving。尽管生活中面临重大决策的时候并不多，但另一方面我们时时刻刻都在进行最重大的决策：如：决定自己的日常时间到底投入到什么地方去。如：你能想象有人宁可天天花时间剪报纸上的优惠券，却对于房价的1%的优惠无动于衷吗？（《别做正常的傻瓜》、《Predictably Irrational》）如：你知道为什么当手头股票的股价不可抑止地滑向深渊时我们却一边揪着头发一边愣是不肯撤出吗？（是的，我们适应远古时代的心理机制根本不适应金融市场。）糟糕的判断与决策令我们的生活变得糟糕，这还不是最关键的，最关键的是我们从来不会去质疑自己的判断，而是总是能“找到”其他为自己辩护的理由（《错不在我（Mistakes were made, but not by me）》）又，现在是一个信息泛滥的时代，于是另一个问题也出现：如何在海洋中有效筛选好的信息，以及避免被不好的信息左右我们的大脑（Critical Thinking）关于以上提到的几点我在豆瓣上有一个专门的豆列（“学会思考”），希望有一天我能够积累出足够多的认识对这个主题展开一些详细介绍。</p>
-</blockquote>
-<p>最后分享一个学习小Tip：</p>
-<p>学习一个小领域的时候，时时把“<strong>最终能够写出一篇漂亮的Survey</strong>”放在大脑中提醒自己，就能有助于在阅读和实践的时候有意无意地整理知识的结构、本质和重点，经过整理之后的知识理解更深刻，更不容易忘记，更容易被提取。</p>
-<p>杨军在 TopLanguage 上也曾分享了三篇非常棒的学习心得的文章，字字珠玑：</p>
-<p>[1] <a href="https://groups.google.com/group/pongba/browse_frm/thread/9a459b6efe94985a/" target="_blank" rel="external">有些事情做起来比想象中容易</a><br>[2] <a href="https://groups.google.com/group/pongba/browse_frm/thread/20a08b6201d88a98/" target="_blank" rel="external">有关读书方法的一点想法</a><br>[3] <a href="https://groups.google.com/group/pongba/browse_frm/thread/6f6140744ab95c72/" target="_blank" rel="external">一件事情如果你没有说清楚，十有八九不能做好</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;一直以来伴随我的一些学习习惯&quot;&gt;&lt;a href=&quot;#一直以来伴随我的一些学习习惯&quot; class=&quot;headerlink&quot; title=&quot;一直以来伴随我的一些学习习惯&quot;&gt;&lt;/a&gt;一直以来伴随我的一些学习习惯&lt;/h2&gt;&lt;p&gt;原文作者：&lt;a href=&quot;http://mindhacks.cn/&quot;&gt;刘未鹏&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://mindhacks.cn/2008/07/08/learning-habits-part1/&quot;&gt;一直以来伴随我的一些学习习惯(一)：学习与思考&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://mindhacks.cn/2008/07/20/learning-habits-part2/&quot;&gt;一直以来伴随我的一些学习习惯(二)：时间管理&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://mindhacks.cn/2008/09/17/learning-habits-part3/&quot;&gt;一直以来伴随我的一些学习习惯(三)：阅读方法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://mindhacks.cn/2008/12/05/learning-habits-part4/&quot;&gt;一直以来伴随我的一些学习习惯(四)：知识结构&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Personal" scheme="http://ipcreator.me/categories/Personal/"/>
-    
-    
-      <category term="Share" scheme="http://ipcreator.me/tags/Share/"/>
-    
-      <category term="Habit" scheme="http://ipcreator.me/tags/Habit/"/>
-    
-      <category term="Liu Weipeng" scheme="http://ipcreator.me/tags/Liu-Weipeng/"/>
     
   </entry>
   
