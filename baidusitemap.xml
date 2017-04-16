@@ -4,8 +4,116 @@
 
     
   <url>
+    <loc>http://ipcreator.me/2017/04/13/MyView/Original/stack-overflow/</loc>
+    <lastmod>2017-04-16T14:49:39.230Z</lastmod>
+    <data>
+        <display>
+        <title>Stack Overflow</title>
+        <pubTime>2017-04-12T22:30:18.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Share</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/13/MyView/Original/pyramid/</loc>
+    <lastmod>2017-04-16T14:43:16.950Z</lastmod>
+    <data>
+        <display>
+        <title>Pyramid Model</title>
+        <pubTime>2017-04-12T23:30:18.000Z</pubTime>
+        
+        <tag>Basic Concept</tag>
+         
+        <tag>Share</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/13/Program/Android/MyApp/joke/</loc>
+    <lastmod>2017-04-16T13:58:31.116Z</lastmod>
+    <data>
+        <display>
+        <title>Joke</title>
+        <pubTime>2017-04-13T01:30:18.000Z</pubTime>
+        
+        <tag>Application</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/16/Program/Android/MyApp/what-a-beautiful-day/</loc>
+    <lastmod>2017-04-16T13:46:27.569Z</lastmod>
+    <data>
+        <display>
+        <title>What a Beautiful Day</title>
+        <pubTime>2017-04-16T13:36:18.000Z</pubTime>
+        
+        <tag>Application</tag>
+         
+        <tag>Smart UI</tag>
+         
+        <tag>Smart AI</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/02/22/English/love-words/</loc>
+    <lastmod>2017-04-14T09:58:26.270Z</lastmod>
+    <data>
+        <display>
+        <title>Love English Words</title>
+        <pubTime>2017-02-21T23:44:05.000Z</pubTime>
+        
+        <tag>Word</tag>
+         
+         
+           
+             
+              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ipcreator.me/2017/03/26/English/computer-english-words/</loc>
-    <lastmod>2017-04-12T14:14:28.516Z</lastmod>
+    <lastmod>2017-04-14T09:58:23.468Z</lastmod>
     <data>
         <display>
         <title>Professional Words of Computer</title>
@@ -19,6 +127,28 @@
            
              
               <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ipcreator.me/2017/04/11/Meta%20Skill/meta-skill-deliberately-practice/</loc>
+    <lastmod>2017-04-12T14:54:16.604Z</lastmod>
+    <data>
+        <display>
+        <title>Meta Skill——Deliberate Practice</title>
+        <pubTime>2017-04-11T00:29:06.000Z</pubTime>
+        
+        <tag>Meta Skill</tag>
+         
+        <tag>Deliberate Practice</tag>
+         
+         
+           
+             
+              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
           
         </display>
     </data>
@@ -43,28 +173,6 @@
            
              
               <breadCrumb title="Android" url="http://ipcreator.me/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/04/11/Meta%20Skill/meta-skill-deliberately-practice/</loc>
-    <lastmod>2017-04-12T14:00:59.391Z</lastmod>
-    <data>
-        <display>
-        <title>Meta Skill——Deliberate Practice</title>
-        <pubTime>2017-04-11T00:29:06.000Z</pubTime>
-        
-        <tag>Meta Skill</tag>
-         
-        <tag>Deliberate Practice</tag>
-         
-         
-           
-             
-              <breadCrumb title="Personal" url="http://ipcreator.me/categories/Personal/"/>
           
         </display>
     </data>
@@ -190,26 +298,6 @@
         <tag>Basic Concept</tag>
          
         <tag>Grammar</tag>
-         
-         
-           
-             
-              <breadCrumb title="English" url="http://ipcreator.me/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ipcreator.me/2017/02/22/English/love-words/</loc>
-    <lastmod>2017-04-11T02:19:02.627Z</lastmod>
-    <data>
-        <display>
-        <title>Love English Words</title>
-        <pubTime>2017-02-21T23:44:05.000Z</pubTime>
-        
-        <tag>Word</tag>
          
          
            
@@ -4769,18 +4857,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-color/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>Base of Multimedia——Color</title>
-        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
+        <title>File System of Linux</title>
+        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Multimedia</tag>
+        <tag>Linux</tag>
          
-        <tag>Color</tag>
+        <tag>File System</tag>
          
          
            
@@ -4793,18 +4881,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-color/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>Base of Multimedia——Video</title>
-        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
+        <title>Base of Multimedia——Color</title>
+        <pubTime>2017-02-27T02:58:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
         <tag>Multimedia</tag>
          
-        <tag>Video</tag>
+        <tag>Color</tag>
          
          
            
@@ -4839,18 +4927,18 @@
 
     
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     <data>
         <display>
-        <title>File System of Linux</title>
-        <pubTime>2017-02-27T01:14:06.000Z</pubTime>
+        <title>Base of Multimedia——Video</title>
+        <pubTime>2017-02-27T03:19:06.000Z</pubTime>
         
         <tag>Basic Concept</tag>
          
-        <tag>Linux</tag>
+        <tag>Multimedia</tag>
          
-        <tag>File System</tag>
+        <tag>Video</tag>
          
          
            
