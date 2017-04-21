@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ipcreator.me/2017/04/21/MyView/Original/domain-name/</loc>
+    
+    <lastmod>2017-04-21T01:33:07.050Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/03/26/English/computer-english-words/</loc>
     
     <lastmod>2017-04-19T10:12:31.820Z</lastmod>
@@ -65,6 +72,13 @@
   </url>
   
   <url>
+    <loc>http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/</loc>
+    
+    <lastmod>2017-04-12T14:04:15.826Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ipcreator.me/2017/04/12/Program/Android/MyApp/bigbang/</loc>
     
     <lastmod>2017-04-12T14:03:40.349Z</lastmod>
@@ -82,13 +96,6 @@
     <loc>http://ipcreator.me/2017/03/03/Program/Android/tips-of-androidstudio/</loc>
     
     <lastmod>2017-04-11T12:29:52.440Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/04/11/MyView/Original/domain-name/</loc>
-    
-    <lastmod>2017-04-11T11:43:48.101Z</lastmod>
     
   </url>
   
@@ -152,13 +159,6 @@
     <loc>http://ipcreator.me/2017/04/02/Program/Tools/Gradle/gradle/</loc>
     
     <lastmod>2017-04-10T04:00:40.921Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ipcreator.me/2017/04/06/Program/Java/basic-concept-of-java/</loc>
-    
-    <lastmod>2017-04-10T03:35:17.098Z</lastmod>
     
   </url>
   
@@ -1535,13 +1535,6 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-picture/</loc>
-    
-    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-anatomy-of-GPU/</loc>
     
     <lastmod>2017-03-27T08:55:53.034Z</lastmod>
@@ -1549,14 +1542,21 @@
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-picture/</loc>
+    
+    <lastmod>2017-03-27T08:55:53.034Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
     
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Computer/the-essence-of-video/</loc>
+    <loc>http://ipcreator.me/2017/02/27/Program/Tools/Linux/the-anatomy-of-file-system/</loc>
     
     <lastmod>2017-03-27T08:55:53.032Z</lastmod>
     
